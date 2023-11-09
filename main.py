@@ -7,14 +7,14 @@ timestamp = now[:10] + "_" + now[11:13] + "-" + now[14:16] + "-" + now[17:19]
 
 ##### PARAMETERS
 
-destination_fullname = "Yosemite National Park"
-destination = "yosemite"
+destination_fullname = "Mexico City, Mexico"
+destination = "mexico-city"
 num_stops = 10
-transport_method = "long-distance trail-running"
+transport_method = "private limousine"
 
 ##### GET LIST OF STOPS
 
-user_prompt_for_stops = f"I love traveling. I'm going on a trip to {destination}. Please name {num_stops} popular sightseeing locations there that I could visit by {transport_method}."
+user_prompt_for_stops = f"I love traveling. I'm going on a trip to {destination}. Please name {num_stops} popular sightseeing locations there that I could visit by {transport_method}. List these in an order so that no two adjacent sightseeing locations are too similar; for example, if one is a museum, the next would ideally be something like an outdoor market."
 user_message_for_stops = {"role": "user", "content": user_prompt_for_stops}
 
 print(f"\ngetting list of {num_stops} stops\n")
@@ -26,6 +26,7 @@ completion = client.chat.completions.create(
 ##### GET TIDBITS FOR EACH STOP
 
 assistant_prompt_with_stops = completion.choices[0].message.content
+print("number of messages in the completion carrying assistant_prompt_with_stops is:", len(completion.choices))
 print("assistant_prompt_with_stops is:\n\n", assistant_prompt_with_stops)
 assistant_message_with_stops = {"role": "assistant", "content": assistant_prompt_with_stops}
 
@@ -68,6 +69,7 @@ completion = client.chat.completions.create(
     messages = [user_message_for_stops, assistant_message_with_stops, user_message_for_tidbits]
 )
 stops_with_tidbits = completion.choices[0].message.content
+print("number of messages in the completion carrying stops_with_tidbits is:", len(completion.choices))
 
 stops_with_tidbits_file = open("prompts/" + destination + "_" + timestamp + ".txt", "w")
 stops_with_tidbits_file.write(stops_with_tidbits)
@@ -81,7 +83,9 @@ example_story = open("prompts/example_story.txt", "r").read()
 
 system_prompt = """I'm going to give you a tourist destination, a mode of transportation, and a bunch of sightseeing locations there, one at a time. Please write me a story like the example below.
 
-As I name each sightseeing location, I'm also going to give you some tidbits about it: historical facts, literary references, relevant quotes, typical dining experiences, and possibly also human experiences involved in visiting this sightseeing location by the chosen mode of transportation. Please try to include these. However, don't include more than THREE food experiences.
+As I name each sightseeing location, I'm also going to give you some tidbits about it: historical facts, literary references, relevant quotes, typical dining experiences, and possibly also human experiences involved in visiting this sightseeing location by the chosen mode of transportation. Please try to include these. However, don't include more than THREE food experiences total.
+
+Also, try to incorporate SPECIFIC tidbits; these are better than simply discussing the importance of a sightseeing location in general terms.
 
 Please also include little moments describing our feelings as we take in these sights. These should all be pleasant and inspiring feelings.
 
@@ -89,10 +93,10 @@ Please don't include anything dark. Keep the tone happy, warm, uplifting, and re
 
 As we go from spot to spot, please transition us between them through pleasant tourist activities such as walking, buying a ticket, looking at the map to find our way, etc. You can also refer to activities related to our chosen mode of transportation, such as getting on or off of a rickshaw.
 
-Don't end the story until I tell you to. Don't reference the passing of time or the time of day. Please don't use the word "tapestry" or "testament."
+Don't end the story until I tell you to. Don't reference the passing of time or the time of day.
 """ + "\n\n=====\n\n" + example_story
 
-user_prompt_for_setting_scene = f"Please begin by setting the scene. We are traveling in {destination_fullname}. We are taking a sightseeing tour by {transport_method}. However, JUST set the scene; don't begin the sightseeing tour just yet. Make me excited about my trip overall, and about the upcoming tour. Please don't end your response with a summary, though, because we will continuing the story!"
+user_prompt_for_setting_scene = f"Please begin by setting the scene. We are traveling in {destination_fullname}. We are taking a sightseeing tour by {transport_method}. However, JUST set the scene; don't begin the sightseeing tour just yet. Make me excited about my trip overall, and about the upcoming tour. Keep this short -- just three or four paragraphs. Please don't end your response with a summary, though, because we will continuing the story!"
 
 system_message = {"role": "system", "content": system_prompt}
 user_message_for_setting_scene = {"role": "user", "content": user_prompt_for_setting_scene}
@@ -107,6 +111,7 @@ completion = client.chat.completions.create(
     messages = message_list
 )
 assistant_prompt_with_scene_setting = completion.choices[0].message.content
+print("number of messages in the completion carrying assistant_prompt_with_scene_setting is:", len(completion.choices))
 story += assistant_prompt_with_scene_setting
 assistant_message_with_scene_setting = {"role": "assistant", "content": assistant_prompt_with_scene_setting}
 message_list.append(assistant_message_with_scene_setting)
@@ -126,6 +131,7 @@ for user_message_for_stop in stop_messages:
         messages = message_list
     )
     assistant_prompt_with_story = completion.choices[0].message.content
+    print(f"number of messages in the completion carrying assistant_prompt_with_story number {i+1} is:", len(completion.choices))
     story += "\n\n=====\n\n" + assistant_prompt_with_story
     assistant_message_with_story = {"role": "assistant", "content": assistant_prompt_with_story}
     message_list.append(assistant_message_with_story)
@@ -140,6 +146,7 @@ completion = client.chat.completions.create(
     messages = message_list
 )
 assistant_prompt_with_story_ending = completion.choices[0].message.content
+print("number of messages in the completion carrying assistant_prompt_with_story_ending is:", len(completion.choices))
 story += "\n\n=====\n\n" + assistant_prompt_with_story_ending
 
 story_file = open("stories/" + destination + "_" + timestamp + ".txt", "w")
