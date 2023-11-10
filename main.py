@@ -16,82 +16,143 @@ num_stops = 20
 
 inputs = [
     # {
-    #     "destination": "mexico-city",
-    #     "destination_fullname": "Mexico City, Mexico",
-    #     "transport_method": "private limousine"
+    #     "destination": "newyorkcity",
+    #     "destination_fullname": "New York, New York",
+    #     "transport_method": "open-top bus tour and Metro, with a tour guide with a thick Brooklyn accent whose family has been in New York City for many generations",
+    #     "season": "fall",
     # },
     # {
-    #     "destination": "thailand",
-    #     "destination_fullname": "Thailand",
-    #     "transport_method": "tuk tuk (i.e. rickshaw)"
-    # },
-    # {
-    #     "destination": "barcelona",
-    #     "destination_fullname": "Barcelona, Spain",
-    #     "transport_method": "guided bike tour"
-    # },
-    # {
-    #     "destination": "lisbon",
-    #     "destination_fullname": "Lisbon, Portugal",
-    #     "transport_method": "tram ride"
-    # },
-    # {
-    #     "destination": "seoul",
-    #     "destination_fullname": "Seoul, South Korea",
-    #     "transport_method": "subway"
-    # },
-    {
-        "destination": "miami",
-        "destination_fullname": "Miami, Florida",
-        "transport_method": "flashy red convertible sports car"
-    },
-    # {
-    #     "destination": "venice",
-    #     "destination_fullname": "Venice, Italy",
-    #     "transport_method": "gondola"
+    #     "destination": "tokyo",
+    #     "destination_fullname": "Tokyo, Japan",
+    #     "transport_method": "Tokyo metro train and Toei subway system, with a tour guide who is gregarious but soft-spoken",
+    #     "season": "spring",
     # },
     # {
     #     "destination": "paris",
     #     "destination_fullname": "Paris, France",
-    #     "transport_method": "river boat cruise"
+    #     "transport_method": "Seine river cruise and Paris Metro, with a male tour guide in his early 40s who wears a beret and neckerchief and speaks with just a slight accent",
+    #     "season": "spring",
     # },
     # {
-    #     "destination": "galapagos-islands",
-    #     "destination_fullname": "Galapagos Islands",
-    #     "transport_method": "private yacht with a captain who also serves as a tour guide"
+    #     "destination": "london",
+    #     "destination_fullname": "London, England",
+    #     "transport_method": "the Tube subway, and also a double-decker bus with a bus driver and tour guide who is a middle-aged British man with an attention to detail that rivals Sherlock Holmes",
+    #     "season": "spring",
+    # },
+    # {
+    #     "destination": "bangkok",
+    #     "destination_fullname": "Bangkok, Thailand",
+    #     "transport_method": "tuk-tuk (i.e. a rickshaw), with a driver who is also a tour guide",
+    #     "season": "winter",
+    # },
+    {
+        "destination": "istanbul",
+        "destination_fullname": "Istanbul, Turkey",
+        "transport_method": "ferry ride on the Bosphorous and historic tram on Istiklal Avenue",
+        "season": "spring",
+    },
+    # {
+    #     "destination": "dubai",
+    #     "destination_fullname": "Dubai, United Arab Emirates",
+    #     "transport_method": "private limousine and an abra (i.e. a traditional boat) on Dubai Creek",
+    #     "season": "winter",
+    # },
+    # {
+    #     "destination": "barcelona",
+    #     "destination_fullname": "Barcelona, Spain",
+    #     "transport_method": "guided bike tour with an affable university student who double-majors in art and history as a tour guide",
+    #     "season": "early fall",
+    # },
+    # {
+    #     "destination": "rio",
+    #     "destination_fullname": "Rio de Janeiro, Brazil",
+    #     "transport_method": "limousine with a quiet but friendly driver in his early 50s who is aging gracefully",
+    #     "season": "late spring",
+    # },
+    # {
+    #     "destination": "shanghai",
+    #     "destination_fullname": "Shanghai, China",
+    #     "transport_method": "Shanghai Metro and a Huangpu River cruise",
+    #     "season": "fall",
     # },
     # {
     #     "destination": "greece",
     #     "destination_fullname": "Greece",
-    #     "transport_method": "mostly catamaran, but also donkey ride on Santorini"
+    #     "transport_method": "catamaran with a captain who serves as a tour guide, and also a donkey ride on Santorini",
+    #     "season": "spring",
     # },
     # {
-    #     "destination": "italy",
-    #     "destination_fullname": "Italy",
-    #     "transport_method": "Vespa motor scooter"
+    #     "destination": "kyoto",
+    #     "destination_fullname": "Kyoto, Japan",
+    #     "transport_method": "rickshaw with a jovial middle-aged man who serves as a tour guide, and also a bit of bicycling without the tour guide",
+    #     "season": "spring",
     # },
     # {
-    #     "destination": "berlin",
-    #     "destination_fullname": "Berlin, Germany",
-    #     "transport_method": "subway"
+    #     "destination": "amalfi",
+    #     "destination_fullname": "Amalfi Coast, Italy",
+    #     "transport_method": "Vespa scooter and coastal boat tour with a friendly captain",
+    #     "season": "spring",
+    # },
+    # {
+    #     "destination": "bali",
+    #     "destination_fullname": "Bali, Indonesia",
+    #     "transport_method": "car with a young woman driver who is also a tour guide and also rental scooters",
+    #     "season": "spring",
+    # },
+    # {
+    #     "destination": "cinqueterre",
+    #     "destination_fullname": "Cinque Terre, Italy",
+    #     "transport_method": "a leisurely boat trip, as well as hiking the trails between the villages",
+    #     "season": "spring",
+    # },
+    # {
+    #     "destination": "chiangmai",
+    #     "destination_fullname": "Chiang Mai, Thailand",
+    #     "transport_method": "tuk-tuk (i.e. rickshaw)",
+    #     "season": "winter",
+    # },
+    # {
+    #     "destination": "napa",
+    #     "destination_fullname": "Napa Valley, California",
+    #     "transport_method": "wine train and a ride in a hot air balloon",
+    #     "season": "fall",
+    # },
+    # {
+    #     "destination": "algarve",
+    #     "destination_fullname": "The Algarve, Portugal",
+    #     "transport_method": "rental car for coastal drives and a boat trip to explore sea caves",
+    #     "season": "spring",
+    # },
+    # {
+    #     "destination": "costarica",
+    #     "destination_fullname": "Costa Rica",
+    #     "transport_method": "camper van",
+    #     "season": "dry season",
+    # },
+    # {
+    #     "destination": "queenstown",
+    #     "destination_fullname": "Queenstown, New Zealand",
+    #     "transport_method": "water taxis",
+    #     "season": "summer",
     # },
 ]
 
 
+
 for input in inputs:
 
-    print(f"\nwriting a sleep story set in: {input['destination_fullname']} ({timestamp})\n")
+    print(f"\nwriting a sleep story set in {input['destination_fullname']} at {timestamp}\n")
 
 
 
     ##### GET LIST OF STOPS
 
     user_prompt_for_stops = f"""
-    I love traveling. I'm going on a trip to {input['destination']}. Please name {num_stops} popular sightseeing locations there that I could visit by {input['transport_method']}. List these in an order so that no two adjacent sightseeing locations are too similar; for example, if one is a museum, the next would ideally be something like an outdoor market. 
+    I love traveling. I'm going on a trip to {input['destination']}. Please name {num_stops} popular sightseeing locations there that I could visit by {input['transport_method']}. List these in an order so that no two adjacent sightseeing locations are too similar; for example, if one is a museum, the next would ideally be something like an outdoor market. Please only choose sightseeing locations that are calm and not even remotely controversial. For example, a beautiful park, a rose garden, a Buddhist temple, or a textiles museum would be a great choice of sightseeing location. A bullfight or a Holocaust museum would be a bad choice of sightseeing location.
     
     Please separate the different sightseeing locations with five asterisks (i.e. the string '*****'). Please make sure to separate the sightseeing locations with five asterisks.
 
-    The entire tour should feel like a calm and soothing dream. Please make sure that NONE of these sightseeing locations is dark, stressful, or violent. For example, DO NOT include a tour of a Holocaust museum.
+    The entire tour should feel like a calm and soothing dream. Please make sure that NONE of these sightseeing locations is somber, stressful, or violent. For example, DO NOT include a tour of a Holocaust museum.
     
     Please also include a one-line description of each sightseeing location. Here is an example, corresponding to a riverboat cruise in Paris.
 
@@ -123,6 +184,8 @@ for input in inputs:
 
     If visiting the sightseeing location typically involves eating or drinking, please also include a typical dish or dining experience.
 
+    If the sightseeing location typically has many other people about, please list one or two activities that those other people might be seen doing.
+
     Lastly, please also describe a pleasant human experience involved in visiting this sightseeing location by {input['transport_method']}. Some examples might be: buying a ticket; consulting a map; taking in natural beauty such as plants, animals, clouds, trees, or sunshine. Please be specific in the experience you describe.
 
     For each sightseeing location, please format the above items as a bullet-pointed list.
@@ -140,6 +203,7 @@ for input in inputs:
     - The tower's sphere features a revolving restaurant.
     - Constructed between 1965 and 1969 by the government of the German Democratic Republic (GDR).
     - When you exit the adjacent subway stop, you suddenly see the Fernsehturm reaching towards the sunny sky.
+    - People like to take pictures of themselves where due to the perspective it looks like they're holding the Berlin Television Tower in their hand.
 
     END OF EXAMPLE ONE
     
@@ -193,7 +257,7 @@ for input in inputs:
     example_story = open("prompts/example_story.txt", "r").read()
 
     system_prompt_for_story = """
-    I'm going to give you a tourist destination, a mode of transportation, and a bunch of sightseeing locations there, one at a time. Please write me a story like the example far below. Please make sure to write in the PRESENT TENSE.
+    I'm going to give you a tourist destination, a mode of transportation, a season, and a bunch of sightseeing locations there -- these will come one at a time. Please write me a story like the example far below. Please make sure to write in the PRESENT TENSE. Please don't give the tour guide a specific name, referring to them instead as "our guide" (or similar).
 
     As I name each sightseeing location, I'm also going to give you some tidbits about it: historical facts, literary references, relevant quotes, typical dining experiences, and possibly also human experiences involved in visiting this sightseeing location by the chosen mode of transportation. Please try to include these. However, don't include more than THREE food experiences total.
 
@@ -201,7 +265,7 @@ for input in inputs:
 
     Please also include little moments describing our feelings as we take in these sights and sounds and tastes. These should all be pleasant and inspiring feelings.
 
-    Please don't include anything somber. Keep the tone happy, warm, uplifting, and relaxing.
+    Please don't include anything somber, stressful, or violent. Keep the tone happy, warm, uplifting, and relaxing.
     
     Additionally, the entire story should be gentle and calming, like a pleasant dream -- conducive to falling asleep. For example, please do include words like:
     - gentle,
@@ -236,7 +300,7 @@ for input in inputs:
 
     In an obscure corner of the workshop, a seasoned artisan with hands toughened and lined by years of diligent dedication hunches over a misshapen lump of clay. With an intuitive touch, he gently coaxes the lifeless material, his fingers carving intricate patterns that whisper ancient tales. Quiet concentration etches deeper creases on his weathered face as he transforms mere earth into a fragile piece of ceramic art.
 
-    Across the room, his associate, a stalwart silhouette against the flickering glow of the forge, threads a sinewy strand of silver through a weather-worn fingertip. Twisting and turning with careful precision, he molds the raw metal into an exquisite wearable piece of art. His eyes glint with reflected light and unwavering determination, while his hands orchestrate a silent symphony, bringing an unearthly luminescence to the once somber material.
+    Across the room, his associate, a stalwart silhouette against the flickering glow of the forge, threads a sinewy strand of silver through a weather-worn fingertip. Twisting and turning with careful precision, he molds the raw metal into an exquisite wearable piece of art. His eyes glint with reflected light and unwavering determination, while his hands orchestrate a silent symphony, bringing a dreamy luminescence to the material.
 
     END EXAMPLE REWRITE ONE:
 
@@ -256,12 +320,10 @@ for input in inputs:
     The huipil, typically made of cotton, is a square-cut, loose sleeveless tunic. Its vibrant surface teems with delicate embroidery and exquisite beadwork; flower motifs, birds, and symbols related to ancient Nahua gods are common elements.
 
     END EXAMPLE REWRITE TWO:
-
-
     """ + "\n\n=====\n\n" + example_story
     system_message = {"role": "system", "content": system_prompt_for_story}
 
-    user_prompt_for_setting_scene = f"Please begin by setting the scene. We are traveling in {input['destination_fullname']}. We are taking a sightseeing tour by {input['transport_method']}. However, JUST set the scene; don't begin the sightseeing tour just yet. Make me excited about my trip overall, and about the upcoming tour. Keep this short -- just three or four paragraphs. Please don't end your response with a summary, though, because we will continuing the story!"
+    user_prompt_for_setting_scene = f"Please begin by setting the scene. We are traveling in {input['destination_fullname']}; the season in {input['season']}. We are taking a sightseeing tour by {input['transport_method']}, although we may also walk around some as well. However, JUST set the scene; don't begin the sightseeing tour just yet. Make me excited about my trip overall, and about the upcoming tour. Keep this short -- just three or four paragraphs. Please don't end your response with a summary, though, because we will be continuing the story!"
     user_message_for_setting_scene = {"role": "user", "content": user_prompt_for_setting_scene}
 
     message_list = [system_message, user_message_for_setting_scene]
@@ -279,16 +341,26 @@ for input in inputs:
     message_list.append(assistant_message_with_scene_setting)
 
     stop_messages = []
-    for (index, stop_prompt) in stops_with_tidbits:
-        stop_prompt += "\n\n Please don't end your response with a summary, though, because we will continuing the story!"
+    for (index, stop_prompt) in enumerate(stops_with_tidbits):
+        stop_prompt += "\n\nPlease don't end your response with a summary, though, because we will be continuing the story!"
         if index == len(stops_with_tidbits) - 1:
-            stop_prompt += "\n\n Additionally, at the beginning of your response, please do NOT refer to the sightseeing location where we've just been."
+            stop_prompt += """\n\nAdditionally, at the beginning of your response, please do NOT refer to the sightseeing location where we've just been. Do not say where we are leaving from. Rather, just refer to our travel adventures in general terms.
+            
+            GOOD EXAMPLE:
+
+            Our sightseeing tour continues as we make our ways towards...
+
+            BAD EXAMPLE:
+
+            As we make our way from the castle, ...
+            """
         stop_message = {"role": "user", "content": stop_prompt}
         stop_messages.append(stop_message)
 
     i = 0
     for user_message_for_stop in stop_messages:
         print("fetching story chunk number", i+1)
+        print("and the user prompt is:\n\n", user_message_for_stop["content"])
         message_list.append(user_message_for_stop)
         completion = client.chat.completions.create(
             model = "gpt-4-32k",
