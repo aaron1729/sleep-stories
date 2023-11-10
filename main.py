@@ -15,126 +15,126 @@ timestamp = datetime_str_to_timestamp(start_time)
 num_stops = 20
 
 inputs = [
-    # {
-    #     "destination": "newyorkcity",
-    #     "destination_fullname": "New York, New York",
-    #     "transport_method": "open-top bus tour and Metro, with a tour guide with a thick Brooklyn accent whose family has been in New York City for many generations",
-    #     "season": "fall",
-    # },
-    # {
-    #     "destination": "tokyo",
-    #     "destination_fullname": "Tokyo, Japan",
-    #     "transport_method": "Tokyo metro train and Toei subway system, with a tour guide who is gregarious but soft-spoken",
-    #     "season": "spring",
-    # },
-    # {
-    #     "destination": "paris",
-    #     "destination_fullname": "Paris, France",
-    #     "transport_method": "Seine river cruise and Paris Metro, with a male tour guide in his early 40s who wears a beret and neckerchief and speaks with just a slight accent",
-    #     "season": "spring",
-    # },
-    # {
-    #     "destination": "london",
-    #     "destination_fullname": "London, England",
-    #     "transport_method": "the Tube subway, and also a double-decker bus with a bus driver and tour guide who is a middle-aged British man with an attention to detail that rivals Sherlock Holmes",
-    #     "season": "spring",
-    # },
-    # {
-    #     "destination": "bangkok",
-    #     "destination_fullname": "Bangkok, Thailand",
-    #     "transport_method": "tuk-tuk (i.e. a rickshaw), with a driver who is also a tour guide",
-    #     "season": "winter",
-    # },
+    {
+        "destination": "newyorkcity",
+        "destination_fullname": "New York, New York",
+        "transport_method": "open-top bus tour and Metro, with a tour guide with a thick Brooklyn accent whose family has been in New York City for many generations",
+        "season": "fall",
+    },
+    {
+        "destination": "tokyo",
+        "destination_fullname": "Tokyo, Japan",
+        "transport_method": "Tokyo metro train and Toei subway system, with a tour guide who is gregarious but soft-spoken",
+        "season": "spring",
+    },
+    {
+        "destination": "paris",
+        "destination_fullname": "Paris, France",
+        "transport_method": "Seine river cruise and Paris Metro, with a male tour guide in his early 40s who wears a beret and neckerchief and speaks with just a slight accent",
+        "season": "spring",
+    },
+    {
+        "destination": "london",
+        "destination_fullname": "London, England",
+        "transport_method": "the Tube subway, and also a double-decker bus with a bus driver and tour guide who is a middle-aged British man with an attention to detail that rivals Sherlock Holmes",
+        "season": "spring",
+    },
+    {
+        "destination": "bangkok",
+        "destination_fullname": "Bangkok, Thailand",
+        "transport_method": "tuk-tuk (i.e. a rickshaw), with a driver who is also a tour guide",
+        "season": "winter",
+    },
     {
         "destination": "istanbul",
         "destination_fullname": "Istanbul, Turkey",
         "transport_method": "ferry ride on the Bosphorous and historic tram on Istiklal Avenue",
         "season": "spring",
     },
-    # {
-    #     "destination": "dubai",
-    #     "destination_fullname": "Dubai, United Arab Emirates",
-    #     "transport_method": "private limousine and an abra (i.e. a traditional boat) on Dubai Creek",
-    #     "season": "winter",
-    # },
-    # {
-    #     "destination": "barcelona",
-    #     "destination_fullname": "Barcelona, Spain",
-    #     "transport_method": "guided bike tour with an affable university student who double-majors in art and history as a tour guide",
-    #     "season": "early fall",
-    # },
-    # {
-    #     "destination": "rio",
-    #     "destination_fullname": "Rio de Janeiro, Brazil",
-    #     "transport_method": "limousine with a quiet but friendly driver in his early 50s who is aging gracefully",
-    #     "season": "late spring",
-    # },
-    # {
-    #     "destination": "shanghai",
-    #     "destination_fullname": "Shanghai, China",
-    #     "transport_method": "Shanghai Metro and a Huangpu River cruise",
-    #     "season": "fall",
-    # },
-    # {
-    #     "destination": "greece",
-    #     "destination_fullname": "Greece",
-    #     "transport_method": "catamaran with a captain who serves as a tour guide, and also a donkey ride on Santorini",
-    #     "season": "spring",
-    # },
-    # {
-    #     "destination": "kyoto",
-    #     "destination_fullname": "Kyoto, Japan",
-    #     "transport_method": "rickshaw with a jovial middle-aged man who serves as a tour guide, and also a bit of bicycling without the tour guide",
-    #     "season": "spring",
-    # },
-    # {
-    #     "destination": "amalfi",
-    #     "destination_fullname": "Amalfi Coast, Italy",
-    #     "transport_method": "Vespa scooter and coastal boat tour with a friendly captain",
-    #     "season": "spring",
-    # },
-    # {
-    #     "destination": "bali",
-    #     "destination_fullname": "Bali, Indonesia",
-    #     "transport_method": "car with a young woman driver who is also a tour guide and also rental scooters",
-    #     "season": "spring",
-    # },
-    # {
-    #     "destination": "cinqueterre",
-    #     "destination_fullname": "Cinque Terre, Italy",
-    #     "transport_method": "a leisurely boat trip, as well as hiking the trails between the villages",
-    #     "season": "spring",
-    # },
-    # {
-    #     "destination": "chiangmai",
-    #     "destination_fullname": "Chiang Mai, Thailand",
-    #     "transport_method": "tuk-tuk (i.e. rickshaw)",
-    #     "season": "winter",
-    # },
-    # {
-    #     "destination": "napa",
-    #     "destination_fullname": "Napa Valley, California",
-    #     "transport_method": "wine train and a ride in a hot air balloon",
-    #     "season": "fall",
-    # },
-    # {
-    #     "destination": "algarve",
-    #     "destination_fullname": "The Algarve, Portugal",
-    #     "transport_method": "rental car for coastal drives and a boat trip to explore sea caves",
-    #     "season": "spring",
-    # },
-    # {
-    #     "destination": "costarica",
-    #     "destination_fullname": "Costa Rica",
-    #     "transport_method": "camper van",
-    #     "season": "dry season",
-    # },
-    # {
-    #     "destination": "queenstown",
-    #     "destination_fullname": "Queenstown, New Zealand",
-    #     "transport_method": "water taxis",
-    #     "season": "summer",
-    # },
+    {
+        "destination": "dubai",
+        "destination_fullname": "Dubai, United Arab Emirates",
+        "transport_method": "private limousine and an abra (i.e. a traditional boat) on Dubai Creek",
+        "season": "winter",
+    },
+    {
+        "destination": "barcelona",
+        "destination_fullname": "Barcelona, Spain",
+        "transport_method": "guided bike tour with an affable university student who double-majors in art and history as a tour guide",
+        "season": "early fall",
+    },
+    {
+        "destination": "rio",
+        "destination_fullname": "Rio de Janeiro, Brazil",
+        "transport_method": "limousine with a quiet but friendly driver in his early 50s who is aging gracefully",
+        "season": "late spring",
+    },
+    {
+        "destination": "shanghai",
+        "destination_fullname": "Shanghai, China",
+        "transport_method": "Shanghai Metro and a Huangpu River cruise",
+        "season": "fall",
+    },
+    {
+        "destination": "greece",
+        "destination_fullname": "Greece",
+        "transport_method": "catamaran with a captain who serves as a tour guide, and also a donkey ride on Santorini",
+        "season": "spring",
+    },
+    {
+        "destination": "kyoto",
+        "destination_fullname": "Kyoto, Japan",
+        "transport_method": "rickshaw with a jovial middle-aged man who serves as a tour guide, and also a bit of bicycling without the tour guide",
+        "season": "spring",
+    },
+    {
+        "destination": "amalfi",
+        "destination_fullname": "Amalfi Coast, Italy",
+        "transport_method": "Vespa scooter and coastal boat tour with a friendly captain",
+        "season": "spring",
+    },
+    {
+        "destination": "bali",
+        "destination_fullname": "Bali, Indonesia",
+        "transport_method": "car with a young woman driver who is also a tour guide and also rental scooters",
+        "season": "spring",
+    },
+    {
+        "destination": "cinqueterre",
+        "destination_fullname": "Cinque Terre, Italy",
+        "transport_method": "a leisurely boat trip, as well as hiking the trails between the villages",
+        "season": "spring",
+    },
+    {
+        "destination": "chiangmai",
+        "destination_fullname": "Chiang Mai, Thailand",
+        "transport_method": "tuk-tuk (i.e. rickshaw)",
+        "season": "winter",
+    },
+    {
+        "destination": "napa",
+        "destination_fullname": "Napa Valley, California",
+        "transport_method": "wine train and a ride in a hot air balloon",
+        "season": "fall",
+    },
+    {
+        "destination": "algarve",
+        "destination_fullname": "The Algarve, Portugal",
+        "transport_method": "rental car for coastal drives and a boat trip to explore sea caves",
+        "season": "spring",
+    },
+    {
+        "destination": "costarica",
+        "destination_fullname": "Costa Rica",
+        "transport_method": "camper van",
+        "season": "dry season",
+    },
+    {
+        "destination": "queenstown",
+        "destination_fullname": "Queenstown, New Zealand",
+        "transport_method": "water taxis",
+        "season": "summer",
+    },
 ]
 
 
@@ -256,8 +256,8 @@ for input in inputs:
 
     example_story = open("prompts/example_story.txt", "r").read()
 
-    system_prompt_for_story = """
-    I'm going to give you a tourist destination, a mode of transportation, a season, and a bunch of sightseeing locations there -- these will come one at a time. Please write me a story like the example far below. Please make sure to write in the PRESENT TENSE. Please don't give the tour guide a specific name, referring to them instead as "our guide" (or similar).
+    system_prompt_for_story = f"""
+    I'm going to give you a tourist destination, a mode of transportation, a season, and {num_stops} different sightseeing locations there -- these will come one at a time. Please write me a story like the example far below. Please make sure to write in the PRESENT TENSE. Please don't give the tour guide a specific name, referring to them instead as "our guide" (or similar).
 
     As I name each sightseeing location, I'm also going to give you some tidbits about it: historical facts, literary references, relevant quotes, typical dining experiences, and possibly also human experiences involved in visiting this sightseeing location by the chosen mode of transportation. Please try to include these. However, don't include more than THREE food experiences total.
 
@@ -342,7 +342,7 @@ for input in inputs:
 
     stop_messages = []
     for (index, stop_prompt) in enumerate(stops_with_tidbits):
-        stop_prompt += "\n\nPlease don't end your response with a summary, though, because we will be continuing the story!"
+        stop_prompt += "\n\nPlease don't end your response with a summary, though, because we will be continuing the story and visiting more sightseeing locations!"
         if index == len(stops_with_tidbits) - 1:
             stop_prompt += """\n\nAdditionally, at the beginning of your response, please do NOT refer to the sightseeing location where we've just been. Do not say where we are leaving from. Rather, just refer to our travel adventures in general terms.
             
