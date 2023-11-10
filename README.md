@@ -2,7 +2,7 @@
 
 ## virtual environment
 
-make sure the `openai-env` virtual environment is loaded and running. to load, on the command line in the root of the repo do `python -m venv openai-env`; to run, on the command line (in macOS) do `source openai-env/bin/activate`.
+make sure the `openai-env` virtual environment is loaded and running. to load, on the command line in the root of the repo do `python -m venv openai-env`; to run, on the command line (in macOS) do `source openai-env/bin/activate`. this ought to have an API key saved (say in the file `openai-env/bin/activate`), as explained [here](https://platform.openai.com/docs/quickstart/step-2-setup-your-api-key).
 
 
 ## API key
