@@ -3,9 +3,9 @@
 
     package com.downdogapp.cue
 
-    object SleepStoryTravelParisCues : SleepPoseCues {
+    object SleepStoryTravelParisCues : SleepStoryPoseCues {
 
-    override fun Config.start() =
+    override val start =
     "Paris, the beating heart of France, is a living, breathing stage set for our springtime journey. Her iconic monuments and sprawling boulevards, replete with story and style, invite us into their timeless embrace. Iridescent with renewed life, the 'City of Light' unveils her viridian foliage as we prepare to embark on our relaxed riverside saunter along the meandering Seine and underground voyage through the veins of her urban arteries — the Paris Metro." /
 "Whispers of sunlight dance on the cobblestone streets, weaving in and out of the evergreens lining the riverbank, weaving an iridescent tableau of warmth and wonder. The crisp air is tinged with the subtle fragrance of blooming lilacs and the distant aroma of freshly baked baguettes wafting from whimsical corner patisseries. It is the quintessential Parisian spring – a hypnotic blend of serenity and excitement, blossoming love, and the promise of fresh beginnings." /
 "Our guide is a seasoned Parisian, a middle-aged man who, with his offbeat wardrobe — a jaunty beret, a splash of color adorned around his neck, a neckerchief — is the very epitome of local charm. His manner is jovial and relaxed, and when he speaks, his voice carrying the musical lilt of the French accent, his words imbuing the surrounding architecture and waterways with a captivating, endearing narrative." /
@@ -18,7 +18,7 @@
 "Soon, the boat docks, and it's time to disembark. The proximity to the tower unveils its truly spectacular stature. The lines and beams, initially hidden in the larger view, are now distinct and truly awe-inspiring. In a quiet side-note, our guide points out the entrance booth, hinting at the possibility for a closer encounter." /
 "Thoughts of stepping into an elevator and ascending more than 300 meters up a historical monument are thrilling, yet so distant. As you share your excitement with the guide, he chuckles, patting your shoulder, 'mon neveu,' he says, the endearment floating between Paris' past and present, encouraging us to immerse in the city's endless tale of beauty and vitality."
 
-    override fun Config.middle() = listOf(
+    override val middle = listOf(
     "As our boat docks once again and we make our way back onto Parisian streets, the evening finds us under the enchanting glow of the city lights. Looming in the near distance, like a magnificent crown jewel, stands the regal Louvre Museum. The familiar glass pyramid, often captured in countless pictures and movie frames, rises imposingly against the backdrop of the night sky." /
 "Our guide, pointing towards the illuminated pyramids, begins his mesmerizing narration, painting a vivid picture of the 12th-century fortress turned royal palace. His tales are like threads, interweaving the past and present, revealing a tapestry rich in art and history. He speaks of the Louvre's metamorphosis during the French Revolution, underlining the democratic spirit of France that replaced royal grandeur with public accessibility." /
 "As you approach the Louvre, the gravity of its historical and artistic magnitude becomes palpable. Over 38,000 objects are echoed in the hallowed halls, each object a silent testament to its epoch and civilization. Strolling through the grand halls of the museum, you feel a comfort in the quiet, undulating swathes of history. Each artifact appears to converse with you, exhibiting an intricate dance of shadows and light, evoking the eloquent words of French artist Paul Cezanne: 'The Louvre is the book in which we learn to read.'" /
@@ -147,7 +147,7 @@
 "With the sky transforming into a blanket of constellations, we jump back onto the steady voyage of the Seine River cruise. As an intimate rendering of Paris's skyline unfolds against the setting sun, our charming guide's tales help stitch our experiences into the timeless quilt of this mesmerizing city. As the day folds into the enveloping dusk, we await another dawn shimmering with stories yet to be discovered in the heart of Paris."
     )
 
-    override fun Config.end() =
+    override val end =
     "Our sightseeing tour continues as we unravel a new chapter set in the heart of Parisian grandeur. Lifting our eyes to the opulent silhouette of the Opera Garnier, we tune in to the whispered chronicles held within its hallowed halls. Our charismatic guide, the beret resting gently on his head, ushers us closer, the fervor of anticipation mirrored in his warm smile." /
 "The Opera Garnier, a creation of Charles Garnier's vision, welcomes us with the illustrious tales of its past. While the imposing exterior invites curious gazes, it's the heart of the opera house that holds legendary lore, including Gaston Leroux's 'The Phantom of the Opera'. Our guide, lending his enchanting accent to the narrative, pulls us deeper into the labyrinth of underground tales spun amidst the echoes of cherished opera performances." /
 "As we walk the path of the privileged few, beneath the magnificent ceilings touched by Marc Chagall's artistry in 1964, art and music blend into a harmonious duet. The grandeur of the multicolored marble staircase, and the echoing vaults of the auditorium and galleries, a taste of the French Second Empire, beckons our admiring eyes and lenses at every turn. Listening to the soft hush of our footsteps, we find our steps flowing in rhythm with the silent music of the place." /

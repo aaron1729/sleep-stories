@@ -1,7 +1,9 @@
-from os import listdir
+import re # regular expressions
+from os import listdir # operating system; list the files in a directory
 from os.path import isfile, join
 txt_file_names_incl_hidden = [f for f in listdir("stories/") if isfile(join("stories/", f))]
 txt_file_names = [file_name for file_name in txt_file_names_incl_hidden if file_name[0] != "."]
+txt_file_names.sort() # make alphabetical, for reproduceability.
 
 for txt_file_name in txt_file_names:
 
@@ -25,7 +27,9 @@ for txt_file_name in txt_file_names:
         # "3rd paragraph of the 3-paragraph chunk"
     def process_chunk(string):
         string = string.strip()
-        list_old = string.split("\n\n")
+        # chunks consist of paragraphs. usually the paragraphs are separated by "\n\n", but occasionally GPT separates them with "\n \n", or even "\n  \n" (with two spaces).
+        string_with_fixed_paragraph_separations = re.sub(r'\n *\n', '\n\n', string)
+        list_old = string_with_fixed_paragraph_separations.split("\n\n")
         list_new = []
         for paragraph in list_old:
             paragraph_replaced = paragraph.replace("\"", "'")
@@ -48,16 +52,16 @@ for txt_file_name in txt_file_names:
 
     package com.downdogapp.cue
 
-    object {object_name} : SleepPoseCues {{
+    object {object_name} : SleepStoryPoseCues {{
 
-    override fun Config.start() =
+    override val start =
     {start}
 
-    override fun Config.middle() = listOf(
+    override val middle = listOf(
     {middle}
     )
 
-    override fun Config.end() =
+    override val end =
     {end}
     }}"""
 

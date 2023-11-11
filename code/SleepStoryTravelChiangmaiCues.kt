@@ -3,9 +3,9 @@
 
     package com.downdogapp.cue
 
-    object SleepStoryTravelChiangmaiCues : SleepPoseCues {
+    object SleepStoryTravelChiangmaiCues : SleepStoryPoseCues {
 
-    override fun Config.start() =
+    override val start =
     "Immerse yourself in the tranquil allure of Chiang Mai, a city located in the mountainous terrains of Northern Thailand. As winter graces the land, gently enveloping it in a warm yet not oppressive blanket of heat, the sweet scent of the flora and the glittering dew-laden leaves offer an undulating welcome. A soothing breeze flows through the city, whispering tales of ancient times, peaceful Buddhism, and the vibrant traditions that envelop this cultural heartland." /
 "In the midst of this picturesque setting, we find ourselves eagerly prepared for an enchanting journey through the city’s streets and hidden paths. Our chosen mode of transportation: the tuk-tuk, an iconic symbol of Thai everyday life. This three-wheeled rickshaw hums ever so gently, ready to take us through a kaleidoscope of sensory experiences that will surely leave a lasting impression in our hearts." /
 "We have a day ahead that promises enchanting Buddhist temples with their gleaming spires, timeless local markets bustling with friendly interactions, and authentic Thai cuisine that explodes with a myriad of flavours on the tongue. Yet, amidst these vivid attractions, there will be quiet moments of introspection and peace – savoring the lapping waters against a riverside cafe or tracing the intricate patterns of a centuries-old mural in a quiet temple." /
@@ -16,7 +16,7 @@
 "Our reverie is softly nudged aside by the gentle lure of our senses. The tantalizing aroma of a regional specialty, Khao Soi, wafts from nearby, pulling us towards its source like a comforting, invisible hand. This creamy coconut curry noodle soup, a culinary symbol of Chiang Mai, is an integral part of the temple experience. Its rich scent is an echo of the city's vibrant local life and culture. As we savor it, the warmth spreads deliciously, nourishing both body and soul." /
 "Our hearts filled with serenity and our bodies rejuvenated, we take a final walk to the edge of the temple’s premise. The panoramic vista of Chiang Mai city unfolding before our eyes, in all its splendid glory, is breathtaking, sweeping us up in a wave of tranquil awe. The harmony between nature and civilization is palpable, painting a picture of peaceful coexistence. As charming as all this is, we remember that this is merely the beginning of our journey. With a last glance at the serene Wat Phra That Doi Suthep, we prepare to return to our waiting tuk-tuk, eager to discover the next enchanting chapter of Chiang Mai."
 
-    override fun Config.middle() = listOf(
+    override val middle = listOf(
     "After a gentle descent from the sacred heights of Doi Suthep, we find ourselves weaving through the gradually bustling streets of Chiang Mai once again. Our tuk-tuk ebbs through the thickening traffic, bringing us closer to our evening destination: the vibrant heart of the city, the Chiang Mai Night Bazaar." /
 "Alighting from our tuk-tuk, we join the throng of expectant visitors flowing towards the lively buzz of the market. Stretching several blocks along the footpaths of Chang Khlan Road, the bazaar stretches before us like a twinkling river of stalls, each bedecked in a plethora of colors and shimmering under the glow of hanging lanterns. The air is filled with the rhythmic blend of chattering voices, the heartfelt laughter of vendors, and the continuous hum of life that thrives in such establishments after dark." /
 "The market holds a rich trade history and diversity that speaks volumes of the mingling cultures in Chiang Mai. Wandering between the stalls, we marvel at the artisanal handicrafts, colorful clothes, and enticing local foods. Each object tells a story, a whisper of tradition carried on the hands of northern Thai hill tribes and crafters from neighboring countries. Our eyes dart from one exotic item to another, fascinated by the stunning variety that the bazaar offers." /
@@ -148,7 +148,7 @@
 "Wholly content with our journey thus far, we set off once more. Chiang Mai, in all its beautiful contradictions, never ceases to amaze us. Shrouded in the ancient echoes of the Three Kings Monument and the pulsating rhythm of the city, we are filled with eager anticipation for the next leg of our Chiang Mai adventure."
     )
 
-    override fun Config.end() =
+    override val end =
     "Our sightseeing tour in Chiang Mai continues, carrying us deeper into the city's heart, unearthing the hidden gems it has to offer. Our trusted tuk-tuk vehicle finds itself on a new course, traversing a path etched along the side of mountains. With the cityscapes giving way to the lush mountainous terrain, we prepare ourselves for an invigorating exploration of Doi Suthep–Pui National Park." /
 "As we ascend towards the park, the tuk-tuk seems to mirror our growing anticipation. Our driver, with his engaging manner, outlines the spectacular sites that await us, his local knowledge enriching the inviting landscape unravelling before our eyes." /
 "This grand tribute to nature, aptly named after its two mountains—Doi Suthep and Doi Pui—stands as a harmonious meeting point of spiritual pilgrimage, royal residence, and diverse nature. A fascinating realm housing the sacred Wat Phra That Doi Suthep temple from the 13th century, as well as Bhubing Palace, the winter residence of the Thai royal family." /

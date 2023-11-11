@@ -3,9 +3,9 @@
 
     package com.downdogapp.cue
 
-    object SleepStoryTravelCinqueterreCues : SleepPoseCues {
+    object SleepStoryTravelCinqueterreCues : SleepStoryPoseCues {
 
-    override fun Config.start() =
+    override val start =
     "Embark with me on a serene journey as we rediscover the joy of spring in the picturesque landscapes of Cinque Terre, Italy. Where better to greet the return of warmth and blossom than in this collection of five pastel-colored villages perched between sea and sky, framed by vine-clad hills and olive groves. Cinque Terre, meaning 'five lands,' is a UNESCO heritage site recognized for its historical glory and natural beauty, and it offers a peaceful retreat away from the bustling tourism of Italy's famed cities." /
 "Our mode of exploration infuses tradition with leisure, creating the perfect recipe for a gentle day's adventure. Through the quaint villages of Monterosso, Vernazza, Corniglia, Manarola, and Riomaggiore, we'll meander by boat, allowing us to capture the full panorama of the villages as they spring into vibrant life. Their candy-colored houses jostle cheerfully for space on the steep hills, their reflections dancing on the gentle lapping waves." /
 "Beyond the tranquil boat trips, we will be hiking the trails that wind between the villages, threading themselves through fragrant gardens, over brooks and through little hamlets. As we walk each trail, we will soak in the sun-dappled air, the whispering wind that tumbles down the valleys, and the breath-giving views that Cinque Terre has to offer." /
@@ -20,7 +20,7 @@
 "And then, it's time to lace up our boots and follow the local fauna-flanked trail leading from Vernazza to Monterosso, traversing nature's quiet symphony. Birds chime in melodic harmony, their notes cascading alongside the bustling leaves, as the wind plays a soft orchestrator." /
 "The scenic paths gradually lead us back to where our journey started at the day's inception. The charcoal-hued boats bob gently in the harbour, dancing on the rhythm of the lapping waves. Nearby, the locals gather for an animated game of bocce, their laughter spilling onto the twilight-hued air. As we watch the sun dip into the sea, staining the horizon with shades of tangerine and peach, we savor the lingering taste of gelato on our lips - a fitting goodbye to the endearing Monterosso."
 
-    override fun Config.middle() = listOf(
+    override val middle = listOf(
     "Leaving the exuberant echo of bocce games and the sweetness of gelato lingering in our mouths, we stroll along the coast where the Il Gigante makes his silent, immortal stand. Imposing yet infinitely gentle, the giant statue merges effortlessly with the landscape, its stone skin weathered yet unyielding against the relentless caress of the sea and time." /
 "Commissioned at the dawn of the twentieth century, Il Gigante is a testament to the symbiotic relationship between human creativity and natural beauty. The sculptor, Arrigo Minerbi, and the architect, Francesco Levacher, brought forth this embodiment of the god Neptune. He once served as mighty support for a seaside terrace, towering over the rolling waves, brandishing his trident, his other robust arm cradling a shell of immense proportions." /
 "History, however, leaves tangible scars on man-made wonders, and Il Gigante also bears the marks of his past. The ravages of World War II bombings and relentless rains summarily attacked Neptune’s mighty form, robbing him of his arms, trident, and basin-shell. Yet his undying spirit remained untouched, his gaze steadfastly overlooking the seaside villa and beyond." /
@@ -154,7 +154,7 @@
 "Eager to carry back tokens of our memorable journey, we too plunge into the ocean of trinkets and souvenirs. Exchanging banter with friendly shopkeepers, our laughter Frescoes the air. Holds full of treasures and hearts full of memories, we step back onto our boat, allowing the tranquil waves to serenade us with soothing lullabies. We glance back at the Via Colombo disappearing in the distance, its effervescent vibrance already becoming a cherished memory, neatly folded into the pages of our adventurous excursion in the stunning Cinque Terre region."
     )
 
-    override fun Config.end() =
+    override val end =
     "Stepping onto the welcoming deck of our boat, we prepare to behold the panoramic splendor of the Cinque Terre region from an unmatched vantage point. The tranquil sea gently cradles our vessel as we set out towards the magnificent view of Monterosso, Vernazza, Corniglia, Manarola, and Riomaggiore, each standing as a unique testament to nature's wonders and man's tenacity." /
 "The Cinque Terre region, meaning 'Five Lands,' has long enjoyed the status of a UNESCO World Heritage site and a national park. Our maritime tour, while offering a feast of sights for our eyes, respects these coveted statuses as we glide through the crystal-clear waters flanking the rugged cliffs, our journey fixed within the gentle lap of environmentally friendly practices." /
 "As we peacefully navigate the cerulean expanse, a picture-book panorama unfolds before our eyes. The five coastal villages, all different yet harmoniously linked, are flamboyantly colorful against the rocky coastline. The pristine pebble beaches beckon us invitingly as sunbathers enjoy the warm, caressing sunlight." /

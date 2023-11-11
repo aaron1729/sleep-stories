@@ -3,9 +3,9 @@
 
     package com.downdogapp.cue
 
-    object SleepStoryTravelBaliCues : SleepPoseCues {
+    object SleepStoryTravelBaliCues : SleepStoryPoseCues {
 
-    override fun Config.start() =
+    override val start =
     "Tonight, as you lay there comfortably, we embark upon a virtual journey to the magical island of Bali, Indonesia. You're in a gentle, undulating world renowned for its warm azure waters, lush green terraces, and culturally-rich, heritage-filled landscapes that the early light of spring tenderly illuminates. Bali is a place where nature harmoniously intertwines with tradition, setting the scene for an immersive experience that is both vibrant and soothing." /
 "You can already feel the comforting hum of the air-conditioned car pulling up, guided by our young tour guide's capable hands. A Balinese woman with eyes sparkling like the Bali Sea, she greets you with an infectious smile that echoes Bali's spirit better than any guidebook could. She is also the one to introduce you to the fleet of rental scooters, their metallic bodies gleaming under the soft rays of the Balinese sun, a promise of thrilling, easy-going exploration." /
 "Dressed in light, comfortable clothing, armed with a pair of sunglasses and a water bottle, you're ready to delve into the Balinese spring, eager to embrace its multitude of wondrous sights. Tranquil temples, tiers of verdant rice terraces, and shimmering beaches lie ahead, just waiting to shower you with their cultural riches." /
@@ -17,7 +17,7 @@
 "After witnessing the spectacle, our guide leads us to a cozy rustic restaurant perched on the ridge of the terraces. Here, we tuck into a traditional Indonesian treat – Nasi Campur. As we savor the meal, our senses are heightened by the aromatic amalgamation of flavors emanating from the dishes that are traditionally paired with the rice. The experience is beautifully rounded off by a fresh Balinese brew, served piping hot. We are struck by the incredible knowledge that the same fields we look upon have provided the ingredients for the sumptuous meal we're enjoying." /
 "We soak in the astonishing sight outside, our taste buds relishing the taste of the island on a plate, as the poignant words of our guide play in our minds, 'Rice is Life'. A feeling of peaceful tranquility washes over us, and we can't help but marvel at the interconnectedness of life in Bali, each strand weaving seamlessly into the next, replicating the mirrored terraces that reflect the quiet harmony of Balinese culture and life. The beautiful paradox of vibrant tranquility flourishes before our eyes, setting a soul-inspiring precedent for our sightseeing journey ahead."
 
-    override fun Config.middle() = listOf(
+    override val middle = listOf(
     "With a sense of lingering tranquility from our encounter with the scenic rice terraces, we next venture into the Sacred Monkey Forest Sanctuary. The car gives way to a pair of rental scooters, our adventurous tool for exploring the vibrant labyrinth of the forest trails. Our guide, an experienced navigator of this lush maze, navigates the paths effortlessly, allowing us to fully absorb the peace imbued by nature, as we follow her through the verdant canopy." /
 "Nothing quite prepares us for the spectacle of over 700 Balinese long-tailed monkeys frolicking freely in their natural habitat, engaging in their playful antics amid the rustling leaves. Observing them, their cheeky expressions and agile movements, brings an involuntary surge of joy and laughter. We find our hearts brimming with a childlike wonder as we watch these creatures coexisting harmoniously within the sanctuary's verdant expanse." /
 "Nestled within the bounds of the sanctuary, we discover the ancient secrets of three Hindu temples, their worn stones tracing back to the mystifying narratives of the mid-14th century. Our guide reverently shares the spiritual significance of monkeys in Balinese Hinduism, casting a new light on our interactions with these lively inhabitants of the forest. The stories link back to the Ramayana, a revered Indian epic poem, imbuing our playful encounters with a profound sense of connection to ancient lore." /
@@ -144,7 +144,7 @@
 "Bali weaves its magic as twilight drapes around us. Silhouetted against the setting sun, the Bali Safari & Marine Park stands as a testament to the unfailing harmony of Bali's wilderness. As we embark on our scooter ride back with the memories of a glorious day, we anticipate the exciting tales the next chapter of our journey holds."
     )
 
-    override fun Config.end() =
+    override val end =
     "Our sightseeing tour continues as we make our way towards the heart of Bali's vibrant art scene, the Semar Kuning Artist Cooperative. Located in the culturally enriched village of Lodtunduh, this destination whispers tales of creative inspiration and artistic passion that permeates the aura of the island." /
 "Nestled amidst the lush landscapes of Ubud, the cooperative stands as a testament to the traditional Balinese paintings, their artistry breathing life into high-quality canvas pieces. Known as a fertile ground for fostering local talent, the cooperative infuses the artistic dreams of local artists with the cultural spirit of Bali." /
 "Upon our arrival, the elegant strokes of the Kamasan style beckon us into the immersive collection of artwork. We wander through the gallery, the intricate paintings narrating visual stories varying from everyday life on the island to scenes drawn from sacred Hindu epics like the Ramayana and Mahabharata. We revel in the splendid tableau of religious rituals, dance performances, and captivating mythological tales depicted in vivid hues." /

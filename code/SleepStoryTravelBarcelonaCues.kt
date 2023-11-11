@@ -3,9 +3,9 @@
 
     package com.downdogapp.cue
 
-    object SleepStoryTravelBarcelonaCues : SleepPoseCues {
+    object SleepStoryTravelBarcelonaCues : SleepStoryPoseCues {
 
-    override fun Config.start() =
+    override val start =
     "As the summer heat of Spain gently fades, and the leaves start to hint at their vibrant autumnal palette, we find ourselves in the bustling city of Barcelona. This vibrant metropolis sprawls between the tranquility of the Mediterranean coastline and the soothing undulations of the Collserola hills, a tapestry woven from threads of vivacious culture, mouthwatering cuisine, and towering Gaudi creations." /
 "We're preparing ourselves for an enriching and leisurely tour by bike – a wonderfully immersive way to experience the city's charms. Barcelona's mild early fall climate invites us to explore the city's winding roads and sun-dappled plazas on two wheels, a soothing breeze softly ruffling our clothes as we take in the sight of centuries-old architecture mingling harmoniously with modern structures." /
 "Our guide for this biking expedition is a young, charismatic university student. A passionate scholar with an intellectual thirst, she carries majors in art and history, infusing her tales of Barcelona with a lively curiosity and profound knowledge. As we stroll beside our bicycles, anticipation humming in the air, we simply can't wait to see the city through her eyes, to feel the stories of the past come alive as she shares her thoughts, insights, and some little-known anecdotes." /
@@ -15,7 +15,7 @@
 "Our guide directs our gaze to the Castell dels tres Dragons, an architectural masterpiece by Lluís Domènech i Montaner. It's fascinating to learn that it originally served as a café-restaurant during the 1888 Universal Exhibition, a culinary note that invites a gentle rumble of anticipation in our stomachs. Heeding this call, we leisurely make our way towards the park's eco café, where the tempting aroma of organic cuisine greets us. With plates laden with fresh, local flavors, we dine amidst butterflies flitting about, a gentle reminder of the park's unyielding connection with nature." /
 "Resuming our journey, we spot locals reveling in a serene boat ride on the park's lake. Their laughter echoes softly, joining the melodious notes from colorful parakeets that flit across the sky. Our guide engages us in an enlightening conversation about the modernist influence apparent in the park's architectural elements, his narrative painting a vivid tapestry of Barcelona's history. As twilight descends upon the city, we reluctantly prepare ourselves to leave the tranquility of Parc de la Ciutadella behind, carrying with us memories and moments from a place where Barcelona's history, art, and nature converge. The beauty of this charming park stirs something in us, a promise to return – but for now, it is time to gently pedal onwards."
 
-    override fun Config.middle() = listOf(
+    override val middle = listOf(
     "Beneath a pristine blue Spanish sky, our guide steers us towards a more delectable chapter in Barcelona's unique narrative. Her directions lead us to a place where the past meets the fragrant allure of cocoa: the Chocolate Museum, housed uniquely in the ancient Saint Agustí monastery. Even from outside the building's stately stone façade, the divine scent of chocolate envelops us, hinting at the heavenly journey that awaits within." /
 "As we chain our bikes and step into the monastery, it feels like we're entering a realm untouched by time, where history and sweetness seamlessly blend. Our guide articulates how this age-old monastery transformed into a chocolate lover's paradise, detailing how the museum’s creation was inspired by Barcelona's established chocolate manufacturers' guild. We drink in her words as we drink in the sights, our gaze sweeping over intriguing exhibits – the heart of which is the statue of Colón, a masterpiece lovingly carved entirely out of chocolate." /
 "Here, amid the gilt-edged frames of time, we pause and watch other visitors engrossed in their chocolate-making workshops, joyfully learning from the museum's diligent chocolatiers. The aroma of molten chocolate and the sound of delighted laughter fills the air, turning the ancient monastery into a warm cocoon of happiness." /
@@ -147,7 +147,7 @@
 "Amid the soft hum of intriguing stories and the mesmerizing dance of the setting sun, we find ourselves falling into a comfortable silence on Turo de la Rovira, a path where Barcelona's past and present converge. As we carefully pack away the remnants of our hilltop picnic, the city below us sparkles to life. Guided by the serene glow of the moon and the sparkling cityscape, we prepare for the last leg of our Barcelona adventure."
     )
 
-    override fun Config.end() =
+    override val end =
     "Our sightseeing tour continues as we journey from the historic to the blooming picturesque on a gentle tide of elation and anticipation. Tucked away on Diagonal Avenue, a fragrant sanctuary awaits us — Roserar de Cervantes, a verdant rose garden abuzz with the hum of honey bees and the ballads of sweetly singing birds." /
 "Entering the rose garden feels like stepping into a beautifully penned sonnet, a tribute to the famous Spanish writer, Miguel de Cervantes, the literary genius who gifted us with 'Don Quixote'. Inaugurated in 1962, this stunning garden was designed to exhibit an arresting array of roses, a realm of tranquility where petals whisper tales in hues of pink, red, and white against a backdrop of the azure sky." /
 "Our guide leads us through the aromatic pathways, the soothing breeze carrying faint whiffs of over 400 different varieties of rose shrubs. Amidst this kaleidoscope of color and scent, she shares interesting details about the annual International New Roses Competition, a prestigious event that paints the garden with vibrant splashes of new rose varieties each year." /

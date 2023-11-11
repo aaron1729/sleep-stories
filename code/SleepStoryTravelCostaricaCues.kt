@@ -3,9 +3,9 @@
 
     package com.downdogapp.cue
 
-    object SleepStoryTravelCostaricaCues : SleepPoseCues {
+    object SleepStoryTravelCostaricaCues : SleepStoryPoseCues {
 
-    override fun Config.start() =
+    override val start =
     "Tonight we embark on a serene journey traversing the lush landscapes and sundrenched coastlines of Costa Rica. The season is dry, painting the sky in brilliant hues of azure and gold, bathing the land with a gentle warmth that whispers of tranquility and adventure. Costa Rica, a nation affectionately named the 'Rich Coast' by its Spanish explorers, is a paradise sought after by globe-trotters worldwide." /
 "Our chosen chariot among the scenic boulevards and rustic trails of this tropical Eden is none other than an inviting camper van. Its charming quirks and cozy interior lend a sense of personal refuge, a traveling sanctuary that fares with us wherever the winds guide our wanderlust. The camper van emanates a perpetual invitation, a comforting whisper in our ears, seducing our senses with dreams of breathtaking vistas and memorable encounters." /
 "Our journey is as much about meandering on foot as about cruising the roads in our darling camper van. The promise of unhurried walks, absorbing the pulsating rhythm of the landscapes, the cheerful spirit in the wind, and the textured symphony of sand beneath our feet await us as much as the serene hours inside our vehicular haven." /
@@ -17,7 +17,7 @@
 "As the morning morphs into noon, a local eatery beckons us to partake in the traditional Costa Rican 'casados'. As we savour this local harmony of flavors, encapsulating meat or fish partnered with beans, rice, and often fried plantains, we revel in the idyllic landscape and abundant wildlife of Manuel Antonio National Park." /
 "With an iridescent bird flitting past us, a gentle reminder that we are visitors in their haven, we prepare ourselves for the next proverbial chapter of our journey, eager to carry forward this sense of awe to our subsequent destinations."
 
-    override fun Config.middle() = listOf(
+    override val middle = listOf(
     "Navigating our camper van through the shimmering Costa Rican streets, we arrive at the husk of an old military fortress. This towering structure, a witness of the last armed struggle in 1948, now repurposed as the National Museum of Costa Rica, stands regally against the expansive cerulean sky, welcoming us with a sense of stoic grandeur that simmers down the passage of time." /
 "Parking our camper van nearby, we step out, greeted by the singular essence of discovered tales and curated history. An air of quiet respect envelops us as we surrender ourselves to the vast collection of cultural relics that celebrate Costa Rica's journey from pre-Columbian times to the present day. Each exhibit, a vibrant echo of narratives scribed by time, resonates within the fortress walls, weaving a tangible connection between the past and those living in the present." /
 "In the heart of this fortress, an expanse of azure captivates our attention. The 'El Castillo Azul,' or The Blue Castle, is a hypnotic maze of azure chambers, where our footsteps echo on the stony floor, a subtle soundtrack to our exploration of faded epochs. The 'Sala de Oro' or Gold Room warmly embraces us next with an invigorating play of light and shadow, the golden artifacts astound us with their intricate details, a silent testimony of the remarkable craftsmanship of those who once called this land their home." /
@@ -143,7 +143,7 @@
 "Every monument, every relic, every marking that time has deemed fit to withhold unravels the cultural tapestry of Guayabo, an enduring tribute to Costa Rica's vibrant past. As we retire for the day, the echoes of Guayabo's preserved history blend seamlessly with the chorus of the living forest, evoking an appreciation for the ceaseless rhythm of life and heritage of this land."
     )
 
-    override fun Config.end() =
+    override val end =
     "Our sightseeing tour continues as we steer our cozy camper van towards the fertile terrains of Heredia, the heartland of Costa Rica's gourmet coffee cultivation. The aromatic trail draws us into the welcoming embrace of Cafe Britt, the nation's first-ever gourmet coffee brand." /
 "Since 1991, Cafe Britt has taken its visitors on an immersive journey into the pulsating heart of Costa Rica's rich coffee culture through the Café Britt Coffee Tour. With every trail walked, we can't help but tread the footprints left by significant personalities like former US President Bill Clinton and singer Elton John, who once partook in the educational sojourn." /
 "As the tour unravels, a theatrical whirlwind of interactive experiences engulfs us. We witness coffee's journey from robust green beans to its tantalizing roasted brew, amidst the backdrop of rustling coffee plantations. The knowledgeable guides, theatrical performances, and interactive nature of the tour paint a vivid portrait of the inherent charm of coffee cultivation." /

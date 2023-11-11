@@ -3,9 +3,9 @@
 
     package com.downdogapp.cue
 
-    object SleepStoryTravelAlgarveCues : SleepPoseCues {
+    object SleepStoryTravelAlgarveCues : SleepStoryPoseCues {
 
-    override fun Config.start() =
+    override val start =
     "Tonight, we find ourselves preparing for a journey along the sun-kissed shores of the Algarve, Portugal. It's spring, a season that graces this coastal wonderland with the vibrancy of blooming flowers, pollen painting the air with delicate scents. The whispering trade winds weave a mild coolness in the air, creating a weather perfect both for comfortable walks and soothing drives. The sparsely dotted fluffy clouds provide a picturesque canvas against the backdrop of the cerulean sky." /
 "We're to set out in our rental car, promising ourselves the thrilling yet gentle experience of coastal drives. On the horizon, serpentine roads are surrounded by rolling verdant hills adorned with bursts of wildflower colors, leading to the vast expanse of the strikingly blue Atlantic. We plan to explore every nook and corner along this mesmerizing route, delighting in the coastal charms of the Algarve's towns and villages." /
 "Our journey also calls for a playful leap from land to water, as we plan to hop aboard a boat and set sail on aquatic adventures. The invigorating scent of the sea, the golden caves hidden beneath striking cliffs, and the rhythm of the lapping waves are just some of the treasures we look forward to uncovering." /
@@ -15,7 +15,7 @@
 "Feeling the tantalizing whispers of adventure, we park our car near the cliffs. Following the narrow stepped path downhill, we allow the breathtaking view to lead us towards the secluded beach. The path, though a bit steep, is comfortable enough for a relaxing descent to the beach. As we get closer, the murmur of others enjoying this celestial piece of earth is carried on the salty breeze. Some contentedly soak up the sun, their bodies relaxed on the warm sand; others splash in the crystal clear water, while more adventurous souls are snorkeled, ready to explore underwater wonders." /
 "To refuel ourselves, we settle on the inviting sands with a locally cherished snack 'Pão com Chouriço', the spicy sausage tucked in fresh bread providing a satisfying contrast to the sweet salinity of the ocean air around us. As we sit there, picnic style, our gaze drifts towards the nearby sea-caressed formations and we find ourselves contemplating — this is not just a beach; Praia da Marinha is an orchestra of gentle waves, golden light, soft sand, and warm moments, played out against a backdrop of nature's most breathtaking artwork."
 
-    override fun Config.middle() = listOf(
+    override val middle = listOf(
     "Leaving the golden allure of Praia da Marinha, we embark on a drive that is sure to be etched in memory. As our rental car carves a path along scenic coastal routes, we journey towards the southwestern tip of Portugal — Cape St. Vincent — a place that was lovingly described as the 'End of the World' by ancient Romans, their eyes limited by the horizons of their time." /
 "Along the way, towering cliffs come into view, jutting out in a rugged embrace of the vast Atlantic. Sea birds frolic in the azure sky above, their harmonious chirping meeting the soft strumming of the ocean waves below. We cannot help but pull over, taking a moment to watch these winged residents, perfectly at home in this edge of Europe. For these beautiful creatures, this austere landscape is a sanctuary; for us, they are an invitation to savor the tranquillity of the Algarve." /
 "As we approach the cape, the first thing that commands our attention is the iconic lighthouse, Farol do Cabo de São Vicente. Standing like a sentry on the cliffs since 1846, its bright beacon cuts through the wind-kissed air, its light soaring effortlessly up to 60 kilometres into the sea, safely guiding ships throughout the centuries." /
@@ -150,7 +150,7 @@
 "As the last rays of the day soothe our salt-kissed skin, the full spectrum of Praia da Luz's charm unravels, casting an indelible print on our Algarve voyage. And as evening transforms into night, we eagerly await the reminder of the adventures yet to unfold in the heart of Portugal."
     )
 
-    override fun Config.end() =
+    override val end =
     "Our sightseeing adventure dives further into the heart of Algarve's hidden treasures as we steer towards Pego do Inferno. The name itself, translating to 'Hell's Pit,' casts an enigmatic shadow over our expectations, igniting a spark of thrill in our hearts." /
 "Located near the quaint town of Tavira, and quite off the beaten path, Pego do Inferno is a spectacular waterfall tucked into the serene Algarve landscape. Marking a vivid departure from the seaside bustle of the Algarve beaches, its seclusion adds an almost ethereal quality to the setting." /
 "As we park our car and follow the short trail into the woods, the cascading notes of the waterfall provide a melodious background track, gradually growing louder with each step. The reveal of the waterfall, after a suspenseful walk through lush, untouched greenery, is nothing short of surreal. It stands there, a jewel hidden in nature's breast pocket, its hypnotic aura reflected in the turquoise pool below." /

@@ -3,9 +3,9 @@
 
     package com.downdogapp.cue
 
-    object SleepStoryTravelTokyoCues : SleepPoseCues {
+    object SleepStoryTravelTokyoCues : SleepStoryPoseCues {
 
-    override fun Config.start() =
+    override val start =
     "In the heart of Tokyo, Japan, the gentle whispering of the wind carries the dreamlike scent of blooming sakura, cherry blossom trees. It's springtime, the season of rejuvenation, mirroring the city's perfect blend of tradition and modernity. The bright sunshine bathes Tokyo in a tender glow, soothing the high rise buildings speckled against the cerulean background of the sky. This energetic metropolis, wearing a soft veil of pastel pink, is brimming with invigorating energies of renewal and hope. An enchanting, pictorial delight, and the perfect time to embark on an immersive exploration of Tokyo's hidden gems." /
 "The Tokyo Metro and Toei subway systems, the arterial lifelines of this populous city, appear eager to whisk us away on an unforgettable sightseeing tour. Looking at the interweaving collection of train routes on the comprehensive map, the complex network pulses with potential; they are like veins of the city, teeming with captivating stories, fascinating histories, and enchanting experiences." /
 "Our tour guide, a native Tokyoite with an infectious cheerfulness, greets us with a warm, welcoming smile. His voice, soft-spoken yet thick with enthusiasm, promises a wealth of local knowledge and insight that could only come from someone who truly loves and understands the depths of this city." /
@@ -17,7 +17,7 @@
 "The spring evening turns the sky a soft shade of pink as we finish off our meal with the subtly layered flavors of the okonomiyaki. Enjoying the delightful umami, mingling with the faint tang of sauce and mayonnaise, brings the evening to a delicately mouth-watering end." /
 "But the hum of the streets and the promise of more hidden gems to discover keep the ambience alive and sparkling. For this is merely the start, our initial encounter with Tokyo’s myriad wonders. What lays ahead is a charming, slightly mysterious trail - a labyrinth of unforgettable memories waiting to be navigated. The onset of our voyage in Tokyo’s looping metro has begun with the unveiling of Asakusa, authentic and traditional. The train of exploration bears on with an exciting hum, ready to pulse into the next stop, delving deeper into Tokyo's vibrant heart with every rhythm."
 
-    override fun Config.middle() = listOf(
+    override val middle = listOf(
     "The assertive chime of the metro propels us gently back to reality, signaling our arrival at Shibuya station. Our gregarious guide gently guides our group towards the bustling exit, where we ascend an escalator, emerging into a plaza ensconced by towering structures. As we step out, a dizzying array of sights, sounds, and lights unfold before us—the heart of Tokyo's bustling commercial center, Shibuya Crossing." /
 "This labyrinth is the epitome of Tokyo: modern, vibrant, and endlessly thrilling. Even the air seems alive, shimmering under the city’s neon aura as thousands of people stream across the streets from all directions in a perfectly choreographed dance. Recognized by the Guinness World Records as the world's busiest pedestrian crossing, the air hums with energy." /
 "Our guide motions us to the famous Hachikō statue standing loyally nearby. An undeniable sense of warmth washes over us as he spins the heart-rending tale of a dog's unwavering loyalty. We can't help but marvel at the story of a love so profound that it dances across the boundaries of life and death. Around it, the city pulses onwards, unendingly vibrant." /
@@ -162,7 +162,7 @@
 "Delighting in the scent wafting around, we heed the call of the Yakitori stalls, choosing one from the many dotting the alley. Crowding around the small grilling station, we find seats on miniature stools. The chef presents skewers of grilled chicken, the savory tang a perfect pair with the chilled beers served alongside. As we savor the traditional Yakitori and the amicable banter with our fellow diners, Omoide Yokocho etches itself onto our travel memories, a testament to the enduring resilience of Tokyo tradition amidst modernity."
     )
 
-    override fun Config.end() =
+    override val end =
     "Our sightseeing tour continues as we weave our way through the throngs of people in Omoide Yokocho, the vibrancy of the 'Memory Lane' still dancing in our senses. We navigate our way back to the trusty Tokyo Metro, the electric hum of the city like a steady heartbeat beneath the surface, guiding us to our next port of call. Alighting at Akasaka station, we prepare for another refreshing turn in our Tokyo journey." /
 "Through the bustling city streets, we spot our destination, manifesting as a cascade of vibrant red Torii gates. Like stepping into a portal, the threshold of Hie Shrine welcomes us from the high-octane tempo of Tokyo into a world serenely detached. It feels as though time has folded, transporting us to another era, a hypnotic blend of Tokyo's captivating past and bustling present." /
 "This Shinto site’s significance has threaded through Tokyo's history, shaping narratives since the Edo era. From amidst the vibrant Torii gates, the Hie Shrine, dedicated to the Shinto god Oyamakui-no-Kami, majestically rises, its charm undiminished despite the ravages of fires and wars. With every step up the enchanting red canopy, we leave the city's hum further behind, and the hush of reverence blankets us, the whispers of history lingering in the air marrying the serenity of the here and now." /

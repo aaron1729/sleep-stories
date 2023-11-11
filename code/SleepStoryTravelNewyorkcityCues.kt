@@ -3,9 +3,9 @@
 
     package com.downdogapp.cue
 
-    object SleepStoryTravelNewyorkcityCues : SleepPoseCues {
+    object SleepStoryTravelNewyorkcityCues : SleepStoryPoseCues {
 
-    override fun Config.start() =
+    override val start =
     "Today, we find ourselves amidst the gentle hum and quiet excitement of New York City, as it unfurls its autumnal magic. As the season arrives, New York seems to have been brushed with an extravagant artist's palette - the foliage in Central Park blazes with oranges and reds, brownstone townhouses glow warmly under the golden autumn sunlight, while gusts of wind playfully send a quivering dance of leaves down the wide boulevards. Indeed, fall in the city feels like a comfortable mid-point between the sizzling summer and frost-kissed winter." /
 "We are on the verge of a unique sightseeing tour, not by foot, nor by bicycle, but by taking an iconic open-top bus tour and the city's lifeblood - the Metro. Under the vast open sky, the cool winds mockingly teasing our hair atop the bus, or plunged into the pulsating heart of the subway system, we are to explore the city in a way only a few do. This mode of transportation is typically Big Apple: immediate, bustling, and diverse, offering us a front-row seat to one of the world’s most vibrant metropolises." /
 "Leading our expedition is our guide, a native of the city with a thick Brooklyn accent that sways and dances to its own special rhythm, an auditory testament to several generations of a family who have called this city home. As the cityscape unfolds before us, he'll share with us the stories, the anecdotes, the little-known facts that bring the bricks and mortar of the city to life. After all, nobody knows New York better than a true New Yorker." /
@@ -17,7 +17,7 @@
 "As we continue our exploration, the sound of splashing water grows louder. Turning a corner, we come upon the Bethesda Fountain. Water dances down from the angel statue perched atop, each droplet catching the sunlight in its flight, performing a ballet in mid-air. Carriages drawn by horses trot lazily by, somehow at perfect harmony with the city's rhythm." /
 "Immersed in this gentle chaos, it's easy to imagine why Central Park is the backdrop to countless movie scenes and cherished memories. Stepping back onto the bus, we take one lingering look at the park, ready to carry these images with us as we venture forth into our New York adventure."
 
-    override fun Config.middle() = listOf(
+    override val middle = listOf(
     "The bus maneuvers through the bustling traffic, taking us deeper into the heart of the city towards our second stop – the celebrated Metropolitan Museum of Art. Our guide, with his Brooklyn-laced rhythm, kindles our anticipation, painting the Met as a vast tapestry unfurling across five thousand years of human skill and imagination. These tales, shared over generations of his family, serve to strengthen our bond with the city he calls home." /
 "As we disembark, we are met by the striking façade of the museum. The grandiose Beaux-Arts structure stands with a silent majesty, its iconic steps leading us towards a wealth of splendors inside. Much like in countless movies and photographs, these steps seem to invite us into a world brimming with history and beauty; they whisper stories of the many before us who have trod the same path, fueled by a shared thirst for knowledge and appreciation for art." /
 "Once inside, we breathe in the hushed, inspiring atmosphere of the museum halls echoing with soft footfalls and whispers of visitors who have come from far and wide. The sheer diversity of the exhibits is mesmerizing. The museum delivers a visual feast, spreading a banquet of art across an array of periods and cultures, from the enchanting ancient Egypt to the classic allure of Europe and the captivating richness of Oceania. The collection feels boundless, carrying us through a whirl of civilization's highs and lows that span millennia and encompass the globe." /
@@ -147,7 +147,7 @@
 "Bathed in the radiant hues of the city blooming beneath us, we commit the skyline's grandeur to our hearts. As we take an appreciative final look, we can almost feel the echo of the city's enduring love for the Empire State Building, a symbol of New York's vibrant legacy and ever-growing ambitions. As we descend and prepare to navigate to the next stop on our journey, we carry with us a piece of the city’s sky, now an invincible part of our shared skyline."
     )
 
-    override fun Config.end() =
+    override val end =
     "Our sightseeing tour continues as we make our way towards the breezy expanse of Battery Park. Set against the backdrop of the sparkling waters, the park comes alive in a blend of history, artwork, and stunning views, sharing space with the ceaseless dance of vibrant city life." /
 "With the wheels of our open-top bus humming a soft melody below us, our genial guide shares tales sprinkled with the charm of his Brooklyn accent. He sweeps us back in time, tracing the Park's lifeline to the late 17th Century when it was host to artillery batteries, offering protection to the New Amsterdam settlement. The echo of the foregone era blends seamlessly with the sounds of the city, creating a mesmerizing cadence of then and now." /
 "As we journey through Battery Park, we encounter markers of resilience that are as much a part of New York's story as its tryst with art and history. Our sight lands on The Sphere, a large metallic sculpture that stands as a poignant memory of the 9/11 attacks, stoic in its survival amidst the rubble of the World Trade Center." /

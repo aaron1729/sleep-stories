@@ -3,9 +3,9 @@
 
     package com.downdogapp.cue
 
-    object SleepStoryTravelQueenstownCues : SleepPoseCues {
+    object SleepStoryTravelQueenstownCues : SleepStoryPoseCues {
 
-    override fun Config.start() =
+    override val start =
     "In hues of boundless blue sky, emerald green mountains, and a symphony of the tranquil lake's whispers, Queenstown, New Zealand, dutifully prepares itself as the epitome of summer perfection. Known as the gem of the Southern Alps, it nestles amidst the stunning ivory-capped peaks and the serene waters of Lake Wakatipu. Buffeted by the gentle mountain breeze, fragrant with the sweetness of blossoming flowers, the town twinkles in anticipation for the countless surprises it holds for curious visitors in the heart of summer." /
 "The atmosphere is painted with a heartwarming, unhurried charm. The streets are filled with locals and travelers alike, the buzz of jovial conversations mixing with the gentle hum of nature. The water taxis glide seamlessly across the twinkling lake, ready to ferry eager passengers deeper into the sights and sounds of Queenstown. From time to time, they create soft ripples that lovingly lap at the shores." /
 "Emanating the feeling of an adventure beckoning, the docks house small and cozy water taxis. They are ready to embark on a journey, a journey full of visual treats - majestic alpine landscapes, picturesque bays, and soothing coastal breezes. This comfortable and intimate mode of transportation invites us to truly immerse ourselves in the tranquil rhythm of Lake Wakatipu, silently narrating the soothing tales of this southern paradise." /
@@ -16,7 +16,7 @@
 "Soft laughter pulls our gaze away from the Rose Garden eventually, and we observe a group of young locals engaging in a friendly Frisbee game. Occasionally a shout of triumph echoes, adding to the garden's comforting soundtrack. A little further away, we spot an 18-hole disc golf course where families and friends challenge each other in a gentle test of skill and strategy, while sharing heartwarming banter." /
 "The temptation for a break is too enthralling here. We — along with other visitors — spread our blankets over the comfortable grass near the Great Lawn and lay out a simple picnic. The taste of succulent New Zealand lamb and fresh local seafood along with the distinct and delicate flavors of wine from the Central Otago region enrich the experience, adding an element of sensory delight to our already indulgent afternoon. Laughter, conversation, and the rustling leaves create a soothing melody that fills the air and our hearts. Bathed in tranquility and delight, we pause to breathe deeply, allowing the elements of this harmonious blend to thoroughly soak into our memories."
 
-    override fun Config.middle() = listOf(
+    override val middle = listOf(
     "Wrapping up our leisurely picnic at the Gardens, we gather our belongings and head back towards the lakeshore. There, the TSS Earnslaw Vintage Steamship waits patiently at the pier. A centenarian relic of Queenstown's history, her elegant form is a majestic silhouette against the crystal-clear waters of Lake Wakatipu. Launched in 1912, this vessel, named after the towering Mount Earnslaw, holds the prestige of being one of the last remaining coal-fired passenger steamers in the world." /
 "As we step onto the steamship, nostalgia fills the air - it's as if we've been transported back in time. The aroma of the coal fire blends with the fresh mountain air, creating an intoxicating cocktail of past and present. Every detail of the ship, from the polished brass fittings to the soothingly smooth wood paneling, whispers tales from the early 1900s, reminding us of her service as a troop carrier and transport ship during World War II." /
 "The old-world charm resonates even stronger as we peek into the engine room. Passengers, just like us, linger around to marvel at the exposed original steam engines. The rhythmic chugging and the flickering flames as the crew stokes the boilers strike a chord of harmonious simplicity, providing a tangible connection to the maritime technology of the past." /
@@ -145,7 +145,7 @@
 "Immersed in this sensory symphony, Lake Hayes weaves its spell around us. Every kayaker cruising the lake, each soothing ripple morphing into mirrored images, all under the watchful eyes of the peak-ringed horizon, constructs a serene canvas. Reflecting on the sun-kissed waters of the 'mirror lake,' we embrace the day's gentle memory, all of which follows us onto the waiting water taxi for our journey back. The ethereal beauty of Lake Hayes flickers behind us as the taxi pulls away, bound to illuminate our reminiscences for years to come."
     )
 
-    override fun Config.end() =
+    override val end =
     "Our sightseeing tour continues as we head towards another gem of Queenstown. With a historical foundation embedded in the rockface itself, the Skippers Canyon waits for us just a water taxi ride away." /
 "Carved out in the gold rush era of the 1890s, the Skippers Canyon is, in its own right, a grandiose testament to a bygone era. Named after 'Skipper' Malcolm Duncan, a local gold prospector, the canyon tells tales of times past, when the quest for gold dictated the rhythm of life." /
 "Once on land, we find ourselves on an impressive road, it’s path clinging to the cliff face precariously. But it's not just the man-made road that captures our attention. The stunning natural scenery is a spectacle in itself, so captivating that it played a part in Middle-earth itself in the Lord of The Rings film series." /

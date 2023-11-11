@@ -3,9 +3,9 @@
 
     package com.downdogapp.cue
 
-    object SleepStoryTravelShanghaiCues : SleepPoseCues {
+    object SleepStoryTravelShanghaiCues : SleepStoryPoseCues {
 
-    override fun Config.start() =
+    override val start =
     "Welcome to Shanghai, China’s largest and most modern city, where the spirit of ancient culture conjoins harmoniously with the skyscrapers of the new age. While many places have felt the forward march of time, Shanghai seems to enjoy a dance with it, a graceful waltz that swirls the past, present, and future into an exquisite synthesis. Here we are, ready to commence a journey in the crisp autumnal embrace, beneath the auburn-tinged foliage that frames Shanghai's opulent cityscape in an ever-changing tableau of vibrant hues." /
 "Our chosen means of exploration will be the city's beating vein, the efficient Shanghai Metro, and the tranquil Huangpu River Cruise, likely to offer us a juxtaposition of immersive experiences. The hustle and dynamic pace of the metro, overlaid with the soothing hum of Shanghai residents commuting through their daily lives, stand in contrast to the calming lull of the Huangpu River, a liquid sash streaming across Shanghai's waist, reflecting city lights in its gentle ripples under the twilight sky." /
 "As we walk to our first station or pier, the array of sights — aesthetic arches of traditional Chinese architecture interspersed amidst towering city buildings — offers glimpses of Shanghai’s contrasting nature. Cool gusts of fall wind mingle with the soft murmur of the metropolis, the pulse of Shanghai’s heartbeat. Each sight, each sound feels like an auspicious stroke of a Chinese calligrapher's brush, inviting us to partake in this compelling city symphony." /
@@ -17,7 +17,7 @@
 "After a quiet sojourn in the gardens, the vibrant Yuyuan Bazaar, nearby, lures us into a world of color and vivacity. Here, traditional Chinese arts and crafts fill the stalls, creating a vision of gleaming trinkets and vibrant textiles. The density of people and the harmony of their haggling bring another layer of life to this endearing tapestry. Amid the shops, the mouthwatering aroma wafting from the Nanxiang Steamed Bun Restaurant ensnares our senses, promising a sumptuous taste of Shanghai's renowned Xiaolongbao, carefully wrapped presents of savory joy." /
 "Having indulged in these delicious morsels, we anticipate the sunset cruise along the Huangpu River, looking forward to seeing the juxtaposition between the glittering skyline and the peaceful ambience of the Yuyuan Garden from a brilliant new perspective."
 
-    override fun Config.middle() = listOf(
+    override val middle = listOf(
     "Leaving the sanctum of Yuyuan Garden, we board the Shanghai Metro once more. As we rumble towards our next destination, the anticipation of the journey ahead is delicately mirrored in our reflections on the window panes. Alighting at People's Square Station, the transition from the network of underground tunnels to the city's heartbeat astounds us. The sudden exposure to an open-spaced plaza, dwarfed by a symphony of modern architecture, adds a delightful thrill to the day's exploration." /
 "As we step out, we are hit by an intoxicating wave of the familiar scent of old paper and ink, an olfactory sonnet which draws us towards Fuzhou Road Book Street. One of Shanghai's oldest streets, Fuzhou Road wears a mantle of cultural symbolism, its entire length studded with bookshops, publishing houses, and the unceasing chatter of passionate readers and writers." /
 "The pulse of knowledge and creativity running through this 'Cultural Street' is invigorating. Bookstores, like patchwork quilts sewn with narratives and ideas, line the street as far as the eye can see. People, engrossed in earnest perusal, weave their way among endless shelves. Mingling with the soft rustle of flicked-through pages are whispered deliberations over brightly colored stationery and intricate art supplies in specialty shops." /
@@ -149,7 +149,7 @@
 "As the day descends and the Huangpu River unravels itself yet again, we find ourselves entranced by a completely new painting – the silhouette of Qibao Ancient Town against a brilliant palette of sunset hues. The tranquil sway of the river cruise complements the lush imagery, enhancing the vibrant charm of Qibao under the evening sky's serene aura. This magical transition of day into night deepens our bond with Shanghai, a city that truly never sleeps."
     )
 
-    override fun Config.end() =
+    override val end =
     "Drawing from our diverse adventures infused with tradition, history, nature, and modernity, our journey now carries us to a serene conclusion – a tranquil cruise along the Huangpu River. Alighting at Dongchang Road Station on Metro Line 2, we find ourselves at the Huangpu River Tourist Line Dock, buzzing with anticipation." /
 "The Huangpu River, a sprawling aquatic ribbon stretching over 113 kilometers, splits Shanghai's vibrant cityscape into distinct halves - Puxi to the west of the river and Pudong to the east. As the heartbeat of Shanghai, the river is a lifeline that stitches the city's present, past, and future into a cohesive narrative." /
 "Our cruise starts under a gradually darkening sky, casting a magical glow over the river. The boat gently stirs the calm waters of the Huangpu as we set sail. Night descends gracefully, pulling a veil of twinkling stars over the cityscape, revealing Shanghai in a spectral dance of lights. The radiant skyscrapers of Pudong create a mesmerizing tableau against the night sky, their brilliance mirrored in the river's surface." /

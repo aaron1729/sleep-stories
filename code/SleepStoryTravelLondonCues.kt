@@ -3,9 +3,9 @@
 
     package com.downdogapp.cue
 
-    object SleepStoryTravelLondonCues : SleepPoseCues {
+    object SleepStoryTravelLondonCues : SleepStoryPoseCues {
 
-    override fun Config.start() =
+    override val start =
     "As the curtain of winter is gently lifted, London, England, splashes out its colors and welcomes the fresh embrace of spring. The city, so renowned for its grey skies and rainy charm, transforms into a canvas of blooming magnificence. Cherry blossoms in pink and white bountifully adorn the avenues, while a kaleidoscope of flowers lend their soft fragrance to the mild, crisp air. London, in spring, is truly an inspiring realm, effortlessly blending centuries-old history with the pulsating rhythm of a modern metropolis." /
 "We're preparing to explore this vibrant cityscape via London's famous transport system: the Tube, threading a subterranean web of connections under the city streets, and the iconic red double-decker bus, offering a panoramic view of the city's mesmerising skyline. The Tube, an efficient maze echoed by the steady hum of the stations, and the red bus, an age-old symbol of London's charm, are going to transport us on a sightseeing adventure." /
 "Leading us into these winding streets and hidden corners is our guide, a middle-aged British man with a keen eye and cordial demeanor. With an insight and attention to detail that bring to mind detective stories set down these very streets, he's a walking encyclopedia of London's secrets. There's an air of contagious excitement about him, and we know we're in assured hands." /
@@ -17,7 +17,7 @@
 "Feeling peckish, we are drawn to the on-site café, where the traditional English afternoon tea beckons us. Bustling servers weave through tables with trays laden with finger sandwiches filled with cucumber and cream cheese, warm scones paired with lashings of clotted cream and jam, and an assorted array of cakes that crumble luxuriously at the touch. A fragrant cloud of steeped tea perfumes the air, stirring awake memories of simpler, cosier times." /
 "With our explorations of the British Museum complete, we turn to another mode of charming transport – a double-decker bus. As we climb the stairs to its top deck, London stretches out before us. Streets humming with life, snaking out into an embrace of the city's character. Our bus driver, a jovial man with a keen eye and infectious enthusiasm, wields his microphone like a wizard's wand. Under his guidance, the streets come alive with tales of history and urban lore, his commentary colouring the unfolding cityscape with shades of intrigue and charm. With each turn, each landmark pointed out, the city whispers its stories, a silent promise of more exploration to come."
 
-    override fun Config.middle() = listOf(
+    override val middle = listOf(
     "Emerging from the labyrinthine network of the Tube at nearby Bank station, the bustling vibrance of London city life engulfs us once again. Punctuated by the towering skyscrapers echoing modern architectural marvels, we are led through a contrast of epochs, a sudden light at the end of the street catching our eye. Nestled amidst the towering steel behemoths is our next destination: the charming Leadenhall Market." /
 "As soon as we step onto the cobblestone pathway leading to the building, the scent of fresh flowers from the vendor's stall and the tantalising whiffs of street food waft in the air, blending perfectly with the underlying notes of the city's hustle. Subtly cocooned within these scents is the old-world elegance sprouting from Leadenhall's stunning iron and glass architecture, an immediate throwback to its era of inception." /
 "Stepping inside, it's easy to see why Leadenhall Market is more than just an operatic monument of the 14th century. Its vibrant atmosphere and unique blend of boutiques, cafes and restaurants make it a favourite haunt for locals and tourists alike – a pulsating heart in the city's robust architectural body. The market's illustrious past as a centre for meat and poultry trade seems to linger amidst its present identity, a ghostly whisper of barter and trade." /
@@ -161,7 +161,7 @@
 "Back aboard our double-decker bus, our Sherlock Holmes-like guide is quick to point out the bridge's architectural details. His narration of the engineering genius behind the bridge and the human stories interwoven within its construction paints a vivid tableau that stays with us, firing up our anticipation for the next stop in our exploration of enchanting London."
     )
 
-    override fun Config.end() =
+    override val end =
     "Our footprints in London deepen as we follow the flow of history and cross the threshold into the verdant breath of Richmond Park. It is a rambling retreat of tranquillity, London's largest Royal Park and an oasis of nature, leaving the metropolitan thrum far behind." /
 "Tracing a lineage back to the 17th century, King Charles I first carved out this sanctuary as a deer park. Today, it continues to serve as a home for 630 red and fallow deer, who  are woven into the park's tapestry as surely as the thousand oaks that stand sentinel over its open spaces." /
 "Through the mists of time, the park resonates with a blend of natural beauty and architectural intricacies like Pembroke Lodge and White Lodge. And deep within its heart blooms the Isabella Plantation. This 40-acre woodland garden is framed by evergreen azaleas, their vibrant blooms an unmissable spectacle dating back to the 1830s." /

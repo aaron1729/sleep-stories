@@ -3,9 +3,9 @@
 
     package com.downdogapp.cue
 
-    object SleepStoryTravelKyotoCues : SleepPoseCues {
+    object SleepStoryTravelKyotoCues : SleepStoryPoseCues {
 
-    override fun Config.start() =
+    override val start =
     "In the heart of Japan, nestled amidst verdant hills and serene rivers, lies the ancient city of Kyoto. As cherry blossom petals cascade gently down in the soft spring breeze, the city is transformed into a picturesque scene straight from a painting. The season adds a poetic touch to the landscape, unfurling a carpet of soft pink and white. Eagerly, we await the captivating journey that lies ahead in this city, where traditional grandeur meets modern elegance effortlessly." /
 "Our mode of transportation during our time here is just as enchanting as the city itself. Rickshaws, the two-wheeled, man-powered vehicles guided by jovial middle-aged men, are a charming throwback to a simpler time. Our rickshaw driver is a cheerful man, brimming with countless fascinating tales about this storied city. But we won't stay in the rickshaw the entire time -- we'll also get to explore on our own two-wheeled rides, bicycles, on which we can gently slice through the cool city air and take in the peaceful landscape at our own leisurely pace." /
 "While we're not cycling, we might also meander through the city by foot, strolling under the blooming cherry blossom trees, crossing stone bridges over tranquil streams, and losing ourselves in the labyrinthine beauty of Kyoto's winding back streets." /
@@ -15,7 +15,7 @@
 "A thrill of anticipation runs through us as we leave the rickshaw, setting foot on temple grounds with an air of reverence. The atmosphere brims with a soothing tranquility, prompting some visitors to engage in quiet contemplation or meditative practices. We join others in admiring the temple's intricate architecture, its true beauty magnified against the backdrop of a carefully cultivated garden sprinkled with the vibrancy of spring blossoms." /
 "Our senses are further enticed by a waft of rich aroma from the nearby Sekkatei Teahouse. As if by magnetic pull, we're guided towards it, finding ourselves seated comfortably on tatami mats and served with a bowl of frothy matcha tea, whose bitter notes provide a delightful contrast to our sweet Japanese treats. The fading taste of matcha on our tongues, we hop onto our bicycles, eager to explore the undulating, narrow streets of the surrounding traditional neighborhood, relishing the comfortable quiet and gentle beauty of Kyoto as it unravels before us."
 
-    override fun Config.middle() = listOf(
+    override val middle = listOf(
     "Leaving the tranquil grounds of Kinkaku-ji and its calming aura behind, our rickshaw guide leads us towards the boisterous hum of Nishiki Market. The transition is invigorating, the quiet of the temple replaced by the bustling energy of what's famously known as 'Kyoto's Kitchen.' Over 130 family-run food stands and shops line the narrow streets, offering an array of local gastronomic delights, their bright, captivating colors adding to the market's vibrant character." /
 "Navigating through this thriving maze, our guide introduces us to the unique delights that are quintessentially Kyoto. From skewered octopus with quail egg to Kyoto-style pickled vegetables, the symphony of flavors captivate our tastebuds, each dish more deliciously satisfying than the last. We also taste yuba, tofu skin that epitomizes the simplicity and delicate flavors of Japanese cuisine." /
 "Our trusty guide explains the cultural significance of the market and its culinary offerings, reinforcing the saying that 'there's no dish that doesn't include something from Nishiki.' His shared memories about the market and his favorite stalls imbue a personal touch to our own experience as we listen, each story and smile pulling us deeper into the local culture." /
@@ -141,7 +141,7 @@
 "Once we leave the rickshaw behind, our bicycles become our companions for a more intimate exploration of the extensive temple grounds. We pedal uphill, the effort fueling our eagerness for the arresting panoramic views promised at the top. As we reach the heights, the vista of Kyoto sprawling beneath us brings a comforting roundness to our exploration, the urban sprawl framed by fragrant cherry blossoms and the historic beauty of Kiyomizu-dera. Through the sweat and the serenity, the sweet treats and the soulful connections—we discover another part of Kyoto's multifaceted appeal."
     )
 
-    override fun Config.end() =
+    override val end =
     "Our sightseeing tour continues, steeped in a blend of rich history and enchanting narratives, as we make our way towards the Path of Love. Part of the UNESCO-certified Otowa-san Kiyomizu-dera complex, this picturesque uphill path is a local gem, steeped in lovely folklore." /
 "Our jovial guide regales us with tales of how couples who walk hand-in-hand along this path will have their love wishes come true. Inspired by the stories, we eagerly embark on this popular path, its charm heightened by the surrounding cherry blossom trees that bloom vibrantly in spring, casting a beautiful pink hue overhead." /
 "The timeless words of Japanese poet Ryōkan Taigu come to mind, as if narrating our current experience, 'In all the world, there's no place I'd rather be than here, walking on this path of love wrapped in the light of the spring sun.' We reflect on the poet's words as we absorb the soft streams of sunlight filtering through the branches, dappling the path with warm shadows." /

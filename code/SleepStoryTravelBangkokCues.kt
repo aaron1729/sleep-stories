@@ -3,9 +3,9 @@
 
     package com.downdogapp.cue
 
-    object SleepStoryTravelBangkokCues : SleepPoseCues {
+    object SleepStoryTravelBangkokCues : SleepStoryPoseCues {
 
-    override fun Config.start() =
+    override val start =
     "Tonight, we find ourselves in the vibrant heart of Southeast Asia, preparing to embark on a captivating journey through Bangkok, Thailand. Winter has kissed the bustling city, curbing its tropical intensity while enhancing the allure of its colorful landscapes. The air is pleasantly cool, the clear skies presiding over a cityscape where ancient temples coexist peacefully alongside towering skyscrapers. It promises an adventure like no other, a journey that will transport us back and forth through time as we explore the paradoxical marriage of tradition and modernity, held together by the unshakeable spirit of the Thai people." /
 "Imagine, if you will, the lively hum of the city as it twinkles under the soft glow of the evening lights, an electric maze of neon-lit streets intersecting with quiet, narrow alleyways shrouded in delicious mystery. Around each corner, mouthwatering scents from street food stalls waft out, rich with spices, luring you in as you pass by. The city thrums with life, a vivid tapestry of sights, sounds, and colors that beg to be explored." /
 "Tonight, we turn the page from the typical tourist experience, gazing at this mesmerizing city through the open sides of a tuk-tuk, a traditional rickshaw that's as much a symbol of Thai culture as it is a means of transportation. Its three wheels, sturdy despite their slight appearance, are ready to weave us through the undulating rhythm of traffic, offering a front row seat to the city's theatrical spectacle." /
@@ -17,7 +17,7 @@
 "The lively scene around us though doesn't evade us completely. There's an enticing aroma wafting in the air that has us follow our noses to the local vendors lined up near the temple. It's of course, Mango Sticky Rice – a must-try when in Bangkok. The enticing blend of ripe mangoes, sweet coconut-infused sticky rice, and the nutty fragrance of sesame seeds make it a treat we won't forget. The sweet delight gives us a comforting kind of energy, rounding off the enriching sensory feast that is our morning visit to the Temple of Dawn." /
 "As we let the feeling sink in, we don't rush towards our next destination. Instead, we linger on to appreciate the rising photographers, their tripods standing as silent witnesses to the temple's allure. Their laser focus as they wait for the perfect light to capture Wat Arun's architectural beauty is a testament to the unforgettable sights this city has to offer. This is a Bangkok morning, unfolding like a dream-backed reality. We breathe in the sight, ready once more to board our tuk-tuk for the next stop on our tour..."
 
-    override fun Config.middle() = listOf(
+    override val middle = listOf(
     "As the golden specter of Wat Arun recedes behind us, we board our quaint tuk-tuk, the hum of its small engine a comforting reassurance of continuity. Our affable driver and guide navigates us skillfully through bustling streets, blending seamlessly into Bangkok's vibrant rhythm. Soon, the cityscape gives way to a richer sensory panorama as we approach Pak Khlong Talat, the city's largest fresh flower market." /
 "The tuk-tuk weaves its way through labyrinthine alleyways, teeming with a dizzying display of fresh flowers blossoming in every conceivable color. The market, awash in hues of cerulean, marigold, ruby, and jade, bursts with vibrant energy even before dawn fully breaks. The gentle murmur of haggling voices fills the air, blending harmoniously with the soft rustling of leaves and petals. This lively symphony, dating back to the reign of Rama I, resonates deeply within us, connecting us to a vivid past where this very place thrummed with life as a fish market." /
 "Deliveries from all corners of Thailand pour into the market, infusing the air with intoxicating floral fragrances. Orchids, marigolds, roses, each bloom seems to vie for attention, their colors more vibrant, their fragrance more intoxicating, as if each petal is a love letter to the senses." /
@@ -165,7 +165,7 @@
 "As we dip ourselves into the tumultuous excitement of the Lumpinee Boxing Stadium and savor its striking blend of tradition and spectacle, we emerge drenched in a deeper appreciation of Bangkok's dynamic spirit. Fueled by the electric energy of our evening, we throb with anticipation for the city's morrow's untold stories, eagerly awaiting our continued adventure under Bangkok's vibrant dawn."
     )
 
-    override fun Config.end() =
+    override val end =
     "After a journey steeped in Bangkok's vibrant nuances, from awe-inspiring temples and bustling street markets to the echoing reverence in a boxing stadium, we head towards a serene climax - the Benjakitti Park. Our trusty tuk-tuk takes on a soothing rhythm, its gentle movement synchronizing with our anticipation as we approach the tranquil retreat." /
 "In 2004, in honor of Queen Sirikit's 72nd birthday year, the former site of tobacco factory and warehouses underwent a revitalizing transformation. From the heart of Thailand's tobacco monopoly emerged a verdant gem, a testament to Bangkok's commitment to merging urban living with green spaces - the exquisite Benjakitti Park." /
 "As we disembark the tuk-tuk, the calm aura of the park envelops us, its intimate world a refreshing contrast to the city's busy narratives. Our driver points out key areas with his intimate knowledge, from the meticulously manicured gardens to the attractive playgrounds. We're in step with the park's beat, our senses soaking in the tranquillity." /

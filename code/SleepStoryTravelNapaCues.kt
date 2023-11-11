@@ -3,9 +3,9 @@
 
     package com.downdogapp.cue
 
-    object SleepStoryTravelNapaCues : SleepPoseCues {
+    object SleepStoryTravelNapaCues : SleepStoryPoseCues {
 
-    override fun Config.start() =
+    override val start =
     "Tonight, we find ourselves ready to embark on an exquisite journey through the verdant, rolling hills of Napa Valley, California. The gentle, warm days of autumn infuse the landscape with a palette of colors: the fertile green of vast vineyards is complemented by the scintillating hues of gold, red, and purple, turning the languid valley into an artist's dream." /
 "We prepare to explore this enchanting region by two entrancing modes of travel - the classic and charming wine train, and an awe-inspiring hot air balloon ride, cutting through the birdsong-infused sky. The antiquated charm of the train, with its polished wood and rich upholstery, whisks us back to another time, while the modern simplicity of the balloon transports us high above, showcasing limitless panoramas of Napa's stunning expanse." /
 "Every vine-entwined trellis and sun-drenched terrace beckons us, promising an oasis of comfort and relaxation. The passengers, travelers like us, bring their unique stories and shared love for the idyllic valley, subtly enriching our journey. The aroma of ripened grapes mingles with soft whispers of fall, creating an atmosphere that's both soothing and invigorating." /
@@ -17,7 +17,7 @@
 "Reflecting on the historical richness of the place—how this rail line dating back to 1864 is now carrying us through the vine-clad countryside in 2022—instills in us an appreciation for this timeless journey. The present gently fuses with the past, bridging generations of wine connoisseurs and tourists alike." /
 "Just as we slowly familiarize ourselves with the train's gentle rhythm and the intimate view of the vineyards, our anticipation grows for the next phase of our journey. Leaving the cozy comfort of the train, we will soon ascend to the vast skies in a hot-air balloon. We look forward to those panoramic aerial views of the valley promised in the brochure, providing us a broader perspective of the stunning, wine-soaked landscape below. But, at this moment, we sit back and entrust ourselves to the journey ahead, enchanted by each sensory delight we are experiencing."
 
-    override fun Config.middle() = listOf(
+    override val middle = listOf(
     "Leaving the soothing clatter of the wine train behind, our next stop takes us to the heart of downtown Yountville, where a quiet sanctuary waits amidst the urban rush – the Veteran's Park. As we approach the entrance, we are greeted by the comforting, silent whisper of mature trees swaying gently with the breeze. From our vantage point, the park appears as a lush, verdant oasis, a tranquil contrast to the bustle that surrounds it." /
 "We take a leisurely stroll along the paths, appreciating the selflessness of Yountville's heroes, memorialized in bronze plaques adorning the 'Veterans Memorial Grove'. Their timeless spirit of sacrifice further amplifies the profound calming effect the place has on us. Amidst the celebration of life in Yountville, one cannot help but appreciate the memory of those who've made it all possible." /
 "The literary significance of the park isn't lost on us as the small-town simplicity, and tranquility, reminds us of the heartwarming narratives embraced by the authors of Napa Valley novels. It's easy to see why this place serves as an ideal backdrop for fostering creativity and peace." /
@@ -144,7 +144,7 @@
 "Immersed in the majestic charm of Inglenook and looking forward to the next chapter of our Napa Valley adventure, we savor the lingering aftertaste of this kaleidoscopic journey of senses."
     )
 
-    override fun Config.end() =
+    override val end =
     "Our sightseeing adventure continues as we meander towards a simplistically beautiful establishment that bears testimony to the rich heritage of Napa – the Napa Valley Olive Oil. Tucked snugly within a rustic barn, this gem of a place evokes the authentic charisma of Napa with its quaint charm and array of gourmet oils." /
 "Having served the community since 1931, this family-owned specialty store nestles within it generation-born recipes and techniques, connecting the flavors of California to their Italian roots. The air around us stirs with an inviting aroma reminiscent of sun-ripened olives, prompting us to further explore this little corner of Napa. In the eloquent words of Ernest Hemingway, 'The first condition of understanding a foreign country is to smell it.' Right here, in the heart of Napa, we find an olfactory passport to the sun-soaked groves of Italy." /
 "Guided by a welcoming assistant, we delve into the tasting experiences that the shop has to offer. From classic concoctions to the more avant-garde herb-infused options, every sample offers a delightful dance of flavors on our tongues. Each drop of olive oil serves as a testament to the store's unique dedication to taste and quality." /
