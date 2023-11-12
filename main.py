@@ -423,7 +423,7 @@ As we make our way from the castle, ...
     if write_short_story:
 
         a = 1 # number of stops bundled into initial chunk
-        c = 3 # number of middle completions
+        c = 5 # number of middle completions
         n = 2 # number of stops per middle completion
         z = 1 # number of stops bundled into final chunk
         # total number of stops needed is a + c*n + z
@@ -437,7 +437,7 @@ As we make our way from the castle, ...
         # so, here just append "\n\n" to the stop prompts now, rather than joining them with separator "\n\n" inside of the f-string.
         stops_with_tidbits = [stop_with_tidbits + "\n\n" for stop_with_tidbits in stops_with_tidbits]
 
-        initial_user_prompt_for_short_story = f"{user_prompt_for_setting_scene_for_short_story}\n\nThen, here is/are the first {a} sightseeing location(s) to visit.\n\n{''.join(stops_with_tidbits[:a])}{no_ending_summary_plz}"
+        initial_user_prompt_for_short_story = f"{user_prompt_for_setting_scene_for_short_story}\n\nThen, here {'are' if a>1 else 'is'} the first {str(a) if a>1 else ''} sightseeing location{'s' if a>1 else ''} to visit.\n\n{''.join(stops_with_tidbits[:a])}{no_ending_summary_plz}"
         print("the initial user prompt is:\n", initial_user_prompt_for_short_story)
         initial_user_message = {"role": "user", "content": initial_user_prompt_for_short_story}
 
@@ -454,7 +454,7 @@ As we make our way from the castle, ...
 
         for j in range(c):
             print(f"fetching short story chunk number", j+1)
-            user_prompt = f"Great, thank you! Here is/are the next {n} sightseeing location(s):\n\n{''.join(stops_with_tidbits[a+n*j:a+n*(j+1)])}{no_ending_summary_plz}"
+            user_prompt = f"Great, thank you! Here {'are' if n>1 else 'is'} the next {str(n) if n>1 else ''} sightseeing location{'s' if n>1 else ''}:\n\n{''.join(stops_with_tidbits[a+n*j:a+n*(j+1)])}{no_ending_summary_plz}"
             print("the next user prompt is:\n", user_prompt)
             user_message = {"role": "user", "content": user_prompt}
             message_list.append(user_message)
@@ -468,7 +468,7 @@ As we make our way from the castle, ...
             message_list.append(assistant_message_with_story)
 
         print(f"fetching short story chunk number {c+1} (the last chunk)")
-        user_prompt = f"Great, thank you! Now, please conclude our story. First, here is/are the concluding {z} sightseeing location(s) to visit.\n\n{''.join(stops_with_tidbits[a+c*n:a+c*n+z])}{no_starting_transition_plz}"
+        user_prompt = f"Great, thank you! Now, please conclude our story. First, here {'are' if n>1 else 'is'} the concluding {str(z) if z>1 else ''} sightseeing location{'s' if z>1 else ''} to visit.\n\n{''.join(stops_with_tidbits[a+c*n:a+c*n+z])}{no_starting_transition_plz}"
         print("the concluding user prompt is:\n", user_prompt)
         user_message = {"role": "user", "content": user_prompt}
         message_list.append(user_message)
