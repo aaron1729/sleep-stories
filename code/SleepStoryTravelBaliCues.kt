@@ -1,70 +1,69 @@
-// this code is generated from the story files bali_2023-11-10_23-15-53_short.txt and bali_2023-11-10_00-41-50_long.txt
-// min_stops is set to 1
+// this code is generated from the story files bali_2023-11-14_00-11-59_short.txt and bali_2023-11-10_00-41-50_long.txt.
+// the stops with tidbits that were the user prompts for these stories are copied at the bottom as comments -- first those for the short story, then those for the long story -- separated by a bunch of slashes.
+// min_stops_for_long_story is set to 1.
 
 package com.downdogapp.cue
 
 object SleepStoryTravelBaliCues : SleepStoryPoseCues {
 
     override val startShort =
-       "Excitement rustles through the air like a gentle breeze: the joyous anticipation of exploring the enchanting island of Bali, Indonesia, is about to unfold. The season is spring and nature is bursting into vibrant life, with the lush greenery of the tropical foliage appearing even more effulgent as flowers add their riotous colors to the scenery. As we prepare to embark on an immersive sightseeing tour, we're joined by our tour guide, a young Balinese woman whose smile mirrors the island's warm and welcoming aura. Accompanying her is a fleet of neat, brightly colored rental scooters, a common mode of transportation in Bali's serpentine paths and thus integral to our journey as we thread through bustling markets, ancient temples, soothing beaches, and sweeping rice terraces. However, the commencement of our grand adventure is signaled by the gentle hum and comfortable seat of our car as we brace ourselves to explore the spellbinding wonders of Bali." /
-       "Our first sightseeing spot comes into view through the car window as we approach: the renowned Ubud Monkey Forest. This sacred nature reserve and temple complex cover 27 acres of thick forest, where over 700 Balinese long-tailed monkeys scamper amid ancient trees, their eyes gleaming with untamed mischief. As we step out of the car, the driver cum guide directs us, her soft voice imbued with knowledge and reverence. The intriguing hint of a smile suggests countless shared secrets between her and these wild denizens of the forest." /
-       "David Attenborough’s fond quote rings true as we observe the monkeys, 'When a monkey looks into a mirror, he sees a monkey.' And as we tentatively extend our hands, offering an olive branch in the form of tiny fruits, the monkeys nimbly leap forward, accepting our peace offerings with startling dexterity. Each lively interaction becomes a cherished memory, beautifully framed by the vibrant, verdant canvas of the forest." /
-       "The forest, with its blend of spiritual, cultural, and natural heritage, is also home to three distinct Hindu temples constructed around 1350. Our guide leads us to these revered structures, their ancient splendor resiliently standing tall amid the bustling monkey activity, awe-inspiring symbols of the island's rich religious tapestry." /
-       "The temples are nestled within the undulating greenery, providing tranquil spaces for quiet contemplation amidst the lively chatter of monkeys. The soft rustle of leaves, combined with the soothing trickle of water from nearby streams, lends an aura of profound peace." /
-       "Stepping beyond the forest's boundaries, we find ourselves surrounded by ambient eateries serving traditional Balinese delights. As per our guide's recommendation, we order Babi Guling, Balinese roast pig. As we bite into the succulent meat, infused with the rich flavors of local Indonesian spices and herbs, it feels as if we are consuming a piece of Bali's vibrant cultural heritage, a fitting end to our visit to the anthropological and gastronomical heart of the island." /
-       "Taking our leave of the forest, we climb back into the car to continue our Bali adventure. The journey allows us to witness local life and delightful Balinese craft stores, our guide pointing out points of interest and sharing stories of the terrain's origins and cultural significance. We transition from the primal monkey forest to the ethereal beauty of the Tegalalang Rice Terraces." /
-       "The terraces hug the topography of the land, their sinuous curves forming a hypnotic, undulating pattern across the landscape. This UNESCO World Heritage Site, maintained through the traditional Subak irrigation system, serves as a testament to the Balinese's resourceful adaptation to nature. In the warm sunlight, the terraces glow, luminescent tiers of green cascading downwards, framed by tall, whispering palms above and coconut groves below." /
-       "The young woman driver brings the car to a gentle stop, allowing us to gaze upon the panoramic view and feel the immensity of this island's beauty. Getting out, we join locals and other travelers navigating the terraces, in rental scooters, on foot, or taking up farming tools to briefly participate in this age-old form of agriculture. We're filled with awe for the toil and effort that underpins the serenity of this moment." /
-       "Once we bask in the mesmerizing view, we visit a local restaurant overlooking these terraced wonders. As encouraged by our guide, we order 'nasi campur'. The vibrant flavor profiles of the mixed rice accompanied by assortments of Indonesian delicacies thrill our palates, foregrounded by the leafy wonderland that forms the backdrop for our meal." /
-       "Our journey through Bali's historical and natural wonders doesn't end with this soul-satisfying meal. We head towards the renowned Goa Gajah Temple, an archaeological marvel also known as the 'Elephant Cave'. It's a significant spiritual center, dating back to the 11th century. The drive to the temple is scenic, watering the seeds of anticipation of our upcoming exploration. As we approach, we spot dense forest enveloping the ancient temple, hinting at history and mystery lying ahead." /
-       "As we disembark from the car, the first sight to meet our eyes is the massive, dramatic face carved at the entrance, looking as if it swallows us whole, as we venture into the sacred sanctuary. The mysterious 'Elephant Cave', despite having no elephant associations, invites exploration to unravel the enigma of its nickname." /
-       "We marvel at the temple's beautifully carved rock-wall, explore its central meditation cavern, and witness other visitors participating in water blessings under the six waterspouts at the bathing pools. Inside the cave, the unique aura of tranquility and spirituality moves us to take a few moments of quiet reflection, echoing the site's original purpose as a meditative retreat." /
-       "Stepping back into the sunlight, we savor another traditional Balinese dish at a nearby warung: Nasi Goreng, Indonesian fried rice. The vibrant flavors further imprint the unique cultural experiences that Bali has to offer. As we finish our meal, the serene temple complex resonates with the echoed sounds of history and whispers of myths, soon to be discovered."
+       "We find ourselves in the enchanting island of Bali, Indonesia, where the air is balmy with a hint of spring's freshness, and blooming frangipanis perfume every breeze. Swathed in verdant tropical foliage, this serene paradise seems to pulsate with a life-affirming rhythm of its own. And, our companion in uncovering its soulful secrets is a vivacious, young woman, who contours the island's winding roads with the ease of a hummingbird, skating along in our comfortable car. The anticipation is infectious - stories waiting to unfurl, vistas yearning to spellbind, and relics ripe with ancient wisdom. Alongside us, the promise of rental scooters offers the exuberant thrill of wind rushing past our faces, and the joy of stumbling upon hidden coves and secluded corners. The melody of this magnificent journey has just begun to play, beckoning us forward." /
+       "Our first sojourn leads us to the iconic Pura Tanah Lot. Built majestically upon a rocky prominence that juts out into the sweeping ocean, this sea temple emanates an ethereal aura that intertwines spirituality with elements of the endless azure sea. Nestled among a sacred trio erected in the sixteenth century by the visionary Hindu sage, Dang Hyang Nirartha, Pura Tanah Lot presents a powerful tributary to the guardian spirits of the sea, a beacon of veneration contrasting elegantly against the backdrop of undulating waves." /
+       "Its path illuminated by our young guide's animated narrations and the car's soothing hum, this holy site springs into visual existence much before we physically reach its vicinity. Like a mythical silhouette etched against the horizon, its beauty strikes us even as we traverse the palm-laden landscapes and verdant paddy fields surrounding it. The distinctive feature of its tirta, the holy water known for its healing properties, adds an extra dimension of intrigue to this sea-encircled marvel, spurring tales of miraculous recoveries and spiritual reawakening." /
+       "The lively rustle of the marketplace that welcomes us carries echoes of harmonious life – the industrious clinking of artisans at work, the vibrant chatter of eager traders, entwined with the aromas of sizzling Balinese cuisine. The fragrant whispers of the local favorite, Sate Lilit, a melange of spiced mince ensnared on fragrant lemongrass sticks, waft temptingly, making our mouths water." /
+       "During high tides, when the temple stands like a lone sentinel, a celestial castle in the midst of an oceanic moat, it's an awe-inspiring spectacle, unfolding a sublime dance-play of light and shadow. While it shares its sacred soil only during low tide with reverential devotees and eager explorers, its distant allure captivates the hearts of all, sparking an ineffable affinity, especially when painted in hues of twilight." /
+       "The sense of connectedness seeps deeper as we watch locals engage in Nganyut – a poignant tradition of casting family ashes into the sea, their personal stories dissolving into the eternal ebb and flow of life. The temple’s enchantment is further deepened by the whispers of the falling sun, casting a dusky patina over the scene and wrapping the day in a warm, comforting embrace. Now, we are ready to set off on the rented scooters, our curiosity piqued, our spirits high, and our hearts open to Bali’s magical charms which await to be discovered on every winding path."
 
     override val middleShort = listOf(
-       "After the enlightening and spiritual experience at Goa Gajah temple, we head towards Tegenungan Waterfall. As the car weaves through Ubud's picturesque outskirts, adorned with rice terraces and quaint village houses, our guide articulates fascinating stories and details about the waterfall. Seeing the lush landscape, we're full of eager anticipation to embrace the soothing charm of this hidden gem." /
-       "The journey becomes more enchanting as we swap our car for rental scooters to accommodate the terrain's narrow paths. The air grows fresher with the earthy aroma of the verdant tropics and a gratifying hint of approaching water. The rumble of the waterfall echoes like a welcoming symphony as we navigate the trail into the jungle." /
-       "Suddenly, the spectacular sight of Tegenungan Waterfall unfolds before us. It's an awe-inspiring cascade of about 30 meters, tumbledown amid the embrace of the tropical greenery. This specific placement, unusual due to its lowland location, imparts a unique charm to the waterfall. It's a slice of untouched paradise, hidden in the depths of the jungle, only recently touched by wandering explorers like us." /
-       "Adhering to Bob Ross' advice to 'let go and fall like a little waterfall', visitors are seen surrendering to the enthralling call of the waterfall, swimming in the clear pool beneath the cascade or laughing joyfully on the swing above the water. It's as if the worries of the world wash away with every splash and spray of the waterfall. Their joy is heightened by our guide's narrative about Tegenungan's magical ambiance, adding a graceful charm to the already dream-like scene." /
-       "After basking in the waterfall's refreshing energy, we head towards a nearby warung for a hearty meal. Balinese dishes like Nasi Campur and Ayam Betutu are served, their traditional flavors nuanced with the freshness of local produce. The Balinese dining experience, accentuated by the symphony of the waterfall in the distance and the surrounding lushness, makes for a perfect dining experience." /
-       "Rejuvenated and happily satiated, we set off for the Ubud Traditional Art Market. A riot of colors, the Art Market is an energetic blend of traditional Balinese culture, art, and crafts. As we stroll through the sprawling marketplace, the air buzzes with the excitement of haggling over prices and the joy of discovering perfect keepsakes among the myriad of stalls." /
-       "The vibraint scarves, light shirts, woven bags, and statues appear as though they've leaped out of the vibrant scenes of the movie 'Eat, Pray, Love', which partly filmed at this bustling location. Our guide narrates interesting trivia about the items for sale, each with a story weaved into its existence. We can't help but try on a pair of beautiful handmade Balinese sandals she offers us, our feet sinking into local comfort." /
-       "The Art Market not only soothes our shopping cravings but also delights our taste buds when we stop at a bustling warung. As we line up with eager locals and fellow tourists, our guide recommends trying the famous 'babi guling' or 'nasi campur'. The food, freshly prepared and bursting with traditional flavors, is another delicious indulgence that concludes another memorable day on our Balinese tour. The day gradually folds into the evening, promising more travel wonders waiting for us tomorrow in the enchanted land of Bali.",
+       "Moving ahead from the mystical Pura Tanah Lot, we undertake a quiet drive through stunning landscapes towards our next destination. Gliding on rented scooters, we navigate the serpentine lanes, absorbing the tranquil aura that Bali effortlessly radiates. Our guide, the effervescent young woman, mingles vibrant tales within the hum of the scooters, turning our journey into a delightful symphony echoing against the backdrop of lush vegetation. Canopies of palms cast speckled shadows on our path, which unravels to the UNESCO World Heritage Site of the Tegallalang Rice Terraces, a paradigm of architectural excellence and community harmony." /
+       "Elevated six hundred meters above sea level, we inhale lungfuls of cool, highland air and marvel at the sheer vastness of the terraces. The sight of the emerald-green cascading fields, painstakingly carved into the hillsides, unfurls a panoramic checkerboard that reaches for the horizon—each square pulsates with life and symbolizes centuries-old Balinese agricultural tradition. The brilliant display of 'subak,' an ancient system for water-sharing, stands as an embodiment of community unison while nourishing the verdant fields." /
+       "Reveling in the serene ambiance, we learn from our guide about how a German agronomist, Julius Schittenhelm, was as captivated as we are by this tableau. Such was his captivation that he meticulously documented the cultivation practices of these terraces, thus solidifying their international recognition." /
+       "We participate in impromptu photography sessions, capturing the rhythmic textures and contours of the endless terraces, moments of sheer beauty pocketed in our hearts and cameras. Savoring delicious bites of Nasi Goreng, whose ingredients are resourced from these very fields, we relish the distinctive flavors of this island, soaking in the cool breeziness that weaves through every inch of these highlands." /
+       "Moving on from the terraces, our drive now leads us to embrace the gentle rustling of the sea at Sanur Beach. This  charming coastal splendor that attracted celebrities since the nineteen-sixties conjures an atmosphere that's distinctly soothing. As our guide brings the car to a halt, we take off our sneakers, feeling the cool sand under our bare feet. Protruding from this sandy expanse are traditional fishing boats or 'jukung,' as our guide informs us, peeking like vibrant brush strokes against a canvas of soft beige and cerulean." /
+       "The beach radiates a calmness, its shallow waters churning playfully against the shore, a favorite among families with children who dart around, leaving behind prints of joy on the soft sand. We see locals and tourists alike savoring the radiant sunlight, or exploring the undulating sea waves with snorkeling gear and rivetingly colorful kites that dot the Skies like errant notes of a transitory melody." /
+       "Balinese culinary delights beckon once again, and we dig into a plate of flavorful Nasi Goreng cooked to perfection at one of the beachfront eateries. As we watch the magnificent dance of colors in the sky during sunrise, we truly appreciate local life's languid pace. Not rushing, but relishing every moment, every bite, every wave – encapsulating the magical essence of Bali.",
 
-       "As the new day dawns, we head to our next destination: the enchanting Campuhan Ridge Walk. Our young guide steers the car expertly through narrow lanes cradled in nature's lush embrace, as vivid greens of various hues flash past our windows. Upon reaching the starting point of our walk, she points out signposts, advises on the best timings to avoid the peak tropical heat and shares insider tips about the trail - like a nature-inspired cafe called Karsa Kafe, where we could stop for refreshments while gazing upon a tranquil lotus pond." /
-       "Exiting the car, we feel the touch of the cool morning air and start our journey on foot along the undulating path. Campuhan Ridge Walk unravels like a natural tapestry spun with beautiful hues of green and blue. The landscape around us is a visual symphony, with the rhythm of gentle slopes, the harmony of sprawling rice fields, and the melody of a murmuring stream. Locals are seen diligently working in the rice fields, using the Subak irrigation system, their brow glistening with the kiss of the morning sun." /
-       "The journey becomes an interactive canvas, each scene around the bend like a vibrant painting. It inspires a soothing calmness within us, reminding us to pause and appreciate Mother Nature's masterpiece. As we stroll, our guide provides us rented scooters, adding a thrill to the overall calming ambiance. The stunning views from the mountaintop, the feeling of the fresh wind in our faces as we zip down the verdant paths, make for an unforgettable experience." /
-       "Our appetite for beauty is matched by our hunger for another taste of Balinese cuisine. The Babi Guling dish served in Ibu Oka, a nearby restaurant, comes highly recommended by our guide. As we dig into the succulent roast pig, we can't help but appreciate how our experiences are turning into an exquisite blend of Bali's natural and culinary treats." /
-       "As our meal concludes, we're ready to embark on our next expedition. Our young woman driver navigates the way to Sukawati Art Market, a place brimming with the creativity and martial prowess of the Balinese residents. As we approach the market, we're fascinated by the explosion of colors, from ornate masks and clothes to intricate sculptures and bags. Each stall showcases the soul of Balinese art, a salient feature of their life and economy." /
-       "The market, showcasing the world of Balinese arts and crafts, offers a kaleidoscope of items to browse through and buy. We witness the pulsating energy of haggling as vendors and customers engage in friendly price negotiations. Our guide shares stories about the traditional crafting techniques, explaining the significance of different designs based on their regional origins." /
-       "As we wander around the market, hunting for unique finds, we're once again treated to a local dining experience. We sit down at a food stall serving Nasi Campur, the mixed rice dish that is fast becoming our favorite. As we sample its flavors, we watch the flurry of activity around us, from fellow tourists examining trinkets to locals on rental scooters zipping by. Each moment is a slice of Balinese life, threaded together to create an exhilarating and engaging journey. Taking in the hustle and bustle, we're perfectly content, knowing there's more to explore and experience in Bali's magical realm.",
+       "Stepping away from Sanur's soothing waves, we find ourselves snaking our way uphill towards our next site of indulgence - the Antonio Blanco Museum. Our devoted young guide helms the scooter with seasoned expertise, drawing us through Bali's heartland, brimming with dense foliage and sweeping vistas. Radiating pleasant familiarity, her nimble fingers sketch stories of the illustrious Antonio Blanco in the air - a fascinating amalgamation of Spanish and American roots, matched only by the allure of his art." /
+       "Perched loftily on the shoulder of a mountain, the museum, once Blanco's residence, is as much an art piece as the masterpieces nestled within. Its architectural design marries traditional Balinese aesthetics with intricate Spanish elements, creating a distinctive canvas for Blanco's life and art. It's this inspired genius, mirrored in Blanco's son continuing the legacy that draws us in. As we disembark, our eyes feast on the panoramic display of the Campuhan River Valley. Basking under the warm sunlight, we sense anticipation blending harmoniously with the surrounding serenity." /
+       "Each room we explore ushers us deeper into Blanco's mind, his fascination with the female form budding to life on canvases spread across the gallery. The tranquility here allows each visitor their space to admire, reflect, and bathe in the ethereal color strokes. Pausing our artistic journey, we succumb to the allure of the in-house café, serving up flavorful Indonesian fare against the tranquil backdrop of lush landscapes. The day subtly matures as we linger, savoring our surroundings and the free-flowing artistry until our guide's promised return at sunset." /
+       "As the hues of the setting sun paint the Bali sky in a riot of oranges and purples, we move on to a splendid chapter of ancient history tucked within the Elephant Cave - Goa Gajah. A quiet reverence laces the air as our young guide reveals tales from the eleventh century, the time of its inception as a spiritual refuge." /
+       "Nestled within beautiful ruins, the cave's distinctive entrance, reminiscent of an elephant, greets us with stone idols and relics whispering eternal stories. Embracing the harmony of history and nature, we find ourselves drawn to the relic-filled courtyard, the rock-wall carvings, and the central meditative cave. Bathing pools and fountains add an element of calm serenity that resonates with the natural beauty surrounding us." /
+       "The Goa Gajah complex unfolds like an open book of yesteryears. Captivating every visitor, the clink of camera shutters punctuates our shared moments of admiration of the ancient relief and carvings. The wholesome blend of exploration and tranquility gives our journey a unique, almost dreamlike cadence. Riding on our rented scooters through Goa Gajah's serene surroundings at our leisure, we continue our immersive exploration of Bali's mesmerizing romance with nature, history, and art.",
 
-       "Leaving behind the vibrant chaos and charm of Sukawati Art Market, we embark towards our next destination - the iconic Tanah Lot Temple. As we make our journey, our guide leads us onto picturesque country routes, offering views of serene rice terraces and traditional Balinese huts. Riding on rented scooters, the open air and freedom of the ride amplifies the tranquility and beauty of our surroundings, nudging us deeper into Bali's mesmerizing charm." /
-       "The approach to Tanah Lot, perched atop an offshore rock amidst the gentle lapping waves, is a vision that takes our breath away. Steeped in mythology and endowed with the spiritual energy that marks Bali, Tanah Lot stands as a relic of balance and faith, its silhouette enhanced by the glorious hues of the setting sun. As we near the temple, our guide shares the story of the Javanese priest Dang Hyang Nirartha, who created this sacred space to pay tribute to the sea god, Baruna. Through her storytelling, these ancient stones are imbued with life and whispers of the past." /
-       "When the tide recedes, we take the opportunity to cross the seaweed-strewn path to the main temple. While strict rules prevent us from entering the temple grounds, around us, the ritualistic traditions of Bali unfold. Visitors partake in purification ceremonies, their silent prayers merge with the soft rhythm of the ocean waves, and the Holy Snake - the temple's mystique - is whispered about with reverence. Meanwhile, the spectacle of breathtaking panoramas dotted with various poses of fellow travelers against the magnificent backdrop paints a lively tableau." /
-       "As the sun dips lower, painting the sky in golden hues, we head to a local eatery near Tanah Lot. Once again, Babi Guling, the traditional Balinese dish made from suckling pig, sits proudly on our table. As we relish the delectable preparation, the view of the silhouetted temple against the sunset sky adds a magical quality to our meal." /
-       "Our next destination is the majestic Gunung Kawi Temple - another jewel in Bali's spiritual crown. Through beautiful landscapes and calming rice terraces, our guide drives us to Tampaksiring, the home of this ancient monument. Sharing the history and folklore affiliated with the temple, she lets us in on the cultural and ancestral significance of this 11th-century marvel." /
-       "As the temple's grandeur unfolds before us, we're greeted by ten impressive rock-cut shrines, or candis, etched into the wall of a cliff. These monumental structures with the serenity of the holy spring found within the temple complex urge us to partake in special ceremonial blessings." /
-       "Watching other visitors meditating, making offerings, or immersing themselves in spiritual rituals is a captivating experience, further deepening our understanding and appreciation for Balinese spirituality and culture. We end our visit with Bebek Betutu at a local eatery; the slow-cooked, spice-marinated duck dish fills us with warmth, rounding off a day steeped in history, spirituality, and rich Balinese flavors. As we make our way back to our vehicle, we carry a sense of fulfillment and anticipation for the next leg of our journey through Bali's captivating heartland."
+       "Leaving behind the whispers of the Goa Gajah's ancient tales, we find our next adventure nestled in the vibrant labyrinth of Pasar Ubud, more famously known as Ubud Art Market. Held in high regard as a bustling treasury of Balinese craftsmanship, Pasar Ubud's lively maze unrolls slowly before us as our friendly young guide skillfully navigates through Ubud's vibrant streets." /
+       "The art market pulsates with life and color. It's a sensory tapestry of countless stalls, where stunning artwork, ornate crafts, intricate textiles, and homewares jostle for attention. One could almost envision Julia Robert’s character from 'Eat, Pray, Love' strolling among us, discovering local curios and relics." /
+       "The market teems with fascinating artifacts, but the prized sarongs command special reverence, their richly woven patterns telling tales of centuries-old Balinese rituals. Our guide, brimming with local knowledge, navigates us effortlessly through the animated crowd, pointing out genuine pieces and offering haggling tips like a seasoned navigator charting a treasured map." /
+       "Adding a compelling culinary dimension to our exploration is the inviting aroma of Balinese Babi Guling wafting tantalizingly from nearby eateries. We delve into platters of this spit-roast pig delicacy, its transformative flavors of rich, traditional spices and slow-cooked cassava leaves epitomizing Balinese cuisine. Our day at Pasar Ubud graces us not only with trinkets and treasures but also with the indelible memory of navigating the enthralling byways of a bustling Balinese bazaar." /
+       "From the buzzing energy of Ubud, we embark towards an enchanting contrast. Kuta Beach awaits our arrival with the promise of serenity painted in hues of golden sunsets and gentle, lapping waters. Steered by our cheery guide, we traverse Bali's magnetic panorama, the welcoming warmth of Kuta Beach growing closer with each passing landscape." /
+       "Kuta's transformation from a humble fishing village to a premier sunset hub is no less spectacular than its breathtaking skyline. As our guide parks the car, we exchange it for jovially-colored rental scooters and make our way towards the sandy expanse, adorned by frolicking beach-goers and lined by foamy surf. Kuta beach, its sands kissed by the setting sun and waters twinkling with refracted sunlight, evokes a palette of feelings: tranquillity, awe, and a heartwarming camaraderie." /
+       "Surfers ride the gentle waves, their silhouettes etching graceful arcs against the vast canvas of the ocean. Kuta's reputation as a surfer's haven echoes in the sounds of the sea, inviting beginners and experienced enthusiasts alike to dance with the tides. We follow our guide's pointing finger to a vendor at the shoreline, the smoky aroma of Ikan Bakar, a sizzling grilled fish delicacy, beckoning us irresistibly." /
+       "While we revel in the serenity of this beautiful Balinese tableau, another exquisite part of local life plays out a few steps away. On the beach, we spot locals engaged in the humble yet sacred ceremony of Canang Sari, a serenely rhythmic offering to the gods that echoes the island’s deeply spiritual ethos. This beachside performance of ancestral legacy, coupled with the dwindling sunset, paints a picture that nurtures the soul and satisfies the senses. And as we relax into the gentle glow of a setting sun, we are intimately attuned to the harmonious rhythm of life on this magical island called Bali.",
+
+       "As the rosy fingers of dawn spread across the natural canvas of Bali, we bid farewell to the peaceful Kuta Beach, carrying with us the intoxicating scent of salt-laced ocean breeze. Embarking on a roving journey towards Bali Bird Park, we'll be accompanied by the steady hum of our scooters and our young guide's vibrant anecdotes." /
+       "The bird sanctuary, cradling almost one thousand birds of two hundred and fifty diverse species within its nurturing fold, is a harmonious symphony. Here, one can hear calls of indigenous Indonesian bird species and global avian visitors from far-flung continents like Africa and South America chiming together in nature’s ensemble." /
+       "Our entrance into the park reveals a paradise where verdant gardens hum with melodious bird songs, and an enchanting waterfall splashes down in a soothing rhythm. Visitors mingle; some hunched over maps, strategizing their route; while others bearing cameras stalk exotic birds for that perfect shot! The park envelopes us in an array of thrilling interactive activities." /
+       "Our guide, bursting with contagious enthusiasm, leads us to the bird feeding areas, her intricate knowledge acting as an engaging beacon of information. The 'meet the bird stars' experience, gives us an up-close encounter with the feathered denizens. As we immerse ourselves into this avian wonderland, our taste buds dance to the rhythm of local flavors at the park's restaurant, feasting on the piquant textures of traditional Nasi Goreng." /
+       "Its culinary and avian pleasures explored, we leave the bird park to meet Bali's artistic soul at the Neka Art Museum. Like a vehicle time-traveling through the annals of Balinese artistry, it unravels the island's deep-running artistic veins." /
+       "Founded in the nineteen-seventies by the erudite Balinese teacher and art lover, Suteja Neka, this museum is a tangle of hallways lined with progressive and traditional Balinese art. Breath-taking masterpieces by local virtuosos like I Gusti Nyoman Lempad attract our gaze, while foreign artists, whose lives were interwoven with the Bali tapestry - like Walter Spies and Rudolf Bonnet, accent the richness of Bali's artistic culture." /
+       "Our guide ushers us into each section, her expert narration unraveling the vibrant stories hidden within each art piece. Post our enriching sojourn through Balinese art, we saunter towards the nearby Sari Organik restaurant. Immersed in the flavorsome narrative of locally sourced organic cuisine, every bite we take accentuates our personal journey into the heart of Bali's thriving culture and heritage." /
+       "After leaving the Neka Art Museum, we navigate the scooter through idyllic, undulating landscapes of rice paddies. The verdant tapestry flutters in the gentle breeze as our guide shares fascinating tales about Balinese rice cultivation — thus, a new chapter of our ensemble of experiences on the magical island of Bali begins.",
+
+       "Continuing our exploration of Bali's enchanting heartland, our next stop lies embedded in a thousand years of history and culture, the splendidly intricate Batuan Temple. As we cruise along the island's sun-dappled routes, our young guide humming a melodic Balinese tune, the ancient temple's celestial charm grows steadily." /
+       "Batuan Temple stands as a testament of spiritual significance, a sacred cornerstone venerably referred to as a 'kahyangan jagat.' An architectural marvel sculpted meticulously in sandstone, its bas-reliefs bear silent testament to Bali's rich past and deep-rooted spiritual practices. Our guide, defined by her frangipani-adorned hair and the mellifluous hum of a traditional tune, parks our car near the sacred site." /
+       "Adorned in 'sarongs,' we follow her gentle lead, our path unfolding under a towering banyan tree towards the heart of the temple complex. With her detailed narration, the monochrome stone relics meld into a vivid panorama of the Ramayana epic, breathing life into the tale's heroic figures. Spirituality and artistic excellence blend seamlessly within this ageless sanctuary, and scenes of local ceremonies carrying the resonance of traditional rituals amplifies this extraordinary interweaving of the ancient and the present." /
+       "Tempted by the succulent scent of Babi Guling wafting from a nearby eatery, we savor the spitfire pork, its smoky flavors seeping gently into the palatable memories of our journey. Gastronomical delights savored, we bid farewell to Batuan, carrying with us the resonating echoes of its sacred heartbeat." /
+       "Transitioning from the artistic grandeur of Batuan, we're steered towards an equally captivating realm of divinity, the Tirta Empul Temple. As ancient as Batuan, this nine-hundred-and-sixty-two A.D. institution nestles near Tampaksiring town, an embodiment of the Hindu God of Water, Vishnu's divine essence." /
+       "The importance of Tirta Empul, translated as 'Holy Spring' in Balinese, magnifies through its healing waters. Locals and visitors, alike, flock to this sacred spring, immersing in the invigorating touch of its purifying waters. The rectangular pools, each hosting a series of spring-fed spouts, hum with the continuous flow of participants seeking physical and spiritual upliftment." /
+       "Under our guide's well-versed guidance, we immerse ourselves into the sanctifying ritual, the soothing touch of the holy spring water washing over us with an ethereal grace. Satiated by this transformative experience, we surrender ourselves to the revered site's culinary narrative. Local warungs gleefully welcome us with their delicate presentation of Nasi Campur and Ayam Betutu, the intense flavors amplifying our spiritual satiation." /
+       "Venturing further on rented scooters, we absorb the serene beauty of Tampaksiring through the lush landscapes of rice fields and small towns. The closer we weave through Bali's web of spirituality and culture, the deeper the island's enigmatic essence seeps into our hearts. As the sunlight fades into the tranquility of twilight, each visited landscape converges into a beautiful kaleidoscope of experiences, echoing the soft rustle of the Balinese wind through the palm fronds. We ride on, excited for the next part of our journey."
 )
 
     override val endShort =
-       "As sunrise greets the beautiful island of Bali, painting the sky in splendid pastels, we embark on our journey towards our first destination of the day - the Pondok Pekak Library and Learning Center. Situated in the heart of Ubud, the Center bears testament to the traditional arts and literature of Bali. Within its quiet walls reside over 30,000 books, a treasure trove of knowledge awaiting our eager explorations. As soon as we disembark from the car, our guide's excited whispers fill the air, elaborating the significance of the place and the dance workshops that promote the colorful fabric of Bali's culture." /
-       "The ambiance within the library is a related hum of enthusiastic learning and local conversation. Tourists and locals sit side by side, sharing experiences, lost in the world of written words, or deeply engaged in traditional arts lessons. A sense of unity weaves through the room as everyone shares their love for learning and cultural appreciation. We find a kinship in this camaraderie, immersing ourselves in a Kawi script workshop, a rare experience painted with the essence of Balinese heritage." /
-       "Beyond the library, a lush garden blooms in serene silence, inviting us to sit and enjoy a quiet moment. As we soak in the peaceful surroundings, the harmonious hum of language and music workshops playing in the background paints a beautiful endnote to our library visit." /
-       "Before long, we're back on the road, directed by our guide towards our next destination - Sanur Beach. However, first, she recommends a nearby restaurant where we can satiate our appetites. A local dish, Nasi Campur Bali, graces our lunch table, as we savor the variety of flavors and textures dancing on our palates." /
-       "Nourished and content, we make our way on rented scooters to the stunning Sanur Beach. Our guide leads the scooter convoy as we breeze through the local streets. Upon arrival, its gentle waves, caressing the golden sand, offer a warm welcome. The beach is not just a natural paradise but also a historical landmark, hosting Bali's first major hotel and being an important pivot in Bali's introduction to global tourism." /
-       "As we walk down the famed Jl. Danau Tamblingan road, local shops and charming warungs dot our path. The scent of the sea draws us closer to the coastline, where the breathtaking sunrise awaits. Our guide omits details of the stone pillar in Blanjong, adding to the beach's stories amongst other legends right before the unmarked beginning of the day." /
-       "The sunrise, casting a magical glow over the calm sea, is a sight to behold. The horizon erupts in a symphony of colors, turning the moment into an exhilarating start to a new day. Our guide's soothing voice narrates the local belief about welcoming the sunrise as a symbol of new beginnings, enhancing our admiration for Bali's spiritual undertones." /
-       "As we stroll across the coast, the paved path guides us through beachfront cafes and warungs. We are not just mere spectators but active participants - walking leisurely, snacking on local delicacies, capturing the aesthetics of our surroundings through our lenses, creating irreplaceable memories around this fabled expanse of sand. With each new dawn, Bali continues to unveil its cultural treasures and natural splendors, revealing why it's known as the 'Island of the Gods'." /
-       "Our sightseeing tour carries us on a current of exploration and spiritual enrichment, our memories brimming with Bali's diverse locales and tales. Today, we embrace the anticipation of another adventure beautifully woven through the narrative of our journey. Our young, local guide sets the tone, her resplendent smile playing a homely refrain to the unfolding symphony of Bali's rich culture." /
-       "Winding our way amidst lush landscapes, we journey towards one of Bali's age-old marvels - the Pura Tirta Empul Temple. As the scenic tableau unfurls around us, our guide elaborates the spiritual significance of the towering pagoda-like shrines, or 'pelinggih meru', we spot along the way, masterfully sketching a vivid image of the sanctuary we're yet to visit. The aroma of incense whispers an ethereal welcome even before we exchange our car for rental scooters, enabling us to connect more intimately with the serene environment." /
-       "As we reach the heart of the temple, a sense of spiritual tranquility envelops us. Pura Tirta Empul is a quintessential part of Bali's fabric, traditionally serving as a stage for the religious ceremonies of the Hindu community. Built in 962 A.D during the Warmadewa Dynasty, the temple's grandeur is accentuated with its primary deity, Lord Vishnu, and the mythical 'Tirta Empul', or 'holy water spring', it houses." /
-       "Surrounded by native Balinese people bedecked in colorful and artistically layered traditional attire engaged in prayer, we experience the respectful solemnity attached to this place. The soothing gurgle of spring water, the scent of flowers in the offerings, the serene hum of hushed chants, paints a spiritual panorama that soothes the soul and imparts a newfound respect for Balinese tradition." /
-       "Immersion in this world of spirituality extends to participating in the ritual of cleansing ourselves in the holy spring. Each droplet of water that ripples from the spring and drips off us carries a sense of purification, casting a calm, restful ambiance over the proceedings. As the water cleanses our body, it seems to take with it the distractions of the physical world, leaving behind a serene clarity." /
-       "After this deeply emotive experience, our appetites lead us on, and we are guided to sample a traditional Balinese dish - the savory Bebek Betutu. The slow-cooked duck, richly marinated in spiced herbs, melts smoothly in our mouths, every bite an exquisite blend of flavors and nostalgia." /
-       "With the day drawing to a close, we take a final stroll around the temple, admiring the resident natives selling spiritual charms and handicrafts in the local market. As the sun dips behind the temple, shadowing the grandeur of the pagodas against the darkening sky, we bid our adieus to the serene solitude of Pura Tirta Empul." /
-       "As our journey through Bali unfurls, every day uncovers another layer of its timeless beauty and spiritual tranquility. Captivated by the symphony of the natural and cultural wonder that Bali weaves, we carry in our hearts an imprint of this magical land's soul. Despite the countless miles we've traveled, our Bali pilgrimage feels as if it's just begun, the allure of the unseen stirring a thirst for more captivating experiences to come. For now, as the luminosity of the stars illuminates our path, we are left embracing warm memories and eagerly anticipating the continuing saga of our Balinese journey."
+       "As our enchanting expedition continues in Bali's serene landscapes, we find ourselves drawn towards the unhurried tranquillity of the Campuhan Ridge Walk. With every step on this free nature trek, we journey further into the soothing embrace of towering hillsides, lush greenery, and exhilarating vistas that rival even the picturesque expanse of the rice terraces." /
+       "Our trail commences at Gunung Lebah Temple, a historical sanctuary christened as the 'Small Hill Temple', that offers a peaceful prelude to our nature-infused adventure. Enwrapped in the beauty of this scenic trek, renowned Balinese artist and architect, I Gusti Nyoman Lempad, and influential German artist, Walter Spies, found inspiration, emphasizing the trail's artistic significance. As our winsome young guide shares stories about the ridge's history, its remarkable vistas seem to convey the whispered verses of a distant past." /
+       "The soothing appeal of the Campuhan Ridge Walk lies not just in its undulating topography but also in the calming rhythm of its picturesque trail. Estimated to take around two hours for a round trip, the walk unveils stunning panoramas on either side, allowing us to breathe in the cool, fresh air while soaking in the sublime echoes of nature. Amidst prismatic bands of emerald and azure, we capture moments within our hearts and camera lenses, while a few artists around us sketch the surreal landscape, translating the scenery into strokes of creativity." /
+       "Following the reviving trail, hunger nudges us towards the town of Ubud, revered for its organic ethos and healthful cuisine. Lost in a cacophony of flavors at a local eatery, we indulge in the celebrated Nasi Campur, a fusion of rice with a delightful scurry of accompaniments. The symphony of happy chatter, scooters' beeping, and tires' harmonious whirling add rhythm to the serenading whispers of our surroundings, knitting a lively, unforgettable soundtrack to our enriching meal." /
+       "With the sun setting in the backdrop, reflecting a warm glow on the cerulean waves, we sit quietly, reminiscing about the day's tour, the art, the culture, the nature, the food, and the mesmerizing stories shared by our vivacious young guide. These experiences, laced together, form a beautiful garland of heart-stirring memories of Bali, which will stay with us for a lifetime. As the calm of dusk descends, we prepare ourselves to bid farewell to Bali, relishing the last stirring moments amid its tranquil charm, taking back profound experiences, radiant faces, and a heart full of these precious, luminous memories."
 
     override val start =
        "Tonight, as you lay there comfortably, we embark upon a virtual journey to the magical island of Bali, Indonesia. You're in a gentle, undulating world renowned for its warm azure waters, lush green terraces, and culturally-rich, heritage-filled landscapes that the early light of spring tenderly illuminates. Bali is a place where nature harmoniously intertwines with tradition, setting the scene for an immersive experience that is both vibrant and soothing." /
@@ -219,4 +218,417 @@ object SleepStoryTravelBaliCues : SleepStoryPoseCues {
        "As we pull into our lodging, under a blanket of glistening stars, we exchange meaningful goodbyes with our dedicated guide. Her smile, brightening the twilight, evokes a promise of countless more discoveries awaiting us in this island paradise. As we retire, we carry a piece of Bali within us – its legacy, its spirit, echoes of laughter, and the soothing whispers of waves, the rhythmic chants from temples, and the soft rustle of the wind through the green expanses." /
        "As slumber beckons, we are lulled by the gentle whispers of the Balinese night. The colors of our day fade into the tranquility and peace of the night, the memories nestling into our dreams. Tonight, and all other nights, we'll travel again, as every sunrise promises new journeys across the ethereal landscapes, warm sandy beaches, and bustling markets of Bali. Through the melodies of a mystic past, and the rhythm of an awe-inspiring present, Bali continues to whisper its enchanting stories, leaving imprints on our hearts, forever treasured, forever cherished. Good night, and until our stories cross paths again, dream peacefully under the soothing starlit canvas of Bali's gentle night sky."
 
+/*
+////////////////////////////////////////////////////////////////////////////////
+
+Pura Tanah Lot: This iconic sea temple allows you to experience a spiritual aura amidst the beautiful ocean waves. It is famous among tourists who marvel at the dramatic views at sunset.
+
+- Pura Tanah Lot is one of seven sea temples around the Balinese coast and was erected to pay homage to the guardian spirits of the sea.
+- The temple was built in the 16th century by a Hindu sage, Dang Hyang Nirartha, who is believed to have created a three-pronged complex with Pura Pabean and Pura Batu Bolong as a part of it.
+- One of the fascinating features of Pura Tanah Lot is the 'tirta' (holy water) sprung within the temple, said to have healing properties.
+- The temple cannot be accessed during high tides as it is located on a rock just off the shore.
+- Locals can be seen practicing Nganyut, a tradition of throwing remains of the family ashes into the sea at this site.
+- Tourists often indulge in the traditional Balinese cuisine available at the many eateries nearby. A unique dish to try would be 'Sate Lilit', a spiced mince on lemongrass sticks.
+
+Experience: As you approach Pura Tanah Lot in the hired car driven by a vivacious young woman, one can't help but feel enthralled by the lush green paddy fields surrounding the winding roads. The guide shares fascinating tales about the temple, adding a sense of mystique to the trip. On alighting, you are greeted by the marketplace's vibrant hustle and bustle, as local artisans craft intricate souvenirs. The sight of the magnificent temple standing amidst the crashing waves, especially during the sunset, is truly a sight to behold and will leave lifelong memories etched in your heart. Renting a scooter and navigating through the pathways can be an adventure in itself, especially for those who love a dash of excitement in their explorations.
+
+=====
+
+Tegallalang Rice Terraces: Known for their scenic beauty, these elegant and expansive rice terraces are must-see landmarks surrounding Ubud. Approach them by scooter to bask in the serenity of the verdant landscape.
+
+- The Tegallalang Rice Terraces are one of the UNESCO World Heritage Sites, showcasing the age-old 'subak' system of cooperative water management by the local farming community.
+- They have been admired for their design and functionality for centuries, and they offer a glimpse into the traditional Balinese farming practices.
+- Julius Schittenhelm, a German agronomist, extensively documented the cultivation practices at the rice terraces, contributing to their international recognition.
+- Balinese staple, Nasi Goreng, a type of fried rice, is often served with ingredients harvested from these very terraces.
+
+- The layout of the terraces allows tourists to trek and take stunning photos of the beautiful scenery, while some tourists can be found participating in guided tours detailing the traditional rice cultivation processes.
+- As they're situated about 600 meters above sea level, the terraces offer cool and breezy weather, providing an excellent escape from the warm beach sides.
+
+- The young woman driver, who is also the tour guide, will lead you on a winding journey through lush forests and small villages before coming upon the vast, exquisite panorama of the Tegallalang Rice Terraces. As you disembark from the car, the cool, fresh air hits you as you take in the breathtaking sight of the emerald-green terraced fields undulating with the contours of the land, a testimony to the craftsmanship of the Bali farmers. She may share stories about the area's farming traditions and the daily life of local farmers, deepening your understanding and appreciation of the scenery in front of you.
+
+=====
+
+Sanur Beach: A relaxing and child-friendly beach, it offers a beautiful stretch of sand teeming with local life.
+
+- Sanur Beach is one of the first resort areas in Bali, with the first high-end hotel having been built there in the 1960s.
+- Its calm and shallow waters make it a favorite spot among families with young children.
+- The beach is also famously known for its inspiring sunrise views.
+- You can try the local nasi goreng (fried rice) at the numerous beachfront eateries.
+- Many locals and tourists alike are often seen engaging in water sports such as snorkeling and kite-surfing, or just lounging and sunbathing on the beach.
+- While driving around the beach area, the young woman tour guide points out beautiful traditional fishing boats known as "jukung" lining the shore. As you trace the curve of the beach on your rented scooter, feeling the warm breeze against your skin, she shares anecdotes of local life, enhancing the vibrancy of your surroundings. The laid-back atmosphere of Sanur Beach mesmerizes you, offering a peaceful respite from the bustling crowds of other tourist locations. You take a moment to park the scooter, buying a freshly cracked coconut from a beachside stall, and join the locals watching the sky change colors as the sunrise begins, creating a storybook-like scene.
+
+=====
+
+Antonio Blanco Museum: This museum is a home to the works of renowned artist Antonio Blanco. This unique gallery is sure to enthral lovers of the arts.
+
+- The museum is home to the works of the distinguished artist, Antonio Blanco, who is of Spanish and American descent.
+- The museum itself is the former residence of Blanco. It sits atop a mountain slope overlooking the lush valley of Campuhan.
+- It is an architectural masterpiece, combining Balinese traditional form with various elements of Spanish architecture.
+- Blanco's son continues his father's legacy, currently living and painting from the museum.
+- Many of the paintings displayed in the museum evoke Blanco's fascination with the female form.
+- A common delight for visitors is to relax in its in-house café, indulging in traditional Indonesian food while enjoying the serenity of the surrounding landscape.
+- There isn't much hustle and bustle here, but visitors can often be seen admiring the various works of Blanco and strolling through the beautiful gardens.
+- As a pleasant human experience, imagine this: You approach the museum entrance passing through lush green landscapes, riding on a hired scooter guided by a young Balinese woman. She shares amusing snippets of Blanco's life as you navigate the winding hilly paths. The sun shines warmly overhead; the trees sway gently with the breeze. At the museum, the woman helps you buy your ticket. Even before you step in, the panoramic view of the Campuhan River Valley from the garden steals your breath away. She leaves you with a promise to return for you at sunset - giving you ample time to explore and enjoy the art.
+
+=====
+
+Goa Gajah: Known as 'Elephant Cave', this ancient sanctuary offers a historical exploration of Balinese artistic and architectural heritage.
+
+- It was built in the 11th century as a spiritual place for meditation.
+- The main figure was once thought to be an elephant, hence the nickname Elephant Cave.
+- The site also features stone idols and a courtyard filled with relics.
+- The complex displays a relic-filled courtyard, rock-wall carvings, a central meditative cave, bathing pools and fountains.
+- A typical experience may be having a local guide explaining the detailed carvings and history of the place.
+- People can be seen taking photographs, exploring the ruins, and admiring the ancient reliefs and carvings.
+- Driving to Goa Gajah with the young woman tour guide, she adeptly manoeuvres through the narrow roads lined with lush green fields and palm trees. She excitedly points out the disheveled stone structures as you enter the complex. Renting scooters allows the freedom to explore the lush and serene surroundings on your own pace after the tour. The jovial chatter of the guides mixed with the serenity of the caves gives a unique and pleasant experience.
+
+=====
+
+Pasar Ubud: The Ubud Art Market is a place to bag a bargain and experience Balinese craftsmanship.
+
+- The Ubud Art Market, locally referred to as 'Pasar Seni Ubud', is an art market located in the heart of Ubud.
+- This market is a bustling maze of stalls filled with artwork, crafts, textiles, and homewares. 
+- Pasar Ubud is famous for its role in the film adaptation of Elizabeth Gilbert’s, "Eat, Pray, Love", where Julia Robert’s character shops for local curios.
+- A popular product to buy here are the sarongs, which have been a part of Balinese rituals for centuries.
+
+- The bustling market is also a great place to indulge in some famous Balinese food. Balinese Babi Guling, a spit-roast pig stuffed with rich traditional spices and vegetable mixes such as cassava leaves, slowly 'rolled' over (hence its name, which translates to 'turning pig') a coal fire is a popular dish to try.
+
+- Locals and tourists alike can be seen haggling with the vendors to get the best deal for the items they're interested in.
+
+- Visiting Pasar Ubud with a young woman driver who is also a tour guide can enhance your entire experience. Besides driving you safely through the town's bustling roads, she will likely also have a lot of interesting insights and stories about the market and its products. While you stroll through the narrow aisles of the market, taking in the sights of the vibrant stalls filled with traditional art work, she can help identify genuine pieces, offer tips on how to haggle, and recommend the most authentic local delicacies to try. After shopping, you could enjoy a peaceful scooter ride back to your rental, zipping past lush fields and rice terraces under the soft golden glow of the Balinese sun. It adds an adventurous and personal touch to your sightseeing tour.
+
+=====
+
+Kuta Beach: Famous for its sunsets and gentle waters, it’s the perfect spot for a calm afternoon.
+
+- Kuta Beach is well known for its stunning sunsets, they serve as a beautiful backdrop for surfers, beach bums and even weddings.
+- It was once a fishing village and has transformed into Bali's premier vacation destination.
+- Kuta beach is a famous surf spot, especially for beginner surfers, due to its sand bottom and consistent waves.
+- Local vendors sell traditional Balinese snacks along the shoreline. Ikan Bakar (grilled fish) is a popular beachside dish you should try.
+- Tourists and locals alike are often seen engaging in beach games like soccer and beach volleyball. 
+- You might also see people performing traditional ceremonies, such as Canang Sari (offering to the gods), on the beach.
+- Your young woman tour guide could drive you down to Kuta Beach, where you can rent out a couple of scooters. Ride alongside the beach as the sun sets, feeling the cool ocean breeze against your skin as the orange-pink hue of the sky reflects in your eyes. This journey gives you an opportunity to soak in the natural beauty and vibrant life around you.
+
+=====
+
+Bali Bird Park: Place where you can interact with Indonesia’s diverse bird species. Bird lovers are sure to appreciate its peaceful settings.
+
+- This park is home to almost 1000 birds of 250 different species, including indigenous Indonesian species and exotic birds from Africa & South America. 
+- Besides bird watching, you can also participate in various interactive activities such as the bird feeding, bird shows, and even the 'meet the bird stars'.
+- The Bali Bird Park also features a lush garden setting and a striking waterfall.
+- Since it's located in Bali's Gianyar regency, you can combine your bird park visit with exploring nearby traditional craft villages.
+- The restaurant at the Bali Bird Park serves a variety of Indonesian and international food dishes. For a local touch, opt for Nasi Goreng, a traditional Indonesian fried rice.
+- Many visitors will be seen walking around with a map, exploring the different sections of the park or taking photographs of the exotic birds.
+- Driving to the Bali Bird Park with a young woman tour guide could be a captivating experience. She would explain about the different species you're likely to see and their unique characteristics, making the journey educational and fascinating. The motor scooter rentals also offer an opportunity for independent exploration. You could rent a scooter and ride around the vast area, taking in the natural beauty at your own pace.
+
+=====
+
+Neka Art Museum: Home to hangings and traditional and progressive Balinese art, it’s a cultural stop you won’t want to miss.
+
+- The Neka Art Museum, founded in 1976 by Suteja Neka, a Balinese teacher and art collector, displays a diverse range of Balinese artwork.
+- This museum is known to showcase both traditional and modern Balinese art, easily distinguishing it from other art museums in Bali.
+- Famous works include those from renowned local artists like I Gusti Nyoman Lempad and foreign artists who lived in Bali like Walter Spies and Rudolf Bonnet.
+- Visitors often visit the nearby Sari Organik restaurant, that offers a dining experience centred around organic and locally sourced produce.
+- Visitors can be seen closely examining the exquisite art pieces, discussing the possible interpretations, and clicking photographs.
+- The young woman driver, who also happens to be an experienced guide, stops the car at a viewpoint that overlooks lush rice paddies adjacent to the museum. Allowing for the cool, Bali breeze to fill the car, she shares tales of Balinese rice cultivation, pointing out the farmers in the distance. Scooters whir past, zipping through the verdant greenery on either side of the road, adding to the distinct charm of rural Bali.
+
+=====
+
+Batuan Temple: An ancient Hindu temple with intricate stone carvings, a visit here offers an enlightening insight into the rich history of Balinese culture.
+
+- The Batuan Temple is nearly a thousand years old, offering glimpses into the ancient spiritual practices of the island.
+- A classic example of Balinese architecture, the temple is intricately decorated with sandstone bas-reliefs and carvings.
+- Revered as one of the island's 'kahyangan jagat' -- sacred foundational temples -- important to the spiritual well-being of the entire island.
+- Ritual processions and elaborate ceremonies are common occurrences at Batuan Temple, with locals in traditional attire.
+- A typical visit involves wearing a 'sarong' or 'sash', provided at the temple. Modest dressing is required.
+- Upon arriving, your young woman guide parks the car in the designated area, her hair adorned with frangipani flowers, humming a traditional Balinese tune. She helps you put on your sarong and leads you through the temple complex, under a towering banyan tree, explaining the significance of the carvings. Gloved hands point out a detailed carving which depicts a scene from the Ramayana epic - the hero Rama, accompanied by his loyal companion Hanuman, rescues his wife Sita from the demon king, Ravana. The stone seems to come alive under her patient exploration.
+- Near the temple, the scent of the 'Babi Guling' -- spitfire pork -- entices you toward a local eatery.
+- Hindu worshippers are often seen presenting offerings and praying at the multi-tiered shrines.
+
+=====
+
+Tirta Empul Temple: Known for its holy water. Millions of people have dipped themselves in this holy spring to heal their physical and spiritual well-being.
+
+- Tirta Empul Temple is a Hindu Balinese water temple located near the town of Tampaksiring, Bali, Indonesia.
+- The temple was founded in 962 A.D. during the Warmadewa dynasty and is dedicated to Vishnu, the Hindu God of Water.
+- It's recognized for its holy spring water, which the Balinese believe has healing powers. Many people from various parts of Bali visit the temple to purify themselves in the sacred spring water.
+- The name 'Tirta Empul' means 'Holy Spring' in Balinese.
+- A popular activity at this location is to take part in the water purification ritual. Locals and tourists alike wade through the rectangular pools, immersing themselves under the water spouts in a specific sequence. It is a purifying experience that is a significant part of Balinese Hindu culture.
+- Visitors are encouraged to try the traditional Balinese cuisine from the local warungs, or food stalls, scattered around the temple, with dishes like Nasi Campur (mixed rice) and Ayam Betutu (spiced chicken).
+- If you are visiting via car with a young woman driver who is also a tour guide, you might have a pleasant experience of her explaining the ins and outs of the purification ritual, along with interesting stories about the temple’s history and cultural significance. She could also guide you to the best local warungs.
+- If you choose to explore the temple surroundings on rental scooters, you can enjoy the lush and serene landscapes of Tampaksiring up close, making your way through small towns and rice fields.
+
+=====
+
+Campuhan Ridge Walk: End your journey in Bali with a calming walk along this beautiful trail, running atop the verdant hills with breathtaking views of the surrounding landscape.
+
+- Campuhan Ridge Walk is a free and easy nature trek with scenery that rivals the nearby rice terraces.
+- The trail starts at the historical site of Gunung Lebah Temple, which translates to "Small Hill Temple."
+- The ridge walk's beauty has inspired many artists, including I Gusti Nyoman Lempad, an influential Balinese artist and architect. 
+- The area around the ridge is known for its artistic significance, owing to it being the location where the respected German artist, Walter Spies, stayed during his time in Bali.
+- The walk usually takes about 2 hours round trip, with stunning green panoramas to either side and cool fresh air to calm your senses.
+- The area around Ubud, where Campuhan Ridge Walk is located, is known for its organic and health food. So, visitors typically stop for lunch at a local restaurant for Nasi Campur, a traditional Indonesian dish that combines rice with a variety of accompanying dishes. 
+- Other people may be seen doing activities such as taking in the picturesque views, shooting photographs, or even sketching the surreal landscapes.
+- An experience here might include driving up to the starting point of the walk with the young woman driver. As you ascend through the winding roads, she shares her knowledge about the landscape and the history of the ridge. At the beginning of your walk, she points out the Gunung Lebah Temple and explains its centuries-old history. After the hike, on your way back, she pulls up next to a local restaurant and suggests trying the best Nasi Campur in town. Passing scooters beeping and the whir of their tires make for a lively soundtrack to your meal.
+
+=====
+
+
+
+////////////////////////////////////////////////////////////////////////////////
+
+Tegallalang Rice Terraces: Enjoy the beautiful scenery of these terraced paddy fields. They're among the most attractive landscapes on the island.
+
+- The Tegallalang Rice Terraces represent an ancient Balinese irrigation system known as subak which dates back to the 8th century.
+- This panoramic landscape has charmed artists and writers with its serene and tranquil beauty.
+- Its picturesque scenes have been used as the backdrop in several movies and novels, such as 'Eat, Pray, Love'.
+- Indonesian cultural heritage related quote: "We are not makers of history. We are made by history."
+- A popular dining experience here involves enjoying a traditional Indonesian meal in a nearby restaurant overlooking the rice fields. A typical dish might include Nasi Campur, a mixed rice dish served with various accompaniments.
+- On a busy day, visitors can spot local farmers going about their day-to-day work, tending to the fields or harvesting the rice. 
+- Photographers setting up their tripods to capture the stunning sunrise or sunset is a common sight.
+- Driving through this area with a local young woman guide can be a heartening experience. As you ride, she explains the importance of the rice terraces to Balinese culture and agriculture. You feel the connection between the people and the land. As you pause on a vantage point, she brings out a simple yet delicious picnic, prepared from ingredients sourced directly from these very fields. She amuses you with anecdotes of local farmers, as scooters whiz past on the nearby roads, carrying more enthusiastic tourists to witness this spectacle. You taste the food, glance across the terraces and realize the depth of the Balinese saying: "Rice is Life".
+
+=====
+
+Sacred Monkey Forest Sanctuary: Get a close encounter with tropical wildlife in its natural habitat in the hustle and bustle of the forest.
+
+- This nature reserve and Hindu temple complex houses over 700 Balinese long-tailed monkeys.
+- The sanctuary is home to three sacred temples which date back to the mid-14th century.
+- It is a sacred site in Balinese Hinduism, where monkeys are considered to be spiritual entities.
+- The Monkey Forest is mentioned in the Ramayana, an Indian epic poem.
+- After enjoying playful moments with monkeys, one can enjoy a cup of Bali's famous Luwak coffee at nearby cafes, considered amongst the most expensive coffees in the world.
+- Visitors often engage in feeding the monkeys or trying to get up close for a memorable photo (but be aware - the monkeys are known for their thieving antics and may grab anything within their grasp!). 
+
+- As you drive through the Sacred Monkey Forest Sanctuary, your tour guide will explain the ecological balance between the monkeys, trees, and the entire forest ecosystem. Cruising along the forest paths in your rental scooter, you'll be captivated by the serene beauty that fills your senses, creating an unforgettable bonding moment between you, your young guide, and the majesty of nature.
+
+=====
+
+Ubud Art Market: A great place to find some beautifully crafted goods and local artworks.
+
+- Ubud Art Market, known as 'Pasar Seni Ubud' in Bali, is a famous market in the center of Ubud that sells traditional crafts and textiles.
+- One of the key scenes in the Hollywood movie "Eat Pray Love" was shot at this market.
+- The items in this market are made in the neighbouring villages of Pengosekan, Tegallalang, Payangan and Peliatan.
+- The market opens daily from around 06:00 in the morning for traditional early morning market shoppers, while the art crafting section opens later.
+- Dining in the area can give visitors a taste of the famous Balinese "Babi Guling" or roasted pig, a traditional dish that is usually reserved for ceremonies but also served in a few local restaurants.
+- Other people visiting the market might be seen haggling for better deals with the vendors, capturing photos of the colorful market, or trying on traditional Balinese hats and clothing.
+- A ride to the Ubud Art Market can be an enriching experience when accompanied by a young Indonesian lady driver and tour guide. She might explain how to negotiate prices at the market - it is expected to bargain in the Balinese markets. On the way, she can tell stories about the artistry of the local people, while you marvel at the beauty of the lush green rice fields, the clouds casting shadows on the landscape, and dodge the occasional family of ducks crossing the narrow roads on a scooter.
+
+=====
+
+Pura Ulun Danu Bratan: Explore this picturesque water temple that seems to float on Lake Bratan.
+
+- Pura Ulun Danu Bratan is a major Shaivite water temple on Bali, Indonesia.
+- The temple complex is built on the shores of Lake Bratan in the mountains near Bedugul.
+- The sight of this temple on the shore of the lake is often used to represent Bali and its beauty.
+- The temple was built in the 17th century in honor of Dewi Danu, the water, lake and river goddess in Balinese Hinduism.
+- Visitors often seen taking leisurely boat rides on Lake Bratan, offering a different perspective of the temple.
+- A common dining experience here is to try the local specialities by the lake such as grilled fish.
+- When approaching Pura Ulun Danu Bratan in a car with a young woman tour guide, she might share a story of a local Balinese legend related to the temple. It would be enchanting to take in the mystical hills and clouds overhead, creating a sense of anticipation before the breathtaking beauty of the temple and its surroundings come into view.
+- Ride a rental scooter along the perimeter of the lake for an enjoyable exploration of the temple's lush settings.
+
+=====
+
+Tirta Empul Water Temple: This is a spiritual place for the locals and a place where you can experience a traditional purification ritual.
+
+- Tirta Empul Temple, also known as the Holy Spring Water Temple, was founded around a large water spring in 962 AD during the Warmadewa dynasty (from the 10th to 14th centuries).
+- The temple is divided into three areas: Jaba Pura (front yard), Jaba Tengah (central yard) and Jeroan (inner yard). In Jaba Tengah, you can find two rectangular pools purposed for purificatory rites.
+- The central yard is decorated with statues that, as per Hindu tradition, symbolize Bhagawan Vishnu or Hyang Widhi in the form of Varuna or Dung Hyang Indra, the god of thunder and rain, thus connecting the spiritual element to the natural source of spring water.
+- Visitors partake in a purification ritual, which involves washing in each of the 30 holy water fountains in sequence.
+- Some visitors can be seen taking photographs, meditating, or just enjoying the serenity the place has to offer.
+- On your road trip to Tirta Empul, your young female guide might point out the lush greenery of Bali. The drive is laden with stretches of verdant rice terraces that beautifully flank the narrow roads leading to the temple. Gloved hands gripping the wheel, she shares snatches of centuries-old tales associated with the temple's origin, its significance, and the Balinese people's spirituality.
+- Typical dining experience may include sampling local Balinese cuisine at one of the nearby warungs (small family-owned restaurants), wherein Sate Ayam (chicken satay) or Nasi Goreng (fried rice) are popular choices.
+
+=====
+
+Ubud Royal Palace: Discover the historical and cultural attractions of Bali in this beautiful palace.
+
+- The Ubud Royal Palace, also known as Puri Saren Agung, was built during the late 1800s and is well-known for its distinct Balinese architecture.
+- The royal house was once the official residence of the royal family of Ubud.
+- The entrance of the Palace, which boasts intricately carved statues, is a famous point of interest and often serves as a backdrop for various cultural performances.
+- In the evenings, you can witness traditional Balinese dances like Legong and Ramayana being performed in the courtyard.
+- Visitors are likely to see people taking photographs in the beautiful palace garden, which includes a huge banyan tree and lush tropical plants.
+- While in Ubud, it is recommended to try the famous crispy duck or Bebek Bengil. The palace is in proximity to several places where this dish is served.
+- A memorable experience would be arriving at the palace with our young woman tour guide via car, while she explains the historical significance of the palace and briefs us about the royal family's traditions. Afterwards, explore the palace and its surroundings on rented scooters, weaving through the bustling market nearby, breathing in the vibrant aromas of the local food and soaking in the Balinese culture.
+
+=====
+
+Sunday Market Sanur: Sample local food, shop for clothes and accessories, enjoy live music – this market has it all.
+
+- Built in the late 20th century, the Sunday Market Sanur embodies the energetic spirit of the local community.
+- The market's bustling environment has inspired several literary pieces, presenting vivid images of Balinese life.
+- Comprising of a multitude of stalls offering everything from clothes to food, the market is a shopping haven in Bali.
+- The quote, "The life and soul of Bali can be experienced in its markets," aptly describes the Sunday Market Sanur.
+- Visitors at this market are likely to savor the flavors of local dishes like Nasi Goreng (Indonesian fried rice) and Babi Guling (Balinese suckling pig).
+- It's common to spot visitors negotiating with vendors, exploring various stalls, admiring the vibrancy of the market, or simply enjoying live music.
+- During the car ride to the market, your young tour guide could entertain you with fascinating stories of Bali's culture and history. On arrival, she could show you around the various stalls and help you negotiate good deals. Scooters can be rented to explore the market's different sections more swiftly and independently.
+
+=====
+
+Besakih Temple: Visit the largest and holiest temple in Bali, also known as the Mother Temple.
+
+- Besakih Temple is over 1,000 years old and is considered to be Bali's 'Mother Temple', a focus for all Hindu worship for the Balinese people.
+- The complex is made up of 23 separate but related temples with the largest and most important being Pura Penataran Agung.
+- Besakih Temple officially became a tourist attraction in 1951.
+- A gem of a quote well-suited to this spiritual place comes from Buddha: "Peace comes from within. Do not seek it without."
+- Since it's a spiritual location, visitors can often be seen meditating quietly or participating in one of the many annual ceremonies.
+- Locals often sell 'Canang Sari', a type of offering for Gods, which is a small basket made out of palm leaves filled with flowers and snacks, a typical symbol of Balinese Hinduism.
+- When driving to Besakih Temple, your young woman guide might explain the significance of the temple's grandeur set against the backdrop of picturesque rice paddies and hills. As you approach, you might find your gaze drawn to the towering 'Meru' structures, which mimic the sacred mountain, Mount Agung.
+- Although traffic can occasionally build up due to the popularity of the temple, yourguide has the opportunity to expertly guide scooters through the narrow, winding roads, leaving you free to soak in the captivating views. Watching her skilful manoeuvring is half the fun.
+
+=====
+
+Nusa Dua Beach: For some relaxation time, you must visit this beautiful beach famous for its white sands and clear waters.
+
+- Nusa Dua Beach is an area in Bali well known for its luxurious hotels and resorts.
+- The name "Nusa Dua" is derived from the Indonesian words 'Nusa' meaning 'island' and 'Dua' meaning 'two', referring to the two small island mounds at the beach area.
+- The area was developed during the late 1970s by the Indonesian government's tourism agency to attract international visitors.
+- Postcard-perfect, the beach is perfect for a leisurely swim or adventurous water sports like jet skiing and parasailing. 
+- A common culinary experience here might be enjoying freshly grilled seafood from one of the many beachside restaurants while enjoying the sunset view.
+- Many visitors can be seen sunbathing, enjoying massages offered by local masseuses on the beach, or strolling along the beachside path.
+- When you exit the car provided by your young woman driver tour guide, you might feel the ocean breeze and warm sunshine on your face. The pleasant experience will continue as you rent a scooter and feel the sense of freedom as you traverse the coastal road with the soothing sound of the waves in the background. Be sure to stop at the water blow hole, where you can feel the power of nature as seawater shoots up into the air. Buying a ticket for a parasailing adventure can also be a thrilling experience for those not afraid of heights.
+
+=====
+
+Art Centre Denpasar: Explore this cultural hub offering regional crafts, paintings, and music shows.
+
+- Art Centre Denpasar, also known as Taman Werdhi Budaya, was officially opened on February 14, 1973.
+- It was designed by the Balinese architect Ida Bagus Tugur.
+- Every year, it hosts the Bali Arts Festival, a month-long festival showcasing Balinese art and culture.
+- You might see locals cycling or lounging around the beautiful park areas.
+- A typical experience would involve enjoying regional dishes like 'Babi Guling' (suckling pig) and 'lawar' (a traditional Balinese dish made from minced meat, coconut, and a variety of spices) from local food stalls during festivals.
+- Driving towards the Art Centre Denpasar with our young tour guide, you'll first notice the colossal Niti Mandala monument, a sight for the eyes. As she expertly navigates the throng of scooters characteristic of Bali streets, she will share tales of the epic Ramayana Ballet performances that take place in the open-air amphitheatre. You might even catch a glimpse of new art pieces being brought in for display, perhaps a brilliant painting emphasizing Balinese traditions and religion.
+
+=====
+
+Pura Luhur Uluwatu: Witness the spectacular cliff-side temple with spectacular views of the ocean.
+
+- Pura Luhur Uluwatu is one of Bali's nine key temples believed to protect the island from evil spirits.
+- Built in the 11th century, the temple offers a glimpse into ancient Balinese culture.
+- Dedicated to Sang Hyang Widhi Wasa in his manifestation as Rudra, the god of the storm and the wind. 
+- Local lore suggests that a Hindu priest established the temple at the end of his spiritual journey, which included walking around the world.
+- Visitors often partake in the traditional Kecak Fire Dance performance held at sunset, offering an immersive cultural experience.
+- Visitors are often spotted feeding the monkeys in the surrounding area, or just enjoying their amusing antics.
+- Seeing the temple at sunset is a popular activity, turning the scenery into a breathtaking panorama of the Indian Ocean and the golden hues of the horizon.
+- Driving to Uluwatu with a young woman driver opens up charming conversations about the local culture and traditions. She would explain the intricate details of Balinese rituals and caution against monkeys who are notorious for snatching things from tourists. You might also take delight in renting a scooter, feeling the sea breeze on your face and enjoying the picturesque journey along Bali's winding coastal roads.
+
+=====
+
+Seminyak Village: A deluxe shopping and dining complex that mixes urban sophistication with a tropical holiday vibe.
+
+- Seminyak Village is an upscale shopping and dining complex which opened in 2015.
+- The complex provides various luxury brands from both local Balinese and international designers.
+- Seminyak Village is located in the heart of Seminyak, one of Bali's most fashionable districts.
+- Seminyak Village is home to restaurants like Tiger Palm, where you can enjoy delicious Asian cuisines with a modern twist.
+- Other people at Seminyak Village might be seen shopping for designer clothes, tasting local dishes, or enjoying a cocktail at one of the rooftop bars.
+- A pleasant experience involves your chauffeur, your young female tour guide, dropping you off at the entrance of Seminyak Village. She shares insider tips on the best stores and eateries to visit. After exploring, you take a rest at one of the cafes and relish a tropical fruit smoothie as you watch the vibrant street life and local scooter riders cruising by.
+
+
+=====
+
+Pura Tanah Lot: Experience the unique offshore setting and walk down to the beach during low tide.
+
+- It's one of Bali's most important landmarks, famed for its unique offshore setting and sunset vistas.
+- Pura Tanah Lot is an ancient Hindu pilgrimage temple dedicated to the sea gods and is original to the Balinese mythology.
+- The name Tanah Lot translates to "land in the sea" in the Balinese language.
+- The temple is said to be guarded from evil by the sea snakes that inhabit the caves below.
+- A quote from famed photographer Rio Helmi captures the essence of this location: "At low tide, the temple appears as though it floats on the water. As the tide rises in the evening, it’s swallowed up by the sea, disappearing from view completely."
+- A traditional dish you'll find around here is "Babi Guling", a Balinese specialty roast pig, which is often enjoyed with a stunning view of the ocean.
+- You might see other people taking pictures, participating in traditional ceremonies, or exploring the market stalls around the temple.
+- Imagine driving towards Pura Tanah Lot with Mai, your young Balinese tour guide. She skillfully maneuvers through the traffic on her scooter, carrying you on the back. Her easygoing chatter about local customs and legends enhances the scenic drive through terraced rice fields and villages. After a brief ride, the ocean comes into view, and Mai navigates the busy market area surrounding the temple, finally parking the scooter near the beach. The smell of incense mixes with the sea breeze as you walk towards the beautiful temple, learning about its history and cultural significance from Mai's insightful storytelling.
+
+=====
+
+Bajra Sandhi Monument: Learn about Bali's struggle for independence at this monument.
+
+- Bajra Sandhi Monument is an iconic landmark in Denpasar, situated in the heart of Bali's provincial capital.
+- It was built to honor the struggles and sacrifices of Balinese people throughout history, especially during Indonesia's struggle for independence from the Dutch colonial rule.
+- The monument's name and overall design are based on the Bajra, a bell used in Hindu religious ceremonies.
+- Each part of the monument is symbolically resonant: there are 33 dioramas around the monument to represent Indonesia's 33 provinces, and 8 entrances and 45 stairs, which together symbolize the date of Indonesia's independence: 8-1945.
+- A favorite dish to try nearby is Sate Lilit, a traditional Balinese dish made from minced seafood, which is then mounted on a lemongrass stick and grilled. 
+- As the monument is located in a public park, visitors are found jogging around it early in the morning, cycling, or peacefully practicing yoga. 
+- An enjoyable experience would be the drive up to the monument with the friendly young woman driver telling you about the importance of this monument to the Balinese people. She might also point out that the monument is even more beautiful at sunrise. You can then briefly stop to take some beautiful pictures and breathe in the fresh morning air before continuing the tour on rental scooters around the park.
+
+=====
+
+Kintamani Volcano: Enjoy the phenomenal view of Mount Batur and its surroundings, including its serene lake.
+
+- Mount Batur is an active volcano located at the center of two concentric calderas north west of Mount Agung in Bali, Indonesia.
+- The southeast side of the larger 10x13 km caldera contains a caldera lake, known as Lake Batur.
+- The Kintamani area is a vital source of agriculture in Bali, cultivating crops such as onions and tomatoes.
+- The eruption that brought this volcano to be is one of the largest known volcanic events on Earth in the past 1,000 years.
+
+Dining Experience:
+- An unforgettable dining experience here would be dining out in the open with a panoramic view of the volcano.
+
+People Activities:
+- Besides taking in the breathtaking scenery, people usually opt for a hike up the volcano.
+- A visit to the hot springs located nearby is also popular among tourists.
+
+Pleasant Human Experience:
+- Upon arriving at the location, your young tour guide takes out a map detailing the area surrounding Kintamani Volcano. Rays of sunshine fall on the map, highlighting the architectural wonders and the natural beauty the place holds. As you take in the view of the magnificent volcano, the scent of roasting coffee beans from a nearby plantation fills the air. Nearby, rental scooters cluster together, leaving waiting for their riders who are busy immersing themselves in the natural beauty. The sound of laughter fills the air as the young guide shares a local folklore about the volcano, making the historical place come alive with her tales.
+
+=====
+
+Museo Blanco: Marvel at the artwork, and don’t forget to enjoy the stunning views from the garden.
+
+- Museo Blanco, also known as Blanco Renaissance Museum, hosts an extensive collection of work by Philippine-born artist Antonio Blanco.
+- This museum was actually Antonio Blanco's home until his death in 2002. Having arrived in Bali in 1952, he decided to spend the rest of his life here.
+- The museum’s collection includes erotic art, a genre for which Blanco is well known.
+- Blanco's artwork is deeply influenced by the culture and people of Bali.
+- The museum has a café where visitors can enjoy a drink or a light meal. A standout dish here is the Mie Goreng, a traditional Indonesian noodle dish.
+- Many visitors to Museo Blanco can be found admiring the extensive artwork, soaking in the artistic ambience, or looking out from the garden to the valley below.
+- On your drive to Museo Blanco with your tour guide, she might share anecdotes about Antonio Blanco's life and art. You could also take rental scooters -- riding through lush, winding roads to reach the museum makes for an exhilarating experience. The surrounding flora and fauna, as well as the hillside views, are a treat to the eyes. Once you are at the location, the picturesque outlook, coupled with Bali's warm sunshine filtering through the lush greenery, makes for a delightful experience.
+
+=====
+
+Lovina Beach: Watch dolphins and enjoy snorkeling in crystal clear water.
+
+- Lovina Beach is a resort area on the north coast of Bali, known for its black sand beaches and coral reefs.
+- The primary attraction at Lovina Beach is dolphin watching, with early morning boat tours setting out daily to interact with the dolphins that frequent the area.
+- A little-known fact is that its name "Lovina" is derived from the phrase "Love Indonesia".
+- Aside from the playful dolphins, it's also a wonderful place to snorkel in clear water where you can see a variety of marine life.
+- Your dining experience here might include sampling traditional Balinese dishes at beachside eateries, such as Nasi Campur (a mixed rice dish).
+- Other visitors might be seen sunbathing, playing beach volleyball, or taking part in water sports like paddleboarding or jet-skiing.
+- With your young female tour guide, you might enjoy a journey through the scenic northern area of Bali to reach Lovina Beach. Along the way, you can have a pleasant chat about the unique culture and rich history of Bali. Once you've arrived, you can appreciate the peacefulness of Lovina, contrasting with Bali's busier southern areas.
+
+=====
+
+Ubud Food Market: Enjoy the vast variety of local specialties such as fruits, vegetables, and a variety of spices and snacks.
+
+- Ubud Food Market, or Pasar Ubud, is the main market in the area, known for its vibrant atmosphere and variety of goods.
+- The market is split into two parts - the traditional market for locals that opens early in the morning and the Art Market for tourists that starts around 9 am.
+- Local Balinese and chefs from Bali's hotels and restaurants shop here early in the morning for the freshest produce.
+- Quotes: "The essentials of Balinese cooking are all about the aroma. What's a better place to experience it first hand than in Ubud market?" - Janet DeNeefe, a famed Bali-based food writer and restaurateur.
+- Sampling traditional Balinese foods like "babi guling" (suckling pig) or "lawar" (spicy meat salad) is a must at this market.
+- Visitors often try their hand at bargaining with local vendors, a shared activity that is part of the shopping culture.
+- Taking in the sights, sounds, and smells of the energetic market place is a sensory experience. Enjoying the vibrancy of it all while traveling by car with your young tour guide makes it all the more special. She skillfully navigates the bustling streets around the market, giving you insider tips on where to get the best deals and sharing stories about her own experiences at the market. Furthermore, you enjoy the freedom that rental scooters provide, allowing you to explore the market area at your own pace and appreciate the local way of life.
+
+=====
+
+Bali Safari & marine park: Experience an exciting safari trip through a wildlife park full of exotic animals.
+
+- Bali Safari & Marine Park is one of Bali’s largest and most visited animal theme parks, covering approximately 40 hectares.
+- The park features over 60 species, all roaming freely within their enclosures set up to closely mimic their natural habitats.
+- This educational and interactive experience is perfect for families, where you can see various animals in their natural-like habitats and get up close and personal with the animals on rides and petting areas.
+- Visitors can take a safari bus to tour the park or use the 'walk-through' feature to view the animals up close.
+- A typical experience might include enjoying a meal at the Tsavo Lion Restaurant, where you can dine safely in full view of lions.
+- Other people might also be seen engaging in the "Elephant Back Safari", getting close with the animals in the petting zoo, or watching one of the park's live animal shows.
+- A pleasant experience with your young woman driver and tour guide might be her expertly navigating the park as she shares interesting information and stories about the various animals in the park, while you feel the wind in your hair from the scooter ride and click pictures of the animals from unique vantages.
+
+=====
+
+Semar Kuning Artist Cooperative: Get an insider's look at Balinese art and craftsmanship at this stop, filled with remarkable art pieces.
+
+- Located in the village of Lodtunduh, Semar Kuning Artist Cooperative is noted for its high-quality, traditional Balinese paintings.
+- This location is also a hub for local artists to foster their creativity and talent, making it a significant cornerstone in Ubad's art community.
+- The cooperative embodies the cultural spirit and artistic heritage of Bali, including the Kamasan style of traditional Balinese painting.
+- Some of the art pieces depict scenes from Hindu myths such as The Ramayana and Mahabharata. Others include scenes of everyday life on the island, varying from religious rituals to dance performances.
+- With Balinese traditional snacks often available for purchase, visitors can savor Pisang Goreng (fried bananas) while appreciating the art.
+- Artists are frequently seen showing visitors painting and handicraft techniques, sharing their unique perspectives and fascinating process.
+- While driving to Semar Kuning Artist Cooperative, the young woman tour guide highlights the lush landscapes of Ubud. Upon reaching, she patiently explains the different painting styles and the stories behind some famous pieces. A stop at a local artist's working space offers interaction with the artist himself and a first-hand glimpse of the creation process, from sketch to final stroke. The extra information woven in with local lore and history makes for an enriching and immersive experience.
+
+=====
+
+
+*/
 }

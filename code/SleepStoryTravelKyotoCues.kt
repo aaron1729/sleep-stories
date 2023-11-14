@@ -1,78 +1,74 @@
-// this code is generated from the story files kyoto_2023-11-10_23-15-53_short.txt and kyoto_2023-11-10_00-41-50_long.txt
-// min_stops is set to 1
+// this code is generated from the story files kyoto_2023-11-14_00-11-59_short.txt and kyoto_2023-11-10_00-41-50_long.txt.
+// the stops with tidbits that were the user prompts for these stories are copied at the bottom as comments -- first those for the short story, then those for the long story -- separated by a bunch of slashes.
+// min_stops_for_long_story is set to 1.
 
 package com.downdogapp.cue
 
 object SleepStoryTravelKyotoCues : SleepStoryPoseCues {
 
     override val startShort =
-       "Ah, Kyoto, ancient capital of Japan, a city that gracefully blends the old and the new, the spiritual and the secular. Spring is the magical season when the whole city transforms into a celebration of newfound life, streets and parks bursting with hues of pink and white cherry blossoms. The gentle echo of bicycle bells, the soft rustle of silken kimonos, the distant hum of monks chanting, these are the ambient sounds that set the rhythm of the city. Today, we find ourselves at the beginning of a sightseeing tour, ready to embark on a journey through the city's historic landmarks and enchanting gardens on a traditional rickshaw led by a jovial middle-aged guide, whose eyes carry sparkles of countless stories yet to be told." /
-       "Our journey begins at the entrance of the famed Kinkaku-ji, also known as the Golden Pavilion. Our rickshaw glides to a stop at the entrance, our guide stepping down with a spry energy that belies his years and warmly ushers us into the temple grounds." /
-       "Kinkaku-ji leaves us breathless at first sight. It's perched at the edge of an elegantly designed pond, this Zen Buddhist temple carves a resplendent figure against the azure skies, the whole structure covered from top to bottom in golden leaf gleaming in the gentle sunshine. The effect is mesmerizing, the temple reflecting on the serene surface of the Kyoko-chi pond, creating a radiant spectacle against the lush backdrop of verdant trees." /
-       "Our guide, now turned storyteller, shares that this awe-inspiring temple was built back in 1397, meant to be a peaceful retreat for a certain shogun. Its style, he explains, was a nod to His desire to create a sense of harmony between heaven and earth, in line with pure land Buddhism’s principles. While we stand, captivated by the grand sight, our guide tells us that the original Kinkaku-ji was burnt down in the mid-20th century by a disgruntled novice monk, an event that later formed the heart of Yukio Mishima's celebrated novel." /
-       "Our focus soon shifts to the temple kiosks nearby, where we partake in the local custom of writing our wishes on small wooden tiles known as 'ema'. After we hang them up carefully, we savor some matcha green tea and wagashi, the sweet taste adding another layer of enjoyment to our temple visit. The tea's warm aroma mingles with the crisp spring air laden with heady cherry blossoms creating an irresistible blend." /
-       "As we leisurely sip the tea, we observe other visitors. Some local ones pray earnestly to the Buddha statues scattered around, seeking blessings or perhaps sharing some secret sorrow. International visitors, on the other hand, can't seem to get enough of the golden pavilion. Cameras flash continuously as they endeavor to capture the ethereal beauty of the golden temple and its surrounding landscapes." /
-       "Our journey by rickshaw to Kinkaku-ji has enriched us with countless moments of peace and tranquility, punctuated by the soothing narration of our amiable guide. His tales of local legends, similar to the temple we are visiting, paint the landscape with a magical air. As we prepare to hop on our bicycles again, eager to continue our exploration of Kyoto, the image of the majestic golden pavilion reflecting beautifully in the placid pond stays etched in our minds, sparking a bubbling anticipation for the wonders that still lie in wait." /
-       "Departing from the gleaming wonder of Kinkaku-ji, we continue our journey to the northeastern part of Kyoto, making our way toward the quiet serenity of Philosopher's Path. We still have our seasoned rickshaw guide with us, and his steady hands lead us with unhurried calm, allowing us to absorb every sight and sound." /
-       "We find ourselves on a charming stone path, winding its way through the heart of Kyoto's Higashiyama district. Our guide explains that the path, stretching approximately two kilometers, is named after the renowned philosopher, Nishida Kitaro, who is believed to have used the path for his daily meditative walks while he served as a professor at Kyoto University." /
-       "The landscape is mesmerizing, lavishly painted with the quintessential hues of spring as cherry trees line the canal in a signature floral formation. We become entranced by the sight of petals gently floating down the gentle stream with an almost philosophical grace. Our guide adds another layer of enchantment as he draws upon his vast knowledge of literature and poetry, referencing works that draw analogies between the tranquil setting and life's journey." /
-       "Deciding that our journey could use a break, we take a pause at one of the quaint cafes dotting the path. Here, we savor a divine bowl of udon noodles, each mouthful providing wholesome comfort. A warm cup of matcha tea complements our meal, and we find ourselves luxuriating in the culinary delights the path has to offer." /
-       "Along the path, we find ourselves sharing the experience with others - artists bent over their sketchpads, locals on a casual stroll with their dogs, tourists trying to capture the experience through their camera lenses, and children enchanted by the tame ducks who call the serene canal their home." /
-       "As our rickshaw ride nears its end, we decide to continue our exploration at our own pace, hopping onto rented bicycles for the next leg of our adventure. Alongside the canal, under the comforting shade of cherry blossoms overhead, we are enticed towards Arashiyama, an enchanting haven of towering bamboo." /
-       "The Arashiyama Bamboo Grove greets us; it's an otherworldly setting where the sky is a mere hint through the dense lattice of leafy bamboo tops. Here, the world stands still, the only perceptible movement being that of the bamboo swaying gently in the rhythmic symphony of the wind. Our guide tells tales of the bamboo's invaluable role in the local industry - how it has been harvested for centuries to create an array of goods such as mats, cups, boxes, and baskets, all handcrafted in local workshops." /
-       "Leaving the rickshaw, our now-trusted bicycles become our means of exploration. Traversing the grove, we can hear the rustle of bamboo leaves above our heads, an ethereal orchestration played by the cool wind. The tall bamboos provide natural shade, drawing a dramatic pattern of sunlight and shadows across the narrow path. The landscape is a living canvas, adjusting with the sun's movements, creating a spectacle that remains starkly beautiful as day dips into the late afternoon." /
-       "Nestled in this beautiful sanctuary are small restaurants and tea shops, each offering a brief respite from our journey. We pause once more, enjoying another Matcha tea while relishing traditional Japanese sweets, the taste a tender echo of the surrounding natural exquisiteness. As we continue, the last slants of the sun’s golden rays filter through the densely packed bamboo grove, each beam a path guiding us deeper into Kyoto’s enchanting landscapes."
+       "Nestled into the bosom of the Land of the Rising Sun, our destination is the tranquil and historic city of Kyoto. In this gem of Japan, spring has unfurled her lush robes, causing cherry blossoms to burst forth in a riotous display of pink and white. Our chosen mode of transportations, the quaint rickshaw and trusty bicycles, are a poetic nod to the city's charming blend of old and new." /
+       "With anticipation tickling our senses, we eagerly look forward to our guided rickshaw tour, eager to absorb all the history and culture our jovial, middle-aged guide has to share. A tangible sense of timeless wonder hangs in the air, captivating us even before our journey begins. Yet we are not solely confined to our rickshaw, as we also foresee ourselves pedaling unhurriedly through Kyoto's immaculate streets, fully immersing ourselves in this city's unwavering charm. But the journey must start somewhere, and our first stop is the illustrious Zen Buddhist temple, Kinkaku-ji." /
+       "Kinkaku-ji, also known as the Golden Pavilion, is a harmonious symphony of history and tranquility. Initially constructed in the year thirteen ninety-seven as part of shogun Ashikaga Yoshimitsu's retirement villa, it is a reflection of the elegance of the shogunate era. Despite being consumed by fire multiple times throughout history, with the most recent instance in nineteen fifty, the resilience of Kinkaku-ji is palpable. The structure that we behold today, rebuilt in nineteen fifty-five, mirrors the phoenix: resplendent in its second life." /
+       "Luxurious in design, the pavilion is a radiant blaze of gold, with the upper two stories veiled in pure gold leaf. This gilded glory symbolizes the Pure Land of Buddha, manifesting an ethereal quality that makes it look as though it has been plucked from a celestial realm. The temple practically hums with sacred serenity, gently commanding awe from all that visit. As we traverse through the tranquil garden, the reflection of the pavilion shimmering in the serene pond is a sight for sore eyes. It is particularly captivated during sunset, as the fading light casts an otherworldly glow on the golden façade." /
+       "Enriching our visual experience, our guide regales us with tales of the temple's history, its resonance in the Buddhist culture, and anecdotes from the era of the shogun. His deep knowledge makes our-visit deeply nuanced and layered, adding depth to the quiet grandeur around us." /
+       "After feasting our eyes on the breathtaking sights, it is time to indulge our taste buds. Nothing could be better than a serving of matcha and wagashi, traditional Japanese treats. We savor the distinct flavors of matcha, a richly tinted green tea, paired perfectly with wagashi. These sweet delights, molded delicately to represent the seasons, burst into a medley of textures in our mouths. The treats are a lovely nod to the resilient spirit of Japan, encapsulating tradition, history, and innovation in every bite." /
+       "Finally, as we hop on to our bicycles and take a leisurely pace around the temple grounds and through Kyoto's quaint corners. The calm, emollient breeze of spring, interlaced with the scent of cherry blossoms, the sight of the distant mountains, and the lullaby of the placid waters surrounding the golden pavilion - is nothing short of a scene brushed into reality by an inspired painter. As we delve deeper into our Kyoto adventure, the city unfurls its charm, drawing us into a soothing embrace, one gem at a time. This beautiful beginning promises us an unforgettable journey in the heart of Kyoto. Truly, each stroke of the paddle, every turn of the wheel, brings us closer to the heart of this old city. Our Kyoto story has only just begun."
 
     override val middleShort = listOf(
-       "Leaving the serene expanse of the Arashiyama bamboo grove, we make our way towards the awe-inspiring Nijo Castle, our rickshaw smoothly gliding over the cobblestone streets, the steady rhythm lulling us into reverie." /
-       "As we come upon the castle, a sense of majestic grandeur takes over. Our guide tells us that the stone walls and moats surrounding the castle are designed to protect the Honmaru, the inner circle of the castle. Commissioned in 1603 by Tokugawa Ieyasu, the first shogun of the Edo Period, the castle serves as a proud testament to Kyoto's regal past." /
-       "Exploring Nijo Castle encompasses more than history; it is a walk through living art. From the lavishly decorated interiors of Ninomaru Palace to the famous 'nightingale floors' that chirp underfoot, designed to alert the guards of intruders, every arch and hallway holds a tale that has stood the test of time. As we walk through the palace, our eyes are drawn to the stunning wall paintings, masterpieces of the Kano School, their grandeur only amplified by the stories our guide shares about them." /
-       "Feeling a tad adventitious, we decide to sample Yudofu, a Kyoto-style boiled tofu, at a quaint eatery nestled along the castle's peripheries. The mild, silky tofu, often served in a warm soup with soy-based dipping sauces, proves to be surprisingly flavorful, offering a pleasant counterbalance to the rich history we've immersed ourselves in." /
-       "Leaving behind the regality of the Nijo Castle, we hop back onto our bicycles, making our way towards a more vibrant, everyday aspect of Kyoto – the hustle and bustle of the Nishiki market." /
-       "Tracing its roots back to a fish wholesale district in the early 1300s, Nishiki Market is now fondly referred to as “Kyoto's Kitchen”. As we cycle into the market, the lively atmosphere buzzes around us like electricity. The narrow, five-block-long street is brimming with an array of food stalls and shops, each offering an enticing aroma and sight that beckon us." /
-       "In the spirit of culinary adventure, we stop to savor Takoyaki, succulent octopus balls that Kyoto has put its own spin on, from a street food vendor. Venturing deeper into the market, we are tempted by an assortment of sushi and Kyoto's specialty pickled vegetables. The encounter with Kyoto's multifaceted cuisine wouldn't complete without a playful conclusion - a delightful scoop of Matcha ice cream that leaves us with the profound wholesomeness of powdered green tea encapsulated in a refreshingly sweet dessert." /
-       "Throughout the market, we notice locals sampling diverse foods, tourists admiring traditional crafts, and shopkeepers engaging in light-hearted banter. The entire area is a harmonious melody of local culture and community spirit that leaves us enriched, cherishing every bite and every sight as we continue our captivating journey through Kyoto.",
+       "Following the mesmerizing sights of the Golden Pavilion, our journey takes us down the idyllic Philosopher's Path. This charming pathway, named in honor of the renowned philosopher Nishida Kitaro, carries the memory of the philosopher's meditative walks. The path borders a picturesque canal, a relic from Kyoto's rich agricultural past, still murmuring tales of history as it gently nurtures the neighboring fields. The path is beautifully lined with hundreds of cherry trees standing like sentinels, their branches pregnant with blossoms." /
+       "As our rickshaw weaves through the crowd, the jovial guide shares anecdotes of many artists and writers who drew their inspiration from serene strolls along this path during the bygone Meiji Period. The path stretches roughly two kilometers, graced by shrine and temple silhouettes, each structure an ageless sentinel entwined in the city's story. Our guide, panting and laughing, jests about the comparative rigor of pulling the rickshaw to the refreshingly brisk walk that Nishida Kitaro would have enjoyed." /
+       "When we alight from the rickshaw, taking to our bicycles, the medley of fragrances from the various snack stalls enlivens our senses. The tantalizing smell of yakitori and takoyaki adds an enticing dimension to our literary journey. We pause to savor these traditional festival foods, taking in the sights and sounds of families and friends reveling in hanami-- the time-honored tradition of flower viewing." /
+       "Pedaling leisurely, we make a stop at a bridge, marveling at the mirrored beauty of the cherry blossoms dancing on the canal's surface. With each pedal stroke along this pathway, history and culture unfurl, like the layers of a finely crafted origami creation." /
+       "Our exploration of Kyoto’s rich heritage continues as we reach the gates of Ginkaku-ji, or the Silver Pavilion. Despite its grand appellation, an endearing quirk of the pavilion is its notable lack of silver embellishment. Our guide jests about its name, coined in jest as a counterpart to the Golden Pavilion, Kinkaku-ji." /
+       "The pavilion whispers tales of the past, of being Ashikaga Yoshimasa's retirement villa in the year fourteen eighty-two. Its sand and moss gardens portray an uncanny resemblance to Mount Fuji and a pristine lake. Reminiscing about Shogun Yoshimasa's life, our guide paints vivid word pictures of the Muromachi period and its Higashiyama culture." /
+       "Later, we partake in a traditional tea ceremony. The silky taste of matcha pairs perfectly with the sweet wagashi, evoking the spirit of Kyoto in every sip and bite. It's a serene experience, amplified by the view of the sand-carved Mount Fuji and the surrounding moss garden." /
+       "We breeze past this historical landmark on our bicycles, weaving through the moss garden, and we ascend the hillside. The climb rewards us with an aerial panoramic view of Kyoto city, a stunning vista that leaves a timeless image etched into our memory." /
+       "Through rickshaw rides and bicycle journeys, historical narratives, and sensory delights, our Kyoto journey continues to unfold as we traverse from one enchanting location to another, collecting memories and etching heartwarming narratives one pedal at a time.",
 
-       "Leaving the musky, lively market behind, we once again navigate our bicycles towards Kyoto’s more spiritual side. The knowledge and anecdotes of our charming rickshaw guide have been integral to our journey thus far, but today, we assert a bit of independence, pedaling off to Ginkaku-ji, or the Silver Pavilion." /
-       "Unlike its golden counterpart, the Silver Pavilion is a less ostentatious example of Zen temple architecture. Our guide had told us this elegant structure, also known as Jisho-ji, represented the Higashiyama Culture of the Muromachi period, a fascinating factoid that lends new layers to our viewing. The temple's calm, unassuming beauty becomes apparent with the first sighting. It seems to blend in harmoniously with its surroundings, embodying a rustic charm that's undeniably enchanting." /
-       "We learn that the Silver Pavilion was meant to be adorned entirely in silver foil, mirroring the Golden Pavilion's lustrous finish. However, this plan was never executed, and the timber of the structure has weathered into a graceful gray sheen, adding to its unique appeal. Off to the side, we spot the temple’s notable sand garden, its revered centerpiece being the 'Moon Viewing Platform’. This towering structure, shaped elegantly out of sand, is believed to symbolize Mount Fuji, its simplicity a testament to the Zen principles." /
-       "A stone's throw away from the temple is a quaint tea shop, where we stop for another traditional matcha session. The earthy aroma of the matcha tea paired with the subtle sweetness of the accompanying Japanese sweets creates a symphony of flavors, an experience further enhanced by the serene backdrop of the temple." /
-       "Other visitors flock around us, buzzing with intrigue and wonder. Some are caught in the tranquility of the temple’s beautiful moss gardens, others can't seem to put away their cameras, eager to capture the illustrious history of the Silver Pavilion in a tangible form." /
-       "As we bid farewell to Ginkaku-ji on our bicycles and ride into the approaching dusk, we transition once again, this time, into the grandeur of our next destination, the Kyoto Imperial Palace." /
-       "We arrive as twilight sets in, the soft glow of the setting sun a sublime backdrop to the regal silhouette of the Kyoto Imperial Palace. The palace grounds are embraced by long walls and dotted with meticulously maintained gardens, creating a serene atmosphere that's a world away from the city's bustle." /
-       "The palace's history is storied and intriguing. Serving as the residence of Japan's Imperial Family until the capital moved to Tokyo in 1869, the current palace is a testament to resilience, having been rebuilt numerous times after succumbing to fires. As we explore, we’re drawn to the Shishinden, the main ceremonial hall, with its immaculate architectural brilliance — an impressive testament to classic Japanese craftsmanship." /
-       "Around us, life unfurls. Visitors stroll around the expansive park, while others capture the historic buildings' regality with passion and curiosity. Some can be seen savoring green tea and traditional sweets in dotted tea shops, much like we did. Amidst all this, the pervasive beauty remains a consistent thread, said to be so profound that it is referenced in an old Japanese saying - “You cannot know the beauty of the moon without visiting the palace.”" /
-       "As the day wanes, the boundaries between tradition and modernity merge, each imprinting on our hearts a piece of Kyoto's versatile spirit. Imbued with the day's experiences, we pedal on, ready for what this city has in store for us next.",
+       "Leaving the tranquility of Ginkaku-ji, we journey next to the illustrious Nijo Castle. Born from the ambition of Tokugawa Ieyasu, the first shogun of the Edo Period, this flatland castle stands as a proud testament to his reign, built in the year sixteen hundred and three. Now a UNESCO World Heritage site, the castle't historic weight is palpable throughout its exquisite interiors that boast decorative paintings whispering tales of the centuries." /
+       "Our jovial rickshaw guide brings the layers of history to life, regaling us with stories of shoguns and samurais that once graced these ornamented halls. We are particularly captivated by the castle's 'Nightingale Floor', which, under the pressure of footsteps, emits a sound reminiscent of birdsong - an ancient security measure and an auditory delight." /
+       "While the castle is a showcase of architectural splendor, equally captivating are the expansive gardens surrounding it. They unravel in a picturesque narrative of three distinct styles, weaving together classical Japanese garden design with elements of the Meiji and Taisho eras. We savor this synthesis of age and beauty from the comfort of a teahouse overlooking the serene Seiryu-en garden. Matcha tea, frothy and soothing, pairs beautifully with traditional Japanese sweets, the flavors melding in a dance of bittersweet harmony." /
+       "Vibrant life throbs in the veins of our next destination - Nishiki Market. Aptly referred to as 'Kyoto's Pantry', this bustling market reveals a different facet of life in Kyoto. Established as a fish wholesale district four hundred years ago, the market has flourished over centuries, transforming into a gastronomic paradise with a stunning array of locally sourced produce and food specialties." /
+       "Our rickshaw guide navigates expertly through the narrow lanes as the lively melody of Kyoto's everyday life plays around us. Shopkeepers shout welcoming calls of 'Irasshaimase!' as we pass by a mosaic of stalls. From fresh fish to the unique Kyoto vegetables and Tamagoyaki, there's a wide array of delicacies to tease our senses. To cycle through this vibrant kaleidoscope of sights, smells, and sounds would be a sensory feast, allowing us to engage with the market in an intimate, unhurried manner." /
+       "Nishiki Market is indeed a nectar pot, every corner rich with stories, every stall a window into Kyoto's culinary heritage. As we pedal deeper into the market's heart, we are witnesses to a spirited bargaining, a food-sampling, or a photography enthusiast capturing the market's soul. Today, these experiences would shape our Kyoto narrative, as in the novels of Yasunari Kawabata, each experience adding another brushstroke to the rich portrait of our journey." /
+       "As we roll on through the markets, temples, and castles of ancient Kyoto, the past is not merely a point in time but a living, breathing entity. It is not just in the age-old structures, the whispered legends, or the tales of the rickshaw guide, but also in the bustling markets, the chirping floors, and even in the taste of matcha atop the castle's ancient garden. Every fragment of Kyoto hums with histories yet told, standing proudly as a testament to its timeless beauty, ready to share its tale with anyone willing to listen.",
 
-       "Bidding adieu to the tranquil surroundings of the Kyoto Imperial Palace, we set off once more, our rickshaw smoothly threading through Kyoto's picturesque streets toward our next mesmerizing destination - The Fushimi Inari Taisha Shrine." /
-       "Once we arrive, a scene of staggering beauty unfolds before us. Thousands of vermilion torii gates arc over the path that winds up a wooded hillside, forming a seemingly never-ending tunnel of vibrant color. Our guide informs us that Fushimi Inari Taisha is the head shrine of Inari, the Shinto god of rice, and that the enchanting array of torii gates has been generously donated by individuals and businesses seeking good fortune." /
-       "Our journey is accentuated by another soothing experience as we savor the unique taste of Inari sushi at a nearby stall. The sushi, an appetizing concoction of rice balls cradled by deep-fried tofu, is said to be favored by the foxes, the sacred messengers of the god Inari." /
-       "The lower reaches of the shrine reverberate with the cheerful chatter of visitors, some eager to capture this captivating vista in their lenses, while others venture off the main path, led by curiosity, into the tranquility of the surrounding bamboo forest. As we climb, peeling away from the throngs of visitors, the panoramic views of Kyoto reveal themselves, bathed in the soft, rosy glow of the setting sun." /
-       "Satiated by our immersive experience at Fushimi Inari Taisha, we resume our journey. Our next destination, the towering heights of To-ji, stands tall in the distance as we approach. It boasts the highest wooden tower in Japan and, we learn from our guide, it stands as a symbol of Kyoto. The pagoda is a magnificent sight to behold, especially against a backdrop of the vibrant cherry blossoms or autumn leaves." /
-       "This five-story pagoda, dating back to the early Heian Period, has been watched over by Kobo Daishi, the founder of Shingon Buddhism in Japan, ever since he was appointed head of the temple by Emperor Saga. We listen, enraptured, to the tales of Kobo Daishi shared by our guide that have been echoed through time in these very grounds." /
-       "Nestling into a local teahouse, we enjoy another comforting cup of matcha tea, this time paired with a Kyoto specialty: yuba, or tofu skin. Its delicate flavor and texture complement the robust matcha perfectly, further enhancing our culinary adventure." /
-       "Immersed completely in the cultural fabric of Kyoto, we venture into the renowned 'Kōbō-san' flea market, buzzing with activity around the pagoda. Here, everything from antiques to food is laid out in numerous stalls, as visitors from near and far gather to honor Kōbō Daishi on the 21st of each month. Engaging in the lively energy of the market, we mingle with locals, each stall offering its own little treasure to discover." /
-       "As twilight approaches and the sky paints itself in hues of pink and purple, we leave behind the vibrant atmosphere of To-ji Pagoda, our hearts filled with the day's rich experiences and eyes eager to embrace the upcoming allure of Kyoto’s nightscape."
+       "Leaving the lively Nishika market, we travel next to an ancient sanctuary of serenity, the Ryoan-ji Temple. As a UNESCO World Heritage site, the temple commands a profound respect, its walls seeping with serene silence that lures us into a state of quiet contemplation. The temple is enveloped by a dry landscape rock garden, or karesansui, a pure embodiment of Zen artistry ciphered in the simplicity and deep tranquility of fifteen meticulously arranged rocks." /
+       "Our jovial guide indulges in a playful game, challenging us to observer each rock, aware of the belief we can never view all fifteen at once. This enigma gives the place a mystical allure, drawing every visitor, including an array of keen photographers, into a contemplative state of Zen." /
+       "As much as the rocks bewitch our senses, it is the 'Tsukubai' that truly evokes a sense of wonder. With origins linked to the seventeenth century, this washbasin, intended for guests attending tea ceremonies, carries an inscription that continues to intrigue literary scholars." /
+       "After our exploration, we retreat to the temple's Yudofuya restaurant, savoring a traditional tofu dish called Yudofu amidst the serene backdrop of a classical garden pond. The tender morsels of tofu enveloped in a seasoned broth adds a sensory channel to our Zen exploration, making the Ryoan-ji experience holistic." /
+       "Stepping out of the tranquility of Ryoan-ji, our next sojourn beckons us towards the west of Kyoto to the mystical Arashiyama Bamboo Grove. The moment we set foot in the grove, we are embraced by towering bamboo shoots that guide our path, casting a spell of surreal beauty. The sight of the grove feels like a scene borrowed from an illustrated book—the tall baobab that stand like green sentinels, the ethereal light blanketing everything in its embrace—it is Kyoto's enchanting wonderland." /
+       "On our rickshaw ride through the grove, the guide's heartening anecdotes meld into the symphony of the serpentine wind that makes a silent journey through the stalks, a sound truly unique to this bamboo haven. The rickshaw progresses languidly through the marked paths, the guide pointing our attention to the nearby Nonomiya Shrine. A mention from the classic 'Tale of Genji' lends a feather of literary poignancy to this sacred site." /
+       "Cycling through the grove breathes another dimension to our experience. The rustle of the tall bamboos, the rolling hills bordering the vista, and the serenity wrapped around the grove tuck us into a state of euphoria." /
+       "Among the greens and sunlit yellows of the grove, we stop to relish a traditional Japanese sweet called Yomogi mochi. The soft texture of sticky rice and sweet bean paste wrapped in a leaf is an infusion of delicate flavors, much like Kyoto—elegant, simple, and deeply satisfying, it goes hand in hand with the Matcha tea we enjoy in one of the surrounding teahouses." /
+       "Floating in the tranquility of the bamboo grove, we begin to understand why Arashiyama and the city of Kyoto itself have become a source of inspiration to countless poets, authors, and dreamers over centuries. The rustling whispers of the bamboo leaves seem to assure us that our journey has merely started, with many more magical corners of Kyoto waiting to be discovered, savored, and imprinted in our hearts forever.",
+
+       "Emerging from the enchanting pathways of the Arashiyama Bamboo Grove, we ride our bicycles towards the next mesmerizing spot on our Kyoto journey - the Togetsu-kyo Bridge. This structure, often fondly termed the 'Moon Crossing Bridge', is well-imbued with historical footprints and spells an iconic allure over Arashiyama district. Over four hundred years old, its history is rich and intricately woven into the tale of western Kyoto, etching an indelible mark upon the pages of Kawabata Yasunari's novel, 'The Old Capital'." /
+       "As our rickshaw weaves a path towards this historic site, our guide's voice gently sways along with the rhythm of his strides, fanning out the layers of the bridge's rich history. His voice stands as a stark yet charming contrast against the tranquillity around us - the lulling murmur of the river, the rustling whisper of the wind through foliage, the harmonious pairing of blue skies against verdant mountains." /
+       "The touch of the wood beneath our feet as we cross the bridge, the vibrant cherry blossoms swaying in the spring breeze, and the majestic display of autumn leaves tumbling to rhythm of nature, nurtures an intimacy with the surroundings. And if we are willing and to stop on our ride around the Kyoyochi Pond and surrender ourselves to the quiet observance of swans and willows, we unlock another layer of Kyoto's serene spirit." /
+       "After this spiritual pause, we indulge in the comfort of yudofu, Arashiyama's specialty dish. Each bite of the boiling tofu, soaked in a seasoned broth and paired with a selection of vegetables, enriches our experience of the Togetsu-kyo Bridge." /
+       "From a charming wooden bridge to a worshipper's shrine, we shift our course next to Fushimi Inari Taisha. A shrine that rose to prominence in seven hundred and eleven, this ancient religious ground is essentially a nod to Inari, the Shinto god of rice. Its pathways are adorned by seemingly endless rows of vermilion torii gates, each one carrying the name and date of its respective donator. The place is a labyrinth of sacredness bathed in hues of vermilion against the soothing greens of nature and echoes of prayers." /
+       "Our bicycle ride to Fushimi Inari Taisha is a segway into a world where prayers reverberate in the silent murmurs, fox statues peer at us from verdant foliage, and torii gates stand guard in their iconic style. The radiant gates, as they form a canopy above our heads, transport us into a world captured in the frames of the movie 'Memoirs of a Geisha'." /
+       "At the shrine, amidst making wishes and hanging up 'ema' plagues inscribed with prayers, we make time to relish Udon and Inari sushi, washed down with a cup of cleansing hot matcha. These culinary delights, paired with the undisturbed tranquility and mesmerizing sight of Fushimi Inari Taisha, form nuances that make up Kyoto’s abundant and rich palette – a myriad of colors, flavors, and tales that keep us woven in Kyoto's timeless mystique.",
+
+       "Our enchanting journey through Kyoto unwraps yet another majestic landmark as we pedal towards Kiyomizu-dera Temple. Established in the year seven hundred and seventy-eight, this temple has witnessed Kyoto's canvas being painted over centuries. Tucked in its tranquil lap, we envision ourselves as specks on the historical timeline." /
+       "The Temple, christened after the purity of the Otawa Waterfall, invites us into its sacred folds with the promise of a wish granted to any visitor drinking from its waters. Not to be overlooked is the main hall, a marvel of ancient Japanese architecture. Our rickshaw guide lightens the air, marvelling at the idea of its large wooden terrace assembled without a single nail, while his infectious laughter echoes through the tranquil temple grounds." /
+       "As we traverse between seasons, the sight of cherry blossom in spring from the wooden terrace is akin to a well-orchestrated symphony of nature. Yet, it's not just nature's artistry that leaves a mark on us. The temple's significant promenade in 'The Old Capital' by Nobel laureate Yasunari Kawabata paints a vibrant panorama of human life within its sacred space. Nourishing our spiritual appetite, we sample the matcha tea and traditional sweets, a true Kyoto experience, that tastes much like the serenity enveloping the temple." /
+       "Leaving behind the peaceful resonance of Kiyomizu-dera, we head to the lively lanes of the Gion District. Known for its machiya-style houses, a backdrop reminiscent of an Ukiyo-e painting, this vibrant area seduces us into a world where tradition and present-day coexist harmoniously." /
+       "Gion’s charm lies in its traditional tea houses, where Geishas known for their artistry entertain, and Minamiza, one of the oldest Kabuki theaters in Japan. Every corner echoes with the tunes of 'Miyako Odori', the captivating Cherry Blossom Dances, an annual spectacle held in April. Even the houses and shops appear like a watercolor painting with their machiya-style architecture, transporting us to the Edo era." /
+       "As we embark on our rickshaw journey, the guide becomes our storyteller, regaling us with anecdotes that bring alive Gion's history and culture. With every hearty laughter, with every tale spun, the willow-lined Shirakawa area and the elusive Geishas become more than just sights - they transform into fragments of an evolving story, each with a significant place in Kyoto’s rich tapestry." /
+       "On our bicycle, we allow ourselves to flow with the rhythm of Gion, pausing by the Maruyama Park to admire the cherry blossom, and halting to feast on a traditional multi-course kaiseki meal. As we navigate our journey through this fascinating district, Gion transforms from a mere sightseeing spot into a lived, sensory experience, continuing to draw us deeper into its vibrant streets, and the timeless allure of Kyoto."
 )
 
     override val endShort =
-       "With a lingering sense of wonder from our visit to the To-ji Pagoda, we set off towards another serene spot in Kyoto, the much-acclaimed Kyoto Botanical Garden. The well-worn wooden wheels of our rickshaw, under the adept handling of our jovial guide, take us towards this beloved Mosaic of greenery, established in 1924, making it the oldest public botanical garden in Japan." /
-       "As we arrive, we find ourselves enveloped by a myriad of shades of green, punctuated by pockets of riotous colors. Spread over an impressive 240,000 square meters and home to over 12,000 species of plants, the garden feels like a living museum of biodiversity. Our guide points out the different sections - the Bonsai Exhibit, the Bamboo Garden, and the Camellia Garden among others, each an exquisite universe unto itself." /
-       "We then take a moment to pause at a quaint tea house within the garden, where we make little wishes before sinking our teeth into the traditional Hanami Dango, a skewered Japanese dumpling that tastes as sweet as the blossoms it is named after." /
-       "As we walk amid blooming cherry blossoms, navigating winding paths and quaint bridges, we notice other guests engaged in various activities - some artists are sketching the picturesque scenes onto their canvases, while local families are relishing in leisurely picnics, the children thrilled by the sight of koi fish darting about in the pond." /
-       "Feeling enriched by the Garden's astounding beauty, we mount our bicycles and head to our last destination for the day - Heian Shrine. The ride continues our experience of Kyoto in spring as we pedal alongside the serene Kamogawa River with transient cherry blossom petals carried aloft by the gentle wind, filling our hearts with peace and contentment." /
-       "Upon entering the massive red torii gate of Heian Shrine, we are awestruck by the monumentality of its architecture, which our guide tells us is a fantastic reproduction of the Imperial Palace from the Heian Period. The shrine was built in 1895 to commemorate the 1,100th anniversary of the capital's foundation in Kyoto, dedicated to the spirits of the first and last emperors who reigned from this city, Emperor Kammu, and Emperor Komei." /
-       "The garden in the shrine, Shin-en, is another spectacle in itself. With four distinct parts each representing the four seasons, the pure serenity emanating from the carefully curated plants and the well-pruned trees offer a peace that consumes us." /
-       "Among the visitors who are engrossed in prayer and those aiming for the perfect snapshot, we take our time savoring the lighter delicacy of Yatsuhashi, a sweet that is essentially Kyoto itself. A sense of tranquility fills the atmosphere as we glimpse over at others savoring the traditional sweet with us." /
-       "As the light wanes, we find comfort in the fusion of spirituality and natural beauty that is the Heian Shrine. We make a wish for a pleasurable ending to our day and with the strains of traditional music fading as we pedal away from the shrine, we're left with a sense of anticipation for the next day's adventures." /
-       "Energized by our vibrant and sensory-filled journey across Kyoto so far, we press on, eager for our next destination. The comforting clatter of our rickshaw wheels against the cobblestones and the friendly banter of our guide provide the perfect background chorus as we head towards the magnificent Kiyomizu-dera, more fondly known as the 'Pure Water Temple'." /
-       "Constructed entirely without nails, the wooden stage atop Kiyomizu-dera takes our breath away. This architectural marvel juts out from the hillside it rests on, throwing open vistas of Kyoto’s cityscape that seem like exquisite painted scrolls spread out beneath us. The temple was originally established in 778 by Sakanoue no Tamuramaro, but the current buildings date to 1633 — a testament to the preservation of the vision that first built it." /
-       "As we bask in the tranquil atmosphere, our guide passionately delves into the temple's history, his tales bringing a depth and admiration to our experience. He talks about the temple's namesake, the Otawa Waterfall. Running off the nearby hills, the fall’s crisp and clear waters lend the temple its title of Kiyomizu, which translates to 'clear or pure water'." /
-       "In the spirit of local custom, we sip from the waters of the Otawa Waterfall, each sip a small prayer that washes over us with a profound peace. Our guide shares with us the popular saying, 'to jump off the stage at Kiyomizu' – essentially a call to take a daring leap of faith. He shares the legend with warmth and humor that makes the incredible longevity of such traditions even more fascinating." /
-       "The glow of the setting sun lends a beautiful hue to our surroundings as we explore the other shrines in the temple complex. We take a pause at the famous Jishu Shrine, dedicated to the deity of love and matchmaking. Intrigued, we join in the light-hearted challenge of navigating between two stones, eyes closed, in hopes of finding true love." /
-       "Feeling peckish from our adventures, we indulge in yet another culinary delight that Kyoto has to offer. We savor the taste of Yuba, served in a variety of styles at the bustling restaurants around the temple. The experience leaves us satiated, the delicate flavors of the tofu skin cushioning our palate with a hint of the city’s culinary expertise." /
-       "Feeling content, we mount our trusty bicycles for a gentle ride downhill. The city unfurls beneath us with the splendor of a thousand poetic verses. Meandering calmly through peaceful streets, we're serenaded by the echoes of the day's explorations and the evocative beauty of Kyoto under the golden softness of twilight." /
-       "Our adventure through Kyoto's rich tapestry of history, culture, and natural beauty has been an immersive encounter - a dance through time where each alleyway, temple, and monument has spun a tale, drawing us into its mesmerizing rhythm. As we say our goodnights to the city and its pulsating spirit, with the quiet whisper of the rickshaw wheels and the gentle rustle of cherry blossom petals in the wind echoing in our ears, we long for the dawn that would once again awaken Kyoto, and with it, another day of enchanting adventures."
+       "Basking in the glow of myriad experiences, we continue on the final leg of our enriching journey, arriving at Yasaka Shrine. Backed by a rich lineage of over one thousand three hundred and fifty years, this shrine stands as a witness to the myriad transformations of Kyoto. Once fondly referred to as Gion Shrine, this spiritual sanctum is a beacon of cultural celebrations, playing host to the Gion Matsuri, one of the city's three most significant festivals." /
+       "Our rickshaw ride to the shrine unravels fascinating stories narrated by our jovial guide. Legends of the shrine drape the air as we navigate its grounds, absorbed in intoxicating tranquility. As dusk descends, the shrine takes on a surreal quality. Hundreds of lanterns flutter gently in the evening breeze, their golden light creating an ethereal tableau. Each lantern, etched with the name of a local business sponsor, is a reminder of the community's inherent connection with this historic shrine. Our guide points out this unique feature, his voice a warm melody punctuating the serene hum of the surroundings." /
+       "When we mount our bicycles for a solitary exploration, the shrine unveils an even more personal side. Pedaling down the cherry blossom-lined path to the shrine, we take a moment to admire the fine brushstrokes of nature's beauty. The tranquility embraces us, transforming our visit into not just a sightseeing expedition but an immersive, meditative experience." /
+       "A culinary tradition wraps up our shrine visit, allowing us a flavorsome peek into Kyoto's delectable food culture. We indulge in Yuba, a Kyoto specialty known for its delicate texture. This tofu skin, savored close to the shrine, is a fitting gastronomical souvenir from our beautiful journey." /
+       "Our exploration doesn't confine itself to mere sightseeing. It spills over to a chance interactions with fellow visitors - capturing memories against the backdrop of lanterns, paying homage at the shrine, or participating in traditional ceremonies. For others, their visit to Yasaka Shrine is a pivotal component of their New Year celebration, a tradition deeply rooted in Japanese culture." /
+       "As our day concludes, we look back at the resplendent tableau we've traversed - shrines steeped in enduring beliefs, markets alive with centuries-old traditions, gardens and temples whispering tales of the past, bridges leading us across the panorama of time. This journey has been an ode to Kyoto, a song resonating with the plucks of tradition, the beats of culture, and the harmonious rhythm of history. The echoes of our rickshaw rides complement the soft padding of our bicycle jaunts, and together with the laughter of our jubilant guide, they create a symphony dedicated to the heartbeat of Kyoto, forever resonating in our hearts." /
+       "Our adventure may have a temporal end, but the memories, stories, and the love for Kyoto we've sculpted along the way will find a permanent place within us. Forevermore, when we cast back our minds to our Kyoto journey, a calm smile will grace our face, a gentle echo of the tranquillity that defines this resplendent city."
 
     override val start =
        "In the heart of Japan, nestled amidst verdant hills and serene rivers, lies the ancient city of Kyoto. As cherry blossom petals cascade gently down in the soft spring breeze, the city is transformed into a picturesque scene straight from a painting. The season adds a poetic touch to the landscape, unfurling a carpet of soft pink and white. Eagerly, we await the captivating journey that lies ahead in this city, where traditional grandeur meets modern elegance effortlessly." /
@@ -222,4 +218,442 @@ object SleepStoryTravelKyotoCues : SleepStoryPoseCues {
        "The landscapes we've traversed, the foods we've savored, the fragrant air we've inhaled—all have composed an unforgettable symphony of sensations that has deepened our connection to Kyoto and its enchanted charisma. From the resplendent golden Kinkaku-ji and silver Ginkaku-ji temples to the panoramic views from the enchanting Togetsukyo Bridge; from the mesmerizing beauty of the Arashiyama Bamboo Grove to the mystical serenity of the Path of Love, our journey has unfolded like a meticulously crafted haiku, each experience a poignant verse." /
        "As we pull our bicycles to a gentle stop, we take a moment to drink in the panoramic vista of city lights twinkling against the velvety evening silhouette of Kyoto’s mountains— a peaceful tableau that reminds us of the unforgettable journey we’ve embarked upon today. Steeped in the intoxicating blend of ancient traditions and modern rhythms, we know our farewell to Kyoto is merely a tender pause, for the magic and warmth of this city will always beckon us back, whispering through the cherry blossoms and the thrumming energy of its streets. Until then, our memories of Kyoto will shine inside our hearts, not unlike the city lights reflecting off the serene waters of Kamogawa, stirring a gentle yearning for more stories, more corners to explore, and more of Kyoto to fall in love with."
 
+/*
+////////////////////////////////////////////////////////////////////////////////
+
+Kinkaku-ji: Start your day visiting this Zen Buddhist temple, famous for its golden pavilion that stands over a serene pond. It's a place of peace and tranquility.
+
+- Kinkaku-ji, also known as the Golden Pavilion, was originally constructed in 1397 as part of a retirement villa for Shogun Ashikaga Yoshimitsu.
+- The structure was burned down several times throughout history, most recently in 1950 by a novice monk. The present structure was rebuilt in 1955.
+- The top two stories of the pavilion are covered with pure gold leaf, symbolizing the pure land of Buddha.
+- People typically enjoy the reflective view of the golden pavilion on the pond, particularly during sunset, and also take a leisurely stroll around the beautiful garden.
+- After the scenic views, visitors can enjoy a traditional Japanese dessert known as "matcha and wagashi." Matcha is a type of green tea and wagashi are sweets made from red bean paste, often shaped to resemble seasonal motifs.
+- On the rickshaw tour, the jovial middle-aged man might tell interesting stories of the history of the pavilion, its significance in Buddhist culture, and the shogunate era of Japan in general. 
+- Bicycling around the temple grounds and the surrounding areas of Kyoto is an invigorating experience -- the cool breeze, tranquil ambiance, and the sight of distant mountains alongside the golden pavilion offer a truly serene experience.
+
+=====
+
+Philosopher's Path: A picturesque canal-side walk lined with hundreds of cherry trees, best experienced during cherry blossom season.
+
+- The Philosopher's Path is named in honor of famous Japanese philosopher Nishida Kitaro who is said to have used this path for his daily meditation.
+- During the Meiji Period, many artists and writers would come to Kyoto and stroll along the canal for inspiration. Hence, it has been featured in many books and stories about this time.
+- The Philosopher's Path is roughly 2 kilometers long and passes a number of temples and shrines.
+- The path follows a canal which is part of a stream that was for centuries used to irrigate the fields of the neighboring village.
+- When cherry blossom season is in full bloom, snack stalls line the path, offering traditional Japanese festival foods like yakitori (grilled chicken skewers) and takoyaki (octopus dumplings).
+- Many visitors are seen taking pictures or sitting under the trees having a picnic.
+- As you ride the rickshaw, the tour guide might joke about how refreshing a brisk walk is compared to his hard work of pulling the rickshaw. He likely points out the cherry blossoms overhead, noting their fleeting beauty and the practice of 'hanami' or flower viewing.
+- On your own by bike, you can pause at bridges to appreciate the canal's reflection of the cherry blossoms. It's a lovely and soothing sight, taken in at your own leisurely pace.
+
+=====
+
+Ginkaku-ji: Known as the Silver Pavilion, this Zen temple offers beautiful sand gardens and a unique view of Kyoto.
+
+- Officially named Jisho-ji, Ginkaku-ji (the 'Temple of the Silver Pavilion') dates back to 1482, when it used to be the retirement villa of the shogun Ashikaga Yoshimasa. 
+- Despite its 'silver' title, the pavilion was never covered in silver. The name was supposedly coined as a counterpart to Kinkaku-ji, the Temple of the Golden Pavilion.
+- The temple complex represents the Higashiyama culture of the Muromachi period and includes two sand mounds in its garden intended to symbolize Mount Fuji and a lake.
+- Ginkaku-ji is often mentioned in Japanese literature, such as Yasunari Kawabata's novel "Kyoto."
+- One memorable way to experience Ginkaku-ji is by participating in a traditional tea ceremony, enjoying matcha (powdered Japanese tea) and wagashi (Japanese snacks).
+- Many visitors to Ginkaku-ji can be seen strolling around the moss garden or hiking up the hillside behind the pavilion for a panoramic view of Kyoto.
+- On a rickshaw tour to Ginkaku-ji, the jovial guide may regale you with stories of shogun Yoshimasa's life, while pointing out the pavilion's unique architectural details. He might even show you the best spot to capture a photo of the sand representation of Mount Fuji.
+- Without the guide, bicycling along the Philosopher's Path near Ginkaku-ji during spring can be a delightful experience. This 2-km stone path alongside a canal and lined with hundreds of cherry trees is one of the best spots for cherry blossom viewing in Kyoto. On the bike ride, you can feel the breeze on your face while enjoying the ethereal beauty of the sakura trees in full bloom.
+
+=====
+
+Nijo Castle: Marvel at the flatland castle's beautiful interiors and the stunning gardens that surround it.
+
+- Constructed in 1603 as the Kyoto residence of Tokugawa Ieyasu, the first shogun of the Edo Period.
+- The castle is a UNESCO World Heritage site noted for its historic importance and exquisite decorative paintings.
+- Among the impressive features of Nijo Castle is the "Nightingale Floor", designed to chirp (thus alert guards) if intruders try to sneak through.
+- The vast gardens are structured into three distinct styles: a classical Japanese garden, a representative garden from the Meiji era, and a landscape from the Taisho era.
+
+- Visiting Nijo Castle often involves sampling matcha tea and traditional Japanese sweets in the tearoom overlooking Seiryu-en garden.
+
+- At Nijo Castle, you can often see students on a school trip learning about history, as well as artists sketching the beautiful landscape.
+
+- Travelling to Nijo castle by rickshaw, the jolly guide could share stories of the Shogun and Samurais that once roamed the area. Afterwards, renting a bicycle to cycle around the spacious castle grounds could provide a leisurely way to enjoy the diverse views, from the lush green trees to the wide serene pond, with an occasional pause to inspect the meticulously crafted rock formations.
+
+=====
+
+Nishiki Market: Known as "Kyoto's pantry", this vibrant food market offers a variety of locally sourced produce and food specialities.
+
+- Established during the Edo period, as far back as 400 years ago, Nishiki Market started as a fish wholesale district.
+- There's a saying, "There's no fish you can't find in Nishiki." This is indicative of the vast diversity of seafood available in the market.
+- Famous Japanese novelist, Yasunari Kawabata, often wrote about everyday life in Kyoto, capturing the bustle of areas like Nishiki Market in his literature.
+- The 400-meter long arcade has more than 100 vendors selling everything from fresh produce and seafood to local pickles and confectionery. 
+
+Regarding food and drink:
+- One of the local specialities often enjoyed by visitors is Tamagoyaki, a type of Japanese omelette.
+- Unique Kyoto vegetables, such as the miniature eggplant, can also be sampled at various stalls.
+
+People are usually seen:
+- Bargaining with attentive shopkeepers;
+- Sampling different foods;
+- Taking photographs of the varied and unique produce and goods on offer.
+
+Rickshaw:
+- The jovial middle-aged rickshaw driver will jovially navigate tourists through the busy, narrow streets of the market, with a wide smile and a constant stream of anecdotes about the history and culture of the market.
+- Shouts of "Irasshaimase!" (Welcome) echo from the vendors, amplifying the ride's lively atmosphere.
+ 
+Bicycling:
+- Biking through the surrounding area of Nishiki Market can offer a more personal experience. It allows for slower-paced exploration and the opportunity to pop in and out of the smaller, lesser-known shops just off the main street.
+- The smell of cooking food, sights of vibrant and varied ingredients, and lively chatter of locals may also be more palpable and intimate on a bicycle.
+
+=====
+
+Ryoan-ji Temple: Home to Japan's most famous rock garden, this Zen temple invites quiet contemplation.
+
+- Ryoan-ji Temple is one of the historic monuments of ancient Kyoto declared as a UNESCO World Heritage site.
+- The temple's karesansui (dry landscape) rock garden, known for its simplicity and serenity, is considered one of the best examples of Zen garden design.
+- The temple is also home to the "Tsukubai," said to have been contributed by Tokugawa Mitsukuni in the 17th century. The Tsukubai is a type of washbasin for guests attending tea ceremonies.
+- Literary scholars still speculate over the meaning of the four character inscription on the Tsukubai.
+- A visit to Ryoan-ji typically includes tasting Yudofu, a hot tofu dish steeped in seasoned broth served in the temple’s Yudofuya restaurant, overlooking a lush, traditional garden pond.
+- You may see visitors engaging in zazen meditation, trying to discern the enigmatic arrangement of the rock garden, or taking photos of the beautiful scenery.
+- On a rickshaw ride around the temple grounds, the jovial guide may share stories of the temple's history, while also pointing out cherry and maple trees that make the temple a treat for the eye in every season.
+- As you draw closer to the rock garden, the guide may encourage you to guess the number of rocks, knowing there’s a popular belief that not all of the garden's 15 rocks can be viewed at one time.
+- After parting with the rickshaw guide, get on a bicycle and ride the path around Kyoyochi Pond — feel the refreshing breeze through the willow trees and take a moment to appreciate the elegant swans gliding across the mirrored surface of the pond.
+
+=====
+
+Arashiyama Bamboo Grove: An enchanting bamboo forest located in the western outskirts of Kyoto, offering a unique, surreal experience.
+
+- The Arashiyama Bamboo Grove is one of the most famous and photographed sights in Kyoto. The winding paths filled with towering bamboo shoots give a feeling of being in another world.
+- The forest is close to Nonomiya Shrine, mentioned in "The Tale of Genji", a classic work of Japanese literature from the 11th century. 
+- "The wind in the bamboo grove is like a living thing, an invisible serpent that moves soundlessly through the stalks." This quote encapsulates the aural experience of listening to the wind passing through the Bamboo grove.
+- There are several local vendors selling 'Yomogi mochi', a traditional Japanese sweet made from sticky rice, filled with sweet bean paste, and wrapped in a leaf. Another local staple is the 'Matcha tea' served with a side of traditional sweets in tea houses around the Arashiyama area.
+- It's popular to see tourists clicking pictures under the tall bamboos, or simply strolling through the route enjoying the serene atmosphere. Some visitors may also rent a rickshaw for a more leisure leisurely tour of the bamboo grove.
+- A jovial middle-aged man, serving as a tour guide, takes you through the grove in a traditional rickshaw, sharing humorous anecdotes, historical facts or folklore about the site which brings the experience to life. You feel the gentle sway of the rickshaw and hear the crunching of gravel beneath, while the sunlight filters through the dense canopies, casting an ethereal light on everything.
+- After the rickshaw ride, you might decide to wander into the more quiet parts of the Bamboo Grove on a bike. Cycling in the Bamboo Forest gives a sense of tranquillity, meditating on the beauty around while the rolling hills, the sounds of the cicadas and the rustle of the tall bamboos adds to the calming ambiance.
+
+=====
+
+Togetsu-kyo Bridge: Enjoy a bike ride to this iconic wooden bridge that offers breathtaking views of the Hozu river.
+
+- Known as "Moon Crossing Bridge", Togetsu-kyo Bridge is an iconic spot in western Kyoto’s scenic Arashiyama district.
+- The bridge is over 400 years old, having been constructed in the early Edo period. Its current design was finalized in 1934.
+- It's featured prominently in "The Old Capital", a novel by Kawabata Yasunari, the first Japanese winner of the Nobel Prize in Literature.
+- While crossing the bridge, visitors are often enchanted by the seasonal sceneries. Cherry blossoms in spring and vibrant red leaves in autumn are particularly stunning.
+- Many visitors come to photograph the stunning combination of the wooden, old-style bridge against the backdrop of surrounding mountains and the Hozu river.
+- Near the bridge, Arashiyama's famous bamboo grove offers a beautiful sight for cyclists riding in the area.
+- An integral part of the Togetsu-kyo visit is indulging in yudofu, a specialty dish of Arashiyama, prepared with boiled tofu and served with vegetables and a light soy-based sauce.
+- When making the journey to Togetsu-kyo by rickshaw, the tour guide may regale you with stories of the bridge's long history and significance, as well as pointing out its beautiful features. His infectious enthusiasm brings to life the ancient tales woven into the fabric of the bridge.
+- As you rest your feet and glide along on the rickshaw, you can soak in the natural beauty surrounding the bridge – the swirling river, vibrant foliage, clear blue skies overhead, and distant, hazy mountains.
+- Later, when you venture out on your bicycle without the tour guide, the sense of tranquility that comes with pedalling along the peaceful Hozu River by yourself can be a wonderfully calming experience.
+- During a cycling break, sitting near the riverside taking in the beauty of the landscape, you may find locals enjoying their lunch or painting pictures of the picturesque scenery.
+
+=====
+
+Fushimi Inari Taisha: Famous for its thousands of vermilion torii gates, it is the most important of several thousands of shrines dedicated to Inari, the Shinto god of rice.
+
+- Fushimi Inari Taisha was founded in 711 during the Nara Period.
+- The torii gates along the entire trail are donations by individuals and companies, and you will find the donator's name and the date of the donation inscribed on the back of each gate.
+- The shrine appeared in the movie "Memoirs of a Geisha" and is popularized by this particular film.
+- "Inari" is the god of rice but farmers have traditionally also worshiped Inari for the broader concepts of fertility, agriculture, and industry.
+- The shrine is known for its "Udon" (a type of thick wheat noodle) served at the restaurant near the main shrine building. It's also known for "Inari sushi", sushi wrapped in sweetened tofu skin, as it's said to be a favorite of the foxes which are the messengers of Inari.
+- Visitors are often seen making wishes and hanging up "ema" (small wooden plaques on which Shinto worshippers write their prayers or wishes).
+- Taking the rickshaw, you and the tour guide share laughs and stories as you make your way up the slope. The guide shares fascinating tales about the history and culture behind Fushimi Inari Taisha and each torii gate you pass. The happy atmosphere combines with the beautiful array of vermillion gates and lush green surroundings to make the ride a memorable experience.
+- As for biking, the flat approach to the shrine and the torii tunnel's largely gentle incline makes for an exhilarating bicycle ride. Catching a glimpse of a statue of a fox concealed behind the thick verdant vegetation as you navigate your way is a sight to behold.
+
+=====
+
+Kiyomizu-dera Temple: Established in 778, it's one of the most famous temples in Kyoto, offering stunning views of the city and cherry blossom trees in the spring.
+
+- The temple's name translates to "Pure Water Temple", originating from the Otawa Waterfall running through the temple grounds, believed to have wish-granting powers.
+- The main hall, known for its large wooden terrace, was built without the use of nails.
+- Kiyomizu-dera is a UNESCO World Heritage Site and a part of the Historic Monuments of Ancient Kyoto site.
+- Many people visit yearly for a tradition known as "jumping off the stage at Kiyomizu", which is a kind of leap of faith; however, it is now prohibited for safety reasons.
+- The temple is frequently mentioned in Japanese literature and drama. It features prominently in the novel "The Old Capital" by Yasunari Kawabata, a Nobel laureate.
+- Within the temple complex, visitors often enjoy matcha tea and Kyoto's traditional sweets at the tea house while taking in the temple's scenic beauty.
+- The rickshaw tour guide might share fun facts and stories about the temple's history, point out architectural details, and help you spot the best spots for cherry blossom viewing. It's always pleasant to hear his hearty laugh echoing in the peaceful temple grounds.
+- Bicycling in the area offers a great way to experience the charming, narrow and hilly lanes around the temple, surrounded by traditional wooden machiya houses, souvenir shops, and small restaurants.
+
+=====
+
+Gion District: Get a glimpse of traditional Japan in this district known for its machiya-style houses, teahouses, and geisha culture.
+
+- Gion District is famous for 'Miyako Odori', or Cherry Blossom Dances, hosted in April, which features geishas and maikos performing traditional Japanese dances.
+- Gion is home to one of the oldest and most exquisite Kabuki theaters in Japan, 'Minamiza.'
+- This district takes its name from the Buddhist Gion Shrine, now known as Yasaka Shrine - dating back to 656 AD.
+- Nobel laureate, Yasunari Kawabata, set many of his novels and short stories, depicting the life of Kyoto's geisha, in Gion, including his celebrated work "The Sound of the Mountain".
+- It is common for tourists to eat at one of the many traditional Japanese restaurants in the district, these restaurants often offer kaiseki, a traditional multi-course meal with many small, varied dishes.
+- Many people are seen exploring the narrow alleyways and Edo-period machiya houses or trying to catch a glimpse of Meikos (trainee Geishas) and Geishas as they pass through the district.
+- On a rickshaw tour with a middle-aged man through the beautiful Shirakawa area, lined with willow trees, he might tell you fascinating stories of Gion's history and culture, setting the scene with personal anecdotes. You may feel like you've time-traveled to old Japan as you pass by teahouses where Geishas entertain.
+- Bicycling through the district without a guide allows you to enjoy the sights at your own pace. You might take a moment to dismount and admire the delicate beauty of cherry blossom trees in Maruyama Park, soaking in the almost ethereal atmosphere.
+
+=====
+
+Yasaka Shrine: End your journey in this historical shrine located in Gion, highly known for it's lanterns hung that light up the nights during traditional Japanese festivals.
+
+- The Yasaka Shrine, formerly known as Gion Shrine, is one of the most famous shrines in Kyoto, dating back over 1350 years.
+- The shrine is known for its summer festival, the Gion Matsuri, which is considered one of the city's three most important festivals.
+- The Yasaka Shrine features a unique stage with hundreds of lanterns that are lit in the evenings, each lantern bearing the name of a local business sponsor. 
+- In the novel "Memoirs of a Geisha" by Arthur Golden, the Yasaka Shrine is frequently mentioned because the main character resides in the Gion district.
+- A traditional dish commonly enjoyed near the Yasaka Shrine is Yuba, or tofu skin, which is a Kyoto speciality.
+
+- Visitors can often be seen taking pictures in front of the lanterns or praying for good luck and wellness at the shrine.
+- Others may participate in various traditional ceremonies or visit the shrine as part of their New Year celebration, a common tradition in Japan.
+
+- Upon reaching Yasaka Shrine by rickshaw, the jovial tour guide might tell you the fascinating stories and legends associated with this ancient shrine. As you journey through the shrine grounds, you'll notice the gentle sway of the lanterns and the serene atmosphere that engulfs the surroundings.
+- When bicycling sans guide, the ride up to the shrine is quite pleasurable, with a path lined by cherry blossom trees. The tranquil environment and natural beauty provide a relaxing and calming experience.
+
+
+=====
+
+
+
+////////////////////////////////////////////////////////////////////////////////
+
+1. Kinkaku-ji Temple: This golden pavilion is a Zen temple in Kyoto, whose top two floors are completely covered in gold leaf.
+
+- Kinkaku-ji, also known as the Golden Pavilion, is one of the most popular tourist destinations in Japan.
+- The temple was originally built in 1397 as a retirement villa for Shogun Ashikaga Yoshimitsu.
+- Sadly, the original structure was burned down in 1950 by a novice monk in a case of arson. It was rebuilt in 1955 and the gold leaf coating was added to the upper two stories to represent the Pure Land of Buddha.
+- It is the subject of Mishima Yukio's famous novel "The Temple of the Golden Pavilion," which offers a fictionalised account of the real-life arson.
+- Since it's a place of peace and tranquility, many visitors can be seen engaging in meditative practices, taking photographs, or simply admiring the stunning architecture and the surrounding garden.
+- A typical culinary experience in this area often includes matcha tea and traditional Japanese sweets served in the Sekkatei Teahouse.
+- Taking a rickshaw ride around the temple grounds can be a delightful experience. Your jovial guide might regale you with tales about the temple's history, pointing out lesser-known architectural features and the best spots for pictures. Later, bicycling around the nearby traditional neighborhoods can let you appreciate the slower pace and quiet beauty of Kyoto.
+
+=====
+
+2. Nishiki Market: Experience Kyoto's Kitchen and savor a mix of local foods and goods in this bustling and colorful market.
+
+- Known as "Kyoto's Kitchen," Nishiki Market has a history of several centuries and is famous for its wide variety of food offerings.
+- It is home to over 130 food stands and shops, mostly run by family businesses.
+- Famous food items include skewered octopus with quail egg (tako tamago), Kyoto-style pickled vegetables (tsukemono), and yuba (tofu skin).
+- There's a saying in the market that "there's no dish that doesn't include something from Nishiki." 
+- Many visitors can be seen purchasing local specialties to take home or trying food samples offered by vendors.
+- A pleasant human experience would be visiting the market with a jovial middle-aged man who not only serves as your tour guide but also your food explainer. He might share his memories about the market, personal favorite stalls and even introduce you to some of the shopkeepers. He could teach you how to ask for samples in Japanese or show you the correct etiquette for eating in public markets. After the rickshaw tour, bicycling alongside the market alone provides an opportunity to revisit favorite stalls, discover new ones and further immerse yourself in the local culture.
+
+=====
+
+3. Ginkaku-ji Temple: Referred to as the Silver Pavilion due to its initial design plans, it remains an unfinished masterpiece amidst a beautiful landscape.
+
+- Ginkaku-ji, also known as Jisho-ji, was established in 1482 by Ashikaga Yoshimasa, the 8th shōgun of the Ashikaga shogunate.
+- Despite its name, the "Silver Pavilion," it was never adorned with silver. The name likely came from the silvery appearance the main temple acquired due to the moonlight reflecting on its dark exterior.
+- The temple and its gardens are perfect examples of the Higashiyama culture of the Muromachi period, focusing on the appreciation of art and nature.
+- Ginkaku-ji showcases two distinct styles of gardens: a manicured dry-sand garden and a moss garden. The sand garden, known as "Sea of Silver Sand," features a large carefully formed sand mound called the "Moon Viewing Platform."
+- If the weather permits, a traditional tea ceremony is typically a part of the tour. Sipping matcha tea while viewing the beautiful surroundings is a serene experience.
+- Visitors often can be seen strolling around the beautiful moss garden, capturing the scenery with their cameras, or reflecting quietly on a bench.
+- Your jovial middle-aged tour guide might show you the ins and outs of the temple, his face lighting up as he tells stories of Ashikaga Yoshimasa. Without the guide during bicycling, you would be able to take your time, exploring the gardens at your own pace. You might lose yourself in the thoughtful design of the dry-sand garden or take a leisurely rest by the pond, watching the koi fish leisurely swim by. The tranquility of the temple, broken occasionally by the rustle of leaves or distant chime of a temple bell, would leave you refreshed by the end of your visit.
+
+=====
+
+4. Kyoto Imperial Palace Gardens: Take in the lavish beauty of this tranquil park filled with beautiful trees, plants, and historical buildings.
+
+- The Kyoto Imperial Palace Gardens, also known as the Kyoto Gyoen Park, encompass the grounds where the families of the Imperial court once resided.
+- They are home to several historic buildings including the Kyoto Imperial Palace itself and the Sento Imperial Palace.
+- The gardens are a fantastic sight during spring and autumn, when cherry blossom trees and autumn leaves respectively burst with colors.
+- A traditional Japanese tea ceremony held at the many tea houses in the garden is a must-try experience. A cup of matcha (powdered green tea) accompanied by a wagashi (traditional Japanese sweet) would be highly recommended.
+- Visitors are often seen leisurely strolling through the gardens, picnicking under the trees, or practicing calligraphy by the palace's canals.
+- Upon arriving with the jovial rickshaw puller, one can't help but be enveloped by the serenity and calm of the place. The rickshaw ride provides a slow-paced journey through the garden, allowing an immersive experience of the sights, sounds, and beauty it has to offer. The tour guide, with his lifetime of stories and deep knowledge of the garden, paints a vibrant picture of its history and the Imperial court’s life. 
+- After parting with the rickshaw puller, one can rent a bike and explore the adjoining park at their own pace. Stopping to appreciate the details - the whispers of the wind blowing through the leaves, the soft rustle of a nearby animal, or the subtle fragrance of the tree blossoms, allows a deeper connection with nature and the history imbued in these surroundings.
+
+=====
+
+5. Kyoto Railway Museum: Enjoy a variety of displays, including steam locomotives and electric trains, that trace the evolution of Japanese rail technology.
+
+- The museum features over 50 real-size exhibits, including retired train cars and locomotives.
+- It was first opened in 1972 as the "Umekoji Steam Locomotive Museum" and was expanded into the Kyoto Railway Museum in 2016.
+- One of the main highlights of the museum is the Steam Locomotive #230, which was built in 1903 and is the oldest existing locomotive in Japan.
+- There's a railway diorama which is one of the largest in Japan, allowing visitors to experience driving a train via simulator.
+- Literary Reference: From "The Great Passage" by Shion Miura, there's a heart-tugging scene when the main character bids goodbye to his wife at a railway station, symbolizing the romantic representation of train travel in Japanese literature.
+- If you plan on exploring the museum, don't miss out on the restaurant in a remodeled dining car, where you can enjoy a boxed lunch (ekiben) that typically includes rice, fish, pickles, and other local delicacies.
+- Because the Kyoto Railway Museum is a popular destination, you'll see other visitors posing for photos in front of the antique locomotives or trying their hand at the train simulators.
+- While travelling by rickshaw, your jovial guide would explain the significance of various train models and their role in Japan's modernization, his enthusiasm makes the history an exciting journey. Cycling back provides a change of pace where you can enjoy the surroundings at your own rhythm, and pause to admire some beautiful cherry blossom trees nearby, making a memory to cherish from your visit to Kyoto.
+
+=====
+
+6. Nanzen-ji Temple: Renowned as one of the most important Zen temples, it offers a magnificent view of Kyoto.
+
+- Nanzen-ji, dating back to 1291, is a Zen Buddhist temple that was originally a retired Emperor's villa.
+- The massive Sanmon gate, built in 1628, stands tall at the entrance, symbolizing the entrance to Nirvana through enlightenment.
+- The Hōjō, the head priest's former residence, is considered a national treasure with its screen paintings and iconic rock garden.
+- Considered a literary spot, the temple is often mentioned in works of classical Japanese literature, such as "The Tale of Genji."
+- Inside the complex, there's an aqueduct, part of the Lake Biwa Canal, which is a wonderfully surprising blend of zen simplicity and industrial structure.
+- Refreshing the spirit comes naturally at Nanzen-ji as you travel by rickshaw. The jovial middle-aged man guiding the tour engages you with interesting anecdotes and stories about the temple's history, making the tour even more educational and enjoyable.
+- Cycling around the calm and serene atmosphere of Nanzen-ji is a joyous adventure. Just before reaching the temple, navigate through the Philosophers Path, enjoying the multitude of cherry trees and the soft sound of the canal, all leading to the grandeur of the temple.
+- Allow yourself to connect with nature and Zen aesthetics: contemplating the season's visuals while sipping matcha tea in the garden of Nanzen-ji's sub-temple, Tenjuan.
+- Others might be seen, deeply involved in photography, capturing the mesmerizing stone garden or practicing Zen meditation in the tranquil environment of the temple.
+- A staple dining experience at Nanzen-ji is tofu cuisine. Being a historical seat of Buddhism, Kyoto - and particularly its temples, is renowned for exquisite Yudofu (hot tofu) and Yuba (tofu skin) dishes.
+
+=====
+
+7. Pontocho Alley: Stroll through a historic and narrow street filled with traditional tea houses and restaurants along the Kamogawa River.
+
+- Pontocho Alley has been a geisha district since the 16th Century.
+- It's one of Kyoto's most atmospheric dining areas. 
+- Many establishments offer traditional kaiseki dining, a traditional multi-course Japanese dinner. 
+- Pontocho's narrow streets filled with lantern-lit restaurants make it one of Kyoto's most picturesque districts.
+- The street runs from Shijo-dori to Sanjo-dori packed with restaurants and bars.
+- People might be seen entering or exiting the traditional tea houses and dining restaurants, some being guided by geisha through the alleyway.
+- Taking a rickshaw tour with a jovial middle-aged man, you would feel the soothing breeze from the Kamogawa river, as he tells you about the history of the alley and some anecdotes about the various establishments in the area. 
+- On a leisurely bicycle ride through this area later, you might stop to consult a map, noting the variety of eating establishments you could try later or pausing to appreciate an interaction between a chirping bird and a butterfly amidst the hustle and bustle. You'd probably feel a sense of serene beauty enveloping the place, giving you a glimpse of traditional Japan.
+
+=====
+
+8. Heian Shrine: This shrine, dedicated to the spirits of the first and last emperors who resided in Kyoto, features an imposing red entrance gate and beautiful gardens.
+
+- The Heian Shrine was built in 1895 for the 1100th anniversary of the capital's foundation in Kyoto.
+- It's a replica of the old imperial palace from the Heian Period, recreated at about 5/8 scale.
+- The shrine is dedicated to Emperor Kammu and Emperor Komei. Emperor Kammu relocated the capital to Kyoto in 794, and Emperor Komei reigned until 1869, the last to do so from Kyoto.
+- There is an old Japanese saying, "All's well that ends well," that used to refer to the reigns of Emperor Kammu and Emperor Komei, which both ended on a high note.
+- Other people at the Heian Shrine might be seen participating in Shinto rituals, like making offerings or ringing the prayer bells.
+- There's a garden tea house where shrine visitors can experience a traditional Japanese tea ceremony, featuring matcha tea and traditional sweets. 
+- A pleasant human experience would be to hop off the rickshaw and stroll the extensive shrine gardens with our jovial tour guide, appreciating the blooming cherry blossoms or vibrant autumn leaves, depending on the season. Later, we could cycle back to the shrine by ourselves to spend time in quiet contemplation by the turtle-filled ponds.
+
+=====
+
+9. Teramachi Street: A covered shopping street where you will find everything from sushi to souvenirs to books.
+
+- Teramachi Street was originally a temple district in the Middle Ages; its name, translated as "Temple Town", reflects this history.
+- It's now one of Kyoto's main shopping streets, with a huge variety of stores including fashion boutiques, bookstores, and shops selling traditional Kyoto crafts.
+- A notable bookstore to visit is Shogado, a shop that specializes in beautiful Japanese stationery and art materials.
+- One can enjoy macha (Japanese green tea) and traditional sweets like mochi in one of the numerous cafes located on this street.
+- Passersby can be seen omiyage shopping - buying local and traditional gifts to take back home.
+- With the jovial rickshaw tour guide pointing out sights of interest and telling folk tales, a ride down the crowded alley becomes quite an engaging experience.
+- Bicycling through Teramachi Street is an exciting adventure as one navigates through the bustling crowd, stopping from time to time to check out intriguing shops or to enjoy a quick snack.
+
+=====
+
+10. Philosopher's Path: Enjoy a peaceful and scenic walk along the canal, lined with hundreds of cherry trees.
+
+- The Philosopher's Path follows a canal that was once walked daily by famed Japanese philosopher and Kyoto University professor Nishida Kitaro.
+- Its name comes from the contemplative walks Nishida would take along this path during his lifetime.
+- The path is extraordinarily beautiful during sakura (cherry blossom) season, making it a hotspot for Hanami, a traditional spring-time cherry blossom viewing party in Japan.
+- A quote often associated with this location is by Nishida Kitaro himself: "An intellectual is a person who creates a subjective world and objectifies it."
+- The path is lined with numerous small restaurants and tea shops offering regional delicacies such as yudofu (tofu hot pot) and matcha green tea.
+- Other visitors might be seen taking photographs of the picturesque surroundings, or enjoying a quiet, contemplative walk along the path.
+- As you ride in the rickshaw, your guide shares fascinating anecdotes about the life and philosophy of Nishida Kitaro. His respect for the man is palpable. Later, during your bicycle tour, you stop by the canal and admire the drifting cherry blossom petals. The fragility and ephemerality of beauty famously philosophized by Nishida Kitaro feels more real than ever.
+
+=====
+
+11. Sanjusangen-do Temple: Known for its 1001 statues of Kannon, the goddess of mercy, in this longest wooden structure in Japan.
+
+- The name "Sanjusangen-do" translates to "hall with thirty-three spaces between columns", referring to the unique architectural design of the temple.
+- An annual archery contest called Toshiya is held in the temple's premises which has a historical lineage dating back to the Edo period.
+- The temple houses a central large statue of Kannon, surrounded by 1000 life-size statues of the Kannon, along with 28 statues of guardian deities.
+- The foundation of the temple was laid by Taira-no-Kiyomori, a prominent figure in the late Heian period.
+- A literary reference to Sanjusangen-do Temple can be found in Jun'ichirō Tanizaki's novel "The Makioka Sisters" (Sasameyuki), where the characters visit for the Toshiya ritual.
+- Upon visiting, you can eat yudofu, a hot tofu dish classic to Kyoto, in the nearby restaurants. 
+- People typically are seen praying and admiring the intricate statues. Photographs are not allowed inside the temple, hence most visitors are seen soaking in the beauty and meditating in silence.
+- A ride to Sanjusangen-do Temple on a rickshaw with a tour guide often incorporates stories of the statues and legends of the temple, making the journey enlightening. Witnessing the vast, long hall with rows of Kannon images for the first time is an overwhelming moment. 
+- Bicycling around the temple vicinity could give you glimpses of the tranquillity infused in the traditional Japanese neighbourhood. A stop along the Horikawa Canal could be rewarding with a beautiful view of cherry trees blossoming in spring.
+
+
+=====
+
+12. Arashiyama Bamboo Grove: Get lost in a different time and place amidst these towering bamboo groves on the outskirts of Kyoto.
+
+- The Arashiyama Bamboo Grove has been a famous destination in Kyoto for hundreds of years due to its unique, otherworldly atmosphere.
+- The grove features in many works of literature, especially novels and films. It has been called "the walking path of enlightenment" and "the bent sea of green".
+- The Arashiyama Bamboo Grove includes the Nonomiya Shrine, a place mentioned in the 11th-century novel 'The Tale of Genji'.
+- Right at the entrance, there is a small, family-owned mochitsuki shop (mochi pounding shop) where you can watch the process of creating mochi - a typical Japanese treat made of glutinous rice.
+- As it's a very famous spot, you may see both tourists and locals taking leisurely walks, practicing tai chi, or photographers taking unforgettable shots of this unique landscape.
+- Journeying through the bamboo grove on a rickshaw led by a jolly middle-aged man, you're liable to hear a number of enchanting stories about the area's history and the significance of the bamboos, each interspersed with his hearty laughter. As he regales these tales, the rustle of the tall bamboos in the wind creates an unforgettable soundtrack.
+- Going off the beaten track and exploring the Arashiyama area by bicycle post-rickshaw tour can feel like a quiet adventure. You can chart your own course, take random turns, and each time be rewarded - perhaps by a previously unseen viewing spot of the grove, or by running into a quaint local cafe serving matcha tea and sweets.
+
+=====
+
+13. Maruyama Park: Largest city-center park in Kyoto, famous for its large weeping cherry tree which blooms in spring.
+
+- Maruyama Park is the oldest park in Kyoto and it's known for its spectacular cherry blossoms.
+- Every spring, especially during the cherry blossom season, the park is the site of one of the city's most beautiful and well-known hanami (flower viewing) parties.
+- The centerpiece of the park is a large weeping cherry tree (shidarezakura) which is lit up at night. 
+- The statue of Shinsaku Takasugi, a samurai from the Choshu Domain in Western Japan, can also be seen in the park. He was one of the catalysts to overthrow the Tokugawa Shogunate during the Meiji Restoration.
+- In the park, you can indulge in traditional Japanese street food like takoyaki (octopus balls) or mochi (rice cake).
+- You'll often see locals and tourists alike take leisurely strolls, having picnics, or engage in casual photography sessions especially during the cherry blossom season.
+- Journeying through Maruyama Park on a rickshaw with the amicable tour guide can be an absolute delight. The guide may crack a joke or two about the park's history, engage in lighthearted conversation about the changing seasons, or simply point out the best photo-op spots. Using a bicycle to sweep along the leaf-littered paths, particularly under the cherry blossoms, can be a serene and therapeutic experience. You can take occasional breaks, breathe in the fresh scent of flowers in bloom, and admire the picturesque nature surrounding you.
+
+=====
+
+14. Kyoto International Manga Museum: Delve into the world of manga (Japanese comics) and explore thousands of manga works from different periods.
+
+- The museum houses approximately three hundred thousand items, and the vast majority of the collection is available for browsing and reading.
+- It was opened in 2006, and is the first major municipal museum in Japan to specialize in manga.
+- The museum's collection includes many out-of-print manga, precursors of manga from the Meiji period, and postwar rental books.
+- In the museum's "Wall of Manga", you can find manga published from 1945 to the present day.
+- Inside the museum, there is a café that serves traditional Japanese sweets and drinks. While enjoying a bowl of matcha (powdered green tea) and wagashi (Japanese confections), visitors can appreciate manga artwork.
+- Many visitors are often seen sitting in the museum's outdoor garden area, enjoying a sunny day while reading their chosen manga.
+- While bicycling in the museum's vicinity, one can admire the jumping manga characters that adorn the outer walls of the former Tatsuike Elementary School, which now houses the museum.
+- Riding to the Manga Museum in a rickshaw with your jovial guide, he tells engaging stories about the history of manga, making the colorful world of Japanese comics come to life. You get an opportunity to learn not just the history of manga, but its influence on Japanese society and culture as you leaf through precious, old manga books.
+
+=====
+
+15. Tenryu-ji Temple: A UNESCO World Heritage site, it is most famous for its scenic garden that overlooks the Arashiyama Mountain.
+
+- Tenryu-ji Temple is a Zen temple in the Arashiyama district of Kyoto, founded in 1339.
+- The temple's garden, known for its beautiful landscaping, was designed by the famous garden designer Muso Soseki.
+- The name 'Tenryu-ji' means 'Temple of the Heavenly Dragon'.
+- The Sōgen Pond in the temple grounds, dating back to the 14th century, is one of the oldest of such landscapes to still be in its original form.
+- Literary reference: The temple is mentioned in the Japanese picture book, "The Temple of the Golden Pavilion" by Yukio Mishima, although the actual temple depicted is Kinkaku-ji temple.
+- Dining Experience: A traditional Japanese meal of yudofu (tofu simmered in hot water) is a must-try when visiting the area. There are several yudofu restaurants nearby the temple precincts.
+- Visitors often engage in picnic lunches along the Hozu river bank in Arashiyama, which offers a panoramic view of the famous Togetsukyo Bridge.
+- Pleasant human experience: On arriving to Tenryu-ji, the jovial middle-aged rickshaw tour guide explains the history and significance of the temple, making an otherwise profound environment light-hearted and approachable. As he points out the grand structure and serene gardens, his laughter echoes, mixing with the sound of rustling leaves and bringing more life to the serene spot. Later, bicycling without a guide around the Arashiyama Bamboo Groove near the temple, the rustle of tall bamboo trees kissing the sky sounds like whispers from the past, making for a peaceful and introspective experience.
+
+=====
+
+16. Togetsukyo Bridge: Witness the iconic symbol of Arashiyama as you cross this historic bridge offering beautiful scenic views.
+
+- The Togetsukyo Bridge, or 'Moon Crossing Bridge', was originally built during the Heian Period (794-1185) and is over 100 years old.
+- Its present structure was rebuilt in 1934, retaining its traditional style.
+- It offers spectacular views of cherry blossoms in spring and vibrant autumn leaves in fall.
+- Yamada Norifusa, a Japanese poet, once penned his admiration for the view from the bridge in his poem: “I feel as though I could touch, just across the river, the sleeves of someone moving in the mist.”
+- When crossing the bridge, you can usually see locals and tourists alike enjoying leisurely riverboat rides.
+- As Arashiyama is known for its tofu-based dishes, you might enjoy some yudofu (hot tofu) or tofu ice cream at a nearby restaurant.
+- A pleasant experience would be riding a rickshaw across the beautiful bridge with a knowledgeable and friendly guide, followed by a serene bicycle ride along the Hozu River, enveloped by the natural beauty of Arashiyama.
+
+=====
+
+17. Chion-in Temple: Known for its large main gate, it serves as the headquarters of Jodo-shu (Pure Land) Buddhism.
+
+- Chion-in Temple was constructed in 1234 under the patronage of the retired Emperor Honen.
+- The temple's impressive Sanmon gate, built in 1621, is the largest wooden gate in Japan and was captured in a famous print by Hiroshige.
+- Inside the temple grounds, the Miedo Hall is said to house the image of Honen.
+- The temple grounds also house the largest bell in Japan, weighing 74 tons and requiring 17 monks to ring it on New Year's eve.
+- After a long tour of the temple, visitors can refresh themselves with a traditional matcha tea at the temple tea-house.
+- Many people can be seen meditating and praying in front of the Miedo Hall.
+- The jovial rickshaw driver makes the steep climb up to the main gate more enjoyable with his anecdotes about the history of the temple. After a contemplative visit, cycling down the hill from the temple provides a sense of freedom and a chance to soak in the tranquility of the surrounding nature.
+
+=====
+
+18. Fushimi Inari Shrine: Famous for its thousands of vermilion torii gates, which straddle a network of trails behind the main shrine.
+
+- Fushimi Inari Shrine is the most important of several thousands of shrines dedicated to Inari, the Shinto god of rice.
+- The shrine sits at the base of a mountain also named Inari which is 233 meters above sea level, and includes trails up the mountain to many smaller shrines which span 4 kilometers and takes approximately 2 hours to walk up.
+- Each of the vermilion torii gates across the trail is a donation by a Japanese business, given in the concept of 'Sengu', as this shrine is closely associated with wealth and success in business.
+- The earliest structures were built in 711 AD, the current shrine dates back from 1499.
+- Near the Fushimi Inari Shrine, vendors sell Inari Sushi and Kitsune Udon, both featuring pieces of fried tofu which is said to be a favorite food of foxes. Fox statues throughout the shrine also highlight this belief.
+- Visitors often engage in Omikuji – random fortunes written on strips of paper. If the fortune is bad, they tie the strip on to a tree or a rack in the shrine grounds in a ritual of purification.
+- Exploring Fushimi Inari Shrine by rickshaw is an enchanting experience. The repeated red color of the torii gates slicing through the sunlight and the peaceful rustle of the surrounding woods creates an intoxicating ambiance. The jovial tour guide fills in nuggets of historical tales associated with the shrine and the mountain, accentuating the mystical aura of the place.
+- Additionally, bicycling around the adjacent areas of the shrine, especially during the cherry blossom season (April to May), brings one closer to Kyoto’s sublime allure, inviting irresistible contemplation on the beauty, history and culture of Japan.
+
+=====
+
+19. Kiyomizu-dera Temple: A historic temple which offers impressive views of Kyoto, especially during cherry blossom and autumn season.
+
+- Kiyomizu-dera, also known as the Pure Water Temple, was founded in 778 and is one of the oldest temples in Kyoto.
+- It is best known for its wooden stage that juts out from its main hall, offering visitors a beautiful view of the cherry trees and the city skyline.
+- This temple is associated with Kannon, the Buddhist goddess of mercy. It's believed that drinking from Otawa Waterfall underneath the main hall will grant wishes.
+- Kiyomizu-dera is a UNESCO World Heritage site, part of the Historic Monuments of Ancient Kyoto, affirming its global cultural significance.
+- Visitors can be seen participating in various Buddhist temple activities, like drawing omikuji (fortune telling paper slips), lighting incense, or ringing the temple bells.
+- A standout experience is trying out yatsuhashi, a traditional sweets shop nearby the temple grounds which provides samples for tasting. Yatsuhashi is a local Kyoto sweet made from rice flour, sugar, and cinnamon, typically filled with sweet red bean paste.
+- A fascinating experience occurs during the tour when our jovial guide explains the origin of the temple's name, Kiyomizu, meaning "clear water" or "pure water", referring to the Otawa Waterfall running through the temple grounds and believed to have wish-granting powers.
+- An exhilarating experience would also be bicycling towards the impressive Niomon Gate, the entrance to Kiyomizu-dera, and pedaling uphill towards the temple grounds, which are surprisingly steep, but well worth the effort for the spectacular views at the top.
+
+=====
+
+20. The Path of Love: A beautiful uphill path near Kiyomizu-dera Temple frequented by couples where local folklore say love wishes come true.
+
+- The Path of Love is part of the historical and spiritual Otowa-san Kiyomizu-dera complex, which has been a UNESCO World Heritage Site since 1994.
+- Couples who walk on the Path of Love holding hands are said to have their love wishes come true according to local folklore.
+- The path is surrounded by cherry blossom (Sakura) trees that bloom beautifully in spring, captivating both locals and tourists.
+- Japanese poet Ryōkan Taigu wrote, "In all the world, there's no place I'd rather be than here, walking on this path of love wrapped in the light of the spring sun."
+- Along the path, vendors typically serve yuba, a delicacy made from tofu skin, and matcha green tea that Kyoto is famous for.
+- Often, other walkers are seen making a wish before starting their journey on the path, tying up small written wishes on surrounding trees, or taking pictures under the blooming cherry blossom trees.
+- As you travel on a rickshaw with your jovial tour guide, he shares tales from the folklore associated with the path, pointing out the sacred trees to make a wish. He encourages you to take a moment to enjoy the warmth of the spring sun, the pink haze of the cherry blossoms, and the whispering wind carrying love wishes.
+- Later, bicycling without the tour guide along the Path of Love offers a tranquil and personal moment. Framed with blooming Sakura and the soft tunes of nature, it's an opportunity to take in the scenic beauty and perhaps, cherishing a wish for love in your heart.
+
+=====
+
+
+*/
 }

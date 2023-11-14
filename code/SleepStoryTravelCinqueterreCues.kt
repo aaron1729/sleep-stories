@@ -1,62 +1,61 @@
-// this code is generated from the story files cinqueterre_2023-11-10_23-15-53_short.txt and cinqueterre_2023-11-10_00-41-50_long.txt
-// min_stops is set to 1
+// this code is generated from the story files cinqueterre_2023-11-14_00-11-59_short.txt and cinqueterre_2023-11-10_00-41-50_long.txt.
+// the stops with tidbits that were the user prompts for these stories are copied at the bottom as comments -- first those for the short story, then those for the long story -- separated by a bunch of slashes.
+// min_stops_for_long_story is set to 1.
 
 package com.downdogapp.cue
 
 object SleepStoryTravelCinqueterreCues : SleepStoryPoseCues {
 
     override val startShort =
-       "As spring adorns Cinque Terre, Italy with vibrant hues and a balmy atmosphere, your adventure awaits in this mesmerizing coastal region. Known for its sheer beauty and rustic allure, Cinque Terre is a beckoning palette of color and culture perched on the rugged cliffs of the Italian Riviera. Brilliant sunlight bathes the terraced olive groves and vineyards as endless cerulean skies promise perfect weather. As sea breezes delicately ruffle your hair, you can already envision the picturesque boat rides and tranquil hiking trails that will illuminate Cinque Terre's secrets one by one. Today, you stand on the threshold of an unforgettable journey imbued with Italia's distinct charm." /
-       "Our guide, a jovial local full of tall tales and little quirks, leads us to our first stop: the bustling La Spezia Harbor. A hub of commerce and history, it lies in wait for us like an open book; each boat, market stall and echoing seagull cry a verse in a poetic saga spanning centuries. Originating from the Roman era and developed under the guidance of the Republic of Genoa, the harbor murmurs stories of Italian Renaissance when it served as a crucial maritime base." /
-       "Presently, the harbor embodies a fusion of its historical heritage and modern significance as an Italian military and commercial harbor. Walls that have witnessed rapid transformation hem in the throbbing life within. Fishing boats dance upon the lapping sea, their colors dancing in the sunlight as they anticipate a day's fruitful catch." /
-       "As we step aboard our sightseeing vessel, the salty tang of the sea is punctuated with the mouthwatering aroma of 'Mussel soup alla Spezzina' wafting from the harbor's cozy eateries. Laughter bubbles from the open-air bistros, where locals and tourists alike bond over their tender seafood treats and the convivial charm unique to this corner of the world." /
-       "On all sides, a lively canvas unfolds. Seafarers go about their daily rituals, casting nets into the undulating depths with a skill borne of years at sea. Sightseers dot the vibrant scene, pointing out the distant horizon where the sky stoops to kiss the azure waves or simply immersed in the comforting rhythm of the harbor life." /
-       "From our vantage point on the boat, La Spezia Harbor reminds us all of the unbroken link between the past and the present, the land and sea, the people and their culture. Each wave that brushes against our boat whispers promises of the natural and cultural troves that lie ahead, waiting to be embraced and explored as we embark on our enchanting escapade through Cinque Terre." /
-       "As we pull away from the exhilarating bustle of La Spezia Harbor, our boat gently sidles up to our next grand spectacle - the Torre Aurora. This 16th-century watchtower imperiously surveys the merging neighborhoods of Monterosso Vecchio and Fegina and whispers stories of a time fraught with Saracen invasions. Named 'Aurora', the harbinger of dawn, the tower gleams gloriously against the morning sun." /
-       "A small hiking trail snakes its way to the top of the tower. Few ventures are as rewarding as ascending these craggy steps, the air ripe with the scent of Mediterranean flora. As we slowly approach the peak, the view unfurls into a vast panorama of shimmering sea, prolific vineyards, and the quaint village houses huddled together. The dramatic beauty of this scene, amplified by the gentle lull of the waves below, captivates many a visitor, their cameras clicking fervently to freeze this moment in time." /
-       "Anchoring our boat by the tower, we let the sea breeze guide us to a hidden surprise - a restaurant nestled comfortably at the base of Torre Aurora. Laughter and lively chatter bubble from its open-air terrace. As we savor the local seafood pasta, a pleasant fusion of savors, the view of the village's pastel hues reflected in the serene sea offers an unmatched dining experience." /
-       "Our leisurely boat trip draws to a close, and now, embracing the land, we are ready to take on the famed trekking route from Monterosso to Vernazza. This 3.5-kilometer trail presents a serene journey amid flourishing Mediterranean greens. The landscape is stippled with terraced vineyards, the silver-green sheen of olive trees, and the bright specks of local wildflowers. Occasionally, we encounter local farmers, their sun-bronzed faces alight with honest smiles, as they preserve an age-old tradition of terracing and wine-making." /
-       "As we weave our way through these vine-clad slopes, the path dramatically unfolds a picturesque panorama of Vernazza right before we descend into its welcome embrace. Once in the village, we replenish ourselves with 'Acciughe all’olio di oliva' in rustic trattorias, swapping stories with fellow travelers over shared tables." /
-       "Boarding our return boat, we glance back at the trail that winds its way across the vertiginous slopes - a woven tapestry of memorable experiences. We mingle and laugh with fellow explorers, exchanging tales of our hike and charting the memories we will cherish from this irreplaceable experience in Cinque Terre. We're already looking forward to our next sightseeing adventure!"
+       "After a peaceful, refreshing winter, spring has arrived in the alluring region of Cinque Terre, Italy. A temperate Mediterranean sun drapes delicate warmth over the ancient villages while spring flowers bloom with vibrant cheer, all but promising an unforgettable journey in this idyllic corner of the world. We look forward to our leisurely travels, both by boat and on foot. The anticipation is palpable, as we imagine the boat lapping gently against the azure waves as we navigate around the cliffs, taking in the panoramic views. And then, there are the ancient trails to traverse, feeling the crunch of gravel underfoot, breathing in the fragrant sea air and ensuring our senses a feast of experiences. Our hearts pound with a gentle expectant rhythm; our Cinque Terre adventure is about to begin." /
+       "Our sightseeing journey unfolds on the famed Via dell'Amore, popularly known as the Love's Path. An inviting trail linking the charming villages of Riomaggiore and Manarola, it has served as a symbolic meeting point and gathering place for villagers, and especially young lovers, earning its romantic name. Its history traces back to the early twentieth century when it was carved into the cliffside to aid railway construction. However, similar to strong relationships challenged by time, this path too has faced its own trials, notably a landslide in two thousand and twelve that led to its brief closure." /
+       "Like the characters from Jess Walter's enchanting novel 'Beautiful Ruins', we too are about to embark on our own captivating journey of love and discovery along this trail. As we hike and explore, we can almost feel the author's words come alive in the chirping of the birds, rustle of the leaves, the gentle waves seen from afar, and the whispers of the wind." /
+       "As typical tradition marks, we come across a railing, adorned by love locks from countless lovers who have walked here before. Interwoven in iron and metal, these locks are declarations of love and commitment, each couple's signature sealed upon the breathtakingly beautiful canvas of Cinque Terre, symbolizing their unending love. As we place our own lock among the countless others, we feel part of timeless tradition stretching back years." /
+       "If hunger strikes along our journey, relief comes in the form of a dainty, colorful vendor cart selling delectable gelato. The soothing Italian accent of the vendor and the cool, sweet taste of the gelato on our tongues inject a dash of joy into our picturesque journey." /
+       "As we undertake this hike, the pleasure of buying a ticket from a gently smiling Italian in a small, cozy booth along the path makes this more than just an ordinary trek. Their warm and welcoming demeanor, their sincere well-wishes, and their twinkling eyes reflecting the endless sea, all make us feel right at home in this remote corner of Italy." /
+       "All throughout our journey, the relaxation of a boat trip and the invigorating experience of a hike unfold side by side. As we move further along the trail, we are continuously greeted by the soothing lullaby of the sea, the birds singing their harmonious song, and the exquisitely fragrant Mediterranean flora. The sea sparkles beneath the spring sun, casting a mesmerizing glow that gracefully dances upon the rippling water, turning our hike into a sensory celebration, making it a journey truly worthy of its time-honored name—Love's Path."
 
     override val middleShort = listOf(
-       "Having refueled and shared stories in the rustic tavern, we make our way leisurely towards the Vernazza Harbor. Renowned for its tranquillity and quintessential Mediterranean charm, the colorful little harbor gently cradles fishing boats bobbing in its sleepy wake. This picture-perfect fishing port, one of the five gems of the Cinque Terre region, welcomes us with a quiet flair, its bright houses peppered on the surrounding cliffs like confetti." /
-       "Dominating the harbor view stands the Doria Castle, a silent guardian echoing tales of ancient battles waged against pirates. Curiosity piqued, we saunter to the harbor wall, known as the Molo. Sitting here, with the Mediterranean sun kissing our skin, and observing the fishermen engaged in their daily ballet with the sea, is an experience that marries simplicity with profound serenity." /
-       "Whetted by the sight of the fresh catch, we find ourselves drawn towards the tantalizing aroma of fresh local anchovies, perfuming the harbor air. We settle in for a quintessential Cinque Terre dining affair: anchovies delicately served on a platter, drizzled with fresh lemon juice or preserved in rich olive oil. The tasting notes of the local white wine perfectly complement the dish, painting a culinary masterpiece on our palates." /
-       "Our leisurely repast is followed by a delightful exploration of the charming village. We walk around, soaking in the laid-back vibe of the harbor, perhaps taking a dip in the crystal-clear beach waters. The hike amidst olive groves of the Cinque Terre, with friendly locals sharing riveting stories of their land, furthers enriches our sensory sojourn." /
-       "Rejuvenated by our harbor escapade, we're ready to ascend to the iconic Castello Doria. As we lace up our hiking boots, anticipation spurs our strides towards the 11th-century watchtower. Serving historically as the village's defensive fortification against pirate invasions, the castle now courts explorers with its historic charm and panoramic vistas." /
-       "Navigating the ancient castle ruins, we find ourselves captivated by the broad strokes of the Ligurian Sea and Vernazza village painted across the horizon. The viewing platform at the top of the tall circular tower generously rewards photographers and nature-enthusiasts alike with stunning frames awash with the soft tints of the setting sun." /
-       "The sea breeze around the castle carries the scrumptious scent of 'fritto misto', a medley of fried sea fish and seafood. Our Cinque Terra gourmet experience is further enriched sipping the local Ligurian wine, with the breathtaking view as the perfect accompaniment." /
-       "The day's final adventure finds us haggling with local artisans, their vibrant wares dotting the area around the castle. Whether securing a charming souvenir or an original piece of artwork, these interactions deepen our appreciation of the local culture, infusing our journey with an authentic flavor of Cinque Terra life. With every pleasant encounter and newfound tidbit, we cannot wait to discover what other delights Cinque Terre holds in store for us amid its winding trails and undulating waves.",
+       "From the Via dell'Amore, our journey leads us towards the mesmerizing Grotta Byron, a sea cavern named after the British poet Lord Byron. Known for its deep, turquoise water, this cavern bears the memory of the poet's meditations during his stay in Portovenere, transforming it into a romantic haunt of the poets in the nineteenth century. We make our way to the cavern on a gentle boat ride, allowing us to admire the rocky formations of Palmaria Island, a proud UNESCO World Heritage site." /
+       "As the boat gracefully glides on the sea's surface, the cavern emerges in all its sublime beauty. Its remarkable acoustics amplify the resonating echo of the lapping waves, while the sunlight scatters on the water's surface, revealing mesmerizing shades of turquoise. The cavern's ethereal beauty makes it a favorite subject for keen photographers, who capture its grandeur with fervor. The setting sun adds a magical element to our experience, brilliantly coloring the water with hues of gold and crimson. It's a mesmerizing masterpiece that nature paints, forever casting a spell of its charm on us." /
+       "Our escapade continues with the quintessential Italian experience of dining in a seaside trattoria, where we relish the local seafood pasta under a transitioning sky. Each bite is a sensory delight, the traditional recipe an enticing medley of fresh, local ingredients. As we raise a toast to this beautiful day, the dusk gracefully turns into a star-studded night." /
+       "Now, our next destination is the medieval fortress of Castello Doria, perched high above Vernazza. A stronghold conceived in the eleventh century, this is among the oldest surviving fortifications in Cinque Terre. The castle has served not only as a military outpost but also as a refuge during attacks, surviving notable invasions by pirates. Today, a symbol of resilience stands tall against the azure sky, its past steeped in centuries of history." /
+       "We satisfy our gastronomic cravings with an exquisite Ligurian dish, 'acciughe al limone'. The tangy and fresh flavors of locally grown lemons marinating the succulent anchovies is an exciting harmony of taste. Local dishes are a delightful way to understand the region’s love for simplicity and freshness, and this one adds an extra charm to our journey." /
+       "Climbing the narrow, stone steps of the castle, we enter the fortress walls. The bracing sea breeze caresses our faces as we take in the panoramic views - the stunning coastline of Cinque Terre, the charming terracotta roofs of Vernazza, and the soothing expanse of the sea. Below us, boats of vibrant colors bob peacefully in the harbor, perfectly contrasting the widespread blue. With every inhalation, the fragrance of sea salt intertwines with lemon blossoms, carrying us into a unique sensory dance of nature. Amid this moment, we realize that we're standing in a place where history, beauty, land, and sea converge into a breathtaking picture of harmony.",
 
-       "We greet the next day with a sense of animated tranquillity as we embark on the charming footpath from Vernazza to Corniglia. Part of the enchanting Cinque Terre National Park, the trail is a centuries-old pathway that winds through olive groves, offering resplendent views of the coastline. As we tread the path that has been a lifeline for the villagers over the years, it's not hard to understand why it has found a cherished place among many pieces of travel literature." /
-       "The ambling walk treats us to a symphony of sights—lush vineyards sleeping in the lap of the azure sea, their green velvet contrasted beautifully against the gleaming coastline. As we hike, our senses are filled with the rustling of olive leaves in the soft breeze, set to the rhythmic song of the undulating waves in the distance." /
-       "We nestle down for a quick picnic en route, our spread consisting of local focaccia bread, a rustic masterpiece of Italian cuisine, paired with Sciacchetrà, an exquisite wine produced in the region. Seated on a perched bench, we relish these local delights while drinking in a hypnotic panorama of the Ligurian sea, cloud-covered cliffs, and quaint houses tucked away in the verdant hills." /
-       "The trail then leads us to our next stop - the Santa Maria Assunta, a gem entrenched in the heart of Corniglia. This 14th-century Gothic Ligurian church is a testament to an era of architectural grandeur. Its pointed-arch windows and white marble design embody the classic Ligurian Gothic style, reverently preserved through centuries." /
-       "Inside, treasures like a 12th-century baptismal font and a 15th-century triptych of the Crucifixion with the Virgin and St. John the Evangelist invite us to delve into history. Outside, the church's ringing bells cast a soothing resonance across Corniglia, their toll evoking a timeless hymn beloved to the townsfolk." /
-       "We find ourselves amidst a crowd of captivated travelers, their eyes pinned to the beauty of the church, camera shutters flitting like the wings of a hummingbird. As we marvel at the historical edifice, the scent of Pesto alla Genovese wafts from nearby trattorias, reminding us of the flavors that await at Corniglia's quaint bistros." /
-       "Our day draws to a close as we take a leisurely boat ride around Corniglia. The silhouette of the hill-top Santa Maria Assunta against the dusky sky, overlooking the endless Mediterranean, leaves us filled with a tranquil warmth. This harmony continues as we amble through the cobblestone alleys, exchanging friendly nods with the locals. Cinque Terre's beauty has merged into our journey, each moment a precious bead in the intricate necklace of our experiences, anticipating more precious gems yet to be discovered.",
+       "Upon leaving the sprawling fortress of Castello Doria, our sightseeing adventure steers us to the heart of Riomaggiore where we encounter the magnificent San Giovanni Battista Church. It hails from the era of Bishop Antonio Fieschi, having been erected back in the year one thousand three hundred and forty. As we approach, the first sight that captivates us is the striking façade, crafted skillfully from white limestone and green serpentine harvested from the quarries of nearby Groppo, a testament to Ligurian Gothic architectural prowess." /
+       "Inside, it houses an age-old triptych that invites hushed admiration. The painted figures of 'Madonna with Child', 'St. John the Baptist' and 'St. Antonio Abbot' from the fifteenth century command our undivided attention. The belfry, added two centuries later, is home to three bells each dedicated to a different saint, chiming melodiously and resonating through every corner of Riomaggiore. Post exploration, we relish traditional Ligurian dishes, taking comfort in the cozy local restaurants serving freshly made Trofie pasta with Pesto and a delightful Seafood Risotto, each bite deepening our connection to this enchanting region." /
+       "Our next destination on this captivating journey is Monterosso Al Mare, the largest and one of the most beautiful villages of Cinque Terre. The journey there, whether by foot along the stunning cliffside trail or by a leisurely boat trip, offers glimpses of the village's bright, colorful houses nestled among the rugged cliffs. If we're lucky, we might even buy our boat ticket from a charismatic local captain, an encyclopedia of tales about the lore and legends of Monterosso Al Mare." /
+       "The village wears its history like a badge of honor, with historical sites such as the ancient castle and the church of San Giovanni Battista, the latter bearing the scars of World War II bombings. A prominent feature here is 'Il Gigante', a large imposing statue, a silent yet overpowering sentinel of the past. The village's enchanting charm also inspired the works of Eugenio Montale, an Italian poet and Nobel laureate, who fondly wove his Monterosso memories into his verses." /
+       "As we stroll around the intricate lanes of Monterosso, we find tourists sunkissed and relaxed on the sandy beach, some pouring over maps under the cool shade of lemon trees while others are ready to paddle their way into the Ligurian Sea in colorful kayaks. We can't resist the temptation to indulge in their local delicacy - the delectable Monterosso anchovies, perfectly complemented by a glass of classic Ligurian wine. Each site, each sound, each taste adds a unique thread to the tapestry of our journey, weaving an unforgettable Cinque Terre story that we are bound to cherish always.",
 
-       "Strolling along Corniglia’s narrow streets under the azure Italian sky, the anticipation of our sweet treat piques at the sight of Gelateria Vernazza. Known far and wide for its tantalizing homemade gelatos, this local ice-cream parlor lures us with the promise of a flavourful indulgence. Novelists have been known to ponder if such exquisite sweetness should indeed be illegal, and we soon understand why!" /
-       "We step into the charming establishment, instantly greeted by the inviting aroma of artisanal gelato. A myriad of irresistible flavors unfold before us. The star of our choice: 'Crema di Limone', Gelateria Vernazza's signature lemon cream gelato, brimming with notes of fresh local lemons. To complement this citrus delight, we pick the 'Fior di latte', a celebration of Italy’s creamy milk in the form of gelato." /
-       "Eagerly sinking into soft chairs on their small terrace, we balance our cups of these sweet marvels, our spoons diving into the creamy richness eagerly. Bursting with vibrant flavors, each gelato bite dissolves into a melody of cool delight on our tongues. Surrounded by other gelato enthusiasts, we savor our creamy treasures while the enchanting view of Corniglia tugs at the exquisite simplicity of the moment." /
-       "Bidding adieu to the sweetness of Gelateria Vernazza, we brace ourselves for our next escapade - the scenic hike to Manarola along the Blue Path, or 'Sentiero Azzurro'. This pathway, a glorious thread stitching the five Cinque Terre villages, offers panoramic visuals that seem to spring from a painter's dream. Walking the path that once served as the sole link between these villages, we become an intimate part of the area's timeless legacy etched by years gone by." /
-       "Uphill and downhill, our hike twirls along the curves of the lands, revealing splendid views of terraced vineyards clinging to the rugged cliffs. The emerald vines glisten under the sun, their leaves rustling in the breeze like the pages of an old, cherished book, their bunches heavy with the promise of the regional Sciacchetrà wine. Pausing at picturesque points, we see hikers immersed in capturing the vibrant landscape through lenses, sketchbooks, and mesmerized gazes." /
-       "Such tranquil beauty invites a moment of rest. So we settle on a cozy bench perch, the breathtaking ocean panorama as our companion. The sun paints our faces with a warm, golden glow as we sip on cool, locally-made Limoncino. Chirping birds serenade us, their melodies echoing the harmonious rhythm of the lapping waves below. As we nestle into our Italian escapade, we carry forward with us the excitement of the natural wonders and local delights set in the heart of Cinque Terre."
+       "Leaving the sandy beach of Monterosso Al Mare, our journey takes us to the Gelateria '5terre', an iconic gelato spot that churns out scoops of delight from its treasure trove of flavors. This charming gelateria, dedicated to honoring local ingredients, has become synonymous with the town itself. Picking out your choice of gelato here is nothing short of an event, with enthusiastic debates about flavor combinations echoing around the venue, and laughter ringing through the air. What better way to partake in the Italian tradition of 'passeggiata', the leisurely evening stroll than with a gelato in hand? As Carlo Levi's words run through our minds, we savor our chosen gelatos - perhaps a mix of classic pistachio and stracciatella or maybe the exotic tandem of fig and melon." /
+       "Whether arriving by boat or traversing the picturesque trails, the path to the Gelateria '5terre' imparts its own delights. The scent of fresh gelato wafting from the shore acts as a siren call to the boat travelers. Meanwhile, hikers crossing paths with fellow gelato lovers are treated to a lick-the-spoon recommendation of the must-try offerings at the destination ahead. Young and old, everyone succumbs to the joy radiating from this gelatoria, cherishing the whimsy of vibrant scoops melting on their tongues, as the sun dips low in the sky." /
+       "Our exploration then leads us to the breathtaking headland of Punta Mesco, the most northwesterly point of Cinque Terre. The trek to this captivating spot, showcased in the movie 'The Wolf of Wall Street', is nothing short of spectacular. As we navigate the meandering trails, we are surrounded by a medley of Mediterranean flora and the serene bird melodies that echo across these hills, creating a harmonious symphony of nature that uplifts our spirits. We notice the unmistakable shape of the eleventh century San Antonio del Mesco monastery ruins from afar, stark against the cerulean backdrop." /
+       "The setting sun casts a captivating glow over the landscape, illuminating the multitude of wildflowers and casting long, undulating shadows over the ancient monastery ruins. A crew of adventurous rock climbers navigate the nearby crags, adding a sense of vigor and excitement to the tranquil scene. As dusk settles, it is a common sight to behold families and friends spread out with their picnic blankets and baskets, ready for a sunset dinner filled with laughter and warm conversations. Sipping on wine, we share our favorite moments from the day, forever encapsulating the radiant hues of the horizon and the enchanting trails into our shared memories of Cinque Terre.",
+
+       "Leaving the tranquility of Punta Mesco, we descend upon the vibrant oasis of the Vernazza Winexperience. Preserving a family's passion that spans generations, this wine bar, nestled in an old cellar, exudes an intimate, rustic charm that is irresistibly inviting. A symphony of local flavors awaits us here - rare Sciacchetrà, a sweet wine distinct to Cinque Terre, accompanied by an array of local cheeses, olives, and fresh seafood. It's akin to the enticing narrative in Lewis Chandler's 'Bella Vita: A Story of Cinque Terre, Wine, Love,' where a character savors every sip of Sciacchetrà in a charming wine cellar." /
+       "At the Vernazza Winexperience, every guest seems to embody the same spirit, engaging in animated conversations or simply losing themselves in the ecstatic dance of delicate aromas and rich flavors. As we absorb the intoxicating ambiance, we can't help but strike up our own conversation with the staff, their geniality infectious and their knowledge about the painstaking wine production process, remarkable." /
+       "Reluctant to leave yet eager for the next adventure, we set our sights on Via Fieschi in Corniglia. Dating back to the Middle Ages, this intricate, narrow street does more than just exist; it tells stories of the past, its foundation deeply ingrained with the legacy of the Fieschi family, a noble lineage of the Middle Ages. Every step taken on this street, dotted with historic buildings, charming boutiques, and quaint cafes, feels like a step back in time." /
+       "In between marveling at the classic Ligurian architecture and hunting for the perfect handmade souvenir, we embrace the chance to relish the local speciality - 'Torta di Riso di Corniglia,' a sweet rice cake that teases our palate in the best possible way. As we savor the dessert, we curiously watch fellow tourists consulting maps, sharing laughter, and creating their own memories, making this historic street come alive in a beautiful dance of the past and present." /
+       "Amidst our exploration, whether it be on foot along Via Fieschi or viewing the terraces of vineyards during our boat trip, we acknowledge the invaluable gift of these experiences. The labors of the villagers nurturing the vine and lemon groves, the quiet hum of conversations filling the street, and the refreshing taste of homemade gelato on our tongues - all create an unforgettable kaleidoscope of experiences that make Cinque Terre a place like no other.",
+
+       "Leaving the vibrant alleys of Corniglia, our journey finds a soothing rhythm in the naturalistic area of Torre Guardiola. Steeped in history from the time it served as a naval signaling station under the Austrian imperial rule in Italy, today, it's a haven for explorers, both local and foreign. The boardwalk, with its intriguing didactic panels, lays out an invitation to uncover the flora, fauna, and geology of the region in an intimate encounter." /
+       "Leisurely strolls around the area reveal sights as diverse as the vibrant colors of Mediterranean plants and the panoramic expanse of the Ligurian Sea. While visitors can be spotted tracing the trails, pausing often to admire the views or sip on their take-away coffee, others delve into insightful exchanges about the area’s unique vegetation. A dining scene from Riomaggiore's local establishments includes the delectable taste of Trofie al Pesto or Seafood Antipasto, reflecting the town’s love affair with the sea." /
+       "Next, be it the sunlit boardwalk around Torre Guardiola or the scenic vistas from a boat trip, every moment unravels layered stories of history, nature, and serenity. Scents of different Mediterranean plants like Aleppo pines and Maritime pines enchant our senses, leaving a lingering fragrance in our hearts, a sweet reminder of our serene visit to Torre Guardiola." /
+       "From the tranquil hoses of Torre Guardiola, we embark on an enchanting sojourn to Manarola. As one of the oldest towns of Cinque Terre, its charm finds roots in as far as the year one thousand three hundred and thirty-eight with the cornerstone of San Lorenzo church. As we navigate the narrow lanes, we are instantly captivated by vibrant colored houses that reflect a beautiful contrast against the azure sea, offering us a living canvas that continues to inspire many photographers hunting for the perfect sunset shot." /
+       "The distinct sweetness of Sciacchetrà wine greets our taste buds as we indulgently sip on a glass, purchased from a local vineyard, and make our way to the scenic lookout point at Punta Bonfiglio. The expansive sea view and the charming blanket of houses present an unforgettable spectacle to remember Manarola by." /
+       "As we stroll around the town, we spot locals by the seashore with fishing gears, their faces etched with patience, mirroring the calm sea. Amidst the vineyards, diligent farmers lovingly tend to the grapevines that produce the elixir that is the Sciacchetrà wine. Pausing every now and then, the locals exchange stories and laughter. An alluring sense of camaraderie hums through the air, making us feel part of this vibrant tapestry of life in Cinque Terre. As the day leisurely fades into the evening, the timeless charm of Manarola and its people leaves a lasting impression on our hearts, forever linking us to this idyllic locale."
 )
 
     override val endShort =
-       "Our Italian journey continues to paint a vibrant canvas as we arrive in Manarola, a picturesque seaside town steeped in centuries of rich history and tradition. Nestled quaintly in this captivating coastal town is a charming haven for culinary delights - Nessun Dorma Cinque Terre. Named after one of the most romantic arias from Giacomo Puccini's opera Turandot, the eatery lives up to its inspiring moniker." /
-       "As we settle into the dining area, we're warmly welcomed by a captivating panorama of sunset hues spilling over the serene coastline. Magic unravels as the Mediterranean sun begins to kiss the day goodbye, painting the horizon in shades of soft pink, orange, and purple. With the sun setting as our timeless backdrop, we indulge ourselves in a symphony of flavors as we taste the regional offerings, including Manarola's delicious Sciacchetrà, a sweet dessert wine." /
-       "Nessun Dorma's elevated perch allows us to appreciate the cascading array of vibrant houses clinging to steep cliffs - a scene imprinted on countless postcards worldwide. Around us, sightseers echo our admiration, their cameras incessantly clicking as they aim to encapsulate the beauty of this ethereal setting." /
-       "As dinner concludes, we decide to wander off to our next destination - the fabled path known as Via dell'Amore or the Path of Love. Born as a pathway for railway workers and later a symbol of undying love between villagers of Manarola and Riomaggiore, this easy yet scenic hike promises an encounter with an alluring blend of nature and art." /
-       "As we saunter along Via dell'Amore, the sight of countless love locks shimmering under the afternoon sun catches our attention. Struck by the romantic tradition, we etch our initials onto a lock, attach it to the love-laden railing, and surrender the key to the depth of the mystical Mediterranean sea, a silent promise of love solidified in the form of a tiny metal token." /
-       "The Flirting aroma of freshly baked focaccias and melting gelato from local cafes tugs at our gastronomic senses, beckoning for another delightful immersion into Cinque Terre's flavorful offerings. Overwhelmed by such a sensory experience, we pause to take in the moment, gazing out at the vibrant houses, feeling the salt-tinged breeze, and listening to the murmur of the azure sea below. As we wander further along this path, our hearts and minds resonate with the lovely melodies of love that Cinque Terre plays so effortlessly. The journey continues, holding promises of further enchantments to come." /
-       "Through the winding paths of Cinque Terre, across azure seas and beneath painted skies, our sightseeing tour has traced a journey of captivating landscapes, vibrant cultures, and enticing flavors. From blossomed trails to timeless architectures, each stop has gently etched itself into our hearts, becoming a precious keepsake of this unforgettable sojourn. As our adventure quietly winds towards its final chapter, we venture to the charming hilltop sanctuary of Chiesa di San Giovanni Battista in Riomaggiore." /
-       "Constructed in 1340 by the bishop of Luni, this illustrious church is a treasured historical monument. Carried on the wings of centuries, it proudly showcases the quintessentially Ligurian green and white marble interior, a rare architectural spectacle in Italy. As we step into the hallowed tranquility within, the grandeur of the impressive rose window exterior and the exquisite stonework interior, crowned by a beautiful vaulted ceiling, leaves us breathless. The gentle August sunlight streams through the stained-glass windows, the shards of light dancing on the ancient stone, painting a tableau of sacred serenity." /
-       "Sparkles of awe reflect in the eyes of visitors around us as they quietly admire the church's captivating interior. Framed by this awe-inspiring monument, the sweeping panoramas of Riomaggiore and the mesmerizing Ligurian Sea unfurl a sight of ethereal beauty. Camera shutters flit, capturing the essence of the church, even as they strive to freeze frame the captivating vistas beyond the bell tower, which found its mention in English author Francis Marion Crawford's novel 'Casa Braccio.'" /
-       "Our visit to the hilltop church of San Giovanni Battista is perfectly rounded off with a culinary indulgence. We relish a hearty meal of trofie al pesto, the fresh pasta melding harmoniously with the zingy sauce. Paired with a refreshing glass of local Sciacchetrà, the white wine that Riomaggiore prides itself for, we treat our tastebuds to a delightful finale." /
-       "The sightseeing tour concludes, leaving us with rich memories of the soothing boat rides, serene hikes, and the charm of quaint Italian villages. Yet, as we descend the hill towards the lapping Ligurian waves, listening to the sparrows chirping amidst the olive trees and inhaling the woody fragrance of rosemary bushes, it feels more like a beginning. As the sun sets on our Cinque Terre adventure, we realize that every corner turned, every path walked, and every sight cherished has not just been a visit but a deep connection we've forged with this Italian slice of Paradise. And as we glance back at the iconic church standing tall against the backdrop of the receding sun, we are reminded that part of us will forever remain in the heart of Cinque Terre, waiting to continue the journey someday."
+       "After delighting in an array of visual, cultural, and gastronomical wonders in our journey across the Cinque Terre, our sightseeing tour takes a peaceful turn towards the tranquil sanctuary of Santuario di Nostra Signora di Reggio. Nestled amidst the emerald hills above Vernazza, this sacred haven dates back to the eleventh century, a testament to enduring faith and devotion." /
+       "The church, small yet rich with history, is shrouded in age-old tales of the Virgin Mary, the focus of many miraculous narratives passed down through generations. Captivating us further, the sanctuary's location amidst centuries-old olive groves and terraced vineyards offers an invitation into serene oblivion, away from the bustling world. The peaceful charm of this place is tangible; from devoted pilgrims lighting a candle under the votive gaze of Mary to curious visitors finding solace in the hallowed silence of the church." /
+       "As we embark on the gentle trek towards the sanctuary, the panoramic view of Vernazza and the unending stretch of the Mediterranean loom into view, bright under the Italian sun. The sanctuary beckons, appearing to rise out of the verdant quilt of olive groves, immersing us in tranquillity up in the hills." /
+       "Venturing into a rustic trattoria nearby, we indulge in the traditional Ligurian dish of pesto with trofie pasta that tastes even more delightful paired with a crisp glass of Cinque Terre DOC wine. The simple pleasure of a hearty meal in an enchanting location makes our visit to the sanctuary even more memorable." /
+       "As we look around, we see people indulging in leisurely activities; some enjoying a picnic on the sprawling lawns, others immersed in the pages of a book under the cool shade of the olive trees, and some just sitting in the silence, soaking in the serenity that the location so generously offers." /
+       "Our tranquil sojourn in Cinque Terre concludes here, in a place that allows the world to fall away, even if for a little while, leaving only the melody of whispering leaves and the drama of cerulean waters in sight." /
+       "Looking back, our time here has been a series of unforgettable chapters - each town, each trail, each morsel, and every shared smile - a testament to our shared journey infused with the timeless charm of Cinque Terre. As we take one last look at the endless sea and the rolling hills, the sun setting over the Ligurian coast, we know that our hearts will always carry a piece of these beautiful Italian shores, etching the essence of Cinque Terre in its every beat."
 
     override val start =
        "Embark with me on a serene journey as we rediscover the joy of spring in the picturesque landscapes of Cinque Terre, Italy. Where better to greet the return of warmth and blossom than in this collection of five pastel-colored villages perched between sea and sky, framed by vine-clad hills and olive groves. Cinque Terre, meaning 'five lands,' is a UNESCO heritage site recognized for its historical glory and natural beauty, and it offers a peaceful retreat away from the bustling tourism of Italy's famed cities." /
@@ -222,4 +221,437 @@ object SleepStoryTravelCinqueterreCues : SleepStoryPoseCues {
        "As the echoes of an Italian serenade drift over from a nearby trattoria, we soak in the cooling breeze, its whispers imprints of the age-old tales of the Cinque Terre. Anchoring our heritage in the vibrant harmony of the sea, the villages, and the lush tread of nature, the sunset paints a latticework of shadows along the terraces, heightening the allure of the surroundings." /
        "In the waning light, we store the golden memories of our exploration to revisit in dreams. As the day winds down, we take one last look at the beautiful Cinque Terre, each village a colorful sonnet, each cobbled alleyway a melodic note, and each pebbly shore a gentle caress of the melody—altogether composing the symphony of Cinque Terre, the Five Lands that offered us timeless moments of discovery, serenity, and indelible joy. And so, under the star-kissed sky, along the poetic Riviera, our inspiring journey through the Cinque Terre draws to a close, leaving behind memories meant for recounting and a yearning meant for a return."
 
+/*
+////////////////////////////////////////////////////////////////////////////////
+
+Via dell'Amore (Love's Path): This is a beautiful and easy hiking trail between two of the Cinque Terre villages, offering stunning sea views.
+
+- Historically, the Via dell'Amore was a path that allowed the inhabitants of the two villages of Riomaggiore and Manarola to meet and mingle, which made it a popular spot for young lovers, hence the name "Path of Love."
+- The trail was cut into the cliffs in the early 20th century to facilitate railway construction.
+- The Via dell'Amore has been subject to various closures due to landslide risks, the most notable one happened in 2012.
+- A romantic literary reference can be found in the novel "Beautiful Ruins" by Jess Walter, where it describes the enchanting journey of love that unfolds along this trail.
+- Typical activity along this path includes placing a love lock on the railing, following the worldwide trend to declare everlasting love.
+- You can enjoy a delizioso gelato from one of the small vendors along the trail.
+- While taking a leisurely boat trip along the coast of Cinque Terre, you can appreciate the panoramic view of the Via dell'Amore from the sea. The colorful houses hugging the cliff, the endless horizon, and the rippling turquoise sea all create an indelibly romantic impression.
+- One of the charming human experiences on Via dell'Amore is buying a ticket for the trail from one of the small booths at thestarting point. The exchange often involves a warm, welcoming Italian smile and a few helpful tips for the walk.
+- Hiking the trail means soaking in the natural beauty of the region-- the distinctive Mediterranean flora, fluttering clouds shaped by the sea breeze, and the glorious sunlight as it turns the sea into a sparkling wonder. All of it is a sensory celebration that makes the journey more special.
+
+=====
+
+Grotta Byron: Named after the famous poet Lord Byron, this sea cavern is well-known for its deep, turquoise water.
+
+- Named after the British poet Lord Byron, who was said to have meditated in this cavern during his sojourn in Portovenere.
+- A venue of a romanticized "haunt" of the poets in the 19th century.
+- Known for its deep, turquoise water and remarkable acoustics, which create a resonant echo.
+- The cavern is a part of Palmaria island, which is a UNESCO World Heritage site.
+- Visitors often partake in a boat ride to get a close view of the cavern. Sightseers can be seen photographing the stunning view of the mainland or coastlines from the water.
+- Those who take the hiking trail between the villages can enjoy the surreal natural beauty of the setting sun, as it tinges the water with hues of gold and crimson, a sight that can leave even the most seasoned travellers spellbound.
+- A quintessential Italian dining experience would be dining in one of the seaside trattorias, savoring the local seafood pasta, all while the dusk turns into a star studded night.
+
+=====
+
+Castello Doria: Explore this dramatic medieval fortress, perched high above Vernazza, with breathtaking views over the town and ocean.
+
+- Castello Doria was originally built in the 11th century as a lookout tower to defend the village.
+- This castle, which is one of the oldest surviving fortifications on the Cinque Terre, has survived many attacks, notably from pirates.
+- Throughout history, it has served as a military outpost, a refuge during attacks, and now as a breathtaking sightseeing destination.
+- Visiting the castle, one might indulge in a traditional dish like "Acciughe al limone". This simple Ligurian dish is a treat to the palate, featuring fresh anchovies marinated in the juice of locally grown lemons.
+- From the top of the castle, you might see other tourists taking photographs of the stunning coastal views, or intrepid travelers starting their hike to the next village along the stunning cliffside trail.
+- A standout experience would be climbing the narrow stone steps of the castle and emerging onto the fortress walls. As the sea breeze ruffles your hair, you take in the sweeping views of the beautiful blue water, the picturesque Cinque Terre coastline, and the charming terracotta roofs of Vernazza. Below, boats bob peacefully in the harbor, their vibrant colors a cheerful contrast to the azure background. Amid the smell of sea salt and lemon blossoms, you realize that, here, past and present, land and sea, history and beauty all coexist beautifully.
+
+=====
+
+San Giovanni Battista Church: An impressive 14th-century church, known for its beautiful facade made of white and green marble, located in Riomaggiore.
+
+- San Giovanni Battista Church was constructed in 1340 during the rule of Bishop Antonio Fieschi.
+- The architectural style of the church mirrors the Ligurian Gothic style, with a beautiful façade made of white marble (limestone) and serpentine from the quarries of nearby Groppo.
+- The interior of the church holds significant religious importance, featuring a valuable triptych dated to the 15th century: on the left the 'Madonna with Child', in the middle 'St. John the Baptist' and on the right 'St. Anthony Abbot'.
+- The church's belfry, added in 1870, houses three bells, each dedicated to a different saint: San Giovanni, Santa Margherita and Sant'Antonio.
+- Typical Ligurian dishes such as Trofie pasta with Pesto or Seafood Risotto could be enjoyed in the local restaurants close to the church.
+- Visitors to the church can be seen exploring the church's remarkable architecture, taking photographs and occasionally attending the church service.
+- In a leisurely boat trip to Riomaggiore, visitors catch the very first glimpses of the church's striking façade among the colorful houses of the village, and upon disembarking, they hike through the narrow stone-paved lanes of the town. As they climb the steep hill to reach the church, the bells may chime, echoing across the village and the surrounding terraced vineyards and olive groves, adding to the serene and almost mystic ambiance.
+
+=====
+
+Monterosso Al Mare: Wander around this charming village, the largest in Cinque Terre, boasting a long sandy beach and vibrant colorful houses.
+
+- Monterosso Al Mare houses an ancient castle and the church of San Giovanni Battista, offering intriguing historical sites to visit.
+- During WWII, the village was bombarded and several historic buildings were damaged, including the church of San Giovanni Battista.
+- The village is home to 'Il Gigante', a large statue that once held up a terrace of a local villa.
+- Italian poet Eugenio Montale, who received the Nobel Prize for literature in 1975, spent his summer vacations in Monterosso Al Mare, and it features prominently in his poetry.
+- Famous local dishes include anchovies of Monterosso, a favorite in the area, and other seafood-based dishes accompanied by local Ligurian wine. 
+- Activities that other tourists might be seen doing include sunbathing on the beautiful beach and launching kayaking tours into the Ligurian sea.
+- When taking a leisurely boat trip, one might have the pleasure of buying a ticket from a charismatic local boat captain, who might regale you with anecdotes about the history and legends of Monterosso Al Mare. Alternatively, hiking the Cinque Terre trail that passes through Monterosso can provide a serene getaway, where you'll often find tourists consulting maps under the shade of fragrant lemon trees, taking a break to enjoy the breathtaking sunshine-dappled panoramic views of the sea.
+
+=====
+
+Gelateria "5terre": Enjoy a scoop (or three) of authentic Italian gelato in the most famous gelateria in Monterosso.
+
+- The Gelateria "5terre" uses only natural local ingredients for their gelato, with the exception of ingredients such as vanilla and cocoa, which are not native to Italy.
+- The gelateria has become a symbol of the town of Monterosso, one of the five villages of Cinque Terre. 
+- Due to its popularity, it often features in travel guides and literature concerning the region.
+- As they enjoy their gelato, visitors can partake in the old Italian tradition of the "passeggiata" or evening stroll. 
+- A famous quote from Italian writer Carlo Levi becomes relevant here: "There is no end. There is no beginning. There is only the infinite passion of life."
+- This Gelateria offers a wide variety of flavors to choose from, including classics like pistachio and stracciatella, as well as more exotic flavors like fig and melon. 
+
+From a leisurely boat trip: 
+- As the boat gently sways on the serene waters of the Italian Riviera, the enticing aroma of fresh gelato wafts over from the shoreline, guiding you towards the Gelateria "5terre". 
+
+While hiking:
+- As you navigate the idyllic trails, forging a path between vineyards, olive groves, and spectacular coastal views, you encounter many fellow travelers licking cones piled high with colorful scoops. Their faces light up as they recommend the Gelateria "5terre" in Monterosso.
+
+Human experiences:
+- One could easily lose track of time while selecting their perfect flavor combination from the exuberant display, as passionate discussions about the best flavor combinations echo around the Gelateria.
+- It's a joy to watch the relish on children's faces as they lick their messy cones while their parents appreciate the simple yet profound pleasure of Italian gelato.
+
+=====
+
+Punta Mesco: A striking headland jutting out into the sea, offering a beautiful view and a captivating sunset. It is also the starting point for numerous hiking trails.
+
+- Punta Mesco is where one of the scenes from the movie "The Wolf of Wall Street" was filmed.
+- It is the most northwesterly point of Cinque Terre.
+- The Mesco Headland is a habitat for several protected species of birds and plants.
+- The ruins of a 11th century monastery, San Antonio del Mesco, are perched on the highest point of the headland.
+- A hiking trail leading to Punta Mesco is a journey filled with stunningly panoramic Mediterranean views, aromatic wild herb bushes, and the occasional trailside wine tasting set up by local vineyard owners.
+- On reaching Punta Mesco, visitors are greeted by a breathtaking view of the sun setting over the horizon, seemingly melting into the sea.
+- People often bring picnic blankets and baskets to set up for a memorable sunset dinner on Punta Mesco.
+- Visitors often go rock-climbing at nearby crags before settling down to take in the incredible scenery.
+- After setting out by boat from Monterosso, the sight of Punta Mesco coming into view presents an unforgettable image. The striking beauty of the headland against the tranquil blue of the water is sure to take your breath away. As you hike along the trails to reach the ruins of the monastery, the diversity of flora and fauna provides a soothing symphony of nature's harmony. From the vantage point, you see the sun dipping into the ocean, creating hues of warmth and serenity that engulf everything in sight.
+
+=====
+
+Vernazza Winexperience: Spend an afternoon wine tasting local Cinque Terre wines and learning about the wine-making process in this popular wine bar in Vernazza.
+
+- The Vernazza Winexperience is owned and operated by a local family who has been producing wine in the area for generations.
+- It offers a chance to taste some of the region's local products, such as the rare Sciacchetrà, a sweet wine produced in Cinque Terre.
+- The wine bar is located in an old wine cellar, giving it an intimate and rustic vibe.
+- A typical dining experience here often involves pairing the wines with local cheeses, olives, and fresh seafood.
+- In "Bella Vita: A Story of Cinque Terre, Wine, Love," Lewis Chandler describes a character savoring a glass of Sciacchetrà in a charming wine cellar, much like the Vernazza Winexperience.
+- Visitors can be seen enjoying the local wines while chatting with friends and family or engaging with the knowledgeable staff to learn more about the wine production process.
+- From the pleasant boat trip, you can see the vine terraces interspersed with olive and lemon trees climbing up the hills, and upon arriving and hiking up to the wine bar, you'll experience the rich aroma of fermenting grapes filling the air and the rustic charm of the old stone cellar. A visit to Vernazza Winexperience is an immersion not only in taste but also in scenery, tradition, and friendliness.
+
+=====
+
+Via Fieschi: Meander down this narrow, iconic street in Corniglia lined with historic buildings, local boutiques and quaint cafes.
+
+- Via Fieschi is a historic street in Corniglia, one of the five villages of Cinque Terre, known for its classic Ligurian architecture.
+- The street dates back to the Middle Ages, contributing to the strong sense of history within Corniglia.
+- The street is named after the Fieschi family, a prominent Italian noble family that held great power in Genoa during the Middle Ages.
+- You might see people stopping by the boutiques, admiring the local handmade craftwork, or choosing souvenirs.
+- A notable dining experience could be trying the local treat, 'Torta di Riso di Corniglia', a sweet rice cake that is a specialty of the village, in one of the quaint cafes.
+- Taking a leisurely boat trip near Corniglia, you can soak in the visual contrast of the verdant vineyards lining the cliff dropping steeply into the azure Mediterranean below. Hiking along the scenic trails that connect the five villages, you will find yourself stopping at viewpoints overlooking Via Fieschi, absorbing the charming hustle and bustle of the street from a serene distance.
+- An important human experience you might encounter could be consulting a local map to navigate this labyrinthine village, interacting with friendly local villagers who might share interesting anecdotes about the street's history or the traditions of Corniglia. The moment of stopping to relish a scoop of locally made gelato, while watching the world go by, adds an indelible charm to the visit.
+
+=====
+
+Torre Guardiola: Explore this beautiful naturalistic area, with a wooden boardwalk trailing around the coast, rich with unique Mediterranean vegetation.
+
+- Torre Guardiola is located in Riomaggiore, the southernmost village of Cinque Terre.
+- This site was once a naval signaling station during the Austrian imperial rule in Italy.
+- Walking the boardwalk, you'll find varying viewpoints with didactic panels describing the flora, fauna, and geology of the area.
+- Locals and tourists can be spotted enjoying panoramic views or simply strolling through the picturesque surroundings.
+- Typical dining involves enjoying the local Ligurian cuisine, featuring Seafood Antipasto or Trofie al Pesto in nearby Riomaggiore establishments.
+- An enjoyable experience in Torre Guardiola is witnessing the dramatic change of scenery during a leisurely boat trip. The tower and the surrounding greenery create a beautiful contrast to the radiant blue waters of the Ligurian Sea.
+- Hikers can enjoy exploring the different paths around Torre Guardiola, looking out at the vast sea, and taking in the aromatic scents of different Mediterranean plants such as Aleppo pines and Maritime pines. It's a serene, enjoyable experience, especially on a sunny day.
+
+=====
+
+Manarola: Stroll around this picturesque fishing village, known for its vibrant coloured houses and scenic views over the sea.
+
+- Manarola is one of the oldest of the towns in the Cinque Terre, with the cornerstone of the church, San Lorenzo, dating from 1338.
+- It's renowned for its sweet Sciacchetrà wine, and the town is surrounded by vineyards.
+- The town name "Manarola" may derive from the Latin "magna rota." In the Manarolese dialect this was changed to "magna roea" which means "large wheel," in reference to the mill wheel in the town.
+- In Manarola, you can often see locals fishing or tending to their vineyards.
+- Fish dishes are very popular, particularly the anchovies of Monterosso (a local speciality) along with popular Ligurian wine.
+- Being one of the most famous spots for photographers, you can see visitors preparing their tripods to capture the sunset over the sea and brightly coloured houses.
+- A pleasant experience might involve purchasing a glass of Sciacchetrà wine from a local vineyard. As you sip, you may follow a narrow path to the scenic lookout point at Punta Bonfiglio. As you gaze out over the expanse of the sea and colourful houses, the birds might be heard singing as the sun dances on the waves.
+
+=====
+
+Santuario di Nostra Signora di Reggio: Take a peaceful hike to this sacred sanctuary located in the hills above Vernazza, surrounded by olive groves. You'll be rewarded with magnificent views and tranquillity.
+
+- Santuario di Nostra Signora di Reggio is a small church, which dates back to the 11th century.
+- The sanctuary is dedicated to Virgin Mary and it's reputed to be the site where a miraculous event associated with Mary took place.
+- The sanctuary is set high on the hills, surrounded by centuries-old olive groves and terraced vineyards.
+- Visitors often partake in the traditional Ligurian dish of pesto with trofie pasta, paired with a glass of local Cinque Terre DOC wine, while stopping at a rustic trattoria in the sanctuary's vicinity.
+- Beautiful view of Vernazza and the Mediterranean can be had along the trek up. It is the silent and serene olive groves that bring a peace unparalleled.
+- People can be seen picnicking across the sprawling lawns, reading a book under the shadow of olive trees or simply sitting around in silence, soaking in the place's serenity.
+- A leisurely boat trip along the Cinque Terre coastline provides an opportunity to admire the sanctuary and the rolling hills surrounding it from afar. Meanwhile, as you hike the trails between the villages, you can stop along the way to take in the sight of the sapphire-blue Mediterranean Sea, olive groves, and multiple shades of blossoming wildflowers. During such serene moments of connection with nature, you might find yourself contemplating the history of this site, the resilience of its people, and the timeless beauty that makes Cinque Terre so enchanting.
+
+=====
+
+
+
+////////////////////////////////////////////////////////////////////////////////
+
+Monterosso Al Mare: Start your journey in this largest and oldest village, known for its stunning scenic beaches and the statue of St Francis of Assisi.
+
+- Monterosso al Mare is the westernmost of all five villages in the Cinque Terre and it can trace its history back to AD 643.
+- The village was used as a resort official's and bishops of Luni who built there a castle that was dismantled in 1545 to be a bulwark against pirate fleet of Hayreddin Barbarossa.
+- Monterosso al Mare is known for its lemon trees and their fruits are often the key ingredient in Limoncello, a sweet Italian lemon liqueur.
+- Literary reference: Monterosso was mentioned in the famous sonnet "Mont'eremo" by Eugenio Montale.
+- Monterosso is also known for its varied dining experience, featuring seafood prepared in traditional Ligurian style like the famous anchovy of Monterosso marinated in lemon and olive oil. 
+- Visitors can often be seen lounging on the beach, swimming in the clear waters, or exploring the Old Town's traditional Ligurian architecture. 
+- Travelling by boat to Monterosso, you can experience the breath-taking panoramic views of the stunning coastline, the charming colourful houses, and the lush vineyards. 
+- Hiking between the villages is a beautiful and immersive way to experience the local flora and fauna. The trail leading from Vernazza to Monterosso is particularly beautiful.
+- The great human experience involved can be the opportunity to mingle with locals and fishermen around the old part of the village, capture memorable shots of older men playing bocce in parks, or indulging in a real Italian Gelato while exploring the village.
+
+=====
+
+Il Gigante: Visit this monumental statue carved into rock, which stands as a guard over Monterosso shoreline.
+
+- This statue was built at the beginning of the twentieth century (1910) by the sculptor Arrigo Minerbi and the architect Francesco Levacher.
+- The statue, representing the god Neptune, was originally part of a larger seaside villa complex and was used for supporting the terrace. 
+- During World War II, due to bombings and heavy rains, the statue lost its arms, trident, and giant seashell that served as a basin.
+- Surrounding the Il Gigante statue, you can usually see people admiring and taking pictures of the spectacular sculpture as it contrasts with the sea and the sky, and hiking enthusiasts resting under its shadow after a day on the trails.
+- A typical seaside dish here might be a plate of fresh seafood pasta, which can often be found in nearby restaurants overlooking the beach.
+- As you sail leisurely along the coastline, enveloped by the gentle Mediterranean breeze and the lapping sea at your boat, the impressive silhouette of the statue emerges. You find a moment to anchor, taking in Neptune’s majesty and the mesmerizing beauty of the surrounding azure Tyrrhenian Sea. After docking, you find a seafood café, order some Linguine al Mare, and delight in the views while relishing your meal.
+
+=====
+
+Winery and Vineyards: Experience a wine tour and taste the locally grown Cinqueterre DOC white wines.
+
+- The region is especially known for its Sciacchetrà, a sweet dessert wine, produced from the Bosco, Albarola and Vermentino grapes.
+- The vineyards of Cinque Terre primarily produce white wine, although some red wines are also made.
+- The vineyards are found on the steep terraces along the coast and are typically hand harvested due to the challenging terrain.
+- A quote by author Mark Twain who said, "Wine is sunlight, held together by water" could be fitting for the sun-kissed vineyards here.
+- In addition to the wine tasting tours, visitors often take part in grape harvesting during the harvest season.
+- Often at these vineyards, visitors can be seen strolling through rows of grape vines, taking photographs with panoramic views, and joining in the communal vineyard dinners.
+- A boat trip along the shoreline can provide a striking view of these vineyards, with their neat rows of vines running diagonally on the mountainsides.
+- Hiking the trails amidst the vineyards, the rustling breeze through the grape leaves and the intoxicating fragrance of ripe grapes can create a magical atmosphere. Spotting the rare local flora along the way add to the charm of the hike. 
+- A typical pleasant experience would be the interaction with local winemakers - learning about the wine-making process, the region's unique viticulture and the struggle to harvest grapes on such steep slopes can be a humbling experience.
+
+=====
+
+Capuchin Friars Monastery: This cliff-top sanctuary offers a breathtaking panoramic view over Cinqueterre area.
+
+- The Monastery is home to the Shrine of Our Lady of Grace, an essential religious gathering site for locals and visitors.
+- The exact founding date of the Capuchin Monastery is unknown. Still, according to some sources, the building construction dates back to the late 16th and early 17th centuries.
+- Hidden away in the monastery is a spectacular painting of the "Crucifixion" by Flemish Baroque painter Anthony van Dyck.
+- A typical dining experience would be having a classic Italian picnic with locally sourced bread, cheeses, and wines, enjoying the stunning vistas.
+- Visitors might be seen engaging in quiet prayer or inspecting the intricate art and relic collections.
+- A boat ride to Monterosso, where the monastery is located, offers stunning views of the coastline and villages of Cinque Terre. Hiking the trail from Vernazza to Monterosso can be physically challenging but rewards hikers with beautiful wildlife views and the occasional encounter with local vineyard workers. The sight of the peaceful monastery at the peak after a strenuous hike is a truly serene and fulfilling experience.
+
+=====
+
+Vernazza: Explore the next village, a beautiful maritime village with a small evocative harbor.
+
+- Vernazza is one of the five centuries-old villages that make up the Cinque Terre, on northwest Italy's rugged Ligurian coast.
+- Historical records dating back to around AD 1000 suggest the village was likely first established by the local Ligurian people. 
+- Its Doria Castle was a lookout tower built in the mid-15th century to protect the village from pirates.
+- The colorful homes and old church facing the sea inspire countless artists and photographers.
+- Eating freshly caught seiche (cuttlefish) with its ink on pasta is a must-have dish in Vernazza.
+- The narrow, vibrant streets are often filled with tourists visiting the local shops and drinking Limoncello, a famous Italian lemon liqueur made in this region.
+- Hiking from the village to the harbor involves steep trails and steps with rewarding picturesque views of the township and harbor.
+- A leisurely boat ride allows for stunning views of the Cinque Terre skyline and a unique opportunity to see Vernazza's colorful, picturesque layout from the sea.
+- A common activity for visitors includes exploring the town's winding streets, engaging in boutique shopping, and visiting the centuries-old Church of Santa Margherita d'Antiochia.
+- The unique experience involves waking up early for a tranquil walk on the beach, while the sun rises and before the bustling day begins.
+
+=====
+
+Church of Santa Margherita d'Antiochia: An exquisite gothic-Ligurian style church with a beautiful octagonal bell tower.
+
+- Church of Santa Margherita d'Antiochia is located in the village of Vernazza, one of the five villages that make up Cinque Terre.
+- The church was built in the 13th century, directly next to the sea.
+- Its architectural style is an exceptional mix of Ligurian gothic, a unique regional interpretation of gothic architecture.
+- Legend says the church's founding was guided by a miracle: a wooden box containing the bones of Saint Margaret of Antiochv was found at the beach and every time people tried to move it, the box would mysteriously find its way back to the original place, thus the locals decided that's where the church should be built.
+- Typical activities near the church include enjoying the sea view from the promenade and listening to the bell toll against the sound of the waves.
+- Traditional dishes that can be enjoyed in Vernazza include 'Tegame di Vernazza' (a baked dish with potatoes, tomatoes and anchovies) and 'Limoncino', a sweet lemon liqueur typical of Cinque Terre Region. There are many quaint restaurants and cafes near the church where these delicacies can be enjoyed.
+- On the leisurely boat trip, one can experience the breathtaking beauty of the church with its bell tower rising from the Vernazza village, as if protecting the inhabitants of this picturesque location. The sense of history and the mystery surrounding the church's creation adds to the profound experience.
+- Hiking the trail from Vernazza to Monterosso brings you to a higher viewpoint from where the church can be observed in its full glory against the backdrop of the village and the sea. The hike is tough but rewarding, symbolizing a journey back in time, and can be even more magical if done at sunrise or sunset.
+
+=====
+
+Fishing Museum: Learn about the region's deep-rooted fishing history and marine culture.
+
+- The museum is located in Riomaggiore, one of the five villages that make up Cinque Terre.
+- It provides a comprehensive look at the fishing history and culture of the region, with exhibits featuring traditional fishing tools and techniques, maritime artifacts, and explanatory panels.
+- Literally stepping into the shoes of the local fishermen, visitors can try on traditional oilskin overcoats and sou'westers – perfect for a quirky photo opportunity!
+- If you're on a boat trip, seeing the tools and knowing the historical labor of the fishermen might make the cerulean waters seem even more profound.
+- After visiting the museum, peering into the occasional fishing boats you might pass on your leisurely boat trip between villages takes on a deeper connection to the locale's past.
+- While hiking the trails between villages, pausing to appreciate a group of modern day fishermen along the coast will feel much more meaningful after your museum visit, being able to see the connection from past to present.
+- After taking in the historical insights, a typical gastronomic experience in the area would be enjoying a meal of fresh seafood like 'Acciughe alla Vernazza,' a dish made of anchovies marinated in white wine, garlic, and parsley, a nod to the centuries-old fishing culture here. 
+- Most visitors don an oilskin and a sou'wester at some point to look the part of a traditional fisherman for a memorable photo or perhaps rent a small boat to get a first-hand fishing experience. 
+- A not uncommon sight might be a local or two, engaging visitors with stories of sea storms and abundant catches, enhancing the authenticity of the experience.
+
+=====
+
+Doria Castle: Visit this medieval castle perched on a cliff overlooking the sea providing stunning views.
+
+- Doria Castle, also known as Castello Doria, dates back to the 12th century and served as a fortification for the village of Vernazza among the Cinque Terre.
+- The castle is named after the Doria family, an influential clan in Italy during the Middle Ages and the Renaissance period.
+- Despite numerous attacks and conquests over the centuries, Doria Castle has remained standing, serving as a testament to the resilient spirit of the locals.
+- The castle provides unparalleled panoramic views of Vernazza and the Ligurian Sea, making it a popular spot for photographers and selfie enthusiasts.
+- Visitors often hike up the winding pathway leading to the castle, taking breaks to appreciate the vibrant flowers growing alongside and the sunny brilliance of Italian coastline.
+- While in the area, other people might be seen savoring a gelato from a local vendor, or sitting in quiet contemplation on a rocky outcrop overlooking the sea.
+- A pleasant human experience would be taking a leisurely boat trip around the coastline, catching stunning views of Doria Castle atop its cliff, while marvelling at the turquoise waters and lush greenery of the hillside. The boat may coast by groups of waving hikers who are taking on the challenge of the trail that passes the castle.
+- After the boat ride, a walk to the castle through the winding, narrow paths can provide a sense of adventure, followed by the feeling of stepping back in time upon entering the castle's ancient, stony walls. 
+- Visitors often enjoy a rustic, coastal lunch in local trattorias serving dishes like fresh seafood pasta and Pesto alla Genovese, both typical of Liguria, where Cinque Terre is located. One might also indulge in a sweet treat, enjoying a scoop of rich Italian gelato while relishing the sea-kissed breeze.
+
+=====
+
+Corniglia: Discover this hilltop village known for its terrace fields and labyrinth of narrow streets.
+
+- Corniglia is the only one of the five Cinque Terre villages that isn't directly adjacent to the sea, instead it's perched on top of a promontory about 100 meters high, surrounded on three sides by vineyards and terraces.
+- It is part of the Cinque Terre National Park, a UNESCO World Heritage Site.
+- Corniglia is referenced by Giovanni Boccaccio in Decameron (1353), a collection of novellas, the town being the original home of one of the characters.
+- The Scalinata Lardarina, a series of 377 steps are your passageway from the train station to Corniglia. This long brick flight provides stunning views of the Cinque Terre coastline.
+- Corniglia's unique position offers a quiet and stunning panorama, making it a perfect spot for visitors to stop, relax, and take in the natural beauty.
+- Typical gastronomic experience here is indulging in local dishes like pesto pasta made from locally sourced ingredients or trying the Cinque Terre DOC white wine, cultivated on the terraced vineyards surrounding the village.
+- Being a pedestrian-only village, you will see people engaged in various activities like reading on a bench in the central square, children playing soccer in the narrow streets, or locals conversing at the local bars in the evening.
+- The experience of visiting Corniglia can be incredibly peaceful – hiking the trails between the villages while observing the unique flora and fauna, listening to the rustling leaves, birds singing, and the distant sound of the sea waves crashing, or enjoying a leisurely boat trip that provides a distant and breathtaking view of the entire village from the sea.
+
+=====
+
+Church of San Pietro: Visit this Baroque-style church noted for its beautiful façade.
+
+- The Church of San Pietro, also known as San Pietro di Corniglia, is perched atop a hill in the village of Corniglia, one of the five villages within Cinque Terre. 
+- The church dates back to 1334, with architectural elements showing influences of the Ligurian Gothic style.
+- It is said to have been built on the site of a former pagan temple.
+- The church's main façade is adorned with a rose window and intricate bas-relief decoration, made from white Carrara marble.
+- Typical activity: devout visitors and history enthusiasts can be seen exploring the church’s beautiful interior, which includes a notable 18th-century marble altar.
+- Dining experience: Although no food is served within the church, Corniglia is known for its locally produced honey and wine. You can also indulge in traditional Italian gelato at the town's numerous gelaterias.
+- Boat trip experience: From the boat, looking up at the hill, you can see the Church of San Pietro as a significant and beautiful landmark of Corniglia. The church’s sheer size and stunning details are a marvel to behold, especially during sunrise or sunset when it is bathed in warm light.
+- Hiking experience: The trail that runs between the towns in Cinque Terre includes a section that leads to the Church of San Pietro. As you approach the church, you are met with the sight of the stunning Baroque-style façade and at the back, breathtaking views of the Ligurian Sea. This can be a perfect place to rest and take some time to take in the beauty of the location.
+
+=====
+
+Guvastru Vineyard: Another chance to taste the unique flavors of locally-grown divine wine.
+
+- Established centuries ago, the farm benefits from a unique micro-climate perfect for growing grapes.
+- Its wines have been well regarded around the world and won numerous international awards.
+- Guvastru Vineyard is famous for producing Sciacchetrà, an esteemed dessert wine.
+- “Wine is bottled poetry” - Robert Louis Stevenson, this quote is befitting for the wines produced at Guvastru Vineyard.
+- Upon visiting, guests are often invited to partake in a wine tasting session where various wines produced in the vineyard are paired with local delicacies.
+- Visitors can be seen strolling through the vineyard, learning about the cultivation and fermentation processes, and some even participate in grape harvesting.
+- Being perched on the hillside, the vineyard offers stunning views of the Ligurian sea. The boat trip to the vineyard is as delightful as the hiking trails. While consulting maps and taking in the vineyard's panoramic views becomes pleasurable, an abundance of sunshine, singing birds, and the intoxicating scent of ripe grapes make the whole experience simply unforgettable.
+
+=====
+
+Manarola: Explore this picturesque village distinguished by its bright, multicoloured houses.
+
+- Manarola is one of the oldest towns in the Cinque Terre area with origins dating back to the Roman period.
+- The multicoloured houses are perched on black rock, displaying a beautiful contrast.
+- The name "Manarola" might be a reference to the Latin "magna rota," which corresponds to "big wheel" in English, referring to the town's mill wheel.
+- Often seen hanging around the colorful houses are the locally cultivated grapevines.
+- Typical activities that visitors might be doing include taking photographs, looking for unique vantage points, or creatively enjoying the sunset.
+- A typical dish to try here would be seafood, as Manarola is specially known for its locally produced anchovies.
+- Enjoy a slow and leisurely boat trip towards the village, marvel at its brightly coloured houses in the sunset, and feel the cooling breeze. Make sure to take plenty of photos as every corner of Manarola is picture-perfect.
+- Hiking between Manarola and the nearby villages, one would experience the rush of excitement when you crest a hill and see the gleaming, vibrant buildings of Manarola against the backdrop of the azure Ligurian sea.
+
+=====
+
+La Via dell'Amore: Walk along this famous love path, a picturesque walking trail offering breathtaking sea views.
+
+- La Via dell'Amore or "The Way of Love" is part of the coastal path linking the five villages of Cinque Terre.
+- It is particularly known for its romantic atmosphere and stunning vistas over the Mediterranean Sea.
+- The path was built in early 20th century and became famous for being a meeting point for young men and women from the two villages of Riomaggiore and Manarola.
+- Along the Via dell'Amore, you can find a wall covered with locks. According to tradition, these "love locks" are fastened by couples to symbolize their eternal love.
+- Considering the food experience, you might want to bring along a picnic of local delicacies like Focaccia di Recco, a type of thin-crusted pizza topped with fresh cheese, or other Ligurian specialties like fried anchovies, paired with a bottle of locally produced wine.
+- Visitors to La Via dell'Amore can often be seen taking photographs, gazing out over the water, having quiet conversations, painting, or just enjoying the beautiful scenery.
+- A leisurely boat trip along the coast offers an entirely different perspective of the trail from the sea, while the hiking trail itself provides panoramic views of the turquoise sea, steep cliffs, and colorful villages. An enjoyable human experience might be pausing on a bench along the path, soaking in the warm Italian sun, and watching as boats bob gently in the water below.
+
+=====
+
+Grotta di Lord Byron: A dramatic sea cave named after the English poet, Lord Byron.
+
+- This cave in Portovenere was a favorite swimming spot of famed English poet, Lord Byron.
+- The Grotta di Lord Byron was named in the 19th century after Lord Byron who frequented this area in 1822.
+- Lord Byron was known to swim across the Gulf of Spezia from here to San Terenzo to visit his friend Shelley, who described the coastline as "paradise of exiles".
+- Famous quote by Lord Byron about the area: "This spot is, indeed, a paradise; and of all the spots on earth, the one that suits and pleases me best. I do nothing but bathe in the sea, and bask in the sun, and scribble verses, and read the Arabian Tales.”
+- While soaking up the history of the cave, one may enjoy a local dish like Focaccia, a type of flatbread, or a delicious gelato at the nearby cafes.
+- Many tourists can be seen climbing along the rocky coastline to view the cave or swimming in the sea nearby.
+- An enjoyable human experience involved in visiting this sightseeing location could be standing on the cliffs above and taking in the breathtaking view of the sunny Mediterranean Sea, with its azure expanse stretching to the horizon. The warm, salt-drenched breeze rustling through your hair, and the endless echo of crashing waves transports you to another era, when Lord Byron himself might have enjoyed these same remarkable views.
+- Hiking the trails around the Grotta di Lord Byron offers stunning panoramic views of the coastline and sea. The natural beauty is quite prevalent with the vibrant hues of the Mediterranean Sea, the unique variances of cliffside vegetation and the omnipresent gull population adorning the sky.
+- Engage in a leisurely boat trip that sails close to the Grotta di Lord Byron, soaking up the splendour of the rugged cliffs, the splashing sea waves, and dizzying heights. The experience cannot be complete without a guide recounting Lord Byron's poetic feats and adventures in Cinque Terre.
+
+=====
+
+Riomaggiore: Visit the last and southernmost village, known for its candy-colored houses and steep, narrow streets.
+
+- It's one of the five villages that make up the Cinque Terre in Italy, all of which are a UNESCO World Heritage Site.
+- Riomaggiore is known for its production of excellent wine, thanks to the region's terraced vineyards.
+- The "Path of Love" (Via dell'Amore) starts here, a walking path connecting Riomaggiore to the next village, Manarola, offering breathtaking seaside views.
+- Literary reference: Ennio Flaiano, a renowned Italian writer, and screenwriter, mentioned Riomaggiore in his scripts, calling it a "laboratory of young painters".
+
+Typical Dining Experience:
+- Try a cone of fried mixed seafood, a popular street food item, paired with a glass of locally produced white wine.
+
+Activities for Other People:
+- Photographers can often be seen trying to capture the perfect shot of the sunset over the shimmering Mediterranean sea.
+- People are often seen admiring the local arts and crafts in the village's several small shops.
+
+Pleasant Human Experience:
+- Hiking from Riomaggiore along the Path of Love is an unforgettable experience. Along the way, you can stop and take a moment to absorb the stunning view of the sea hitting against the rocky cliffs. It's an all-engulfing sensory experience: the smell of the sea, the sound of waves hitting the rocks, the warmth of the sun on your skin.
+- On a leisurely boat trip, it's pleasing to see the coastline from a different perspective. The colorful cascade of houses, fishing boats bobbing gently in the harbor, and seagulls swooping above. There's also the opportunity to jump off the boat for a refreshing swim in the crystal-clear waters.
+
+=====
+
+Church of San Giovanni Battista: Admire this 13th-century church constructed from local stone, known for its stunning rose window.
+
+- The Church of San Giovanni Battista, located in the village of Riomaggiore, is one of the oldest churches in the Cinque Terre area, dating back to the 13th century.
+- It is famous for its beautiful rose window on the façade, believed to be original and made of white Carrara marble.
+- Originally, the church was built on a single nave, while the two side chapels were added later, at the end of the 14th century.
+- The Church's square bell tower, now separated from the main building, was a lookout tower in the past.
+
+- Near the Church, there's a small local café where people often enjoy an Italian staple, a shot of espresso, or typical Ligurian focaccia bread with a glass of local white Cinque Terre wine.
+
+- It's known for its silence and the peaceful ambiance. People can be seen praying, lighting candles, taking photographs, or simply admiring the stunning architecture.
+
+- Part of a hiking trail between Riomaggiore to Manarola (also known as Via dell'Amore or the Way of Love), many tourists stop here to relax and take in the panoramic view. Imagine taking a break from your hike, taking a seat on the stone steps of the church and just marveling at the breathtaking view of Riomaggiore village, perched on the rugged cliff, all the way down to the sparkling blue sea. The sight of locals going about their day and fellow tourists exploring the narrow winding paths of the village complete a perfect picture of leisurely Italian life.
+
+=====
+
+Castle of Riomaggiore: Explore this historic castle offering a panoramic view of the village and the sea.
+
+- The castle was built in the 13th century by the Marquis Turcotti, Lord of Ripalta, for defense against pirate attacks.
+- It offers a breath-taking view of the entire Cinque Terre coastline.
+- In recent years, the castle has been renovated and is currently used for cultural events and exhibitions.
+- A must-try culinary experience in Riomaggiore is seafood straight from the Ligurian Sea. The local fishermen are renowned for their anchovies, known here as 'acciughe'.
+- Local activities include exploring the town's narrow alleyways, appreciating the vibrant building colors, and swimming in the marina.
+- When you climb the stone steps leading up to the Castle, it feels as if you are stepping back in time. The view from the top, overlooking the beautiful Cinque Terre sea and sunny town filled with spirited locals, is nothing short of magical. The journey to Castle of Riomaggiore, whether by hiking or boat, offers a unique opportunity to immerse oneself in the seductive allure of the Italian Riviera.
+
+
+=====
+
+Scalinata Lardarina: Scale the famous 382-step stairway that leads to Corniglia from the train station.
+
+- Scalinata Lardarina is a long, brick staircase composed of 33 flights with a total of 382 steps.
+- As an often overlooked gem nestled between many popular tourist destinations, it offers sweeping panoramic views of the sea and the surrounding countryside.
+- Painter Telemaco Signorini immortalized the staircase in his painting "Salita a Corniglia".
+- On your way up, you will find many lemon and olive trees lining your path.
+- Visitors can often be seen taking a breather on the steps, gazing out at the ocean, and snapping pictures of the glorious vista.
+- The climb might seem daunting, but at the top, you are welcomed by the breathtaking views of the Ligurian Sea. The feeling of accomplishment paired with the unspoiled beauty of the scenery is truly rewarding.
+- After your climb, you can reward yourself with refreshing gelato or perhaps a glass of local wine. Cinque Terre is renowned for its Sciacchetrà, a sweet dessert wine.
+- Hiking between the villages and taking the ferry allows for diverse experiences. Whereas the hike is a challenge that rewards with spectacular views and the invigorating smell of the Mediterranean scrub, the boat trip offers a serene and stunning outlook over the five villages and the steep coastline which seems unreachable by land.
+
+=====
+
+Local Shops in Via Colombo: Enjoy some retail therapy in this street full of shops offering local delicacies and souvenirs.
+
+- Via Colombo is the primary street of Riomaggiore, one of Cinque Terre's five villages.
+- The street is known for its brightly colored houses and the fishing boats parked on the streetside.
+- It's a delightful place to walk and soak in the local culture.
+- You can often see locals sipping on an aperitivo, eating freshly baked focaccia or enjoying some gelato. 
+- The shops along Via Colombo sell many locally made products, from lemon-infused products to pesto, wine, and olive oil. 
+- Typical dishes here include fresh seafood like anchovies and mussels, as well as focaccia, a specialty of Liguria.
+- You can often see tourists trying on clothes, bargaining with shopkeepers, and browsing through local souvenirs.
+- During a leisurely boat trip or a break from hiking, one can enjoy the simple pleasure of walking along Via Colombo, savoring a fragrant cup of espresso at a sidewalk café, or sifting through small boutiques and art galleries. It's a slice of local life that is incredibly charming.
+
+=====
+
+Cinqueterre Boat Tours: End your journey exploring the five villages from the sea, for a unique perspective.
+
+- The boat tour offers a panoramic vantage point to marvel at the five villages of Cinque Terre - Monterosso, Vernazza, Corniglia, Manarola, and Riomaggiore - each one standing out with its colorful characteristics against the rocky coastline.
+- Cinque Terre is a UNESCO World Heritage site and has been a national park since 1999. This maritime tour respects these statuses by abiding by environmentally friendly practices.
+- The name "Cinque Terre" translates to "Five Lands", referencing the five small coastal villages that make up the region.
+- The region is known for its beautiful crystal-clear waters which you will have an exceptional view of from the boat.
+- Often, local fishermen can be seen casting out their nets from small wooden boats, while other visitors might be caught sunbathing on the pebbly beaches or taking a refreshing dip into the sea.
+- A typical dining experience during the tour might involve tasting the local delicacy 'Acciughe di Monterosso,' a Monterey Anchovy dish, or sipping the region's renowned white wine, known as Cinque Terre DOC.
+- A pleasant human experience would be the moment you first witness the majestic vista of Cinque Terre villages, all different yet harmoniously linked, from the sea. Adding to the sensory experience, the midday sun glints off the water while seagulls cry overhead and a soft breeze carries the coastal scents of sea and wild herbs.
+
+=====
+
+
+*/
 }

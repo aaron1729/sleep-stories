@@ -1,56 +1,70 @@
-// this code is generated from the story files queenstown_2023-11-10_23-15-53_short.txt and queenstown_2023-11-10_00-41-50_long.txt
-// min_stops is set to 1
+// this code is generated from the story files queenstown_2023-11-14_00-11-59_short.txt and queenstown_2023-11-10_00-41-50_long.txt.
+// the stops with tidbits that were the user prompts for these stories are copied at the bottom as comments -- first those for the short story, then those for the long story -- separated by a bunch of slashes.
+// min_stops_for_long_story is set to 1.
 
 package com.downdogapp.cue
 
 object SleepStoryTravelQueenstownCues : SleepStoryPoseCues {
 
     override val startShort =
-       "Today, we embark upon a soothing journey to Queenstown, New Zealand, amid the warmth and vibrancy of summer. Nestled on the shores of crystal-clear Lake Wakatipu, the town is situated against an incredibly picturesque background, with the majestic Remarkables mountain range cutting an imposing figure in the distance. The soft murmur of the lake's gently lapping waves, combined with the dappled sunlight filtering through the verdant trees, creates an absolutely peaceful and tranquil atmosphere. Our mode of exploration is as unique as our destination: water taxis. These quaint vessels, moving smoothly on the tranquil waters, promise a unique perspective on the beautiful landscapes we are about to encounter. The anticipation of ornate vistas and serene waterways provides an air of gentle excitement to the start of our adventure, like the first brushstroke on a painter's canvas. Now, let's begin our sightseeing journey, starting with the breathtaking Milford Sound." /
-       "As our water taxi glides into Milford Sound, we're instantly in awe of the majestic fjord, carved masterfully by glaciers during the ice ages. So striking is its beauty that author Rudyard Kipling fittingly described it as the eighth wonder of the world. Stretching 15 kilometers inland from the Tasman Sea, the fjord is a powerful testament to the artistry of nature. Rock faces tower 1,200 meters or more on either side, standing tall like ancient sentinels. We catch our breath at the sight of the Elephant peak, its figure reminiscent of an elephant's head and standing at a height of 1,517 meters. Not far off is The Lion, a crouching figure standing 1,302 meters high." /
-       "The calm waters mirror the towering cliffs and waterfalls in a spectacular display, while marine life adds dynamism to the serene landscape. Dolphins leap playfully in our wake, seals bask in the sun on rocky shores, and if we're lucky, we might even spot the rare Fiordland Crested Penguin waddling along the shoreline. As we take in these sights, a delicious aroma wafts from the galley below." /
-       "Time seems to lose its significance in this enchanting place. Before long, we find ourselves dining on fresh Fiordland's crayfish, a local delicacy perfectly complemented by the breathtaking view. Afterward, we retreat to the deck, indulging in the gentle rocking of the boat and the cool breeze stroking our faces. The ethereal beauty of the cascading waterfalls, vast cliff faces, and tranquil forests enrapture us. Every turn reveals new, wonderful sights, infusing an undulating sense of wonder in our hearts. Simple moments like these—basking in nature's unassuming elegance—are what make our journey truly extraordinary. We set off again, ready to uncover the next wonders that Queenstown holds for us." /
-       "Our nautical journey continues with a soothing glide towards the Queenstown Gardens. As elegantly manicured as they are naturally enchanting, the gardens sprawl across a small peninsula that juts into tranquil Lake Wakatipu, offering breathtaking panoramic views. The historical significance of these gardens, officially opened by Sir John McKenzie in 1867, is beautifully juxtaposed against a backdrop of towering mountains and the peaceful lake." /
-       "The Queenstown Gardens are a veritable Eden, teeming with both native and international flora. Each plant and tree flourishes under the careful hands of committed gardeners, blooming proudly in the warm summer sunlight. As we drift along the lake's serene waters, we catch sight of visitors leisurely exploring the gardens. They amble along the well-tread paths, picnicking, and playing games of frisbee golf, their laughter and enjoyment blending harmoniously with the gentle bird songs." /
-       "We can almost taste the deliciously cool and sweet gelato from Patagonia Chocolates, just as those strolling around the gardens do, their hands clasping dripping cones as they peruse flowerbeds and curling vines. Perhaps it is this scene that inspired the rich emerald descriptions in Margaret Pemberton's novel 'A Season of Secrets'. We reaffirm our love for Queenstown's quaint charm, promising to set foot in this beautiful sanctuary once we make landfall." /
-       "As we pull away, our water taxi steers towards Mt. Nicholas High Country Farm, an emblem of New Zealand's vibrant rural life. For over 150 years, this family-run farm has thrived in the shadow of its mountainous namesake. Across the water, the view offers a sweeping panorama. Tens of thousands of Merino sheep, one of the world's oldest and most resilient breeds, gently dot the landscape as does a variety of other chirpy farm animals." /
-       "Visitors in far-off fields can be seen engrossed in wool spinning, their fingers deftly twisting the soft strands into threads of authenticity. Others are enjoying first-hand encounters with the pigs and chickens, their wide smiles, and animated gestures a testament to the joy of connecting with life on the farm. A whiff of delectable roasts on the air telegraphs a typical dining experience here: a traditional farm BBQ, showcasing locally sourced lamb cooked to perfection, imbued with aromatic seasonings that spark our hunger with anticipation." /
-       "On this peaceful journey across Lake Wakatipu, our hearts flutter like the wings of the native birds dotting the open skies. The hum of our water taxi engine, a pleasant counterpoint to the natural serenade of gently lapping water and far-off animal calls, lends rhythm to our anticipation for the authentic farm-life experience that awaits. But for now, we allow the alpine landscapes and the lovely water views to wash over us, sinking deeper into the soothing ambiance of this idyllic Queenstown tour."
+       "Imagine yourself in a place where towering mountain peaks reach out to kiss the sky, enormous fresh-water lakes create captivating scenery, and the air smells of pure, untainted wilderness - that's Queenstown, New Zealand for you. Nestled along the shore of Lake Wakatipu and encircled by the Southern Alps, it is a treasure trove of natural beauty and thrilling outdoor experiences. But in summer, the town takes on a softer hue: fields burst with vibrant wildflowers, days stretch out as if refusing to end, and the normally poignant mountain chill mellows to a pleasant warmth. Today, we'll discover Queenstown by water taxi, exploring its incredible sights from the gentle rhythm of the lake's waves, punctuated by comfortable strolls on terra firma. Our clothes rustle with anticipation as we head for the dock, our faces embrace the velvety breeze, and our hearts hum with an unspoken song of adventure draped in tranquillity." /
+       "We step onto our water taxi, exchanging eager smiles with our guide, and pull away from the dock, leaving a gentle trail in the turquoise water of Lake Wakatipu. A soft breeze ushers us towards the first stop on our sightseeing tour: the serene Queenstown Gardens. From afar, the gardens paint a remarkable tableau of a cultivated wilderness, their beautifully manicured greenery artfully arranged against the backdrop of the shimmering lake and the distant snow-capped Alpine peaks." /
+       "A lush sanctuary established in eighteen sixty-seven, it spans fourteen hectares of meticulously cared-for flora and fauna, a testament to Queenstown's connection with nature. The park teems with a cornucopia of native trees, their leaves rustling like whispers of the summer breeze, and spectacular rose gardens bursting into blazes of crimson, pink, and white, their delicate fragrance wafting towards us even from the comfort of our water taxi. Through binoculars, bird-watchers can spot the multitude of native bird species that flutter and chirp within the branches, their songs serenading the park's visitors." /
+       "Within the verdant expanse of the gardens is a nod to the past, an old dignified feature standing since eighteen ninety-six, the Robert Hamilton Memorial. Despite its age, the structure radiates an air of quiet dignity, speaking of the people and stories it has seen over the centuries." /
+       "For those seeking a slightly more active engagement with the environment, the gardens offer a well-curated disc golf course. Stepping off the water taxi, we could join in, tossing flying discs towards metal baskets scattered throughout the park." /
+       "As we approach, we see others basking in the pleasant weather, their afternoon activities ranging from friendly games of disc golf to leisurely cycling down the many paths that meander through the park. We might even join a family enjoying a delightful picnic by the lakeside, their spread showcasing the very best of New Zealand's fresh produce." /
+       "There's a particular charm to beholding Queenstown Gardens from a water taxi. The radiant florals and verdant foliage reflecting off the clear waters create a stunning tableau that could effortlessly grace a postcard. As we disembark, we carry that captivating image within us, a gentle gem to savor from today's journey."
 
     override val middleShort = listOf(
-       "Our water taxi gently pulls away from the shores of Mt. Nicholas High Country Farm, tracing a path of delicate ripples across Lake Wakatipu towards the renowned Peregrine Winery. Nestled amidst plush greenery and in the shadowy embrace of the rugged mountains, the winery, established in 1998, is a beacon of fine wine culture in the Central Otago region." /
-       "As our boat leisurely cruises, we spot the silhouette of Peregrine Winery, its architecture an award-winning masterpiece that seamlessly merges with the breathtaking panorama. Named after the native Peregrine falcon, this venue invites us with the promise of sophisticated wine tasting experiences. We find ourselves eagerly picturing sampling their celebrated Pinot Noir, accompanied by locally sourced cheeses, all with a backdrop of rolling vineyard landscapes." /
-       "As our water taxi pirouettes playfully around in the lake, a small group of ducks cuts a dynamic path in the waters, seemingly escorting us to our destination. Their playful course presents a charming spectacle against the lush vineyards growing ever closer. The thought of enjoying the final product of these vine-filled vistas, after a patient maturing period, fills us with anticipatory delight. Though the winery will necessitate a short overland journey after we disembark, the prospect only adds to the unfolding experience." /
-       "An enchanting hum signals the start of our onward journey to Queenstown Hill. Also known as Te Tapu-nui, the 'mountain of intense sacredness,' Queenstown Hill promises panoramic vistas worth every step of the hike. A sense of reverence seems to murmur in the wind as we note the significance of this locale, steeped both in Maori and colonial history." /
-       "We daydream about the 'Time Walk', where plaques dot the trail, offering insights into the region's gold-mining past and its heritage. We also envision the iconic 'Basket of Dreams' sculpture - an emblem of Queenstown Hill - and dwell on the communal moments spent here - picnics, shared laughter, and frame-worthy pictures etching perfect memories against nature's grand canvas." /
-       "Later, nursing a traditional Kiwi meat pie accompanied by a local craft beer in a quaint café after the descent doesn't seem too far off a reality. But, for now, we relish the onset of the hill adventure as our water taxi docks. Amidst friendly nods from our fellow tourists, we step ashore, our hearts filled with calm anticipation as our Queenstown Hill exploration begins.",
+       "Boarding our water taxi once again, our next destination is the TSS Earnslaw, a vintage steamship that's been gracing the waters of Lake Wakatipu for over a century. As one of the last coal-fired passenger carrying vessels in the southern hemisphere, the 'Lady of the Lake,' as she is fondly known, takes us on a gentle voyage back in time. The ship was launched in the same year as the Titanic, in nineteen twelve, commissioned by New Zealand Railways to serve communities dotted around the lake. As F. Scott Fitzgerald once wrote, 'So we beat on, boats against the current, borne back ceaselessly into the past.' This quote, full of nostalgia and yearning, seems so perfectly fitting for our journey aboard the Earnslaw." /
+       "Stepping onto the wooden deck, we hear the low thump of the massive steam engines, catch the glow of the stokers fueling the fireboxes, and watch the rhythm of the engines in awe. The smell of coal and steam, the warmth of the fireboxes, the gentle vibration underfoot — it's a sensory symphony that connects us to a simpler era. Fellow passengers engage in quiet conversations, snap photos of the stunning scenery, or simply stand at the railings, lost in thought, watching the blue waters churn in the ship's wake." /
+       "There's more to our cruise than just steam and nostalgia though — the Promenade Café and Bar aboard the Earnslaw caters to our taste buds by offering delectable food and beverages. Soon, we are indulging in succulent New Zealand lamb paired with a glass of the region’s finest Pinot Noir. As we savor these local delights, we exchange stories with other passengers and crew members, making new connections while Lake Wakatipu and its surrounding peaks provide a stunning backdrop." /
+       "As we disembark from the Earnslaw, the allure of Queenstown Bay Beach beckons us. This picturesque location, just a short water taxi ride away, offers unparalleled beauty and tranquility. Located on the shores of Lake Wakatipu — one of the few lakes with its own 'tide' due to the unusual shape — Queenstown Bay Beach opens up to a breathtaking vista of Cecil and Walter Peaks, two of the most photographed mountains in New Zealand." /
+       "Upon our arrival, the sounds of gentle waves lapping against the shore and rustling leaves overhead create a tranquil symphony. As we observe this serene scene, our eyes are drawn to colorful gliders floating effortlessly above - a testament to Queenstown's fame as the birthplace of tandem paragliding. As we watch these delicate crafts etch paths in the sky, a tale comes to mind, about how the lake is formed from the beating heart of a giant, according to Maori lore." /
+       "This peaceful beach has seen its share of fame as well. In a connection to Hollywood, the crystal-clear waters of Lake Wakatipu replaced the Amazon River in Steven Spielberg's Indiana Jones and the Kingdom of the Crystal Skull. Yet, despite its notoriety, the beach has retained its enchanting beauty and tranquility." /
+       "There's something for everyone here. Some visitors picnic by the shore, indulging in the iconic Kiwi fish and chips. Others take to the water, riding the gentle tide in kayaks or swimming in the clear depths. Still others prefer to recline on the pebbly beach, absorbed in the pages of a novel. The quiet symphony of the beach, coupled with stunning views and our own pleasant company, forms a delightful conclusion to this portion of our Queenstown journey. As we soak in the peaceful beauty, we can't help but anticipate the wonders still to come.",
 
-       "Resuming our journey, we gently steer the water taxi away from Queenstown Hill and meander towards our next fascinating destination, Walter Peak High Country Farm. This traditional New Zealand farm, steeped in rich history since 1860, teems with endearing Scottish highland cows, red deer, and a flock of fluff-laden sheep, reminiscent of the station’s first herd introduced by Von Tunzelmann and MacKellar. The tranquility of the open waters of Lake Wakatipu provides a serene passage to this traditional farm." /
-       "As we approach the farm, the sight of wagging tails and frisky, gamboling lambs on the shoreline warms our hearts. Upon docking, a flock of friendly ducks engages in a playful ballet around the water taxi, their joyous quacks a tuneful welcome. The rustic charm of the farm activities beckons us alluringly. Imagine witnessing the herding prowess of working sheep dogs, shearing the thick wool from cooperative sheep, and later, spinning that very wool into soft, warm yarn. The opportunity to hand-feed the amiable Rumble, the resident Scottish highland cow, adds an incredible note of camaraderie to this truly immersive farm experience." /
-       "The highlight remains the traditional BBQ lunch, served in the colonial-style dining room. We can almost taste the succulent local lamb, venison, and seafood, visualizing their mouthwatering arrangement on our plates enhanced by fine New Zealand wine or beer. The delightful promise of dessert teases our appetite, completing the prospect of a hearty farm meal that we look forward to." /
-       "Leaving the farm, we direct our course towards the historic and scenic gorge of Skipper’s Canyon. En route, we listen to the soft whispers of the Shotover River as it serenely courses through the landscape. A river once proclaimed during the gold rush as the 'richest river in the world', it now offers tranquil beauty that seems timelessly captured in its sparkling waters. The breathtaking panoramas of the canyon around us recall picturesque scenes from the 'Lord of the Rings' trilogy, the embodiment of the fantasy landscape of Middle Earth." /
-       "The treacherous Skippers Canyon Road, frighteningly narrow and etched along a cliff face, narrates countless stories of the region's bygone gold-rush era. We let our imagination run free as we try to picture gold panning in the river, sifting the cool, clear waters through our fingers in hopes of catching a glisten of that precious metal. This experience, a delightful blend of adventure and tranquility, paints our journey with strokes of history, excitement, and serene pleasure. With the promise of more exploration ahead, our water taxi persists through the soothing waters, leading us onward for more discoveries on this unforgettable tour.",
+       "As the last visages of Queenstown Bay Beach fade from our view, we embark on our water taxi once again. This time we're bound for Walter Peak High Country Farm, a charming slice of rural life established in eighteen sixty. The farm spans an impressive twenty-five thousand seven hundred and fifty-eight hectares, a testament to the heroic scale of farming that shapes New Zealand's landscape." /
+       "Drifting onwards upon Lake Wakatipu's serene water, we use the gentle journey to furrow our brows over a map of the farm, our fingers tracing the windswept hillscapes and lush pastures. We share stories and bond with fellow passengers over cups of steaming cocoa, as the 'Lady of the Lake,' the TSS Earnslaw, ferry us faithfully across the lake. Under the sheen of the sun, the occasional ripple stirs up diamonds on the lake surface, while beyond, the mountains stand patron to our passage, their majestic peaks piercing the clear summer skies." /
+       "Upon arrival, we're enchanted by the friendly barks and herding demonstrations of the intelligent Border Collies, their swift movements directing flocks with ease. The peace and tranquility of life on the farm etch onto our senses - the bleating of sheep, the gentle rustle of trees, and the sweet scent of fresh hay. As the farm tour concludes, many of us make our way to the Colonel's Homestead, lured by the promise of a traditional barbeque lunch- succulent lamb chops, tender chicken, and a classic Kiwi pavlova cause our tastebuds to tingle in anticipation." /
+       "Having savored a hearty meal, it's time to explore the expansive landscape further. Some opt for horse trekking, their silhouettes on horseback blending harmoniously with the unending horizons of green, the perfect homage to the farm's age-old heritage." /
+       "Leaving the wholesome simplicity of the farm behind, we board our water taxi once more. The afternoon sun casts long shadows over the water as we make our way to the revered Amisfield Winery and Bistro. Founded in nineteen eighty-eight, this prestigious vineyard nestles over two hundred acres of land in Central Otago, New Zealand's acclaimed wine region. We anticipate a symphony of flavors, from their renowned Pinot Noir to aromatic white wines." /
+       "As we approach, the architectural charm of the winery draws our attention. The harmony of nature and man-made beauty truly captivates us. We see fans of New Zealand Pinot Noir engaged in intimate wine-tasting sessions, their faces illuminated by the fine evening light. Everywhere around us, visitors are clicking cameras, capturing these precious memories, while others are immersed in the breathtaking landscapes around them." /
+       "Amisfield Winery and Bistro holds a unique dining experience known as 'Trust the Chef.' Here, gourmands are treated to a daily changing menu of organic and locally-sourced foods coupled with perfectly paired wines. It's an indulgent treat we're eager to experience." /
+       "As we disembark under an apricot-hued sky, the scent of ripening grapes and earth hang sweet in the summer air, leading us to believe that today's journey, seasoned by Walter Peak Farm's rustic charm and Amisfield's vino splendor, still has much to uncork.",
 
-       "Trading the rugged landscapes of Skipper’s Canyon behind, our water taxi peacefully charts its course towards the dreamy settlement of Glenorchy. This small town unfurls at the northern end of Lake Wakatipu, its landscape an undulating tapestry of majestic mountains, serene lakes, and lush greenery—a sight so wondrous it was immortalized in the celluloid pages of The Lord of The Rings and The Hobbit trilogies." /
-       "As our water taxi and its delightful wake draw closer, Glenorchy performs a brilliant play of colors, its verdant foliage standing in stark contrast with the shimmering blue of the lake. A collective gasp slips from us all when we learn it is the gateway to 'Paradise'—a place of such heart-wrenching beauty it mirrors the heavenly abode itself. It’s not just the nature that mesmerizes us, though. The town carries an unmistakable scent of its colonial past, having been a Scheelite mining base in the late 1800s." /
-       "Pulling into the shore, we vividly imagine savoring a slice of New Zealand in the form of a hearty venison pie, a local delicacy easily found in the welcoming cafes here. We also visually follow the adventurers setting out for the Routeburn Track, one of New Zealand's Great Walks, their enthusiasm washing over us. But equally riveting is the prospect of smoothly cruising back on our water taxi, seats soaked in the afternoon sun, winds whispering tales of charismatic locales, and the thought of the upcoming visit to Arrowtown teasing our anticipation." /
-       "Arrowtown, a historic gold mining town in the Otago region, comes into view. A testament to the Otago gold rush, the town, with its quaint shops and eateries, paints a captivating picture. The miners' cottages, their original architecture preserved, peek through the town's corners, offering glimpses into its vibrant past. Deep history blends subtly with Hollywood fame as we remember scenes from Peter Jackson's 'The Lord of the Rings' trilogy, filmed amidst this very old-world charm." /
-       "Stepping off the water taxi, we feel a tug to the past. The vision of the well-preserved cottages against the backdrop of the Arrow River gives us vivid senses of the town's past. The promise of gold still echoes off the preserved miners' homes, inciting us to picture the lives of Chinese immigrants who once flocked here in search of gold. The notion of ending our day with a heavenly meat pie from the Arrowtown Bakery or the regal sip of pinot noir from the Central Otago wine region sums up an adventure of pleasing contrasts and gentle excitement. Yet, as we gaze upon the picturesque backdrop, we know our exploration isn't over; the water taxi trip holds more treasures waiting to be discovered in this wondrous journey."
+       "Our hearts flutter with anticipation as we board the water taxi once more, the spray from Lake Wakatipu lightly dusting our faces. We're headed to the enchanting Kelvin Peninsula Trail, a beloved pathway that offers a diverse exploration of Queenstown's natural beauty. Named after Lord Kelvin, a celebrated physicist who is commemorated along the trail, the walking track meanders around a golf course, offering panoramic vistas of Lake Wakatipu and the aptly named Remarkables, a mountain range famous for its extraordinary beauty." /
+       "As the water taxi drops us off at the start of the trail, we're greeted by a majestic tableau: snow-capped mountains casting glorious reflections onto the tranquil blue waters of the lake. As we wander along the trail, the green expanse of native bushland sings a muted song, punctuated by the lively chirps and darting movements of native birds such as the New Zealand Fantail, Bellbirds, and the Tui." /
+       "The trail is a living gallery, adorned with the delicate sculptural works of local artists such as Mark Hill and Shane Woolridge. Each creation is a quiet testament to the harmonic relationship between New Zealand's nature and culture. The community's love for this sacred path is evident as we cross paths with locals running, cycling, and walking their dogs. After a day of walking and absorbing nature's bounty, we unwind with a glass of velvety Central Otago wine, the gentle clink of our glasses echoing our satisfaction." /
+       "Leaving behind the vibrant energy of the trail, our next destination is the Onsen Hot Pools, tucked away on a cliffside overlooking the gorgeous Shotover River canyon. Our arrival is heralded by the welcoming warmth of the private pools, their water drawn from natural springs and heated to a temperature that promises the utmost relaxation." /
+       "The indoor/outdoor setup of the pools is an invitation to immerse ourselves in the stunning spectacle of nature while reveling in the comfort of the warm, soothing water. Up to four people can revel in each pool's intimate sanctuary, turning the act of taking a dip into a shared experience of tranquility." /
+       "As we soak in the therapeutic waters, the noise of the world fades away, replaced by the serene symphony of natural sounds: the distant whisper of the river, the hum of the breeze, the soft rustling of leaves in the wind. The setting sun paints the sky in hues of crimson and gold, bathing Coronet Peak in a warm glow - an unforgettable sight from the tranquil waters of the hot pool." /
+       "Afterwards, we wrap ourselves in plush robes, our bodies relaxed and warm from the soothing soak. We make our way to the onsite café for a romantic evening meal, indulging in local fare and relaxing drinks while the dazzling afterglow of the sunset slowly fades into a star-studded blanket. As we recount our adventures so far, we find ourselves eager for what's yet to unfold in our Queenstown journey. The echo of laughter, the clinking glasses, the whispers of shared stories make this place, this moment, a precious gem in the treasure chest of our memories.",
+
+       "As we wave goodbye to the tranquil setting of the Onsen Hot Pools, we embark once again aboard our trusty water taxi for a cruise over the enchanting depths of Lake Wakatipu. Our destination: Queenstown Underwater Observatory. As we traverse a realm of impossibly blue waters and lush greenery reminiscent of Katherine Mansfield's evocative writing, our stomachs flutter with the thrill of an impending underwater experience, made all the more extraordinary without the need for diving suits or oxygen tanks." /
+       "Upon alighting at the Main Town Pier, we descend one and a half meters below the lake's surface into a world generally hidden from human eyes. Through thick glass panes, Lake Wakatipu's mute inhabitants come to life - diving ducks, slithering eels, and an array of local fish species. We can spot salmon and trout darting through the clear waters, their swift, elegant movements a captivating underwater ballet." /
+       "With the observatory's feeding tube, we are afforded the delight of drawing these underwater creatures closer to us, filling the space with a flurry of bubbles and shimmers as food pellets hit the water and attract the nibbling fish. Amid flashes of silver scales and the barely audible clicks of underwater cameras, the sheer beauty of the observatory instills in us an intimate understanding of this silent underwater realm." /
+       "Emerging from the depths, we return aboard the water taxi, this time setting our course to the pastoral charm of Glenorchy Animal Experience. This family-run farm, nestled amid Glenorchy's serene landscapes, offers a respite from the underwater world and welcomes visitors to an idyllic universe populated by furred and feathered friends. As we disembark, the knowledge that the farm started as a home for rescued and unwanted animals warms our hearts." /
+       "The farm, which played a part in creating one of the magical scenes of Middle Earth in the Lord of the Rings films, is alive with activity. Alpacas gaze at us with curious eyes, domestics and wild ducks mingle at the water's edge, and pet-loving visitors amiably brush the woolly coats of friendly sheep. The friendly buzz of enthusiastic explorers filling up the guided tours and the delightful laughter of children feeding animals: all these moments shape our wonderful journey in Glenorchy." /
+       "In addition to these enriching interactions, food invariably plays its part in enhancing our experience. Glenorchy Café presents us with the opportunity of partaking in a local culinary favorite - the Kiwi Burger, which we savor in a tranquil setting, with the harmonious sounds of the farm serenading us. As we end another fulfilling day in Queenstown, we carry these unique experiences in our hearts and look forward to more extraordinary adventures awaiting us.",
+
+       "As we alight from the water taxi, two new adventures await us on the horizon: Moke Lake and the twin islets of Pigeon and Pig. Nestled just a short journey outside Queenstown, they promise further immersion into nature, coupled with bursts of excitement and splashes of tranquility." /
+       "Boarding another water taxi, we are guided toward Moke Lake, an enchanting part of the Ben Lomond Station. As the boat cuts through the surface, we are greeted with the sight of shimmering mountains mirroring perfectly on the lake's surface, a spectacle that renders us speechless. We spot photographers setting up their tripods to capture the near-perfect reflection and artists settled on land, their brushes trying to recreate the same breathtaking scenes on canvas." /
+       "Around the lake, whispers of a rich gold mining history rustle in the crisp mountain air. Their stories are retold in the remnants scattered around the area – rusted tools and derelict mine entrances hidden among the greenery. Fellow visitors on bicycles whiz past us along the loop track encircling Moke Lake, caught in a mesmerizing six and a half kilometer journey through beautiful panoramas." /
+       "As the day mellows, we make ourselves comfortable on the soothing lake's shores. Amid the clinking of camping gear and laughter of families casting their fishing lines into the water, we prepare a traditional New Zealand Lamb BBQ over a campfire. The delicious aroma mingles with the fresh air as we raise our glasses to the golden sunset, casting its rays on the lake and surrounding mountains, haute couture of nature turning the tranquility tapestry into a grand twilight ceremony." /
+       "Fortunately, we soon embark on another journey through the gentle waves of Lake Wakatipu: an expedition to the Pigeon and Pig Islands. Uninhabited, undisturbed, these reserves managed by the Department of Conservation are rich in birdlife. New Zealand pigeons and bellbirds fill our ears with a symphony of melodious chirps, the only inhabitants of these serene islets." /
+       "As we approach the islands, our boatman regales us with oral traditions and storytelling, accentuating the rich Maori folklore and European settler histories peppered with narratives of fruitful islands and the source behind Pig Island's peculiar title. Amid tales of ancient times and distant cultures, we catch glimpses of one-of-a-kind experiences – fish darting beneath the crystal waters, sunlight glinting off their scales, and birdwatchers on the nearby beach pointing towards a canopy filled with twittering silhouettes." /
+       "As we disembark on the soft sands of uninhabited lands, we unpack a picnic lunch – a simple spread that tastes grand in the harmony of our surroundings. As we taste and toast under the open skies, we look out on the serene lake, whispering mountains, and the endless stretch of days ahead, filled with the anticipation of more wondrous journeys in Queenstown."
 )
 
     override val endShort =
-       "Resuming our tranquil waterborne journey from the historic allure of Arrowtown, we navigate our water taxi towards the breathtaking Lake Hayes. Affectionately known as the 'mirror lake', it is famous for flawlessly reflecting the towering mountains that cradle its clear waters. As our water taxi skims across its surface, history whispers of Maori fishermen and the cultivation of potatoes along the fertile shores." /
-       "On this occasion, Lake Hayes lives up to its reputation – the water mirrors not only the surrounding mountains but also the cloud-kissed sky. We think of the Lake Hayes Loop, a cherished trail that has been immortalized in The Lord of the Rings, now being explored by walkers, runners, and cyclists. A longing seizes us to join them and feel the earth beneath our feet while we trace the edge of the lake." /
-       "To savor the beauty from the shore, we imagine spreading out a picnic with delectable kiwi lamb, perfectly paired with local wines from the nearby Gibbston Valley wineries. Let us not forget our fellow visitors we glimpse through the boat's windows, engaged in a silent dance with nature as they attempt fly fishing, their reflections shimmering on the water's surface. The Billy Joel lines “A mirror of its time,” seems to manifest beautifully, as we share a warm moment with our captain, reveling in a group of majestic black swans performing a synchronised ballet on the mirror-like lake." /
-       "The journey continues to combine tranquillity with gentle excitement, our next stop - Bob’s Cove Nature Walk. From Lake Hayes, our water taxi gently steers towards the verdant invitation of Bob's Cove. Serenity permeates the air as we cruise towards the age-old walking track, the Bridle Path, which once under the footfall of the Maori now contemplates ours." /
-       "The native bush canopy, laced with bird songs and fluttery acquaintances like bellbirds and native wood pigeons, bids us a warm welcome. Lending an exotic touch are introduced species like quails, which gingerly explore the native habitat. A high point in our journey unfolds as we spot the cove itself, an historic reserve since 1975. Here, a perfectly preserved page of natural beauty awaits us." /
-       "While the promise of a leisurely nature walk fills us with anticipation, we take a moment to drink in the sight of the cove from our water taxi—an untouched canvas of swaying trees reflecting in the lake's clear surface. It's an idyllic union of fresh-water spray and the hidden treasures of the Bob's Cove Nature Walk, a memory in the making that promises more encounters with the mesmerising charm of Queenstown." /
-       "Carrying with us a bouquet of unforgettable experiences, we journey onwards, ready to paint the final strokes on our travel canvas. Our trusty water taxi eases onward, charting a course that reflects the iridescent hues of the setting sun on Lake Wakatipu. Pure excitement kindles in our hearts as we approach the acclaimed Amisfield Winery." /
-       "Founded in 1988, the Amisfield Winery holds an esteemed position in the pantheon of extraordinary cool-climate wines. Tucked cosily in the Pisa sub-region of Central Otago, the sprawling 200-hectare vineyard is a haven for grape harvesting. Among the many decorated wines it produces, the Amisfield Pinot Noir stands as a shining symbol of its excellence, even bagging the prestigious 'Best New Zealand Wine' award at the International Wine Challenge in London." /
-       "As we disembark, the soft snick of wine corks echoes around us like a medley of welcoming chimes, inviting us to celebrate the art of winemaking. Our palates invigorated by the anticipation of tasting their award-winning Pinot Noir, we let the delicate, earthy notes tease a melody on our tastebuds. Parallely, the famed 'Trust the Chef' menu from the vineyard's celebrated Bistro tempts us with an array of mouthwatering dishes, each an ode to local, fresh ingredients and artisanal methods." /
-       "We imagine allowing ourselves the simple pleasure of unbeknownst dishes paired perfectly with their wines, a sumptuous rendezvous of food and drink. The winery provides a chance for us to stroll leisurely through sun-dappled vines, breathing in the aroma of growing grapes, and gaining insight into the intricate processes of winemaking. This immersion into viticulture is both enlightening and enchanting, elucidating the journey of grape to glass." /
-       "As the day ages beautifully into twilight, we trace our steps back to the water taxi, a reflection of our own journey bathed in the remaining warm hues of the day. On the tranquil ride back, we cradle a glass of the vineyard's star nectar, the Pinot Noir. Nestled in the comfort of our lightly rocking vessel, the cool lake breeze becomes our companion. We observe nature's grand theatre performing its masterpiece – a stunning Queenstown sunset." /
-       "Rust-orange light brushes the mountains, playing subtly along the orchestra of waves on Lake Wakatipu. Such entrancing beauty perfectly pours into the final chapters of our Queenstown excursion. As we approach the end of this peaceful voyage, our hearts brim with memories and stories woven with each stop we made—the towns, landscapes, the shared smiles, the mirrored lakes, the culinary delights. All these elements dance together to create a symphony, leaving an indelible mark on our hearts. This journey is proof that life's most beautiful gifts unfold as we linger along the quieter pathways of adventure, ensuring Queenstown, New Zealand, lives on within us, a gentle echo that whispers, 'One day, we shall meet again.'"
+       "Continuing our exploration of New Zealand's awe-inspiring landscapes, we set off on our water taxi with newfound excitement. Heartbeats echoing in rhythm with the soothing lapping of Lake Wakatipu against our boat, we glide towards the final destination of our adventure: the serene Bobs Cove Nature Walk." /
+       "Steeped in natural beauty, Bobs Cove is a place of contrast, where lush native bush meets the remarkable blue waters of Lake Wakatipu. A tangible sense of history permeates the air here, whispering tales of the cove's past usage as a Maori moa hunting camp hundreds of years ago. Another story etched in stone is that of the historic lime kiln, a silent reminder of the gold mining activities that once defined the local economy during the nineteenth century." /
+       "As we trace the route towards Bobs Cove on our water taxi, our attention is riveted by the sudden flutter of wings. A pair of bellbirds dart above the water's surface, their melodic calls harmonizing with the gentle wavelets of Lake Wakatipu. Tuis, the avian emblems of New Zealand, join the enchanting chorus, their iridescent feathers shimmering in the sunlight." /
+       "Our water taxi eases into Bobs Cove, and we are greeted by an enchanting blend of tranquility and activity. Venturesome visitors carve smooth paths through the calm waters on kayaks while others find joy in the simple pleasure of fishing, their lines breaking the glassy surface of the lake. Families and couples have staked out spots in several picnic areas, their laughter and soft conversations filling the air." /
+       "Inspired, we decide to join in and feast on the local delicacies, including the famous Southland cheese rolls. As we relish every bite, the mouthwatering flavors are amplified by the beauty of our surroundings. The day slowly draws to a close on this note of fulfillment, marked by satisfied palates and the resounding echo of shared laughter." /
+       "And so, as the golden curtain of the day drops on the majestic stage of Queenstown, we end our enchanting exploration on this peaceful note. Each sight, sound, and taste we've experienced along this journey lends itself to a mesmerizing memory, forever etched in our hearts." /
+       "Yet, Queenstown, with its wealth of natural beauty and history, promises more. Today was but a gentle unfolding of one chapter. As we look forward to the days yet to come, we embrace the quiet promise of new adventures that lie ahead, waiting to reveal their grandeur to us once again. Until then, the serene lullaby of Lake Wakatipu, gently lapping against our boat, serves as our symphony of dreams; a tranquil farewell until we meet again."
 
     override val start =
        "In hues of boundless blue sky, emerald green mountains, and a symphony of the tranquil lake's whispers, Queenstown, New Zealand, dutifully prepares itself as the epitome of summer perfection. Known as the gem of the Southern Alps, it nestles amidst the stunning ivory-capped peaks and the serene waters of Lake Wakatipu. Buffeted by the gentle mountain breeze, fragrant with the sweetness of blossoming flowers, the town twinkles in anticipation for the countless surprises it holds for curious visitors in the heart of summer." /
@@ -207,4 +221,414 @@ object SleepStoryTravelQueenstownCues : SleepStoryPoseCues {
        "As the last ripples of our journey echo in the waters of Lake Wakatipu, we draw comfort in knowing we traversed not just a city but the generous spirit of Queenstown. The whisper of the wind ensures we carry home a slice of tranquillity, remnants of a joyous feast, the brave spirit of adventure, and a lingering symphony of a journey that has forever etched Queenstown in our hearts." /
        "Assured with these memories and the comforting pulse of the water beneath us, we allow the steady hum of the water taxi to lull us into a blissful harmony, serenading us with a gentle lullaby as we dream under the New Zealand sky - a perfect ending to our Queenstown adventure. As the stars shimmer, each twinkle is a promise of new stories awaiting us under the Southern Cross, calling for another serene exploration, another peaceful adventure, and another soothing journey that awaits us tomorrow on the sparkling waters of Lake Wakatipu. With the ebbing wave of a heart, our story today finds its tranquil shore, softly winking us good night."
 
+/*
+////////////////////////////////////////////////////////////////////////////////
+
+Queenstown Gardens: A peaceful park offering stunning landscaped gardens, pristine water views, and opportunities to engage in some leisurely activities like disc golf. Your water taxi will drop you off just a short walk from the gardens.
+
+- Queenstown Gardens is a botanical park that was created in 1867 and spans 14 hectares.
+- The park covers a variety of plant species including a large selection of native trees, rose gardens, and around 37 native bird species; it's a haven for botany enthusiasts and bird watchers.
+- One of the oldest structures in the park is the Robert Hamilton Memorial, built in 1896.
+- The park features a well-designed disc golf course attracting players from around the world.
+- While walking through the paths of Queenstown Gardens, visitors might be seen playing disc golf, skating or cycling on the pathways, or just enjoying the beautiful views of Lake Wakatipu.
+- A typical experience would involve grabbing a picnic basket and enjoying a meal by the lakeside with a selection of New Zealand's finest produce.
+- The view of Queenstown Gardens from the water taxi can be a memorable experience. The bright flowers and green foliage reflect off the clear lake waters, providing a stunning backdrop for holiday photos.
+- The moment of buying a water taxi ticket becomes a moment of anticipation. The simple transaction is filled with unspoken promises: of discovery, of relaxation, and of an encounter with natural beauty. As you board the water taxi, you feel a wave of excitement that heightens as the engine turns on and the boat gently pulls away from the dock. Queenstown Gardens look magnificent from the middle of Lake Wakatipu — a tranquil sanctuary nestled amidst the striking beauty of New Zealand. The scent of the lake, the sight of the lush gardens and surrounding mountains, and the feeling of the water taxi ride make this a truly special experience.
+
+=====
+
+TSS Earnslaw Vintage Steamship: Experience a step back in time on this iconic vintage steamship, offering a unique view of Lake Wakatipu and the surrounding mountains. A water taxi can easily transport you to and from the ship.
+
+- The TSS Earnslaw is one of the last remaining coal-fired passenger carrying vessels operating in the southern hemisphere.
+- The twin screw steamer was launched in the same year as the Titanic in 1912.
+- It was commissioned by New Zealand Railways to service the communities around Lake Wakatipu. 
+- F. Scott Fitzgerald once said "So we beat on, boats against the current, borne back ceaselessly into the past." This quote seems apropos considering the historical past of the Earnslaw.
+- Passengers can enjoy watching the stokers fuelling the fireboxes and see the giant steam engines at work.
+- Aboard TSS Earnslaw, guests can indulge in delectable food and beverages at the Promenade Café and Bar, including the famous New Zealand lamb and a glass of Central Otago’s finest Pinot Noir.
+- When aboard the Earnslaw, it's common to see others taking in the breathtaking natural scenery or snapping photos of the picturesque surroundings.
+- A lovely human experience to be had on the TSS Earnslaw journey includes the opportunity to engage with fellow travellers or crew members, sharing stories and experiences, while sipping a hot cup of tea and watching the magnificent mountains roll by in the sunshine as you travel across Lake Wakatipu to your destination.
+
+
+=====
+
+Queenstown Bay Beach: This picturesque spot along Lake Wakatipu offers majestic views of the mountains while providing a tranquil sand and stone beach for relaxation. Your water taxi will be able to dock right by the beach.
+
+- Queenstown Bay Beach is located on the shores of Lake Wakatipu, one of the few lakes in the world with a 'tide' due to its unusual shape causing a regular rise and fall in water levels.
+- The beach overlooks Cecil and Walter Peaks, two of the most famous and photographed mountains in New Zealand.
+- As Queenstown is considered the birthplace of tandem paragliding, you'll frequently see colourful gliders soaring above the lake and beach.
+- The Maori were the first to discover the area and believed that the giant Matau was turned into a mountain and the lake is formed from his beating heart, hence the rise and fall of its tide.
+- In Steven Spielberg's Indiana Jones and the Kingdom of the Crystal Skull, Lake Wakatipu was used to represent the Amazon River.
+- Foodwise, you must try the iconic Kiwi fish and chips on the beach or from one of the multiple excellent seafood restaurants nearby.
+- A lot of people can be seen picnicking, swimming, paragliding, kayaking, or relaxing with a book on the beach.
+- A pleasant water taxi experience starts with hopping on at the Queenstown pier and then traveling across the clear blue lake towards Queenstown Bay Beach. Along the ride, you can take in beautiful views of the mountains, appreciate the might of the natural wonders, and if you're lucky, you might spot a rainbow in the sky. Upon reaching the beach, the cool breeze welcomes you, mingling with the scent of pine trees from the surrounding forest, presenting an enchanting arrival.
+
+=====
+
+Walter Peak High Country Farm: A charming farm offering interactive demonstrations and breathtaking mountain views. The farm is accessible by a water taxi ride across Lake Wakatipu.
+
+- Walter Peak High Country Farm was established in 1860, making it one of the oldest stations in New Zealand.
+- It encompasses 25,758 hectares of land, demonstrating the grand scope of farming in New Zealand.
+- The farm's sheepdog demonstrations are a popular sight, showcasing the intelligent border collies at work.
+- Visitors often opt to dine at the Colonel's Homestead after the farm tour, where they can partake in a traditional barbeque lunch, featuring the likes of lamb chops, chicken, and pavlova for dessert.
+- Other visitors are frequently seen participating in horse trekking, offering a unique way to navigate the expansive landscape.
+- One of the prominent features of a visit to Walter Peak High Country Farm is the water taxi journey via the iconic TSS Earnslaw steamship, known as the "Lady of the Lake." This historic steamship offers stunning views of Lake Wakatipu and the surrounding mountain ranges. On a sunny day, the glistening water and snow-capped mountains provide a picturesque, tranquil setting that leaves most travelers mesmerized. Visitors often spend the journey conversing with fellow passengers, immersing themselves in the history of the steamship, or simply soaking up the beauty of the surrounding landscape with a cup of hot cocoa in hand.
+
+=====
+
+Amisfield Winery and Bistro: This renowned winery is known for its exquisite wines and exceptional food, nestled in the dramatic landscapes of New Zealand's famous wine region. Your water taxi will take you there via a lovely lake route.
+
+- Amisfield was established in 1988 and is a renowned producer of Pinot Noir and aromatic white wines.
+- The winery is nestled over 200 acres of vineyards in Central Otago, one of the most well-known wine regions in New Zealand.
+- Their Bistro offers a daily changing menu of organic and locally sourced foods, including their famous 'Trust the Chef' dining experience, a multi-course shared meal with paired wines.
+- Amisfield is mentioned in Victoria Moore's book "The Wine Dine Dictionary" when detailing great examples of New Zealand Pinot Noir.
+- Landscaped water plants and destination trees make a natural border which shields the inner plantings of lavender, olives, and vineyard.
+- As you travel by water taxi, you might see people enjoying a wine tasting session, taking pictures of the stunning views, or appreciating the unique architecture of the winery.
+- The pleasant human experience: Getting your tickets for the water taxi just as the sun is setting, the warm tones reflecting off the tranquil lake. As you step aboard, the captain provides a map showing the route across the lake. You feel a rush of excitement as the trip begins and the beautiful winery comes into view in the distance. As you approach, you take in the sight of the serene water and vineyards against the majestic backdrop of the surrounding hills. It's an experience that captures all the beauty that Queenstown has to offer.
+
+=====
+
+Kelvin Peninsula Trail: A beautiful walking trail along the lakeshore, offering a different perspective of the Queenstown area. A short water taxi ride will drop you off at the start of the trail.
+
+- The Kelvin Peninsula Trail loops around the golf course and offers stunning panoramic views of Lake Wakatipu and the Remarkables.
+- The trail passes through expansive farmlands and native bush, and features sculptures and artwork from prominent local artists, such as Mark Hill and Shane Woolridge.
+- This trail is named after Lord Kelvin, a physicist, whose monument is visited on the trail.
+- You might spot native birds such as New Zealand Fantail, Bellbirds and Tui since they often swoop and dart along the trail.
+- When you step off the water taxi, you are welcomed by a panorama of snow-capped mountains reflecting onto the calm, blue waters of Lake Wakatipu.
+- After a day of walking, you can reward yourself with a glass of local Central Otago wine.
+- The community often uses the trail for running, cycling, or walking dogs. From watching locals enjoy their routines to witnessing groups of riders pushing their limits, there's a lively atmosphere on the trail.
+- A pleasant human experience would be checking the water taxi schedules, planning your day while listening to the soft lapping of the lake water against the shore. Then, stepping on board, you feel the brisk wind and sunshine as the boat pulls away, taking you towards an adventure on the idyllic trail.
+
+=====
+
+Onsen Hot Pools: Relax and rejuvenate in the private hot pools offering panoramic views over the Shotover River and Coronet Peak. A water taxi can take you to the base area, just a short drive from the hot pools.
+
+- The Onsen Hot Pools are located on the cliffside overlooking the beautiful Shotover River canyon.
+- The water in the pools is from natural springs and is heated to a perfect temperature for relaxation.
+- They offer a unique indoor/outdoor experience, where you can appreciate nature while in the comfort of a warm pool.
+- The area is secluded and offers a peaceful, serene atmosphere, unlike the hustle and bustle of Queenstown's city center.
+- Each of the hot pools can accommodate up to four people, making it an intimate setting for relaxation and soaking.
+- After a relaxing soak, visitors often head to the onsite cafe, offering delicious local fare and drinks.
+- Having a water taxi ride to the base of the pools allows a fantastic sightseeing experience of the picturesque Shotover River canyon and the surrounding mountain landscape.
+- An unforgettable moment can be unwinding in the hot pool while seeing a stunning sunset over Coronet Peak. Breathing in the fresh mountain air invigorates your senses, as the water taxi's gentle lapping sound against the shore syncs with your relaxed heartbeat. The tranquility soothes your mind, making you feel as if you are floating in a serene, peaceful dream.
+
+=====
+
+Queenstown Underwater Observatory: Get a unique underwater view of Lake Wakatipu's marine life at the observatory, located within Queenstown Bay pier. Arrival and departure by water taxi is an enthralling experience.
+
+- Hidden 1.5m under the lake's surface within the Main Town Pier, this unique attraction offers visitors an opportunity to see life beneath Lake Wakatipu.
+- From the observatory, you can view diving ducks, eels, and an array of local fish species including salmon and trout. 
+- The water in Lake Wakatipu is so clear due to its low temperature and the absence of damaging organisms that can reside in warmer waters.
+- The famous New Zealand author Katherine Mansfield mentioned Lake Wakatipu in her work, describing the impossibly blue waters and lush greeneries by the lake.
+
+Typical Activities: 
+- Feeding the fish right from the underwater observatory. The feeding tube allows people to drop food to attract the fish closer to the observatory windows, providing an exciting close encounter with them.
+- Taking breathtaking photos of the sea life and the clear waters of Lake Wakatipu.
+
+Pleasant Human Experience: 
+- The thrill of boarding a water taxi begins your journey to the underwater observatory. As you glide over the clear, deep-blue waters of Lake Wakatipu, marvel at the surrounding mountain ranges and the famous Remarkables.
+- As you near the Main Town Pier, anticipation builds up for the underwater adventure that awaits. The helpful and friendly boatman doubles as your tour guide, pointing out famous landmarks along the way.
+- Once inside the observatory, the magical world beneath the lake unfolds. It's a unique juxtaposition of being underwater while staying dry, a truly memorable experience that's made even more special by sharing it with fellow explorers.
+
+=====
+
+Glenorchy Animal Experience: A family-run farm with an array of interesting animals, nestled in the serene landscapes of Glenorchy. The water taxi will transport you there, adding a scenic boat ride to your day.
+
+- The Glenorchy Animal Experience began as a home for rescued and unwanted animals.
+- The farm is a part of Lord of the Rings filming locations, contributing to one of the greatest Middle Earth scenes. 
+- The animals in the farm are well cared for despite their previously challenging circumstances.
+- A variety of furred and feathered friends are waiting for their visitors like alpacas, domestic and wild ducks, chickens, sheep and more. 
+- Other activities visitors might be seen doing include feeding the animals, taking photos, and going on guided tours around the farm.
+- At the Glenorchy Café nearby, you can enjoy a signature dish of New Zealand, the Kiwi Burger, in a relaxed setting.
+- A common and pleasurable water taxi ride involves the anticipation of meeting the animals. As you depart Queenstown on Lake Wakatipu, you're surrounded by the Remarkables mountain range and the neighbouring peaks. While consulting your map, comparing the tranquil and untouched landscapes of the lake to its smaller representation, you'll look forward to coming face-to-face with Glenorchy’s wildlife. The journey is peaceful, with shimmering water beneath and a clear blue sky above, dotted with occasional clouds. Each ripple on the surface of the lake and each greeting from passing boaters build the excitement for the experience to come.
+
+
+=====
+
+Moke Lake: A beautiful and serene lake surrounded by mountains, ideal for camping, fishing and kayaking. A water taxi ride will take you there with an added dash of adventure.
+
+- Moke Lake, located just outside of Queenstown, is part of the Ben Lomond Station.
+- Known for its almost perfect reflective surface, the lake is a beloved spot for photographers and artists.
+- The area around the lake has a rich history of gold mining, and you might still find pieces of this history scattered around.
+- The loop track around Moke Lake, about 6.5 km, is a popular walking and mountain biking route offering stunning views of the lake and its surrounding mountains.
+- Since the place is a secluded beauty, you may happen to see seasoned campers setting up their tents or locals and tourists enjoying a fishing session.
+- The area is often used for horse trekking, and animals such as sheep, cows and horses often seen against the backdrop of the scenery.
+- A favorite activity while visiting Moke Lake by water taxi is to enjoy the sunset casting golden colors over the surrounding mountains. The feeling of tranquility on the quiet lake is the perfect ending to a busy day.
+- A typical dining experience might include cooking over the campfire, with local dishes like a traditional New Zealand Lamb BBQ or simply enjoying a picnic in the peaceful environment. 
+- One unique and personal experience involving a water taxi would be being on the lookout for playful brown trout jumping out of the lake as the sun sparkles off their scales, while the driver weaves through the serpentine path with ease. The cold spray of the lake water mixed with the warm sunlight provides a delightful multi-sensory experience.
+
+=====
+
+Pigeon and Pig Islands: These two islands located in Lake Wakatipu offer a unique opportunity for bird watching and exploration. Your water taxi service will provide a delightful ride to the islands.
+
+- Pigeon and Pig Islands are reserves managed by the Department of Conservation.
+- The Māori name for Pigeon Island is "The Fruitful Island", and Pig Island's name reportedly comes from early European settlers releasing pigs there.
+- Many native and exotic bird species can be seen on these islands, including the New Zealand pigeon (Kererū) and bellbirds (Korimako).
+- Though not known for specific literary references, the Maori folklore and European settler histories surrounding the islands are rich in oral traditions and storytelling.
+- On a water taxi ride to the islands, you may be treated to stunning views of Lake Wakatipu and the surrounding mountains. It's a fantastic opportunity to take in the natural beauty of the area and unwind.
+- You might see other tourists going on bird watching expeditions, or simply relaxing on the beach.
+- As the islands are uninhabited, there are no typical dishes or dining experiences. You might want to pack a picnic lunch to enjoy on the beach.
+- A pleasant experience could be standing at the prow of the water taxi, feeling the wind rushing across your face, as the driver narrates the history and ecology of the islands. You would also see schools of fish swimming alongside the boat in the crystal clear waters of the lake.
+
+=====
+
+Bobs Cove Nature Walk: A picturesque track leading to an gorgeous pebble beach, offering stunning views of the cove and Lake Wakatipu. A relaxing water taxi ride will get you to this serene destination.
+
+- Bob's Cove is known for its natural beauty, with lush native bush surroundings and remarkable blue waters.
+- It was used as a Maori moa hunting camp hundreds of years ago.
+- The track leads to the historic lime kiln; lime was burnt here for gold mining processes in the 19th Century.
+- On a water taxi to Bob's Cove, you may unexpectedly spot a few native bird species, like bellbirds or tui, that add a unique charm to the experience.
+- Visitors are often seen indulging in activities like fishing or kayaking in the calm waters of the cove.
+- The walking track to Bob's Cove also has several picnic areas, making this place a perfect spot for a peaceful family lunch or a romantic picnic. You can enjoy local delicacies such as the famous Southland cheese rolls.
+
+Pleasant human experience: Buying a water taxi ticket becomes a pleasant part of the journey at Queenstown. Picture standing on the bustling pier, with the sun shining brightly overhead as you purchase your ticket. The fresh, crisp air of Queenstown fills your lungs and you can hear the vibrant chatter of tourists and locals alike, all excited for their travel ahead. The moment you step onto the water taxi, you're greeted with a panoramic view of Lake Wakatipu, flanked by merciful mountains. As the taxi starts moving, the tranquil beauty of Lake Wakatipu slowly unfolding itself is a truly enchanting experience, a perfect beginning to your exploration of Bob's Cove Nature Walk.
+
+=====
+
+
+
+////////////////////////////////////////////////////////////////////////////////
+
+Queenstown Gardens: An oasis in the heart of the city, the gardens offer beautiful views of the lake and mountains. Hop off your water taxi for a leisurely walk.
+
+- The Queenstown Gardens were established in 1867, making them one of the oldest parks in New Zealand.
+- They are located on a small peninsula jutting into Lake Wakatipu, which makes for a serene setting.
+- The gardens are home to a variety of plant and animal species, including exotic and native trees and bird species.
+- People often throw a frisbee around or partake in a round of disc golf at the gardens' 18-hole course.
+- There is a beautiful Rose Garden that boasts an array of colorful roses during the blooming season.
+- Visitors may stop to enjoy a picnic, with a spread of local New Zealand food such as lamb or seafood, paired with excellent wine from the surrounding Central Otago region.
+- Taking a break from a water taxi tour, one can enjoy the tranquility of the garden. Feel the delicate balance of sun and shade as you walk under towering trees, listen to the gentle lapping of the lake against the shore, or sit on a bench by the Great Lawn to take in the vibrant colors of blooming flowers.
+
+=====
+
+TSS Earnslaw Vintage Steamship: A piece of Queenstown's history, passengers can tour this 100-year-old steamship and watch its coal-fired engines at work.
+
+- The TSS Earnslaw Vintage Steamship is one of the oldest tourist attractions in Queenstown, first launched in 1912.
+- It's one of the last remaining coal-fired passenger steamers in the world.
+- Named after Mount Earnslaw, a 2819m peak at the head of Lake Wakatipu.
+- During World War II, the TSS Earnslaw was used as a troop carrier and transport ship.
+- The ship's historical café serves classic Kiwi pies. Enjoy one while enjoying the views of the Remarkables mountain range.
+- Onboard, people are often seen peering into the engine room where the original steam engines are exposed, providing a glimpse into early 20th-century maritime technology.
+- When you step aboard the TSS Earnslaw, you're met with a sense of nostalgia. The ship's original décor, from the polished brass fittings to the wooden paneling, transports you back to the early 1900s. Watching the crew stoke the boilers with coal as you depart the pier on your water taxi trip is truly a unique experience, with the smell of the coal fire and the sound of the steam whistle adding to the immersion.
+
+=====
+
+The Underwater Observatory: Get up close with freshwater marine life without getting wet at this unique underwater viewing platform.
+
+- It is the only floating underwater observatory in New Zealand.
+- The observatory was built in 1999 and floats on Lake Wakatipu.
+- It provides a view of freshwater species of fish native to New Zealand such as Brown and Rainbow trout and eels.
+- People can be seen feeding the ducks and swans that reside near the observatory.
+- A typical experience after visiting the observatory is eating local seafood, like green-lipped mussels, which New Zealand is famous for.
+- Travel to the Underwater Observatory by water taxi is a pleasurable experience. As you are zipped across the stunning Lake Wakatipu, you can revel in the unique beauty of the surrounding Remarkables mountain range. Once you disembark, you will be struck by the serene beauty of the underwater world beneath the lake's surface, as clear windows in the observatory offer a startlingly close view of marine life.
+
+=====
+
+Walter Peak High Country Farm: Take a scenic farm tour and enjoy the charms of rural life in New Zealand.
+
+- Walter Peak High Country Farm is located on the south-western shores of Lake Wakatipu.
+- It was established by the Mackenzie family and began operating in 1860.
+- The farm covers about 40,000 acres of picturesque landscape.
+- The hit movie, "The Lord of the Rings," includes scenes filmed in and around Walter Peak.
+- Visitors typically indulge in a traditional BBQ lunch or dinner at the Colonel’s Homestead Restaurant, featuring New Zealand's farm-raised lamb and beef.
+- Walter Peak Farm is always bustling with visitors, many seen taking photographs of the stunning landscape, or trying their hand at wool spinning after shearing demonstrations.
+- A typical experience at Walter Peak includes taking a water taxi via the historic steamship TSS Earnslaw. As you near the farm, you’ll witness the awe-inspiring snow-capped mountain ranges and pristine water of Lake Wakatipu — a sight to behold. It is common to see people leaning against the ship's railing, bracing against the cool wind, indulging in the breathtaking views, and capturing memorable moments with their cameras.
+
+=====
+
+Matakauri Lodge: Enjoy a delightful afternoon tea at this luxury lodge with an unhindered view of Lake Wakatipu.
+
+- Matakauri Lodge is situated just seven minutes from the heart of Queenstown, providing easy access to city's attractions.
+- This high-end lodge offers panoramic views of Lake Wakatipu and the Cecil and Walter Peak mountain ranges.
+- The lodge was first established in 2000 and in 2010 underwent an expansive refurbishment by acclaimed New Zealand interior designer, Virginia Fisher, giving it its modern luxurious feel.
+- "Upon arriving at the Matakauri Lodge, one is immediately graced with an unobstructed view of the mystical Lake Wakatipu," said by a renowned travel writer. 
+- In the main lodge, visitors are likely to spot others indulging in a variety of local wines from the Central Otago region at the stylish lounge and bar.
+- An afternoon visit to Matakauri Lodge would be incomplete without experiencing the unique dining experience it offers. Expect to savor a variety of international dishes crafted with local ingredients.
+- For an unforgettable experience, take a water taxi to the lodge from downtown Queenstown. As the boat pulls away from the city and the water laps against the hull, you'll have a spectacular view of the Remarkables mountain range, something most visitors agree is a must-see. 
+- Buying a ticket for the water taxi, you'll feel the anticipation build as you know you're en route to a premium luxury experience. Gazing out at the stunning scenery, you'll marvel at the stark contrast between the tranquil lake and the rugged, snow-capped peaks. Enjoy this unique opportunity to see Queenstown from another perspective and make lasting memories.
+
+=====
+
+Paradise: Known for pristine beauty and being a filming location for the Lord of the Rings, truly a slice of paradise on earth.
+
+- Paradise, despite its name, has no shops or houses, just pristine landscapes.
+- The filming location of many major films such as Peter Jackson's 'The Lord of the Rings' and 'The Hobbit' trilogies, aiding in bringing J.R.R. Tolkien's Middle-earth to life.
+- This unspoiled landscape has also been a setting for 'Wolverine' film starring Hugh Jackman.
+- Also had cameo appearances in Jane Campion's award-winning television series named ‘Top of the Lake’.
+- A dining experience while here should include a packed picnic lunch to enjoy amidst the natural beauty - don't forget a traditional New Zealand meat pie!
+- It's common to see others on treks and walks, soaking in the raw beauty and taking photos along the way.
+
+For a pleasant human experience, there's really nothing quite like boarding a water taxi on the nearby Lake Wakatipu and gliding across calm waters towards Paradise. As you depart from Queenstown, you're treated to panoramic views of the region. You may see native bird species like the Kea or Bellbird flitting past, and other water taxis in the distance on their own journeys. The sun warms your skin, while the gentle sound of the boat's motor and water sloshing beneath you is incredibly soothing. Upon closer approach, Paradise's lush greenery comes in to view. This trip often leaves visitors feeling deeply connected to nature, appreciating Paradise in its true, untouched glory.
+
+=====
+
+Arrowtown: A historic gold mining town, where visitors can witness charming preserved buildings.
+
+- Arrowtown was born out of the gold rush of the 1860s and you can explore the old miners' cottages at the Arrowtown Chinese Settlement.
+- The Lake District Museum in Arrowtown gives a fascinating insight into the tough pioneering days of the 19th century.
+- Arrowtown was the location for the filming of the Ford of Bruinen in Peter Jackson's "The Lord of the Rings" trilogy.
+- In Arrowtown, a popular dining option is indulging in a traditional pub meal at the local taverns, or trying some fresh handmade fudge from the shops on the main street.
+- Often, you'll see people wandering around the preserved gold-mining town, exploring the boutiques, galleries, and cafes or perhaps panning for gold in the Arrow River which was a significant activity during the gold rush era.
+- After getting water taxi service from Queenstown, it's a pleasure to disembark in this charming old town. One of the distinct joys is simply meandering the historical streets, taking in the quaint, well-preserved buildings, soaking in the history, and perhaps consulting an old-town map to find the listed heritage buildings. Don't forget to appreciate the beauty of seasonal changes in Arrowtown, most notably the autumnal hues that the town is renowned for.
+
+=====
+
+Wharf Casino: For a relaxed evening, try your luck at the modern and sophisticated Wharf Casino.
+
+- Wharf Casino located in the heart of Queenstown offers an unparalleled gaming experience.
+- It was established in the late 20th century, making it one of the oldest casinos in Queenstown. 
+- It is known for its luxurious interior design and exceptional customer service which adds to the overall experience. 
+- The casino features a range of gaming options, including slot machines, poker tables, and roulette, making it a popular destination for both novices and experts. 
+- At the casino, one can enjoy a classic New Zealand dining experience with dishes like Kiwi Lamb or Green-lipped Mussels. A glass of Central Otago Pinot Noir would also be a fine accompaniment.
+- Other people at the Casino can be seen indulging in games, enjoying meals, betting on their favorite games, socializing with friends, or simply soaking in the vibrant atmosphere.
+- A beautiful human experience can be entering the casino on a water taxi via the glistening lake. As the boat docks, you disembark, taking in the twinkling lights of the casino that reflect off the water, and feeling the anticipation building as you prepare to step into an evening full of thrill and enjoyment.
+
+=====
+
+Fear Factory Queenstown: Thrill-seekers can take a break from the calm to explore this haunted house experience, don't worry, it's all in good fun.
+
+- Fear Factory is based on real ghost stories from Queenstown’s dark past, with the building itself being notoriously haunted.
+- This attraction pays homage to classic haunted house and horror movie tropes, so you're in for a fright.
+- Despite its spooky atmosphere, it holds a reputation of being one of Queenstown’s top-rated attractions.
+- After going through the haunted house, many visitors like to grab a drink at the nearby pubs to unwind and share their thrilling experiences.
+- The experience usually involves quite a few other people, which some have described as adding to the excitement and creepy atmosphere. Many are seen either eagerly waiting their turn or coming out with adrenaline-fueled expressions on their faces. 
+- Taking a water taxi ride to arrive at the Fear Factory can be quite serene before the excitement that awaits. As the boat glides across the lake, the stunning vista of Queenstown unfolds, an unforgettable memory before the memorable terror you're about to face.
+
+=====
+
+Bob’s Peak: Enjoy a gondola ride to the top for breathtaking views of Queenstown, The Remarkable’s, Lake Wakatipu and more.
+
+- Bob's Peak provides arguably the best view of Queenstown, offering panoramic views of The Remarkables, Lake Wakatipu, and many other nearby peaks and attractions.
+- The gondola ride to the top is considered the steepest cable car lift in the Southern Hemisphere.
+- The peak is named after Bob Mckay, a local identity who owned much of the land on the mountain in the early 20th century.
+- Several scenes from the Lord of the Rings films, which were shot nearby, showcase this breath-taking view.
+- Visitors can stop at the Skyline Queenstown Restaurant located on top of Bob’s Peak, for some great food with an unbeatable scenic backdrop. The buffet lunch or dinner provides a mix of local and international dishes.
+- Many adventureseekers are seen enjoying scenic trails that Bob’s Peak has, and some prefer mountain biking or hiking down to the base. For those seeking even more thrill, the Luge rides are a fan-favorite.
+- From the base at Steamer Wharf, you can take a scenic water taxi ride across Lake Wakatipu to the base of the gondola. As you purchase your tickets from the friendly boat crew, you can feel the excitement and anticipation for the incredible views and the fun-packed day ahead. On the water taxi ride, you might enjoy seeing the array of colors offered by the native New Zealand trees and plants spread all over the mountains surrounding you. As the soft rays of sun dance on the calm lake water, creating a beautiful sunshine path right up to the mountains. It’s a blissful experience which makes the visit to Bob's Peak even more memorable.
+
+=====
+
+Wine Tasting in Gibbston Valley: Try some of the finest wines in the region amidst an idyllic countryside setting.
+
+- Known as the 'Valley of Vines', Gibbston Valley is the coolest and highest of the Queenstown-Lakes District wine areas.
+- The region has been showcased in various culinary magazines and shows thanks to its production of premium wines.
+- Gibbston Valley Winery released Central Otago’s first commercial vintage in 1987.
+- It's a great place to indulge your palate with a variety of locally sourced cheeses paired with delicious wines.
+- A wine tasting tour typically involves sampling several varietals like the famous Pinot Noir, Riesling, or Chardonnay.
+- Visitors can often be seen exploring the wine cellar, touring the vineyards, or even enrolling in wine and cookery classes.
+- The water taxi ride to Gibbston Valley offers a uniquely beautiful perspective of the New Zealand countryside. Embarking on the water taxi, the feeling of the cool breeze and shimmering water adds a sense of peace to the journey. Watching the vineyards approach from a distance, gradually revealing their full splendor, gives visitors a moment of anticipation and excitement about the wine tasting experience they're about to enjoy.
+
+=====
+
+Kiwi Birdlife Park: Meet the unique and endangered species of Kiwi bird in a natural setting.
+
+EXAMPLE RESPONSE:
+- Kiwi Birdlife Park is a family-owned wildlife sanctuary located in the heart of Queenstown.
+- The park is home to over 20 species of native New Zealand wildlife, including the namesake Kiwi bird.
+- For over 30 years, the park has been involved in conservation efforts, releasing over 150 birds into the wild.
+- A typical experience at the Kiwi Birdlife Park would involve a tour of the night house, during which visitors can witness the nocturnal Kiwi bird in its natural habitat.
+- Aside from observing the birds, visitors may also enjoy a Maori culture show or embark on a nature walk through the park.
+- Visitors can access the park by taking a water taxi from Queenstown center. Along the ride, they can enjoy glimpses of the unique New Zealand flora and fauna, take in the stunning views of Lake Wakatipu, and might even get a chance to spot rare birds or seals.
+
+=====
+
+Tobins Track: Hike up this popular trail for panoramic views of the Arrow Basin and Crown Range.
+
+- Tobins Track is named after John Tobin, an early settler in Arrowtown in the late 19th century.
+- This is a 5.4 km long back trail located near Arrowtown that's primarily used for hiking and walking.
+- The track offers panoramic views of the historic gold mining town of Arrowtown, Lake Hayes, and the Wakatipu Basin.
+- A popular local tradition is having a picnic at the top of the track. A commonly packed local food item to enjoy at the top is the classic New Zealand meat pie.
+- Other people can often be seen taking panoramic pictures or flying kites when the weather permits.
+- Boarding a water taxi from Queenstown and disembarking at the foot of the track makes for a unique and scenic approach to the hike. As the boat maneuvers through the sapphire waters of Lake Wakatipu, the majestic Remarkable mountain peaks that stand sentry around Queenstown make for an awe-inspiring panorama. The boat ride itself is usually calm and relaxing and a great time to bask in the natural beauty of the area, consulting a map of the hiking trail, or maybe making small talk with fellow nature enthusiasts on board. Finally, watching the town recede into the distance as you head out to start your hike can be a truly humbling experience.
+
+=====
+
+Coronet Peak: Known for skiing in winter, but equally impressive in summer with stunning views from the top.
+
+- Coronet Peak is the South Island's most popular ski area and known for its incredible panoramic views of Queenstown.
+- The ski field opened in 1947, making it one of New Zealand's oldest ski fields.
+- Coronet Peak is deeply significant in the Maori culture. The Maori name for Coronet Peak is 'Hikuraki', and there are many legends associated with the area.
+- The famous "Lord of the Rings" Trilogy filmed several scenes in this mountain.
+
+    -If visiting during the winter season, you might be seen grabbing a hearty meal at the Coronet Peak Restaurant. They're known for their warming hot chocolates and aromatic mulled wine.
+
+    -The activity most people engage in at Coronet Peak is skiing or snowboarding. During the summer, many visitors take advantage of the hiking trails.
+
+    -A charming water taxi experience associated with Coronet Peak would be getting a water taxi ride from Queenstown to the base of the mountain, and then taking a shuttle up to Coronet Peak ski field. During the water taxi ride, you'll get great views of Cecil Peak, Walter Peak, and Queenstown itself. As your water taxi glides across clear blue water, under bright sunlight, you might enjoy spotting seagulls soaring above and fish darting below in the depths of Lake Wakatipu. The crisp mountain air combined with the tranquil beauty of the lake promises a blissful start to the day.
+
+=====
+
+Shotover River: A trip to Shotover River can include jet boat rides, rafting or a quiet picnic by the riverside.
+
+- Shotover River is famous for its gold rush history in the mid-19th century.
+- The river was named by 'Maori', the indigenous people of New Zealand, and it means "the place of the rushing waters".
+- The Shotover River was the richest gold-bearing river in the world during the gold rush.
+- The river flows through the stunning Skippers Canyon, which has been featured in the 'Lord of the Rings' movies.
+- Traditional New Zealand pies filled with minced meat could be the perfect picnic lunch to savour along the riverside. It's a hearty and classic Kiwi delicacy.
+- Many people can be seen having jet boat rides or going rafting in the rushing waters of the Shotover River.
+- When taking a water taxi over the Shotover river, one can experience the thrill and adventure. The gorgeous scenery of the surrounding mountains and valleys reflect on the water surface, creating a tranquil yet exhilarating atmosphere. There's nothing like feeling the cool breeze and water spritzes on your face, hearing the roaring of the engine mixed with wild water churns, and seeing the landscape whiz by — truly an unforgettable memory of Queenstown.
+
+=====
+
+Ivan Clarke Gallery: Enjoy the unique and visionary landscapes of prolific New Zealand artist Ivan Clarke.
+
+- The gallery features the captivating and ornate works of renowned artist Ivan Clarke, who takes influence from his childhood spent in the remote scenery of the South Island. 
+- Clarke's painting 'Alone in a Midnight Garden' is highly respected and has toured to London, New York, and Hong Kong.
+- His artistic style captures not just the physical aspects of New Zealand's landscapes but the emotional and mystical aspects too.
+- Visitors can often find Ivan Clarke himself in the gallery, sharing his inspirations and stories behind his paintings. 
+- The immersive experience 'The Lonely Dog,' which exhibits Clarke's charmingly imagined 'Kingdom of Alveridge,' allows visitor participation and is an attraction in itself. 
+- Often, you will find other sightseers scrutinizing the intricate details of Clarke's works, or indulging in lively discussions about the art.
+- A quintessential Kiwi experience related to this location might be enjoying a 'flat white' coffee at a nearby café, showcasing New Zealand's rich café culture.
+- Taking a water taxi to the gallery can involve a serene and scenic journey across Lake Wakatipu. One might relish the occasional sighting of indigenous birds darting amongst the reeds and the shimmering reflections of the surrounding mountains on the lake's surface. As the boat docks near the gallery, the scent of fresh lake air mingles with the subtle aroma of local flora, setting the mood for the artistic adventure ahead.
+
+=====
+
+Fjordland National Park: Take a water taxi to the edge of this world heritage site and experience the stunning natural beauty.
+
+- Fjordland National Park is the largest national park in New Zealand, spanning over 12,500 square kilometers.
+- The park was established in 1952 and was further recognized as a UNESCO World Heritage Site in 1986.
+- Many parts of the park, including the Milford Sound, are only accessible by boat or helicopter.
+- Dining options in the park are rare, but one can enjoy a delightful packed lunch while taking in the breathtaking views.
+- Occasionally, you can spot wildlife enthusiasts and photographers capturing the stunning landscapes and diverse fauna.
+- A common human experience is the feeling of awe and tranquility as the water taxi moves along the serene fjords undercut by the towering Mitre Peak, perhaps with a friendly dolphin pod surfing the boat's wake in a clear, sunny New Zealand day.
+
+=====
+
+The Lord of The Rings Film Location Tours: Get a glimpse of the Middle-Earth at the actual filming locations.
+
+- This tour takes you through scenes from the award-winning film trilogy "The Lord of The Rings," filmed in various locations around Queenstown, giving the illusion of Middle-Earth.
+- Peter Jackson, the director of "The Lord of The Rings," selected New Zealand’s dramatic landscapes to represent the fabled Middle Earth.
+- Some of the scenes filmed in and around Queenstown include the 'Ford of Bruinen', 'The Pillars of the Kings', and 'Lothlorien'.
+- Quote: "It's a dangerous business, Frodo, going out your door. You step onto the road, and if you don't keep your feet, there's no knowing where you might be swept off to." - J.R.R. Tolkien, The Lord of The Rings.
+- At the filming locations, you can often see other tourists posing for photos, doing reenactments of the film scenes, or just absorbing the majestic New Zealand landscapes.
+- Typical culinary treat on this tour would be trying traditional New Zealand lamb dishes, often served in the tour's picnic lunches.
+- A pleasant human experience involved could be cruising on a water taxi across Lake Wakatipu. On the journey, take a thermos of tea or coffee, as you would get to delight in the beauty of the lake and mountains framing it, replicated as the lochs and mountains of Middle-Earth, while chatting with the skipper or fellow tourists about memorable moments from the films.
+
+=====
+
+Lake Hayes: Known as the “mirror lake” for its reflective waters; relax in the serene surroundings with a picnic.
+
+- Lake Hayes is located in the Wakatipu Basin in Central Otago, New Zealand. 
+- Known as the "mirror lake," it's famous for its mirror-like reflections of the surrounding mountain ranges and vegetation.
+- The Lake Hayes Circuit, a wonderful track that circumnavigates the lake, offers views that have inspired many New Zealand painters and photographers.
+- Traditional Maori legends tell of battles and love stories across the lake's shores.
+- One can often see people kayaking or paddleboarding on the calm waters of the lake.
+- A typical dining experience at Lake Hayes can include a packed picnic, complete with New Zealand's famous kumara bread, local cheeses, and the region's renowned Pinot Noir wine.
+- Taking a water taxi ride across Lake Hayes could be the highlight of your visit. The conveyance offers fantastic view of Alpine flora and prominent peaks. It's amazing to watch as the sun reflects off the water creating an ethereal beauty, the memory of which will remain etched in one's mind.
+
+=====
+
+Skippers Canyon: A historical and scenic treat, an ideal place for a calm and peaceful nature walk.
+
+- Skippers Canyon is accessible via a spectacular road carved out of the cliff face in the 1890s, during the gold rush.
+- It was named after "Skipper" Malcolm Duncan, a local gold prospector.
+- Known for its stunning scenery, it has been featured in The Lord of the Rings film series as part of Middle-earth.
+- Skippers Canyon is also home to an ancient and historic suspension bridge built in 1901, the Skippers Suspension Bridge, which was essential for gold miners in the area.
+- A common culinary treat of the region is trying out a traditional Kiwi barbecue, usually featuring locally sourced lamb, beef and seafood.
+- Sightseers often engage in river rafting and bungee jumping, which are popular activities offered within the canyon.
+- By taking a water taxi in the Shotover River that runs through the canyon, you will get an intimate and unique perspective of the steep cliffs and jagged rocks. It might be during this tranquil journey by water taxi that you spot a group of wild goats, endemic to the area, carefully navigating the rocky terrain. The sight against the backdrop of the golden-hued canyon can be a breathtaking experience, a moment of real connection with raw nature.
+
+=====
+
+
+*/
 }

@@ -1,6 +1,8 @@
 from openai import OpenAI
 client = OpenAI()
 
+import re # regular expressions
+
 from datetime import datetime
 def datetime_str_to_timestamp(str):
     return str[:10] + "_" + str[11:13] + "-" + str[14:16] + "-" + str[17:19]
@@ -12,18 +14,18 @@ timestamp = datetime_str_to_timestamp(start_time)
 
 ##### PARAMETERS
 
-num_stops = 12
+num_stops = 6
 
-write_long_story = False
-write_short_story = True
+write_long_story = True
+write_short_story = False
 
 inputs = [
-    # {
-    #     "destination": "newyorkcity",
-    #     "destination_fullname": "New York, New York",
-    #     "transport_method": "open-top bus tour and Metro, with a tour guide with a thick Brooklyn accent whose family has been in New York City for many generations",
-    #     "season": "fall",
-    # },
+    {
+        "destination": "newyorkcity",
+        "destination_fullname": "New York, New York",
+        "transport_method": "open-top bus tour and Metro, with a tour guide with a thick Brooklyn accent whose family has been in New York City for many generations",
+        "season": "fall",
+    },
     # {
     #     "destination": "tokyo",
     #     "destination_fullname": "Tokyo, Japan",
@@ -48,12 +50,12 @@ inputs = [
     #     "transport_method": "tuk-tuk (i.e. a rickshaw), with a driver who is also a tour guide",
     #     "season": "winter",
     # },
-    {
-        "destination": "istanbul",
-        "destination_fullname": "Istanbul, Turkey",
-        "transport_method": "ferry ride on the Bosphorous and historic tram on Istiklal Avenue",
-        "season": "spring",
-    },
+    # {
+    #     "destination": "istanbul",
+    #     "destination_fullname": "Istanbul, Turkey",
+    #     "transport_method": "ferry ride on the Bosphorous and historic tram on Istiklal Avenue",
+    #     "season": "spring",
+    # },
     # {
     #     "destination": "dubai",
     #     "destination_fullname": "Dubai, United Arab Emirates",
@@ -140,13 +142,47 @@ inputs = [
     # },
 ]
 
+################################################################################
 
+##### dedigitization
+
+# input: a string (which for us will be an entire completion coming back from chatGPT), and a number of rewrites to attempt before moving on.
+# outputs (implicitly formatted as a tuple):
+    # the hopefully-fixed string
+    # a boolean of whether it was modified at all
+    # a list of the versions that contain digits
+    # a boolean of whether the final rewrite failed
+def dedigitize(string, rewrites=3):   
+    if not re.search(r'\d', string):
+        return string, False, [], False
+    versions_with_digits = [string]
+    for _ in range(rewrites):
+        system_prompt = f"The user will give you text. Please rewrite the text so that all numbers are written out in words. The result should not have any digits. Please make sure that years are written out in the usual way that they're spoken -- for instance, '1842' should be written out as 'eighteen forty-two' (and not 'one thousand eight hundred and forty-two'). Please only respond with the rewritten text, and nothing else."
+        system_message = {"role": "system", "content": system_prompt}
+        user_message = {"role": "user", "content": string}
+        print("asking chatGPT to rewrite text without digits")
+        completion = client.chat.completions.create(
+            model = "gpt-4-32k",
+            messages = [system_message, user_message]
+        )
+        string = completion.choices[0].message.content
+        if not re.search(r'\d', string):
+            return string, True, versions_with_digits, False
+        versions_with_digits.append(string)
+    return string, True, versions_with_digits, True
+
+# apply the `dedigitize` function, return the hopefully-correct string, and log if applicable.
+def dedigitize_and_log(string):
+    output, modified, versions_with_digits, failed = dedigitize(string)
+    if modified:
+        dedigitizations.append({"original": versions_with_digits[0], "failed_rewrites": versions_with_digits[1: ], "final": output, "failed": failed})
+    return output
+
+################################################################################
 
 for input in inputs:
 
     print(f"\nwriting a sleep story set in {input['destination_fullname']} with timestamp {timestamp} at {datetime_str_to_timestamp(str(datetime.now()))}\n")
-
-
 
     ##### GET LIST OF STOPS
 
@@ -164,18 +200,39 @@ EXAMPLE:
 Eiffel Tower: An iconic symbol of France, this remarkable structure offers a stunning panoramic view of Paris. Your river cruise will provide a spectacular perspective of its beauty.
     """
     user_message_for_stops = {"role": "user", "content": user_prompt_for_stops}
+    messages_for_getting_stops = [user_message_for_stops]
 
     print(f"getting list of {num_stops} stops\n")
     completion = client.chat.completions.create(
         model = "gpt-4-32k",
-        messages = [user_message_for_stops]
+        messages = messages_for_getting_stops
     )
-
-    stops = [string.replace("*", "").strip() for string in completion.choices[0].message.content.split("***") if len(string.replace("*", "").strip()) > 3]
-    print("here are the stops:")
+    assistant_prompt_with_stops = completion.choices[0].message.content
+    assistant_message_with_stops = {"role": "assistant", "content": assistant_prompt_with_stops}
+    messages_for_getting_stops.append(assistant_message_with_stops)
+    stops = [string.replace("*", "").strip() for string in assistant_prompt_with_stops.split("***") if len(string.replace("*", "").strip()) > 3]
+    print(f"there are {len(stops)} stops, and they are:")
     for stop in stops:
         print(stop)
-    assert len(stops) == num_stops
+    
+    while len(stops) < num_stops:
+        print("not enough stops! getting more...")
+        user_prompt_to_get_correct_number_of_stops = f"I'm sorry, but I asked for {num_stops} popular sightseeing locations, and you only gave me {len(stops)} of them. Could you please try again?"
+        user_message_to_get_correct_number_of_stops = {"role": "user", "content": user_prompt_to_get_correct_number_of_stops}
+        messages_for_getting_stops.append(user_message_to_get_correct_number_of_stops)
+        completion = client.chat.completions.create(
+            model = "gpt-4-32k",
+            messages = messages_for_getting_stops
+        )
+        assistant_prompt_with_stops = completion.choices[0].message.content
+        assistant_message_with_stops = {"role": "assistant", "content": assistant_prompt_with_stops}
+        messages_for_getting_stops.append(assistant_message_with_stops)
+        stops = [string.replace("*", "").strip() for string in assistant_prompt_with_stops.split("***") if len(string.replace("*", "").strip()) > 3]
+        print(f"there are {len(stops)} stops, and they are:")
+        for stop in stops:
+            print(stop)
+        
+
 
 
 
@@ -324,8 +381,7 @@ The colors used in the blouses, skirts, and rebozos (a traditional garment simil
 
 The huipil, typically made of cotton, is a square-cut, loose sleeveless tunic. Its vibrant surface teems with delicate embroidery and exquisite beadwork; flower motifs, birds, and symbols related to ancient Nahua gods are common elements.
 
-END EXAMPLE REWRITE TWO:
-    """ + "\n\n=====\n\n" + example_story
+END EXAMPLE REWRITE TWO:""" + "\n\n=====\n\n" + example_story
 
     system_prompt_for_long_story = system_prompt_for_story_template.replace("REPLACE_WITH_FILLER", long_story_system_prompt_template_filler)
     system_prompt_for_short_story = system_prompt_for_story_template.replace("REPLACE_WITH_FILLER", short_story_system_prompt_template_filler)
@@ -340,6 +396,8 @@ END EXAMPLE REWRITE TWO:
 
     user_prompt_for_ending_story = f"Please conclude the story about our sightseeing tour by {input['transport_method']} in {input['destination_fullname']}. Keep it upbeat, gentle, and inspiring."
 
+    no_numbers_plz = "\n\nPlease spell out any numbers in words. For instance, write 'nineteen eighty-seven' instead of '1987', and 'four thousand seven hundred and thirty three' instead of '4,733', and 'eighteen-sixties' instead of '1860s' (referring to the decade), and 'nineties' instead of '90s' (also referring to the decade)."
+
     no_ending_summary_plz = "\n\nPlease don't end your response with a summary, though, because we will be continuing the story and visiting more sightseeing locations!"
 
     no_starting_transition_plz = """\n
@@ -351,8 +409,7 @@ Our sightseeing tour continues as we make our ways towards...
 
 BAD EXAMPLE:
 
-As we make our way from the castle, ...
-                """
+As we make our way from the castle, ..."""
 
 
 
@@ -361,6 +418,8 @@ As we make our way from the castle, ...
     if write_long_story:
 
         print("writing a long story")
+
+        dedigitizations = []
 
         system_message = {"role": "system", "content": system_prompt_for_long_story}
 
@@ -375,14 +434,15 @@ As we make our way from the castle, ...
             model = "gpt-4-32k",
             messages = message_list
         )
-        assistant_prompt_with_scene_setting = completion.choices[0].message.content
+        assistant_prompt_with_scene_setting_undedigitized = completion.choices[0].message.content
+        assistant_prompt_with_scene_setting = dedigitize_and_log(assistant_prompt_with_scene_setting_undedigitized)
         story += assistant_prompt_with_scene_setting
         assistant_message_with_scene_setting = {"role": "assistant", "content": assistant_prompt_with_scene_setting}
         message_list.append(assistant_message_with_scene_setting)
 
         stop_messages = []
         for (index, stop_with_tidbits) in enumerate(stops_with_tidbits):
-            stop_prompt = "Great, thank you! Here is the next sightseeing location:\n\n" + stop_with_tidbits + no_ending_summary_plz
+            stop_prompt = "Great, thank you! Here is the next sightseeing location:\n\n" + stop_with_tidbits + no_numbers_plz + no_ending_summary_plz
             if index == len(stops_with_tidbits) - 1:
                 stop_prompt += no_starting_transition_plz
             stop_message = {"role": "user", "content": stop_prompt}
@@ -397,7 +457,8 @@ As we make our way from the castle, ...
                 model = "gpt-4-32k",
                 messages = message_list
             )
-            assistant_prompt_with_story = completion.choices[0].message.content
+            assistant_prompt_with_story_undedigitized = completion.choices[0].message.content
+            assistant_prompt_with_story = dedigitize_and_log(assistant_prompt_with_story_undedigitized)           
             story += "\n\n=====\n\n" + assistant_prompt_with_story
             assistant_message_with_story = {"role": "assistant", "content": assistant_prompt_with_story}
             message_list.append(assistant_message_with_story)
@@ -410,16 +471,68 @@ As we make our way from the castle, ...
             model = "gpt-4-32k",
             messages = message_list
         )
-        assistant_prompt_with_story_ending = completion.choices[0].message.content
+        assistant_prompt_with_story_ending_undedigitized = completion.choices[0].message.content
+        assistant_prompt_with_story_ending = dedigitize_and_log(assistant_prompt_with_story_ending_undedigitized)
         story += "\n\n=====\n\n" + assistant_prompt_with_story_ending
+
+        # now that the story is finished, if any digit replacements were made, then:
+            # write them to a replacement_log file;
+            # store just the individual sentences at the end of the story file (for compilation into kotlin code -- perhaps at the top, commented-out).
+        # regardless, also save the replacement stats.
+
+        nums_of_attempts = []
+        any_failures = False
+        for dedigitization in dedigitizations:
+            nums_of_attempts.append(len(dedigitization['failed_rewrites']))
+            if dedigitization['failed']:
+                any_failures = True
+        replacement_stats_string = f"{input['destination']}_{timestamp}_long.txt\nattempts per dedigitization: " + " ,".join([str(num) for num in nums_of_attempts]) + "\nany failures: " + str(any_failures) + "\n\n"
+        replacement_stats_file = open("logs/replacement_stats.txt", "a")
+        replacement_stats_file.write(replacement_stats_string)
+        replacement_stats_file.close()
+        if any_failures:
+            replacement_failure_log_file = open("logs/replacement_failure_logs/" + input['destination'] + "_" + timestamp + "_long.txt", "w")
+            replacement_failure_log_file.write("FAILED! SAD!")
+            replacement_failure_log_file.close()
+
+        replaced_sentences = []
+
+        if len(dedigitizations) > 0:
+            replacement_logs_file = open("logs/replacement_logs/" + input['destination'] + "_" + timestamp + "_long.txt", "w")
+            replacement_log = "\n==========\n"
+            for dedigitization in dedigitizations:
+                replacement_log += "REPLACEMENT FAILED: " + str(dedigitization["failed"]) + "\n\n=====\n\n"
+                if dedigitization["failed"]:
+                    replacement_log = "WARNING: A REPLACEMENT HEREIN HATH FAILED\n\n" + replacement_log
+                replacement_log += "ORIGINAL TEXT:\n\n" + dedigitization['original'] + "\n\n=====\n\n"
+                replacement_log += "FAILED REWRITES:\n\n" + "\n\n=====\n\n".join(dedigitization['failed_rewrites']) + "\n\n=====\n\n"
+                replacement_log += "FINAL VERSION:\n\n" + dedigitization['final'] + "\n\n==========\n\n"
+                original_sentences = dedigitization['original'].split(".")
+                original_sentences_with_digits = [sentence for sentence in original_sentences if re.search(r'\d', sentence)]
+                replaced_sentences += original_sentences_with_digits
+            replacement_log_file = open("logs/replacement_logs/" + input['destination'] + "_" + timestamp + "_long.txt", "w")
+            replacement_log_file.write(replacement_log)
+            replacement_log_file.close()
+
+        story += "\n\n=====\n\nREPLACED_SENTENCES:\n" + "\n".join(replaced_sentences)
+            
+
+
+
+
+
 
         story_file = open("stories/" + input['destination'] + "_" + timestamp + "_long.txt", "w")
         story_file.write(story)
         story_file.close()
 
         story_end_time = datetime_str_to_timestamp(str(datetime.now()))
-        print(f"finished writing long story set in {input['destination_fullname']} at:", story_end_time)
-    
+        print(f"finished writing long story set in {input['destination_fullname']} with timestamp {timestamp} at:", story_end_time)
+
+        
+
+    ##### GET SHORT STORY
+
     if write_short_story:
 
         a = 1 # number of stops bundled into initial chunk
@@ -430,6 +543,8 @@ As we make our way from the castle, ...
 
         print(f"writing a short story")
 
+        dedigitizations = []
+
         system_message = {"role": "system", "content": system_prompt_for_short_story}
 
         # this evades the following error, which otherwise occurs below:
@@ -437,7 +552,7 @@ As we make our way from the castle, ...
         # so, here just append "\n\n" to the stop prompts now, rather than joining them with separator "\n\n" inside of the f-string.
         stops_with_tidbits = [stop_with_tidbits + "\n\n" for stop_with_tidbits in stops_with_tidbits]
 
-        initial_user_prompt_for_short_story = f"{user_prompt_for_setting_scene_for_short_story}\n\nThen, here {'are' if a>1 else 'is'} the first {str(a) if a>1 else ''} sightseeing location{'s' if a>1 else ''} to visit.\n\n{''.join(stops_with_tidbits[:a])}{no_ending_summary_plz}"
+        initial_user_prompt_for_short_story = f"{user_prompt_for_setting_scene_for_short_story}\n\nThen, here {'are' if a>1 else 'is'} the first{' ' + str(a) if a>1 else ''} sightseeing location{'s' if a>1 else ''} to visit.\n\n{''.join(stops_with_tidbits[:a])}{no_numbers_plz + no_ending_summary_plz}"
         print("the initial user prompt is:\n", initial_user_prompt_for_short_story)
         initial_user_message = {"role": "user", "content": initial_user_prompt_for_short_story}
 
@@ -448,13 +563,14 @@ As we make our way from the castle, ...
             model = "gpt-4-32k",
             messages = message_list
         )
-        story = completion.choices[0].message.content
-        initial_assistant_message = {"role": "assistant", "content": completion.choices[0].message.content}
+        story_start_undedigitized = completion.choices[0].message.content
+        story = dedigitize_and_log(story_start_undedigitized)
+        initial_assistant_message = {"role": "assistant", "content": story}
         message_list.append(initial_assistant_message)
 
         for j in range(c):
             print(f"fetching short story chunk number", j+1)
-            user_prompt = f"Great, thank you! Here {'are' if n>1 else 'is'} the next {str(n) if n>1 else ''} sightseeing location{'s' if n>1 else ''}:\n\n{''.join(stops_with_tidbits[a+n*j:a+n*(j+1)])}{no_ending_summary_plz}"
+            user_prompt = f"Great, thank you! Here {'are' if n>1 else 'is'} the next {str(n) if n>1 else ''} sightseeing location{'s' if n>1 else ''}:\n\n{''.join(stops_with_tidbits[a+n*j:a+n*(j+1)])}{no_numbers_plz + no_ending_summary_plz}"
             print("the next user prompt is:\n", user_prompt)
             user_message = {"role": "user", "content": user_prompt}
             message_list.append(user_message)
@@ -462,13 +578,14 @@ As we make our way from the castle, ...
                 model = "gpt-4-32k",
                 messages = message_list
             )
-            assistant_prompt_with_story = completion.choices[0].message.content
+            assistant_prompt_with_story_undedigitize = completion.choices[0].message.content
+            assistant_prompt_with_story = dedigitize_and_log(assistant_prompt_with_story_undedigitize)
             story += "\n\n=====\n\n" + assistant_prompt_with_story
             assistant_message_with_story = {"role": "assistant", "content": assistant_prompt_with_story}
             message_list.append(assistant_message_with_story)
 
         print(f"fetching short story chunk number {c+1} (the last chunk)")
-        user_prompt = f"Great, thank you! Now, please conclude our story. First, here {'are' if n>1 else 'is'} the concluding {str(z) if z>1 else ''} sightseeing location{'s' if z>1 else ''} to visit.\n\n{''.join(stops_with_tidbits[a+c*n:a+c*n+z])}{no_starting_transition_plz}"
+        user_prompt = f"Great, thank you! Now, please conclude our story. First, here {'are' if z>1 else 'is'} the concluding {str(z) if z>1 else ''} sightseeing location{'s' if z>1 else ''} to visit.\n\n{''.join(stops_with_tidbits[a+c*n:a+c*n+z])}{no_starting_transition_plz}"
         print("the concluding user prompt is:\n", user_prompt)
         user_message = {"role": "user", "content": user_prompt}
         message_list.append(user_message)
@@ -476,7 +593,8 @@ As we make our way from the castle, ...
             model = "gpt-4-32k",
             messages = message_list
         )
-        final_assistant_prompt = completion.choices[0].message.content
+        final_assistant_prompt_undedigitized = completion.choices[0].message.content
+        final_assistant_prompt = dedigitize_and_log(final_assistant_prompt_undedigitized)
         story += "\n\n=====\n\n" + final_assistant_prompt
 
         story_file = open("stories/" + input['destination'] + "_" + timestamp + "_short.txt", "w")
@@ -484,4 +602,4 @@ As we make our way from the castle, ...
         story_file.close()
 
         story_end_time = datetime_str_to_timestamp(str(datetime.now()))
-        print(f"finished writing short story set in {input['destination_fullname']} at", story_end_time)
+        print(f"finished writing short story set in {input['destination_fullname']} with timestamp {timestamp} at", story_end_time)

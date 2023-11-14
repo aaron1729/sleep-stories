@@ -1,0 +1,15 @@
+newyorkcity_2023-11-14_15-58-05_long.txt
+attempts per dedigitization: 0
+any failures: False
+newyorkcity_2023-11-14_16-01-56_long.txt
+attempts per dedigitization: 0
+any failures: False
+tokyo_2023-11-14_16-01-56_long.txt
+attempts per dedigitization: 
+any failures: Falseparis_2023-11-14_16-01-56_long.txt
+attempts per dedigitization: 
+any failures: Falselondon_2023-11-14_16-01-56_long.txt
+attempts per dedigitization: 
+any failures: Falsebangkok_2023-11-14_16-01-56_long.txt
+attempts per dedigitization: 
+any failures: False
