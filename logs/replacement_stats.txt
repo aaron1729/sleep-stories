@@ -1,15 +1,144 @@
+// ACTUALLY +1 FOR ALL ATTEMPT-COUNTS UP THROUGH 2023-11-14 (off-by-one error)
+
 newyorkcity_2023-11-14_15-58-05_long.txt
 attempts per dedigitization: 0
 any failures: False
+
 newyorkcity_2023-11-14_16-01-56_long.txt
 attempts per dedigitization: 0
 any failures: False
+
 tokyo_2023-11-14_16-01-56_long.txt
 attempts per dedigitization: 
-any failures: Falseparis_2023-11-14_16-01-56_long.txt
-attempts per dedigitization: 
-any failures: Falselondon_2023-11-14_16-01-56_long.txt
-attempts per dedigitization: 
-any failures: Falsebangkok_2023-11-14_16-01-56_long.txt
+any failures: False
+
+paris_2023-11-14_16-01-56_long.txt
 attempts per dedigitization: 
 any failures: False
+
+london_2023-11-14_16-01-56_long.txt
+attempts per dedigitization: 
+any failures: False
+
+bangkok_2023-11-14_16-01-56_long.txt
+attempts per dedigitization: 
+any failures: False
+
+newyorkcity_2023-11-14_18-27-48_long.txt
+attempts per dedigitization: 0
+any failures: False
+
+tokyo_2023-11-14_18-27-48_long.txt
+attempts per dedigitization: 0
+any failures: False
+
+paris_2023-11-14_18-27-48_long.txt
+attempts per dedigitization: 0
+any failures: False
+
+london_2023-11-14_18-27-48_long.txt
+attempts per dedigitization: 
+any failures: False
+
+bangkok_2023-11-14_18-27-48_long.txt
+attempts per dedigitization: 0
+any failures: False
+
+istanbul_2023-11-14_18-27-48_long.txt
+attempts per dedigitization: 
+any failures: False
+
+dubai_2023-11-14_18-27-48_long.txt
+attempts per dedigitization: 
+any failures: False
+
+barcelona_2023-11-14_18-27-48_long.txt
+attempts per dedigitization: 
+any failures: False
+
+rio_2023-11-14_18-27-48_long.txt
+attempts per dedigitization: 
+any failures: False
+
+shanghai_2023-11-14_18-27-48_long.txt
+attempts per dedigitization: 
+any failures: False
+
+greece_2023-11-14_18-27-48_long.txt
+attempts per dedigitization: 
+any failures: False
+
+kyoto_2023-11-14_18-27-48_long.txt
+attempts per dedigitization: 
+any failures: False
+
+amalfi_2023-11-14_18-27-48_long.txt
+attempts per dedigitization: 
+any failures: False
+
+bali_2023-11-14_18-27-48_long.txt
+attempts per dedigitization: 
+any failures: False
+
+cinqueterre_2023-11-14_18-27-48_long.txt
+attempts per dedigitization: 
+any failures: False
+
+chiangmai_2023-11-14_18-27-48_long.txt
+attempts per dedigitization: 
+any failures: False
+
+napa_2023-11-14_18-27-48_long.txt
+attempts per dedigitization: 
+any failures: False
+
+algarve_2023-11-14_18-27-48_long.txt
+attempts per dedigitization: 
+any failures: False
+
+costarica_2023-11-14_18-27-48_long.txt
+attempts per dedigitization: 
+any failures: False
+
+queenstown_2023-11-14_18-27-48_long.txt
+attempts per dedigitization: 
+any failures: False
+
+/////////// ATTEMPT-COUNTS CORRECTED STARTING HERE
+
+newyorkcity_2023-11-15_14-48-51_long.txt
+attempts per dedigitization: 
+any failures: False
+
+tokyo_2023-11-15_14-48-51_long.txt
+attempts per dedigitization: 1
+any failures: False
+
+paris_2023-11-15_15-24-56_long.txt
+attempts per dedigitization: 
+any failures: False
+
+london_2023-11-15_15-24-56_long.txt
+attempts per dedigitization: 1 ,1
+any failures: False
+
+london_2023-11-15_15-41-14_long.txt
+attempts per dedigitization: 1 ,1 ,1 ,1
+any failures: False
+
+bangkok_2023-11-15_15-50-20_long.txt
+attempts per dedigitization: 1 ,1
+any failures: False
+
+barcelona_2023-11-15_18-19-40_long.txt
+attempts per dedigitization: 1 ,1 ,1
+any failures: False
+
+barcelona_2023-11-15_18-33-14_long.txt
+attempts per dedigitization: 1 ,1 ,1 ,1 ,1 ,1
+any failures: str(any_failures)
+
+rio_2023-11-15_18-44-22_short.txt
+attempts per dedigitization: 1, 1
+any failures: str(any_failures)
+

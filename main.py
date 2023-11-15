@@ -14,18 +14,18 @@ timestamp = datetime_str_to_timestamp(start_time)
 
 ##### PARAMETERS
 
-num_stops = 6
+num_stops = 3
 
-write_long_story = True
-write_short_story = False
+write_long_story = False
+write_short_story = True
 
 inputs = [
-    {
-        "destination": "newyorkcity",
-        "destination_fullname": "New York, New York",
-        "transport_method": "open-top bus tour and Metro, with a tour guide with a thick Brooklyn accent whose family has been in New York City for many generations",
-        "season": "fall",
-    },
+    # {
+    #     "destination": "newyorkcity",
+    #     "destination_fullname": "New York, New York",
+    #     "transport_method": "open-top bus tour and Metro, with a tour guide with a thick Brooklyn accent whose family has been in New York City for many generations",
+    #     "season": "fall",
+    # },
     # {
     #     "destination": "tokyo",
     #     "destination_fullname": "Tokyo, Japan",
@@ -68,12 +68,12 @@ inputs = [
     #     "transport_method": "guided bike tour with an affable university student who double-majors in art and history as a tour guide",
     #     "season": "early fall",
     # },
-    # {
-    #     "destination": "rio",
-    #     "destination_fullname": "Rio de Janeiro, Brazil",
-    #     "transport_method": "limousine with a quiet but friendly driver in his early 50s who is aging gracefully",
-    #     "season": "late spring",
-    # },
+    {
+        "destination": "rio",
+        "destination_fullname": "Rio de Janeiro, Brazil",
+        "transport_method": "limousine with a quiet but friendly driver in his early 50s who is aging gracefully",
+        "season": "late spring",
+    },
     # {
     #     "destination": "shanghai",
     #     "destination_fullname": "Shanghai, China",
@@ -145,6 +145,10 @@ inputs = [
 ################################################################################
 
 ##### dedigitization
+##### ##### UPDATE: throughout this code, "digit" also refers to roman numerals.
+
+# regex pattern for roman numerals (preceded by a space). it's copied from here, with the ends stripped off and then preceded by a space and followed by a non-word character:
+    # https://stackoverflow.com/a/267405/19327500
 
 # input: a string (which for us will be an entire completion coming back from chatGPT), and a number of rewrites to attempt before moving on.
 # outputs (implicitly formatted as a tuple):
@@ -152,12 +156,33 @@ inputs = [
     # a boolean of whether it was modified at all
     # a list of the versions that contain digits
     # a boolean of whether the final rewrite failed
-def dedigitize(string, rewrites=3):   
-    if not re.search(r'\d', string):
+pattern_for_roman_numerals = r" M{0,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})\W"
+
+def dedigitize(string, rewrites=3):
+    any_nums = bool(re.search(r'\d', string)) or bool(re.search(pattern_for_roman_numerals, string))
+    if not any_nums:
         return string, False, [], False
     versions_with_digits = [string]
     for _ in range(rewrites):
-        system_prompt = f"The user will give you text. Please rewrite the text so that all numbers are written out in words. The result should not have any digits. Please make sure that years are written out in the usual way that they're spoken -- for instance, '1842' should be written out as 'eighteen forty-two' (and not 'one thousand eight hundred and forty-two'). Please only respond with the rewritten text, and nothing else."
+        system_prompt = f"""The user will give you text. Please rewrite the text so that all numbers are written out in words. This includes Roman numerals. So, the result should not have any digits or any Roman numerals. Please make sure that years are written out in the usual way that they're spoken. Please only respond with the rewritten text, and nothing else.
+
+EXAMPLE: '1842' should be written out as 'eighteen forty-two' (and not 'one thousand eight hundred and forty-two').
+
+EXAMPLE: '1906', when it is functioning as a year, should be written out as 'nineteen oh-six' (and not 'one thousand nine hundred and six' or 'nineteen hundred and six').
+
+EXAMPLE: In the context of a vacation in Italy, '5Terre' (which is the name of a gelateria) should be written out as 'Cinque Terre' (which is the name of the region where the gelateria is located).
+
+EXAMPLE: 'Louis XIV' should be written out as 'Louis the Fourteenth'.
+
+EXAMPLE: 'Henry I' should be written out as 'Henry the First'.
+
+EXAMPLE: 'Super Bowl XLII' should be written out as 'Super Bowl Forty Two'.
+
+EXAMPLE: 'Star Wars Episode IV' should be written out as 'Star Wars Episode Four'.
+
+EXAMPLE: 'Calculus I' should be written out as 'Calculus One' (this is the name of a math course).
+
+EXAMPLE: 'I Gusti Nyoman Lempad' should actually NOT BE CHANGED, because this is a person's name. Please do not be confused by the fact that his first name is also a Roman numeral."""
         system_message = {"role": "system", "content": system_prompt}
         user_message = {"role": "user", "content": string}
         print("asking chatGPT to rewrite text without digits")
@@ -166,7 +191,10 @@ def dedigitize(string, rewrites=3):
             messages = [system_message, user_message]
         )
         string = completion.choices[0].message.content
-        if not re.search(r'\d', string):
+        # starting here, _don't_ keep looking for roman numerals, because there _is_ the possibility that a legitimate roman numeral shows up as _not_ a roman numeral. the main thing is 'I' (first person singular), but 
+        # justification: after 15 instances of this function running while writing a story, chatGPT _always_ made a passing rewrite on the first try. (these only tested removal of digits, not roman numerals, but oh well.)
+        any_nums = bool(re.search(r'\d', string)) # or bool(re.search(pattern_for_roman_numerals, string))
+        if not any_nums:
             return string, True, versions_with_digits, False
         versions_with_digits.append(string)
     return string, True, versions_with_digits, True
@@ -177,6 +205,106 @@ def dedigitize_and_log(string):
     if modified:
         dedigitizations.append({"original": versions_with_digits[0], "failed_rewrites": versions_with_digits[1: ], "final": output, "failed": failed})
     return output
+
+################################################################################
+
+##### record the replacements and write files
+
+# now that the story is finished, if any digit replacements were made, then:
+    # write them to a replacement_log file;
+    # store just the individual sentences at the end of the story file (for compilation into kotlin code -- perhaps at the top, commented-out);
+    # regardless, also save the replacement stats.
+
+def log_replacements_and_write_files(story, length):
+        
+    ### record replacement stats.
+
+    nums_of_attempts = []
+    any_failures = False
+    # the dedigitizations list will have been created through the process of writing the story.
+    for dedigitization in dedigitizations:
+        nums_of_attempts.append(len(dedigitization['failed_rewrites']) + 1)
+        if dedigitization['failed']:
+            any_failures = True
+    replacement_stats_string = f"{input['destination']}_{timestamp}_{length}.txt\nattempts per dedigitization: " + ", ".join([str(num) for num in nums_of_attempts]) + f"\nany failures: str(any_failures)\n\n"
+    replacement_stats_file = open("logs/replacement_stats.txt", "a")
+    replacement_stats_file.write(replacement_stats_string)
+    replacement_stats_file.close()
+
+    ### if there are any failures, make a replacement_failure_log file.
+
+    if any_failures:
+        replacement_failure_log_file = open(f"logs/replacement_failure_logs/{input['destination']}_{timestamp}_{length}.txt", "w")
+        replacement_failure_log_file.write("FAILED! SAD!")
+        replacement_failure_log_file.close()
+
+    ### if there were any replacements, save each pair -- the old and new sentences -- together in a single object. (these get used just below.)
+    ### the full replacements -- the old and new chunks -- get written to a replacement_log file.
+
+    sentence_replacement_pairs = []
+
+    if len(dedigitizations) > 0:
+        replacement_log = "\n==========\n\n"
+        for dedigitization in dedigitizations:
+
+            # write some replacement_log material.
+
+            replacement_log += f"REPLACEMENT FAILED: {str(dedigitization['failed'])} \n\n=====\n\n"
+            if dedigitization["failed"]:
+                replacement_log = "WARNING: A REPLACEMENT HEREIN HATH FAILED\n\n" + replacement_log
+            replacement_log += f"ORIGINAL TEXT:\n\n{dedigitization['original']}\n\n=====\n\n"
+            replacement_log += "\n\n=====\n\n".join(["FAILED REWRITES:"] + dedigitization['failed_rewrites'] + [""])
+            replacement_log += f"FINAL VERSION:\n\n{dedigitization['final']}\n\n==========\n\n"
+
+            # store replaced sentences and their replacements.
+
+            original_sentences = dedigitization['original'].split(".")
+            original_sentences_with_digits = [sentence for sentence in original_sentences if re.search(r'\d', sentence)]
+            new_sentences_with_digits_removed = []
+
+            for sentence in original_sentences_with_digits:
+                sentence_split = re.split(r'\W', sentence)
+                sentence_split_filtered = []
+                for word in sentence_split:
+                    if len(word) > 3 and not re.search(r'\d', word):
+                        sentence_split_filtered.append(word)
+                pattern = r".*".join(sentence_split_filtered)
+                match_obj = re.search(pattern, story)
+                start, end = match_obj.span()
+                # in case the original sentence actually started or ended with a number, go catch some extra characters at the front and back (assuming they exist).
+                start = max(start - 10, 0)
+                end = min(end + 10, len(story))
+                new_sentence_with_digits_removed = story[start: end]
+                new_sentences_with_digits_removed.append(new_sentence_with_digits_removed)
+            
+            # the strict=True here checks that these lists have the same length (and throws an error if they don't).
+            for old_sentence, new_sentence in zip(original_sentences_with_digits, new_sentences_with_digits_removed, strict=True):
+                sentence_replacement_pairs.append({"old": old_sentence, "new": new_sentence})
+        
+        # write the replacement_log file (assuming there were any dedigitizations).
+
+        replacement_log_file = open(f"logs/replacement_logs/{input['destination']}_{timestamp}_{length}.txt", "w")
+        replacement_log_file.write(replacement_log)
+        replacement_log_file.close()
+    
+    ### write the individual sentence replacements to the end of the story file.
+
+    replacements_string = "\n\n=====\n\nREPLACED_SENTENCES:"
+    for sentence_replacement_object in sentence_replacement_pairs:
+        replacements_string += f"\n\nOLD SENTENCE: {sentence_replacement_object['old']}\nNEW SENTENCE: {sentence_replacement_object['new']}"
+
+    story += replacements_string
+
+    ### write the story file.
+
+    story_file = open(f"stories/{input['destination']}_{timestamp}_{length}.txt", "w")
+    story_file.write(story)
+    story_file.close()
+
+    story_end_time = datetime_str_to_timestamp(str(datetime.now()))
+    print(f"finished writing {length} story set in {input['destination_fullname']} with timestamp {timestamp} at:", story_end_time)
+
+    return None
 
 ################################################################################
 
@@ -295,7 +423,7 @@ END OF EXAMPLE THREE
     print("\ngetting list of stops with tidbits\n")
 
     stops_with_tidbits = []
-    stops_with_tidbits_file = open("prompts/" + input['destination'] + "_" + timestamp + ".txt", "a")
+    stops_with_tidbits_file = open(f"prompts/{input['destination']}_{timestamp}.txt", "a")
     for stop in stops:
         user_message_for_tidbit = {"role": "user", "content": stop}
         completion = client.chat.completions.create(
@@ -396,7 +524,7 @@ END EXAMPLE REWRITE TWO:""" + "\n\n=====\n\n" + example_story
 
     user_prompt_for_ending_story = f"Please conclude the story about our sightseeing tour by {input['transport_method']} in {input['destination_fullname']}. Keep it upbeat, gentle, and inspiring."
 
-    no_numbers_plz = "\n\nPlease spell out any numbers in words. For instance, write 'nineteen eighty-seven' instead of '1987', and 'four thousand seven hundred and thirty three' instead of '4,733', and 'eighteen-sixties' instead of '1860s' (referring to the decade), and 'nineties' instead of '90s' (also referring to the decade)."
+    no_numbers_plz = "" # "\n\nPlease spell out any numbers in words. For instance, write 'nineteen eighty-seven' instead of '1987', and 'four thousand seven hundred and thirty three' instead of '4,733', and 'eighteen-sixties' instead of '1860s' (referring to the decade), and 'nineties' instead of '90s' (also referring to the decade)."
 
     no_ending_summary_plz = "\n\nPlease don't end your response with a summary, though, because we will be continuing the story and visiting more sightseeing locations!"
 
@@ -442,7 +570,7 @@ As we make our way from the castle, ..."""
 
         stop_messages = []
         for (index, stop_with_tidbits) in enumerate(stops_with_tidbits):
-            stop_prompt = "Great, thank you! Here is the next sightseeing location:\n\n" + stop_with_tidbits + no_numbers_plz + no_ending_summary_plz
+            stop_prompt = f"Great, thank you! Here is the next sightseeing location:\n\n {stop_with_tidbits}{no_numbers_plz}{no_ending_summary_plz}"
             if index == len(stops_with_tidbits) - 1:
                 stop_prompt += no_starting_transition_plz
             stop_message = {"role": "user", "content": stop_prompt}
@@ -475,71 +603,21 @@ As we make our way from the castle, ..."""
         assistant_prompt_with_story_ending = dedigitize_and_log(assistant_prompt_with_story_ending_undedigitized)
         story += "\n\n=====\n\n" + assistant_prompt_with_story_ending
 
-        # now that the story is finished, if any digit replacements were made, then:
-            # write them to a replacement_log file;
-            # store just the individual sentences at the end of the story file (for compilation into kotlin code -- perhaps at the top, commented-out).
-        # regardless, also save the replacement stats.
 
-        nums_of_attempts = []
-        any_failures = False
-        for dedigitization in dedigitizations:
-            nums_of_attempts.append(len(dedigitization['failed_rewrites']))
-            if dedigitization['failed']:
-                any_failures = True
-        replacement_stats_string = f"{input['destination']}_{timestamp}_long.txt\nattempts per dedigitization: " + " ,".join([str(num) for num in nums_of_attempts]) + "\nany failures: " + str(any_failures) + "\n\n"
-        replacement_stats_file = open("logs/replacement_stats.txt", "a")
-        replacement_stats_file.write(replacement_stats_string)
-        replacement_stats_file.close()
-        if any_failures:
-            replacement_failure_log_file = open("logs/replacement_failure_logs/" + input['destination'] + "_" + timestamp + "_long.txt", "w")
-            replacement_failure_log_file.write("FAILED! SAD!")
-            replacement_failure_log_file.close()
-
-        replaced_sentences = []
-
-        if len(dedigitizations) > 0:
-            replacement_logs_file = open("logs/replacement_logs/" + input['destination'] + "_" + timestamp + "_long.txt", "w")
-            replacement_log = "\n==========\n"
-            for dedigitization in dedigitizations:
-                replacement_log += "REPLACEMENT FAILED: " + str(dedigitization["failed"]) + "\n\n=====\n\n"
-                if dedigitization["failed"]:
-                    replacement_log = "WARNING: A REPLACEMENT HEREIN HATH FAILED\n\n" + replacement_log
-                replacement_log += "ORIGINAL TEXT:\n\n" + dedigitization['original'] + "\n\n=====\n\n"
-                replacement_log += "FAILED REWRITES:\n\n" + "\n\n=====\n\n".join(dedigitization['failed_rewrites']) + "\n\n=====\n\n"
-                replacement_log += "FINAL VERSION:\n\n" + dedigitization['final'] + "\n\n==========\n\n"
-                original_sentences = dedigitization['original'].split(".")
-                original_sentences_with_digits = [sentence for sentence in original_sentences if re.search(r'\d', sentence)]
-                replaced_sentences += original_sentences_with_digits
-            replacement_log_file = open("logs/replacement_logs/" + input['destination'] + "_" + timestamp + "_long.txt", "w")
-            replacement_log_file.write(replacement_log)
-            replacement_log_file.close()
-
-        story += "\n\n=====\n\nREPLACED_SENTENCES:\n" + "\n".join(replaced_sentences)
-            
+        log_replacements_and_write_files(story, "long")
 
 
-
-
-
-
-        story_file = open("stories/" + input['destination'] + "_" + timestamp + "_long.txt", "w")
-        story_file.write(story)
-        story_file.close()
-
-        story_end_time = datetime_str_to_timestamp(str(datetime.now()))
-        print(f"finished writing long story set in {input['destination_fullname']} with timestamp {timestamp} at:", story_end_time)
-
-        
 
     ##### GET SHORT STORY
 
     if write_short_story:
 
-        a = 1 # number of stops bundled into initial chunk
-        c = 5 # number of middle completions
-        n = 2 # number of stops per middle completion
+        a = 1 # number of stops bundled into initial chunk -- assumed to be at least 1
+        c = 1 # number of middle completions
+        n = 1 # number of stops per middle completion
         z = 1 # number of stops bundled into final chunk
         # total number of stops needed is a + c*n + z
+        # by around 2023-11-14, we decided that these should be: a=1, c=5, n=2, z=1.
 
         print(f"writing a short story")
 
@@ -547,12 +625,12 @@ As we make our way from the castle, ..."""
 
         system_message = {"role": "system", "content": system_prompt_for_short_story}
 
-        # this evades the following error, which otherwise occurs below:
+        # this evades the following stupid error, which otherwise occurs below:
             # Escape sequence (backslash) not allowed in expression portion of f-string prior to Python 3.12
         # so, here just append "\n\n" to the stop prompts now, rather than joining them with separator "\n\n" inside of the f-string.
         stops_with_tidbits = [stop_with_tidbits + "\n\n" for stop_with_tidbits in stops_with_tidbits]
 
-        initial_user_prompt_for_short_story = f"{user_prompt_for_setting_scene_for_short_story}\n\nThen, here {'are' if a>1 else 'is'} the first{' ' + str(a) if a>1 else ''} sightseeing location{'s' if a>1 else ''} to visit.\n\n{''.join(stops_with_tidbits[:a])}{no_numbers_plz + no_ending_summary_plz}"
+        initial_user_prompt_for_short_story = f"{user_prompt_for_setting_scene_for_short_story}\n\nThen, here {'are' if a>1 else 'is'} the first{f' {str(a)}' if a>1 else ''} sightseeing location{'s' if a>1 else ''} to visit.\n\n{''.join(stops_with_tidbits[:a])}{no_numbers_plz + no_ending_summary_plz}"
         print("the initial user prompt is:\n", initial_user_prompt_for_short_story)
         initial_user_message = {"role": "user", "content": initial_user_prompt_for_short_story}
 
@@ -597,9 +675,16 @@ As we make our way from the castle, ..."""
         final_assistant_prompt = dedigitize_and_log(final_assistant_prompt_undedigitized)
         story += "\n\n=====\n\n" + final_assistant_prompt
 
-        story_file = open("stories/" + input['destination'] + "_" + timestamp + "_short.txt", "w")
-        story_file.write(story)
-        story_file.close()
+        log_replacements_and_write_files(story, "short")
 
-        story_end_time = datetime_str_to_timestamp(str(datetime.now()))
-        print(f"finished writing short story set in {input['destination_fullname']} with timestamp {timestamp} at", story_end_time)
+
+
+
+        # ##### WRITE STORY TO FILE
+
+        # story_file = open(f"stories/{input['destination']}_{timestamp}_short.txt", "w")
+        # story_file.write(story)
+        # story_file.close()
+
+        # story_end_time = datetime_str_to_timestamp(str(datetime.now()))
+        # print(f"finished writing short story set in {input['destination_fullname']} with timestamp {timestamp} at", story_end_time)

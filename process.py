@@ -83,8 +83,10 @@ for destination in destinations:
     file_name = object_name + ".kt"
 
     output = f"""// this code is generated from the story files {destination}_{destinations[destination]['short']['timestamp']}_short.txt and {destination}_{destinations[destination]['long']['timestamp']}_long.txt.
-// the stops with tidbits that were the user prompts for these stories are copied at the bottom as comments -- first those for the short story, then those for the long story -- separated by a bunch of slashes.
+// the stops-with-tidbits that went into the user prompts for both of these stories are copied at the bottom as comments -- first those for the short story, then those for the long story -- separated by a bunch of slashes.
 // min_stops_for_long_story is set to {min_stops_for_long_story}.
+
+
 
 package com.downdogapp.cue
 
