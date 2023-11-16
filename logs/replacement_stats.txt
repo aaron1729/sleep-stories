@@ -146,3 +146,19 @@ rio_2023-11-15_19-38-55_short.txt
 attempts per dedigitization: 1, 1
 any failures: str(any_failures)
 
+newyorkcity_2023-11-16_00-09-12_short.txt
+attempts per dedigitization: 1, 1, 1
+any failures: str(any_failures)
+
+newyorkcity_2023-11-16_00-26-44_short.txt
+attempts per dedigitization: 1, 1, 1
+any failures: str(any_failures)
+
+tokyo_2023-11-16_00-26-44_short.txt
+attempts per dedigitization: 1, 1, 1
+any failures: str(any_failures)
+
+newyorkcity_2023-11-16_00-42-57_long.txt
+attempts per dedigitization: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+any failures: str(any_failures)
+

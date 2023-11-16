@@ -16,7 +16,7 @@ timestamp = datetime_str_to_timestamp(start_time)
 
 num_stops = 20
 
-write_long_story = False
+write_long_story = True
 write_short_story = True
 
 inputs = [
@@ -263,26 +263,36 @@ def log_replacements_and_write_files(story, length):
             new_sentences_with_digits_removed = []
 
             for sentence in original_sentences_with_digits:
+
+                # do a regex search for a cleaned-up version of the sentence.
                 sentence_split = re.split(r'\W', sentence)
                 sentence_split_filtered = []
                 for word in sentence_split:
-                    if len(word) > 3 and not re.search(r'\d', word):
+                    if len(word) > 3 and not re.search(r'\d', word) and not re.search(pattern_for_roman_numerals, word):
                         sentence_split_filtered.append(word)
-                pattern = r".*".join(sentence_split_filtered)
-                match_obj = re.search(pattern, story)
-                start, end = match_obj.span()
-                match_string = story[start: end]
-                # in case the original sentence actually started or ended with a number, go catch some extra characters at the front and back (assuming they exist). however, don't include any "\n" in this, just to keep things looking nice and pretty in the .kt file comments.
-                pad_size = 10
-                pad_left_index = max(start - pad_size, 0)
-                pad_left_string = story[pad_left_index: start]
-                pad_left_string_trimmed = re.split("\n", pad_left_string)[-1]
-                pad_right_index = min(end + pad_size, len(story))
-                pad_right_string = story[end: pad_right_index]
-                pad_right_string_trimmed = re.split("\n", pad_right_string)[0]
-                new_sentence_with_digits_removed = pad_left_string_trimmed + match_string + pad_right_string_trimmed
+                pattern_for_replacing_sentence = r".*".join(sentence_split_filtered)
+                match_obj = re.search(pattern_for_replacing_sentence, story)
 
-                new_sentences_with_digits_removed.append(new_sentence_with_digits_removed)
+                # this pattern _might_ not actually match, e.g. if chatGPT changes a word or two around. so, just handle that separately.
+                    # real-life example:
+                        # regex pattern: Stepping.*guide.*leads.*engaging.*journey.*from.*Street.*subway.*stop.*museum.*entrance
+                        # would-be match: Stepping off the bus, our guide takes us on a captivating journey from the Eighty-sixth Street subway stop to the museum's entrance.
+                    # note: "leads" became "takes", and also "engaging" became "captivating".
+                if match_obj:
+                    start, end = match_obj.span()
+                    match_string = story[start: end]
+                    # in case the original sentence actually started or ended with a number, go catch some extra characters at the front and back (assuming they exist). however, don't include any "\n" in this, just to keep things looking nice and pretty in the .kt file comments.
+                    pad_size = 10
+                    pad_left_index = max(start - pad_size, 0)
+                    pad_left_string = story[pad_left_index: start]
+                    pad_left_string_trimmed = re.split("\n", pad_left_string)[-1]
+                    pad_right_index = min(end + pad_size, len(story))
+                    pad_right_string = story[end: pad_right_index]
+                    pad_right_string_trimmed = re.split("\n", pad_right_string)[0]
+                    new_sentence_with_digits_removed = pad_left_string_trimmed + match_string + pad_right_string_trimmed
+                    new_sentences_with_digits_removed.append(new_sentence_with_digits_removed)
+                else:
+                    new_sentences_with_digits_removed.append(f"match not found! please search for the replacement manually. fyi, the regex pattern is: {str(pattern_for_replacing_sentence)}")
             
             # the strict=True here checks that these lists have the same length (and throws an error if they don't).
             for old_sentence, new_sentence in zip(original_sentences_with_digits, new_sentences_with_digits_removed, strict=True):
@@ -448,7 +458,7 @@ END OF EXAMPLE THREE
 
     ##### GET LONG AND/OR SHORT STORY
 
-    example_story = open("prompts/example_story.txt", "r").read()
+    example_story = open("example_story.txt", "r").read()
 
     long_story_system_prompt_template_filler = "{num_stops} different sightseeing locations there -- these will come one at a time"
     short_story_system_prompt_template_filler = "a few different sightseeing locations"
@@ -533,7 +543,7 @@ END EXAMPLE REWRITE TWO:""" + "\n\n=====\n\n" + example_story
 
     no_numbers_plz = "\n\nPlease spell out any numbers in words. For instance, write 'nineteen eighty-seven' instead of '1987', and 'four thousand seven hundred and thirty three' instead of '4,733', and 'eighteen-sixties' instead of '1860s' (referring to the decade), and 'nineties' instead of '90s' (also referring to the decade)."
 
-    no_overused_words_plz = "\n\nPlease don't use any of the following words: tapestry, testament, grandeur, symphony."
+    no_overused_words_plz = "\n\nPlease don't use any of the following words: tapestry, testament, grandeur, symphony, ethereal."
 
     no_ending_summary_plz = "\n\nPlease don't end your response with a summary, though, because we will be continuing the story and visiting more sightseeing locations!"
 
@@ -622,8 +632,8 @@ As we make our way from the castle, ..."""
     if write_short_story:
 
         a = 1 # number of stops bundled into initial chunk -- assumed to be at least 1
-        c = 1 # number of middle completions
-        n = 1 # number of stops per middle completion
+        c = 5 # number of middle completions
+        n = 2 # number of stops per middle completion
         z = 1 # number of stops bundled into final chunk
         # total number of stops needed is a + c*n + z
         # by around 2023-11-14, we decided that these should be: a=1, c=5, n=2, z=1.
