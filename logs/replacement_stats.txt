@@ -162,3 +162,171 @@ newyorkcity_2023-11-16_00-42-57_long.txt
 attempts per dedigitization: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
 any failures: str(any_failures)
 
+newyorkcity_2023-11-16_01-20-42_long.txt
+attempts per dedigitization: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+any failures: str(any_failures)
+
+newyorkcity_2023-11-16_01-20-42_short.txt
+attempts per dedigitization: 1, 1, 1, 1, 1, 1, 1
+any failures: str(any_failures)
+
+tokyo_2023-11-16_01-20-42_long.txt
+attempts per dedigitization: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+any failures: str(any_failures)
+
+tokyo_2023-11-16_01-20-42_short.txt
+attempts per dedigitization: 1, 1, 1, 1, 1, 1, 1
+any failures: str(any_failures)
+
+paris_2023-11-16_01-20-42_long.txt
+attempts per dedigitization: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+any failures: str(any_failures)
+
+paris_2023-11-16_01-20-42_short.txt
+attempts per dedigitization: 1, 1, 1, 1, 1, 1, 1
+any failures: str(any_failures)
+
+london_2023-11-16_01-20-42_long.txt
+attempts per dedigitization: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+any failures: str(any_failures)
+
+london_2023-11-16_01-20-42_short.txt
+attempts per dedigitization: 1, 1, 1, 1, 1, 1, 1
+any failures: str(any_failures)
+
+bangkok_2023-11-16_01-20-42_long.txt
+attempts per dedigitization: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+any failures: str(any_failures)
+
+bangkok_2023-11-16_01-20-42_short.txt
+attempts per dedigitization: 1, 1, 1, 1, 1, 1, 1
+any failures: str(any_failures)
+
+istanbul_2023-11-16_01-20-42_long.txt
+attempts per dedigitization: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+any failures: str(any_failures)
+
+istanbul_2023-11-16_01-20-42_short.txt
+attempts per dedigitization: 1, 1, 1, 1, 1, 1, 1
+any failures: str(any_failures)
+
+dubai_2023-11-16_01-20-42_long.txt
+attempts per dedigitization: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+any failures: str(any_failures)
+
+dubai_2023-11-16_01-20-42_short.txt
+attempts per dedigitization: 1, 1, 1, 1, 1
+any failures: str(any_failures)
+
+barcelona_2023-11-16_01-20-42_long.txt
+attempts per dedigitization: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+any failures: str(any_failures)
+
+barcelona_2023-11-16_01-20-42_short.txt
+attempts per dedigitization: 1, 1, 1, 1, 1, 1, 1
+any failures: str(any_failures)
+
+rio_2023-11-16_01-20-42_long.txt
+attempts per dedigitization: 1, 1, 1, 1, 1, 4, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+any failures: str(any_failures)
+
+rio_2023-11-16_01-20-42_short.txt
+attempts per dedigitization: 1, 1, 1, 1, 4, 1, 1
+any failures: str(any_failures)
+
+shanghai_2023-11-16_01-20-42_long.txt
+attempts per dedigitization: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+any failures: str(any_failures)
+
+shanghai_2023-11-16_01-20-42_short.txt
+attempts per dedigitization: 1, 1, 1, 1, 1, 1
+any failures: str(any_failures)
+
+greece_2023-11-16_01-20-42_long.txt
+attempts per dedigitization: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+any failures: str(any_failures)
+
+greece_2023-11-16_01-20-42_short.txt
+attempts per dedigitization: 1, 1, 1, 1, 1, 1, 1
+any failures: str(any_failures)
+
+kyoto_2023-11-16_01-20-42_long.txt
+attempts per dedigitization: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+any failures: str(any_failures)
+
+kyoto_2023-11-16_01-20-42_short.txt
+attempts per dedigitization: 1, 1, 1, 1, 1, 1, 1
+any failures: str(any_failures)
+
+amalfi_2023-11-16_01-20-42_long.txt
+attempts per dedigitization: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+any failures: str(any_failures)
+
+amalfi_2023-11-16_01-20-42_short.txt
+attempts per dedigitization: 1, 1, 1, 1, 1, 1, 1
+any failures: str(any_failures)
+
+bali_2023-11-16_01-20-42_long.txt
+attempts per dedigitization: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+any failures: str(any_failures)
+
+bali_2023-11-16_01-20-42_short.txt
+attempts per dedigitization: 1, 1, 1, 1, 1, 1, 1
+any failures: str(any_failures)
+
+cinqueterre_2023-11-16_01-20-42_long.txt
+attempts per dedigitization: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+any failures: str(any_failures)
+
+cinqueterre_2023-11-16_01-20-42_short.txt
+attempts per dedigitization: 1, 1, 1, 1, 1, 1, 1
+any failures: str(any_failures)
+
+chiangmai_2023-11-16_01-20-42_long.txt
+attempts per dedigitization: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+any failures: str(any_failures)
+
+chiangmai_2023-11-16_01-20-42_short.txt
+attempts per dedigitization: 1, 1, 1, 1, 1, 1, 1
+any failures: str(any_failures)
+
+napa_2023-11-16_01-20-42_long.txt
+attempts per dedigitization: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+any failures: str(any_failures)
+
+napa_2023-11-16_01-20-42_short.txt
+attempts per dedigitization: 1, 1, 1, 1, 1, 1, 1
+any failures: str(any_failures)
+
+algarve_2023-11-16_01-20-42_long.txt
+attempts per dedigitization: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+any failures: str(any_failures)
+
+algarve_2023-11-16_01-20-42_short.txt
+attempts per dedigitization: 1, 1, 1, 1, 1, 1
+any failures: str(any_failures)
+
+costarica_2023-11-16_01-20-42_long.txt
+attempts per dedigitization: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+any failures: str(any_failures)
+
+costarica_2023-11-16_01-20-42_short.txt
+attempts per dedigitization: 1, 1, 1, 1, 1, 1
+any failures: str(any_failures)
+
+queenstown_2023-11-16_01-20-42_long.txt
+attempts per dedigitization: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+any failures: str(any_failures)
+
+queenstown_2023-11-16_01-20-42_short.txt
+attempts per dedigitization: 1, 1, 1, 1, 1, 1, 1
+any failures: str(any_failures)
+
+berkeley_2023-11-16_12-11-07_long.txt
+attempts per dedigitization: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+any failures: False
+
+berkeley_2023-11-16_12-43-18_short.txt
+attempts per dedigitization: 1, 1, 1, 1, 1, 1
+any failures: False
+
