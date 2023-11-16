@@ -22,6 +22,8 @@ min_stops_for_long_story = 1
 
 for txt_file_name in txt_file_names:
 
+    print(f"now processing {txt_file_name}")
+
     [destination, date, time, length] = txt_file_name[:-4].split("_")
     if not destination in destinations:
         destinations[destination] = {}
@@ -46,23 +48,46 @@ for txt_file_name in txt_file_names:
     destinations[destination][length]["dedigitization_comment_string"] = dedigitization_comment_string
     chunks = chunks[: -1]
 
-    # this function takes a chunk and breaks it into paragraphs, and then organizes those into a single (but generally multi-line) string like the following (with two tabs before each paragraph, to conform to linting style):
+    ##### NEW VERSION (2023-11-15 around 8pm): split each _paragraph_ into minibatches -- two sentences each, and if there are an odd number then the last one on its own. so for a 3-sentence paragraph followed by a 4-sentence paragraph, we want:
+        # "pgh1 minibatch 1" /
+        # "pgh1 minibatch 2" /
+        # "pgh2 minibatch 1" / ....
+    # the commas will _only_ be in the same spot: separating the `listOf` arguments in the middle val thingy.
+
+    ##### OLD VERSION: this function takes a chunk and breaks it into paragraphs, and then organizes those into a single (but generally multi-line) string like the following (with two tabs before each paragraph, to conform to linting style):
         # "1st paragraph of the 3-paragraph chunk" /
         # "2nd paragraph of the 3-paragraph chunk" /
         # "3rd paragraph of the 3-paragraph chunk"
+        
     def process_chunk(string):
         string = string.strip()
-        # chunks consist of paragraphs. usually the paragraphs are separated by "\n\n", but occasionally chatGPT separates them with "\n \n", or possibly even "\n  \n" (with two spaces).
+        # chunks consist of paragraphs. usually the paragraphs are separated by "\n\n", but occasionally chatGPT separates them with "\n \n", or possibly even "\n  \n" (with two spaces). so, fix this.
         string_with_fixed_paragraph_separations = re.sub(r'\n *\n', '\n\n', string)
-        list_old = string_with_fixed_paragraph_separations.split("\n\n")
-        list_new = []
-        for paragraph in list_old:
+        paragraphs = string_with_fixed_paragraph_separations.split("\n\n")
+        minibatches = []
+        for paragraph in paragraphs:
+            # we'll later wrap minibatches in double-quotes, so first replace these.
             paragraph_replaced = paragraph.replace("\"", "'")
+            # split into sentences. beware that these can end with a period, exclamation point, or question mark. there can be a quote-mark or two, too.
+            pattern_for_sentence_ending = r"([!\.\?]{1,4}'{0,2})\s+"
             paragraph_stripped = paragraph_replaced.strip()
-            paragraph_with_quotes = f"\"{paragraph_stripped}\""
-            # 4 spaces here -- down dog linting is 2 spaces per tab.
-            list_new.append("    " + paragraph_with_quotes)
-        return " /\n".join(list_new)
+            sentences_and_punctuations = re.split(pattern_for_sentence_ending, paragraph_stripped)
+            # for whatever reason, the above seems to split _some_ periods away from their preceding sentences, but not all. so, put them together manually.
+            sentences = []
+            for string in sentences_and_punctuations:
+                if len(string) > 4:
+                    sentences.append(string)
+                else:
+                    sentences[len(sentences)-1] = sentences[len(sentences)-1] + string
+            num_full_minibatches = len(sentences) // 2
+            # use 4 spaces here -- down dog linting is 2 spaces per tab, and this is indented by 2 tabs.
+            for i in range(num_full_minibatches):
+                minibatch = f"    \"{sentences[2*i]} {sentences[2*i+1]}\""
+                minibatches.append(minibatch)
+            if len(sentences) % 2 == 1:
+                minibatch = f"    \"{sentences[-1]}\""
+                minibatches.append(minibatch)        
+        return " /\n".join(minibatches)
 
     processed_chunks = []
     for chunk in chunks:
@@ -124,6 +149,7 @@ object {object_name} : SleepStoryPoseCues {{
 {destinations[destination]["long"]["end"]}
 
 /*
+
 ////////////////////////////////////////////////////////////////////////////////
 
 {destinations[destination]["short"]["stops_with_tidbits"]}
@@ -131,7 +157,9 @@ object {object_name} : SleepStoryPoseCues {{
 ////////////////////////////////////////////////////////////////////////////////
 
 {destinations[destination]["long"]["stops_with_tidbits"]}
+
 */
+
 }}"""
 
     output_file = open(f"code/{file_name}", "w")
