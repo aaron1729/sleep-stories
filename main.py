@@ -271,10 +271,17 @@ def log_replacements_and_write_files(story, length):
                 pattern = r".*".join(sentence_split_filtered)
                 match_obj = re.search(pattern, story)
                 start, end = match_obj.span()
-                # in case the original sentence actually started or ended with a number, go catch some extra characters at the front and back (assuming they exist).
-                start = max(start - 10, 0)
-                end = min(end + 10, len(story))
-                new_sentence_with_digits_removed = story[start: end]
+                match_string = story[start: end]
+                # in case the original sentence actually started or ended with a number, go catch some extra characters at the front and back (assuming they exist). however, don't include any "\n" in this, just to keep things looking nice and pretty in the .kt file comments.
+                pad_size = 10
+                pad_left_index = max(start - pad_size, 0)
+                pad_left_string = story[pad_left_index: start]
+                pad_left_string_trimmed = re.split("\n", pad_left_string)[-1]
+                pad_right_index = min(end + pad_size, len(story))
+                pad_right_string = story[end: pad_right_index]
+                pad_right_string_trimmed = re.split("\n", pad_right_string)[0]
+                new_sentence_with_digits_removed = pad_left_string_trimmed + match_string + pad_right_string_trimmed
+
                 new_sentences_with_digits_removed.append(new_sentence_with_digits_removed)
             
             # the strict=True here checks that these lists have the same length (and throws an error if they don't).

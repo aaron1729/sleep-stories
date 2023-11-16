@@ -8,10 +8,11 @@ txt_file_names = [file_name for file_name in txt_file_names_incl_hidden if file_
 txt_file_names.sort() # make alphabetical, for reproduceability.
 
 # this is a dict, whose keys are destinations.
-    # the value is itself a dict, with the keys "short" and "long".
+    # the value of each destination is itself a dict, with the keys "short" and "long".
         # the values of those are _also_ dicts, each of which has keys:
             # "timestamp"
             # "stops_with_tidbits"
+            # "dedigitization_comment_string"
             # "start"
             # "middle"
             # "end"
@@ -25,19 +26,24 @@ for txt_file_name in txt_file_names:
     if not destination in destinations:
         destinations[destination] = {}
     destinations[destination][length] = {}
-    timestamp = date + "_" + time
+    timestamp = f"{date}_{time}"
     destinations[destination][length]["timestamp"] = timestamp
     
     #####
 
-    story_file = open("stories/" + destination + "_" + timestamp + "_" + length + ".txt", "r").read()
+    story_file = open(f"stories/{destination}_{timestamp}_{length}.txt", "r").read()
     
-    destinations[destination][length]["stops_with_tidbits"] = open("prompts/" + destination + "_" + timestamp + ".txt", "r").read()
+    destinations[destination][length]["stops_with_tidbits"] = open(f"prompts/{destination}_{timestamp}.txt", "r").read()
     
     # this is a list of strings. each string is a single full response from chatGPT, except for the last one which is just a record of the strings that used to contain digits but were (hopefully) replaced with ones that do not.
     chunks = story_file.split("=====")
 
     dedigitization_string = chunks[-1]
+    dedigitization_string = f"{length.upper()}_STORY_{dedigitization_string.strip()}"
+    dedigitization_lines = dedigitization_string.split("\n")
+    dedigitization_lines_with_slashes = [f"// {dedigitization_line}" for dedigitization_line in dedigitization_lines]
+    dedigitization_comment_string = "\n".join(dedigitization_lines_with_slashes)
+    destinations[destination][length]["dedigitization_comment_string"] = dedigitization_comment_string
     chunks = chunks[: -1]
 
     # this function takes a chunk and breaks it into paragraphs, and then organizes those into a single (but generally multi-line) string like the following (with two tabs before each paragraph, to conform to linting style):
@@ -53,8 +59,9 @@ for txt_file_name in txt_file_names:
         for paragraph in list_old:
             paragraph_replaced = paragraph.replace("\"", "'")
             paragraph_stripped = paragraph_replaced.strip()
-            paragraph_with_quotes = "\"" + paragraph_stripped + "\""
-            list_new.append("       " + paragraph_with_quotes)
+            paragraph_with_quotes = f"\"{paragraph_stripped}\""
+            # 4 spaces here -- down dog linting is 2 spaces per tab.
+            list_new.append("    " + paragraph_with_quotes)
         return " /\n".join(list_new)
 
     processed_chunks = []
@@ -79,37 +86,41 @@ for txt_file_name in txt_file_names:
 
 for destination in destinations:
     Destination = destination[:1].upper() + destination[1:]
-    object_name = "SleepStoryTravel" + Destination + "Cues"
-    file_name = object_name + ".kt"
+    object_name = f"SleepStoryTravel{Destination}Cues"
+    file_name = f"{object_name}.kt"
 
     output = f"""// this code is generated from the story files {destination}_{destinations[destination]['short']['timestamp']}_short.txt and {destination}_{destinations[destination]['long']['timestamp']}_long.txt.
+
 // the stops-with-tidbits that went into the user prompts for both of these stories are copied at the bottom as comments -- first those for the short story, then those for the long story -- separated by a bunch of slashes.
+
 // min_stops_for_long_story is set to {min_stops_for_long_story}.
 
+{destinations[destination]["short"]["dedigitization_comment_string"]}
 
+{destinations[destination]["long"]["dedigitization_comment_string"]}
 
 package com.downdogapp.cue
 
 object {object_name} : SleepStoryPoseCues {{
 
-    override val startShort =
+  override val startShort =
 {destinations[destination]["short"]["start"]}
 
-    override val middleShort = listOf(
+  override val middleShort = listOf(
 {destinations[destination]["short"]["middle"]}
 )
 
-    override val endShort =
+  override val endShort =
 {destinations[destination]["short"]["end"]}
 
-    override val start =
+  override val start =
 {destinations[destination]["long"]["start"]}
 
-    override val middle = listOf(
+  override val middle = listOf(
 {destinations[destination]["long"]["middle"]}
 )
 
-    override val end =
+  override val end =
 {destinations[destination]["long"]["end"]}
 
 /*
@@ -123,6 +134,6 @@ object {object_name} : SleepStoryPoseCues {{
 */
 }}"""
 
-    output_file = open("code/" + file_name, "w")
+    output_file = open(f"code/{file_name}", "w")
     output_file.write(output)
     output_file.close()
