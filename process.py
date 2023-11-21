@@ -1,4 +1,4 @@
-##### this only runs if in the stories (saved in 'stories/') come in long/short pairs!
+##### this code only runs if in the stories (saved in 'stories/') come in long/short pairs!
 
 import re # regular expressions
 from os import listdir # operating system; list the files in a directory
@@ -33,13 +33,15 @@ for txt_file_name in txt_file_names:
     
     #####
 
-    story_file = open(f"stories/{destination}_{timestamp}_{length}.txt", "r").read()
+    story_string = open(f"stories/{destination}_{timestamp}_{length}.txt", "r").read()
     
-    destinations[destination][length]["stops_with_tidbits"] = open(f"prompts/{destination}_{timestamp}.txt", "r").read()
+    # retrieve the "stops with tidbits" info; this gets saved as comments at the bottom of the kotlin file, for easy reference.
+    destinations[destination][length]["stops_with_tidbits"] = open(f"stops_with_tidbits/{destination}_{timestamp}.txt", "r").read()
     
     # this is a list of strings. each string is a single full response from chatGPT, except for the last one which is just a record of the strings that used to contain digits but were (hopefully) replaced with ones that do not.
-    chunks = story_file.split("=====")
+    chunks = story_string.split("=====")
 
+    # the last entry of the `chunks` list contains the dedigitization metadata. peel this off and save it.
     dedigitization_string = chunks[-1]
     dedigitization_string = f"{length.upper()}_STORY_{dedigitization_string.strip()}"
     dedigitization_lines = dedigitization_string.split("\n")
@@ -48,13 +50,17 @@ for txt_file_name in txt_file_names:
     destinations[destination][length]["dedigitization_comment_string"] = dedigitization_comment_string
     chunks = chunks[: -1]
 
-    ##### NEW VERSION (2023-11-15 around 8pm): split each _paragraph_ into minibatches -- two sentences each, and if there are an odd number then the last one on its own. so for a 3-sentence paragraph followed by a 4-sentence paragraph, we want:
+    ##### COMMENTS ON THE FUNCTION process_chunk BELOW...
+
+    ##### FURTHER UPDATE (2023-11-20): a "minibatch" here is what's later in the pipeline called a "cue" (as in "yoga cue"). we'll be associating a dall-e prompt, and thereafter an image, to each minibatch. so to do that, we'll want to save the raw minibatches (without quote-marks) in a file, in `cues`. these are separated by `\n`.
+    
+    ##### NEW VERSION (2023-11-15): split each _paragraph_ into minibatches -- two sentences each, and if there are an odd number then the last one on its own. so for a 3-sentence paragraph followed by a 4-sentence paragraph, we want:
         # "pgh1 minibatch 1" /
         # "pgh1 minibatch 2" /
         # "pgh2 minibatch 1" / ....
     # the commas will _only_ be in the same spot: separating the `listOf` arguments in the middle val thingy.
 
-    ##### OLD VERSION: this function takes a chunk and breaks it into paragraphs, and then organizes those into a single (but generally multi-line) string like the following (with two tabs before each paragraph, to conform to linting style):
+    ##### ORIGINAL VERSION: this function takes a chunk and breaks it into paragraphs, and then organizes those into a single (but generally multi-line) string like the following (with two tabs before each paragraph, to conform to linting style):
         # "1st paragraph of the 3-paragraph chunk" /
         # "2nd paragraph of the 3-paragraph chunk" /
         # "3rd paragraph of the 3-paragraph chunk"
@@ -65,6 +71,7 @@ for txt_file_name in txt_file_names:
         string_with_fixed_paragraph_separations = re.sub(r'\n *\n', '\n\n', string)
         paragraphs = string_with_fixed_paragraph_separations.split("\n\n")
         minibatches = []
+        minibatches_raw = []
         for paragraph in paragraphs:
             # we'll later wrap minibatches in double-quotes, so first replace these.
             paragraph_replaced = paragraph.replace("\"", "'")
@@ -74,25 +81,33 @@ for txt_file_name in txt_file_names:
             sentences_and_punctuations = re.split(pattern_for_sentence_ending, paragraph_stripped)
             # for whatever reason, the above seems to split _some_ periods away from their preceding sentences, but not all. so, put them together manually.
             sentences = []
-            for string in sentences_and_punctuations:
-                if len(string) > 4:
-                    sentences.append(string)
+            for shortstring in sentences_and_punctuations:
+                if len(shortstring) > 4:
+                    sentences.append(shortstring)
                 else:
-                    sentences[len(sentences)-1] = sentences[len(sentences)-1] + string
+                    sentences[len(sentences)-1] += shortstring
             num_full_minibatches = len(sentences) // 2
             # use 4 spaces here -- down dog linting is 2 spaces per tab, and this is indented by 2 tabs.
             for i in range(num_full_minibatches):
                 minibatch = f"    \"{sentences[2*i]} {sentences[2*i+1]}\""
+                minibatch_raw = sentences[2*i] + " " + sentences[2*i+1]
                 minibatches.append(minibatch)
+                minibatches_raw.append(minibatch_raw)
             if len(sentences) % 2 == 1:
                 minibatch = f"    \"{sentences[-1]}\""
-                minibatches.append(minibatch)        
-        return " /\n".join(minibatches)
+                minibatch_raw = sentences[-1]
+                minibatches.append(minibatch)
+                minibatches_raw.append(minibatch_raw)
+        return " /\n".join(minibatches), "\n".join(minibatches_raw)
 
     processed_chunks = []
+    processed_chunks_raw = []
     for chunk in chunks:
-        processed_chunk = process_chunk(chunk)
+        processed_chunk, processed_chunk_raw = process_chunk(chunk)
         processed_chunks.append(processed_chunk)
+        processed_chunks_raw.append(processed_chunk_raw)
+
+    # store the processed_chunks for later integration into a single kt file containing both a short story and a long story.
 
     if length == "short":
         destinations[destination][length]["start"] = " /\n".join(processed_chunks[: 1])
@@ -104,6 +119,10 @@ for txt_file_name in txt_file_names:
         destinations[destination][length]["middle"] = ",\n\n".join(processed_chunks[min_stops_for_long_story+1: -2])
         destinations[destination][length]["end"] = " /\n".join(processed_chunks[-2: ])
 
+    # write the processed_chunks_raw to a file.
+    cue_file = open(f"cues/{txt_file_name}", "w")
+    cue_file.write("\n".join(processed_chunks_raw))
+
 #####
 
 
@@ -112,7 +131,7 @@ for txt_file_name in txt_file_names:
 for destination in destinations:
     Destination = destination[:1].upper() + destination[1:]
     object_name = f"SleepStoryTravel{Destination}Cues"
-    file_name = f"{object_name}.kt"
+    kt_file_name = f"{object_name}.kt"
 
     output = f"""// this code is generated from the story files {destination}_{destinations[destination]['short']['timestamp']}_short.txt and {destination}_{destinations[destination]['long']['timestamp']}_long.txt.
 
@@ -162,6 +181,6 @@ object {object_name} : SleepStoryPoseCues {{
 
 }}"""
 
-    output_file = open(f"code/{file_name}", "w")
+    output_file = open(f"code/{kt_file_name}", "w")
     output_file.write(output)
     output_file.close()
