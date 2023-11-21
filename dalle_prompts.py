@@ -22,27 +22,27 @@ for txt_file_name in txt_file_names:
     cues_string = open(f"cues/{txt_file_name}", "r").read()
     cues = cues_string.split("\n")
 
-    artistic_style = "pop art"
+    artistic_style = "Victorian art"
 
-    artistic_style_description = """Pop Art is a distinctive artistic style that emerged in the late 1950s and 1960s, primarily in the United States and the United Kingdom. It is characterized by several key features that set it apart from other art movements:
+    artistic_style_description = """Victorian art, which flourished during the reign of Queen Victoria from 1837 to 1901, encompasses a diverse range of artistic styles and movements. However, it is characterized by several overarching features and themes that reflect the cultural and social milieu of the time:
 
-Emphasis on Popular Culture: Pop Art draws its subject matter from popular and mass culture, such as advertising, comic books, celebrity culture, and consumer goods. This was a significant shift from the traditional focus on more elitist themes in art, bringing a more accessible and relatable element to the art world.
+Historicism: Victorian art often drew inspiration from past artistic periods and styles. There was a revival of Gothic, Renaissance, and Classical motifs, reflecting a nostalgic fascination with history. This historicism was partly a response to the rapid changes and advancements of the Industrial Revolution.
 
-Bold, Vibrant Colors: Pop Art is known for its use of bright, vivid colors. These colors are often used in flat, large areas to create a striking, graphic look. This use of color was influenced by the advertising and comic book styles of the time, which employed similar techniques to attract attention.
+Moral and Social Themes: Many Victorian artworks conveyed moral, social, or religious messages. They often depicted scenes of idealized virtue, the sanctity of family and home, or the consequences of vice and immorality. This reflects the era's strong moralizing tendency and its emphasis on social conformity and propriety.
 
-Use of Ben-Day Dots: A technique borrowed from comic strips and commercial printing, Ben-Day dots were used to create shading and secondary colors in Pop Art. This process involved the use of small colored dots closely spaced, overlapped, or separated to create different hues and effects.
+Attention to Detail: Victorian artists were known for their meticulous attention to detail. This was evident in their elaborate and ornate representations of subjects, whether in painting, sculpture, or architecture. The detail-oriented approach was a reflection of the Victorian era's fascination with the natural world, as well as its broader cultural values of diligence and thoroughness.
 
-Irony and Satire: Many Pop Art pieces have an ironic or satirical edge, often as a critique of consumerism, mass production, and the banality of everyday objects and icons. This approach was a stark contrast to the more serious and introspective tendencies of Abstract Expressionism, which preceded Pop Art.
+Romanticism and Sentimentality: Early Victorian art was influenced by Romanticism, emphasizing emotion, nature, and the sublime. As the era progressed, there was also a trend towards sentimentality, with an emphasis on emotion and nostalgia, often expressed through idealized landscapes and scenes of domestic bliss.
 
-Incorporation of Commercial Techniques: Pop Art artists often adopted techniques from commercial art and mass production, like screen printing. This allowed them to produce art in a manner that echoed the mass-produced nature of the objects and imagery they were depicting.
+Realism and Social Realism: In the latter half of the Victorian era, there was a move towards realism, partly influenced by the Pre-Raphaelite Brotherhood who sought to depict the world with great accuracy and detail. Artists began to address social issues and the realities of life in an industrial society, marking the beginnings of social realism.
 
-Simplicity and Boldness in Design: Pop Art is characterized by simple, bold lines and a clear, straightforward composition. This clarity was a deliberate choice to mimic the directness of advertising and to make the art more approachable.
+Exoticism and Orientalism: Victorian art often featured exotic and oriental themes, reflecting the expansion of the British Empire and the increasing global connections of the time. Artworks frequently depicted scenes from the colonies, sometimes idealizing these cultures while at other times portraying them as mysterious and otherworldly.
 
-Mix of High and Low Culture: Pop Art blurred the boundaries between 'high' art (like fine art) and 'low' culture (like commercial art and advertising). This mix was revolutionary at the time and challenged the traditional hierarchy and elitism in the art world.
+Portraiture and the Cult of Celebrity: The Victorian era saw a boom in portraiture, fueled by the rising middle class and advancements in photography. There was also a fascination with celebrity culture, and many artists gained fame through their portraits of notable figures of the time.
 
-Iconic Imagery: Pop Art often featured iconic images from popular culture, including famous celebrities, comic book characters, and everyday consumer goods. These images were often presented in new or challenging contexts to make the viewer see them in a different light.
+Technological Influence: The Industrial Revolution had a significant impact on Victorian art. New technologies and materials influenced the production and distribution of art. Photography, in particular, emerged as a significant new medium, influencing both the subject matter and techniques of traditional art forms.
 
-In summary, Pop Art is a visually bold and culturally resonant art movement that emerged as a reaction against the elitism of traditional art. It uses the techniques, styles, and themes of popular and mass culture to create works that are both accessible and critically engaging, often with a sense of irony or satire."""
+In summary, Victorian art is a rich tapestry of styles and themes, reflecting the complex social, cultural, and technological landscape of the 19th century. It ranges from historicism and romanticism to realism and social commentary, with a strong emphasis on detail, moral messages, and an engagement with both the past and the contemporary world."""
 
     system_prompt_for_dalle_prompts = f"""The user has written a travel story, and would like to obtain illustrations from DALL-E 3. Artistic guidelines are copied below. The entire story is copied further below, for context.
 
@@ -80,7 +80,7 @@ STORY:
 
     dalle_prompts = []
 
-    for cue in cues[:10]:
+    for cue in cues:
         print(f"asking chatGPT for a dalle prompt for the cue:\n{cue}")
         user_message = {"role": "user", "content": cue}
         completion = client.chat.completions.create(

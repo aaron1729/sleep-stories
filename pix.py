@@ -46,7 +46,7 @@ import requests # to retrieve pix
 #     print(f"an error occurred: {exception}")
 
 
-dalle_prompts_txt_file_name = "newyorkcity_2023-11-16_01-20-42_long.txt"
+dalle_prompts_txt_file_name = "london_2023-11-16_01-20-42_long.txt"
 
 dalle_prompts_string = open(f"dalle_prompts/{dalle_prompts_txt_file_name}", "r").read()
 

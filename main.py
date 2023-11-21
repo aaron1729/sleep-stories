@@ -17,7 +17,7 @@ timestamp = datetime_str_to_timestamp(start_time)
 
 num_stops = 20
 
-write_long_story = True
+write_long_story = False
 write_short_story = True
 
 # {
@@ -29,126 +29,126 @@ write_short_story = True
 
 
 inputs = [
-    {
-        "destination": "newyorkcity",
-        "destination_fullname": "New York, New York",
-        "transport_method": "open-top bus tour and Metro, with a tour guide with a thick Brooklyn accent whose family has been in New York City for many generations",
-        "season": "fall",
-    },
-    {
-        "destination": "tokyo",
-        "destination_fullname": "Tokyo, Japan",
-        "transport_method": "Tokyo metro train and Toei subway system, with a tour guide who is gregarious but soft-spoken",
-        "season": "spring",
-    },
-    {
-        "destination": "paris",
-        "destination_fullname": "Paris, France",
-        "transport_method": "Seine river cruise and Paris Metro, with a male tour guide in his early 40s who wears a beret and neckerchief and speaks with just a slight accent",
-        "season": "spring",
-    },
-    {
-        "destination": "london",
-        "destination_fullname": "London, England",
-        "transport_method": "the Tube subway, and also a double-decker bus with a bus driver and tour guide who is a middle-aged British man with an attention to detail that rivals Sherlock Holmes",
-        "season": "spring",
-    },
-    {
-        "destination": "bangkok",
-        "destination_fullname": "Bangkok, Thailand",
-        "transport_method": "tuk-tuk (i.e. a rickshaw), with a driver who is also a tour guide",
-        "season": "winter",
-    },
-    {
-        "destination": "istanbul",
-        "destination_fullname": "Istanbul, Turkey",
-        "transport_method": "ferry ride on the Bosphorous and historic tram on Istiklal Avenue",
-        "season": "spring",
-    },
-    {
-        "destination": "dubai",
-        "destination_fullname": "Dubai, United Arab Emirates",
-        "transport_method": "private limousine and an abra (i.e. a traditional boat) on Dubai Creek",
-        "season": "winter",
-    },
+    # {
+    #     "destination": "newyorkcity",
+    #     "destination_fullname": "New York, New York",
+    #     "transport_method": "open-top bus tour and Metro, with a tour guide with a thick Brooklyn accent whose family has been in New York City for many generations",
+    #     "season": "fall",
+    # },
+    # {
+    #     "destination": "tokyo",
+    #     "destination_fullname": "Tokyo, Japan",
+    #     "transport_method": "Tokyo metro train and Toei subway system, with a tour guide who is gregarious but soft-spoken",
+    #     "season": "spring",
+    # },
+    # {
+    #     "destination": "paris",
+    #     "destination_fullname": "Paris, France",
+    #     "transport_method": "Seine river cruise and Paris Metro, with a male tour guide in his early 40s who wears a beret and neckerchief and speaks with just a slight accent",
+    #     "season": "spring",
+    # },
+    # {
+    #     "destination": "london",
+    #     "destination_fullname": "London, England",
+    #     "transport_method": "the Tube subway, and also a double-decker bus with a bus driver and tour guide who is a middle-aged British man with an attention to detail that rivals Sherlock Holmes",
+    #     "season": "spring",
+    # },
+    # {
+    #     "destination": "bangkok",
+    #     "destination_fullname": "Bangkok, Thailand",
+    #     "transport_method": "tuk-tuk (i.e. a rickshaw), with a driver who is also a tour guide",
+    #     "season": "winter",
+    # },
+    # {
+    #     "destination": "istanbul",
+    #     "destination_fullname": "Istanbul, Turkey",
+    #     "transport_method": "ferry ride on the Bosphorous and historic tram on Istiklal Avenue",
+    #     "season": "spring",
+    # },
+    # {
+    #     "destination": "dubai",
+    #     "destination_fullname": "Dubai, United Arab Emirates",
+    #     "transport_method": "private limousine and an abra (i.e. a traditional boat) on Dubai Creek",
+    #     "season": "winter",
+    # },
     {
         "destination": "barcelona",
         "destination_fullname": "Barcelona, Spain",
         "transport_method": "guided bike tour with an affable university student who double-majors in art and history as a tour guide",
         "season": "early fall",
     },
-    {
-        "destination": "rio",
-        "destination_fullname": "Rio de Janeiro, Brazil",
-        "transport_method": "limousine with a quiet but friendly driver in his early 50s who is aging gracefully",
-        "season": "late spring",
-    },
-    {
-        "destination": "shanghai",
-        "destination_fullname": "Shanghai, China",
-        "transport_method": "Shanghai Metro and a Huangpu River cruise",
-        "season": "fall",
-    },
-    {
-        "destination": "greece",
-        "destination_fullname": "Greece",
-        "transport_method": "catamaran with a captain who serves as a tour guide, and also a donkey ride on Santorini",
-        "season": "spring",
-    },
-    {
-        "destination": "kyoto",
-        "destination_fullname": "Kyoto, Japan",
-        "transport_method": "rickshaw with a jovial middle-aged man who serves as a tour guide, and also a bit of bicycling without the tour guide",
-        "season": "spring",
-    },
-    {
-        "destination": "amalfi",
-        "destination_fullname": "Amalfi Coast, Italy",
-        "transport_method": "Vespa scooter and coastal boat tour with a friendly captain",
-        "season": "spring",
-    },
-    {
-        "destination": "bali",
-        "destination_fullname": "Bali, Indonesia",
-        "transport_method": "car with a young woman driver who is also a tour guide and also rental scooters",
-        "season": "spring",
-    },
-    {
-        "destination": "cinqueterre",
-        "destination_fullname": "Cinque Terre, Italy",
-        "transport_method": "a leisurely boat trip, as well as hiking the trails between the villages",
-        "season": "spring",
-    },
-    {
-        "destination": "chiangmai",
-        "destination_fullname": "Chiang Mai, Thailand",
-        "transport_method": "tuk-tuk (i.e. rickshaw)",
-        "season": "winter",
-    },
-    {
-        "destination": "napa",
-        "destination_fullname": "Napa Valley, California",
-        "transport_method": "wine train and a ride in a hot air balloon",
-        "season": "fall",
-    },
-    {
-        "destination": "algarve",
-        "destination_fullname": "The Algarve, Portugal",
-        "transport_method": "rental car for coastal drives and a boat trip to explore sea caves",
-        "season": "spring",
-    },
-    {
-        "destination": "costarica",
-        "destination_fullname": "Costa Rica",
-        "transport_method": "camper van",
-        "season": "dry season",
-    },
-    {
-        "destination": "queenstown",
-        "destination_fullname": "Queenstown, New Zealand",
-        "transport_method": "water taxis",
-        "season": "summer",
-    },
+    # {
+    #     "destination": "rio",
+    #     "destination_fullname": "Rio de Janeiro, Brazil",
+    #     "transport_method": "limousine with a quiet but friendly driver in his early 50s who is aging gracefully",
+    #     "season": "late spring",
+    # },
+    # {
+    #     "destination": "shanghai",
+    #     "destination_fullname": "Shanghai, China",
+    #     "transport_method": "Shanghai Metro and a Huangpu River cruise",
+    #     "season": "fall",
+    # },
+    # {
+    #     "destination": "greece",
+    #     "destination_fullname": "Greece",
+    #     "transport_method": "catamaran with a captain who serves as a tour guide, and also a donkey ride on Santorini",
+    #     "season": "spring",
+    # },
+    # {
+    #     "destination": "kyoto",
+    #     "destination_fullname": "Kyoto, Japan",
+    #     "transport_method": "rickshaw with a jovial middle-aged man who serves as a tour guide, and also a bit of bicycling without the tour guide",
+    #     "season": "spring",
+    # },
+    # {
+    #     "destination": "amalfi",
+    #     "destination_fullname": "Amalfi Coast, Italy",
+    #     "transport_method": "Vespa scooter and coastal boat tour with a friendly captain",
+    #     "season": "spring",
+    # },
+    # {
+    #     "destination": "bali",
+    #     "destination_fullname": "Bali, Indonesia",
+    #     "transport_method": "car with a young woman driver who is also a tour guide and also rental scooters",
+    #     "season": "spring",
+    # },
+    # {
+    #     "destination": "cinqueterre",
+    #     "destination_fullname": "Cinque Terre, Italy",
+    #     "transport_method": "a leisurely boat trip, as well as hiking the trails between the villages",
+    #     "season": "spring",
+    # },
+    # {
+    #     "destination": "chiangmai",
+    #     "destination_fullname": "Chiang Mai, Thailand",
+    #     "transport_method": "tuk-tuk (i.e. rickshaw)",
+    #     "season": "winter",
+    # },
+    # {
+    #     "destination": "napa",
+    #     "destination_fullname": "Napa Valley, California",
+    #     "transport_method": "wine train and a ride in a hot air balloon",
+    #     "season": "fall",
+    # },
+    # {
+    #     "destination": "algarve",
+    #     "destination_fullname": "The Algarve, Portugal",
+    #     "transport_method": "rental car for coastal drives and a boat trip to explore sea caves",
+    #     "season": "spring",
+    # },
+    # {
+    #     "destination": "costarica",
+    #     "destination_fullname": "Costa Rica",
+    #     "transport_method": "camper van",
+    #     "season": "dry season",
+    # },
+    # {
+    #     "destination": "queenstown",
+    #     "destination_fullname": "Queenstown, New Zealand",
+    #     "transport_method": "water taxis",
+    #     "season": "summer",
+    # },
 ]
 
 ################################################################################
@@ -331,6 +331,37 @@ def log_replacements_and_write_files(story, length):
     print(f"finished writing {length} story set in {input['destination_fullname']} with timestamp {timestamp} at:", story_end_time)
 
     return None
+
+################################################################################
+
+##### enforce length constraints
+
+def length_plz(min, max):
+    return f"\n\nPlease ensure that your response is between {min} and {max} words."
+
+def validate_length(string, min, max):
+    print("inside validate_length")
+    word_count = len(re.findall(r"\w+", string))
+    print(f"current word count is {word_count}")
+    while word_count < min or word_count > max:
+        print(f"asking chatGPT to fix word count: current is {word_count}, whereas target is between {min} and {max}")
+        system_prompt = f"""The user will provide you with a block of text, which has {word_count} words. Please rewrite it to have between {min} and {max} words.
+
+{"Since the given block of text is too short, please feel free to add further embellishments to achieve this goal." if word_count < min else ""}{"Since the given block of text is too long, please feel free to remove minor details to achieve this goal." if word_count > max else ""}
+
+Please do not respond with anything besides the rewritten text itself."""
+        system_message = {"role": "system", "content": system_prompt}
+        user_message = {"role": "user", "content": string}
+        completion = client.chat.completions.create(
+            model = gpt_model,
+            messages = [user_message]
+        )
+        string = completion.choices[0].message.content
+        word_count = len(re.findall(r"\w+", string))
+        print(f"the new string returned from chatGPT is:\n{string}")
+        print(f"and its word count is {word_count}")
+    print("string passes length validation")
+    return string
 
 ################################################################################
 
@@ -644,10 +675,11 @@ As we make our way from the castle, ..."""
 
         a = 1 # number of stops bundled into initial chunk -- assumed to be at least 1
         c = 5 # number of middle completions
-        n = 2 # number of stops per middle completion
+        n = 1 # number of stops per middle completion
         z = 1 # number of stops bundled into final chunk
         # total number of stops needed is a + c*n + z
         # by around 2023-11-14, we decided that these should be: a=1, c=5, n=2, z=1.
+        # on 2023-11-20, we decided to actually drop n down to 1, so that we could get more fine-grained with the lengths of stories served. we'll aim for each middle chunk to only be 200-300 words, using the validate_length function defined above.
 
         print(f"writing a short story")
 
@@ -678,7 +710,7 @@ As we make our way from the castle, ..."""
 
         for j in range(c):
             print(f"fetching short story chunk number", j+1)
-            user_prompt = f"Great, thank you! Here {'are' if n>1 else 'is'} the next {str(n) if n>1 else ''} sightseeing location{'s' if n>1 else ''}:\n\n{''.join(stops_with_tidbits[a+n*j:a+n*(j+1)])}{no_numbers_plz + no_overused_words_plz + no_section_titles_plz + no_ending_summary_plz}"
+            user_prompt = f"Great, thank you! Here {'are' if n>1 else 'is'} the next {str(n) if n>1 else ''} sightseeing location{'s' if n>1 else ''}:\n\n{''.join(stops_with_tidbits[a+n*j:a+n*(j+1)])}{no_numbers_plz + no_overused_words_plz + no_section_titles_plz + no_ending_summary_plz + length_plz(200, 300)}"
             print("the next user prompt is:\n", user_prompt)
             user_message = {"role": "user", "content": user_prompt}
             message_list.append(user_message)
@@ -686,8 +718,9 @@ As we make our way from the castle, ..."""
                 model = gpt_model,
                 messages = message_list
             )
-            assistant_prompt_with_story_undedigitize = completion.choices[0].message.content
-            assistant_prompt_with_story = dedigitize_and_log(assistant_prompt_with_story_undedigitize)
+            assistant_prompt_with_story_undedigitized = completion.choices[0].message.content
+            assistant_prompt_with_story_undedigitized_with_length_validation = validate_length(assistant_prompt_with_story_undedigitized, 200, 300)
+            assistant_prompt_with_story = dedigitize_and_log(assistant_prompt_with_story_undedigitized_with_length_validation)
             story += "\n\n=====\n\n" + assistant_prompt_with_story
             assistant_message_with_story = {"role": "assistant", "content": assistant_prompt_with_story}
             message_list.append(assistant_message_with_story)
