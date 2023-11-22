@@ -1,0 +1,218 @@
+
+==========
+
+REPLACEMENT FAILED: False 
+
+=====
+
+ORIGINAL TEXT:
+
+Accompanied by the gentle rev of the limousine’s engine receding into the quiet, we approach the base of a majestic natural monument, its silhouette a soft curvature against the sky. The mountain stands as an emblem of nature's magnificence, an ageless guardian watching over the bay, nature’s sculpture reminiscent of the sugar loaves that once symbolized the region's sweet bounty. We are greeted by the quaint charm of a cable car station, from which we'll ascend to the skies.
+
+Our affable driver shares anecdotes of the peak's illustrious history, his voice a soothing guide through the rich pastel tapestries of Rio’s landscape. The cable car, a marvel since the early twentieth century, sways us gently upwards. With each gradual ascent, the city below unravels like a vivid canvas, the beaches and water painting the edges of the greenery below.
+
+At the summit, we step out into an embrace of refreshing breezes, and the panorama is awe-inspiring. Fellow visitors are scattered around, some sipping on refreshingly cool coconut water, others clinking glasses of the zesty caipirinhas while their laughter floats on the wind. We find ourselves amongst an orchestra of camera shutters, capturing the sprawling vista of Rio. Connecting with the city from such heights stirs within us an indescribable tranquility, the gentle rhythm of the waves below a soft accompaniment to our elevated wonder.
+
+*****
+
+Descending from our mountain sojourn, we are welcomed back into the cosseting interior of our moving sanctuary, exchanging the crisp mountain air for soft leather seats. Our next destination stirs the air with the sweet scent of foliage, enveloped in the embracing shade of Corcovado's towering presence. The grounds ahead are threaded with a serenity that hums with quiet footsteps and the rustle of gentle wildlife.
+
+Once hosting the echoes of a sugar mill, the heir of sprawling beauty now finds its core in a stately mansion, reimagined into halls of learning and creativity. The mansion sits as a regal centerpiece amidst the vivid emerald tapestries of flourishing forest — the orchestrated work of architects and painters from a time when art harmonized with nature's ambitions.
+
+Conversations hover in the soft air, visitors delving into roles of amateur photographers, snapping shots that juxtapose the Italian elegance of the mansion against Brazil's lush backdrop. We, accompanied by newfound friends, exchange smiles and nods, collectively pausing beside tranquil ponds to revel in the soothing symphony of quietude that the park conducts with ease.
+
+Stepping out of our transport, we exchange pleasantries with our driver, his knowledge of the locale pointing us to the perfect vantage for a view that ties all of nature and humanity together under the watchful gaze of an iconic statue. He holds the door open to an expansive scene, a magnanimous gesture inviting us to walk amongst the beauty with no haste, inviting calm exploration.
+
+=====
+
+FAILED REWRITES:
+
+=====
+
+FINAL VERSION:
+
+Accompanied by the gentle rev of the limousine’s engine receding into the quiet, we approach the base of a majestic natural monument, its silhouette a soft curvature against the sky. The mountain stands as an emblem of nature's magnificence, an ageless guardian watching over the bay, nature’s sculpture reminiscent of the sugar loaves that once symbolized the region's sweet bounty. We are greeted by the quaint charm of a cable car station, from which we'll ascend to the skies.
+
+Our affable driver shares anecdotes of the peak's illustrious history, his voice a soothing guide through the rich pastel tapestries of Rio’s landscape. The cable car, a marvel since the early twentieth century, sways us gently upwards. With each gradual ascent, the city below unravels like a vivid canvas, the beaches and water painting the edges of the greenery below.
+
+At the summit, we step out into an embrace of refreshing breezes, and the panorama is awe-inspiring. Fellow visitors are scattered around, some sipping on refreshingly cool coconut water, others clinking glasses of the zesty caipirinhas while their laughter floats on the wind. We find ourselves amongst an orchestra of camera shutters, capturing the sprawling vista of Rio. Connecting with the city from such heights stirs within us an indescribable tranquility, the gentle rhythm of the waves below a soft accompaniment to our elevated wonder.
+
+Descending from our mountain sojourn, we are welcomed back into the cosseting interior of our moving sanctuary, exchanging the crisp mountain air for soft leather seats. Our next destination stirs the air with the sweet scent of foliage, enveloped in the embracing shade of Corcovado's towering presence. The grounds ahead are threaded with a serenity that hums with quiet footsteps and the rustle of gentle wildlife.
+
+Once hosting the echoes of a sugar mill, the heir of sprawling beauty now finds its core in a stately mansion, reimagined into halls of learning and creativity. The mansion sits as a regal centerpiece amidst the vivid emerald tapestries of flourishing forest — the orchestrated work of architects and painters from a time when art harmonized with nature's ambitions.
+
+Conversations hover in the soft air, visitors delving into roles of amateur photographers, snapping shots that juxtapose the Italian elegance of the mansion against Brazil's lush backdrop. We, accompanied by newfound friends, exchange smiles and nods, collectively pausing beside tranquil ponds to revel in the soothing symphony of quietude that the park conducts with ease.
+
+Stepping out of our transport, we exchange pleasantries with our driver, his knowledge of the locale pointing us to the perfect vantage for a view that ties all of nature and humanity together under the watchful gaze of an iconic statue. He holds the door open to an expansive scene, a magnanimous gesture inviting us to walk amongst the beauty with no haste, inviting calm exploration.
+
+==========
+
+REPLACEMENT FAILED: False 
+
+=====
+
+ORIGINAL TEXT:
+
+Our limousine comes to a gentle halt at the embarkation point of a venerable line that weaves through the cobbled hills of a neighborhood alive with the echoes of the past. The tram before us is a relic lovingly preserved, its heritage spanning back to the late nineteenth century, an era when the power of steam and the strength of donkeys stirred the city into motion. Electrified whispers of history course through the tram's lines, now rejuvenated with the vibrant breath of modern times. 
+
+Climbing aboard, we're greeted by the friendly nod of the driver, like a captain welcoming us aboard his ship. As the tram trundles forward, the lively rattle and ring of the bell immerse us in the essence of the old district. The scenery outside shifts with each clack of the wheel—a dynamic canvas of street art, expressions from a community of artists and dreamers painted in vivid colors upon the walls. Navigating through narrow passes, the cool breeze laced with notes of fresh "pão de queijo" whispers stories of picturesque alleys and the souls that grace them.
+
+Stopping along the tramway, locals and visitors alike share glances and smiles, a mutual appreciation hanging comfortably in the air. As the tram ascends, we feel a connection with the place, almost able to touch the soul of the city. The driver, a guardian of tradition, offers tidbits of knowledge, his eyes reflecting the pride of Santa Teresa—a district where creativity and camaraderie hold court over the everyday.
+
+*****
+
+From the echoes of yesterday to the embrace of tomorrow, our luxurious chariot rolls towards a monument to what the future might hold, nestled against the radiant bay. Designed to sparkle against the blue expanses of sky and sea, its silhouette is a promise of innovation and exploration. Its inauguration in the year two thousand and fifteen marked a leap of faith towards what's next, its contents an invitation to imagine and create.
+
+Inside the museum, the essence of our world unfurls across interactive spaces that challenge the mind and stimulate the senses, each zone a heartfelt call to consider our place in the timeline of existence. The delicate complexity of our cosmos, the vibrant tapestry of Earth's biodiversity, the epochs of human impact, and the seeds of the future bloom before our eyes in a choreography of science and artistry.
+
+Local aromas waft gently through the air, mingling with the scent of the bay, directing visitors to savor a hearty, traditional stew, a culinary heritage shared among families and friends. Our visit punctuated by meandering paths that lead us through gardens of intellect and reflection, the tranquility of the bay peeks through the windows, offering a serene backdrop to ponder the museum's lessons.
+
+Engaging with the exhibits, people of all ages exchange thoughts, insights bubbling amidst the hum of contemplation—a shared voyage fostering the collective stewardship of the world we inhabit. And as we converse with the one who has guided us so smoothly through Rio's wonders, we exchange thoughts about the audacious architecture, the rebirth of a port once derelict, now brimming with life, and the masterful strokes of a mural that captures the heart of the city, a beacon of the beauty that awaits us on the journey's next leg.
+
+=====
+
+FAILED REWRITES:
+
+=====
+
+FINAL VERSION:
+
+Our limousine comes to a gentle halt at the embarkation point of a venerable line that weaves through the cobbled hills of a neighborhood alive with the echoes of the past. The tram before us is a relic lovingly preserved, its heritage spanning back to the late nineteenth century, an era when the power of steam and the strength of donkeys stirred the city into motion. Electrified whispers of history course through the tram's lines, now rejuvenated with the vibrant breath of modern times.
+
+Climbing aboard, we're greeted by the friendly nod of the driver, like a captain welcoming us aboard his ship. As the tram trundles forward, the lively rattle and ring of the bell immerse us in the essence of the old district. The scenery outside shifts with each clack of the wheel—a dynamic canvas of street art, expressions from a community of artists and dreamers painted in vivid colors upon the walls. Navigating through narrow passes, the cool breeze laced with notes of fresh "pão de queijo" whispers stories of picturesque alleys and the souls that grace them.
+
+Stopping along the tramway, locals and visitors alike share glances and smiles, a mutual appreciation hanging comfortably in the air. As the tram ascends, we feel a connection with the place, almost able to touch the soul of the city. The driver, a guardian of tradition, offers tidbits of knowledge, his eyes reflecting the pride of Santa Teresa—a district where creativity and camaraderie hold court over the everyday.
+
+From the echoes of yesterday to the embrace of tomorrow, our luxurious chariot rolls towards a monument to what the future might hold, nestled against the radiant bay. Designed to sparkle against the blue expanses of sky and sea, its silhouette is a promise of innovation and exploration. Its inauguration in the year two thousand and fifteen marked a leap of faith towards what's next, its contents an invitation to imagine and create.
+
+Inside the museum, the essence of our world unfurls across interactive spaces that challenge the mind and stimulate the senses, each zone a heartfelt call to consider our place in the timeline of existence. The delicate complexity of our cosmos, the vibrant tapestry of Earth's biodiversity, the epochs of human impact, and the seeds of the future bloom before our eyes in a choreography of science and artistry.
+
+Local aromas waft gently through the air, mingling with the scent of the bay, directing visitors to savor a hearty, traditional stew, a culinary heritage shared among families and friends. Our visit punctuated by meandering paths that lead us through gardens of intellect and reflection, the tranquility of the bay peeks through the windows, offering a serene backdrop to ponder the museum's lessons.
+
+Engaging with the exhibits, people of all ages exchange thoughts, insights bubbling amidst the hum of contemplation—a shared voyage fostering the collective stewardship of the world we inhabit. And as we converse with the one who has guided us so smoothly through Rio's wonders, we exchange thoughts about the audacious architecture, the rebirth of a port once derelict, now brimming with life, and the masterful strokes of a mural that captures the heart of the city, a beacon of the beauty that awaits us on the journey's next leg.
+
+==========
+
+REPLACEMENT FAILED: False 
+
+=====
+
+ORIGINAL TEXT:
+
+Gliding along the coast, our limousine veers gently, guiding us to the edge of a peaceful bay. Here, the soft murmur of waves lapping against the shore forms the soundtrack to an idyllic seaside tableau, framed by an iconic peak that stands as a sentinel over the tranquil waters. The beach stretches before us, its sands a canvas for the leisurely footsteps of those who come to unwind. 
+
+The sun casts a golden glow over the landscape, and as the glowing orb descends, it kisses the mountain's facade with a softness that changes by the moment, a quiet spectacle of light and shadow. Our affable driver points towards the rowing club, recounting tales of nautical races that once sliced through these very waters. He shares stories woven into the fabric of this neighborhood, tales of change and growth, of a city’s sprawl that has never dampened this spot's natural allure.
+
+We wander close to the water's edge, where the air is infused with the savory aroma of "bolinhos de bacalhau" being prepared by nearby vendors. The hearty bites are a local delight and offer comfort as we stroll. Around us, others partake in a variety of serene activities: jogging along the water, gently gliding on paddleboards, or capturing the momentary magic of the scenery with their cameras, the silhouette of the towering landmark serving as a majestic backdrop.
+
+*****
+As twilight deepens its hues, our luxurious chariot whisks us away to the heart of the city, before the grand facade of a cultural nexus. Its neoclassical elegance speaks of a time gone by, a historic residency now transformed into a beacon of artistic expression. The building mirrors the city’s restraint and splendor, stately and inviting in equal measure.
+
+The former commercial epicenter has blossomed into fertile ground for the creative arts, where the pulse of the city is echoed through galleries and theaters. Patrons move among the displays, weaving through collections that map the intersections of Brazilian and global culture, their faces lit with the soft lights of curiosity and wonder.
+
+Our driver opens the door, his kindness suffusing the air as he suggests a leisurely beginning to our foray into the center's offerings. The familiar aroma of Brazilian coffee wafts from the café within, a beckoning scent that promises the earthy warmth of tradition. As we step into the embrace of the historic building, we're folded into an ambience that bridges generations—a connection of past to present through the shared experience of culture and community.
+
+=====
+
+FAILED REWRITES:
+
+=====
+
+FINAL VERSION:
+
+Gliding along the coast, our limousine veers gently, guiding us to the edge of a peaceful bay. Here, the soft murmur of waves lapping against the shore forms the soundtrack to an idyllic seaside tableau, framed by an iconic peak that stands as a sentinel over the tranquil waters. The beach stretches before us, its sands a canvas for the leisurely footsteps of those who come to unwind.
+
+The sun casts a golden glow over the landscape, and as the glowing orb descends, it kisses the mountain's facade with a softness that changes by the moment, a quiet spectacle of light and shadow. Our affable driver points towards the rowing club, recounting tales of nautical races that once sliced through these very waters. He shares stories woven into the fabric of this neighborhood, tales of change and growth, of a city’s sprawl that has never dampened this spot's natural allure.
+
+We wander close to the water's edge, where the air is infused with the savory aroma of "bolinhos de bacalhau" being prepared by nearby vendors. The hearty bites are a local delight and offer comfort as we stroll. Around us, others partake in a variety of serene activities: jogging along the water, gently gliding on paddleboards, or capturing the momentary magic of the scenery with their cameras, the silhouette of the towering landmark serving as a majestic backdrop.
+
+As twilight deepens its hues, our luxurious chariot whisks us away to the heart of the city, before the grand facade of a cultural nexus. Its neoclassical elegance speaks of a time gone by, a historic residency now transformed into a beacon of artistic expression. The building mirrors the city’s restraint and splendor, stately and inviting in equal measure.
+
+The former commercial epicenter has blossomed into fertile ground for the creative arts, where the pulse of the city is echoed through galleries and theaters. Patrons move among the displays, weaving through collections that map the intersections of Brazilian and global culture, their faces lit with the soft lights of curiosity and wonder.
+
+Our driver opens the door, his kindness suffusing the air as he suggests a leisurely beginning to our foray into the center's offerings. The familiar aroma of Brazilian coffee wafts from the café within, a beckoning scent that promises the earthy warmth of tradition. As we step into the embrace of the historic building, we're folded into an ambience that bridges generations—a connection of past to present through the shared experience of culture and community.
+
+==========
+
+REPLACEMENT FAILED: False 
+
+=====
+
+ORIGINAL TEXT:
+
+Nestled at the base of a towering granite colossus, a small strip of shore unfolds, its sands shimmering with a reddish glow from the tiny crystals within. The beach is a quiet enclave away from the city’s bustling pace, a cradle of solace hugged by the undulating arms of Guanabara Bay. Here, the natural beauty reigns supreme, embraced by a verdant embrace that stretches upwards to the sky.
+
+Our driver halts under the shade of an almond tree, his presence a reassuring silhouette against the deep blue canvas of the sea and the peak’s imposing grandeur. As the doors open, the soft murmurs of the ocean greet us, intermingled with the distant, gentle hum of the cable cars ascending the mountain. The scene is set for a reposeful afternoon; visitors bask in the sun, engage in the graceful art of paddleboarding, or swim in the placid embrace of the bay waters.
+
+We pause to savor the local flavors offered by the beachside kiosks, the aroma of "moqueca" drifting towards us, an invitation from the chefs who craft the sea's bounty into delectable dishes. The atmosphere is peaceful, yet spirited, encapsulated by the rhythmic dance of waves against the shore and the soft, honeyed sunlight bathing us all in a gentle, golden embrace.
+
+*****
+
+Our journey takes a regal turn as we arrive at a verdant expanse once graced by the footsteps of emperors and queens. The legacy of the park’s imperial past breathes through the rustling leaves of ancient trees, providing a lush canopy over the sweeping lawns. Here, history is etched into the landscape itself, the park a silent custodian of a bygone era.
+
+At the heart of the oasis lies a palace of storied walls, its architecture a grand echo of an empire that once was. Though adversity may have marred its narrative, the international effort to reweave its cultural threads speaks to the resilience and pride enshrined in these grounds. Families spread chequered blankets across the grass, picnics unfurling like vibrant flags of domesticity, each group a tableau of shared joy and relaxation.
+
+Swans and ducks trace graceful arcs upon the pond, their presence amongst the rental boats a brushstroke of life against the still, reflective waters. Our driver, a bearer of tales and histories, bids us farewell at the entrance. With a map as our guide, we step into a scene punctuated by laughter, play, and the serene backdrop of the city’s storied past and hopeful future, warmed by the embrace of the sun’s undimming gaze.
+
+=====
+
+FAILED REWRITES:
+
+=====
+
+FINAL VERSION:
+
+Nestled at the base of a towering granite colossus, a small strip of shore unfolds, its sands shimmering with a reddish glow from the tiny crystals within. The beach is a quiet enclave away from the city’s bustling pace, a cradle of solace hugged by the undulating arms of Guanabara Bay. Here, the natural beauty reigns supreme, embraced by a verdant embrace that stretches upwards to the sky.
+
+Our driver halts under the shade of an almond tree, his presence a reassuring silhouette against the deep blue canvas of the sea and the peak’s imposing grandeur. As the doors open, the soft murmurs of the ocean greet us, intermingled with the distant, gentle hum of the cable cars ascending the mountain. The scene is set for a reposeful afternoon; visitors bask in the sun, engage in the graceful art of paddleboarding, or swim in the placid embrace of the bay waters.
+
+We pause to savor the local flavors offered by the beachside kiosks, the aroma of "moqueca" drifting towards us, an invitation from the chefs who craft the sea's bounty into delectable dishes. The atmosphere is peaceful, yet spirited, encapsulated by the rhythmic dance of waves against the shore and the soft, honeyed sunlight bathing us all in a gentle, golden embrace.
+
+Our journey takes a regal turn as we arrive at a verdant expanse once graced by the footsteps of emperors and queens. The legacy of the park’s imperial past breathes through the rustling leaves of ancient trees, providing a lush canopy over the sweeping lawns. Here, history is etched into the landscape itself, the park a silent custodian of a bygone era.
+
+At the heart of the oasis lies a palace of storied walls, its architecture a grand echo of an empire that once was. Though adversity may have marred its narrative, the international effort to reweave its cultural threads speaks to the resilience and pride enshrined in these grounds. Families spread chequered blankets across the grass, picnics unfurling like vibrant flags of domesticity, each group a tableau of shared joy and relaxation.
+
+Swans and ducks trace graceful arcs upon the pond, their presence amongst the rental boats a brushstroke of life against the still, reflective waters. Our driver, a bearer of tales and histories, bids us farewell at the entrance. With a map as our guide, we step into a scene punctuated by laughter, play, and the serene backdrop of the city’s storied past and hopeful future, warmed by the embrace of the sun’s undimming gaze.
+
+==========
+
+REPLACEMENT FAILED: False 
+
+=====
+
+ORIGINAL TEXT:
+
+Our sightseeing tour winds down, but not before it guides us towards a shimmering oasis embraced by the city's embrace. We approach a lagoon that serves as a mirror to both sky and spirit, reflecting the cosmopolitan edges of affluence and the iconic silhouette of Christ the Redeemer. Here, nature and urbanity coalesce in harmony, providing a tranquil refuge for both body and soul.
+
+Our driver, who has become as much a part of this journey as the destinations themselves, navigates the limousine with grace towards this idyllic spot. As the vehicle's hum softens, tranquil vistas unfold before us, embracing us with their peaceful demeanor. The lagoon's waters, once mingling with the open sea, now hold within their gentle clasp a world apart from the sands of Ipanema Beach—a world of leisurely pursuits and calm reflection.
+
+Seasonally, the lagoon transforms into a flickering stage of holiday cheer as one of the world's tallest floating Christmas trees illuminates the night, symbolizing the festive spirit of the city. Memories are etched into the tranquil space which, just a few years ago, pulsed with the vitality of competitive oars slicing through its waters during the grandeur of the Summer Olympics.
+
+As we meander along the water's edge, the passage of time is marked only by the lapping of the waves against our paddleboard, or the quiet rustle of leaves above us while we savor a picnic of local delicacies. The sizzle of "coxinha" and the clink of ice in our "caipirinhas" form a symphony with the laughter and energy that swirl along the lagoon's perimeter—joggers, cyclists, and families enjoying paddleboats grace the surroundings in an easy cadence of communal bliss.
+
+Our driver, a storyteller whose tales are as woven into the fabric of Rio as the landmarks themselves, opens the door to this last chapter of discovery. He regales us with personal anecdotes that knit us closer to the heartbeat of the city. His favorite spots around the lagoon, shared with a warm and genuine intimacy, become waypoints in the narrative of our own experience, adding a sense of personal connection to the beauty we witness.
+
+Each moment of our journey through Rio de Janeiro has unfolded like the vibrant petals of a tropical bloom—each sight, sound, and taste a layer of discovery in this city of dreams. As the limousine carries us softly away from the lagoon, a canvas of reflections and memories stretched out behind, we sit back in comfort, hearts full and minds gently cradled by the thought of all the gentle wonders encountered. The gracious guide, the artful streets, the rich tapestries of past and future all meld into the gentle rhythm of Rio, the city that danced so easily into our souls.
+
+=====
+
+FAILED REWRITES:
+
+=====
+
+FINAL VERSION:
+
+Our sightseeing tour winds down, but not before it guides us towards a shimmering oasis embraced by the city's embrace. We approach a lagoon that serves as a mirror to both sky and spirit, reflecting the cosmopolitan edges of affluence and the iconic silhouette of Christ the Redeemer. Here, nature and urbanity coalesce in harmony, providing a tranquil refuge for both body and soul.
+
+Our driver, who has become as much a part of this journey as the destinations themselves, navigates the limousine with grace towards this idyllic spot. As the vehicle's hum softens, tranquil vistas unfold before us, embracing us with their peaceful demeanor. The lagoon's waters, once mingling with the open sea, now hold within their gentle clasp a world apart from the sands of Ipanema Beach—a world of leisurely pursuits and calm reflection.
+
+Seasonally, the lagoon transforms into a flickering stage of holiday cheer as one of the world's tallest floating Christmas trees illuminates the night, symbolizing the festive spirit of the city. Memories are etched into the tranquil space which, just a few years ago, pulsed with the vitality of competitive oars slicing through its waters during the grandeur of the Summer Olympics.
+
+As we meander along the water's edge, the passage of time is marked only by the lapping of the waves against our paddleboard, or the quiet rustle of leaves above us while we savor a picnic of local delicacies. The sizzle of "coxinha" and the clink of ice in our "caipirinhas" form a symphony with the laughter and energy that swirl along the lagoon's perimeter—joggers, cyclists, and families enjoying paddleboats grace the surroundings in an easy cadence of communal bliss.
+
+Our driver, a storyteller whose tales are as woven into the fabric of Rio as the landmarks themselves, opens the door to this last chapter of discovery. He regales us with personal anecdotes that knit us closer to the heartbeat of the city. His favorite spots around the lagoon, shared with a warm and genuine intimacy, become waypoints in the narrative of our own experience, adding a sense of personal connection to the beauty we witness.
+
+Each moment of our journey through Rio de Janeiro has unfolded like the vibrant petals of a tropical bloom—each sight, sound, and taste a layer of discovery in this city of dreams. As the limousine carries us softly away from the lagoon, a canvas of reflections and memories stretched out behind, we sit back in comfort, hearts full and minds gently cradled by the thought of all the gentle wonders encountered. The gracious guide, the artful streets, the rich tapestries of past and future all meld into the gentle rhythm of Rio, the city that danced so easily into our souls.
+
+==========
+

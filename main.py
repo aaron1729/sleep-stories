@@ -15,139 +15,182 @@ timestamp = datetime_str_to_timestamp(start_time)
 
 ##### PARAMETERS
 
-num_stops = 20
+num_stops = 2
 
-write_long_story = False
-write_short_story = True
-
-# {
-#     "destination": "berkeley",
-#     "destination_fullname": "Berkeley, California",
-#     "transport_method": "a Toyota Prius, and a hike in Tilden Park",
-#     "season": "spring",
-# },
+write_long_story = True
+write_short_story = False
 
 
+
+# these are organized alphabetically by destination name.
 inputs = [
     # {
-    #     "destination": "newyorkcity",
-    #     "destination_fullname": "New York, New York",
-    #     "transport_method": "open-top bus tour and Metro, with a tour guide with a thick Brooklyn accent whose family has been in New York City for many generations",
-    #     "season": "fall",
-    # },
-    # {
-    #     "destination": "tokyo",
-    #     "destination_fullname": "Tokyo, Japan",
-    #     "transport_method": "Tokyo metro train and Toei subway system, with a tour guide who is gregarious but soft-spoken",
-    #     "season": "spring",
-    # },
-    # {
-    #     "destination": "paris",
-    #     "destination_fullname": "Paris, France",
-    #     "transport_method": "Seine river cruise and Paris Metro, with a male tour guide in his early 40s who wears a beret and neckerchief and speaks with just a slight accent",
-    #     "season": "spring",
-    # },
-    # {
-    #     "destination": "london",
-    #     "destination_fullname": "London, England",
-    #     "transport_method": "the Tube subway, and also a double-decker bus with a bus driver and tour guide who is a middle-aged British man with an attention to detail that rivals Sherlock Holmes",
-    #     "season": "spring",
-    # },
-    # {
-    #     "destination": "bangkok",
-    #     "destination_fullname": "Bangkok, Thailand",
-    #     "transport_method": "tuk-tuk (i.e. a rickshaw), with a driver who is also a tour guide",
-    #     "season": "winter",
-    # },
-    # {
-    #     "destination": "istanbul",
-    #     "destination_fullname": "Istanbul, Turkey",
-    #     "transport_method": "ferry ride on the Bosphorous and historic tram on Istiklal Avenue",
-    #     "season": "spring",
-    # },
-    # {
-    #     "destination": "dubai",
-    #     "destination_fullname": "Dubai, United Arab Emirates",
-    #     "transport_method": "private limousine and an abra (i.e. a traditional boat) on Dubai Creek",
-    #     "season": "winter",
-    # },
-    {
-        "destination": "barcelona",
-        "destination_fullname": "Barcelona, Spain",
-        "transport_method": "guided bike tour with an affable university student who double-majors in art and history as a tour guide",
-        "season": "early fall",
-    },
-    # {
-    #     "destination": "rio",
-    #     "destination_fullname": "Rio de Janeiro, Brazil",
-    #     "transport_method": "limousine with a quiet but friendly driver in his early 50s who is aging gracefully",
-    #     "season": "late spring",
-    # },
-    # {
-    #     "destination": "shanghai",
-    #     "destination_fullname": "Shanghai, China",
-    #     "transport_method": "Shanghai Metro and a Huangpu River cruise",
-    #     "season": "fall",
-    # },
-    # {
-    #     "destination": "greece",
-    #     "destination_fullname": "Greece",
-    #     "transport_method": "catamaran with a captain who serves as a tour guide, and also a donkey ride on Santorini",
-    #     "season": "spring",
-    # },
-    # {
-    #     "destination": "kyoto",
-    #     "destination_fullname": "Kyoto, Japan",
-    #     "transport_method": "rickshaw with a jovial middle-aged man who serves as a tour guide, and also a bit of bicycling without the tour guide",
+    #     "destination": "algarve",
+    #     "destination_fullname": "The Algarve, Portugal",
+    #     "transport_method": "rental car for coastal drives",
+    #     "requested_sightseeing_stops": "a boat trip to explore sea caves with an amiable captain",
+    #     "tour_guide": None,
     #     "season": "spring",
     # },
     # {
     #     "destination": "amalfi",
     #     "destination_fullname": "Amalfi Coast, Italy",
-    #     "transport_method": "Vespa scooter and coastal boat tour with a friendly captain",
+    #     "transport_method": "Vespa scooter",
+    #     "requested_sightseeing_stops": "coastal boat tour with a friendly captain",
+    #     "tour_guide": None,
     #     "season": "spring",
     # },
     # {
     #     "destination": "bali",
     #     "destination_fullname": "Bali, Indonesia",
     #     "transport_method": "car with a young woman driver who is also a tour guide and also rental scooters",
+    #     "requested_sightseeing_stops": None,
+    #     "tour_guide": None,
     #     "season": "spring",
     # },
+    {
+        "destination": "bangkok",
+        "destination_fullname": "Bangkok, Thailand",
+        "transport_method": "tuk-tuk (i.e. a rickshaw)",
+        "requested_sightseeing_stops": "Chatuchak weekend market",
+        "tour_guide": "our tuk-tuk driver",
+        "season": "winter",
+    },
     # {
-    #     "destination": "cinqueterre",
-    #     "destination_fullname": "Cinque Terre, Italy",
-    #     "transport_method": "a leisurely boat trip, as well as hiking the trails between the villages",
+    #     "destination": "barcelona",
+    #     "destination_fullname": "Barcelona, Spain",
+    #     "transport_method": "guided bike tour",
+    #     "requested_sightseeing_stops": None,
+    #     "tour_guide": "an affable university student who double-majors in art and history as a tour guide",
+    #     "season": "early fall",
+    # },
+    # {
+    #     "destination": "berkeley",
+    #     "destination_fullname": "Berkeley, California",
+    #     "transport_method": "a Toyota Prius",
+    #     "requested_sightseeing_stops": "a hike in Tilden Park",
+    #     "tour_guide": None,
     #     "season": "spring",
     # },
     # {
     #     "destination": "chiangmai",
     #     "destination_fullname": "Chiang Mai, Thailand",
     #     "transport_method": "tuk-tuk (i.e. rickshaw)",
+    #     "requested_sightseeing_stops": None,
+    #     "tour_guide": None,
     #     "season": "winter",
     # },
     # {
-    #     "destination": "napa",
-    #     "destination_fullname": "Napa Valley, California",
-    #     "transport_method": "wine train and a ride in a hot air balloon",
-    #     "season": "fall",
-    # },
-    # {
-    #     "destination": "algarve",
-    #     "destination_fullname": "The Algarve, Portugal",
-    #     "transport_method": "rental car for coastal drives and a boat trip to explore sea caves",
+    #     "destination": "cinqueterre",
+    #     "destination_fullname": "Cinque Terre, Italy",
+    #     "transport_method": "a leisurely boat trip",
+    #     "requested_sightseeing_stops": "hiking the trails between the villages",
+    #     "tour_guide": None,
     #     "season": "spring",
     # },
     # {
     #     "destination": "costarica",
     #     "destination_fullname": "Costa Rica",
     #     "transport_method": "camper van",
+    #     "requested_sightseeing_stops": None,
+    #     "tour_guide": None,
     #     "season": "dry season",
+    # },
+    # {
+    #     "destination": "dubai",
+    #     "destination_fullname": "Dubai, United Arab Emirates",
+    #     "transport_method": "private limousine",
+    #     "requested_sightseeing_stops": "a ride in an abra (i.e. a traditional boat) on Dubai Creek",
+    #     "tour_guide": None,
+    #     "season": "winter",
+    # },
+    # {
+    #     "destination": "greece",
+    #     "destination_fullname": "Greece",
+    #     "transport_method": "catamaran",
+    #     "requested_sightseeing_stops": "a donkey ride on Santorini",
+    #     "tour_guide": "catamaran captain",
+    #     "season": "spring",
+    # },
+    # {
+    #     "destination": "istanbul",
+    #     "destination_fullname": "Istanbul, Turkey",
+    #     "transport_method": "ferry ride on the Bosphorous",
+    #     "requested_sightseeing_stops": "riding the historic tram on Istiklal Avenue",
+    #     "tour_guide": None,
+    #     "season": "spring",
+    # },
+    # {
+    #     "destination": "kyoto",
+    #     "destination_fullname": "Kyoto, Japan",
+    #     "transport_method": "rickshaw",
+    #     "requested_sightseeing_stops": "bicycling from Kyoto Station to the Kyoto Botanical Gardens along the Kamo-gawa River",
+    #     "tour_guide": "our rickshaw driver, a jovial middle-aged man",
+    #     "season": "spring",
+    # },
+    # {
+    #     "destination": "london",
+    #     "destination_fullname": "London, England",
+    #     "transport_method": "the Tube subway, and also a double-decker bus",
+    #     "requested_sightseeing_stops": None,
+    #     "tour_guide": "the driver of our double-decker bus, a middle-aged British man with an attention to detail that rivals Sherlock Holmes",
+    #     "season": "spring",
+    # },
+    # {
+    #     "destination": "napa",
+    #     "destination_fullname": "Napa Valley, California",
+    #     "transport_method": "wine train",
+    #     "requested_sightseeing_stops": "a ride in a hot air balloon",
+    #     "tour_guide": None,
+    #     "season": "fall",
+    # },
+    # {
+    #     "destination": "newyorkcity",
+    #     "destination_fullname": "New York, New York",
+    #     "transport_method": "open-top bus tour and Metro",
+    #     "requested_sightseeing_stops": None,
+    #     "tour_guide": "a middle-aged man with a thick Brooklyn accent whose family has been in New York City for many generations",
+    #     "season": "fall",
+    # },
+    # {
+    #     "destination": "paris",
+    #     "destination_fullname": "Paris, France",
+    #     "transport_method": "Seine river cruise and Paris Metro",
+    #     "requested_sightseeing_stops": None,
+    #     "tour_guide": "a man in his early 40s who wears a beret and neckerchief and speaks with just a slight French accent",
+    #     "season": "spring",
     # },
     # {
     #     "destination": "queenstown",
     #     "destination_fullname": "Queenstown, New Zealand",
     #     "transport_method": "water taxis",
+    #     "requested_sightseeing_stops": None,
+    #     "tour_guide": None,
     #     "season": "summer",
+    # },
+    # {
+    #     "destination": "rio",
+    #     "destination_fullname": "Rio de Janeiro, Brazil",
+    #     "transport_method": "limousine",
+    #     "requested_sightseeing_stops": None,
+    #     "tour_guide": "our limousine driver, a quiet but friendly man in his early 50s who is aging gracefully",
+    #     "season": "late spring",
+    # },
+    # {
+    #     "destination": "shanghai",
+    #     "destination_fullname": "Shanghai, China",
+    #     "transport_method": "Shanghai Metro",
+    #     "requested_sightseeing_stops": "a Huangpu River cruise",
+    #     "tour_guide": None,
+    #     "season": "fall",
+    # },
+    # {
+    #     "destination": "tokyo",
+    #     "destination_fullname": "Tokyo, Japan",
+    #     "transport_method": "Tokyo metro train and Toei subway system",
+    #     "requested_sightseeing_stops": None,
+    #     "tour_guide": "a gregarious but soft-spoken young woman",
+    #     "season": "spring",
     # },
 ]
 
@@ -158,6 +201,9 @@ inputs = [
 
 # regex pattern for roman numerals (preceded by a space). it's copied from here, with the ends stripped off and then preceded by a space and followed by a non-word character:
     # https://stackoverflow.com/a/267405/19327500
+# pattern_for_roman_numerals = r" M{0,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})\W"
+# updated version 2023-11-21: this was too complicated, and seemed to be triggering all over the place. we don't need a _valid_ roman numeral per se, we just want to catch them (and we only check once). so, do something much simpler.
+pattern_for_roman_numerals = r"[IVXLCDM][^a-zA-Z]"
 
 # input: a string (which for us will be an entire completion coming back from chatGPT), and a number of rewrites to attempt before moving on.
 # outputs (implicitly formatted as a tuple):
@@ -165,7 +211,6 @@ inputs = [
     # a boolean of whether it was modified at all
     # a list of the versions that contain digits
     # a boolean of whether the final rewrite failed
-pattern_for_roman_numerals = r" M{0,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})\W"
 
 def dedigitize(string, rewrites=3):
     any_nums = bool(re.search(r'\d', string)) or bool(re.search(pattern_for_roman_numerals, string))
@@ -334,34 +379,34 @@ def log_replacements_and_write_files(story, length):
 
 ################################################################################
 
-##### enforce length constraints
+##### enforce length constraints. written on 2023-11-21, but later trashed. it kinda sucks: it can take a _lot_ of runs through the `while` loop for chatGPT to get the length right, and e.g. sometimes it even goes in the wrong direction (i.e. more words instead of FEWER (let alone less) when it's trying to cut the word count). of course, a safer version would cap the number of attempts and log errors.
 
-def length_plz(min, max):
-    return f"\n\nPlease ensure that your response is between {min} and {max} words."
+# def length_plz(min, max):
+#     return f"\n\nPlease ensure that your response is between {min} and {max} words."
 
-def validate_length(string, min, max):
-    print("inside validate_length")
-    word_count = len(re.findall(r"\w+", string))
-    print(f"current word count is {word_count}")
-    while word_count < min or word_count > max:
-        print(f"asking chatGPT to fix word count: current is {word_count}, whereas target is between {min} and {max}")
-        system_prompt = f"""The user will provide you with a block of text, which has {word_count} words. Please rewrite it to have between {min} and {max} words.
+# def validate_length(string, min, max):
+#     print("inside validate_length")
+#     word_count = len(re.findall(r"\w+", string))
+#     print(f"current word count is {word_count}")
+#     while word_count < min or word_count > max:
+#         print(f"asking chatGPT to fix word count: current is {word_count}, whereas target is between {min} and {max}")
+#         system_prompt = f"""The user will provide you with a block of text, which has {word_count} words. Please rewrite it to have between {min} and {max} words.
 
-{"Since the given block of text is too short, please feel free to add further embellishments to achieve this goal." if word_count < min else ""}{"Since the given block of text is too long, please feel free to remove minor details to achieve this goal." if word_count > max else ""}
+# {"Since the given block of text is too short, please feel free to add further embellishments to achieve this goal." if word_count < min else ""}{"Since the given block of text is too long, please feel free to remove minor details to achieve this goal." if word_count > max else ""}
 
-Please do not respond with anything besides the rewritten text itself."""
-        system_message = {"role": "system", "content": system_prompt}
-        user_message = {"role": "user", "content": string}
-        completion = client.chat.completions.create(
-            model = gpt_model,
-            messages = [user_message]
-        )
-        string = completion.choices[0].message.content
-        word_count = len(re.findall(r"\w+", string))
-        print(f"the new string returned from chatGPT is:\n{string}")
-        print(f"and its word count is {word_count}")
-    print("string passes length validation")
-    return string
+# Please do not respond with anything besides the rewritten text itself."""
+#         system_message = {"role": "system", "content": system_prompt}
+#         user_message = {"role": "user", "content": string}
+#         completion = client.chat.completions.create(
+#             model = gpt_model,
+#             messages = [user_message]
+#         )
+#         string = completion.choices[0].message.content
+#         word_count = len(re.findall(r"\w+", string))
+#         print(f"the new string returned from chatGPT is:\n{string}")
+#         print(f"and its word count is {word_count}")
+#     print("string passes length validation")
+#     return string
 
 ################################################################################
 
@@ -372,7 +417,9 @@ for input in inputs:
     ##### GET LIST OF STOPS
 
     user_prompt_for_stops = f"""
-I love traveling. I'm going on a trip to {input['destination']}. Please name {num_stops} popular sightseeing locations there that I could visit by {input['transport_method']}. List these in an order so that no two adjacent sightseeing locations are too similar; for example, if one is a museum, the next would ideally be something like an outdoor market. Please only choose sightseeing locations that are calm and not even remotely controversial. For example, a beautiful park, a rose garden, a Buddhist temple, or a textiles museum would be a great choice of sightseeing location. A bullfight or a Holocaust museum would be a bad choice of sightseeing location.
+I love traveling. I'm going on a trip to {input['destination']}. Please name {num_stops} popular sightseeing locations there that I could visit by {input['transport_method']}. {f"Please try to include {input['requested_sightseeing_stops']} among these sightseeing locations." if input['requested_sightseeing_stops'] else ""}
+
+Please list the sightseeing locations in an order so that no two adjacent sightseeing locations are too similar; for example, if one is a museum, the next would ideally be something like an outdoor market. Please only choose sightseeing locations that are calm and not even remotely controversial. For example, a beautiful park, a rose garden, a Buddhist temple, or a textiles museum would be a great choice of sightseeing location. A bullfight or a Holocaust museum would be a bad choice of sightseeing location.
 
 Please separate the different sightseeing locations with five asterisks (i.e. the string '*****'). Please make sure to separate the sightseeing locations with five asterisks.
 
@@ -423,14 +470,17 @@ Eiffel Tower: An iconic symbol of France, this remarkable structure offers a stu
 
     ##### GET TIDBITS FOR EACH STOP
 
+    # removed on 2023-11-22:
+        # If visiting the sightseeing location typically involves eating or drinking, please also include a typical dish or dining experience.
+        # the transport method, in the sentence: Lastly, please also describe a pleasant human experience involved in visiting this sightseeing location by {input['transport_method']}.
+
+
     system_prompt_for_tidbits = f"""
 I am on a vacation to {input['destination_fullname']}, and am taking a sightseeing tour in and around the area. I will name a sightseeing location on the tour. Associated to this sightseeing location, please list some historical facts, literary references, or relevant quotes -- at least three or four of these.
 
-If visiting the sightseeing location typically involves eating or drinking, please also include a typical dish or dining experience.
+If the sightseeing location typically has other people about, please list one or two activities that those other people might be seen doing.
 
-If the sightseeing location typically has many other people about, please list one or two activities that those other people might be seen doing.
-
-Lastly, please also describe a pleasant human experience involved in visiting this sightseeing location by {input['transport_method']}. Some examples might be: buying a ticket; consulting a map; taking in natural beauty such as plants, animals, clouds, trees, or sunshine. Please be specific in the experience you describe.
+Lastly, please also describe a pleasant human experience involved in visiting this sightseeing location. Some examples might be: buying a ticket; consulting a map; taking in natural beauty such as plants, animals, clouds, trees, or sunshine. Please be specific in the experience you describe.
 
 For each sightseeing location, please format the above items as a bullet-pointed list.
 
@@ -504,7 +554,7 @@ END OF EXAMPLE THREE
     short_story_system_prompt_template_filler = "a few different sightseeing locations"
 
     system_prompt_for_story_template = f"""
-I'm going to give you a tourist destination, a mode of transportation, a season, and REPLACE_WITH_FILLER. Please write me a story like the example far below. Please make sure to write in the PRESENT TENSE. Please don't give the tour guide a specific name, referring to them instead as "our guide" (or similar).
+I'm going to give you a tourist destination, a mode of transportation, a season, and REPLACE_WITH_FILLER. Please write me a story like the example far below. Please make sure to write in the PRESENT TENSE. Please don't give the tour guide a specific name, referring to them instead as 'our guide' (or similar).
 
 As I name each sightseeing location, I'm also going to give you some tidbits about it: historical facts, literary references, relevant quotes, typical dining experiences, and possibly also human experiences involved in visiting this sightseeing location by the chosen mode of transportation. Please try to include these. However, don't include more than THREE food experiences total.
 
@@ -574,7 +624,10 @@ END EXAMPLE REWRITE TWO:""" + "\n\n=====\n\n" + example_story
     long_story_user_prompt_for_setting_scene_filler = "Keep this short -- just three or four paragraphs. Please don't end your response with a summary, though, because we will be continuing the story!"
     short_story_user_prompt_for_setting_scene_filler = "Keep this part short -- just a paragraph will do."
 
-    user_prompt_for_setting_scene_template = f"Please begin by setting the scene. We are traveling in {input['destination_fullname']}; the season in {input['season']}. We are taking a sightseeing tour by {input['transport_method']}, although we may also walk around some as well. However, JUST set the scene; don't begin the sightseeing tour just yet. Make me excited about my trip overall, and about the upcoming tour. REPLACE_WITH_FILLER"
+
+    # {f"The tour guide is {input["tour_guide"]}. However, Please don't give the tour guide a specific name, referring to them instead as 'our guide' (or similar)." if input["tour_guide"] else ""}
+    # + input['tour_guide'] + "." 
+    user_prompt_for_setting_scene_template = f"Please begin by setting the scene. We are traveling in {input['destination_fullname']}; the season in {input['season']}. We are taking a sightseeing tour by {input['transport_method']}, although we may also walk around some as well. {'The tour guide is ' + input['tour_guide'] + '.' if input['tour_guide'] else ''} However, JUST set the scene; don't begin the sightseeing tour just yet. Make me excited about my trip overall, and about the upcoming tour. REPLACE_WITH_FILLER"
 
     user_prompt_for_setting_scene_for_long_story = user_prompt_for_setting_scene_template.replace("REPLACE_WITH_FILLER", long_story_user_prompt_for_setting_scene_filler)
     user_prompt_for_setting_scene_for_short_story = user_prompt_for_setting_scene_template.replace("REPLACE_WITH_FILLER", short_story_user_prompt_for_setting_scene_filler)
@@ -583,11 +636,11 @@ END EXAMPLE REWRITE TWO:""" + "\n\n=====\n\n" + example_story
 
     no_numbers_plz = "\n\nPlease spell out any numbers in words. For instance, write 'nineteen eighty-seven' instead of '1987', and 'four thousand seven hundred and thirty three' instead of '4,733', and 'eighteen-sixties' instead of '1860s' (referring to the decade), and 'nineties' instead of '90s' (also referring to the decade)."
 
-    no_overused_words_plz = "\n\nPlease don't use any of the following words: tapestry, testament, grandeur, symphony, ethereal, tribute, serve."
+    no_overused_words_plz = "\n\nPlease don't use any of the following words: tapestry, testament, grandeur, symphony, ethereal, tribute, serve, homage, tranquil."
 
     no_ending_summary_plz = "\n\nPlease don't end your response with a summary, though, because we will be continuing the story and visiting more sightseeing locations!"
 
-    no_section_titles_plz = "\n\nPlease don't directly state the name of the sightseeing location or the description that are given in the user prompt. Everything you write should be in complete sentences."
+    no_section_titles_via_only_complete_sentences_plz = "\n\nEverything you write should be in complete sentences."
 
     no_starting_transition_plz = """\n
 Additionally, at the beginning of your response, please do NOT refer to the sightseeing location where we've just been. Do not say where we are leaving from. Rather, just refer to our travel adventures in general terms.
@@ -631,7 +684,7 @@ As we make our way from the castle, ..."""
 
         stop_messages = []
         for (index, stop_with_tidbits) in enumerate(stops_with_tidbits):
-            stop_prompt = f"Great, thank you! Here is the next sightseeing location:\n\n {stop_with_tidbits}{no_numbers_plz}{no_overused_words_plz}{no_section_titles_plz}{no_ending_summary_plz}"
+            stop_prompt = f"Great, thank you! Here is the next sightseeing location:\n\n {stop_with_tidbits}{no_numbers_plz}{no_overused_words_plz}{no_section_titles_via_only_complete_sentences_plz}{no_ending_summary_plz}"
             if index == len(stops_with_tidbits) - 1:
                 stop_prompt += no_starting_transition_plz
             stop_message = {"role": "user", "content": stop_prompt}
@@ -675,11 +728,12 @@ As we make our way from the castle, ..."""
 
         a = 1 # number of stops bundled into initial chunk -- assumed to be at least 1
         c = 5 # number of middle completions
-        n = 1 # number of stops per middle completion
+        n = 2 # number of stops per middle completion
         z = 1 # number of stops bundled into final chunk
         # total number of stops needed is a + c*n + z
         # by around 2023-11-14, we decided that these should be: a=1, c=5, n=2, z=1.
         # on 2023-11-20, we decided to actually drop n down to 1, so that we could get more fine-grained with the lengths of stories served. we'll aim for each middle chunk to only be 200-300 words, using the validate_length function defined above.
+        # on 2023-11-21: yes, change back to the above: 1,5,2,1.
 
         print(f"writing a short story")
 
@@ -692,13 +746,14 @@ As we make our way from the castle, ..."""
         # so, here just append "\n\n" to the stop prompts now, rather than joining them with separator "\n\n" inside of the f-string.
         stops_with_tidbits = [stop_with_tidbits + "\n\n" for stop_with_tidbits in stops_with_tidbits]
 
-        initial_user_prompt_for_short_story = f"{user_prompt_for_setting_scene_for_short_story}\n\nThen, here {'are' if a>1 else 'is'} the first{f' {str(a)}' if a>1 else ''} sightseeing location{'s' if a>1 else ''} to visit.\n\n{''.join(stops_with_tidbits[:a])}{no_numbers_plz + no_overused_words_plz + no_section_titles_plz + no_ending_summary_plz}"
+        no_separator_in_intro_plz = "\n\nPlease do NOT include any sort of separator between setting the scene and taking us to the first sightseeing location."
+        initial_user_prompt_for_short_story = f"{user_prompt_for_setting_scene_for_short_story}\n\nThen, here {'are' if a>1 else 'is'} the first{f' {str(a)}' if a>1 else ''} sightseeing location{'s' if a>1 else ''} to visit.\n\n{''.join(stops_with_tidbits[:a])}{no_numbers_plz + no_overused_words_plz + no_section_titles_via_only_complete_sentences_plz + no_ending_summary_plz + no_separator_in_intro_plz}"
         print("the initial user prompt is:\n", initial_user_prompt_for_short_story)
         initial_user_message = {"role": "user", "content": initial_user_prompt_for_short_story}
 
         message_list = [system_message, initial_user_message]
 
-        print("fetching short story chunk number 0")
+        print("fetching short story completion (not necessarily chunk!) number 0")
         completion = client.chat.completions.create(
             model = gpt_model,
             messages = message_list
@@ -708,9 +763,11 @@ As we make our way from the castle, ..."""
         initial_assistant_message = {"role": "assistant", "content": story}
         message_list.append(initial_assistant_message)
 
+        split_with_asterisks_plz = "\n\nPlease separate the pieces of the story corresponding to the different sightseeing locations with five asterisks (i.e. the string '*****'). Please make sure to separate the sightseeing locations with five asterisks."
         for j in range(c):
-            print(f"fetching short story chunk number", j+1)
-            user_prompt = f"Great, thank you! Here {'are' if n>1 else 'is'} the next {str(n) if n>1 else ''} sightseeing location{'s' if n>1 else ''}:\n\n{''.join(stops_with_tidbits[a+n*j:a+n*(j+1)])}{no_numbers_plz + no_overused_words_plz + no_section_titles_plz + no_ending_summary_plz + length_plz(200, 300)}"
+            print(f"fetching short story completion (not necessarily chunk!) number", j+1)
+            # on 2023-11-21 at ~5pm, removed from the following: length_plz(200, 300)
+            user_prompt = f"Great, thank you! Here {'are' if n>1 else 'is'} the next {str(n) if n>1 else ''} sightseeing location{'s' if n>1 else ''}:\n\n{''.join(stops_with_tidbits[a+n*j:a+n*(j+1)])}{no_numbers_plz + no_overused_words_plz + no_section_titles_via_only_complete_sentences_plz + no_ending_summary_plz + split_with_asterisks_plz}"
             print("the next user prompt is:\n", user_prompt)
             user_message = {"role": "user", "content": user_prompt}
             message_list.append(user_message)
@@ -719,14 +776,22 @@ As we make our way from the castle, ..."""
                 messages = message_list
             )
             assistant_prompt_with_story_undedigitized = completion.choices[0].message.content
-            assistant_prompt_with_story_undedigitized_with_length_validation = validate_length(assistant_prompt_with_story_undedigitized, 200, 300)
-            assistant_prompt_with_story = dedigitize_and_log(assistant_prompt_with_story_undedigitized_with_length_validation)
-            story += "\n\n=====\n\n" + assistant_prompt_with_story
+            # 2023-11-21 at ~5pm: remove this next line, and instead just have chatGPT split the text apart into chunks as it's writing it.
+            # assistant_prompt_with_story_undedigitized_with_length_validation = validate_length(assistant_prompt_with_story_undedigitized, 200, 300)
+            assistant_prompt_with_story = dedigitize_and_log(assistant_prompt_with_story_undedigitized)
+
+            print(f"writing short story, and the raw assistant_prompt_with_story (with stops hopefully separated by '*****') is:\n{assistant_prompt_with_story}")
+
+            new_chunks = [string.replace("*", "").strip() for string in assistant_prompt_with_story.split("***") if len(string.replace("*", "").strip()) > 3]
+            for index, new_chunk in enumerate(new_chunks):
+                print(f"new_chunk number {index} is:\n{new_chunk}")
+                story += "\n\n=====\n\n" + new_chunk
             assistant_message_with_story = {"role": "assistant", "content": assistant_prompt_with_story}
             message_list.append(assistant_message_with_story)
 
-        print(f"fetching short story chunk number {c+1} (the last chunk)")
-        user_prompt = f"Great, thank you! Now, please conclude our story. First, here {'are' if z>1 else 'is'} the concluding {str(z) if z>1 else ''} sightseeing location{'s' if z>1 else ''} to visit.\n\n{''.join(stops_with_tidbits[a+c*n:a+c*n+z])}{no_starting_transition_plz}"
+        no_separator_in_conclusion_plz = "\n\nPlease do NOT include any sort of separator between the last sightseeing location and the conclusion of the story."
+        print(f"fetching short story completion (not necessarily chunk!) number {c+1} (the last chunk)")
+        user_prompt = f"Great, thank you! Now, please conclude our story. First, here {'are' if z>1 else 'is'} the concluding {str(z) if z>1 else ''} sightseeing location{'s' if z>1 else ''} to visit.\n\n{''.join(stops_with_tidbits[a+c*n:a+c*n+z])}{no_starting_transition_plz} {no_separator_in_conclusion_plz}"
         print("the concluding user prompt is:\n", user_prompt)
         user_message = {"role": "user", "content": user_prompt}
         message_list.append(user_message)

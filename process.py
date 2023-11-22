@@ -82,7 +82,9 @@ for txt_file_name in txt_file_names:
             # for whatever reason, the above seems to split _some_ periods away from their preceding sentences, but not all. so, put them together manually.
             sentences = []
             for shortstring in sentences_and_punctuations:
-                if len(shortstring) > 4:
+                # the check that `len(shortstring) > 4` is supposed to ensure that we're looking at an actual sentence, instead of just e.g. some funky punctuation in and around a period at the end of a sentence (e.g. some quotation marks).
+                # however, there was an error in processing `queenstown_2023-11-21_18-59-20_short.txt` since an entire paragraph starts with `Mt. Nicholas Station, a historic icon` and so there was nowhere for the `Mt.` to get appended to in the `else` block. so if there are no sentences yet, then we'll just kick things off with `shortstring` no matter how short it is.
+                if len(shortstring) > 4 or len(sentences) == 0:
                     sentences.append(shortstring)
                 else:
                     sentences[len(sentences)-1] += shortstring

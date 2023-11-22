@@ -342,3 +342,91 @@ barcelona_2023-11-21_10-36-40_short.txt
 attempts per dedigitization: 1, 1, 1
 any failures: False
 
+rio_2023-11-21_17-26-08_short.txt
+attempts per dedigitization: 1, 1, 1, 1, 1
+any failures: False
+
+shanghai_2023-11-21_17-43-21_short.txt
+attempts per dedigitization: 
+any failures: False
+
+greece_2023-11-21_17-47-57_short.txt
+attempts per dedigitization: 1, 1
+any failures: False
+
+newyorkcity_2023-11-21_18-14-15_short.txt
+attempts per dedigitization: 1, 1, 1
+any failures: False
+
+london_2023-11-21_18-14-15_short.txt
+attempts per dedigitization: 1, 1, 1
+any failures: False
+
+rio_2023-11-21_18-14-15_short.txt
+attempts per dedigitization: 1, 1
+any failures: False
+
+newyorkcity_2023-11-21_18-34-53_short.txt
+attempts per dedigitization: 1, 1, 1, 1
+any failures: False
+
+london_2023-11-21_18-34-53_short.txt
+attempts per dedigitization: 1, 1, 1
+any failures: False
+
+rio_2023-11-21_18-34-53_short.txt
+attempts per dedigitization: 1, 1
+any failures: False
+
+newyorkcity_2023-11-21_18-59-20_short.txt
+attempts per dedigitization: 1, 1, 1, 1, 1
+any failures: False
+
+london_2023-11-21_18-59-20_short.txt
+attempts per dedigitization: 1, 1, 1, 1
+any failures: False
+
+rio_2023-11-21_18-59-20_short.txt
+attempts per dedigitization: 1, 1, 1, 1, 1
+any failures: False
+
+amalfi_2023-11-21_18-59-20_short.txt
+attempts per dedigitization: 1, 1, 1, 1, 1
+any failures: False
+
+queenstown_2023-11-21_18-59-20_short.txt
+attempts per dedigitization: 1, 1, 1, 1, 1
+any failures: False
+
+berkeley_2023-11-21_18-59-20_short.txt
+attempts per dedigitization: 1, 1, 1, 1
+any failures: False
+
+newyorkcity_2023-11-22_16-30-23_long.txt
+attempts per dedigitization: 1, 1, 1
+any failures: False
+
+newyorkcity_2023-11-22_16-30-23_short.txt
+attempts per dedigitization: 1, 1, 1
+any failures: False
+
+napa_2023-11-22_16-52-40_long.txt
+attempts per dedigitization: 1
+any failures: False
+
+napa_2023-11-22_16-52-40_short.txt
+attempts per dedigitization: 1
+any failures: False
+
+bangkok_2023-11-22_17-55-40_long.txt
+attempts per dedigitization: 1
+any failures: False
+
+bangkok_2023-11-22_18-00-51_long.txt
+attempts per dedigitization: 
+any failures: False
+
+bangkok_2023-11-22_18-15-50_long.txt
+attempts per dedigitization: 1
+any failures: False
+
