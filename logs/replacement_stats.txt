@@ -430,3 +430,27 @@ bangkok_2023-11-22_18-15-50_long.txt
 attempts per dedigitization: 1
 any failures: False
 
+costarica_2023-11-22_18-34-48_long.txt
+attempts per dedigitization: 1, 1
+any failures: False
+
+costarica_2023-11-22_18-34-48_short.txt
+attempts per dedigitization: 1, 1
+any failures: False
+
+dubai_2023-11-22_18-54-31_long.txt
+attempts per dedigitization: 1
+any failures: False
+
+dubai_2023-11-22_20-47-43_long.txt
+attempts per dedigitization: 1
+any failures: False
+
+cinqueterre_2023-11-22_23-40-08_short.txt
+attempts per dedigitization: 
+any failures: False
+
+cinqueterre_2023-11-22_23-50-21_long.txt
+attempts per dedigitization: 1
+any failures: False
+
