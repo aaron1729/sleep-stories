@@ -1,11 +1,54 @@
 ##### this code only runs if in the stories (saved in 'stories/') come in long/short pairs!
 
 import re # regular expressions
+
+import strings # so, `my_string` defined over there is accessible here as `strings.my_string`.
+
+
+
+#### IS THIS STUFF STILL USED HERE???
 from os import listdir # operating system; list the files in a directory
 from os.path import isfile, join
 txt_file_names_incl_hidden = [f for f in listdir("stories/") if isfile(join("stories/", f))]
 txt_file_names = [file_name for file_name in txt_file_names_incl_hidden if file_name[0] != "."]
 txt_file_names.sort() # make alphabetical, for reproduceability.
+
+
+
+
+# by default we get the latest long and short stories, but these can be overridden.
+def process_story_pair(destination, long_story_filename = None, short_story_filename = None, min_stops_for_long_story = 1):
+
+    if not long_story_filename:
+        long_story_filename = strings.get_latest_filename(destination, "stories", "long")
+    if not short_story_filename:
+        short_story_filename = strings.get_latest_filename(destination, "stories", "short")
+
+    
+    # [date_long, time_long] = long_story_filename.split("_")[]
+    
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # this is a dict, whose keys are destinations.
     # the value of each destination is itself a dict, with the keys "short" and "long".

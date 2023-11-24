@@ -18,4 +18,13 @@ from strings import *
 def my_func(str):
     return str + str
 
-print(my_func("hello"))
+# print(my_func("hello"))
+
+
+def my_func1(str):
+    return my_func2(str) + str
+
+def my_func2(str):
+    return "hello" + str + "hi"
+
+print(my_func1("abc"))

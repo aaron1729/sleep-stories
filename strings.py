@@ -1,3 +1,23 @@
+
+from os import listdir
+from os.path import isfile, join
+
+# destination is e.g. "amalfi"
+# directory is e.g. "story" or "stops"
+# length is either "long" or "short"
+def get_latest_filename(destination, directory, length = None):
+    all_filenames = [filename for filename in listdir(f"{directory}/") if isfile(join(f"{directory}/", filename)) and filename[0] != "."] # make sure it's the name of a _file_, and make sure it's not a _hidden_ file.
+    # all_stops_filenames = [filename for filename in listdir("stops/") if isfile(join("stops/", filename)) and filename[0] != "."] # make sure it's the name of a _file_, and make sure it's not a _hidden_ file.
+    destination_filenames = [filename for filename in all_filenames if filename.split("_")[1] == destination]
+    if length:
+        destination_filenames = [filename for filename in destination_filenames if filename.split("_")[-1][:-4] == length]
+    if len(destination_filenames) == 0:
+        raise Exception(f"there are no files in `{directory}/` corresponding to the destination `{destination}`{' of length `' + length + '`' if length else ''}")
+    destination_filenames.sort()
+    return destination_filenames[-1]
+        
+#####
+
 system_prompt_for_dedigitization = f"""The user will give you text. Please rewrite the text so that all numbers are written out in words. This includes Roman numerals. So, the result should not have any digits or any Roman numerals. Please make sure that years are written out in the usual way that they're spoken. Please only respond with the rewritten text, and nothing else.
 
 EXAMPLE: '1842' should be written out as 'eighteen forty-two' (and not 'one thousand eight hundred and forty-two').
@@ -20,8 +40,8 @@ EXAMPLE: 'I Gusti Nyoman Lempad' should actually NOT BE CHANGED, because this is
 
 #####
 
-def user_prompt_for_stops(destination, num_stops, transport_method, requested_sightseeing_stops):
-    return f"""I love traveling. I'm going on a trip to {destination}. Please name {num_stops} popular sightseeing locations there that I could visit by {transport_method}. {f"Please try to include {requested_sightseeing_stops} among these sightseeing locations." if requested_sightseeing_stops else ""}
+def user_prompt_for_stops(destination_fullname, num_stops, transport_method, requested_sightseeing_stops):
+    return f"""I love traveling. I'm going on a trip to {destination_fullname}. Please name {num_stops} popular sightseeing locations there that I could visit by {transport_method}. {f"Please try to include {requested_sightseeing_stops} among these sightseeing locations." if requested_sightseeing_stops else ""}
 
 Please list the sightseeing locations in an order so that no two adjacent sightseeing locations are too similar; for example, if one is a museum, the next would ideally be something like an outdoor market. Please only choose sightseeing locations that are calm and not even remotely controversial. For example, a beautiful park, a rose garden, a Buddhist temple, or a textiles museum would be a great choice of sightseeing location. A bullfight or a Holocaust museum would be a bad choice of sightseeing location.
 

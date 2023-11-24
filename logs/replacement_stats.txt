@@ -454,3 +454,31 @@ cinqueterre_2023-11-22_23-50-21_long.txt
 attempts per dedigitization: 1
 any failures: False
 
+amalfi_2023-11-23_01-02-15_long.txt
+attempts per dedigitization: 
+any failures: False
+
+amalfi_2023-11-23_01-07-25_long.txt
+attempts per dedigitization: 
+any failures: False
+
+amalfi_2023-11-23_01-09-42_long.txt
+attempts per dedigitization: 
+any failures: False
+
+amalfi_2023-11-23_01-11-22_long.txt
+attempts per dedigitization: 
+any failures: False
+
+algarve_2023-11-23_01-25-49_short.txt
+attempts per dedigitization: 
+any failures: False
+
+berkeley_2023-11-23_02-11-24_long.txt
+attempts per dedigitization: 1, 1, 1, 1, 1, 1
+any failures: False
+
+berkeley_2023-11-23_02-11-24_short.txt
+attempts per dedigitization: 1, 1, 1, 1
+any failures: False
+
