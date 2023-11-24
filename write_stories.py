@@ -95,7 +95,7 @@ def dedigitize_and_log(string, dedigitizations):
     # store just the individual sentences at the end of the story file (for compilation into kotlin code -- perhaps at the top, commented-out);
     # regardless, also save the replacement stats.
 
-def log_replacements_and_write_files(input, story, length, dedigitizations, timestamp):
+def log_replacements_and_write_files(input, story, length, dedigitizations, timestamp, stops_filename):
         
     ### record replacement stats.
 
@@ -184,13 +184,20 @@ def log_replacements_and_write_files(input, story, length, dedigitizations, time
         replacement_log_file.write(replacement_log)
         replacement_log_file.close()
     
-    ### write the individual sentence replacements to the end of the story file.
+    ### save the replacement metadata as a string.
 
-    replacements_string = "\n\n=====\n\nREPLACED_SENTENCES:"
+    replacements_string = "REPLACED_SENTENCES:"
     for sentence_replacement_object in sentence_replacement_pairs:
         replacements_string += f"\n\nOLD SENTENCE: {sentence_replacement_object['old']}\nNEW SENTENCE: {sentence_replacement_object['new']}"
 
-    story += replacements_string
+    ### save the stops file as a string.
+    stops_filename_string = f"this story was written based on the stops file: {stops_filename}"
+    
+    ### append the metadata to the story string
+    
+    metadata = stops_filename + replacements_string
+
+    story += f"\n\n=====\n\n{stops_filename_string}\n\n{replacements_string}"
 
     ### write the story file.
 
@@ -240,6 +247,7 @@ def log_replacements_and_write_files(input, story, length, dedigitizations, time
 
 ################################################################################
 
+# by default we get the latest stops file, but this can be overridden.
 def write_long_story(destination, num_stops = 20, stops_filename = None):
 
     input = inputs[destination]
@@ -314,7 +322,7 @@ def write_long_story(destination, num_stops = 20, stops_filename = None):
     assistant_prompt_with_story_ending, dedigitizations = dedigitize_and_log(assistant_prompt_with_story_ending_undedigitized, dedigitizations)
     story += "\n\n=====\n\n" + assistant_prompt_with_story_ending
 
-    log_replacements_and_write_files(input, story, "long", dedigitizations, timestamp)
+    log_replacements_and_write_files(input, story, "long", dedigitizations, timestamp, stops_filename)
 
     return None
 
@@ -330,6 +338,7 @@ def write_long_story(destination, num_stops = 20, stops_filename = None):
 # on 2023-11-20, we decided to actually drop n down to 1, so that we could get more fine-grained with the lengths of stories served. we'll aim for each middle chunk to only be 200-300 words, using the validate_length function defined above.
 # on 2023-11-21, we decided to change these back to the above values: 1, 5, 2, and 1.
 
+# by default we get the latest stops file, but this can be overridden.
 def write_short_story(destination, a = 1, c = 5, n = 2, z = 1, stops_filename = None):
 
     input = inputs[destination]
@@ -419,7 +428,7 @@ def write_short_story(destination, a = 1, c = 5, n = 2, z = 1, stops_filename = 
     final_assistant_prompt, dedigitizations = dedigitize_and_log(final_assistant_prompt_undedigitized, dedigitizations)
     story += "\n\n=====\n\n" + final_assistant_prompt
 
-    log_replacements_and_write_files(input, story, "short", dedigitizations, timestamp)
+    log_replacements_and_write_files(input, story, "short", dedigitizations, timestamp, stops_filename)
 
     return None
 
@@ -427,5 +436,5 @@ def write_short_story(destination, a = 1, c = 5, n = 2, z = 1, stops_filename = 
 
 ### let's write some stories!
 
-write_long_story("berkeley")
-write_short_story("berkeley")
+write_long_story("berkeley", 2)
+# write_short_story("berkeley")
