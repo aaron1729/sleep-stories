@@ -5,6 +5,8 @@ from os.path import isfile, join
 # destination is e.g. "amalfi"
 # directory is e.g. "story" or "stops"
 # length is either "long" or "short"
+    # example: executing get_latest_filename("algarve", "stories", "short") on 2023-11-24 returns:
+    # story_algarve_2023-11-23_01-25-49_short.txt
 def get_latest_filename(destination, directory, length = None):
     all_filenames = [filename for filename in listdir(f"{directory}/") if isfile(join(f"{directory}/", filename)) and filename[0] != "."] # make sure it's the name of a _file_, and make sure it's not a _hidden_ file.
     # all_stops_filenames = [filename for filename in listdir("stops/") if isfile(join("stops/", filename)) and filename[0] != "."] # make sure it's the name of a _file_, and make sure it's not a _hidden_ file.
@@ -15,7 +17,7 @@ def get_latest_filename(destination, directory, length = None):
         raise Exception(f"there are no files in `{directory}/` corresponding to the destination `{destination}`{' of length `' + length + '`' if length else ''}")
     destination_filenames.sort()
     return destination_filenames[-1]
-        
+
 #####
 
 system_prompt_for_dedigitization = f"""The user will give you text. Please rewrite the text so that all numbers are written out in words. This includes Roman numerals. So, the result should not have any digits or any Roman numerals. Please make sure that years are written out in the usual way that they're spoken. Please only respond with the rewritten text, and nothing else.
@@ -216,6 +218,7 @@ overused_words = [
     "serve",
     "homage",
     "tranquil",
+    "chariot",
 ]
 
 no_overused_words_plz = f"\n\nPlease don't use any of the following words: {', '.join(overused_words)}."

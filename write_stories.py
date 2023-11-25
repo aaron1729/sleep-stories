@@ -436,5 +436,7 @@ def write_short_story(destination, a = 1, c = 5, n = 2, z = 1, stops_filename = 
 
 ### let's write some stories!
 
-write_long_story("berkeley", 2)
-# write_short_story("berkeley")
+# write_long_story("berkeley", 2)
+
+#write_short_story(destination, a = 1, c = 5, n = 2, z = 1, stops_filename = None):
+write_short_story("berkeley", 1, 2, 2, 1)

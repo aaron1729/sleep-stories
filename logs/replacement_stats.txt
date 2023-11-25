@@ -486,3 +486,7 @@ berkeley_2023-11-24_17-05-55_long.txt
 attempts per dedigitization: 1, 1
 any failures: False
 
+berkeley_2023-11-24_17-25-36_short.txt
+attempts per dedigitization: 1, 1, 1
+any failures: False
+

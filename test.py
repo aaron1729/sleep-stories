@@ -1,3 +1,7 @@
+import spacy
+nlp = spacy.load("en_core_web_sm")
+
+
 from strings import *
 
 # print(my_cool_string)
@@ -28,3 +32,10 @@ def my_func2(str):
     return "hello" + str + "hi"
 
 print(my_func1("abc"))
+
+
+text = "Hello world! I remember that Mr. Smith Sr. went to Mt. Wilson to watch the St. Teresa eclipse. This is a test text.! It contains several sentences. ... Or does it???"
+doc = nlp(text)
+sentences = [sentence.text for sentence in doc.sents]
+for sentence in sentences:
+    print(f"{sentence}")
