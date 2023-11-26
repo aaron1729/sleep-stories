@@ -1,6 +1,6 @@
 // this code is generated from the story files story_berkeley_2023-11-24_17-25-36_short.txt and story_berkeley_2023-11-24_17-05-55_long.txt.
 
-// these stories are both generated from the stops file stops_berkeley_2023-11-23_02-25-23.txt, which is copied (commented-out) at the bottom of this file (after a bunch of slashes).
+// in turn, these stories are both generated from the single stops file stops_berkeley_2023-11-23_02-25-23.txt, which is copied (commented-out) at the bottom of this file (after a bunch of slashes).
 
 // min_stops_for_long_story is set to 1.
 
