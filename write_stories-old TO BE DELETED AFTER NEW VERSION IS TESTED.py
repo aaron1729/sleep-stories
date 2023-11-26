@@ -20,43 +20,50 @@ timestamp = datetime_str_to_timestamp(start_time)
 
 ################################################################################
 
-##### text validation
-
-# the `rewrite` function uses chatGPT to attempt to remove:
-    # digits,
-    # roman numerals,
-    # abbreviations,
-    # overused words
-# from its responses. (even though we already will have requested that its responses not contain these, but it often fails at that.)
-# the last is just for stylistic considerations, but the rest are to improve the likelihood that the AI voice from ElevenLabs pronounces it all correctly.
-
-# a previous architectural choice was to search for all of the above on a first pass, but only digits on subsequent passes. but from experience, it seemed like chatGPT actually did a _pretty_ good job with all of them. so as of 2023-11-26, AMG made the decision to just check all of those one single time (by default, but max_number_of_rewritings can be changed), and then log the failure if _any_ of those trigger again, and we'll just look into it by hand.
-
-# for abbreviations, it seems the simplest thing to do is just list out the most common ones. those are saved as
 
 
 
-# for catching roman numerals (preceded by a space and followed by a non-word character), we previously used the regex pattern (copied from https://stackoverflow.com/a/267405/19327500):
-    # pattern_for_roman_numerals = r" M{0,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})\W"
-# for some reason this seemed to trigger a lot of false positives, and anyways it's rather complex. we realized that we don't need to find _valid_ roman numerals per se, so we just went with the following much simpler thing:
+
+
+
+
+
+
+
+
+
+
+##### dedigitization
+##### ##### UPDATE: throughout this code, "digit" also refers to roman numerals.
+
+##### ##### ##### ##### UPDATE 2023-11-22: call this "text validation", and re-check here for the SAT words ("tapestry, etc.").
+
+
+
+
+
+
+
+# regex pattern for roman numerals (preceded by a space). it's copied from here, with the ends stripped off and then preceded by a space and followed by a non-word character:
+    # https://stackoverflow.com/a/267405/19327500
+# pattern_for_roman_numerals = r" M{0,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})\W"
+# updated version 2023-11-21: this was too complicated, and seemed to be triggering all over the place. we don't need a _valid_ roman numeral per se, we just want to catch them (and we only check once). so, do something much simpler.
 pattern_for_roman_numerals = r"[IVXLCDM][^a-zA-Z]"
 
-### comments on the `rewrite` function.
-# terminology: `rewrite` (a verb) refers to the function, while a `rewriting` (a noun) refers to some output of the function.
-# input: a string (which for us will be an entire completion coming back from chatGPT), and a number of rewritings to attempt before moving on.
+# input: a string (which for us will be an entire completion coming back from chatGPT), and a number of rewrites to attempt before moving on.
 # outputs (implicitly formatted as a tuple):
     # the hopefully-fixed string
     # a boolean of whether it was modified at all
-    # a list of the rewritten versions
+    # a list of the versions that contain digits
     # a boolean of whether the final rewrite failed
 
-def rewrite(string, max_number_of_rewritings = 3):
-    any_rewritings = bool(re.search(r'\d', string)) or bool(re.search(pattern_for_roman_numerals, string))
-    if not any_rewritings:
+def dedigitize(string, rewrites=3):
+    any_nums = bool(re.search(r'\d', string)) or bool(re.search(pattern_for_roman_numerals, string))
+    if not any_nums:
         return string, False, [], False
-    rewritten_versions = [string]
-    for _ in range(max_number_of_rewritings):
-        system_message = {"role": "system", "content": strings.system_prompt_for_rewriting}
+    versions_with_digits = [string]
+    for _ in range(rewrites):
+        system_message = {"role": "system", "content": strings.system_prompt_for_dedigitization}
         user_message = {"role": "user", "content": string}
         print("asking chatGPT to rewrite text without digits")
         completion = client.chat.completions.create(
@@ -66,18 +73,18 @@ def rewrite(string, max_number_of_rewritings = 3):
         string = completion.choices[0].message.content
         # starting here, _don't_ keep looking for roman numerals, because there _is_ the possibility that a legitimate roman numeral shows up as _not_ a roman numeral. the main thing is 'I' (first person singular), but 
         # justification: after 15 instances of this function running while writing a story, chatGPT _always_ made a passing rewrite on the first try. (these only tested removal of digits, not roman numerals, but oh well.)
-        any_rewritings = bool(re.search(r'\d', string)) # or bool(re.search(pattern_for_roman_numerals, string))
-        if not any_rewritings:
-            return string, True, rewritten_versions, False
-        rewritten_versions.append(string)
-    return string, True, rewritten_versions, True
+        any_nums = bool(re.search(r'\d', string)) # or bool(re.search(pattern_for_roman_numerals, string))
+        if not any_nums:
+            return string, True, versions_with_digits, False
+        versions_with_digits.append(string)
+    return string, True, versions_with_digits, True
 
-# apply the `rewrite` function, return the hopefully-correct string, and log if applicable.
-def rewrite_and_log(string, rewritings):
-    output, modified, rewritten_versions, failed = rewrite(string)
+# apply the `dedigitize` function, return the hopefully-correct string, and log if applicable.
+def dedigitize_and_log(string, dedigitizations):
+    output, modified, versions_with_digits, failed = dedigitize(string)
     if modified:
-        rewritings.append({"original": rewritten_versions[0], "failed_rewrites": rewritten_versions[1: ], "final": output, "failed": failed})
-    return output, rewritings
+        dedigitizations.append({"original": versions_with_digits[0], "failed_rewrites": versions_with_digits[1: ], "final": output, "failed": failed})
+    return output, dedigitizations
 
 ################################################################################
 
@@ -88,18 +95,18 @@ def rewrite_and_log(string, rewritings):
     # store just the individual sentences at the end of the story file (for compilation into kotlin code -- perhaps at the top, commented-out);
     # regardless, also save the replacement stats.
 
-def log_replacements_and_write_files(input, story, length, rewritings, timestamp, stops_filename):
-
+def log_replacements_and_write_files(input, story, length, dedigitizations, timestamp, stops_filename):
+        
     ### record replacement stats.
 
     nums_of_attempts = []
     any_failures = False
-    # the rewritings list will have been created through the process of writing the story.
-    for rewriting in rewritings:
-        nums_of_attempts.append(len(rewriting['failed_rewrites']) + 1)
-        if rewriting['failed']:
+    # the dedigitizations list will have been created through the process of writing the story.
+    for dedigitization in dedigitizations:
+        nums_of_attempts.append(len(dedigitization['failed_rewrites']) + 1)
+        if dedigitization['failed']:
             any_failures = True
-    replacement_stats_string = f"{input['destination']}_{timestamp}_{length}.txt\nattempts per rewriting: " + ", ".join([str(num) for num in nums_of_attempts]) + f"\nany failures: {str(any_failures)}\n\n"
+    replacement_stats_string = f"{input['destination']}_{timestamp}_{length}.txt\nattempts per dedigitization: " + ", ".join([str(num) for num in nums_of_attempts]) + f"\nany failures: {str(any_failures)}\n\n"
     replacement_stats_file = open("logs/replacement_stats.txt", "a")
     replacement_stats_file.write(replacement_stats_string)
     replacement_stats_file.close()
@@ -116,22 +123,22 @@ def log_replacements_and_write_files(input, story, length, rewritings, timestamp
 
     sentence_replacement_pairs = []
 
-    if len(rewritings) > 0:
+    if len(dedigitizations) > 0:
         replacement_log = "\n==========\n\n"
-        for rewriting in rewritings:
+        for dedigitization in dedigitizations:
 
             # write some replacement_log material.
 
-            replacement_log += f"REPLACEMENT FAILED: {str(rewriting['failed'])} \n\n=====\n\n"
-            if rewriting["failed"]:
+            replacement_log += f"REPLACEMENT FAILED: {str(dedigitization['failed'])} \n\n=====\n\n"
+            if dedigitization["failed"]:
                 replacement_log = "WARNING: A REPLACEMENT HEREIN HATH FAILED\n\n" + replacement_log
-            replacement_log += f"ORIGINAL TEXT:\n\n{rewriting['original']}\n\n=====\n\n"
-            replacement_log += "\n\n=====\n\n".join(["FAILED REWRITES:"] + rewriting['failed_rewrites'] + [""])
-            replacement_log += f"FINAL VERSION:\n\n{rewriting['final']}\n\n==========\n\n"
+            replacement_log += f"ORIGINAL TEXT:\n\n{dedigitization['original']}\n\n=====\n\n"
+            replacement_log += "\n\n=====\n\n".join(["FAILED REWRITES:"] + dedigitization['failed_rewrites'] + [""])
+            replacement_log += f"FINAL VERSION:\n\n{dedigitization['final']}\n\n==========\n\n"
 
             # store replaced sentences and their replacements.
 
-            original_sentences = rewriting['original'].split(".")
+            original_sentences = dedigitization['original'].split(".")
             original_sentences_with_digits = [sentence for sentence in original_sentences if bool(re.search(r'\d', sentence)) or bool(re.search(pattern_for_roman_numerals, sentence))]
             new_sentences_with_digits_removed = []
 
@@ -171,7 +178,7 @@ def log_replacements_and_write_files(input, story, length, rewritings, timestamp
             for old_sentence, new_sentence in zip(original_sentences_with_digits, new_sentences_with_digits_removed, strict=True):
                 sentence_replacement_pairs.append({"old": old_sentence, "new": new_sentence})
         
-        # write the replacement_log file (assuming there were any rewritings).
+        # write the replacement_log file (assuming there were any dedigitizations).
 
         replacement_log_file = open(f"logs/replacement_logs/replacement-logs_{input['destination']}_{timestamp}_{length}.txt", "w")
         replacement_log_file.write(replacement_log)
@@ -258,7 +265,7 @@ def write_long_story(destination, num_stops = 20, stops_filename = None):
     
     stops_with_tidbits = stops_with_tidbits[: num_stops]
 
-    rewritings = []
+    dedigitizations = []
 
     system_message = {"role": "system", "content": strings.system_prompt_for_story("long", num_stops)}
 
@@ -274,8 +281,8 @@ def write_long_story(destination, num_stops = 20, stops_filename = None):
         model = models.gpt_model,
         messages = message_list
     )
-    assistant_prompt_with_scene_setting_unrewritten = completion.choices[0].message.content
-    assistant_prompt_with_scene_setting, rewritings = rewrite_and_log(assistant_prompt_with_scene_setting_unrewritten, rewritings)
+    assistant_prompt_with_scene_setting_undedigitized = completion.choices[0].message.content
+    assistant_prompt_with_scene_setting, dedigitizations = dedigitize_and_log(assistant_prompt_with_scene_setting_undedigitized, dedigitizations)
     story += assistant_prompt_with_scene_setting
     assistant_message_with_scene_setting = {"role": "assistant", "content": assistant_prompt_with_scene_setting}
     message_list.append(assistant_message_with_scene_setting)
@@ -297,8 +304,8 @@ def write_long_story(destination, num_stops = 20, stops_filename = None):
             model = models.gpt_model,
             messages = message_list
         )
-        assistant_prompt_with_story_unrewritten = completion.choices[0].message.content
-        assistant_prompt_with_story, rewritings = rewrite_and_log(assistant_prompt_with_story_unrewritten, rewritings)           
+        assistant_prompt_with_story_undedigitized = completion.choices[0].message.content
+        assistant_prompt_with_story, dedigitizations = dedigitize_and_log(assistant_prompt_with_story_undedigitized, dedigitizations)           
         story += "\n\n=====\n\n" + assistant_prompt_with_story
         assistant_message_with_story = {"role": "assistant", "content": assistant_prompt_with_story}
         message_list.append(assistant_message_with_story)
@@ -311,11 +318,11 @@ def write_long_story(destination, num_stops = 20, stops_filename = None):
         model = models.gpt_model,
         messages = message_list
     )
-    assistant_prompt_with_story_ending_unrewritten = completion.choices[0].message.content
-    assistant_prompt_with_story_ending, rewritings = rewrite_and_log(assistant_prompt_with_story_ending_unrewritten, rewritings)
+    assistant_prompt_with_story_ending_undedigitized = completion.choices[0].message.content
+    assistant_prompt_with_story_ending, dedigitizations = dedigitize_and_log(assistant_prompt_with_story_ending_undedigitized, dedigitizations)
     story += "\n\n=====\n\n" + assistant_prompt_with_story_ending
 
-    log_replacements_and_write_files(input, story, "long", rewritings, timestamp, stops_filename)
+    log_replacements_and_write_files(input, story, "long", dedigitizations, timestamp, stops_filename)
 
     return None
 
@@ -352,7 +359,7 @@ def write_short_story(destination, a = 1, c = 5, n = 2, z = 1, stops_filename = 
     
     stops_with_tidbits = stops_with_tidbits[: num_stops]
     
-    rewritings = []
+    dedigitizations = []
 
     system_message = {"role": "system", "content": strings.system_prompt_for_story("short", num_stops)}
 
@@ -377,15 +384,15 @@ def write_short_story(destination, a = 1, c = 5, n = 2, z = 1, stops_filename = 
         model = models.gpt_model,
         messages = message_list
     )
-    story_start_unrewritten = completion.choices[0].message.content
-    story, rewritings = rewrite_and_log(story_start_unrewritten, rewritings)
+    story_start_undedigitized = completion.choices[0].message.content
+    story, dedigitizations = dedigitize_and_log(story_start_undedigitized, dedigitizations)
     initial_assistant_message = {"role": "assistant", "content": story}
     message_list.append(initial_assistant_message)
 
     for j in range(c):
         print(f"fetching short story completion (not necessarily chunk!) number", j+1)
         # on 2023-11-21 at ~5pm, removed from the following: length_plz(200, 300)
-        user_prompt = f"Great, thank you! Here {'are' if n>1 else 'is'} the next {str(n) if n>1 else ''} sightseeing location{'s' if n>1 else ''}:\n\n{''.join(stops_with_tidbits[a+n*j:a+n*(j+1)])}{strings.no_numbers_plz + strings.no_overused_words_plz + strings.no_section_titles_via_only_complete_sentences_plz + strings.no_ending_summary_plz}{strings.split_with_asterisks_plz if n>1 else ''}"
+        user_prompt = f"Great, thank you! Here {'are' if n>1 else 'is'} the next {str(n) if n>1 else ''} sightseeing location{'s' if n>1 else ''}:\n\n{''.join(stops_with_tidbits[a+n*j:a+n*(j+1)])}{strings.no_numbers_plz + strings.no_overused_words_plz + strings.no_section_titles_via_only_complete_sentences_plz + strings.no_ending_summary_plz + strings.split_with_asterisks_plz}"
         print("the next user prompt is:\n", user_prompt)
         user_message = {"role": "user", "content": user_prompt}
         message_list.append(user_message)
@@ -393,10 +400,10 @@ def write_short_story(destination, a = 1, c = 5, n = 2, z = 1, stops_filename = 
             model = models.gpt_model,
             messages = message_list
         )
-        assistant_prompt_with_story_unrewritten = completion.choices[0].message.content
+        assistant_prompt_with_story_undedigitized = completion.choices[0].message.content
         # 2023-11-21 at ~5pm: remove this next line, and instead just have chatGPT split the text apart into chunks as it's writing it.
-        # assistant_prompt_with_story_unrewritten_with_length_validation = validate_length(assistant_prompt_with_story_unrewritten, 200, 300)
-        assistant_prompt_with_story, rewritings = rewrite_and_log(assistant_prompt_with_story_unrewritten, rewritings)
+        # assistant_prompt_with_story_undedigitized_with_length_validation = validate_length(assistant_prompt_with_story_undedigitized, 200, 300)
+        assistant_prompt_with_story, dedigitizations = dedigitize_and_log(assistant_prompt_with_story_undedigitized, dedigitizations)
 
         print(f"writing short story, and the raw assistant_prompt_with_story (with stops hopefully separated by '*****') is:\n{assistant_prompt_with_story}")
 
@@ -409,7 +416,7 @@ def write_short_story(destination, a = 1, c = 5, n = 2, z = 1, stops_filename = 
 
     print(f"fetching short story completion (not necessarily chunk!) number {c+1} (the last chunk)")
     user_prompt = strings.user_prompt_for_ending_short_story(input['destination_fullname'], input['transport_method'], stops_with_tidbits[a+c*n:a+c*n+z], z)
-    # user_prompt = f"Great, thank you! Now, please conclude our story. First, here {'are' if z>1 else 'is'} the concluding {str(z) if z>1 else ''} sightseeing location{'s' if z>1 else ''} to visit.\n\n{''.join(stops_with_tidbits[a+c*n:a+c*n+z])}{strings.no_starting_transition_plz} {strings.no_separator_in_conclusion_plz if z>1 else ''}"
+    # user_prompt = f"Great, thank you! Now, please conclude our story. First, here {'are' if z>1 else 'is'} the concluding {str(z) if z>1 else ''} sightseeing location{'s' if z>1 else ''} to visit.\n\n{''.join(stops_with_tidbits[a+c*n:a+c*n+z])}{strings.no_starting_transition_plz} {strings.no_separator_in_conclusion_plz}"
     print("the concluding user prompt is:\n", user_prompt)
     user_message = {"role": "user", "content": user_prompt}
     message_list.append(user_message)
@@ -417,11 +424,11 @@ def write_short_story(destination, a = 1, c = 5, n = 2, z = 1, stops_filename = 
         model = models.gpt_model,
         messages = message_list
     )
-    final_assistant_prompt_unrewritten = completion.choices[0].message.content
-    final_assistant_prompt, rewritings = rewrite_and_log(final_assistant_prompt_unrewritten, rewritings)
+    final_assistant_prompt_undedigitized = completion.choices[0].message.content
+    final_assistant_prompt, dedigitizations = dedigitize_and_log(final_assistant_prompt_undedigitized, dedigitizations)
     story += "\n\n=====\n\n" + final_assistant_prompt
 
-    log_replacements_and_write_files(input, story, "short", rewritings, timestamp, stops_filename)
+    log_replacements_and_write_files(input, story, "short", dedigitizations, timestamp, stops_filename)
 
     return None
 

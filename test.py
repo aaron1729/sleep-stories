@@ -2,7 +2,10 @@ import spacy
 nlp = spacy.load("en_core_web_sm")
 
 
-from strings import *
+# from strings import * # this imports that code directly to the namespace.
+import strings # this imports foo from there as strings.foo instead.
+
+
 
 # print(my_cool_string)
 
@@ -19,23 +22,39 @@ from strings import *
 
 
 
-def my_func(str):
-    return str + str
+# def my_func(str):
+#     return str + str
 
-# print(my_func("hello"))
+# # print(my_func("hello"))
+
+# def my_func1(str):
+#     return my_func2(str) + str
+
+# def my_func2(str):
+#     return "hello" + str + "hi"
+
+# print(my_func1("abc"))
 
 
-def my_func1(str):
-    return my_func2(str) + str
-
-def my_func2(str):
-    return "hello" + str + "hi"
-
-print(my_func1("abc"))
+# text = "Hello world! I remember that Mr. Smith Sr. went to Mt. Wilson to watch the St. Teresa eclipse. This is a test text.! It contains several sentences. ... Or does it???"
+# doc = nlp(text)
+# sentences = [sentence.text for sentence in doc.sents]
+# for sentence in sentences:
+#     print(f"{sentence}")
 
 
-text = "Hello world! I remember that Mr. Smith Sr. went to Mt. Wilson to watch the St. Teresa eclipse. This is a test text.! It contains several sentences. ... Or does it???"
-doc = nlp(text)
-sentences = [sentence.text for sentence in doc.sents]
-for sentence in sentences:
-    print(f"{sentence}")
+
+
+
+my_list = ["abc", "def", "123", "XYZ"]
+
+my_string = f"""the list, joined, is: {'''
+'''.join(my_list)}"""
+
+print(my_string)
+
+newline = "\n"
+
+my_string_again = f"the list, joint, is: {strings.nn.join(my_list)}"
+
+print("my_string_again is:", my_string_again)

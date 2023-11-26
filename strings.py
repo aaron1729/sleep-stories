@@ -1,3 +1,4 @@
+##### here are collected miscellaneous strings (and simple functions that return strings) that are used elsewhere.
 
 from os import listdir
 from os.path import isfile, join
@@ -20,7 +21,7 @@ def get_latest_filename(destination, directory, length = None):
 
 #####
 
-system_prompt_for_dedigitization = f"""The user will give you text. Please rewrite the text so that all numbers are written out in words. This includes Roman numerals. So, the result should not have any digits or any Roman numerals. Please make sure that years are written out in the usual way that they're spoken. Please only respond with the rewritten text, and nothing else.
+system_prompt_for_rewriting = f"""The user will give you text. Please rewrite the text so that all numbers are written out in words. This includes Roman numerals. So, the result should not have any digits or any Roman numerals. Please make sure that years are written out in the usual way that they're spoken. Please only respond with the rewritten text, and nothing else.
 
 EXAMPLE: '1842' should be written out as 'eighteen forty-two' (and not 'one thousand eight hundred and forty-two').
 
@@ -205,7 +206,15 @@ def user_prompt_for_setting_scene(length, destination_fullname, transport_method
 
 #####
 
-# a bunch of short strings
+# MISCELLANEOUS SHORT STRINGS
+
+# annoyingly, in python <3.12 you can't put a backslash in the expression portion of an f-string (and the virtual environment ). so here's a workaround to allow for joining a list of strings with single or double newlines inside of an f-string.
+n = "\n"
+nn = "\n\n"
+
+### below are a bunch of requests to chatGPT (indicated by `_plz` in the variable name), as well as related material.
+
+## here are requests that get used for _every_ completion of _every_ story, as well as related material.
 
 no_numbers_plz = "\n\nPlease spell out any numbers in words. For instance, write 'nineteen eighty-seven' instead of '1987', and 'four thousand seven hundred and thirty three' instead of '4,733', and 'eighteen-sixties' instead of '1860s' (referring to the decade), and 'nineties' instead of '90s' (also referring to the decade)."
 
@@ -220,13 +229,21 @@ overused_words = [
     "tranquil",
     "chariot",
 ]
-
 no_overused_words_plz = f"\n\nPlease don't use any of the following words: {', '.join(overused_words)}."
-
-no_ending_summary_plz = "\n\nPlease don't end your response with a summary, though, because we will be continuing the story and visiting more sightseeing locations!"
 
 no_section_titles_via_only_complete_sentences_plz = "\n\nEverything you write should be in complete sentences."
 
+## here are requests that get used for _some_ but not all completions in the story-writing process.
+
+# this applies to short stories, which (assuming a>0) come with a stop attached to the scene-setting material.
+no_separator_in_intro_plz = "\n\nPlease do NOT include any sort of separator between setting the scene and taking us to the first sightseeing location."
+
+# this applies to every completion besides the one that ends the story.
+no_ending_summary_plz = "\n\nPlease don't end your response with a summary, though, because we will be continuing the story and visiting more sightseeing locations!"
+
+# this applies just once in each story-writing.
+    # for the long story, it applies to the last stop (which comes separately from the conclusion of the story), since we always include that.
+    # for the short story, it applies to the last 
 no_starting_transition_plz = """\n
 Additionally, at the beginning of your response, please do NOT refer to the sightseeing location where we've just been. Do not say where we are leaving from. Rather, just refer to our travel adventures in general terms.
 
@@ -238,10 +255,10 @@ BAD EXAMPLE:
 
 As we make our way from the castle, ..."""
 
-no_separator_in_intro_plz = "\n\nPlease do NOT include any sort of separator between setting the scene and taking us to the first sightseeing location."
-
+# this is used in the middle completions of the short story (assuming that n>1).
 split_with_asterisks_plz = "\n\nPlease separate the pieces of the story corresponding to the different sightseeing locations with five asterisks (i.e. the string '*****'). Please make sure to separate the sightseeing locations with five asterisks."
 
+# this is used in the beginning 
 no_separator_in_conclusion_plz = "\n\nPlease do NOT include any sort of separator between the last sightseeing location and the conclusion of the story."
 
 def user_prompt_for_ending_long_story(destination_fullname, transport_method):
