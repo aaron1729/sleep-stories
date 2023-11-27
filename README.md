@@ -22,7 +22,7 @@ these should be installed by `pip install`. a (probably incomplete) list of modu
 
 ## pipeline
 
-here's a description of the pipeline, script by script, in a (topo)logical ordering. see the <a href="sleep_stories_pipeline.pdf" target="_blank">pipeline flowchart</a> -- or again, [pipeline flowchart](sleep_stories_pipeline.pdf) -- for a visual representation.
+here's a description of the pipeline, script by script, in a (topo)logical ordering. see the [pipeline flowchart](sleep_stories_pipeline.pdf) for a visual representation.
 
 ### meta info
 

@@ -3,14 +3,17 @@
 from os import listdir
 from os.path import isfile, join
 
+def get_all_unhidden_files(directory):
+    # make sure it's the name of a _file_, and make sure it's not a _hidden_file.
+    return [filename for filename in listdir(directory + "/") if isfile(join(directory + "/", filename)) and filename[0] != "."]
+
 # destination is e.g. "amalfi"
 # directory is e.g. "story" or "stops"
 # length is either "long" or "short"
     # example: executing get_latest_filename("algarve", "stories", "short") on 2023-11-24 returns:
     # story_algarve_2023-11-23_01-25-49_short.txt
 def get_latest_filename(destination, directory, length = None):
-    all_filenames = [filename for filename in listdir(f"{directory}/") if isfile(join(f"{directory}/", filename)) and filename[0] != "."] # make sure it's the name of a _file_, and make sure it's not a _hidden_ file.
-    # all_stops_filenames = [filename for filename in listdir("stops/") if isfile(join("stops/", filename)) and filename[0] != "."] # make sure it's the name of a _file_, and make sure it's not a _hidden_ file.
+    all_filenames = get_all_unhidden_files(directory)
     destination_filenames = [filename for filename in all_filenames if filename.split("_")[1] == destination]
     if length:
         destination_filenames = [filename for filename in destination_filenames if filename.split("_")[-1][:-4] == length]

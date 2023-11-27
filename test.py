@@ -7,9 +7,11 @@ import models
 import spacy
 nlp = spacy.load("en_core_web_sm")
 
-
 # from strings import * # this imports that code directly to the namespace.
 import strings # this imports foo from there as strings.foo instead.
+
+import random
+
 
 
 
@@ -83,8 +85,18 @@ print(hello("hi", "there"))
 
 my_IPA_string = "/ˈpɑː.sɑr ˈsɛ.ni ˈuː.bʊd/"
 
-completion = client.chat.completions.create(
-        model = models.gpt_model,
-        messages = [{"role": "user", "content": "Please tell me how to pronounce 'Pasar Seni Ubud' using the International Phonetic Alphabet (IPA). Please do not respond with anything besides the IPA."}]
-    )
-print("the pronunciation is:", completion.choices[0].message.content)
+# completion = client.chat.completions.create(
+#         model = models.gpt_model,
+#         messages = [{"role": "user", "content": "Please tell me how to pronounce 'Ubud Traditional Art Market' using the International Phonetic Alphabet (IPA). Please do not respond with anything besides the IPA."}]
+#     )
+# print("the pronunciation is:", completion.choices[0].message.content)
+
+my_dict = {"a": 67, "b": -2, "c": False, "X": "hi there"}
+
+for key in my_dict:
+    print(f"key is {key} and value is {my_dict[key]}")
+
+for _ in range(10):
+    print(random.randint(0,4))
+
+print("The answer is:", "cinqueterre" <= "cinqueterre")

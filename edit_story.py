@@ -10,15 +10,43 @@ from os.path import isfile, join
 
 import models
 import strings # so, `my_string` defined over there is accessible here as `strings.my_string`.
-from inputs import * # so, the inputs defined over there are accessible here without change.
+# from inputs import * # so, the inputs defined over there are accessible here without change.
 
-from datetime import datetime
-def datetime_str_to_timestamp(str):
-    return str[:10] + "_" + str[11:13] + "-" + str[14:16] + "-" + str[17:19]
-start_time = str(datetime.now())
-timestamp = datetime_str_to_timestamp(start_time)
+
 
 ################################################################################
+
+
+# a typical input for story_filename is "story_berkeley_2023-11-24_17-25-36_short.txt".
+    # if story_filename is left as `None`, then we edit _all_ the unedited stories in `stories-unedited/`.
+# max_number_of_attempts dictates how many times we run each chunk through our regex patterns to see if it catches. (at the end of the function, we run one more time and record whether we ultimately succeeded in )
+def edit_story(story_filename = None, max_number_of_attempts = 3):
+    
+    if not story_filename:
+        unedited_story_filenames = strings.get_all_unhidden_files("stories-unedited")
+    else:
+        unedited_story_filenames = [story_filename]
+    
+    for unedited_story_filename in unedited_story_filenames:
+
+        print(f"editing the story {unedited_story_filename}")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ##### text validation
 
