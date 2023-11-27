@@ -4,7 +4,9 @@
 
 ### venv
 
-make sure the `openai-env` virtual environment is both loaded and running. to load, on the command line in the root of the repo do `python -m venv openai-env`; to run, on the command line (in macOS) do `source openai-env/bin/activate`.
+make sure the `openai-env` virtual environment is both loaded and running.
+* to load, on the command line in the root of the repo do `python -m venv openai-env`.
+* to run, on the command line do `source openai-env/bin/activate` (at least in macOS -- it's slightly different elsewhere).
 
 ### openai module
 
@@ -16,11 +18,11 @@ this ought to have an API key saved (say at the bottom of the file `openai-env/b
 
 ### other modules
 
-these should be installed by `pip install`. a (probably incomplete) list of modules used (beyond `openai` of course) is: `re` (for regex), `datetime` (for timestamps), `os` (for interacting with the operating system), 
+these should be installed by `pip install`. a (probably incomplete) list of modules used in this repo (beyond `openai` of course) is: `re` (for regex), `datetime` (for timestamps), `os` (for interacting with the operating system), `spacy` (for sentence boundary detection).
 
 ## pipeline
 
-here's a description of the pipeline, script by script, in order.
+here's a description of the pipeline, script by script, in a (topo)logical ordering. see the [pipeline flowchart](sleep_stories_pipeline.pdf) for a visual representation.
 
 ### meta info
 
@@ -46,33 +48,45 @@ STATUS: done.
 
 ### write_stories.py
 
-this takes a length (either `short` or `long`), a destination, a `num_stops_parameter` (explained in the code), and a corresponding `stops` file (by default the most recent one for that destination), and writes a story. the code applies to both short and long stories simultaneously, but the actual writing prompts are rather different. this writes to `stories-unedited`.
-
-this file is separated into "chunks", the last simply containing the metadata of which `stops` file the story was written based on.
-
-for long stories, each chunk (aside from the last one) is a single chatGPT completion. but for short stories, in order to make the chunks themselves shorter, the middle completions are actually broken up into multiple chunks. (this is the purpose of having the parameter `n`; completions tend to be around 500-800 words, regardless of how many stops are given in the user prompt.)
+this takes a length (either `short` or `long`), a destination, a `num_stops_parameter` (explained in the code), and a corresponding `stops` file (by default the most recent one for that destination), and writes a story. the code applies to both short and long stories simultaneously, but the actual writing prompts that we feed to chatGPT are rather different. this writes to a `story-unedited` file in `stories-unedited`.
 
 a typical result file is named `story-unedited_berkeley_2023-11-24_17-25-36_short.txt`.
 
-STATUS: mostly done, but currently editing (4pm on sun 11/26). mainly just remove the edit_stories stuff, and also log any splitting failures during the process of writing a short story. if this ever fails, we make a log to `logs/splitting_failure_log.txt`.
+a `story-unedited` file is separated into "chunks", the last simply containing the metadata of which `stops` file the story was written based on.
+
+for long stories, each chunk (aside from the last one) is a single chatGPT completion. but for short stories, in order to make the chunks themselves shorter, the middle completions are actually broken up into multiple chunks. (this is the purpose of having the parameter `n`; completions tend to be around 500-800 words, regardless of how many stops are given in the user prompt.)
+
+if chatGPT ever fails to return the correct number of chunks in a middle completion, this is logged at the bottom of `logs/splitting_failure_log.txt`.
+
+STATUS: done.
 
 ### edit_stories.py
 
-this takes an unedited story and attempts to edit out digits, roman numerals, and words that are overused by chatGPT (e.g. "tapestry"). this writes to `stories/`.
+this takes an unedited story and attempts to edit out digits, roman numerals, and words that are overused by chatGPT (e.g. "tapestry"), running chunk by chunk. this writes to `stories/`.
+
+actually, we do want to allow chatGPT to _occasionally_ use an "overused word". so, for each overused word, we randomly choose 0 or 1 (with 50-50 odds) and allow that many instances to remain in the story. to keep things simple, we just take this number as a counter and decrement it each time we encounter the word, and then require it to be removed when the counter is 0. of course, we search for e.g. "tapestr" case-insensitively, so that we catch both plural instances and instances at the beginning of a sentence. and if e.g. a chunk has _two_ (or more) instances of "tapestr", then we just tell it to edit them _all_ out but keep the counter unchanged.
 
 in this file, the final chunk now also contains the metadata of the "sentence replacement pairs", i.e. the pairs of an old sentence that was editing as well as the new sentence that replaced it.
 
-a typical result file is named `story_berkeley_2023-11-24_17-25-36_short.txt`. (the timestamp corresponds to the original writing time, not the editing time.)
+a typical result file is named `story_berkeley_2023-11-24_17-25-36_short.txt`. the timestamp corresponds to the original writing time, not the editing time.
 
 STATUS: not yet written, but will be based on existing stuff.
 
-### process.py
+### phoneticize_stories.py
 
-this takes a pair of a short story and a long story set in the same destination, and generates both a single `.kt` file in `code/` as well as a pair of files in `cues/` that just contain the unadorned cues (for later usage in generating dalle prompts).
+this takes a(n edited) story, asks chatGPT for a list of proper nouns, foreign words, or any other words/phrases that might be hard to pronounce (for an ElevenLabs AI voice), and then asks chatGPT for pronunciations of them one-by-one (in terms of the IPA) and replaces those in the story.
+
+STATUS: not yet written at all (but tested in chatGPT and it seems to be a fine way to proceed). REMAINING QUESTION: how to ensure that we _exactly_ phoneticize everything that we should? for instance, maybe a word is actually pluralized. of course we can ask chatGPT to return the _exact_ matches throughout the story, and give an example to illustrate. and then when we search through the story, of course do so case-insensitively. we can also save the replacements as metadata.
+
+### process_stories.py
+
+#### UPDATE: peel off `write_cues.py` from this, move it above "phoneticize"
+
+this takes a pair of a short story and a long story set in the same destination, and generates both a single `.kt` file in `code/` as well as a pair of files in `cues/` that just contain the unadorned cues (for later usage in generating dalle prompts). we use the `spacy` NLP module to detect sentence boundaries (which seems to be much more robust (and convenient!) than using regex since then we'd have to watch out for abbreviations (which are typically followed by a period, e.g. "Mt. Tamalpais" or "e.g.")).
 
 a typical `.kt` file is named `SleepStoryTravelBerkeleyCues.kt`. a typical cues file is named `cues_berkeley_2023-11-24_17-25-36_short.txt` (again timestamped by the original writing time).
 
-STATUS: done.
+STATUS: done. NO, actually update it to take in a PHONETICIZED story. but the `cues` should be non-phoneticized. so, some more refactoring is in order (as of sunday at around 9pm). really, we should be able to make a `cue` file based on just a single story; it doesn't need to be a short/long pair.
 
 ### choose_art_styles.py
 
