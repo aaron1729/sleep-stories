@@ -46,15 +46,21 @@ STATUS: done.
 
 ### write_stories.py
 
-this takes a destination and a corresponding `stops` file (by default the most recent one for that destination) and writes either a long story or a short story. their architectures are slightly different, as can be seen in the file. this writes to `stories-unedited`.
+this takes a length (either `short` or `long`), a destination, a `num_stops_parameter` (explained in the code), and a corresponding `stops` file (by default the most recent one for that destination), and writes a story. the code applies to both short and long stories simultaneously, but the actual writing prompts are rather different. this writes to `stories-unedited`.
+
+this file is separated into "chunks", the last simply containing the metadata of which `stops` file the story was written based on.
+
+for long stories, each chunk (aside from the last one) is a single chatGPT completion. but for short stories, in order to make the chunks themselves shorter, the middle completions are actually broken up into multiple chunks. (this is the purpose of having the parameter `n`; completions tend to be around 500-800 words, regardless of how many stops are given in the user prompt.)
 
 a typical result file is named `story-unedited_berkeley_2023-11-24_17-25-36_short.txt`.
 
-STATUS: mostly done, but currently editing (4pm on sun 11/26). mainly just remove the edit_stories stuff, and also log any splitting failures during the process of writing a short story.
+STATUS: mostly done, but currently editing (4pm on sun 11/26). mainly just remove the edit_stories stuff, and also log any splitting failures during the process of writing a short story. if this ever fails, we make a log to `logs/splitting_failure_log.txt`.
 
 ### edit_stories.py
 
 this takes an unedited story and attempts to edit out digits, roman numerals, and words that are overused by chatGPT (e.g. "tapestry"). this writes to `stories/`.
+
+in this file, the final chunk now also contains the metadata of the "sentence replacement pairs", i.e. the pairs of an old sentence that was editing as well as the new sentence that replaced it.
 
 a typical result file is named `story_berkeley_2023-11-24_17-25-36_short.txt`. (the timestamp corresponds to the original writing time, not the editing time.)
 

@@ -12,424 +12,154 @@ import models
 import strings # so, `my_string` defined over there is accessible here as `strings.my_string`.
 from inputs import * # so, the inputs defined over there are accessible here without change.
 
-from datetime import datetime
-def datetime_str_to_timestamp(str):
-    return str[:10] + "_" + str[11:13] + "-" + str[14:16] + "-" + str[17:19]
-start_time = str(datetime.now())
-timestamp = datetime_str_to_timestamp(start_time)
+timestamp = strings.time_now()
 
 ################################################################################
 
-##### text validation
+# `length` must be either string "short" or "long".
+# `destination` must be a key in the `inputs` object in `inputs.py`.
+# as for `num_stops_parameter`:
+    # if `length` is "short":
+        # then, `num_stops_parameter` is a tuple (a, c, n, z):
+            # a is the number of stops bundled into initial chunk -- assumed to be at least 1;
+            # c is the number of middle completions;
+            # n is the number of stops per middle completion;
+            # z is the number of stops bundled into final chunk -- also assumed to be at least 1.
+        # so, the total number of stops needed is a + c*n + z.
+        # we went back and forth, but ultimately decided that the best values are 1, 5, 2, and 1 -- and these are the default values.
+    # if `length` is "long":
+        # then, `num_stops_parameter` is just num_stops, which defaults to 20.
+# `stops_filename` defaults to the most recent `stops` file for the given destination, but this can be overridden. (this should include the ending ".txt" in the filename.)
 
-# the `rewrite` function uses chatGPT to attempt to remove:
-    # digits,
-    # roman numerals,
-    # abbreviations,
-    # overused words
-# from its responses. (even though we already will have requested that its responses not contain these, but it often fails at that.)
-# the last is just for stylistic considerations, but the rest are to improve the likelihood that the AI voice from ElevenLabs pronounces it all correctly.
-
-# a previous architectural choice was to search for all of the above on a first pass, but only digits on subsequent passes. but from experience, it seemed like chatGPT actually did a _pretty_ good job with all of them. so as of 2023-11-26, AMG made the decision to just check all of those one single time (by default, but max_number_of_rewritings can be changed), and then log the failure if _any_ of those trigger again, and we'll just look into it by hand.
-
-# for abbreviations, it seems the simplest thing to do is just list out the most common ones. those are saved as
-
-
-
-# for catching roman numerals (preceded by a space and followed by a non-word character), we previously used the regex pattern (copied from https://stackoverflow.com/a/267405/19327500):
-    # pattern_for_roman_numerals = r" M{0,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})\W"
-# for some reason this seemed to trigger a lot of false positives, and anyways it's rather complex. we realized that we don't need to find _valid_ roman numerals per se, so we just went with the following much simpler thing:
-pattern_for_roman_numerals = r"[IVXLCDM][^a-zA-Z]"
-
-### comments on the `rewrite` function.
-# terminology: `rewrite` (a verb) refers to the function, while a `rewriting` (a noun) refers to some output of the function.
-# input: a string (which for us will be an entire completion coming back from chatGPT), and a number of rewritings to attempt before moving on.
-# outputs (implicitly formatted as a tuple):
-    # the hopefully-fixed string
-    # a boolean of whether it was modified at all
-    # a list of the rewritten versions
-    # a boolean of whether the final rewrite failed
-
-def rewrite(string, max_number_of_rewritings = 3):
-    any_rewritings = bool(re.search(r'\d', string)) or bool(re.search(pattern_for_roman_numerals, string))
-    if not any_rewritings:
-        return string, False, [], False
-    rewritten_versions = [string]
-    for _ in range(max_number_of_rewritings):
-        system_message = {"role": "system", "content": strings.system_prompt_for_rewriting}
-        user_message = {"role": "user", "content": string}
-        print("asking chatGPT to rewrite text without digits")
-        completion = client.chat.completions.create(
-            model = models.gpt_model,
-            messages = [system_message, user_message]
-        )
-        string = completion.choices[0].message.content
-        # starting here, _don't_ keep looking for roman numerals, because there _is_ the possibility that a legitimate roman numeral shows up as _not_ a roman numeral. the main thing is 'I' (first person singular), but 
-        # justification: after 15 instances of this function running while writing a story, chatGPT _always_ made a passing rewrite on the first try. (these only tested removal of digits, not roman numerals, but oh well.)
-        any_rewritings = bool(re.search(r'\d', string)) # or bool(re.search(pattern_for_roman_numerals, string))
-        if not any_rewritings:
-            return string, True, rewritten_versions, False
-        rewritten_versions.append(string)
-    return string, True, rewritten_versions, True
-
-# apply the `rewrite` function, return the hopefully-correct string, and log if applicable.
-def rewrite_and_log(string, rewritings):
-    output, modified, rewritten_versions, failed = rewrite(string)
-    if modified:
-        rewritings.append({"original": rewritten_versions[0], "failed_rewrites": rewritten_versions[1: ], "final": output, "failed": failed})
-    return output, rewritings
-
-################################################################################
-
-##### record the replacements and write files
-
-# now that the story is finished, if any digit replacements were made, then:
-    # write them to a replacement_log file;
-    # store just the individual sentences at the end of the story file (for compilation into kotlin code -- perhaps at the top, commented-out);
-    # regardless, also save the replacement stats.
-
-def log_replacements_and_write_files(input, story, length, rewritings, timestamp, stops_filename):
-
-    ### record replacement stats.
-
-    nums_of_attempts = []
-    any_failures = False
-    # the rewritings list will have been created through the process of writing the story.
-    for rewriting in rewritings:
-        nums_of_attempts.append(len(rewriting['failed_rewrites']) + 1)
-        if rewriting['failed']:
-            any_failures = True
-    replacement_stats_string = f"{input['destination']}_{timestamp}_{length}.txt\nattempts per rewriting: " + ", ".join([str(num) for num in nums_of_attempts]) + f"\nany failures: {str(any_failures)}\n\n"
-    replacement_stats_file = open("logs/replacement_stats.txt", "a")
-    replacement_stats_file.write(replacement_stats_string)
-    replacement_stats_file.close()
-
-    ### if there are any failures, make a replacement_failure_log file.
-
-    if any_failures:
-        replacement_failure_log_file = open(f"logs/replacement_failure_logs/replacement-failure-log_{input['destination']}_{timestamp}_{length}.txt", "w")
-        replacement_failure_log_file.write("FAILED! SAD!")
-        replacement_failure_log_file.close()
-
-    ### if there were any replacements, save each pair -- the old and new sentences -- together in a single object. (these get used just below.)
-    ### the full replacements -- the old and new chunks -- get written to a replacement_log file.
-
-    sentence_replacement_pairs = []
-
-    if len(rewritings) > 0:
-        replacement_log = "\n==========\n\n"
-        for rewriting in rewritings:
-
-            # write some replacement_log material.
-
-            replacement_log += f"REPLACEMENT FAILED: {str(rewriting['failed'])} \n\n=====\n\n"
-            if rewriting["failed"]:
-                replacement_log = "WARNING: A REPLACEMENT HEREIN HATH FAILED\n\n" + replacement_log
-            replacement_log += f"ORIGINAL TEXT:\n\n{rewriting['original']}\n\n=====\n\n"
-            replacement_log += "\n\n=====\n\n".join(["FAILED REWRITES:"] + rewriting['failed_rewrites'] + [""])
-            replacement_log += f"FINAL VERSION:\n\n{rewriting['final']}\n\n==========\n\n"
-
-            # store replaced sentences and their replacements.
-
-            original_sentences = rewriting['original'].split(".")
-            original_sentences_with_digits = [sentence for sentence in original_sentences if bool(re.search(r'\d', sentence)) or bool(re.search(pattern_for_roman_numerals, sentence))]
-            new_sentences_with_digits_removed = []
-
-            for sentence in original_sentences_with_digits:
-
-                # do a regex search for a cleaned-up version of the sentence.
-                sentence_split = re.split(r'\W', sentence)
-                sentence_split_filtered = []
-                for word in sentence_split:
-                    if len(word) > 3 and not bool(re.search(r'\d', word)) and not bool(re.search(pattern_for_roman_numerals, word)):
-                        sentence_split_filtered.append(word)
-                pattern_for_replacing_sentence = r".*".join(sentence_split_filtered)
-                match_obj = re.search(pattern_for_replacing_sentence, story)
-
-                # this pattern _might_ not actually match, e.g. if chatGPT changes a word or two around. so, just handle that separately.
-                    # real-life example:
-                        # regex pattern: Stepping.*guide.*leads.*engaging.*journey.*from.*Street.*subway.*stop.*museum.*entrance
-                        # would-be match: Stepping off the bus, our guide takes us on a captivating journey from the Eighty-sixth Street subway stop to the museum's entrance.
-                    # note: "leads" became "takes", and also "engaging" became "captivating".
-                if match_obj:
-                    start, end = match_obj.span()
-                    match_string = story[start: end]
-                    # in case the original sentence actually started or ended with a number, go catch some extra characters at the front and back (assuming they exist). however, don't include any "\n" in this, just to keep things looking nice and pretty in the .kt file comments.
-                    pad_size = 10
-                    pad_left_index = max(start - pad_size, 0)
-                    pad_left_string = story[pad_left_index: start]
-                    pad_left_string_trimmed = re.split("\n", pad_left_string)[-1]
-                    pad_right_index = min(end + pad_size, len(story))
-                    pad_right_string = story[end: pad_right_index]
-                    pad_right_string_trimmed = re.split("\n", pad_right_string)[0]
-                    new_sentence_with_digits_removed = pad_left_string_trimmed + match_string + pad_right_string_trimmed
-                    new_sentences_with_digits_removed.append(new_sentence_with_digits_removed)
-                else:
-                    new_sentences_with_digits_removed.append(f"match not found! please search for the replacement manually. fyi, the regex pattern is: {str(pattern_for_replacing_sentence)}")
-            
-            # the strict=True here checks that these lists have the same length (and throws an error if they don't).
-            for old_sentence, new_sentence in zip(original_sentences_with_digits, new_sentences_with_digits_removed, strict=True):
-                sentence_replacement_pairs.append({"old": old_sentence, "new": new_sentence})
-        
-        # write the replacement_log file (assuming there were any rewritings).
-
-        replacement_log_file = open(f"logs/replacement_logs/replacement-logs_{input['destination']}_{timestamp}_{length}.txt", "w")
-        replacement_log_file.write(replacement_log)
-        replacement_log_file.close()
-    
-    ### save the replacement metadata as a string.
-
-    replacements_string = "REPLACED_SENTENCES:"
-    for sentence_replacement_object in sentence_replacement_pairs:
-        replacements_string += f"\n\nOLD SENTENCE: {sentence_replacement_object['old']}\nNEW SENTENCE: {sentence_replacement_object['new']}"
-
-    ### save the stops file as a string.
-    stops_filename_string = f"this story was written based on the stops file: {stops_filename}"
-    
-    ### append the metadata to the story string
-    
-    metadata = stops_filename + replacements_string
-
-    story += f"\n\n=====\n\n{stops_filename_string}\n\n{replacements_string}"
-
-    ### write the story file.
-
-    story_file = open(f"stories/story_{input['destination']}_{timestamp}_{length}.txt", "w")
-    story_file.write(story)
-    story_file.close()
-
-    story_end_time = datetime_str_to_timestamp(str(datetime.now()))
-    print(f"finished writing {length} story set in {input['destination_fullname']} with timestamp {timestamp} at", story_end_time)
-
-    return None
-
-################################################################################
-
-##### enforce length constraints. written on 2023-11-21, but later trashed. it kinda sucks: it can take a _lot_ of runs through the `while` loop for chatGPT to get the length right, and e.g. sometimes it even goes in the wrong direction (i.e. more words instead of FEWER (let alone less) when it's trying to cut the word count). of course, a safer version would cap the number of attempts and log errors.
-
-# def length_plz(min, max):
-#     return f"\n\nPlease ensure that your response is between {min} and {max} words."
-
-# def validate_length(string, min, max):
-#     print("inside validate_length")
-#     word_count = len(re.findall(r"\w+", string))
-#     print(f"current word count is {word_count}")
-#     while word_count < min or word_count > max:
-#         print(f"asking chatGPT to fix word count: current is {word_count}, whereas target is between {min} and {max}")
-#         system_prompt = f"""The user will provide you with a block of text, which has {word_count} words. Please rewrite it to have between {min} and {max} words.
-
-# {"Since the given block of text is too short, please feel free to add further embellishments to achieve this goal." if word_count < min else ""}{"Since the given block of text is too long, please feel free to remove minor details to achieve this goal." if word_count > max else ""}
-
-# Please do not respond with anything besides the rewritten text itself."""
-#         system_message = {"role": "system", "content": system_prompt}
-#         user_message = {"role": "user", "content": string}
-#         completion = client.chat.completions.create(
-#             model = models.gpt_model,
-#             messages = [user_message]
-#         )
-#         string = completion.choices[0].message.content
-#         word_count = len(re.findall(r"\w+", string))
-#         print(f"the new string returned from chatGPT is:\n{string}")
-#         print(f"and its word count is {word_count}")
-#     print("string passes length validation")
-#     return string
-
-################################################################################
-
-################################################################################
-
-################################################################################
-
-# by default we get the latest stops file, but this can be overridden.
-def write_long_story(destination, num_stops = 20, stops_filename = None):
+def write_story(length, destination, num_stops_parameter = None, stops_filename = None):
 
     input = inputs[destination]
-    
-    print(f"writing a long story set in {input['destination_fullname']} with {num_stops} stops and with timestamp {timestamp} at {datetime_str_to_timestamp(str(datetime.now()))}")
 
-    # if no stops_filename is specified, get the most recent one.
-    if not stops_filename:
+    # unpack num_stops_parameter to define a, c, n, z, and num_stops. (to avoid errors, these should be explicitly set to `None` if they don't exist.)
+    if length == "short":
+        if num_stops_parameter == None:
+            num_stops_parameter = (1, 5, 2, 1)
+        (a, c, n, z) = num_stops_parameter
+        num_stops = a + c*n + z
+    if length == "long":
+        if num_stops_parameter == None:
+            num_stops_parameter = 20
+        num_stops = num_stops_parameter
+        (a, c, n, z) = (None, None, None, None)
+
+    print(f"\nwriting a {length} story set in {input['destination_fullname']} with {num_stops} stops{f' (with a={a}, c={c}, n={n}, and z={z})' if length == 'short' else ''} and with timestamp {timestamp} at {strings.time_now()}\n")
+
+    # if the stops file is specified, ensure that it matches the destination. and if it isn't, get the most recent one.
+    if stops_filename:
+        if stops_filename.split("_")[1] != destination:
+            raise Exception(f"writing a story set in {destination}, but the specified stops file is {stops_filename}")
+    else:
         stops_filename = strings.get_latest_filename(input['destination'], "stops")
     
-    stops_with_tidbits = open(f"stops/{stops_filename}", "r").read().split("\n\n=====\n\n")
+    stops = open(f"stops/{stops_filename}", "r").read().split("\n\n=====\n\n")
 
-    if len(stops_with_tidbits) < num_stops:
-        raise Exception(f"attempting to write a long story with {num_stops} stops, but there are only {len(stops_with_tidbits)} in the selected `stops` file.")
+    if len(stops) < num_stops:
+        raise Exception(f"attempting to write a long story with {num_stops} stops, but there are only {len(stops)} in the selected `stops` file.")
     
-    stops_with_tidbits = stops_with_tidbits[: num_stops]
+    stops = stops[: num_stops]
 
-    rewritings = []
+    system_prompt = strings.system_prompt_for_story(length, num_stops)
+    system_message = {"role": "system", "content": system_prompt}
 
-    system_message = {"role": "system", "content": strings.system_prompt_for_story("long", num_stops)}
-
-    user_message_for_setting_scene = {"role": "user", "content": strings.user_prompt_for_setting_scene("long", input['destination_fullname'], input['transport_method'], input['tour_guide'], input['season'])}
-
-    message_list = [system_message, user_message_for_setting_scene]
-
-    story = ""
-
-    print("fetching story chunk number 0 (setting the scene)")
-    print("and the user prompt is:\n\n", user_message_for_setting_scene["content"])
-    completion = client.chat.completions.create(
-        model = models.gpt_model,
-        messages = message_list
-    )
-    assistant_prompt_with_scene_setting_unrewritten = completion.choices[0].message.content
-    assistant_prompt_with_scene_setting, rewritings = rewrite_and_log(assistant_prompt_with_scene_setting_unrewritten, rewritings)
-    story += assistant_prompt_with_scene_setting
-    assistant_message_with_scene_setting = {"role": "assistant", "content": assistant_prompt_with_scene_setting}
-    message_list.append(assistant_message_with_scene_setting)
-
-    stop_messages = []
-    for (index, stop_with_tidbits) in enumerate(stops_with_tidbits):
-        stop_prompt = f"Great, thank you! Here is the next sightseeing location:\n\n {stop_with_tidbits}{strings.no_numbers_plz}{strings.no_overused_words_plz}{strings.no_section_titles_via_only_complete_sentences_plz}{strings.no_ending_summary_plz}"
-        if index == len(stops_with_tidbits) - 1:
-            stop_prompt += strings.no_starting_transition_plz
-        stop_message = {"role": "user", "content": stop_prompt}
-        stop_messages.append(stop_message)
-
-    i = 0
-    for user_message_for_stop in stop_messages:
-        print("fetching story chunk number", i+1)
-        print("and the user prompt is:\n\n", user_message_for_stop["content"])
-        message_list.append(user_message_for_stop)
-        completion = client.chat.completions.create(
-            model = models.gpt_model,
-            messages = message_list
-        )
-        assistant_prompt_with_story_unrewritten = completion.choices[0].message.content
-        assistant_prompt_with_story, rewritings = rewrite_and_log(assistant_prompt_with_story_unrewritten, rewritings)           
-        story += "\n\n=====\n\n" + assistant_prompt_with_story
-        assistant_message_with_story = {"role": "assistant", "content": assistant_prompt_with_story}
-        message_list.append(assistant_message_with_story)
-        i += 1
-
-    print(f"fetching story chunk number {i+1} (the ending)")
-    user_message_for_ending_story = {"role": "user", "content": strings.user_prompt_for_ending_long_story(input['destination_fullname'], input['transport_method'])}
-    message_list.append(user_message_for_ending_story)
-    completion = client.chat.completions.create(
-        model = models.gpt_model,
-        messages = message_list
-    )
-    assistant_prompt_with_story_ending_unrewritten = completion.choices[0].message.content
-    assistant_prompt_with_story_ending, rewritings = rewrite_and_log(assistant_prompt_with_story_ending_unrewritten, rewritings)
-    story += "\n\n=====\n\n" + assistant_prompt_with_story_ending
-
-    log_replacements_and_write_files(input, story, "long", rewritings, timestamp, stops_filename)
-
-    return None
-
-################################################################################
-
-# in write_short_story:
-    # a is the number of stops bundled into initial chunk -- assumed to be at least 1
-    # c is the number of middle completions
-    # n is the number of stops per middle completion
-    # z is the number of stops bundled into final chunk -- also assumed to be at least 1
-# so, the total number of stops needed is a + c*n + z.
-# around 2023-11-14, we decided that these should be: a=1, c=5, n=2, z=1.
-# on 2023-11-20, we decided to actually drop n down to 1, so that we could get more fine-grained with the lengths of stories served. we'll aim for each middle chunk to only be 200-300 words, using the validate_length function defined above.
-# on 2023-11-21, we decided to change these back to the above values: 1, 5, 2, and 1.
-
-# by default we get the latest stops file, but this can be overridden.
-def write_short_story(destination, a = 1, c = 5, n = 2, z = 1, stops_filename = None):
-
-    input = inputs[destination]
-    
-    num_stops = a + c*n + z
-
-    print(f"writing a short story set in {input['destination_fullname']} with {num_stops} stops (with a={a}, c={c}, n={n}, and z={z}) and with timestamp {timestamp} at {datetime_str_to_timestamp(str(datetime.now()))}")
-
-    # if no stops_filename is specified, get the most recent one.
-    if not stops_filename:
-        stops_filename = strings.get_latest_filename(input['destination'], "stops")
-    
-    stops_with_tidbits = open(f"stops/{stops_filename}", "r").read().split("\n\n=====\n\n")
-
-
-    if len(stops_with_tidbits) < num_stops:
-        raise Exception(f"attempting to write a long story with {num_stops} stops, but there are only {len(stops_with_tidbits)} in the selected `stops` file.")
-    
-    stops_with_tidbits = stops_with_tidbits[: num_stops]
-    
-    rewritings = []
-
-    system_message = {"role": "system", "content": strings.system_prompt_for_story("short", num_stops)}
-
-    # this evades the following stupid error, which otherwise occurs below:
-        # Escape sequence (backslash) not allowed in expression portion of f-string prior to Python 3.12
-    # so, here just append "\n\n" to the stop prompts now, rather than joining them with separator "\n\n" inside of the f-string.
-    stops_with_tidbits = [stop_with_tidbits + "\n\n" for stop_with_tidbits in stops_with_tidbits]
-
-    initial_user_prompt_for_short_story = f"""{strings.user_prompt_for_setting_scene(
-        "short",
+    initial_user_prompt = strings.initial_user_prompt_for_story(
+        length,
         input['destination_fullname'],
         input['transport_method'],
         input['tour_guide'],
-        input['season']
-        )}\n\nThen, here {'are' if a>1 else 'is'} the first {str(a) if a>1 else ''} sightseeing location{'s' if a>1 else ''} to visit.\n\n{''.join(stops_with_tidbits[:a])}"""#{strings.no_numbers_plz + strings.no_overused_words_plz + strings.no_section_titles_via_only_complete_sentences_plz + strings.no_ending_summary_plz + strings.no_separator_in_intro_plz}"
-    initial_user_message = {"role": "user", "content": initial_user_prompt_for_short_story}
+        input['season'],
+        stops,
+        a)
+    initial_user_message = {"role": "user", "content": initial_user_prompt}
 
     message_list = [system_message, initial_user_message]
 
-    print("fetching short story completion (not necessarily chunk!) number 0")
+    story = ""
+
+    print("\nfetching completion number 0 (the initial completion)\n")
+    print(f"\nand the user prompt is:\n\n{initial_user_prompt}\n")
     completion = client.chat.completions.create(
         model = models.gpt_model,
         messages = message_list
     )
-    story_start_unrewritten = completion.choices[0].message.content
-    story, rewritings = rewrite_and_log(story_start_unrewritten, rewritings)
-    initial_assistant_message = {"role": "assistant", "content": story}
+    initial_assistant_prompt = completion.choices[0].message.content
+    story += initial_assistant_prompt
+    initial_assistant_message = {"role": "assistant", "content": initial_assistant_prompt}
     message_list.append(initial_assistant_message)
 
-    for j in range(c):
-        print(f"fetching short story completion (not necessarily chunk!) number", j+1)
-        # on 2023-11-21 at ~5pm, removed from the following: length_plz(200, 300)
-        user_prompt = f"Great, thank you! Here {'are' if n>1 else 'is'} the next {str(n) if n>1 else ''} sightseeing location{'s' if n>1 else ''}:\n\n{''.join(stops_with_tidbits[a+n*j:a+n*(j+1)])}{strings.no_numbers_plz + strings.no_overused_words_plz + strings.no_section_titles_via_only_complete_sentences_plz + strings.no_ending_summary_plz}{strings.split_with_asterisks_plz if n>1 else ''}"
-        print("the next user prompt is:\n", user_prompt)
-        user_message = {"role": "user", "content": user_prompt}
-        message_list.append(user_message)
+    middle_user_prompts = strings.middle_user_prompts_for_story(
+        length,
+        stops,
+        a, c, n)
+    middle_user_messages = [{"role": "user", "content": middle_user_prompt} for middle_user_prompt in middle_user_prompts]
+
+    splitting_failure_indices = []
+    for (index, middle_user_message) in enumerate(middle_user_messages):
+        print(f"\nfetching completion number {index + 1}\n")
+        print(f"\nand the user prompt is:\n\n{middle_user_message['content']}\n")
+        message_list.append(middle_user_message)
         completion = client.chat.completions.create(
             model = models.gpt_model,
             messages = message_list
         )
-        assistant_prompt_with_story_unrewritten = completion.choices[0].message.content
-        # 2023-11-21 at ~5pm: remove this next line, and instead just have chatGPT split the text apart into chunks as it's writing it.
-        # assistant_prompt_with_story_unrewritten_with_length_validation = validate_length(assistant_prompt_with_story_unrewritten, 200, 300)
-        assistant_prompt_with_story, rewritings = rewrite_and_log(assistant_prompt_with_story_unrewritten, rewritings)
+        middle_assistant_prompt = completion.choices[0].message.content
+        middle_assistant_message = {"role": "assistant", "content": middle_assistant_prompt}
+        message_list.append(middle_assistant_message)
+        if length == "long":
+            story += "\n\n=====\n\n" + middle_assistant_prompt
+        elif length == "short":
+            print(f"\nwriting short story, and the raw middle_assistant_prompt (with chunks hopefully separated by '*****') is:\n\n{middle_assistant_prompt}\n")
+            chunks = [string.replace("*", "").strip() for string in middle_assistant_prompt.split("***") if len(string.replace("*", "").strip()) > 3]
+            if len(chunks) != n:
+                splitting_failure_indices.append(index)
+            for (chunk_index, chunk) in enumerate(chunks):
+                print(f"\nchunk number {chunk_index} is:\n{chunk}\n")
+                story += "\n\n=====\n\n" + chunk
+    
+    final_user_prompt = strings.final_user_prompt_for_story(
+        length,
+        input['destination_fullname'],
+        input['transport_method'],
+        stops,
+        a, c, n, z)
+    final_user_message = {"role": "user", "content": final_user_prompt}
+    message_list.append(final_user_message)
 
-        print(f"writing short story, and the raw assistant_prompt_with_story (with stops hopefully separated by '*****') is:\n{assistant_prompt_with_story}")
-
-        new_chunks = [string.replace("*", "").strip() for string in assistant_prompt_with_story.split("***") if len(string.replace("*", "").strip()) > 3]
-        for index, new_chunk in enumerate(new_chunks):
-            print(f"new_chunk number {index} is:\n{new_chunk}")
-            story += "\n\n=====\n\n" + new_chunk
-        assistant_message_with_story = {"role": "assistant", "content": assistant_prompt_with_story}
-        message_list.append(assistant_message_with_story)
-
-    print(f"fetching short story completion (not necessarily chunk!) number {c+1} (the last chunk)")
-    user_prompt = strings.user_prompt_for_ending_short_story(input['destination_fullname'], input['transport_method'], stops_with_tidbits[a+c*n:a+c*n+z], z)
-    # user_prompt = f"Great, thank you! Now, please conclude our story. First, here {'are' if z>1 else 'is'} the concluding {str(z) if z>1 else ''} sightseeing location{'s' if z>1 else ''} to visit.\n\n{''.join(stops_with_tidbits[a+c*n:a+c*n+z])}{strings.no_starting_transition_plz} {strings.no_separator_in_conclusion_plz if z>1 else ''}"
-    print("the concluding user prompt is:\n", user_prompt)
-    user_message = {"role": "user", "content": user_prompt}
-    message_list.append(user_message)
+    print(f"\nfetching completion number {str(num_stops + 1) if length == 'long' else str(c+1)} (the final completion)\n")
+    print(f"\nand the user prompt is:\n{final_user_message['content']}\n")
     completion = client.chat.completions.create(
         model = models.gpt_model,
         messages = message_list
     )
-    final_assistant_prompt_unrewritten = completion.choices[0].message.content
-    final_assistant_prompt, rewritings = rewrite_and_log(final_assistant_prompt_unrewritten, rewritings)
+    final_assistant_prompt = completion.choices[0].message.content
     story += "\n\n=====\n\n" + final_assistant_prompt
 
-    log_replacements_and_write_files(input, story, "short", rewritings, timestamp, stops_filename)
+    # add the metadata of which stops file this was based on.
+    story += f"\n\n=====\n\nthis story has num_stops={num_stops}{f' with a={a}, c={c}, n={n}, and z={z}' if length == 'short' else ''} and was written based on the stops file: {stops_filename}"
+    
+    # write the story file.
+    story_filename = f"story-unedited_{input['destination']}_{timestamp}_{length}.txt"
+    story_file = open(f"stories-unedited/{story_filename}", "w")
+    story_file.write(story)
+    story_file.close()
 
+    print(f"\nfinished writing {length} story set in {input['destination_fullname']} with timestamp {timestamp} at {strings.time_now()}\n")
+
+    # log any splitting failures.
+    if len(splitting_failure_indices) > 0:
+        print("\nthere are splitting failures; logging them now\n")
+        splitting_failure_log_file = open("logs/splitting_failure_log.txt", "a")
+        splitting_failure_string = f"{story_filename}: {', '.join(splitting_failure_indices)}"
+        splitting_failure_log_file.write(splitting_failure_string)
+        splitting_failure_log_file.close()
+    
     return None
 
-################################################################################
+
 
 ### let's write some stories!
-
-# write_long_story("berkeley", 2)
-
-#write_short_story(destination, a = 1, c = 5, n = 2, z = 1, stops_filename = None):
-write_short_story("berkeley", 1, 2, 2, 1)
+write_story("short", "algarve", (3, 1, 2, 1), "stops_algarve_2023-11-23_00-07-18.txt")

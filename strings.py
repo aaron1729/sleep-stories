@@ -21,6 +21,78 @@ def get_latest_filename(destination, directory, length = None):
 
 #####
 
+from datetime import datetime
+def time_now():
+    datetime_string = str(datetime.now())
+    return datetime_string[:10] + "_" + datetime_string[11:13] + "-" + datetime_string[14:16] + "-" + datetime_string[17:19]
+
+#####
+
+# MISC SHORT STRINGS
+
+# annoyingly, in python <3.12 you can't put a backslash in the expression portion of an f-string (and the virtual environment is stuck at python 3.11.6). so here's a workaround to allow for joining a list of strings with single or double newlines inside of an f-string.
+n = "\n"
+nn = "\n\n"
+
+### below are a bunch of requests to chatGPT (indicated by `_plz` in the variable name), as well as related material.
+
+## here are requests that get used for _every_ completion of _every_ story, as well as related material. at the end, they're wrapped into a single multi-line prompt string.
+
+no_numbers_plz = "Please spell out any numbers in words. For instance, write 'nineteen eighty-seven' instead of '1987', and 'four thousand seven hundred and thirty three' instead of '4,733', and 'eighteen-sixties' instead of '1860s' (referring to the decade), and 'nineties' instead of '90s' (also referring to the decade)."
+
+overused_words = [
+    "tapestry",
+    "testament",
+    "grandeur",
+    "symphony",
+    "tribute",
+    "serve",
+    "homage",
+    "tranquil",
+    "chariot",
+]
+no_overused_words_plz = f"Please don't use any of the following words: {', '.join(overused_words)}."
+
+# without this, chatGPT occasionally began each stop with a sort of "section title".
+complete_sentences_plz = "Everything you write should be in complete sentences."
+
+requests_for_every_completion_plz = "\n\n".join([
+    no_numbers_plz,
+    no_overused_words_plz,
+    complete_sentences_plz,
+])
+
+## here are requests that get used for _some_ but not all completions in the story-writing process.
+
+# this applies to every completion besides the one that ends the story.
+no_ending_summary_plz = "Please don't end your response with a summary, because we will be continuing the story and visiting more sightseeing locations!"
+
+# this applies to the first completion of a short story, which (assuming a>0) come with a stop attached to the scene-setting material.
+no_separator_in_intro_plz = "Please do NOT include any sort of separator between setting the scene and taking us to the first sightseeing location. (For instance, do NOT separate the introduction from the first stop with '---'.)"
+
+# this applies just once in each story-writing -- .
+    # for the long story, it applies to the last stop (which comes separately from the conclusion of the story), since we always include that.
+    # for the short story, it applies to the last commpletion (and it's rolled in just below -- not elsewhere).
+no_starting_transition_plz = """Additionally, at the beginning of your response, please do NOT refer to the sightseeing location where we've just been. Do not say where we are leaving from. Rather, just refer to our travel adventures in general terms.
+
+GOOD EXAMPLE:
+
+Our sightseeing tour continues as we make our ways towards...
+
+BAD EXAMPLE:
+
+As we make our way from the castle, ..."""
+
+# this is used in the middle completions of the short story (assuming that n>1).
+split_with_asterisks_plz = "Please separate the pieces of the story corresponding to the different sightseeing locations with five asterisks (i.e. the string '*****'). Please make sure to separate the sightseeing locations with five asterisks."
+
+# this is used in the last completion of a short story.
+no_separator_in_conclusion_plz = "Please do NOT include any sort of separator between the last sightseeing location and the conclusion of the story."
+
+#####
+
+# SYSTEM PROMPTS
+
 system_prompt_for_rewriting = f"""The user will give you text. Please rewrite the text so that all numbers are written out in words. This includes Roman numerals. So, the result should not have any digits or any Roman numerals. Please make sure that years are written out in the usual way that they're spoken. Please only respond with the rewritten text, and nothing else.
 
 EXAMPLE: '1842' should be written out as 'eighteen forty-two' (and not 'one thousand eight hundred and forty-two').
@@ -191,88 +263,98 @@ EXAMPLE STORY:\n\n""" + open("example_story.txt", "r").read()
 
 #####
 
-def user_prompt_for_setting_scene(length, destination_fullname, transport_method, tour_guide, season):
-    if not (length == "long" or length == "short"):
-        raise Exception("in system_prompt_for_story_template, the first argument should be one of the two strings \"long\" or \"short\"")
+# USER PROMPTS FOR WRITING STORIES
+
+def initial_user_prompt_for_story(length, destination_fullname, transport_method, tour_guide, season, stops, a):
     filler_length = ""
+    filler_stops = ""
     if length == "long":
         filler_length = "Keep this short -- just three or four paragraphs. Please don't end your response with a summary, though, because we will be continuing the story!"
     elif length == "short":
-        filler = "Keep this part short -- just a paragraph will do."
+        filler_length = "Keep this part short -- just a paragraph will do."
+        filler_stops = f"Then, here {'are' if a>1 else 'is'} the first{' ' + str(a) if a>1 else ''} sightseeing location{'s' if a>1 else ''} for us to visit.{nn}{nn.join(stops[: a])}"
     filler_tour_guide = ""
     if tour_guide:
         filler_tour_guide = f"The tour guide is {tour_guide}. However, please don't give the tour guide a specific name; refer to them instead simply as 'our guide' (or similar)."
-    return f"Please begin by setting the scene. We are traveling in {destination_fullname}; the season in {season}. We are taking a sightseeing tour by {transport_method}, although we may also walk around some as well. {filler_tour_guide} However, JUST set the scene; don't begin the sightseeing tour just yet. Make me excited about my trip overall, and about the upcoming tour. {filler_length}"
+    return f"""Please begin by setting the scene.
 
-#####
+We are traveling in {destination_fullname}; the season is {season}. We are taking a sightseeing tour by {transport_method}, although we may also walk around some as well. {filler_tour_guide} However, JUST set the scene; don't begin the sightseeing tour just yet. Make me excited about my trip overall, and about the upcoming tour. {filler_length}
 
-# MISCELLANEOUS SHORT STRINGS
+{requests_for_every_completion_plz}
 
-# annoyingly, in python <3.12 you can't put a backslash in the expression portion of an f-string (and the virtual environment ). so here's a workaround to allow for joining a list of strings with single or double newlines inside of an f-string.
-n = "\n"
-nn = "\n\n"
+{no_ending_summary_plz}
 
-### below are a bunch of requests to chatGPT (indicated by `_plz` in the variable name), as well as related material.
+{no_separator_in_intro_plz if length == 'short' else ''}
 
-## here are requests that get used for _every_ completion of _every_ story, as well as related material.
+{filler_stops if length == 'short' else ''}"""
 
-no_numbers_plz = "\n\nPlease spell out any numbers in words. For instance, write 'nineteen eighty-seven' instead of '1987', and 'four thousand seven hundred and thirty three' instead of '4,733', and 'eighteen-sixties' instead of '1860s' (referring to the decade), and 'nineties' instead of '90s' (also referring to the decade)."
+def middle_user_prompts_for_story(length, stops, a, c, n):
+    middle_user_prompts = []
+    if length == "long":
+        for (index, stop) in enumerate(stops):
+            middle_user_prompt = f"""Great, thank you! Here is the next sightseeing location:
 
-overused_words = [
-    "tapestry",
-    "testament",
-    "grandeur",
-    "symphony",
-    "tribute",
-    "serve",
-    "homage",
-    "tranquil",
-    "chariot",
-]
-no_overused_words_plz = f"\n\nPlease don't use any of the following words: {', '.join(overused_words)}."
+{stop}
 
-no_section_titles_via_only_complete_sentences_plz = "\n\nEverything you write should be in complete sentences."
+{requests_for_every_completion_plz}
 
-## here are requests that get used for _some_ but not all completions in the story-writing process.
+{no_ending_summary_plz}"""
+            if index == len(stops) - 1:
+                middle_user_prompt += "\n\n" + no_starting_transition_plz
+            middle_user_prompts.append(middle_user_prompt)
+    elif length == "short":
+        for j in range(c):
+            middle_user_prompt = f"""Great, thank you! Here {'are' if n>1 else 'is'} the next{' ' + str(n) if n>1 else ''} sightseeing location{'s' if n>1 else ''}:
 
-# this applies to short stories, which (assuming a>0) come with a stop attached to the scene-setting material.
-no_separator_in_intro_plz = "\n\nPlease do NOT include any sort of separator between setting the scene and taking us to the first sightseeing location."
+{nn.join(stops[a+n*j: a+n*(j+1)])}
 
-# this applies to every completion besides the one that ends the story.
-no_ending_summary_plz = "\n\nPlease don't end your response with a summary, though, because we will be continuing the story and visiting more sightseeing locations!"
+{requests_for_every_completion_plz}
 
-# this applies just once in each story-writing.
-    # for the long story, it applies to the last stop (which comes separately from the conclusion of the story), since we always include that.
-    # for the short story, it applies to the last 
-no_starting_transition_plz = """\n
-Additionally, at the beginning of your response, please do NOT refer to the sightseeing location where we've just been. Do not say where we are leaving from. Rather, just refer to our travel adventures in general terms.
+{no_ending_summary_plz}
 
-GOOD EXAMPLE:
+{split_with_asterisks_plz if n>1 else ''}"""
+            middle_user_prompts.append(middle_user_prompt)
+    return middle_user_prompts
 
-Our sightseeing tour continues as we make our ways towards...
+def final_user_prompt_for_story(length, destination_fullname, transport_method, stops, a, c, n, z):
+    if length == "long":
+        return f"Great, thank you! Please conclude the story about our sightseeing tour by {transport_method} in {destination_fullname}. Please keep it upbeat, gentle, and inspiring."
+    elif length == "short":
+        return f"""Great, thank you! Let's now conclude the story about our sightseeing tour by {transport_method} in {destination_fullname}. Please keep it upbeat, gentle, and inspiring. The remaining sightseeing location{'s are' if z>1 else ' is'} listed below.
 
-BAD EXAMPLE:
-
-As we make our way from the castle, ..."""
-
-# this is used in the middle completions of the short story (assuming that n>1).
-split_with_asterisks_plz = "\n\nPlease separate the pieces of the story corresponding to the different sightseeing locations with five asterisks (i.e. the string '*****'). Please make sure to separate the sightseeing locations with five asterisks."
-
-# this is used in the beginning 
-no_separator_in_conclusion_plz = "\n\nPlease do NOT include any sort of separator between the last sightseeing location and the conclusion of the story."
-
-def user_prompt_for_ending_long_story(destination_fullname, transport_method):
-    return f"Please conclude the story about our sightseeing tour by {transport_method} in {destination_fullname}. Keep it upbeat, gentle, and inspiring."
-
-def user_prompt_for_ending_short_story(destination_fullname, transport_method, remaining_stops, z):
-    return f"""Let's now conclude the story about our sightseeing tour by {transport_method} in {destination_fullname}. The remaining sightseeing location{'s are' if z>1 else ' is'} listed below.
+{no_separator_in_conclusion_plz}
 
 {no_starting_transition_plz}
 
+=====
+
+REMAINING SIGHTSEEING LOCATION{'S' if z>1 else ''}:
+
+{nn.join(stops[a+c*n:a+c*n+z])}"""
+
+
+
+
+
+
+
+
+
+def user_prompt_for_ending_long_story(destination_fullname, transport_method):
+    return f"Great, thank you! Please conclude the story about our sightseeing tour by {transport_method} in {destination_fullname}. Keep it upbeat, gentle, and inspiring."
+
+def user_prompt_for_ending_short_story(destination_fullname, transport_method, remaining_stops, z):
+    return f"""Great, thank you! Let's now conclude the story about our sightseeing tour by {transport_method} in {destination_fullname}. The remaining sightseeing location{'s are' if z>1 else ' is'} listed below.
+
 {no_separator_in_conclusion_plz}
+
+{no_starting_transition_plz}
 
 =====
 
 REMAINING SIGHTSEEING LOCATION{'S' if z>1 else ''}:
 
 {''.join(remaining_stops)}"""
+
+
+
