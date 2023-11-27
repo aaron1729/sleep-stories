@@ -22,21 +22,22 @@ these should be installed by `pip install`. a (probably incomplete) list of modu
 
 ## pipeline
 
-here's a description of the pipeline, script by script, in a (topo)logical ordering. see the [pipeline flowchart](sleep_stories_pipeline.pdf) for a visual representation.
+here's a description of the pipeline, script by script, in a (topo)logical ordering. see the [pipeline flowchart](sleep_stories_pipeline.pdf) for a visual representation.[^1]
 
 ### meta info
 
-`strings.py` contains some strings and string-writing functions (e.g. chatGPT prompts).
+#### constants
 
-`models.py` contains choice of `gpt_model` and `image_model` (currently set to `gpt-4-1106-preview` and `dall-e-3`, respectively).
+here are some files that don't (mostly) contain functions.
+* `inputs.py` contains info about destinations (including optional info like transport method, requested sightseeing stops, info about the tour guide, and season). every story begins with an entry here.
+* `strings.py` contains some strings and string-writing functions (e.g. chatGPT prompts).
+* `models.py` contains global choices for `gpt_model` and `image_model` (currently set to `gpt-4-1106-preview` and `dall-e-3`, respectively).
+
+#### other info
 
 filenames are generally of the form `{filetype}_{destination}_{timestamp}[_{length}].ending`. here, `destination` is e.g. `costarica` and `length` is always either `short` or `long`. an exception is `art-styles_{timestamp}.txt` (since these are each generally associated to many different destinations).
 
-### inputs.py
-
-the file `inputs.py` contains info about destinations (including optional info like transport method, requested sightseeing stops, info about the tour guide, and season). every story begins with an entry here.
-
-STATUS: done.
+STATUS: done, but make sure to adhere to above format when writing code that creates new filenames.
 
 ### get_stops.py
 
@@ -46,7 +47,7 @@ a typical result file is named `stops_berkeley_2023-11-23_02-25-23.txt`.
 
 STATUS: done.
 
-### write_stories.py
+### write_story.py
 
 this takes a length (either `short` or `long`), a destination, a `num_stops_parameter` (explained in the code), and a corresponding `stops` file (by default the most recent one for that destination), and writes a story. the code applies to both short and long stories simultaneously, but the actual writing prompts that we feed to chatGPT are rather different. this writes to a `story-unedited` file in `stories-unedited`.
 
@@ -60,7 +61,7 @@ if chatGPT ever fails to return the correct number of chunks in a middle complet
 
 STATUS: done.
 
-### edit_stories.py
+### edit_story.py
 
 this takes an unedited story and attempts to edit out digits, roman numerals, and words that are overused by chatGPT (e.g. "tapestry"), running chunk by chunk. this writes to `stories/`.
 
@@ -72,13 +73,21 @@ a typical result file is named `story_berkeley_2023-11-24_17-25-36_short.txt`. t
 
 STATUS: not yet written, but will be based on existing stuff.
 
-### phoneticize_stories.py
+### make_cues.py
+
+`DESCRIPTION & STATUS HERE` (this will be extracted from `process.py`)
+
+### phoneticize_cues.py
+
+`UPDATE DESCRIPTION & STATUS` (this will be new)
 
 this takes a(n edited) story, asks chatGPT for a list of proper nouns, foreign words, or any other words/phrases that might be hard to pronounce (for an ElevenLabs AI voice), and then asks chatGPT for pronunciations of them one-by-one (in terms of the IPA) and replaces those in the story.
 
 STATUS: not yet written at all (but tested in chatGPT and it seems to be a fine way to proceed). REMAINING QUESTION: how to ensure that we _exactly_ phoneticize everything that we should? for instance, maybe a word is actually pluralized. of course we can ask chatGPT to return the _exact_ matches throughout the story, and give an example to illustrate. and then when we search through the story, of course do so case-insensitively. we can also save the replacements as metadata.
 
-### process_stories.py
+### make_kt.py
+
+`UPDATE DESCRIPTION & STATUS` (this will be extracted from `process.py`)
 
 #### UPDATE: peel off `write_cues.py` from this, move it above "phoneticize"
 
@@ -88,7 +97,7 @@ a typical `.kt` file is named `SleepStoryTravelBerkeleyCues.kt`. a typical cues 
 
 STATUS: done. NO, actually update it to take in a PHONETICIZED story. but the `cues` should be non-phoneticized. so, some more refactoring is in order (as of sunday at around 9pm). really, we should be able to make a `cue` file based on just a single story; it doesn't need to be a short/long pair.
 
-### choose_art_styles.py
+### get_art_styles.py
 
 this takes a list of destinations in `inputs.py` and generates a list of styles of art that their stories can be illustrated in, along with a detailed description of the art style.
 
@@ -111,3 +120,7 @@ this takes a list of dalle prompts for a given story and generates illustrations
 `this should land in a dedicated folder, indicating the timestamps of: the story, the dalle-prompts file, and generation time. in particular, this should take as a parameter both the story and a dalle-prompts file that's based on it.`
 
 STATUS: the `for` loop (over the list of dalle prompts) exists, but it's not a function yet.
+
+## footnotes
+
+[^1]: note to self: this must be _manually_ copied from the notability folder in dropbox. (unfortunately (though very believably), it doesn't work to just put an alias in the git folder.)
