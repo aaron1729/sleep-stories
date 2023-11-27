@@ -121,6 +121,4 @@ this takes a list of dalle prompts for a given story and generates illustrations
 
 STATUS: the `for` loop (over the list of dalle prompts) exists, but it's not a function yet.
 
-## footnotes
-
 [^1]: note to self: this must be _manually_ copied from the notability folder in dropbox. (unfortunately (though very believably), it doesn't work to just put an alias in the git folder.)
