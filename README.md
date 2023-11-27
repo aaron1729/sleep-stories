@@ -37,7 +37,10 @@ here are some files that don't (mostly) contain functions.
 
 filenames are generally of the form `{filetype}_{destination}_{timestamp}[_{length}].ending`. here, `destination` is e.g. `costarica` and `length` is always either `short` or `long`. an exception is `art-styles_{timestamp}.txt` (since these are each generally associated to many different destinations).
 
-STATUS: done, but make sure to adhere to above format when writing code that creates new filenames.
+#### misc to-do
+
+- [ ] make sure to adhere to above format when writing code that creates new filenames.
+- [x] make sure to use `strings.separator` everywhere instead of "\n\n=====\n\n".
 
 ### get_stops.py
 
