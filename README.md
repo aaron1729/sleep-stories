@@ -23,7 +23,7 @@ these should be installed by `pip install`. a (probably incomplete) list of modu
 * `re` (for regex),
 * `datetime` (for timestamps),
 * `os` (for interacting with the operating system),
-* `spacy` (for NLP sentence boundary detection),[^5]
+* `spacy` (for NLP sentence boundary detection),[^3]
 * `hashlib` (to hash filenames for replicable psuedorandom binary numbers, to dictate tolerance for "overused words").
 
 ## pipeline
@@ -83,7 +83,7 @@ this takes an unedited story and attempts to edit out:
 * roman numerals (likewise), and
 * words that are overused by chatGPT (e.g. `"tapestry"`),
 
-running chunk by chunk. this writes to `stories/`.[^2] alternatively, when given no arguments, this operates on _all_ unedited stories in `stories-unedited/`.
+running chunk by chunk. this writes to `stories/`.[^1] alternatively, when given no arguments, this operates on _all_ unedited stories in `stories-unedited/`.
 
 a typical result file is named `story_berkeley_2023-11-24_17-25-36_short.txt`. the timestamp corresponds to the original writing time, not the editing time. (in particular, whenever we edit an unedited story, we overwrite any previous edited versions.)
 
@@ -147,8 +147,8 @@ this takes a list of dalle prompts for a given story and generates illustrations
 
 STATUS: the `for` loop (over the list of dalle prompts) exists, but it's not a function yet.
 
-[^1]: note to self: this must be _manually_ copied from the notability folder in dropbox. (unfortunately (though very believably), it doesn't work to just put an alias in the git folder.)
+[^3]: note to self: this must be _manually_ copied from the notability folder in dropbox. (unfortunately (though very believably), it doesn't work to just put an alias in the git folder.)
 
-[^2]: actually, we do want to allow chatGPT to _occasionally_ use an "overused word" (such as `"tapestry"`). so, for each overused word, we assign either 0 or 1 and then allow that many instances to remain in the story. for replicability, this assignment is done by hashing the filename of the unedited story down to a binary number, and then running through its digits and assigning those. (this gives 256 bits, so in practice we should never run out -- but if we did, we could just rotate back through.) to keep things simple, we just take this number as a counter and decrement it each time we encounter the overused word, and then require it to be removed when the counter is 0. of course, we search e.g. for `"tapestr"` case-insensitively, so that we catch both plural instances as well as instances at the beginning of a sentence. and if a single chunk ever has two or more instances of e.g. `"tapestr"`, then we just tell it to edit them _all_ out but keep the counter unchanged.
+[^1]: actually, we do want to allow chatGPT to _occasionally_ use an "overused word" (such as `"tapestry"`). so, for each overused word, we assign either 0 or 1 and then allow that many instances to remain in the story. for replicability, this assignment is done by hashing the filename of the unedited story down to a binary number, and then running through its digits and assigning those. (this gives 256 bits, so in practice we should never run out -- but if we did, we could just rotate back through.) to keep things simple, we just take this number as a counter and decrement it each time we encounter the overused word, and then require it to be removed when the counter is 0. of course, we search e.g. for `"tapestr"` case-insensitively, so that we catch both plural instances as well as instances at the beginning of a sentence. and if a single chunk ever has two or more instances of e.g. `"tapestr"`, then we just tell it to edit them _all_ out but keep the counter unchanged.
 
-[^5]: hi there!
+[^1]: hi there!
