@@ -5,16 +5,16 @@
 ### virtual environment
 
 make sure the `openai-env` virtual environment is both loaded and running.
-* to load, on the command line in the root of the repo do `python -m venv openai-env`.
-* to run, on the command line do `source openai-env/bin/activate` (at least in macOS -- it's slightly different elsewhere).
+* to load it, on the command line in the root of the repo do `python -m venv openai-env`.
+* to run it, on the command line in the root of the repo do `source openai-env/bin/activate` (at least in macOS -- it's slightly different elsewhere, as explained [here](https://platform.openai.com/docs/quickstart/step-1-setup-python)).
 
 ### openai module
 
-make sure to do `pip install openai`. (i think `pip` only exists once python is installed (e.g. because usually i do `pip3` when i only have `python3` and `pip` doesn't even work). so, be sure to do this _after_ the venv setup above.)
+make sure to do `pip install openai`, _after_ the virtual environment is set up (so that the module lives in it).
 
 ### API key
 
-this ought to have an API key saved (say at the bottom of the file `openai-env/bin/activate`), as explained [here](https://platform.openai.com/docs/quickstart/step-2-setup-your-api-key). remember that a terminal window sets the environment variables right when it's opened, so if/when this is updated, open a _new_ terminal window to test the new settings.
+make sure to incorporate an API key (say at the bottom of the file `openai-env/bin/activate`), as explained [here](https://platform.openai.com/docs/quickstart/step-2-setup-your-api-key). (of course, `openai-env/` is in `.gitignore`, so that this isn't exposed (even though the repo is private -- just for further security).) remember that a terminal window retrieves the environment variables right when it's opened; so, if/when the API key is updated, open a _new_ terminal window to use it.
 
 ### other modules
 
@@ -23,7 +23,7 @@ these should be installed by `pip install`. a (probably incomplete) list of modu
 * `re` (for regex),
 * `datetime` (for timestamps),
 * `os` (for interacting with the operating system),
-* `spacy` (for NLP sentence boundary detection),
+* `spacy` (for NLP sentence boundary detection),[^5]
 * `hashlib` (to hash filenames for replicable psuedorandom binary numbers, to dictate tolerance for "overused words").
 
 ## pipeline
@@ -41,13 +41,18 @@ here are some files that don't (mostly) contain functions.
 
 #### other info
 
-filenames are generally of the form `{filetype}_{destination}_{timestamp}[_{length}].ending`. here, `destination` is e.g. `costarica` and `length` is always either `short` or `long`. an exception is `art-styles_{timestamp}.txt` (since these are each generally associated to many different destinations).
+as a general principle, a `filetype` is split with dashes instead of underscores, since we split overall filenames by underscores to retrieve info (e.g. timestamps) from them. directories are named analogously (e.g. `stories-unedited/` holds unedited stories).
+
+more specifically, filenames are generally of the form `{filetype}_{destination}_{timestamp}[_{length}].ending`. here, `destination` is e.g. `costarica` and `length` is always either `short` or `long`. but there are exceptions, e.g. `art-styles_{timestamp}.txt` (since these are each generally associated to many different destinations) and `splitting-failure-log.txt` (of which there is just one).
+
 
 #### misc to-do (not including stuff below)
 
 - [ ] make sure to adhere to above format when writing code that creates new filenames.
 - [x] make sure to use `strings.separator` everywhere instead of `"\n\n=====\n\n"`.
 - [ ] keep `sleep_stories_pipeline.pdf` up-to-date.
+- [ ] delete `ZZZ_` files and directories as they become irrelevant.
+- [ ] do a `grep` for `"import"` to get a complete list of the modules used, and make sure the list above is complete.
 
 ### get_stops.py
 
@@ -78,18 +83,11 @@ this takes an unedited story and attempts to edit out:
 * roman numerals (likewise), and
 * words that are overused by chatGPT (e.g. `"tapestry"`),
 
-running chunk by chunk. this writes to `stories/`.[^2]
+running chunk by chunk. this writes to `stories/`.[^2] alternatively, when given no arguments, this operates on _all_ unedited stories in `stories-unedited/`.
 
+a typical result file is named `story_berkeley_2023-11-24_17-25-36_short.txt`. the timestamp corresponds to the original writing time, not the editing time. (in particular, whenever we edit an unedited story, we overwrite any previous edited versions.)
 
-
-
-
-
-in this file, the final chunk now also contains the metadata of the "sentence replacement pairs", i.e. the pairs of an old sentence that was editing as well as the new sentence that replaced it.
-
-a typical result file is named `story_berkeley_2023-11-24_17-25-36_short.txt`. the timestamp corresponds to the original writing time, not the editing time.
-
-STATUS: not yet written, but will be based on existing stuff.
+STATUS: preliminarily done, as of 9:48pm on monday! but not yet tested.
 
 ### make_cues.py
 
@@ -151,4 +149,4 @@ STATUS: the `for` loop (over the list of dalle prompts) exists, but it's not a 
 
 [^1]: note to self: this must be _manually_ copied from the notability folder in dropbox. (unfortunately (though very believably), it doesn't work to just put an alias in the git folder.)
 
-[^2]: actually, we do want to allow chatGPT to _occasionally_ use an "overused word". so, for each overused word, we choose either 0 or 1 and then allow that many instances to remain in the story. (for replicability, this is done by hashing the filename of the unedited story down to a binary number, and then running through its digits and assigning those. (this gives 256 bits, so in practice we should never run out -- but if we did, we could just rotate back through.)) to keep things simple, we just take this number as a counter and decrement it each time we encounter the word, and then require it to be removed when the counter is 0. of course, we search e.g. for `"tapestr"` case-insensitively, so that we catch both plural instances as well as instances at the beginning of a sentence. and if a single chunk ever has two or more instances of e.g. `"tapestr"`, then we just tell it to edit them _all_ out but keep the counter unchanged.
+[^2]: actually, we do want to allow chatGPT to _occasionally_ use an "overused word" (such as `"tapestry"`). so, for each overused word, we assign either 0 or 1 and then allow that many instances to remain in the story. for replicability, this assignment is done by hashing the filename of the unedited story down to a binary number, and then running through its digits and assigning those. (this gives 256 bits, so in practice we should never run out -- but if we did, we could just rotate back through.) to keep things simple, we just take this number as a counter and decrement it each time we encounter the overused word, and then require it to be removed when the counter is 0. of course, we search e.g. for `"tapestr"` case-insensitively, so that we catch both plural instances as well as instances at the beginning of a sentence. and if a single chunk ever has two or more instances of e.g. `"tapestr"`, then we just tell it to edit them _all_ out but keep the counter unchanged.
