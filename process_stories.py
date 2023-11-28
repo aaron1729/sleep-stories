@@ -184,8 +184,8 @@ def process_story_pair(destination, long_story_filename = None, short_story_file
 
 */"""
     min_stops_for_long_story_string = kotlin_comment(f"min_stops_for_long_story is set to {min_stops_for_long_story}.")
-    short_story_replaced_sentences_string = kotlin_comment(f"SHORT STORY REPLACED SENTENCES:\n\n{stories['short']['replaced_sentences']}")
-    long_story_replaced_sentences_string = kotlin_comment(f"LONG STORY REPLACED SENTENCES:\n\n{stories['long']['replaced_sentences']}")
+    short_story_replaced_sentences_string = kotlin_comment(f"SHORT STORY METADATA:\n\n{stories['short']['replaced_sentences']}")
+    long_story_replaced_sentences_string = kotlin_comment(f"LONG STORY METADATA:\n\n{stories['long']['replaced_sentences']}")
     Destination = destination[: 1].upper() + destination[1: ]
     object_name = f"SleepStoryTravel{Destination}Cues"
     kotlin_filename = f"{object_name}.kt"
@@ -238,4 +238,7 @@ object {object_name} : SleepStoryPoseCues {{
 
 
 
-process_story_pair("algarve")
+# process_story_pair("algarve")
+# process_story_pair("paris")
+# process_story_pair("rio")
+# process_story_pair("tokyo")

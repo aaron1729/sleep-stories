@@ -4,11 +4,11 @@
 
 // min_stops_for_long_story is set to 1.
 
-// SHORT STORY REPLACED SENTENCES:
+// SHORT STORY METADATA:
 // 
 // edited at: 2023-11-28_00-31-23
 
-// LONG STORY REPLACED SENTENCES:
+// LONG STORY METADATA:
 // 
 // edited at: 2023-11-27_23-47-37
 

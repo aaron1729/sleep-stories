@@ -32,6 +32,12 @@ def time_now():
 
 #####
 
+# we use double-quotes in our kotlin code to delineate cues, so this function replaces those with single-quotes.
+def swap_quote_marks(string):
+    return re.sub("\"", "'", string)
+
+#####
+
 # MISC SHORT STRINGS
 
 # annoyingly, in python <3.12 you can't put a backslash in the expression portion of an f-string (and the virtual environment is stuck at python 3.11.6). so, here's a workaround to allow for joining a list of strings with single or double newlines inside of an f-string.

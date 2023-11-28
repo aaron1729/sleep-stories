@@ -36,7 +36,7 @@ here's a description of the pipeline, script by script, in a (topo)logical order
 
 each story is decomposed according to the hierarchy
 
-    story > completion > chunk > stop > paragraph > cue
+    story > completion > chunk > stop > paragraph > cue > sentence
 
 as explained presently.
 
@@ -99,13 +99,20 @@ this takes an unedited story and attempts to edit out:
 * roman numerals (likewise), and
 * words that are overused by chatGPT (e.g. `"tapestry"`),
 
-running chunk by chunk. this writes to a `story` file in `stories/`.[^2] alternatively, when given no arguments, this operates on _all_ `story-unedited` files in `stories-unedited/`.
+running chunk by chunk. it also replaces all double-quotes (`"`) with single-quotes (`'`). (this is done _after_ the above processing, since in theory chatGPT might accidentally introduce new instances of double-quotes.)
+
+this writes to a `story` file in `stories/`.[^2] alternatively, when given no arguments, this operates on _all_ `story-unedited` files in `stories-unedited/`.
 
 a typical result file is named `story_berkeley_2023-11-24_17-25-36_short.txt`. the timestamp corresponds to the original writing time, not the editing time. (in particular, whenever we edit an unedited story, we overwrite any previous edited versions.) the metadata now also contains an "edited at" timestamp as well as a list of the allowances for overused words (as described in the above-linked footnote).
 
-STATUS: done, but there's probably still some tweaking to be done (as of EoD monday 2023-11-27).
+STATUS: done.
 
 ### make_cues.py
+
+
+
+`already replace quote-marks here`
+
 
 this takes a(n edited) story and makes a `cues` file out of it in `cues/`. this is separated into chunks by `strings.separator`, and each chunk is separated into cues by `"\n"`. there's also a metadata chunk at the end, which is just copied over directly from the `story` file.
 

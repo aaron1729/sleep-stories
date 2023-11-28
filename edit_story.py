@@ -62,8 +62,9 @@ def edit_story(story_filename = None, max_number_of_attempts = 3):
         # now, edit the unedited story, chunk by chunk.
 
         unedited_story_chunks = open(f"stories-unedited/{unedited_story_filename}", "r").read().split(strings.separator)
+        unedited_story_chunks = [strings.swap_quote_marks(unedited_story_chunk) for unedited_story_chunk in unedited_story_chunks]
         story_metadata = unedited_story_chunks.pop()
-        story_metadata += f"\n\nedited at: {timestamp}\n\n{overused_word_allowances_string}"
+        story_metadata += f"\n\nthis story was edited at: {timestamp}\n\n{overused_word_allowances_string}"
         versions_of_story_chunks = []
         triggers_for_rewriting_chunks = []
         failure_rewriting_chunks = []
@@ -118,8 +119,6 @@ def edit_story(story_filename = None, max_number_of_attempts = 3):
                 # and then, in any case, go back to the top of the `for` loop.
                 if any_hits and index < max_number_of_attempts:
 
-                        
-
                     print(f"asking chatGPT for a rewrite, with:\nany_digits = {any_digits}\nany_roman_numerals = {any_roman_numerals}\noverused_words_to_avoid = {overused_words_to_avoid}\noverused_word_appearances = {overused_word_appearances}")
                     print(f"before the rewrite, the chunk is:\n{chunk}")
                     
@@ -130,6 +129,7 @@ def edit_story(story_filename = None, max_number_of_attempts = 3):
                         messages = [system_message, user_message]
                     )
                     chunk = completion.choices[0].message.content
+                    chunk = strings.swap_quote_marks(chunk)
                     print(f"after the rewrite, the chunk is:\n{chunk}")
                     versions_of_story_chunk.append(chunk)
             
@@ -235,5 +235,5 @@ FINAL VERSION (appearing in edited version of story):
 
 
 
-edit_story("story-unedited_tokyo_2023-11-26_23-45-14_long.txt")
-edit_story("story-unedited_tokyo_2023-11-26_23-45-14_short.txt")
+# edit_story("story-unedited_tokyo_2023-11-26_23-45-14_long.txt")
+# edit_story("story-unedited_tokyo_2023-11-26_23-45-14_short.txt")
