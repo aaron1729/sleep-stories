@@ -59,6 +59,7 @@ here are some files that don't (mostly) contain functions.
 
 most filenames are of the form `{filetype}_{destination}_{timestamp}[_{length}].ending`.
 * since we split overall filenames by underscores (to easily retrieve info (e.g. timestamps) from them), each `{filetype}` is always split with dashes (instead of underscores) when necessary. moreover, directories are named analogously. for instance, `stories-unedited/` contains `story-unedited` files.
+* the bare term "story" always refers to an edited story. (an "unedited story" is always referred to as such.)
 * `destination` is e.g. `costarica` or `chiangmai`.
 * `length` is always either `short` or `long`.
 
@@ -99,7 +100,7 @@ this takes an unedited story and attempts to edit out:
 * roman numerals (likewise), and
 * words that are overused by chatGPT (e.g. `"tapestry"`),
 
-running chunk by chunk. it also replaces all double-quotes (`"`) with single-quotes (`'`). (this is done _after_ the above processing, since in theory chatGPT might accidentally introduce new instances of double-quotes.)
+running chunk by chunk. it also replaces all double-quotes (`"`) with single-quotes (`'`). (this is done _after_ the above processing, since in theory chatGPT might accidentally introduce new instances of double-quotes.) here we keep the unedited story's medata and add the metadata of the editing timestamp as well as the list of overused word allowances for this particular story.
 
 this writes to a `story` file in `stories/`.[^2] alternatively, when given no arguments, this operates on _all_ `story-unedited` files in `stories-unedited/`.
 
@@ -109,16 +110,11 @@ STATUS: done.
 
 ### make_cues.py
 
-
-
-`already replace quote-marks here`
-
-
-this takes a(n edited) story and makes a `cues` file out of it in `cues/`. this is separated into chunks by `strings.separator`, and each chunk is separated into cues by `"\n"`. there's also a metadata chunk at the end, which is just copied over directly from the `story` file.
+this takes a story, splits it into cues, and writes them to a `cues` file. this is separated into chunks by `strings.separator`, and the cues within each chunk are separated by `"\n"`. there's also a metadata chunk at the end, which is just copied directly from that of the `story` file.
 
 a typical `cues` file is named `cues_berkeley_2023-11-24_17-25-36_short.txt` (again timestamped by the original writing time).
 
-STATUS: not yet written, but it will basically just be extracted from `process.py`. (all that must be added are the instances of `strings.separator`).
+STATUS: done.
 
 ### get_phoneticizations.py
 
@@ -139,13 +135,15 @@ STATUS: not yet written at all, but tested in chatGPT and it seems to be a fine 
 
 ### make_kt.py
 
-this takes a pair of a short story and a long story set in the same location and generates a single `kt` file in `code/` that combines them. optionally, this can first replace hard-to-pronounce words with phoneticizations (since ElevenLabs is still in the process of getting its "pro" voices to handle IPA phoneticizations).
+this takes a pair of a short story cues file and a long story cues file set in the same location, and generates a single `kt` file in `code/` that combines them. optionally (since ElevenLabs is still in the process of getting its "pro" voices to handle IPA phoneticizations), this can first replace hard-to-pronounce words with phoneticizations, using `phoneticization` files for both stories.
 
-* when doing the "replace" based on phoneticizations, be sure to run from longest to shortest, so that we never accidentally do a replacement for a substring and then miss the larger one.
+if executed with just a `destination` as an argument, this operates as above on the most recent short story cues file and the most recent long story cues file that are set in that location.
+
+if executed with no arguments, this operates as above on all destinations for which there exist both a short story cues file and a long story cues file.
 
 a typical resulting `.kt` file is named `SleepStoryTravelBerkeleyCues.kt`.
 
-STATUS: this will be extracted from `process.py`. for v1, we don't actually need to incorporate the phoneticization.
+STATUS: done, except for phoneticizations (which aren't currently relevant (as of 2023-11-28) anyways).
 
 ### get_art_styles.py
 
