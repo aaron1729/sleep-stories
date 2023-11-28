@@ -1,0 +1,60 @@
+story-unedited_algarve_2023-11-26_20-26-02_long.txt
+editing timestamp: 2023-11-27_23-01-04
+rewriting attempts per chunk: [, 1, ,,  , 0, ,,  , 3, ,,  , 0, ,,  , 1, ,,  , 1, ,,  , 3, ,,  , 0, ,,  , 1, ,,  , 1, ,,  , 0, ,,  , 1, ,,  , 0, ,,  , 1, ,,  , 1, ,,  , 1, ,,  , 1, ,,  , 1, ,,  , 1, ,,  , 1, ,,  , 1, ,,  , 1, ]
+any failures: True
+
+story-unedited_algarve_2023-11-26_20-26-02_long.txt
+editing timestamp: 2023-11-27_23-31-01
+rewriting attempts per chunk: [, 1, ,,  , 0, ,,  , 3, ,,  , 0, ,,  , 1, ,,  , 1, ,,  , 3, ,,  , 0, ,,  , 2, ,,  , 1, ,,  , 0, ,,  , 1, ,,  , 0, ,,  , 1, ,,  , 1, ,,  , 1, ,,  , 1, ,,  , 1, ,,  , 1, ,,  , 1, ,,  , 1, ,,  , 1, ]
+any failures: True
+
+story-unedited_algarve_2023-11-26_20-26-02_long.txt
+editing timestamp: 2023-11-27_23-47-37
+rewriting attempts per chunk: [, 1, ,,  , 0, ,,  , 3, ,,  , 0, ,,  , 1, ,,  , 1, ,,  , 0, ,,  , 0, ,,  , 2, ,,  , 1, ,,  , 0, ,,  , 1, ,,  , 0, ,,  , 1, ,,  , 2, ,,  , 1, ,,  , 1, ,,  , 2, ,,  , 1, ,,  , 1, ,,  , 1, ,,  , 1, ]
+any failures: True
+
+story-unedited_algarve_2023-11-26_20-26-02_short.txt
+editing timestamp: 2023-11-28_00-31-23
+rewriting attempts per chunk: [, 1, ,,  , 3, ,,  , 1, ,,  , 0, ,,  , 2, ,,  , 1, ,,  , 1, ,,  , 1, ,,  , 0, ,,  , 0, ,,  , 1, ,,  , 1, ]
+any failures: True
+
+story-unedited_chiangmai_2023-11-26_20-26-02_short.txt
+editing timestamp: 2023-11-28_00-39-44
+rewriting attempts per chunk: [, 2, ,,  , 0, ,,  , 0, ,,  , 0, ,,  , 0, ,,  , 1, ,,  , 1, ,,  , 1, ,,  , 1, ,,  , 1, ,,  , 0, ,,  , 2, ]
+any failures: False
+
+story-unedited_chiangmai_2023-11-26_23-45-14_long.txt
+editing timestamp: 2023-11-28_00-39-44
+rewriting attempts per chunk: [, 1, ,,  , 2, ,,  , 0, ,,  , 0, ,,  , 0, ,,  , 1, ,,  , 1, ,,  , 1, ,,  , 1, ,,  , 2, ,,  , 1, ,,  , 1, ,,  , 1, ,,  , 0, ,,  , 1, ,,  , 3, ,,  , 1, ,,  , 1, ,,  , 1, ,,  , 1, ,,  , 1, ,,  , 1, ]
+any failures: True
+
+story-unedited_paris_2023-11-26_23-45-14_short.txt
+editing timestamp: 2023-11-28_00-52-13
+rewriting attempts per chunk: [, 1, ,,  , 1, ,,  , 1, ,,  , 1, ,,  , 0, ,,  , 1, ,,  , 1, ,,  , 1, ,,  , 0, ,,  , 1, ,,  , 1, ,,  , 1, ]
+any failures: False
+
+story-unedited_paris_2023-11-26_23-45-14_long.txt
+editing timestamp: 2023-11-28_00-52-13
+rewriting attempts per chunk: [, 0, ,,  , 1, ,,  , 1, ,,  , 1, ,,  , 3, ,,  , 2, ,,  , 1, ,,  , 1, ,,  , 1, ,,  , 1, ,,  , 1, ,,  , 1, ,,  , 0, ,,  , 0, ,,  , 3, ,,  , 1, ,,  , 3, ,,  , 1, ,,  , 1, ,,  , 1, ,,  , 1, ,,  , 1, ]
+any failures: True
+
+story-unedited_rio_2023-11-26_23-45-14_long.txt
+editing timestamp: 2023-11-28_01-06-15
+rewriting attempts per chunk: [, 0, ,,  , 0, ,,  , 1, ,,  , 2, ,,  , 1, ,,  , 1, ,,  , 1, ,,  , 2, ,,  , 2, ,,  , 1, ,,  , 1, ,,  , 1, ,,  , 1, ,,  , 1, ,,  , 3, ,,  , 1, ,,  , 1, ,,  , 1, ,,  , 1, ,,  , 0, ,,  , 1, ,,  , 1, ]
+any failures: True
+
+story-unedited_rio_2023-11-26_23-45-14_short.txt
+editing timestamp: 2023-11-28_01-06-15
+rewriting attempts per chunk: [, 2, ,,  , 1, ,,  , 1, ,,  , 2, ,,  , 1, ,,  , 1, ,,  , 1, ,,  , 1, ,,  , 1, ,,  , 1, ,,  , 1, ,,  , 1, ]
+any failures: False
+
+story-unedited_tokyo_2023-11-26_23-45-14_long.txt
+editing timestamp: 2023-11-28_01-32-02
+rewriting attempts per chunk: 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1
+any failures: False
+
+story-unedited_tokyo_2023-11-26_23-45-14_short.txt
+editing timestamp: 2023-11-28_01-32-02
+rewriting attempts per chunk: 3, 1, 0, 0, 1, 1, 2, 2, 0, 0, 0, 1
+any failures: True
+

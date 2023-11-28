@@ -74,7 +74,7 @@ def get_stops(destination, num_stops = 20):
         stops_with_tidbits.append(stop_with_tidbit)
     
     stops_with_tidbits_file = open(f"stops/stops_{input['destination']}_{timestamp}.txt", "w")
-    stops_with_tidbits_file.write("\n\n=====\n\n".join(stops_with_tidbits))
+    stops_with_tidbits_file.write(strings.separator.join(stops_with_tidbits))
     stops_with_tidbits_file.close()
 
     print("\ndone getting tidbits\n")

@@ -7,11 +7,12 @@ def get_all_unhidden_files(directory):
     # make sure it's the name of a _file_, and make sure it's not a _hidden_file.
     return [filename for filename in listdir(directory + "/") if isfile(join(directory + "/", filename)) and filename[0] != "."]
 
-# destination is e.g. "amalfi"
-# directory is e.g. "story" or "stops"
-# length is either "long" or "short"
+# destination is e.g. "amalfi".
+# directory is e.g. "story" or "stops".
+# length is either "long" or "short", but this only applies to certain types of file.
     # example: executing get_latest_filename("algarve", "stories", "short") on 2023-11-24 returns:
     # story_algarve_2023-11-23_01-25-49_short.txt
+# this may not work on all file types! for instance, our rewriting-log files have a slightly different naming convention, because their filenames indicate both the original unedited story (and in particular its timestamp) as well as the editing timestamp. so, modify this if necessary before using it on any new file types.
 def get_latest_filename(destination, directory, length = None):
     all_filenames = get_all_unhidden_files(directory)
     destination_filenames = [filename for filename in all_filenames if filename.split("_")[1] == destination]
@@ -33,9 +34,12 @@ def time_now():
 
 # MISC SHORT STRINGS
 
-# annoyingly, in python <3.12 you can't put a backslash in the expression portion of an f-string (and the virtual environment is stuck at python 3.11.6). so here's a workaround to allow for joining a list of strings with single or double newlines inside of an f-string.
+# annoyingly, in python <3.12 you can't put a backslash in the expression portion of an f-string (and the virtual environment is stuck at python 3.11.6). so, here's a workaround to allow for joining a list of strings with single or double newlines inside of an f-string.
 n = "\n"
 nn = "\n\n"
+
+# we use this separator throughout the code. storing it as a variable helps ensure that this isn't screwed up by a typo. (namely, a typo will give a compilation error, instead of silently causing some screwy behavior that we hopefully notice and then have to chase down.)
+separator = "\n\n=====\n\n"
 
 ### below are a bunch of requests to chatGPT (indicated by `_plz` in the variable name), as well as related material.
 
@@ -43,23 +47,55 @@ nn = "\n\n"
 
 no_numbers_plz = "Please spell out any numbers in words. For instance, write 'nineteen eighty-seven' instead of '1987', and 'four thousand seven hundred and thirty three' instead of '4,733', and 'eighteen-sixties' instead of '1860s' (referring to the decade), and 'nineties' instead of '90s' (also referring to the decade)."
 
+# for replicability of the `edit_story` function, we should only add new overused words to the _end_ of this list. (specifically, in `edit_story.py` we use the index in the list.)
+# the "pattern" is for regex searches in `edit_story.py`.
+    # including "(?i)" in the pattern makes it case-insensitive.
+    # the "\b" denotes a word boundary, so that e.g. "contribute" doesn't trigger "tribute".
+# we may eventually add a "synonyms" property, containing a list of suggested replacements.
 overused_words = [
-    "tapestry",
-    "testament",
-    "grandeur",
-    "symphony",
-    "tribute",
-    "serve",
-    "homage",
-    "tranquil",
-    "chariot",
+    {
+        "word": "tapestry",
+        "pattern": r"(?i)\btapestr",
+    },
+    {
+        "word": "testament",
+        "pattern": r"(?i)\btestament",
+    },
+    {
+        "word": "grandeur",
+        "pattern": r"(?i)\bgrandeur",
+    },
+    {
+        "word": "symphony",
+        "pattern": r"(?i)\bsymphon",
+    },
+    {
+        "word": "tribute",
+        "pattern": r"(?i)\btribute",
+    },
+    {
+        "word": "homage",
+        "pattern": r"(?i)\bhomage",
+    },
+    {
+        "word": "tranquil",
+        "pattern": r"(?i)\btranquil",
+    },
+    {
+        "word": "chariot",
+        "pattern": r"(?i)\bchariot",
+    },
+    {
+        "word": "mosaic",
+        "pattern": r"(?i)\bmosaic",
+    }
 ]
-no_overused_words_plz = f"Please don't use any of the following words: {', '.join(overused_words)}."
+no_overused_words_plz = f"Please don't use any of the following words: {', '.join([entry['word'] for entry in overused_words])}."
 
 # without this, chatGPT occasionally began each stop with a sort of "section title".
 complete_sentences_plz = "Everything you write should be in complete sentences."
 
-requests_for_every_completion_plz = "\n\n".join([
+requests_for_every_story_completion_plz = "\n\n".join([
     no_numbers_plz,
     no_overused_words_plz,
     complete_sentences_plz,
@@ -96,7 +132,40 @@ no_separator_in_conclusion_plz = "Please do NOT include any sort of separator be
 
 # SYSTEM PROMPTS
 
-system_prompt_for_rewriting = f"""The user will give you text. Please rewrite the text so that all numbers are written out in words. This includes Roman numerals. So, the result should not have any digits or any Roman numerals. Please make sure that years are written out in the usual way that they're spoken. Please only respond with the rewritten text, and nothing else.
+def system_prompt_for_rewriting(overused_words_to_remove):
+    return f"""The user will give you a chunk of text. Please rewrite this WITH MINIMAL CHANGES, according to the following TWO instructions.
+
+1. All numbers should be written out in words. This includes Roman numerals. So, the result should not have any digits or any Roman numerals. Please make sure that years are written out in the usual way that they're spoken.
+
+2. Please do NOT use any of the following "overused words" in the rewritten text: {', '.join(overused_words_to_remove)}. If you come across one of these "overused words", please simply substitute a common synonym, or else rewrite the text slightly with a different phrasing that avoids the "overused word".
+
+Please respond ONLY with the rewritten text, and nothing else. Do not include any other text in your response.
+
+=====
+
+Here are some examples of rewrites relating to numbers.
+
+EXAMPLE: '1842' should be written out as 'eighteen forty-two' (and not 'one thousand eight hundred and forty-two').
+
+EXAMPLE: '1906', when it is functioning as a year, should be written out as 'nineteen oh-six' (and not 'one thousand nine hundred and six' or 'nineteen hundred and six').
+
+EXAMPLE: In the context of a vacation in Italy, '5Terre' (which is the name of a gelateria) should be written out as 'Cinque Terre' (which is the name of the region where the gelateria is located).
+
+EXAMPLE: 'Louis XIV' should be written out as 'Louis the Fourteenth'.
+
+EXAMPLE: 'Henry I' should be written out as 'Henry the First'.
+
+EXAMPLE: 'Super Bowl XLII' should be written out as 'Super Bowl Forty Two'.
+
+EXAMPLE: 'Star Wars Episode IV' should be written out as 'Star Wars Episode Four'.
+
+EXAMPLE: 'Calculus I' should be written out as 'Calculus One' (this is the name of a math course).
+
+EXAMPLE: 'I Gusti Nyoman Lempad' should actually NOT BE CHANGED, because this is a person's name. Please do not be confused by the fact that his first name is also a Roman numeral.
+"""
+
+
+system_prompt_for_rewriting_OLD = f"""The user will give you text. Please rewrite the text so that all numbers are written out in words. This includes Roman numerals. So, the result should not have any digits or any Roman numerals. Please make sure that years are written out in the usual way that they're spoken. Please only respond with the rewritten text, and nothing else.
 
 EXAMPLE: '1842' should be written out as 'eighteen forty-two' (and not 'one thousand eight hundred and forty-two').
 
@@ -283,7 +352,7 @@ def initial_user_prompt_for_story(length, destination_fullname, transport_method
 
 We are traveling in {destination_fullname}; the season is {season}. We are taking a sightseeing tour by {transport_method}, although we may also walk around some as well. {filler_tour_guide} However, JUST set the scene; don't begin the sightseeing tour just yet. Make me excited about my trip overall, and about the upcoming tour. {filler_length}
 
-{requests_for_every_completion_plz}
+{requests_for_every_story_completion_plz}
 
 {no_ending_summary_plz}
 
@@ -299,7 +368,7 @@ def middle_user_prompts_for_story(length, stops, a, c, n):
 
 {stop}
 
-{requests_for_every_completion_plz}
+{requests_for_every_story_completion_plz}
 
 {no_ending_summary_plz}"""
             if index == len(stops) - 1:
@@ -311,7 +380,7 @@ def middle_user_prompts_for_story(length, stops, a, c, n):
 
 {nn.join(stops[a+n*j: a+n*(j+1)])}
 
-{requests_for_every_completion_plz}
+{requests_for_every_story_completion_plz}
 
 {no_ending_summary_plz}
 

@@ -98,7 +98,7 @@ def process_story_pair(destination, long_story_filename = None, short_story_file
         if not stories[length]["story_filename"]:
             stories[length]["story_filename"] = strings.get_latest_filename(destination, "stories", length)
         stories[length]["story_string"] = open(f"stories/{stories[length]['story_filename']}", "r").read()
-        stories[length]["chunks"] = stories[length]["story_string"].split("\n\n=====\n\n")
+        stories[length]["chunks"] = stories[length]["story_string"].split(strings.separator)
         stories[length]["metadata"] = stories[length]["chunks"].pop()
         # henceforth, the metadata has been popped away from the list of chunks. (this is why there's no function story_to_chunks defined above.)
 
@@ -238,4 +238,4 @@ object {object_name} : SleepStoryPoseCues {{
 
 
 
-process_story_pair("berkeley")
+process_story_pair("algarve")

@@ -28,31 +28,49 @@ these should be installed by `pip install`. a (probably incomplete) list of modu
 
 ## pipeline
 
-here's a description of the pipeline, script by script, in a (topo)logical ordering. see the [pipeline flowchart](sleep_stories_pipeline.pdf) for a visual representation.[^1]
+here's a description of the pipeline, script by script, in a (topo)logical ordering. see the [pipeline flowchart](sleep_stories_pipeline.pdf) for a visual representation. from the root, `my_script.py` is executed by doing `python my_script.py` on the command line.
 
 ### meta info
+
+#### story organization
+
+each story is decomposed according to the hierarchy
+
+    story > completion > chunk > stop > paragraph > cue
+
+as explained presently.
+
+the word "cue" is reused from the yoga practice pipeline. a cue consists of either one or two sentences; more specifically, each paragraph is split into cues, and each cue is two sentences long except for possibly the last cue in a paragraph (if the paragraph has an odd number of sentences). this separation makes the ElevenLabs voice sound more relaxed. in the `kt` files, cues are surrounded by double-quotes (`"`), and the cues within a chunk are separated by slashes (`/`).
+
+the "chunk" decomposition of a story is so that we can serve varying lengths of stories: in each `kt` file, the initial chunk comprises the `start` component, the final chunk comprises the `end` component, and the chunks in between them comprise the list of `middle` components (and they are separated by commas (`,`)). a story is always served with `start` and `end` components, as well as the first `x` middle components for some `x>=0` depending on the desired length. of course, the stories are written so that the story is always coherent regardless of the value of `x`.[^1]
+
+a "stop" is a sightseeing location. (given a destination, these as well as tidbits about them are retrieved in `get_stops.py`.) typically, chatGPT begins a new paragraph whenever it moves on to a new stop.
+
+a "completion" is a single response from chatGPT. for long stories, each (middle) completion constitutes a chunk, and corresponds to a single stop. for short stories, each (middle) completion is broken down into `n` stops (where `n` is an argument in the `write_story` function, and is currently by default set to `2`), and then it is broken down into chunks -- one for each stop. (this is so that the chunks themselves are shorter, since chatGPT tends to have a relatively stable completion length (in the neighborhood of 600-800 words) regardless of how many stops are listed in the user prompt.)
 
 #### constants
 
 here are some files that don't (mostly) contain functions.
-* `inputs.py` contains info about destinations (including optional info like transport method, requested sightseeing stops, info about the tour guide, and season). every story begins with an entry here.
+* `inputs.py` contains info about destinations (including optional info like transport method, requested sightseeing locations, info about the tour guide, and season). every story begins with an entry here.
 * `strings.py` contains some strings and string-writing functions (e.g. chatGPT prompts that depend on `destination` and `length`(-of-story) parameters).
 * `models.py` contains global choices for `gpt_model` and `image_model` (currently set to `gpt-4-1106-preview` and `dall-e-3`, respectively).
 
-#### other info
+#### naming conventions
 
-as a general principle, a `filetype` is split with dashes instead of underscores, since we split overall filenames by underscores to retrieve info (e.g. timestamps) from them. directories are named analogously (e.g. `stories-unedited/` holds unedited stories).
+most filenames are of the form `{filetype}_{destination}_{timestamp}[_{length}].ending`.
+* since we split overall filenames by underscores (to easily retrieve info (e.g. timestamps) from them), each `{filetype}` is always split with dashes (instead of underscores) when necessary. moreover, directories are named analogously. for instance, `stories-unedited/` contains `story-unedited` files.
+* `destination` is e.g. `costarica` or `chiangmai`.
+* `length` is always either `short` or `long`.
 
-more specifically, filenames are generally of the form `{filetype}_{destination}_{timestamp}[_{length}].ending`. here, `destination` is e.g. `costarica` and `length` is always either `short` or `long`. but there are exceptions, e.g. `art-styles_{timestamp}.txt` (since these are each generally associated to many different destinations) and `splitting-failure-log.txt` (of which there is just one).
-
+however, there are exceptions, e.g. `art-styles_{timestamp}.txt` (since these are each generally associated to many different destinations) and `splitting-failure-log.txt` (of which there is just one).
 
 #### misc to-do (not including stuff below)
 
-- [ ] make sure to adhere to above format when writing code that creates new filenames.
+- [ ] make sure to adhere to the above format for filenames.
 - [x] make sure to use `strings.separator` everywhere instead of `"\n\n=====\n\n"`.
-- [ ] keep `sleep_stories_pipeline.pdf` up-to-date.
+- [ ] keep `sleep_stories_pipeline.pdf` up-to-date. (unfortunately, there doesn't seem to be an easy way to keep it synced with the version in dropbox.)
 - [ ] delete `ZZZ_` files and directories as they become irrelevant.
-- [ ] do a `grep` for `"import"` to get a complete list of the modules used, and make sure the list above is complete.
+- [ ] make sure the above list of modules is complete (e.g. by doing a `grep` for `"import "`).
 
 ### get_stops.py
 
@@ -64,15 +82,13 @@ STATUS: done.
 
 ### write_story.py
 
-this takes a length (either `short` or `long`), a destination, a `num_stops_parameter` (explained in the code), and a corresponding `stops` file (by default the most recent one for that destination), and writes a story. the code applies to both short and long stories simultaneously, but the actual writing prompts that we feed to chatGPT are rather different. this writes to a `story-unedited` file in `stories-unedited`.
+this writes a sleep story based on a length (either `short` or `long`), a destination (e.g. `costarica`), a `num_stops_parameter` (explained in the code), and a corresponding `stops` file (by default the most recent one associated to that destination). the code applies to both short and long stories simultaneously, but the actual writing prompts that we feed to chatGPT for these are rather different. this writes a `story-unedited` file in `stories-unedited/`.
 
 a typical result file is named `story-unedited_berkeley_2023-11-24_17-25-36_short.txt`.
 
-a `story-unedited` file is separated into "chunks", the last simply containing the metadata of which `stops` file the story was written based on.
+a `story-unedited` file is separated into chunks using `strings.separator`, the last simply containing the metadata of which `stops` file the story was written based on.
 
-for long stories, each chunk (aside from the last one) is a single chatGPT completion. but for short stories, in order to make the chunks themselves shorter, the middle completions are actually broken up into multiple chunks. (this is the purpose of having the parameter `n`; completions tend to be around 500-800 words, regardless of how many stops are given in the user prompt.)
-
-if chatGPT ever fails to return the correct number of chunks in a middle completion, this is logged at the bottom of `logs/splitting_failure_log.txt`.
+if chatGPT ever fails to return the correct number of chunks in a middle completion, this is logged at the bottom of `logs/splitting-failure-log.txt`.
 
 STATUS: done.
 
@@ -83,57 +99,60 @@ this takes an unedited story and attempts to edit out:
 * roman numerals (likewise), and
 * words that are overused by chatGPT (e.g. `"tapestry"`),
 
-running chunk by chunk. this writes to `stories/`.[^2] alternatively, when given no arguments, this operates on _all_ unedited stories in `stories-unedited/`.
+running chunk by chunk. this writes to a `story` file in `stories/`.[^2] alternatively, when given no arguments, this operates on _all_ `story-unedited` files in `stories-unedited/`.
 
-a typical result file is named `story_berkeley_2023-11-24_17-25-36_short.txt`. the timestamp corresponds to the original writing time, not the editing time. (in particular, whenever we edit an unedited story, we overwrite any previous edited versions.)
+a typical result file is named `story_berkeley_2023-11-24_17-25-36_short.txt`. the timestamp corresponds to the original writing time, not the editing time. (in particular, whenever we edit an unedited story, we overwrite any previous edited versions.) the metadata now also contains an "edited at" timestamp as well as a list of the allowances for overused words (as described in the above-linked footnote).
 
-STATUS: preliminarily done, as of 9:48pm on monday! but not yet tested.
+STATUS: done, but there's probably still some tweaking to be done (as of EoD monday 2023-11-27).
 
 ### make_cues.py
 
-`DESCRIPTION & STATUS HERE` (this will be extracted from `process.py`)
+this takes a(n edited) story and makes a `cues` file out of it in `cues/`. this is separated into chunks by `strings.separator`, and each chunk is separated into cues by `"\n"`. there's also a metadata chunk at the end, which is just copied over directly from the `story` file.
 
-### phoneticize_cues.py
+a typical `cues` file is named `cues_berkeley_2023-11-24_17-25-36_short.txt` (again timestamped by the original writing time).
 
-`UPDATE DESCRIPTION & STATUS` (this will be new)
+STATUS: not yet written, but it will basically just be extracted from `process.py`. (all that must be added are the instances of `strings.separator`).
 
-`UPDATED ARCHITECTURE (monday 3pm):`
-* make a list of foreign words etc., one for each story cue file
-* delete duplicates
-* get phoneticizations from chatGPT for all of them
-* later, when doing the "replace", be sure to run from longest to shortest, so that we never accidentally do a replacement for a substring and then miss the larger one.
+### get_phoneticizations.py
+
+this takes a `cues` file and generates a list of words/phrases as well as phoneticizations for them (written in IPA) with the help of chatGPT. specifically, we phoneticize all proper nouns, all foreign words, and more broadly _any_ words that might be hard to pronounce for the ElevenLabs AI voice (e.g. `"pergola"`).
+
+in testing, chatGPT worked best when operating based on the following prompt (which it itself write).
+> Please review the following story and identify any words or terms that may be foreign, technical, proper nouns, or have pronunciations that are not immediately obvious. Include words that might be challenging to pronounce for readers who are not familiar with them, especially those of foreign origin, unique regional names, or specialized jargon.
+
+`ARCHITECTURE (updated monday 3pm):`
+* make a list of foreign words etc., one for each story cue file.
+* delete duplicates.
+* get phoneticizations from chatGPT for all of them, one by one.
 * make sure chatGPT only gives _one_ pronunciation. sometimes it gives two. ask for "whichever is most common."
-* when getting a pronunciation, make sure to ask: "in the context of the above story, ..." (or just pluck out the sentence/paragraph(s) where it appears).
-* and "any words that are _even remotely_ possible to mispronounce, e.g. 'pergola'". for this, chatGPT suggests the prompt:
-> Please review the following story and identify any words or terms that may be foreign, technical, proper nouns, or have pronunciations that are not immediately obvious. Include words that might be challenging to pronounce for readers who are not familiar with them, especially those of foreign origin, unique regional names, or specialized jargon. 
+* when getting a pronunciation, make sure to give it context. (probably the chunk suffices, if not just a single cue.)
+* remaining question: how can we ensure that we _exactly_ phoneticize everything that we should? for instance, maybe a word is actually pluralized. of course we can ask chatGPT to return the _exact_ matches throughout the story, and give an example to illustrate. and then when we search through the story, of course doing so case-insensitively. we can also save the replacements as metadata.
 
-this takes a(n edited) story, asks chatGPT for a list of proper nouns, foreign words, or any other words/phrases that might be hard to pronounce (for an ElevenLabs AI voice), and then asks chatGPT for pronunciations of them one-by-one (in terms of the IPA) and replaces those in the story.
-
-STATUS: not yet written at all (but tested in chatGPT and it seems to be a fine way to proceed). REMAINING QUESTION: how to ensure that we _exactly_ phoneticize everything that we should? for instance, maybe a word is actually pluralized. of course we can ask chatGPT to return the _exact_ matches throughout the story, and give an example to illustrate. and then when we search through the story, of course do so case-insensitively. we can also save the replacements as metadata.
+STATUS: not yet written at all, but tested in chatGPT and it seems to be a fine way to proceed.
 
 ### make_kt.py
 
-`UPDATE DESCRIPTION & STATUS` (this will be extracted from `process.py`)
+this takes a pair of a short story and a long story set in the same location and generates a single `kt` file in `code/` that combines them. optionally, this can first replace hard-to-pronounce words with phoneticizations (since ElevenLabs is still in the process of getting its "pro" voices to handle IPA phoneticizations).
 
-#### UPDATE: peel off `write_cues.py` from this, move it above "phoneticize"
+* when doing the "replace" based on phoneticizations, be sure to run from longest to shortest, so that we never accidentally do a replacement for a substring and then miss the larger one.
 
-this takes a pair of a short story and a long story set in the same destination, and generates both a single `.kt` file in `code/` as well as a pair of files in `cues/` that just contain the unadorned cues (for later usage in generating dalle prompts). we use the `spacy` NLP module to detect sentence boundaries (which seems to be much more robust (and convenient!) than using regex since then we'd have to watch out for abbreviations (which are typically followed by a period, e.g. `"Mt. Tamalpais"` or `"e.g."`)).
+a typical resulting `.kt` file is named `SleepStoryTravelBerkeleyCues.kt`.
 
-a typical `.kt` file is named `SleepStoryTravelBerkeleyCues.kt`. a typical cues file is named `cues_berkeley_2023-11-24_17-25-36_short.txt` (again timestamped by the original writing time).
-
-STATUS: done. NO, actually update it to take in a PHONETICIZED story. but the `cues` should be non-phoneticized. so, some more refactoring is in order (as of sunday at around 9pm). really, we should be able to make a `cue` file based on just a single story; it doesn't need to be a short/long pair.
+STATUS: this will be extracted from `process.py`. for v1, we don't actually need to incorporate the phoneticization.
 
 ### get_art_styles.py
 
-this takes a list of destinations in `inputs.py` and generates a list of styles of art that their stories can be illustrated in, along with a detailed description of the art style.
+this takes a list of destinations in `inputs.py` and, for each entry, retrieves a style of art (as well as an in-depth description thereof) that stories set there can be nicely illustrated in.
 
 a typical result file is named `give one here: prob just art-styles_2023-11-23.txt`.
 
-STATUS: does not yet exist. (we've been doing this part manually thus far.) this might begin with just a list (say comma-separated) of the locations that appear in this file.
+* this might begin with just a list (say comma-separated) of the locations that appear in this file.
+
+STATUS: does not yet exist. (we've been doing this part manually thus far.)
 
 ### get_dalle_prompts.py
 
-this takes a list of unadorned cues (in `cues/`) from a story as well as a list of art styles (by default the most recently written one) and generates one dalle prompt for each cue in the given style.
+this takes a `cues` file as well as an `art-styles` file that contains an art style for the corresponding destination (by default the most recent such) and gets one dalle prompt for each cue in the given style from chatGPT.
 
 a typical result file is named `decide here. prob put timestamp, and then metadata of what story it came from.`
 
@@ -147,6 +166,6 @@ this takes a list of dalle prompts for a given story and generates illustrations
 
 STATUS: the `for` loop (over the list of dalle prompts) exists, but it's not a function yet.
 
-[^1]: note to self: this must be _manually_ copied from the notability folder in dropbox. (unfortunately (though very believably), it doesn't work to just put an alias in the git folder.)
+[^1]: actually, there is the possibility that the conclusion of the story (in the `end` component) refers to sightseeing locations that may or may not have actually been served, but we've decided to ignore this for the time being.
 
 [^2]: actually, we do want to allow chatGPT to _occasionally_ use an "overused word" (such as `"tapestry"`). so, for each overused word, we assign either 0 or 1 and then allow that many instances to remain in the story. for replicability, this assignment is done by hashing the filename of the unedited story down to a binary number, and then running through its digits and assigning those. (this gives 256 bits, so in practice we should never run out -- but if we did, we could just rotate back through.) to keep things simple, we just take this number as a counter and decrement it each time we encounter the overused word, and then require it to be removed when the counter is 0. of course, we search e.g. for `"tapestr"` case-insensitively, so that we catch both plural instances as well as instances at the beginning of a sentence. and if a single chunk ever has two or more instances of e.g. `"tapestr"`, then we just tell it to edit them _all_ out but keep the counter unchanged.

@@ -10,7 +10,20 @@ nlp = spacy.load("en_core_web_sm")
 # from strings import * # this imports that code directly to the namespace.
 import strings # this imports foo from there as strings.foo instead.
 
-import random
+
+import hashlib # for hashing strings
+
+
+
+my_strings = ["sup", "hi there", "", "classic", "foo", "bar", "foo_bar7.txt"]
+for string in my_strings:
+    hashed = hashlib.sha256(string.encode()).hexdigest()
+    bin_hashed = bin(int(hashed, 16))[2:]
+    print(f"string is: {string}")
+    print(f"hashed is: {hashed}")
+    print(f"bin_hashed is: {bin_hashed}")
+    print("\n")
+
 
 
 
@@ -63,9 +76,9 @@ print(my_string)
 
 newline = "\n"
 
-my_string_again = f"the list, joint, is: {strings.nn.join(my_list)}"
+# my_string_again = f"the list, joint, is: {strings.nn.join(my_list)}"
 
-print("my_string_again is:", my_string_again)
+# print("my_string_again is:", my_string_again)
 
 my_tuple = (5, 7, 9, 3)
 
@@ -96,7 +109,5 @@ my_dict = {"a": 67, "b": -2, "c": False, "X": "hi there"}
 for key in my_dict:
     print(f"key is {key} and value is {my_dict[key]}")
 
-for _ in range(10):
-    print(random.randint(0,4))
-
 print("The answer is:", "cinqueterre" <= "cinqueterre")
+

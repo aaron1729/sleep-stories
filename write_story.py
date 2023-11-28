@@ -56,7 +56,7 @@ def write_story(length, destination, num_stops_parameter = None, stops_filename 
     else:
         stops_filename = strings.get_latest_filename(input['destination'], "stops")
     
-    stops = open(f"stops/{stops_filename}", "r").read().split("\n\n=====\n\n")
+    stops = open(f"stops/{stops_filename}", "r").read().split(strings.separator)
 
     if len(stops) < num_stops:
         raise Exception(f"attempting to write a long story with {num_stops} stops, but there are only {len(stops)} in the selected `stops` file.")
@@ -110,7 +110,7 @@ def write_story(length, destination, num_stops_parameter = None, stops_filename 
         middle_assistant_message = {"role": "assistant", "content": middle_assistant_prompt}
         message_list.append(middle_assistant_message)
         if length == "long":
-            story += "\n\n=====\n\n" + middle_assistant_prompt
+            story += strings.separator + middle_assistant_prompt
         elif length == "short":
             print(f"\nwriting short story, and the raw middle_assistant_prompt (with chunks hopefully separated by '*****') is:\n\n{middle_assistant_prompt}\n")
             chunks = [string.replace("*", "").strip() for string in middle_assistant_prompt.split("***") if len(string.replace("*", "").strip()) > 3]
@@ -118,7 +118,7 @@ def write_story(length, destination, num_stops_parameter = None, stops_filename 
                 splitting_failure_indices.append(index)
             for (chunk_index, chunk) in enumerate(chunks):
                 print(f"\nchunk number {chunk_index} is:\n{chunk}\n")
-                story += "\n\n=====\n\n" + chunk
+                story += strings.separator + chunk
     
     final_user_prompt = strings.final_user_prompt_for_story(
         length,
@@ -136,10 +136,10 @@ def write_story(length, destination, num_stops_parameter = None, stops_filename 
         messages = message_list
     )
     final_assistant_prompt = completion.choices[0].message.content
-    story += "\n\n=====\n\n" + final_assistant_prompt
+    story += strings.separator + final_assistant_prompt
 
     # add the metadata of which stops file this was based on.
-    story += f"\n\n=====\n\nthis story has num_stops={num_stops}{f' with a={a}, c={c}, n={n}, and z={z}' if length == 'short' else ''} and was written based on the stops file: {stops_filename}"
+    story += f"{strings.separator}this story has num_stops={num_stops}{f' with a={a}, c={c}, n={n}, and z={z}' if length == 'short' else ''} and was written based on the stops file: {stops_filename}"
     
     # write the story file.
     story_filename = f"story-unedited_{input['destination']}_{timestamp}_{length}.txt"
@@ -152,7 +152,7 @@ def write_story(length, destination, num_stops_parameter = None, stops_filename 
     # log any splitting failures.
     if len(splitting_failure_indices) > 0:
         print("\nthere are splitting failures; logging them now\n")
-        splitting_failure_log_file = open("logs/splitting_failure_log.txt", "a")
+        splitting_failure_log_file = open("logs/splitting-failure-log.txt", "a")
         splitting_failure_string = f"{story_filename}: {', '.join(splitting_failure_indices)}"
         splitting_failure_log_file.write(splitting_failure_string)
         splitting_failure_log_file.close()
