@@ -1,80 +1,65 @@
 from openai import OpenAI
 client = OpenAI()
-gpt_model = "gpt-4-1106-preview"
-image_model = "dall-e-3"
-# some quick API info is here: https://cookbook.openai.com/articles/what_is_new_with_dalle_3
-# a few relevant notes:
-    # there doesn't seem to be anything like a "system prompt".
-    # the maximum allowable length of a prompt is 1_000 characters.
-    # the parameter n is the number of images to create. the default is n=1, and this is the _only_ option for dall-e-3.
-    # style = "vivid" is default, but also "natural" is possible.
-    # quality = "standard" is default, but also "hd" is possible.
 
-import re # regular expressions
+import re
+import requests
+from os import makedirs
 
-import requests # to retrieve pix
+import models
+import strings
+
+timestamp = strings.time_now()
+
+# the input `dalle_prompts_filename` is e.g. dalle-prompts_for_cues_tokyo_2023-11-28_22-32-51_long_at_2023-11-29_12-46-14.txt
+def get_pix(dalle_prompts_filename):
+
+    print(f"getting pix based on {dalle_prompts_filename} at {strings.time_now()}")
+
+    images_directory_name = f"images_{dalle_prompts_filename[:-4]}_at_{timestamp}"
+    images_directory_path = f"images/{images_directory_name}"
+    makedirs(images_directory_path)
+
+    dalle_prompts = open(f"dalle-prompts/{dalle_prompts_filename}", "r").read().split(strings.separator)
+
+    print(f"now attempting to get {len(dalle_prompts)} images from dalle")
+
+    image_urls = []
+    for (index, dalle_prompt) in enumerate(dalle_prompts):
+        index_string = ("00" + str(index))[-3: ]
+        print(f"getting image {index_string}")
+        try:
+            response = client.images.generate(
+                model = models.image_model,
+                prompt = dalle_prompt,
+                size = "1024x1792",
+            )
+            image_url = response.data[0].url
+            print(f"image_url is: {image_url}")
+            image = requests.get(image_url)
+            if image.status_code == 200:
+                print(f"got image {index_string} at {strings.time_now()}")
+                image_urls.append(image_url)
+                png_file = open(f"{images_directory_path}/{index_string}.png", "wb")
+                png_file.write(image.content)
+                png_file.close()
+            else:
+                error_message = f"ERROR getting image {index_string}; image.status_code={image.status_code}"
+                print(error_message)
+                image_urls.append(error_message)
+        except Exception as exception:
+            print(f"an error occurred: {exception}")
+    
+    image_urls_filename = f"image-urls_{dalle_prompts_filename}_at_{timestamp}.txt"
+    image_urls_file = open(f"image-urls/{image_urls_filename}", "w")
+    image_urls_file.write("\n".join(image_urls))
+    image_urls_file.close()
+
+    print(f"finished getting images based on {dalle_prompts_filename} at {strings.time_now()}")
+
+    return None
 
 
 
-
-
-
-# ### TEST API CALLS HERE
-
-# try:
-#     response = client.images.generate(
-#         model = image_model,
-#         prompt = """a mouse reading a book about a mouse reading a book""",
-#         size = "1024x1792",
-#         quality = "standard",
-#         style = "vivid",
-#     )
-#     image_url = response.data[0].url
-#     print(f"the image_url is: {image_url}")
-#     image = requests.get(image_url)
-#     print(f"image is: {image}")
-#     print(f"type(image) is: {type(image)}")
-#     if image.status_code == 200:
-#         print("hooray, status code is 200!")
-#         png_file = open("the_image.png", "wb")
-#         png_file.write(image.content)
-#     else:
-#         print(f"sadly, status code is {image.status_code}")
-
-
-# except Exception as exception:
-#     print(f"an error occurred: {exception}")
-
-
-dalle_prompts_txt_file_name = "london_2023-11-16_01-20-42_long.txt"
-
-dalle_prompts_string = open(f"dalle_prompts/{dalle_prompts_txt_file_name}", "r").read()
-
-dalle_prompts = dalle_prompts_string.split("\n")
-
-image_urls = []
-for index, dalle_prompt in enumerate(dalle_prompts):
-    print(f"getting a pic for the dalle prompt:\n{dalle_prompt}")
-    index_string = str(index)
-    while len(index_string) < 3:
-        index_string = "0" + index_string    
-    try:
-        response = client.images.generate(
-            model = image_model,
-            prompt = dalle_prompt,
-            size = "1024x1792",
-        )
-        image_url = response.data[0].url
-        image_urls.append(image_url)
-        image = requests.get(image_url)
-        if image.status_code == 200:
-            png_file = open(f"images/{dalle_prompts_txt_file_name[:-4]}_{index_string}.png", "wb")
-            png_file.write(image.content)
-        else:
-            print(f"ERROR: status code is: {image.status_code}")
-    except Exception as exception:
-        print(f"an error occurred: {exception}")
-
-url_file = open(f"image_urls/{dalle_prompts_txt_file_name}", "w")
-url_file.write("\n".join(image_urls))
-url_file.close()
+### let's get some pix!
+# get_pix("dalle-prompts_for_cues_tokyo_2023-11-28_22-32-51_long_at_2023-11-29_12-46-14.txt")
+get_pix("dalle-prompts_for_cues_kyoto_2023-11-28_22-32-51_long_at_2023-11-29_13-56-54.txt")
