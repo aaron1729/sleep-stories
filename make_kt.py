@@ -195,4 +195,4 @@ object {object_name} : SleepStoryPoseCues {{
 
     return None
 
-make_kt()
+make_kt("chiangmai")

@@ -102,7 +102,9 @@ this takes an unedited story and attempts to edit out:
 
 running chunk by chunk. it also replaces all double-quotes (`"`) with single-quotes (`'`). (this is done _after_ the above processing, since in theory chatGPT might accidentally introduce new instances of double-quotes.) here we keep the unedited story's medata and add the metadata of the editing timestamp as well as the list of overused word allowances for this particular story.
 
-this writes to a `story` file in `stories/`.[^2] alternatively, when given no arguments, this operates on _all_ `story-unedited` files in `stories-unedited/`.
+actually, we do want to allow chatGPT to _occasionally_ use an "overused word" (such as `"tapestry"`). so there is an optional argument `B` (with default value `3` -- in any case this should always be `<= 10` otherwise the function won't work properly), and for each overused word, we assign an integer between `0` (inclusive) and `B` (exclusive) and then allow at most that many instances to remain in the story. for replicability, this assignment is done by hashing the filename of the unedited story down to base `B`, and then running through its digits and assigning those. (the hash is of size `2 ** 256`, so there's no way we'll run out.) to keep things simple, we just take this number as a counter and decrement it each time we encounter the overused word, and then require it to be removed when the counter is at `0`. of course, we search e.g. for `"tapestr"` case-insensitively, so that we catch both plural instances as well as instances at the beginning of a sentence. and if a single chunk ever has two or more instances of e.g. `"tapestr"`, then we just tell it to edit them _all_ out but keep the counter unchanged.
+
+this writes to a `story` file in `stories/`. alternatively, when given no arguments, this operates on _all_ `story-unedited` files in `stories-unedited/`.
 
 a typical result file is named `story_berkeley_2023-11-24_17-25-36_short.txt`. the timestamp corresponds to the original writing time, not the editing time. (in particular, whenever we edit an unedited story, we overwrite any previous edited versions.) the metadata now also contains an "edited at" timestamp as well as a list of the allowances for overused words (as described in the above-linked footnote).
 
@@ -184,7 +186,7 @@ of course, this could be improved or expanded if we ever want.
 
 of course, in any case hopefully we'd continue to handle variations (e.g. due to conjugation or pluralization) gracefully.
 
-STATUS: done.
+STATUS: done (at least for now).
 
 
 
@@ -194,5 +196,3 @@ STATUS: done.
 
 
 [^1]: actually, there is the possibility that the conclusion of the story (in the `end` component) refers to sightseeing locations that may or may not have actually been served, but we've decided to ignore this for the time being.
-
-[^2]: actually, we do want to allow chatGPT to _occasionally_ use an "overused word" (such as `"tapestry"`). so, for each overused word, we assign either 0 or 1 and then allow that many instances to remain in the story. for replicability, this assignment is done by hashing the filename of the unedited story down to a binary number, and then running through its digits and assigning those. (this gives 256 bits, so in practice we should never run out -- but if we did, we could just rotate back through.) to keep things simple, we just take this number as a counter and decrement it each time we encounter the overused word, and then require it to be removed when the counter is 0. of course, we search e.g. for `"tapestr"` case-insensitively, so that we catch both plural instances as well as instances at the beginning of a sentence. and if a single chunk ever has two or more instances of e.g. `"tapestr"`, then we just tell it to edit them _all_ out but keep the counter unchanged.

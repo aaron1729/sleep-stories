@@ -3,12 +3,12 @@
 import re
 import strings # so, `my_string` defined over there is accessible here as `strings.my_string`.
 
-unedited_story_filenames = strings.get_all_unhidden_files("stories-unedited")
+unedited_story_filenames = strings.get_all_unhidden_files("stories-unedited/ZZZ")
 
 story_strings = []
 
 for unedited_story_filename in unedited_story_filenames:
-    unedited_story_string = open(f"stories-unedited/{unedited_story_filename}", "r").read()
+    unedited_story_string = open(f"stories-unedited/ZZZ/{unedited_story_filename}", "r").read()
     # remove metadata
     story_chunks = unedited_story_string.split(strings.separator)[: -1]
     story_string = strings.nn.join(story_chunks)
@@ -36,3 +36,7 @@ top_words = sorted(word_counts.items(), key=lambda kvp: kvp[1], reverse=True)[:5
 for kvp in top_words:
     if len(kvp[0]) > 4:
         print(kvp)
+
+
+print("by-hand count:", word_counts['palpable'])
+

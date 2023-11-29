@@ -162,11 +162,8 @@ def write_story(length, destination, num_stops_parameter = None, stops_filename 
     return None
 
 
-### on sunday 2023-11-26 at ~11pm: for some reason it stopped writing after a short story in chiangmai. so, do a long one there and then both in all remaining locations.
-write_story("long", "chiangmai")
 
 ### let's write some stories!
-for destination in inputs:
-    if destination >= "cinqueterre":
-        write_story("short", destination)
-        write_story("long", destination)
+for input in inputs:
+    write_story("long", input["destination"])
+    write_story("short", input["destination"])

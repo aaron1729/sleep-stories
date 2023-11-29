@@ -21,7 +21,8 @@ timestamp = strings.time_now()
 # a typical input for story_filename is "story_berkeley_2023-11-24_17-25-36_short.txt".
     # if story_filename is left as `None`, then we edit _all_ the unedited stories in `stories-unedited/`.
 # max_number_of_attempts dictates how many times we run each chunk through our regex patterns to see if it catches. (at the end of the function, we run one more time and record whether we ultimately succeeded.)
-def edit_story(story_filename = None, max_number_of_attempts = 3):
+# B (for "base") is one more than the maximum number of instances of an overused word that we allow. (so if B = 2 then we only allow 0 or 1 instances of each.)
+def edit_story(story_filename = None, max_number_of_attempts = 3, B = 3):
     
     if not story_filename:
         unedited_story_filenames = strings.get_all_unhidden_files("stories-unedited")
@@ -40,17 +41,21 @@ def edit_story(story_filename = None, max_number_of_attempts = 3):
         sha_256_hash = hashlib.sha256(filename_encoded)
         # put this in hexadecimal format.
         hex_hash = sha_256_hash.hexdigest()
-        # convert to binary and remove the prefix 'Ob'.
-        bin_hash_string = bin(int(hex_hash, 16))[2:]
-        # print(f"bin_hash_string is:\n{bin_hash_string}")
+        # this function converts a nonnegative integer to a _string_ in base B (so there can be 0, 1, ..., B-1 appearances of each overused word).
+        def convert_int_to_base_b(num, base):
+            if num < base:
+                return str(num)
+            else:
+                return convert_int_to_base_b(num // base, base) + str(num % base)
+        base_B_hash_string = convert_int_to_base_b(int(hex_hash, 16), B)
+        print(f"base_B_hash_string is:\n{base_B_hash_string}")
         # assign the counters, and record them (before they change!) into a string for metadata.
         overused_word_allowances_string_list = []
         for (index, entry) in enumerate(overused_words):
             backwards_index = -(index + 1)
-            entry['counter'] = int(bin_hash_string[backwards_index])
-            # print(f"the index is {index}, the word is {entry['word']}, and the counter is {entry['counter']}")
+            entry['counter'] = int(base_B_hash_string[backwards_index])
             overused_word_allowances_string_list.append(f"{entry['word']}: {str(entry['counter'])}")
-        overused_word_allowances_string = f"OVERUSED WORD ALLOWANCES:\n{strings.n.join(overused_word_allowances_string_list)}"
+        overused_word_allowances_string = f"OVERUSED WORD ALLOWANCES (computed with B={B}):\n{strings.n.join(overused_word_allowances_string_list)}"
         print(f"overused_word_allowances_string is:\n{overused_word_allowances_string}")
         
         
@@ -153,6 +158,7 @@ def edit_story(story_filename = None, max_number_of_attempts = 3):
         edited_story_file = open(f"stories/{edited_story_filename}", "w")
         edited_story_file.write(edited_story_string)
         edited_story_file.close()
+        print(f"\nfinished editing {unedited_story_filename}\n")
 
         # now, do some logging...
 
@@ -219,21 +225,7 @@ FINAL VERSION (appearing in edited version of story):
     return None
 
 
-
-# edit_story("story-unedited_algarve_2023-11-26_20-26-02_long.txt")
-
-# edit_story("story-unedited_algarve_2023-11-26_20-26-02_short.txt")
-
+# edit_story("story-unedited_chiangmai_2023-11-28_21-23-16_long.txt")
 # edit_story("story-unedited_chiangmai_2023-11-26_20-26-02_short.txt")
-# edit_story("story-unedited_chiangmai_2023-11-26_23-45-14_long.txt")
-
-# edit_story("story-unedited_paris_2023-11-26_23-45-14_short.txt")
-# edit_story("story-unedited_paris_2023-11-26_23-45-14_long.txt")
-
-# edit_story("story-unedited_rio_2023-11-26_23-45-14_long.txt")
-# edit_story("story-unedited_rio_2023-11-26_23-45-14_short.txt")
-
-
 
 edit_story("story-unedited_tokyo_2023-11-26_23-45-14_long.txt")
-edit_story("story-unedited_tokyo_2023-11-26_23-45-14_short.txt")

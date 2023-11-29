@@ -80,4 +80,5 @@ def make_cues(story_filename = None):
 
 
 
-make_cues()
+# make_cues("story_chiangmai_2023-11-28_21-23-16_long.txt")
+make_cues("story_chiangmai_2023-11-26_20-26-02_short.txt")

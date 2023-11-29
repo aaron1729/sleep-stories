@@ -116,6 +116,18 @@ overused_words = [
     {
         "word": "mosaic",
         "pattern": r"(?i)\bmosaic",
+    },
+    {
+        "word": "vibrant",
+        "pattern": r"(?i)\bvibrant",
+    },
+    {
+        "word": "bustling",
+        "pattern": r"(?i)\bbustl",
+    },
+    {
+        "word": "verdant",
+        "pattern": r"(?i)\bverdant",
     }
 ]
 no_overused_words_plz = f"Please don't use any of the following words: {', '.join([entry['word'] for entry in overused_words])}."
@@ -369,9 +381,9 @@ def initial_user_prompt_for_story(length, destination_fullname, transport_method
     filler_length = ""
     filler_stops = ""
     if length == "long":
-        filler_length = "Keep this short -- just three or four paragraphs. Please don't end your response with a summary, though, because we will be continuing the story!"
+        filler_length = "Keep this to just TWO PARAGRAPHS. Please don't end your response with a summary, because we will be continuing the story!"
     elif length == "short":
-        filler_length = "Keep this part short -- just a paragraph will do."
+        filler_length = "Keep this part short -- just a paragraph or two."
         filler_stops = f"Then, here {'are' if a>1 else 'is'} the first{' ' + str(a) if a>1 else ''} sightseeing location{'s' if a>1 else ''} for us to visit.{nn}{nn.join(stops[: a])}"
     filler_tour_guide = ""
     if tour_guide:
@@ -418,9 +430,9 @@ def middle_user_prompts_for_story(length, stops, a, c, n):
 
 def final_user_prompt_for_story(length, destination_fullname, transport_method, stops, a, c, n, z):
     if length == "long":
-        return f"Great, thank you! Please conclude the story about our sightseeing tour by {transport_method} in {destination_fullname}. Please keep it upbeat, gentle, and inspiring."
+        return f"Great, thank you! Please conclude the story about our sightseeing tour by {transport_method} in {destination_fullname}. Please keep it upbeat, gentle, and inspiring. Keep the ending to just TWO PARAGRAPHS."
     elif length == "short":
-        return f"""Great, thank you! Let's now conclude the story about our sightseeing tour by {transport_method} in {destination_fullname}. Please keep it upbeat, gentle, and inspiring. The remaining sightseeing location{'s are' if z>1 else ' is'} listed below.
+        return f"""Great, thank you! Let's now conclude the story about our sightseeing tour by {transport_method} in {destination_fullname}. Please keep it upbeat, gentle, and inspiring. The remaining sightseeing location{'s are' if z>1 else ' is'} listed below. After we finish visiting those locations, please keep the concluding material to AT MOST TWO PARAGRAPHS.
 
 {no_separator_in_conclusion_plz}
 
