@@ -235,5 +235,5 @@ FINAL VERSION (appearing in edited version of story):
 
 
 
-# edit_story("story-unedited_tokyo_2023-11-26_23-45-14_long.txt")
-# edit_story("story-unedited_tokyo_2023-11-26_23-45-14_short.txt")
+edit_story("story-unedited_tokyo_2023-11-26_23-45-14_long.txt")
+edit_story("story-unedited_tokyo_2023-11-26_23-45-14_short.txt")

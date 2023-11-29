@@ -30,7 +30,7 @@ these should be installed by `pip install`. a (probably incomplete) list of modu
 
 here's a description of the pipeline, script by script, in a (topo)logical ordering. see the [pipeline flowchart](sleep_stories_pipeline.pdf) for a visual representation. from the root, `my_script.py` is executed by doing `python my_script.py` on the command line.
 
-### meta info
+### miscellaneous info
 
 #### story organization
 
@@ -65,7 +65,7 @@ most filenames are of the form `{filetype}_{destination}_{timestamp}[_{length}].
 
 however, there are exceptions, e.g. `art-styles_{timestamp}.txt` (since these are each generally associated to many different destinations) and `splitting-failure-log.txt` (of which there is just one).
 
-#### misc to-do (not including stuff below)
+#### miscellaneous to-do (not including stuff below)
 
 - [ ] make sure to adhere to the above format for filenames.
 - [x] make sure to use `strings.separator` everywhere instead of `"\n\n=====\n\n"`.
@@ -170,6 +170,28 @@ this takes a list of dalle prompts for a given story and generates illustrations
 `this should land in a dedicated folder, indicating the timestamps of: the story, the dalle-prompts file, and generation time. in particular, this should take as a parameter both the story and a dalle-prompts file that's based on it.`
 
 STATUS: the `for` loop (over the list of dalle prompts) exists, but it's not a function yet.
+
+### word_usage_stats.py
+
+this runs some basic statistics, and logs them to the console.
+* it runs through all of the unedited stories in `stories-unedited/` and counts the usages of the overused words (as listed in `strings.overused_words`).
+* it runs through all of the unedited stories in `stories-unedited/`, counts the usages of _all_ words (ignoring case, but not handling conjugation or pluralization) and plucks out the top bunch of them.
+
+of course, this could be improved or expanded if we ever want.
+* we could count instances just in some of the stories.
+* we could compare the words against a list of the some most common words (maybe like 20k of them?).
+* we could compare the words against an actual list of SAT words.
+
+of course, in any case hopefully we'd continue to handle variations (e.g. due to conjugation or pluralization) gracefully.
+
+STATUS: done.
+
+
+
+
+
+
+
 
 [^1]: actually, there is the possibility that the conclusion of the story (in the `end` component) refers to sightseeing locations that may or may not have actually been served, but we've decided to ignore this for the time being.
 

@@ -1,7 +1,4 @@
-##### this takes in a(n edited) story filename, and:
-    # replaces `"` with `'`,
-    # splits it into cues, and
-    # writes it a `cues` file, separated into chunks.
+##### this takes in a(n edited) story, splits it into cues, and writes these to a `cues` file, separated into chunks by strings.separator.
 # or, without an argument, it runs on _all_ stories in `stories/`.
 
 import re # regular expressions

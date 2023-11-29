@@ -58,3 +58,13 @@ editing timestamp: 2023-11-28_01-32-02
 rewriting attempts per chunk: 3, 1, 0, 0, 1, 1, 2, 2, 0, 0, 0, 1
 any failures: True
 
+story-unedited_tokyo_2023-11-26_23-45-14_long.txt
+editing timestamp: 2023-11-28_18-12-55
+rewriting attempts per chunk: 0, 1, 2, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1
+any failures: False
+
+story-unedited_tokyo_2023-11-26_23-45-14_short.txt
+editing timestamp: 2023-11-28_18-12-55
+rewriting attempts per chunk: 2, 1, 0, 0, 1, 1, 2, 1, 0, 0, 0, 2
+any failures: False
+

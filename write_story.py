@@ -55,6 +55,8 @@ def write_story(length, destination, num_stops_parameter = None, stops_filename 
             raise Exception(f"writing a story set in {destination}, but the specified stops file is {stops_filename}")
     else:
         stops_filename = strings.get_latest_filename(input['destination'], "stops")
+        if not stops_filename:
+            raise Exception(f"writing a story set in {destination}, but there is no corresponding stops file")
     
     stops = open(f"stops/{stops_filename}", "r").read().split(strings.separator)
 

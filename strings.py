@@ -3,6 +3,8 @@
 from os import listdir
 from os.path import isfile, join
 
+import re
+
 def get_all_unhidden_files(directory):
     # make sure it's the name of a _file_, and make sure it's not a _hidden_file.
     return [filename for filename in listdir(directory + "/") if isfile(join(directory + "/", filename)) and filename[0] != "."]
@@ -13,13 +15,15 @@ def get_all_unhidden_files(directory):
     # example: executing get_latest_filename("algarve", "stories", "short") on 2023-11-24 returns:
     # story_algarve_2023-11-23_01-25-49_short.txt
 # this may not work on all file types! for instance, our rewriting-log files have a slightly different naming convention, because their filenames indicate both the original unedited story (and in particular its timestamp) as well as the editing timestamp. so, modify this if necessary before using it on any new file types.
+# if there's no such file, return `None`. raise an exception elsewhere _if desired_. (sometimes this will _not_ be desired, which is why we're not raising an exception here.)
 def get_latest_filename(destination, directory, length = None):
     all_filenames = get_all_unhidden_files(directory)
     destination_filenames = [filename for filename in all_filenames if filename.split("_")[1] == destination]
     if length:
         destination_filenames = [filename for filename in destination_filenames if filename.split("_")[-1][:-4] == length]
     if len(destination_filenames) == 0:
-        raise Exception(f"there are no files in `{directory}/` corresponding to the destination `{destination}`{' of length `' + length + '`' if length else ''}")
+        print(f"there are no files in `{directory}/` corresponding to the destination `{destination}`{' of length `' + length + '`' if length else ''}")
+        return None
     destination_filenames.sort()
     return destination_filenames[-1]
 
@@ -35,6 +39,24 @@ def time_now():
 # we use double-quotes in our kotlin code to delineate cues, so this function replaces those with single-quotes.
 def swap_quote_marks(string):
     return re.sub("\"", "'", string)
+
+#####
+
+# this function takes a (generally multi-line) string and prepend each line with `// ` (so that it becomes a comment in kotlin).
+def kotlin_comment(string):
+    lines = string.split("\n")
+    commented_lines = ["// " + line for line in lines]
+    comment = "\n".join(commented_lines)
+    return comment
+
+#####
+
+# this function formats a list of cues into a single string of kotlin code. (it will have already had its double quote-marks replaced with single quote-marks.)
+# the input will _not_ necessarily always be a single chunk; for instance, in writing a long story, we'll always attach the last stop's chunk to the end chunk for the `end` of the story.
+# down dog linting uses 2 spaces per tab, and the cue strings will be indented by 2 tabs.
+def format_list_of_cues_as_kotlin(list_of_cues):
+    list_of_indented_and_quoted_cues = [f"    \"{cue_string}\"" for cue_string in list_of_cues]
+    return " /\n".join(list_of_indented_and_quoted_cues)
 
 #####
 
