@@ -56,7 +56,12 @@ def edit_story(unedited_story_filename = None, max_number_of_attempts = 3, B = 3
         
         # make some regex patterns.
             # the one for roman numerals will trigger a lot of false positives (e.g. for a capital letter in a proper noun or at the beginning of a sentence), but we're okay with that.
-        pattern_for_roman_numerals = r"[IVXLCDM][^a-zA-Z]"
+        
+        #pattern_for_roman_numerals = r"[IVXLCDM][^a-zA-Z]"
+        
+        
+        
+        
         pattern_for_digits = r"\d"
 
         # now, edit the unedited story, chunk by chunk.
@@ -80,7 +85,9 @@ def edit_story(unedited_story_filename = None, max_number_of_attempts = 3, B = 3
                     # always try to remove roman numerals.
                     # for each overused word, try to remove it _unless_ we're going to let this one instance [or "these instances", if we ever change this tolerance to be >1] slide (and decrement the counter).
                 any_digits = bool(re.search(pattern_for_digits, chunk))
-                any_roman_numerals = bool(re.search(pattern_for_roman_numerals, chunk))
+                # any_roman_numerals = bool(re.search(pattern_for_roman_numerals, chunk))
+                # TESTING!!! wed 11/29 at 8pm.
+                # any_roman_numerals = False
                 overused_words_to_avoid = [] # entries are just overused_words.
                 overused_word_appearances = [] # entries are tuples of (0) an overused_word, (1) a count, and (2) a counter, but only if this appearance triggers a rewrite (i.e. the count is positive and greater than the counter).
                 any_overused_words_used_overmuch = False
@@ -96,7 +103,8 @@ def edit_story(unedited_story_filename = None, max_number_of_attempts = 3, B = 3
                             overused_words_to_avoid.append(entry['word'])
                             overused_word_appearances.append((entry['word'], num_appearances, entry['counter']))
                             any_overused_words_used_overmuch = True
-                any_hits = any_digits or any_roman_numerals or any_overused_words_used_overmuch
+                # removed at 8pm on 11/29: or any_roman_numerals
+                any_hits = any_digits or any_overused_words_used_overmuch
 
                 # if we're on the last pass, record whether we're still getting any hits (i.e. whether we've failed to rewrite the chunk).
                 if index == max_number_of_attempts:
@@ -106,8 +114,8 @@ def edit_story(unedited_story_filename = None, max_number_of_attempts = 3, B = 3
                 if index == 0 and any_hits:
                     if any_digits:
                         triggers_for_rewriting_chunk.append("digits")
-                    if any_roman_numerals:
-                        triggers_for_rewriting_chunk.append("roman numerals")
+                    # if any_roman_numerals:
+                        # triggers_for_rewriting_chunk.append("roman numerals")
                     if any_overused_words_used_overmuch > 0:
                         triggers_for_rewriting_chunk += [str(overused_word_and_count_and_counter_tuple) for overused_word_and_count_and_counter_tuple in overused_word_appearances]
 
@@ -118,8 +126,9 @@ def edit_story(unedited_story_filename = None, max_number_of_attempts = 3, B = 3
                     # append it to `versions_of_story_chunk`.
                 # and then, in any case, go back to the top of the `for` loop.
                 if any_hits and index < max_number_of_attempts:
-
-                    print(f"\nasking chatGPT for a rewrite, with:\nany_digits = {any_digits}\nany_roman_numerals = {any_roman_numerals}\noverused_words_to_avoid = {overused_words_to_avoid}\noverused_word_appearances = {overused_word_appearances}")
+                    
+                    # on 11/29 at 8pm, removed: \nany_roman_numerals = {any_roman_numerals}
+                    print(f"\nasking chatGPT for a rewrite, with:\nany_digits = {any_digits}\noverused_words_to_avoid = {overused_words_to_avoid}\noverused_word_appearances = {overused_word_appearances}")
                     print(f"\nbefore the rewrite, the chunk is:\n\n{chunk}")
                     
                     system_message = {"role": "system", "content": strings.system_prompt_for_rewriting(overused_words_to_avoid)}
@@ -222,4 +231,9 @@ FINAL VERSION (appearing in edited version of story):
 
 
 ### let's edit some stories!
-edit_story("story-unedited_berkeley_2023-11-28_22-32-51_long.txt")
+
+# doing these on wed 11/29 at ~8pm.
+# edit_story("story-unedited_berkeley_2023-11-28_22-32-51_long.txt")
+# edit_story("story-unedited_berkeley_2023-11-28_22-32-51_short.txt")
+# edit_story("story-unedited_paris_2023-11-28_22-32-51_long.txt")
+# edit_story("story-unedited_paris_2023-11-28_22-32-51_short.txt")

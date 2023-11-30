@@ -34,11 +34,6 @@ def time_now():
     datetime_string = str(datetime.now())
     return datetime_string[:10] + "_" + datetime_string[11:13] + "-" + datetime_string[14:16] + "-" + datetime_string[17:19]
 
-# time_diff(start, end):
-#     start_date, start_time = start.split("_")
-#     end_date, end_time = end.split("_")
-
-
 #####
 
 # we use double-quotes in our kotlin code to delineate cues, so this function replaces those with single-quotes.

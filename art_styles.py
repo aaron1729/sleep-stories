@@ -18,5 +18,12 @@ art_styles = {
     "sepia-pencil": "sepia-tone pencil drawings",
     "fauvism": "fauvism",
     "cave": "cave painting",
-    "magical-realism": "magical realism", # run and test me!
+    "magical-realism": "magical realism",
+    "midcentury-modern": "mid-century modern", # not yet processed
+    "art-nouveau": "art nouveau", # not yet processed
+    "japanese-woodblock": "ukiyo-e (Japanese woodblock)", # not yet processed
+    "japanese-ink-wash": "sumi-e (Japanese ink wash)", # not yet processed
+    "batik": "batik", # not yet processed,
+    "lanna": "Lanna (from the Lanna Kingdom)", # not yet processed
+
 }

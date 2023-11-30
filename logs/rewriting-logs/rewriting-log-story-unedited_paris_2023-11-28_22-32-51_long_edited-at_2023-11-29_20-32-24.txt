@@ -1,0 +1,523 @@
+OVERUSED WORD ALLOWANCES (computed with B=3):
+tapestry: 2
+testament: 1
+grandeur: 2
+symphony: 2
+tribute: 2
+homage: 0
+tranquil: 2
+chariot: 2
+mosaic: 0
+vibrant: 0
+bustling: 2
+verdant: 2
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): 
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+Our gentle journey proceeds, and with a tranquil disembarkation from the river cruise, we find ourselves stepping onto the cobblestone quay, the soft sound of water behind us marrying with the buzz of cultured voices. A short walk accompanied by our knowledgeable guide leads us to the grand entrance of the Musée d'Orsay. Beneath an expansive sky, the former railway station reveals an ornate façade, a monument that has traded the hurried footsteps of travelers for the quiet contemplation of art enthusiasts.
+
+Inside, the grand central nave, framed with its illustrious clocks, looks as if it was designed with the purpose of celebrating light and time. Our guide points out that the museum, reborn in nineteen eighty-six, stands as a majestic sanctuary to art from the period between eighteen forty-eight and nineteen fourteen. The very atmosphere of the place resounds with Monet's fervent sentiment, 'Color is my day-long obsession, joy, and torment,' as every brush stroke and hue leaps from the canvases of impressionist greats. Monet, Van Gogh, Degas, Renoir - their masterpieces side by side, invite onlookers into a world where light and shadow play eternal games on a boundless canvas of emotions. We walk, our whispered conversations floating up to the arches above, as we debate techniques, brushwork, and the emotion that swells within these hallowed walls from beloved Impressionist and Post-Impressionist works. This temple of artistry captures our imaginations as another defining facet on the multifaceted jewel that is Paris.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+Our gentle journey proceeds, and with a peaceful disembarkation from the river cruise, we find ourselves stepping onto the cobblestone dock, the soft sound of water behind us blending with the buzz of cultured voices. A short walk accompanied by our knowledgeable guide leads us to the grand entrance of the Musée d'Orsay. Beneath an expansive sky, the former railway station reveals an ornate front, a monument that has traded the hurried footsteps of travelers for the quiet reflection of art enthusiasts.
+
+Inside, the grand central nave, framed with its illustrious clocks, appears as if it was designed with the purpose of celebrating light and time. Our guide points out that the museum, reborn in nineteen eighty-six, stands as a majestic sanctuary to art from the period between eighteen forty-eight and nineteen fourteen. The very atmosphere of the place echoes Monet's fervent sentiment, 'Color is my day-long obsession, joy, and torment,' as every brush stroke and hue leaps from the canvases of impressionist greats. Monet, Van Gogh, Degas, Renoir - their masterpieces displayed side by side, invite onlookers into a world where light and shadow play eternal games on an infinite canvas of emotions. We walk, our whispered conversations floating up to the arches above, as we debate techniques, brushwork, and the emotion that overflows within these revered walls from beloved Impressionist and Post-Impressionist works. This temple of artistry captures our imaginations as another defining feature on the complex jewel that is Paris.
+
+==========
+
+REWRITING SUCCESS: False
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): 
+
+number of rewrites: 2
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+As we stroll out of the Tuileries' structured calm, our guide leads us toward the historic heart of Paris, onto the Île de la Cité, where the Sainte-Chapelle stands as a gothic masterpiece of celestial dimensions. Commissioned by King Louis IX of France in approximately twelve forty-eight, this radiant jewel was built to house relics of the Passion, crowned by what was believed to be Christ's own Crown of Thorns. Upon entering, one cannot help but feel a sense of reverence, confronted by the sheer scale of the chapel's fifteen stained-glass windows, each a tapestry of light and color depicting one thousand one hundred and thirteen scenes from the Old and New Testaments.
+
+Protected during the tumult of the French Revolution when they were concealed behind mundane walls, these panels were later lovingly restored by Viollet-le-Duc in the nineteenth century. Now fully visible, they bathe the interior in a glow that feels almost divine, a showcase of the Rayonnant period's pinnacle of gothic architecture. Our guide encourages us to take a moment on the benches, to simply sit and allow our gaze to be drawn upward, where the light dances through the myriad of colors, casting a silent spectacle around us. One by one, visitors enter the upper chapel, and we watch their faces illuminate with awe, an unspoken shared experience of humanity enveloped by the stories held within each glass pane. In here, time feels suspended, cradled in the light that has traveled across centuries to reach us.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+As we walk out of the Tuileries' organized serenity, our guide leads us toward the historic center of Paris, onto the Île de la Cité, where the Sainte-Chapelle stands as a gothic marvel of heavenly proportions. Commissioned by King Louis the Ninth of France in approximately twelve forty-eight, this brilliant gem was erected to house relics of the Passion, topped by what was believed to be Christ's own Crown of Thorns. Upon stepping inside, one cannot help but feel a sense of respect, faced with the towering scale of the chapel's fifteen stained-glass windows, each a canvas of light and hue portraying one thousand one hundred and thirteen scenes from the Old and New Testaments.
+
+Preserved during the uproar of the French Revolution when they were hidden behind plain walls, these panels were later carefully restored by Viollet-le-Duc in the nineteenth century. Now fully revealed, they flood the interior with a glow that feels almost holy, a display of the Rayonnant period's peak of gothic architecture. Our guide invites us to take a moment on the benches, to simply sit and let our gaze be lifted upward, where the light moves through the array of colors, casting a quiet spectacle around us. One by one, guests enter the upper chapel, and we observe their expressions light up with wonder, an unspoken collective experience of humanity embraced by the stories captured in each glass fragment. In here, time seems to be on pause, nestled in the light that has journeyed across centuries to reach us.
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+As we walk out of the Tuileries' organized calm, our guide leads us toward the historic heart of Paris, onto the Île de la Cité, where the Sainte-Chapelle stands as a gothic marvel of heavenly proportions. Commissioned by King Louis the Ninth of France in approximately twelve forty-eight, this splendid structure was erected to house relics of the Passion, topped by what was believed to be Christ's own Crown of Thorns. Upon stepping inside, one cannot help but feel a sense of reverence, faced with the towering scale of the chapel's fifteen stained-glass windows, each a canvas of light and color portraying one thousand one hundred and thirteen scenes from the Old and New Testaments.
+
+Preserved during the commotion of the French Revolution when they were hidden behind plain walls, these panels were later meticulously restored by Viollet-le-Duc in the nineteenth century. Now fully revealed, they flood the interior with a glow that feels almost sacred, a display of the Rayonnant period's peak of gothic architecture. Our guide invites us to take a moment on the benches, to simply sit and let our gaze be lifted upward, where the light moves through the array of colors, casting a peaceful spectacle around us. One by one, guests enter the upper chapel, and we observe their expressions light up with awe, an unspoken collective experience of humanity embraced by the stories captured in each glass fragment. In here, time seems to be on hold, nestled in the light that has journeyed across centuries to reach us.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): 
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+From the natural splendor of the Luxembourg Gardens, our guide leads us to the man-made marvel that is the Pont Alexandre III. This stunning bridge, stretching over the Seine, serves as a regal connector between the Invalides district, with its solemn military history, and the grandeur of the Grand and Petit Palais. Named to celebrate Tsar Alexander III, who forged the Franco-Russian Alliance in eighteen ninety-two, this bridge is more than a path from one side to another; it's an ode to art and diplomacy, inaugurated for the world to see during the nineteen hundred Exposition Universelle.
+
+As we step onto the bridge, we're immediately enveloped in the opulence of Beaux-Arts architecture, detailed right down to the cherubs, nymphs, and the illustrious winged horses that seem ready to take flight at either end. Art Nouveau lamps cast a warming glow, inviting passersby to linger and take in the intricacies of this ornate structure. Cameras click and soft sounds of admiration float around as visitors capture not only the elegant statues but also the splendid panoramic views of the Seine, where the Eiffel Tower poses gracefully in the distance. Couples walk hand in hand, quietly whispering to one another and sometimes, in a modern ritual, affixing 'love locks' to the bridge's railings, leaving behind a symbol of enduring love—a quiet testimony to the romantic heart of Paris that beats strongly within the metal and stone of the Pont Alexandre III.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+From the natural beauty of the Luxembourg Gardens, our guide leads us to the man-made wonder that is the Pont Alexandre the Third. This magnificent bridge, extending over the Seine, serves as a royal link between the Invalides district, with its solemn military history, and the majesty of the Grand and Petit Palais. Named to honor Tsar Alexander the Third, who established the Franco-Russian Alliance in eighteen ninety-two, this bridge is more than a route from one side to another; it's an expression of art and diplomacy, presented for the world to gaze upon during the nineteen hundred Exposition Universelle.
+
+As we step onto the bridge, we're immediately wrapped in the richness of Beaux-Arts architecture, detailed right down to the cherubs, nymphs, and the majestic winged horses that seem poised to soar at either end. Art Nouveau lamps cast a warm glow, inviting those passing by to pause and absorb the complexities of this decorated structure. Cameras snap and soft expressions of appreciation drift around as visitors capture not only the elegant statues but also the stunning panoramic scenes of the Seine, where the Eiffel Tower stands elegantly in the distance. Couples stroll hand in hand, murmuring softly to each other and sometimes, in a contemporary tradition, clipping 'love locks' to the bridge's railings, leaving a symbol of lasting love—a gentle evidence to the amorous spirit of Paris that thrives within the metal and stone of the Pont Alexandre the Third.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): ('testament', 1, 0), ('grandeur', 1, 0)
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+The soft rustling of leaves and distant conversations fade as we approach the venerable silhouette of Notre-Dame de Paris, its spires reaching for the sky like hands clasped in prayer. Over eight hundred years have passed since the first stone was laid in eleven sixty-three, culminating in its completion in thirteen forty-five. Despite the recent sorrow of the two thousand and nineteen fire that silenced its bells and darkened its grandeur, the cathedral stands resilient, a testament to the enduring spirit of French Gothic architecture and the devotion it inspires.
+
+Amidst this quiet atmosphere, visitors are drawn to the cathedral's intricate façade, pens and cameras in hand, capturing the dancing play of light on stone, the curves, and the gargoyle-guarded edges that have become icons of Paris. While the echoes of Victor Hugo's 'The Hunchback of Notre-Dame' resonate in the collective memory of literary enthusiasts, new memories are formed as travelers discuss the historical layers revealed by the ongoing restoration. We find ourselves joining in, pointing to the visible changes, sharing knowledge and wonderment, connecting over the rebirth of this cherished monument. Though our physical access is limited, our view from the nearby riverbanks allows for a reflection on the cathedral's solemn beauty, symbolizing a bridge between eras—a collaboration between past craftsmen and present restorers.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+The soft rustling of leaves and distant conversations fade as we approach the venerable silhouette of Notre-Dame de Paris, its spires reaching for the sky like hands clasped in prayer. Over eight hundred years have passed since the first stone was laid in eleven sixty-three, culminating in its completion in thirteen forty-five. Despite the recent sorrow of the two thousand and nineteen fire that silenced its bells and darkened its splendor, the cathedral stands resilient, a witness to the enduring spirit of French Gothic architecture and the devotion it inspires.
+
+Amidst this quiet atmosphere, visitors are drawn to the cathedral's intricate façade, pens and cameras in hand, capturing the interplay of light on stone, the curves, and the gargoyle-guarded edges that have become icons of Paris. While the echoes of Victor Hugo's 'The Hunchback of Notre-Dame' resonate in the collective memory of literary enthusiasts, new memories are formed as travelers discuss the historical layers revealed by the ongoing restoration. We find ourselves joining in, pointing to the visible changes, sharing knowledge and wonderment, connecting over the rebirth of this cherished monument. Though our physical access is limited, our view from the nearby riverbanks allows for a reflection on the cathedral's sober beauty, symbolizing a bridge between eras—a collaboration between past craftsmen and present restorers.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): ('grandeur', 1, 0)
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+As Notre-Dame fades into the backdrop of our journey, we find ourselves drawn to the grandeur of Parisian culture embodied within the Palais Garnier. Completed in eighteen seventy-five, this opulent edifice, home to the Paris Opera, was the vision of architect Charles Garnier. He infused the building with the flamboyant splendor of the Neo-Baroque style, resulting in a spectacle of architecture that has become an emblem of Paris itself. Infused with echoes of performance applause and the whispered secrets of a fictional 'Phantom of the Opera,' the very walls seem to hum with the stories they house.
+
+Stepping inside, we are swept up in a collective gasp of admiration, surrounded by gold-leaf embellishments, grand staircases, and luminous chandeliers that recall an ornate past. Our guide enthusiastically gestures toward the ceiling of the auditorium, where Marc Chagall's expansive painting invites the eye to dance across scenes from fourteen operas, added to the opera house's legacy in nineteen sixty-four. During our visit, we join other onlookers on guided tours, each absorbing the intricate craftsmanship and immersive history that resonate through the marbled halls and velvet seats. The experience of standing in the Grand Foyer is akin to stepping through time, a portal to a bygone epoch where every glance and step brings us face to face with the elegance and narrative of an era dedicated to the artistic.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+As Notre-Dame fades into the backdrop of our journey, we find ourselves drawn to the majesty of Parisian culture embodied within the Palais Garnier. Completed in eighteen seventy-five, this lavish edifice, home to the Paris Opera, was the vision of architect Charles Garnier. He infused the building with the flamboyant splendor of the Neo-Baroque style, resulting in a spectacle of architecture that has become an emblem of Paris itself. Infused with echoes of performance applause and the whispered secrets of a fictional 'Phantom of the Opera,' the very walls seem to hum with the stories they house.
+
+Stepping inside, we are swept up in a collective gasp of admiration, surrounded by gold-leaf embellishments, grand staircases, and luminous chandeliers that recall an ornate past. Our guide enthusiastically gestures toward the ceiling of the auditorium, where Marc Chagall's expansive painting invites the eye to dance across scenes from fourteen operas, added to the opera house's legacy in nineteen sixty-four. During our visit, we join other onlookers on guided tours, each absorbing the intricate craftsmanship and immersive history that resonate through the marbled halls and plush seats. The experience of standing in the Grand Foyer is akin to stepping through time, a portal to a bygone epoch where every glance and step brings us face to face with the sophistication and narrative of an era dedicated to the artistic.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): digits
+
+number of rewrites: 2
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+From the lavish interior of Palais Garnier, our pathway through Paris leads us to a different kind of elegance; the aristocratic serenity of Place des Vosges, nestled in the heart of the Marais district. It stands as an architectural time capsule, having been the first planned square in Paris, unveiled in sixteen twelve under the name Place Royale. The harmonious uniformity of the square's architecture is not incidental; it was a deliberate design under the command of Henri IV, serving as a model for European city planning for centuries to come.
+
+The historic pavilions, which have housed many a notable figure, including Victor Hugo at No. 6 Place des Vosges, now find a second life as art galleries and boutiques. The square comes to life in Hugo's 'Les Misérables,' in which the young Marius encounters the sweet Cosette. As we peruse the offerings, the gentle sounds of children's laughter ring from the green lawns and the splashes of the fountains where families gather to soak up the sun. Feeling the cool touch of the ancient brick as we wander under the vaulted arcades, we are reminded of the countless others who have passed through here, each leaving an invisible imprint on the history that drenches this place. It's an intimate brush with the past, rendered even more palpable against the backdrop of a quintessential Parisian day.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+From the opulent interior of Palais Garnier, our path through Paris takes us to a different kind of grace; the noble calm of Place des Vosges, nestled in the heart of the Marais district. It stands as an architectural relic, having been the first planned square in Paris, unveiled in sixteen twelve under the name Place Royale. The harmonious uniformity of the square's architecture is not accidental; it was a deliberate design under the command of Henri the Fourth, serving as a model for European city planning for centuries to follow.
+
+The historic pavilions, which have been home to many a prominent figure, including Victor Hugo at Number 6 Place des Vosges, now find a second life as art galleries and shops. The square comes alive in Hugo's 'Les Misérables,' in which the young Marius encounters the sweet Cosette. As we explore the offerings, the soft sounds of children's laughter echo from the green lawns and the splashes of the fountains where families gather to bask in the sun. Feeling the cool touch of the ancient brick as we meander under the vaulted arcades, we are reminded of the countless others who have walked through here, each leaving an invisible mark on the history that saturates this place. It's a personal encounter with the past, made even more tangible against the backdrop of a typical Parisian day.
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+From the lavish interior of Palais Garnier, our journey through Paris leads us to a different type of elegance; the composed calm of Place des Vosges, located in the core of the Marais district. It stands as an architectural relic, having been the first planned square in Paris, unveiled in sixteen twelve under the name Place Royale. The harmonious uniformity of the square's architecture is not coincidental; it was a conscious design under the ruling of Henri the Fourth, serving as a pattern for European urban design for centuries to come.
+
+The historic pavilions, which have been residence to many a notable individual, including Victor Hugo at Number Six Place des Vosges, now host art galleries and shops. The square becomes animated in Hugo's 'Les Misérables,' in which the young Marius comes across the sweet Cosette. As we explore the offerings, the gentle laughter of children resonates from the green spaces and the sounds of the fountains where families convene to enjoy the sunlight. Feeling the cool texture of the ancient brick as we wander under the arched passages, we are reminded of the myriad who have strolled through here, each leaving an unseen impression on the history that permeates this place. It's an intimate meeting with history, made even more real amid the backdrop of a typical Parisian day.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): ('vibrant', 1, 0)
+
+number of rewrites: 2
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+Leaving the aristocratic calm of Place des Vosges, we weave our way through the city streets to an echo of Paris's vivacious spirit—the Marché d'Aligre. Tracing its bustling heritage back to the eighteenth century, it stands as one of the city's oldest mercantile gatherings. The blend of scents from fresh produce intertwines with the vibrant sounds of commerce and conversation, a daily opera performed in the open air and under the iron and glass canopy of the Beauvau Market.
+
+While our guide shares tales of the market's long-standing tradition, we join the rhythm of this lively scene. Visitors are delighted by the kaleidoscope of stalls, where one can haggle for a bouquet of sun-kissed oranges or savor the creamy taste of artisanal cheeses. We find ourselves happily ensconced at a nearby café, sipping coffee as our senses are tickled by the laughter and banter that swirl around us. With a basket of freshly bought fruit in hand, a bench beckons us to take a moment to indulge in the sweetness of a Parisian morning, observing the simple yet profound charm of locals immersed in the day-to-day dance of their market routine.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+Leaving the aristocratic calm of Place des Vosges, we navigate our way through the city streets to an echo of Paris's lively spirit—the Marché d'Aligre. Tracing its bustling heritage back to the eighteenth century, it stands as one of the city's oldest commercial gatherings. The blend of scents from fresh produce intertwines with the lively sounds of commerce and conversation, a daily performance performed in the open air and under the iron and glass canopy of the Beauvau Market.
+
+While our guide shares tales of the market's long-established tradition, we join the rhythm of this dynamic scene. Visitors are delighted by the array of stalls, where one can negotiate for a bouquet of sun-kissed oranges or savor the creamy taste of handcrafted cheeses. We find ourselves happily settled at a nearby café, sipping coffee as our senses are engaged by the laughter and banter that swirls around us. With a basket of freshly bought fruit in hand, a bench invites us to take a moment to indulge in the sweetness of a Parisian morning, observing the straightforward yet profound charm of locals immersed in the day-to-day dance of their market routine.
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+Leaving the noble calm of Place des Vosges, we navigate our way through the city streets to an echo of Paris's lively character—the Marché d'Aligre. Tracing its busy heritage back to the eighteenth century, it stands as one of the city's oldest commercial centers. The mix of aromas from fresh produce intertwines with the energetic sounds of trade and conversation, a daily spectacle carried out in the open air and under the iron and glass canopy of the Beauvau Market.
+
+While our guide recounts stories of the market's long-established heritage, we join the rhythm of this dynamic scene. Visitors are captivated by the selection of stalls, where one can haggle for a bouquet of sun-kissed oranges or savor the creamy flavor of handcrafted cheeses. We find ourselves happily perched at a nearby café, sipping coffee as our senses are engaged by the laughter and banter that swirls around us. With a basket of freshly purchased fruit in hand, a bench invites us to take a moment to revel in the sweetness of a Parisian morning, watching the straightforward yet profound charm of locals immersed in the day-to-day rhythm of their market routine.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): ('bustling', 1, 0)
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+With our senses still tingling from the lively Marché d'Aligre, we transition to an atmosphere steeped in artistic legacy—the Musée Rodin. Nestled in the sophisticated elegance of the Hôtel Biron, where Auguste Rodin himself once lived and sculpted, this museum provides a sanctuary not only for Rodin's art but also for our quiet reflection. Inaugurated in nineteen nineteen, following the sculptor's passing, it exists because of his bequest of his entire collection to the French state, with a wish to transmute his workspace into a temple of art.
+
+As we wander through the serene gardens, where green leaves rustle and gravel crunches softly beneath our footsteps, we encounter the very essence of human expression immortalized in bronze and marble. Masterpieces like 'The Thinker' and 'The Kiss' invite passersby to pause and ponder, their forms evoking a profound sense of emotion and movement that was revolutionary in Rodin's time. Here, in the midst of Paris' constant hum, art enthusiasts quietly sketch the sculptures that stand amidst nature while others sit thoughtfully before these tangible emotions, a cradling of stillness in the embrace of the bustling city.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+With our senses still tingling from the lively Marché d'Aligre, we transition to an atmosphere steeped in artistic legacy—the Musée Rodin. Nestled in the sophisticated elegance of the Hôtel Biron, where Auguste Rodin himself once lived and sculpted, this museum provides a sanctuary not only for Rodin's art but also for our quiet reflection. Inaugurated in nineteen nineteen, following the sculptor's passing, it exists because of his bequest of his entire collection to the French state, with a wish to transmute his workspace into a temple of art.
+
+As we wander through the peaceful gardens, where green leaves rustle and gravel crunches softly beneath our footsteps, we encounter the very essence of human expression immortalized in bronze and marble. Masterpieces like 'The Thinker' and 'The Kiss' invite passersby to pause and ponder, their forms evoking a profound sense of emotion and movement that was revolutionary in Rodin's time. Here, in the midst of Paris' constant hum, art enthusiasts quietly sketch the sculptures that stand among nature while others sit thoughtfully before these palpable emotions, a cradling of stillness in the arms of the active city.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): 
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+Descending from the artistic enclave of Montmartre, our path meanders to a different kind of haven within the city—the Parc des Buttes-Chaumont. Inaugurated in eighteen sixty-seven, during the transformative reign of Napoleon III and the visionary urbanist Baron Haussmann, this park offers an enchanting topography of greenery, distinct from the traditional flat gardens of Paris. Known for its rugged cliffs and lush artificial lake, it presents an escape into a microcosm of nature, hidden within urban walls.
+
+The park is crowned by the Temple de la Sibylle, perched atop a cliff like a timeless watchtower, echoing the Temple of Vesta in Tivoli, Italy. In this gentle oasis, visitors relish the opportunity for unhurried strolls under the shade of ancient trees, or on the emerald grass slopes where informal picnics unfold with the ease of a Sunday morning. Some find solace in the stillness, engaging in yoga or quiet meditation, enveloped by the restful backdrop of the park. Nearby, the lake serves as a stage where ducks skim across water like delicate skaters, captivating onlookers who find repose on its banks. The laughter of children, intertwined with the soft quacks of birds at their feet, creates a delicate harmony—a peaceful counterpoint to the city's symphony.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+Descending from the artistic enclave of Montmartre, our path winds to a different kind of sanctuary within the city—the Parc des Buttes-Chaumont. Inaugurated in eighteen sixty-seven, during the transformative reign of Napoleon the Third and the visionary urban planner Baron Haussmann, this park offers an enchanting landscape of foliage, distinct from the traditional flat gardens of Paris. Known for its craggy cliffs and lush artificial lake, it presents an escape into a microcosm of nature, concealed within urban walls.
+
+The park is crowned by the Temple de la Sibylle, perched atop a cliff like a timeless sentinel, echoing the Temple of Vesta in Tivoli, Italy. In this gentle haven, visitors relish the opportunity for leisurely strolls under the shade of ancient trees, or on the emerald grassy slopes where informal picnics unfold with the ease of a Sunday morning. Some find solace in the quiet, engaging in yoga or silent meditation, surrounded by the serene backdrop of the park. Nearby, the lake serves as a stage where ducks skim across water like delicate skaters, captivating onlookers who find comfort on its banks. The laughter of children, intertwined with the soft quacks of birds at their feet, creates a delicate harmony—a peaceful counterpoint to the city's noise.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): ('vibrant', 1, 0)
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+The quiet contemplation inspired by Monet's lilies fades gently as we emerge into the vast expanse of Place de la Concorde, Paris's largest square. Conceived by Ange-Jacques Gabriel in seventeen fifty-five, this octagonal wonder initially flanked by a moat proudly links the dignified Champs-Élysées to the west with the regal Tuileries Garden to the east. Known as Place de la Révolution in its darker days, it whispers tales of history's tumult, where King Louis XVI and Marie Antoinette once faced their final moments.
+
+At the heart of the square stands the venerable Luxor Obelisk, a gift from Egypt, stretching over three thousand years into the past. Its hieroglyphics etched by hands long-silenced, reaching towards the skies of a city they could never have envisioned. Surrounding it, the Fontaine des Mers and Fontaine des Fleuves add their water music to the atmosphere, their sprays capturing the essence of the seas and rivers they symbolize. As we stroll through the square, we're joined by both tourists and Parisians alike, all pausing to drink in the magnificence of the architecture and the fountains' dance. When the sun begins to set, it casts a golden glow over stone and water alike, offering a moment of serene beauty amidst the city's vibrant life that flows unceasingly around this historical anchor.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+The quiet contemplation inspired by Monet's lilies fades gently as we emerge into the vast expanse of Place de la Concorde, Paris's largest square. Conceived by Ange-Jacques Gabriel in seventeen fifty-five, this octagonal wonder initially flanked by a moat proudly links the dignified Champs-Élysées to the west with the regal Tuileries Garden to the east. Known as Place de la Révolution in its darker days, it whispers tales of history's tumult, where King Louis the Sixteenth and Marie Antoinette once faced their final moments.
+
+At the heart of the square stands the venerable Luxor Obelisk, a gift from Egypt, stretching over three thousand years into the past. Its hieroglyphics etched by hands long-silenced, reaching towards the skies of a city they could never have envisioned. Surrounding it, the Fontaine des Mers and Fontaine des Fleuves add their water music to the atmosphere, their sprays capturing the essence of the seas and rivers they symbolize. As we stroll through the square, we're joined by both tourists and Parisians alike, all pausing to drink in the splendor of the architecture and the fountains' dance. When the sun begins to set, it casts a golden glow over stone and water alike, offering a moment of serene beauty amidst the city's lively life that flows unceasingly around this historical anchor.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): 
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+Our sightseeing tour continues, gently guiding us toward the picturesque Parc Monceau, a verdant gem established in the eighteenth century by Philippe d'Orléans, Duke of Chartres, and a cousin to King Louis XVI. This exceptional haven of serene beauty is a delightful example of an English-style garden, peppered with a curious assortment of architectural follies - a testimony to the grand and eccentric vision of its founder. Among these, a small Egyptian pyramid and a quaint Chinese fort stand as whimsical echoes of distant lands.
+
+As we meander along the winding paths, it's easy to see why Claude Monet was drawn to capture the park's placid charm in his painting 'Monet's Parc Monceau' from eighteen seventy-six. Marcel Proust, too, found inspiration within these scented avenues, making them the backdrop for his narrator's reflective strolls in 'In Search of Lost Time.' Visitors around us are content to surrender to the park's embrace, some finding solace on benches with novels in hand, others simply admiring the ornamental pond where ducks glide gracefully by. The soft rustle of leaves in the light breeze plays a soothing melody, providing a quiet interlude from the vitality of the city encompassing the park's borders.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+Our sightseeing tour continues, gently guiding us toward the picturesque Parc Monceau, a lush gem established in the eighteenth century by Philippe d'Orléans, Duke of Chartres, and a cousin to King Louis the Sixteenth. This exceptional haven of serene beauty is a delightful example of an English-style garden, peppered with a curious assortment of architectural follies - a statement to the great and eccentric vision of its founder. Among these, a small Egyptian pyramid and a quaint Chinese fort stand as whimsical echoes of distant lands.
+
+As we meander along the winding paths, it's easy to see why Claude Monet was drawn to capture the park's calm charm in his painting 'Monet's Parc Monceau' from eighteen seventy-six. Marcel Proust, too, found inspiration within these scented avenues, making them the backdrop for his narrator's reflective strolls in 'In Search of Lost Time.' Visitors around us are content to surrender to the park's embrace, some finding comfort on benches with novels in hand, others simply admiring the ornamental pond where ducks glide gracefully by. The soft rustle of leaves in the light breeze plays a soothing melody, providing a quiet interlude from the energy of the city encompassing the park's borders.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): ('tapestry', 1, 0), ('tranquil', 2, 0), ('bustling', 1, 0)
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+As the delicate hues of twilight begin to paint the Parisian sky, our sightseeing tour reaches its sweet conclusion, leaving us enveloped in a tapestry of memories that span the historic, the artistic, and the quietly majestic. From the commanding presence of the Eiffel Tower to the intimate galleries of the Musée de l'Orangerie, each step of our journey has been a brushstroke on a living canvas of culture and beauty. The Seine has been our companion, mirroring the city's glory as we navigated its waters, while the Metro whisked us beneath the bustling streets to reemerge among the romance of cobblestone alleys and the tranquility of luxurious gardens.
+
+Carrying the gentle rustling of Parc Monceau's leaves in our hearts, it's clear that Paris offers not just sights to behold, but experiences that resonate with the soul. The collective warmth of our shared discoveries forms an invisible bond that, much like the city itself, will endure long after our footprints have faded. In every echoing footstep on the banks of the Seine, in every tranquil moment beneath a stained glass dome, lies the promise of return—a silent whisper through the ages that in Paris, wonder is eternal, and every visit is but the prelude to the next enchanting encounter with the City of Light.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+As the delicate hues of twilight begin to paint the Parisian sky, our sightseeing tour reaches its sweet conclusion, leaving us wrapped in a collage of memories that span the historic, the artistic, and the quietly impressive. From the commanding presence of the Eiffel Tower to the intimate galleries of the Musée de l'Orangerie, each step of our journey has been a brushstroke on a living canvas of culture and elegance. The Seine has been our companion, reflecting the city's splendor as we navigated its waters, while the Metro whisked us beneath the active streets to reemerge among the romance of cobblestone alleys and the calmness of luxurious gardens.
+
+Carrying the gentle rustling of Parc Monceau's leaves in our hearts, it's clear that Paris offers not just sights to behold, but experiences that resonate with the soul. The collective warmth of our shared discoveries forms an invisible bond that, much like the city itself, will endure long after our footprints have faded. In every echoing footstep on the banks of the Seine, in every calm moment beneath a stained glass dome, lies the promise of return—a silent whisper through the ages that in Paris, wonder is eternal, and every visit is but the prelude to the next captivating encounter with the City of Light.

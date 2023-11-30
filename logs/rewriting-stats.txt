@@ -303,3 +303,23 @@ editing timestamp: 2023-11-29_17-30-55
 rewriting attempts per chunk: 0, 0, 3, 3, 3, 0, 3, 1, 3, 1, 2, 1, 3, 3, 1, 0, 1, 0, 0, 0, 1, 1
 any failures: True
 
+story-unedited_berkeley_2023-11-28_22-32-51_long.txt
+editing timestamp: 2023-11-29_20-18-04
+rewriting attempts per chunk: 0, 0, 1, 1, 2, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 2, 0, 0, 0, 1, 1
+any failures: False
+
+story-unedited_berkeley_2023-11-28_22-32-51_short.txt
+editing timestamp: 2023-11-29_20-22-34
+rewriting attempts per chunk: 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1
+any failures: False
+
+story-unedited_paris_2023-11-28_22-32-51_long.txt
+editing timestamp: 2023-11-29_20-32-24
+rewriting attempts per chunk: 0, 0, 1, 0, 2, 0, 1, 0, 1, 1, 2, 2, 1, 0, 0, 1, 0, 1, 0, 0, 1, 1
+any failures: True
+
+story-unedited_paris_2023-11-28_22-32-51_short.txt
+editing timestamp: 2023-11-29_20-37-17
+rewriting attempts per chunk: 3, 0, 0, 3, 0, 0, 0, 0, 0, 1, 1, 1
+any failures: True
+
