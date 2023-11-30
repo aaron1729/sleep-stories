@@ -1,0 +1,569 @@
+OVERUSED WORD ALLOWANCES (computed with B=3):
+tapestry: 0
+testament: 0
+grandeur: 0
+symphony: 2
+tribute: 1
+homage: 1
+tranquil: 1
+chariot: 1
+mosaic: 2
+vibrant: 1
+bustling: 0
+verdant: 0
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): 
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+Our boat gently moves toward the soothing shelter of Monterosso al Mare, where the largest sandy beach in Cinque Terre unfolds before us. The sun casts a soft glow upon the landscape, inviting us to bask in its warm embrace. The beach, renowned for its extensive sands, contrasts with the predominantly rugged coastlines of its neighboring villages, and its waters gleam with the prestigious Blue Flag award, signifying their cleanliness and the community's commitment to environmental sustainability.
+
+We glide past the iconic statue of Neptune, a colossal sculpture that stands as a sentinel over this coastal paradise, crafted by the skilled hands of Arrigo Minerbi in the early twentieth century. Its legacy, merging with the history of the medieval town that serves as a backdrop to the serene beachfront, is palpable in the air. Docking our boat, we step ashore and exchange the gentle rocking of the sea for the comforting warmth of sun-kissed sands. Visitors lounge under a kaleidoscope of colorful umbrellas, while others embark on small adventures in paddle boats along the shoreline. We join the leisurely pace, feeling the sand between our toes and listening to the lapping of the waves—a simple pleasure that echoes through time, as undisturbed as the tranquil day before us.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+Our boat gently moves toward the soothing shelter of Monterosso al Mare, where the largest sandy beach in Cinque Terre unfolds before us. The sun casts a soft glow upon the landscape, inviting us to bask in its warm embrace. The beach, renowned for its extensive sands, contrasts with the predominantly rugged coastlines of its neighboring villages, and its waters gleam with the prestigious Blue Flag award, signifying their purity and the community's commitment to environmental sustainability.
+
+We glide past the iconic statue of Neptune, a colossal sculpture that stands as a sentinel over this coastal paradise, crafted by the skilled hands of Arrigo Minerbi in the early twentieth century. Its legacy, merging with the history of the medieval town that serves as a backdrop to the serene beachfront, is palpable in the air. Docking our boat, we step ashore and exchange the gentle rocking of the sea for the comforting warmth of sun-kissed sands. Visitors lounge under a patchwork of colorful umbrellas, while others embark on modest adventures in paddle boats along the shoreline. We join the leisurely pace, feeling the sand between our toes and listening to the lapping of the waves—a simple pleasure that echoes through time, as undisturbed as the peaceful day before us.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): 
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+Leaving the kaleidoscope of Manarola's harbor behind, we amble through the labyrinth of cobblestone streets until we ascend to the enchanting garden spot known as Nessun Dorma Cinque Terre. Echoing the soaring notes of the aria for which it's named, this haven draws in the senses and celebrates the delights of local produce and wine. With its location perched above the village, attendees are greeted by a vista that spans the breadth of the Ligurian Sea, painting a living work of art that changes with each passing moment.
+
+Here, amidst an assemblage of rustic wooden tables and the sweet fragrance of blossoming flora, we partake in one of life's simple and exquisite pleasures. A glass of Sciacchetrà, with its complex and honeyed notes, is our chosen elixir; each sip a tribute to the terraced vineyards and the sun that nurtures them. As the golden hour descends, the sunlight washes over Manarola, clothing it in a warm and gentle luminescence. Photography enthusiasts wander between tables, capturing this perfect interplay of light and landscape, while we repose, allowing the sights, sounds, and tastes of this garden spot to lull us into serene contemplation.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+Leaving the multicolored view of Manarola's harbor behind, we stroll through the maze of cobblestone streets until we rise to the enchanting garden spot known as Nessun Dorma Cinque Terre. Echoing the elevated notes of the aria for which it's named, this sanctuary attracts the senses and celebrates the delights of local produce and wine. With its location perched above the village, attendees are greeted by a panorama that spans the breadth of the Ligurian Sea, painting a living canvas that changes with each passing moment.
+
+Here, amidst an assembly of rustic wooden tables and the sweet fragrance of blossoming flowers, we partake in one of life's simple and exquisite joys. A glass of Sciacchetrà, with its layered and honeyed notes, is our chosen potion; each taste an acknowledgment to the tiered vineyards and the sun that nurtures them. As the last rays of the day descend, the sunlight bathes Manarola, draping it in a warm and gentle glow. Photography enthusiasts wander between tables, capturing this perfect interplay of light and scenery, while we relax, allowing the sights, sounds, and flavors of this garden spot to soothe us into peaceful contemplation.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): ('tapestry', 1, 0)
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+As we descend from the heights of Doria Castle, the call of the sea gently guides us to the Santa Margherita di Antiochia Church, nestled near the water's edge. Named for the revered Saint Margaret of Antioch, the church embodies Vernazza's rich spiritual tapestry and stands as an enduring symbol of the town's devotion. Dating back to the thirteenth century, this sacred structure is steeped in the maritime legacy that has defined the village for generations.
+
+The church captivates onlookers with its striking Gothic architecture, beckoning them to admire the sea from its unusual eastward-facing entrance—a deviation from the traditional westward orientation of Christian churches. The commanding bell tower, which simultaneously serves as a guardian watchtower, still carries the echoes of its former purpose, standing in readiness against long-vanquished pirate threats. Before crossing the threshold, visitors pause, often caught in a silent reverie by the sight of the Ligurian Sea framed so perfectly by the church's commanding presence. Inside, the softly lit interior invites a moment of quiet reflection or the intimacy of lighting a candle, while its serene ambiance envelopes all who enter. Just outside, the church's rustic doorstep offers a perfect tableau for couples to capture their memories, silhouetted against the picturesque backdrop of the calming sea.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+As we descend from the heights of Doria Castle, the call of the sea gently guides us to the Santa Margherita di Antiochia Church, nestled near the water's edge. Named for the revered Saint Margaret of Antioch, the church embodies Vernazza's rich spiritual heritage and stands as an enduring symbol of the town's devotion. Dating back to the thirteenth century, this sacred structure is steeped in the maritime legacy that has defined the village for generations.
+
+The church captivates onlookers with its striking Gothic architecture, beckoning them to admire the sea from its unusual eastward-facing entrance—a deviation from the traditional westward orientation of Christian churches. The commanding bell tower, which also serves as a guardian watchtower, still carries the echoes of its former purpose, standing vigil against long-vanquished pirate threats. Before crossing the threshold, visitors pause, often caught in a silent contemplation by the sight of the Ligurian Sea framed so perfectly by the church's imposing presence. Inside, the softly lit interior invites a moment of quiet reflection or the intimacy of lighting a candle, while its peaceful ambiance envelops all who enter. Just outside, the church's rustic doorstep offers a perfect scene for couples to capture their memories, silhouetted against the picturesque backdrop of the calming sea.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): ('testament', 1, 0)
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+After the delightful seclusion of Guvano Beach, we meander back to the heart of Corniglia, drawn by the historical allure of San Pietro Church. This sacred structure, dating back to the year thirteen hundred and thirty-four, illustrates the exquisite Ligurian Gothic style that characterizes the region's ecclesiastical architecture. Perched atop a hill that once cradled a Roman fortification, it stands as a testament to the layers of history that have enriched this land over the centuries.
+
+Approaching the church, the sight of Saint Peter's statue greeting us from above the main entrance inscribes a sense of timeless reverence upon our hearts. The façade's intricate rose window, complemented by the pristine Carrara marble, captures the afternoon light, throwing delicate patterns upon the ground. Inside, the calming atmosphere invites visitors to light candles, their flickering glow an intimate counterpoint to the soft natural light that filters through stained glass. The hush of the interior offers a space for quiet reflection or prayer, amidst frescoes that draw eyes and minds upwards. In this holy place, every artwork and arch seems to hold a whispered narrative of faith and community, echoed in the soft footfalls of those who come to admire its beauty and find solace within its walls.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+After the delightful seclusion of Guvano Beach, we meander back to the heart of Corniglia, drawn by the historical allure of San Pietro Church. This sacred structure, dating back to the year thirteen thirty-four, illustrates the exquisite Ligurian Gothic style that characterizes the region's ecclesiastical architecture. Perched atop a hill that once housed a Roman fortification, it stands as a witness to the layers of history that have enriched this land over the centuries.
+
+Approaching the church, the sight of Saint Peter's statue greeting us from above the main entrance inscribes a sense of enduring reverence upon our hearts. The façade's intricate rose window, complemented by the pristine Carrara marble, captures the afternoon light, casting subtle patterns upon the ground. Inside, the serene atmosphere invites visitors to light candles, their flickering glow an intimate contrast to the soft natural light that seeps through stained glass. The silence of the interior offers a space for quiet meditation or prayer, amidst frescoes that draw eyes and minds skyward. In this holy place, every piece of art and archway seems to carry a whispered story of faith and community, mirrored in the soft footfalls of those who come to appreciate its splendor and seek peace within its walls.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): 
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+Departing from the contemplative atmosphere of San Pietro Church, we journey onward to the marina of Riomaggiore, where the essence of Cinque Terre's maritime soul is most palpable. Riomaggiore, the southernmost of the five sister villages, bears a legacy richly woven with the twin threads of fishing and winemaking. Along its marina, the houses, as if brushed by an artist's hand, display a spectrum of color and date back to the early medieval era, climbing the slopes of the Rivus Major ravine from which the town takes its name.
+
+It is here, amidst the backdrop of Riomaggiore's vibrant dwellings, that one can sense the inspiration Dante might have drawn for his vivid portrayal of the landscape in the 'Divine Comedy.' As dusk approaches, the marina becomes an amphitheater to the setting sun, and we join the locals in the cherished ritual of 'passeggiata'—the evening stroll that is woven into the very fabric of Italian culture. The silhouettes of modest fishing boats bobbing on the water complement the dance of light across the illuminated facades. Photographers, looking for that magical interplay of light and architecture, find their muse in the changing hues of the golden hour, when every corner of Riomaggiore is touched by a soft, enchanting luminescence.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+Departing from the serene atmosphere of San Pietro Church, we journey onward to the marina of Riomaggiore, where the essence of Cinque Terre's maritime soul is most tangible. Riomaggiore, the southernmost of the five sister villages, bears a legacy rich with the dual traditions of fishing and winemaking. Along its marina, the houses, as if painted by an artist's hand, exhibit a palette of color and date back to the early medieval era, climbing the slopes of the Rivus Major ravine from which the town takes its name.
+
+It is here, against the backdrop of Riomaggiore's colorful dwellings, that one can imagine the inspiration Dante might have found for his vivid portrayal of the landscape in the 'Divine Comedy.' As dusk nears, the marina becomes a theater to the descending sun, and we join the locals in the beloved ritual of 'passeggiata'—the evening stroll that is interwoven into the very fabric of Italian culture. The silhouettes of simple fishing boats bobbing on the water complement the interplay of light across the lit facades. Photographers, seeking that magical fusion of light and structure, find their inspiration in the changing tints of the golden hour, when every corner of Riomaggiore is caressed by a gentle, captivating glow.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): ('testament', 1, 0)
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+Leaving behind the calming hues of the Riomaggiore marina, we set out on a spiritual sojourn along La Via dei Santuari. This ancient trail stitches together the heavens and earth, connecting the five sanctuaries perched high above each of the quintet of villages that comprise Cinque Terre. Once serving as beacons of worship and havens of refuge in turbulent times of piracy, these hallowed sites are a testament to the historical endurance of the local people, dating back centuries.
+
+The trail underfoot is dotted with the footsteps of countless pilgrims who have traversed this sacred path through the ages, each sanctuary dedicated to the cherished patron saints of the villages below. As we climb and wind through this peaceful expanse, we are graced with awe-inspiring views of the Mediterranean Sea and the humble, yet enduring rural vistas. We find ourselves joining hikers along their spiritual journey, enthusiastically capturing the beauty with our cameras or simply sitting in quiet meditation, embraced by the solitude of nature. Along the way, natural springs invite us to quench our thirst with their cool, fresh waters, providing a moment of simple refreshment beneath the watchful gaze of ancient olive trees.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+Leaving behind the calming hues of the Riomaggiore marina, we set out on a spiritual sojourn along La Via dei Santuari. This ancient trail stitches together the heavens and earth, connecting the five sanctuaries perched high above each of the quintet of villages that comprise Cinque Terre. Once serving as beacons of worship and havens of refuge in turbulent times of piracy, these hallowed sites are a reflection of the historical endurance of the local people, dating back centuries.
+
+The trail underfoot is dotted with the footsteps of countless pilgrims who have traversed this sacred path through the ages, each sanctuary dedicated to the cherished patron saints of the villages below. As we climb and wind through this peaceful expanse, we are graced with awe-inspiring views of the Mediterranean Sea and the humble, yet enduring rural landscapes. We find ourselves joining hikers along their spiritual journey, enthusiastically capturing the beauty with our cameras or simply sitting in quiet reflection, embraced by the solitude of nature. Along the way, natural springs invite us to quench our thirst with their cool, fresh waters, providing a moment of simple refreshment beneath the watchful gaze of ancient olive trees.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): ('tranquil', 1, 0)
+
+number of rewrites: 2
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+As we bid farewell to the picturesque Portovenere, our journey leads us back into the heart of Manarola, where the Church of San Lorenzo, or Chiesa di San Lorenzo, stands as a beacon of history and serenity. Constructed in the fourteenth century, this sacred structure has presided over the village for generations, its stones weathered by time and tales. The church is renowned for its exquisite rose window, a resplendent example of Gothic style that has captivated onlookers since its inception, illuminating the church's façade with its timeless artistry.
+
+Dedicated to Saint Lawrence, each year on August tenth, the day marking his martyrdom, the church becomes a focal point of communal veneration. Within its hallowed walls, visitors encounter precious works of art and intricate decorations, including a triptych believed to be from the school of Antwerp. Tourists and pilgrims alike tread softly across the ancient floors, their footsteps a quiet symphony, as they peruse the interior in contemplative solitude, admiring the historic art that adorns this place of worship. An act as simple as lighting a candle provides a profound sense of connection to the ecclesiastical past, a chance to partake in the stillness, and to watch as sunlight streams through the aged windows, creating a tranquil tableau upon the stone—a quiet reminder of the continuity between the present and the centuries that have come before.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+As we bid farewell to the picturesque Portovenere, our journey leads us back into the heart of Manarola, where the Church of San Lorenzo, or Chiesa di San Lorenzo, stands as a beacon of history and peace. Constructed in the fourteenth century, this sacred structure has presided over the village for generations, its stones weathered by time and narratives. The church is renowned for its exquisite rose window, an outstanding example of Gothic style that has captivated onlookers since its creation, illuminating the church's front with its ageless craftsmanship.
+
+Dedicated to Saint Lawrence, each year on August tenth, the day marking his martyrdom, the church becomes a focal point of community reverence. Within its sanctified walls, visitors encounter valuable works of art and detailed embellishments, including a triptych believed to be from the school of Antwerp. Tourists and pilgrims alike tread softly across the ancient floors, their footsteps a quiet symphony, as they explore the interior in meditative isolation, admiring the historic art that embellishes this place of worship. An act as simple as lighting a candle provides a profound sense of connection to the ecclesiastical past, a chance to participate in the calmness, and to watch as sunlight streams through the aged windows, creating a serene scene upon the stone—a quiet reminder of the continuity between the present and the centuries that have passed.
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+As we bid farewell to the picturesque Portovenere, our journey leads us back into the heart of Manarola, where the Church of San Lorenzo, or Chiesa di San Lorenzo, stands as an emblem of history and serenity. Constructed in the fourteenth century, this sacred structure has watched over the village for generations, its stones shaped by time and stories. The church is known for its exquisite rose window, a remarkable example of Gothic style that has enchanted viewers since its creation, casting light upon the church's facade with its timeless skill.
+
+Dedicated to Saint Lawrence, each year on August tenth, the day marking his martyrdom, the church becomes a center of community veneration. Within its hallowed walls, visitors find precious works of art and intricate adornments, including a triptych believed to be from the school of Antwerp. Tourists and pilgrims alike move quietly across the ancient floors, their movements a soft melody, as they explore the interior in thoughtful solitude, taking in the historic art that decorates this place of worship. An act as simple as lighting a candle provides a profound sense of connection to the religious past, an opportunity to share in the peacefulness, and to observe as daylight filters through the old windows, creating a peaceful sight upon the stone—a gentle reminder of the connection between the present and the ages that have slipped by.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): ('tapestry', 1, 0), ('grandeur', 1, 0), ('symphony', 1, 0)
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+After the mesmerizing serenity of Fiordo di Furore, we find ourselves ensconced within the lush embrace of the Parco Nazionale delle Cinque Terre. Established in nineteen ninety-nine, this national park serves as the guardian of both the ecological splendor and the rich cultural tapestry that is the heritage of this region. Recognized as a UNESCO World Heritage Site, it enchants with its striking landscape and the age-old practice of terrace farming that clings to the hillsides.
+
+The allure of this natural sanctuary lies in its extensive network of trails, including the renowned Sentiero Azzurro, which weaves its way through the Mediterranean foliage, connecting all five villages with paths that grant wanderers a glimpse into the serene soul of Cinque Terre. Amidst these pathways, the terraced vineyards spell their own tale, giving life to the esteemed Sciacchetrà wine—a sweet nectar born from the earth. We join fellow hikers along these pastoral trails, pausing to frame the perfect shot of coastal vistas and rolling hills that rise from the azure sea. Pausing for a moment, we breathe in the scent of the sea mingled with the unique fragrances of local flora, the chorus of bird songs harmonizing with the gentle rhythm of the waves—a symphony that celebrates the quiet grandeur of nature.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+After the mesmerizing serenity of Fiordo di Furore, we find ourselves ensconced within the lush embrace of the Parco Nazionale delle Cinque Terre. Established in nineteen ninety-nine, this national park serves as the guardian of both the ecological splendor and the rich cultural heritage that is the legacy of this region. Recognized as a UNESCO World Heritage Site, it enchants with its striking landscape and the age-old practice of terrace farming that clings to the hillsides.
+
+The allure of this natural sanctuary lies in its extensive network of trails, including the renowned Sentiero Azzurro, which weaves its way through the Mediterranean foliage, connecting all five villages with paths that grant wanderers a glimpse into the peaceful soul of Cinque Terre. Amidst these pathways, the terraced vineyards spell their own tale, giving life to the esteemed Sciacchetrà wine—a sweet nectar born from the earth. We join fellow hikers along these rural trails, pausing to frame the perfect shot of coastal vistas and rolling hills that rise from the azure sea. Pausing for a moment, we breathe in the scent of the sea mingled with the unique fragrances of local flora, the chorus of bird songs harmonizing with the gentle rhythm of the waves—a melody that celebrates the quiet majesty of nature.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): ('vibrant', 1, 0)
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+Leaving the cobbled trails of the Cinque Terre National Park behind, our path leads us to the majestically unassuming cape of Punta Mesco, standing as a natural sentinel at the close of Monterosso al Mare. As an integral part of this revered UNESCO World Heritage Site, Punta Mesco boasts not only scenic trails through serene nature but also the hauntingly beautiful remnants of the eleventh-century Monastery of San Antonio del Mesco, whispering stories from a time long past.
+
+With the vibrant colors of dusk approaching, Punta Mesco reveals itself as one of the premier stages to view the sun's descent beyond the horizon of the Ligurian Sea, casting the sky in a myriad of fleeting, fiery hues. The cape's mystical charm is further deepened by local legends that add an enigmatic aura to its rugged beauty. Here, hikers often find repose in quiet observation, their gazes settling over the expanse of sea and sky, while some translate the awe-inspiring views onto paper through sketches and paintings. To sit upon a rocky outcrop, with the sea breeze as a constant companion, and observe the grace of birds in flight or the subtle dance of wildflowers in the breeze, is to experience a simplicity that is both profound and rejuvenating.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+Leaving the cobblestone paths of the Cinque Terre National Park behind, our path leads us to the majestically unpretentious cape of Punta Mesco, standing as a natural watchman at the edge of Monterosso al Mare. As an integral part of this revered UNESCO World Heritage Site, Punta Mesco boasts not only scenic trails through calm nature but also the hauntingly beautiful ruins of the eleventh-century Monastery of San Antonio del Mesco, murmuring stories from a time long past.
+
+With the rich colors of dusk approaching, Punta Mesco reveals itself as one of the premier locations to view the sun's descent beyond the horizon of the Ligurian Sea, casting the sky in a myriad of fleeting, fiery shades. The cape's mystical charm is further deepened by local legends that add an enigmatic quality to its rugged beauty. Here, hikers often find rest in quiet contemplation, their gazes settling over the expanse of sea and sky, while some capture the awe-inspiring views onto paper through sketches and paintings. To sit upon a rocky overhang, with the sea breeze as a constant companion, and observe the elegance of birds in flight or the subtle movement of wildflowers in the wind, is to experience a simplicity that is both profound and revitalizing.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): ('tapestry', 1, 0)
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+From the rugged promontory of Punta Mesco, we weave our way back to the trailhead of one of Cinque Terre's most celebrated hiking routes—the Footpath Monterosso - Vernazza. This trail is a cherished segment of the Blue Path, the Sentiero Azzurro, ribboning along the cliffs and binding all five villages in its historic embrace. Before the advent of the railway, trails such as these were the lifeblood of the communities, the sole thoroughfares etched into the landscape.
+
+Spanning approximately three and a half kilometers, the path from Monterosso to Vernazza promises a trek of around two hours. Each step offers a vantage point graced with panoramic scenery that has lured artists and photographers from around the world, eager to capture the enchanting spectacle of the Italian Riviera. Hikers—us among them—take respite from the ascent, pausing to immortalize the scenic tapestry of vineyards and olive groves unfurling towards the cobalt sea. An interlude along the journey provides the opportunity to bask in the sun's embrace, delighting in the colorful burst of wildflowers that edge the footpath and attuning to the distant, yet ever-present, melody of the sea that accompanies the view of boats gracefully tracing the water's surface.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+From the rugged promontory of Punta Mesco, we navigate our way back to the trailhead of one of Cinque Terre's most celebrated hiking routes—the Footpath Monterosso - Vernazza. This trail is a cherished segment of the Blue Path, the Sentiero Azzurro, winding along the cliffs and uniting all five villages in its historic clasp. Before the arrival of the railway, trails such as these were the vital arteries of the communities, the only routes carved into the landscape.
+
+Spanning approximately three and a half kilometers, the path from Monterosso to Vernazza promises a trek of around two hours. Each step offers a vantage point graced with panoramic scenery that has attracted artists and photographers from around the world, eager to capture the captivating scene of the Italian Riviera. Hikers—us among them—take breaks from the ascent, pausing to capture the picturesque view of vineyards and olive groves stretching towards the cobalt sea. A pause along the journey provides the chance to soak in the sun's warmth, reveling in the colorful display of wildflowers that line the footpath and listening to the distant, yet ever-present, sound of the sea that accompanies the sight of boats elegantly carving through the water's surface.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): roman numerals, ('tapestry', 1, 0), ('testament', 1, 0)
+
+number of rewrites: 2
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+As we leave the aromatic vineyards of Cantina Cinque Terre, we continue our journey upwards into the serene embrace of the lush Ligurian hills, where the Santuario di Nostra Signora di Soviore has offered refuge and solace for over a thousand years. Dating back to before the year one thousand AD, this sanctuary is etched into the sacred tapestry of the region as one of the oldest sites of Marian worship in Liguria, a testament to the enduring human search for the spiritual.
+
+The Santuario di Nostra Signora di Soviore is a destination for those drawn to its quietude, a beacon for pilgrims and casual visitors alike. Tradition holds that an effigy of the Madonna was found here under miraculous circumstances, instigating the creation of this venerated place of pilgrimage that today still gathers the faithful and the introspective, especially during its celebrated annual event that strengthens local bonds. Within the sanctuary's walls, the flicker of candlelight reflects the silent prayers and contemplations of those seeking a moment of peace, while outside, some may be found deeply immersed in quiet reflection or partaking in sacred services.
+
+The journey to the sanctuary, a gentle ascent through forest canopies, carries with it a sense of escapism from the temporal realm, ushering visitors into a world steeped in reflection. Surrounded by the rustle of leaves and the subtle fragrances of the forest, there arises an imperceptible shift, a quiet transformation from everyday life to a contemplative sanctuary nestled high above Monterosso.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+As we leave the aromatic vineyards of Cantina Cinque Terre, we continue our journey upwards into the serene embrace of the lush Ligurian hills, where the Santuario di Nostra Signora di Soviore has offered refuge and comfort for over a thousand years. Dating back to before the year one thousand AD, this sanctuary is woven into the sacred narrative of the region as one of the oldest sites of Marian worship in Liguria, a reflection of the enduring human search for the spiritual.
+
+The Santuario di Nostra Signora di Soviore is a destination for those drawn to its calmness, a beacon for pilgrims and casual visitors alike. Tradition holds that an effigy of the Madonna was found here under miraculous circumstances, instigating the creation of this revered place of pilgrimage that today still gathers the faithful and the introspective, especially during its celebrated annual event that strengthens local bonds. Within the sanctuary's walls, the flicker of candlelight reflects the silent prayers and contemplations of those seeking a moment of peace, while outside, some may be found deeply immersed in quiet reflection or partaking in sacred services.
+
+The journey to the sanctuary, a gentle ascent through forest canopies, carries with it a sense of slipping away from the temporal realm, ushering visitors into a world steeped in reflection. Surrounded by the rustle of leaves and the subtle fragrances of the forest, there arises an imperceptible shift, a subtle transformation from everyday life to a contemplative haven nestled high above Monterosso.
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+As we leave the aromatic vineyards of Cantina Cinque Terre, we continue our journey upwards into the serene embrace of the lush Ligurian hills, where the Santuario di Nostra Signora di Soviore has offered refuge and comfort for over one thousand years. Dating back to before the year one thousand, this sanctuary is woven into the sacred narrative of the region as one of the oldest sites of Marian worship in Liguria, a reflection of the enduring human search for the spiritual.
+
+The Santuario di Nostra Signora di Soviore is a destination for those drawn to its calmness, a beacon for pilgrims and casual visitors alike. Tradition holds that an effigy of the Madonna was found here under miraculous circumstances, prompting the creation of this revered place of pilgrimage that today still gathers the faithful and the introspective, especially during its celebrated annual event that strengthens community ties. Within the sanctuary's walls, the flickering of candlelight reflects the silent prayers and contemplations of those seeking a moment of peace, while outside, some may be found deeply immersed in silent reflection or engaging in sacred services.
+
+The journey to the sanctuary, a gentle climb through forest canopies, carries with it a sense of slipping away from the temporal world, ushering visitors into a realm steeped in reflection. Surrounded by the rustle of leaves and the subtle scents of the forest, there arises an almost imperceptible change, a gentle shift from everyday life to a reflective haven nestled high above Monterosso.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): ('grandeur', 1, 0)
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+Our sightseeing tour unfurls another chapter as we find ourselves in the presence of Torre Aurora, a sentinel that has withstood the test of time since the sixteenth century. This formidable watchtower stands as a guardian, a reminder of days when vigilance against the threat of pirates was a way of life in Monterosso al Mare. Poised on the dividing line, Torre Aurora serves as a historical seam stitching together the old medieval touches of Monterosso with the newer expanses of the Fegina area.
+
+As an iconic symbol of the Cinque Terre coastline, the tower has ingrained itself within the pantheon of photographic and painted imageries. Visitors can be found along its perimeter, capturing the juxtaposition of history and nature through their lenses or embracing the moment in quiet contemplation, attuned to the rhythmic crashing of waves upon weathered rocks below. In the tower's vicinity, the sheer delight of witnessing local artists at work becomes a shared experience; they translate the grandeur of the surroundings onto canvas, their easels adorned with the vista of historic architecture softly colliding with the hypnotic azure of the Ligurian Sea.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+Our sightseeing tour unfolds another chapter as we find ourselves in the presence of Torre Aurora, a sentinel that has stood the test of time since the sixteenth century. This formidable watchtower stands as a guardian, a reminder of days when vigilance against the threat of pirates was a way of life in Monterosso al Mare. Positioned on the dividing line, Torre Aurora serves as a historical connector linking the old medieval touches of Monterosso with the newer expanses of the Fegina area.
+
+As an iconic symbol of the Cinque Terre coastline, the tower has embedded itself within the collection of photographic and painted scenes. Visitors can be found along its boundary, capturing the juxtaposition of history and nature through their lenses or embracing the moment in quiet reflection, attuned to the rhythmic crashing of waves upon weathered rocks below. In the tower's vicinity, the sheer delight of observing local artists at work becomes a shared experience; they interpret the impressive backdrop of the surroundings onto canvas, their easels adorned with the view of historic architecture softly merging with the hypnotic blue of the Ligurian Sea.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): ('tapestry', 1, 0), ('tranquil', 1, 0), ('vibrant', 1, 0), ('verdant', 1, 0)
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+As the azure shades of the Ligurian Sea meld into the twilight, our meandering journey across Cinque Terre’s enchanted coastline reaches its gentle culmination. The memories of every rickety path, historic church, and sun-kissed vineyard are like treasured souvenirs of our souls, etched into the very fabric of our being. The soft echo of waves against Torre Aurora, the silent hymns of ancient sanctuaries, and the whisper of olive groves in the sea breeze mingle in our minds, creating a tapestry of experiences, each thread as vibrant and lively as the hues of the villages themselves.
+
+There is a comforting sense of fulfillment that comes with the end of our tranquil maritime odyssey—a feeling that surpasses the mere visual splendor we’ve witnessed. It’s as if the gentle lapping of the water against our boat is Cinque Terre’s own lullaby, encouraging us to dream of our return to its rugged cliffs and verdant terraces. The stories we've gathered, the serenity we've embraced, and the beauty we've beheld, have been the quiet yet profound adventures that continue to resonate within us, long after the final ripples fade into the horizon.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+As the blue shades of the Ligurian Sea blend into the evening sky, our wandering trip across Cinque Terre’s enchanted coastline reaches its peaceful conclusion. The memories of every rickety trail, historic chapel, and sun-kissed vineyard are like precious keepsakes of our hearts, ingrained in our essence. The soft sound of waves against Torre Aurora, the quiet chants of ancient churches, and the rustle of olive trees in the sea breeze come together in our thoughts, creating a collage of experiences, each part as colorful and lively as the shades of the villages themselves.
+
+There is a reassuring sense of completion that comes with the end of our serene sea journey—a feeling that surpasses the mere visual beauty we’ve encountered. It’s as if the gentle washing of the water against our boat is Cinque Terre’s own melody, encouraging us to dream of our return to its steep cliffs and lush terraces. The tales we've collected, the calmness we've taken in, and the allure we've seen, have been the subtle yet impactful adventures that continue to echo within us, long after the last waves fade into the distance.

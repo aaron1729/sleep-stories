@@ -1,7 +1,7 @@
 ##### this counts the instances of the overused words in all of the unedited stories together.
 
 import re
-import strings # so, `my_string` defined over there is accessible here as `strings.my_string`.
+import strings
 
 unedited_story_filenames = strings.get_all_unhidden_files("stories-unedited/ZZZ")
 

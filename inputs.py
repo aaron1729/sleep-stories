@@ -7,6 +7,7 @@ inputs = {
         "requested_sightseeing_stops": "a drive along the coast and a boat trip to explore sea caves with an amiable captain",
         "tour_guide": None,
         "season": "spring",
+        "art_style": None,
     },
     "amalfi": {
         "destination": "amalfi",
@@ -15,6 +16,7 @@ inputs = {
         "requested_sightseeing_stops": "coastal boat tour with a friendly captain",
         "tour_guide": None,
         "season": "spring",
+        "art_style": None,
     },
     "bali": {
         "destination": "bali",
@@ -23,6 +25,7 @@ inputs = {
         "requested_sightseeing_stops": None,
         "tour_guide": None,
         "season": "spring",
+        "art_style": None,
     },
     "bangkok": {
         "destination": "bangkok",
@@ -31,6 +34,7 @@ inputs = {
         "requested_sightseeing_stops": "Chatuchak weekend market",
         "tour_guide": "our tuk-tuk driver",
         "season": "winter",
+        "art_style": None,
     },
     "barcelona": {
         "destination": "barcelona",
@@ -39,6 +43,7 @@ inputs = {
         "requested_sightseeing_stops": None,
         "tour_guide": "an affable university student who double-majors in art and history as a tour guide",
         "season": "early fall",
+        "art_style": None,
     },
     "berkeley": {
         "destination": "berkeley",
@@ -47,6 +52,7 @@ inputs = {
         "requested_sightseeing_stops": "a hike in Tilden Park",
         "tour_guide": None,
         "season": "spring",
+        "art_style": None,
     },
     "chiangmai": {
         "destination": "chiangmai",
@@ -55,6 +61,7 @@ inputs = {
         "requested_sightseeing_stops": None,
         "tour_guide": None,
         "season": "winter",
+        "art_style": None,
     },
     "cinqueterre": {
         "destination": "cinqueterre",
@@ -63,6 +70,7 @@ inputs = {
         "requested_sightseeing_stops": "hiking the trails between the villages",
         "tour_guide": None,
         "season": "spring",
+        "art_style": None,
     },
     "costarica": {
         "destination": "costarica",
@@ -71,6 +79,7 @@ inputs = {
         "requested_sightseeing_stops": None,
         "tour_guide": None,
         "season": "dry season",
+        "art_style": None,
     },
     "dubai": {
         "destination": "dubai",
@@ -79,6 +88,7 @@ inputs = {
         "requested_sightseeing_stops": "a ride in an abra (i.e. a traditional boat) on Dubai Creek",
         "tour_guide": None,
         "season": "winter",
+        "art_style": None,
     },
     "greece": {
         "destination": "greece",
@@ -87,6 +97,7 @@ inputs = {
         "requested_sightseeing_stops": "a donkey ride on Santorini",
         "tour_guide": "catamaran captain",
         "season": "spring",
+        "art_style": None,
     },
     "istanbul": {
         "destination": "istanbul",
@@ -95,6 +106,7 @@ inputs = {
         "requested_sightseeing_stops": "riding the historic tram on Istiklal Avenue",
         "tour_guide": None,
         "season": "spring",
+        "art_style": None,
     },
     "kyoto": {
         "destination": "kyoto",
@@ -103,6 +115,7 @@ inputs = {
         "requested_sightseeing_stops": "bicycling from Kyoto Station to the Kyoto Botanical Gardens along the Kamo-gawa River",
         "tour_guide": "our rickshaw driver, a jovial middle-aged man",
         "season": "spring",
+        "art_style": None,
     },
     "london": {
         "destination": "london",
@@ -111,6 +124,7 @@ inputs = {
         "requested_sightseeing_stops": None,
         "tour_guide": "the driver of our double-decker bus, a middle-aged British man with an attention to detail that rivals Sherlock Holmes",
         "season": "spring",
+        "art_style": None,
     },
     "napa": {
         "destination": "napa",
@@ -119,6 +133,7 @@ inputs = {
         "requested_sightseeing_stops": "a ride in a hot air balloon",
         "tour_guide": None,
         "season": "fall",
+        "art_style": None,
     },
     "newyorkcity": {
         "destination": "newyorkcity",
@@ -127,6 +142,7 @@ inputs = {
         "requested_sightseeing_stops": None,
         "tour_guide": "a middle-aged man with a thick Brooklyn accent whose family has been in New York City for many generations",
         "season": "fall",
+        "art_style": None,
     },
     "paris": {
         "destination": "paris",
@@ -135,6 +151,7 @@ inputs = {
         "requested_sightseeing_stops": None,
         "tour_guide": "a man in his early 40s who wears a beret and neckerchief and speaks with just a slight French accent",
         "season": "spring",
+        "art_style": None,
     },
     "queenstown": {
         "destination": "queenstown",
@@ -143,6 +160,7 @@ inputs = {
         "requested_sightseeing_stops": None,
         "tour_guide": None,
         "season": "summer",
+        "art_style": None,
     },
     "rio": {
         "destination": "rio",
@@ -151,6 +169,7 @@ inputs = {
         "requested_sightseeing_stops": None,
         "tour_guide": "our limousine driver, a quiet but friendly man in his early 50s who is aging gracefully",
         "season": "late spring",
+        "art_style": None,
     },
     "shanghai": {
         "destination": "shanghai",
@@ -159,6 +178,7 @@ inputs = {
         "requested_sightseeing_stops": "a Huangpu River cruise",
         "tour_guide": None,
         "season": "fall",
+        "art_style": None,
     },
     "tokyo": {
         "destination": "tokyo",
@@ -167,5 +187,6 @@ inputs = {
         "requested_sightseeing_stops": None,
         "tour_guide": "a gregarious but soft-spoken young woman",
         "season": "spring",
+        "art_style": None,
     },
 }

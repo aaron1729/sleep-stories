@@ -1,0 +1,483 @@
+OVERUSED WORD ALLOWANCES (computed with B=3):
+tapestry: 0
+testament: 1
+grandeur: 0
+symphony: 2
+tribute: 1
+homage: 0
+tranquil: 2
+chariot: 0
+mosaic: 2
+vibrant: 2
+bustling: 2
+verdant: 2
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): 
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+The journey on the island begins with a drive that meanders through the soothing landscape, bringing us to the revered Tanah Lot Temple. Nestled on a mighty rock formation, carved by the persistent touch of the sea, the temple stands as an illustrious sentinel against the vast canvas of the sky and ocean. It is a wonder to behold, with waves lapping at the base, creating a symphony of sounds that is as calming as the cool breeze that sweeps over the coast.
+
+Upon arrival, we are greeted by the sight of tourists and locals alike, clad in sarongs and sashes, making their way respectfully through the meandering stalls. The vendors' gentle chatter and laughter fill the air, offering a cornucopia of local crafts that whisper of the island's rich culture. Our guide explains that Tanah Lot is a cornerstone of Balinese mythology, one of seven sea temples that form a chain along the coast, said to be created in the sixteenth century by Dang Hyang Nirartha. We tread carefully over tidal rocks, the sea spray misting the air and coating our skin with its salty kiss. As we reach the temple's base, the silhouette of this sacred structure is stark against the hues of the encroaching sunset, and we pause to witness the delicate ritual of blessing by temple priests, an experience connecting us to the divine essence of this mystical place. Meanwhile, photographers are poised with lenses aimed, eager to capture the temple's poignant shadow as the daylight slowly gives way to the shades of dusk.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+The journey on the island begins with a drive that meanders through the soothing landscape, bringing us to the revered Tanah Lot Temple. Nestled on a mighty rock formation, carved by the persistent touch of the sea, the temple stands as an illustrious sentinel against the vast canvas of the sky and ocean. It is a wonder to behold, with waves lapping at the base, creating a blend of sounds that is as calming as the cool breeze that sweeps over the coast.
+
+Upon arrival, we are greeted by the sight of tourists and locals alike, clad in sarongs and sashes, making their way respectfully through the winding stalls. The vendors' gentle chatter and laughter fill the air, offering a collection of local crafts that whisper of the island's rich culture. Our guide explains that Tanah Lot is a cornerstone of Balinese mythology, one of seven sea temples that form a chain along the coast, said to be created in the sixteenth century by Dang Hyang Nirartha. We tread carefully over tidal rocks, the sea spray misting the air and coating our skin with its salty kiss. As we reach the temple's base, the silhouette of this sacred structure is stark against the hues of the encroaching sunset, and we pause to witness the delicate ritual of blessing by temple priests, an experience connecting us to the divine essence of this mystical place. Meanwhile, photographers are poised with lenses aimed, eager to capture the temple's poignant shadow as the daylight slowly gives way to the shades of dusk.
+
+==========
+
+REWRITING SUCCESS: False
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): roman numerals
+
+number of rewrites: 3
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+Drawing inspiration from the array of creativity at the Ubud Traditional Art Market, we venture forth to the revered Tirta Empul Temple. Stepping onto the temple grounds, a shift in the air is palpable, a whisper of the eternal. The temple, established around nine hundred and twenty-six AD, stands as a monument to a legendary narrative of divine combat between the god Indra and the magical king, Mayadenawa. Here, the holy spring water, thought to possess curative powers, pools serenely into baths used for purification rituals.
+
+The name 'Tirta Empul' itself conjures the essence of purity, translating to 'holy water spring' in the local language. Observers are treated to the soothing sight of devotees, clothed in traditional sarongs and sashes, stepping reverently into the crystalline waters. Each fountain carries its own significance, and as visitors immerse themselves, there is an air of calm intention, a shared moment of seeking and renewal. Amid this sacred act, the gentle sound of water trickling joins the serene visuals of koi gliding beneath the surface of tranquil ponds. The vibrant greenery that frames these pools accentuates the sense of a living temple, where visitors can witness spirituality flourishing in the waters of Tirta Empul.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+Drawing inspiration from the array of creativity at the Ubud Traditional Art Market, we venture forth to the revered Tirta Empul Temple. Stepping onto the temple grounds, a shift in the air is noticeable, a whisper of the eternal. The temple, established around nine twenty-six AD, stands as a monument to a fabled narrative of divine combat between the god Indra and the magical king, Mayadenawa. Here, the holy spring water, believed to have healing properties, pools peacefully into baths used for purification rituals.
+
+The name 'Tirta Empul' itself evokes the essence of purity, translating to 'holy water spring' in the local language. Observers are treated to the soothing sight of devotees, dressed in traditional sarongs and sashes, stepping respectfully into the clear waters. Each fountain carries its own significance, and as visitors immerse themselves, there is an atmosphere of calm intention, a shared moment of seeking and renewal. Amid this sacred act, the gentle sound of water trickling joins the serene visuals of koi gliding beneath the surface of peaceful ponds. The rich greenery that surrounds these pools emphasizes the sense of a living temple, where visitors can witness spirituality thriving in the waters of Tirta Empul.
+
+-----
+
+Drawing inspiration from the array of creativity at the Ubud Traditional Art Market, we venture forth to the revered Tirta Empul Temple. Stepping onto the temple grounds, a shift in the air is noticeable, a whisper of the eternal. The temple, established around nine hundred twenty-six AD, stands as a monument to a fabled narrative of divine combat between the god Indra and the magical king, Mayadenawa. Here, the holy spring water, believed to have healing properties, pools calmly into baths used for purification rituals.
+
+The name 'Tirta Empul' itself conveys the essence of purity, translating to 'holy water spring' in the local language. Observers are treated to the calming sight of devotees, dressed in traditional sarongs and sashes, stepping respectfully into the clear waters. Each fountain carries its own significance, and as visitors immerse themselves, there is an air of focused intention, a shared moment of seeking and renewal. Amid this sacred act, the gentle sound of water trickling joins the peaceful visuals of koi gliding beneath the surface of placid ponds. The lush foliage that surrounds these pools emphasizes the sense of a living temple, where visitors can witness spirituality thriving in the waters of Tirta Empul.
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+Drawing inspiration from the array of creativity at the Ubud Traditional Art Market, we set out to the revered Tirta Empul Temple. Upon entering the temple grounds, a shift in the atmosphere is perceived, a whisper of eternity. The temple, founded around the year nine hundred twenty-six AD, stands as a monument to a legendary tale of divine conflict between the god Indra and the mystical king, Mayadenawa. Here, the holy spring water, thought to have medicinal qualities, flows gently into baths used for ceremonial cleansing.
+
+The name 'Tirta Empul' itself expresses the essence of purity, translating to 'holy water spring' in the local language. Observers are treated to the soothing sight of devotees, cloaked in traditional sarongs and sashes, stepping with reverence into the crystal-clear waters. Each spout carries its own importance, and as visitors immerse themselves, there is an ambiance of concentrated purpose, a shared instance of quest and restoration. Amid this holy ritual, the soft sound of water dripping joins the serene imagery of koi swimming beneath the surface of still ponds. The full greenery that envelops these pools highlights the sense of a living sanctuary, where guests can observe spirituality flourishing in the waters of Tirta Empul.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): 
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+After the serene sanctity of Tirta Empul Temple, our spirits are lifted even further as we approach the thriving haven that is the Bali Bird Park. A sanctuary in every sense, this tropical paradise is home to more than one thousand birds, representing about two hundred and fifty diverse species. What makes the park even more special is its dedication to the conservation of Indonesian endangered wildlife, ensuring future generations may continue to marvel at these winged wonders. 
+
+As we wander through the aviaries, the air around us is alive with the flutter of wings and a chorus of calls and songs from an array of feathered inhabitants. The Bali Rainforest Free Flight Bird Show is a testament to freedom, with birds soaring overhead, close enough for us to appreciate the delicate whisper of their wings. In the Guyu Guyu Corner, the delight is palpable as we extend our arms to welcome perching birds, their richly colored plumage standing in bright contrast against the lush greenery that envelops us. In this place, where humans and birds connect in shared admiration, we find ourselves enveloped in an environment that hums with life, each chirp and warble drawing us deeper into the beauty of the natural world.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+After the peaceful sanctity of Tirta Empul Temple, our spirits are lifted even further as we approach the flourishing haven that is the Bali Bird Park. A sanctuary in every sense, this tropical paradise is home to more than one thousand birds, representing about two hundred and fifty diverse species. What makes the park even more special is its dedication to the conservation of Indonesian endangered wildlife, ensuring future generations may continue to marvel at these winged wonders.
+
+As we wander through the aviaries, the air around us is alive with the flutter of wings and a medley of calls and songs from an array of feathered inhabitants. The Bali Rainforest Free Flight Bird Show is a celebration of freedom, with birds soaring overhead, close enough for us to appreciate the delicate whisper of their wings. In the Guyu Guyu Corner, the delight is tangible as we extend our arms to welcome perching birds, their richly colored feathers standing in sharp contrast against the fresh greenery that envelops us. In this place, where humans and birds connect in shared admiration, we find ourselves wrapped in an environment that pulses with life, each chirp and warble drawing us deeper into the beauty of the natural world.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): 
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+As we depart from the striking vistas of Mount Batur, our journey brings us to the enigmatic and historic Goa Gajah, or the Elephant Cave. This sanctuary, established in the ninth century as a place for quiet reflection and meditation, nestles itself within the embrace of the Balinese jungle. The stone façade of the cave entrance reveals carvings of mythological creatures and demons, masterfully etched into the rock, telling of a time steeped in mysticism and lore.
+
+Stepping closer, we witness the rock-wall carvings that frame the entrance, a tableau of forest scenes with leaf-patterned designs creating a prelude to the wonders within. The complex is replete with relics of spiritual and historical resonance, baths, and fountains that stand the test of time. Visitors meander through guided tours, eager to soak in the significance of each intricate detail. Our amble through the verdant gardens leading to the cave is accompanied by the soft sounds of nature and the occasional aroma of burning incense, a sensory reminder of the passage through past and present.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+As we depart from the striking vistas of Mount Batur, our journey brings us to the enigmatic and historic Goa Gajah, or the Elephant Cave. This sanctuary, established in the ninth century as a place for quiet reflection and meditation, nestles itself within the embrace of the Balinese jungle. The stone façade of the cave entrance reveals carvings of mythological creatures and demons, masterfully etched into the rock, telling of a time steeped in mysticism and lore.
+
+Stepping closer, we witness the rock-wall carvings that frame the entrance, a display of forest scenes with leaf-patterned designs creating a prelude to the wonders within. The complex is replete with relics of spiritual and historical resonance, baths, and fountains that withstand the ravages of time. Visitors meander through guided tours, eager to soak in the significance of each intricate detail. Our walk through the lush gardens leading to the cave is accompanied by the soft sounds of nature and the occasional aroma of burning incense, a sensory reminder of the passage through past and present.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): 
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+From the vibrant sea of green that is Jatiluwih Green Land, we ascend the sacred slopes of Mount Agung to behold the majestic Besakih Temple. Standing for over a thousand years, this venerable sanctuary pre-dates the Majapahit era, anchoring a spiritual lineage deep into the fabric of Balinese history. The expansive temple complex encompasses at least eighty-six sacred structures, with the main Pura Penataran Agung presiding over the spiritual assembly, accompanied by eighteen others in solemn testimony to the divine.
+
+Besakih is affectionately known as the 'Mother Temple' and holds a unique position in the hearts of the Balinese, welcoming adherents from all caste groups. Its unifying presence in Balinese Hinduism is celebrated during grand ceremonies for Galungan, Kuningan, and Saraswati, drawing devotees from all over the island. Visitors, through respectful participation in guided tours, gain insights into the temple's profound cultural and historical significance. A simple yet meaningful act of wearing a sarong and sash, often procured from congenial local vendors, marks one's entry into the temple, serving as a fabric bridge between visitor and tradition, allowing for a deeper appreciation of the community and its enduring customs.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+From the lively sea of green that is Jatiluwih Green Land, we climb the sacred slopes of Mount Agung to witness the majestic Besakih Temple. Standing for over one thousand years, this venerable sanctuary pre-dates the Majapahit era, embedding a spiritual lineage deep into the history of Bali. The extensive temple complex includes at least eighty-six holy structures, with the main Pura Penataran Agung overseeing the spiritual assembly, accompanied by eighteen others in solemn evidence to the divine.
+
+Besakih is affectionately known as the 'Mother Temple' and holds a special place in the hearts of the Balinese, welcoming adherents from all caste groups. Its uniting presence in Balinese Hinduism is recognized during large ceremonies for Galungan, Kuningan, and Saraswati, attracting devotees from across the island. Visitors, through respectful participation in guided tours, gain insights into the temple's significant cultural and historical importance. A simple yet significant act of wearing a sarong and sash, often obtained from friendly local vendors, marks one's entry into the temple, acting as a connecting element between visitor and tradition, allowing for a deeper understanding of the community and its lasting customs.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): ('tapestry', 1, 0), ('testament', 1, 0)
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+After absorbing the spiritual atmosphere of Besakih Temple, we continue our journey to witness the iconic Pura Ulun Danu Bratan. Serenely poised on the edge of Lake Bratan, this water temple has graced countless postcards with its seemingly floating meru, or pagodas. Built in the seventeenth century, this picturesque sanctuary is dedicated to Dewi Danu, the goddess of waters, and her essence is palpable in the gentle ripples that caress the temple’s foundations.
+
+The temple complex, which includes an eleven-tiered meru dedicated to Shiva and his consort Parvathi, presents a delicate balance of manmade craftsmanship and natural splendor. Here, cameras are perpetually aimed at the temple’s reflection upon the water, a mirror image that captures the imagination of all who visit. Observing the devotion in the religious rituals and ceremonies performed by local adherents is to witness the enduring pulse of Balinese faith—a testament to the cultural tapestry that continues to inspire and enrich the human experience.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+After absorbing the spiritual atmosphere of Besakih Temple, we continue our journey to witness the iconic Pura Ulun Danu Bratan. Serenely poised on the edge of Lake Bratan, this water temple has graced countless postcards with its seemingly floating meru, or pagodas. Built in the seventeenth century, this picturesque sanctuary is dedicated to Dewi Danu, the goddess of waters, and her essence is palpable in the gentle ripples that caress the temple’s foundations.
+
+The temple complex, which includes an eleven-tiered meru dedicated to Shiva and his consort Parvathi, presents a delicate balance of manmade artistry and natural beauty. Here, cameras are perpetually aimed at the temple’s reflection upon the water, a mirror image that captures the imagination of all who visit. Observing the devotion in the religious rituals and ceremonies performed by local adherents is to witness the enduring pulse of Balinese faith—a reflection of the cultural fabric that continues to inspire and enrich the human experience.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): ('tapestry', 1, 0), ('symphony', 1, 0), ('vibrant', 1, 0)
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+Leaving the reflective serenity of Pura Ulun Danu Bratan behind, our senses prepare to be engulfed in the lush expanse of the Bali Botanic Garden or Kebun Raya Bedugul. Established in nineteen fifty-nine, this sprawling haven stretches across one hundred and fifty-seven hectares upon the slopes of the mountain from which it draws its name, offering a cool reprieve from the tropical heat lower down the hillsides. With over two thousand species of plants, the gardens represent a living tapestry that celebrates the rich biodiversity of the tropics.
+
+Audrey Hepburn once said, 'To plant a garden is to believe in tomorrow,' a sentiment that resonates through the vibrant aisles of flora at Bedugul. Photography enthusiasts can be seen delighting in the vivid colors and intricate patterns, striving to capture the garden's dynamic beauty. A stroll here is a journey through a palette of greens set against a symphony of rustling leaves and the melodic calls of resident birds, which together, create an atmosphere steeped in peace and natural grace.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+Leaving the reflective calm of Pura Ulun Danu Bratan behind, our senses prepare to be engulfed in the lush expanse of the Bali Botanic Garden or Kebun Raya Bedugul. Established in nineteen fifty-nine, this sprawling haven stretches across one hundred and fifty-seven hectares upon the slopes of the mountain from which it draws its name, offering a cool reprieve from the tropical heat lower down the hillsides. With over two thousand species of plants, the gardens represent a living collage that celebrates the rich biodiversity of the tropics.
+
+Audrey Hepburn once said, 'To plant a garden is to believe in tomorrow,' a sentiment that echoes through the colorful aisles of flora at Bedugul. Photography enthusiasts can be seen delighting in the vivid colors and intricate patterns, striving to capture the garden's dynamic beauty. A stroll here is a journey through a palette of greens set against a backdrop of rustling leaves and the melodic calls of resident birds, which together, create an atmosphere steeped in peace and natural elegance.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): ('homage', 1, 0)
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+Leaving behind the natural splendors of Pasih Uug, we transition to cultural immersion at Museum Puri Lukisan in the heart of Ubud. This repository of creativity, Ubud's oldest art museum, was founded in nineteen fifty-six by Dutch artist Rudolf Bonnet and his Balinese counterpart, Cokorda Gde Agung Sukawati. Its walls are adorned with an impressive narrative of Balinese artistic evolution, featuring traditional paintings, intricate wood carvings, and the strides toward contemporary expression.
+
+The museum offers a window into the diverse artistic styles that characterize the regions of Balinese art, paying homage to the creative spirits of Ubud, Sanur, Batuan, and the Young Artist movement. Peace surrounds the museum just as beauty does within, evidenced by the tranquil gardens that serve as a natural proscenium accentuating the artistic exploration of those who venture here. It is not uncommon to find visitors seated within the museum's courtyard, sketchbooks or cameras in hand, soaking in the quietude and seeking to capture or reflect upon the serenity that permeates both the art and the landscape alike.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+Leaving behind the natural wonders of Pasih Uug, we transition to cultural immersion at Museum Puri Lukisan in the heart of Ubud. This repository of creativity, Ubud's oldest art museum, was founded in nineteen fifty-six by Dutch artist Rudolf Bonnet and his Balinese counterpart, Cokorda Gde Agung Sukawati. Its walls are adorned with an impressive narrative of Balinese artistic evolution, featuring traditional paintings, intricate wood carvings, and the strides toward contemporary expression.
+
+The museum offers a window into the diverse artistic styles that characterize the regions of Balinese art, acknowledging the creative spirits of Ubud, Sanur, Batuan, and the Young Artist movement. Peace surrounds the museum just as beauty does within, evidenced by the calm gardens that serve as a natural framing for the artistic exploration of those who venture here. It is not uncommon to find visitors seated within the museum's courtyard, sketchbooks or cameras in hand, soaking in the quiet and seeking to capture or reflect upon the calmness that permeates both the art and the landscape alike.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): ('tapestry', 1, 0), ('testament', 1, 0)
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+After the artistic indulgence of Museum Puri Lukisan, we find ourselves drawn to the sacred echoes of history at Gunung Kawi. Carved into the rock face, this temple complex dates back to the eleventh century, envisioned by the Balinese Hindu king Udayana. Each of the ten rock-cut candi, or shrines, was meticulously hewn from the cliff to stand as memorials to the royal family, their stoic silhouettes a testament to an era shrouded in regality and reverence.
+
+Legend intertwines with history here, with whispers of the giant king, Kebo Iwa, enhancing the site's hallowed aura. The gentle murmur of the Pakerisan river weaves through the temple grounds, adding a layer of serenity to the atmosphere. Visitors approach Gunung Kawi with a sense of discovery, wandering through surrounding rice paddies and descending nearly three hundred steps to reach the shrine's entrance. Many engage in age-old offering ceremonies, their spirits joining the chorus of devotion that resonates in this mystical locale. Imagining oneself barefoot, fording the river's shallows, fingertips grazing the ancient stone, one feels a connection to the past—every carving, every whisper of the river or rustle of leaves, a thread in the tapestry of time that remains unbroken to this day.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+After the artistic indulgence of Museum Puri Lukisan, we find ourselves drawn to the sacred echoes of history at Gunung Kawi. Carved into the rock face, this temple complex dates back to the eleventh century, envisioned by the Balinese Hindu king Udayana. Each of the ten rock-cut candi, or shrines, was meticulously hewn from the cliff to stand as memorials to the royal family, their stoic silhouettes a reflection of an era shrouded in regality and reverence.
+
+Legend intertwines with history here, with whispers of the giant king, Kebo Iwa, enhancing the site's sacred aura. The gentle murmur of the Pakerisan river weaves through the temple grounds, adding a layer of calm to the atmosphere. Visitors approach Gunung Kawi with a sense of discovery, wandering through surrounding rice paddies and descending nearly three hundred steps to reach the shrine's entrance. Many engage in age-old offering ceremonies, their spirits joining the choir of devotion that resonates in this mystical locale. Imagining oneself barefoot, fording the river's shallows, fingertips grazing the ancient stone, one feels a connection to the past—every carving, every whisper of the river or rustle of leaves, a link in the fabric of time that remains unbroken to this day.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): ('tranquil', 1, 0)
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+Still reveling in the exuberant rush from the Bali Swing, we now enter the graceful reverence of Pura Taman Ayun. Enclosed within the Mengwi district, this temple compound is a harmonious fusion of sacred Balinese architecture and meticulously cultivated gardens. Constructed in sixteen thirty-four by Tjokorda Sakti Blambangan, ruler of the Mengwi kingdom, the temple elegantly displays Chinese architectural influences.
+
+Designated as a UNESCO World Heritage site, Pura Taman Ayun bears cultural significance that resonates through its storied past and its presence in various literary works recounting Bali's religious traditions. The temple's elegant Meru towers rise dramatically against the sky, capturing the admiration of visitors and the lenses of their cameras, while the tranquil moats and ponds reflect their graceful forms. Guests amble through the lush gardens, some offering a silent prayer, others simply sitting by the water’s edge, letting the peace of the environment wash over them as koi glide below and the whispers of the trees lull their thoughts into quiet meditation.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+Still reveling in the enthusiastic energy from the Bali Swing, we now enter the graceful respect of Pura Taman Ayun. Enclosed within the Mengwi district, this temple compound is a harmonious blend of sacred Balinese architecture and meticulously tended gardens. Constructed in sixteen thirty-four by Tjokorda Sakti Blambangan, ruler of the Mengwi kingdom, the temple elegantly displays Chinese architectural influences.
+
+Designated as a UNESCO World Heritage site, Pura Taman Ayun bears cultural significance that resonates through its historical narrative and its presence in various literary works recounting Bali's religious traditions. The temple's elegant Meru towers rise sharply against the sky, capturing the admiration of visitors and the lenses of their cameras, while the peaceful moats and ponds reflect their stately forms. Guests stroll through the lush gardens, some offering a silent prayer, others simply sitting by the water’s edge, allowing the serenity of the environment to envelop them as koi glide below and the whispers of the trees soothe their thoughts into quiet contemplation.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): ('tapestry', 1, 0), ('vibrant', 1, 0), ('verdant', 1, 0)
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+As we bid farewell to Alas Harum Bali, with its lush landscapes and aromatic brews, we reflect on the rich tapestry of experiences that have unfolded before us. Our journey has been one of discovery, guided by the gentle hand of our knowledgeable guide, whose stories and insights have added a layer of depth to the stunning sights of Bali. With each destination, from the majestic temples to the verdant terraces, the playful monkeys to the serene botanical gardens, we have been warmly welcomed into a world where the spiritual meets the scenic, where every moment is infused with the island's enchanting spirit.
+
+Gazing out the car window, the vibrant hues of Bali seem to dance with the same lively rhythm that pulses through its culture, its art, and its people. Behind us, rental scooters stand as silent invitations for future exploration, each path carrying the promise of new adventures. We carry home memories of the island's splendor, our hearts buoyant with the serene beauty and the peaceful harmony that Bali embodies, a gentle reminder that even in the quietest corners of the world, there is a wealth of wonder waiting to be discovered.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+As we bid farewell to Alas Harum Bali, with its lush landscapes and aromatic brews, we reflect on the rich array of experiences that have unfolded before us. Our journey has been one of discovery, guided by the gentle hand of our knowledgeable guide, whose stories and insights have enriched the stunning sights of Bali. With each destination, from the grand temples to the green terraces, the playful monkeys to the calm botanical gardens, we have been warmly welcomed into a world where the spiritual meets the picturesque, where every moment is infused with the island's enchanting spirit.
+
+Gazing out the car window, the lively hues of Bali seem to dance with the same energetic rhythm that pulses through its culture, its art, and its people. Behind us, rental scooters stand as silent invitations for future exploration, each path carrying the promise of new adventures. We carry home memories of the island's beauty, our hearts buoyant with the serene beauty and the peaceful harmony that Bali embodies, a gentle reminder that even in the most remote corners of the world, there is a wealth of wonder waiting to be discovered.

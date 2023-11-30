@@ -1,0 +1,613 @@
+OVERUSED WORD ALLOWANCES (computed with B=3):
+tapestry: 1
+testament: 0
+grandeur: 2
+symphony: 1
+tribute: 0
+homage: 0
+tranquil: 2
+chariot: 1
+mosaic: 0
+vibrant: 2
+bustling: 0
+verdant: 1
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): 
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+Autumn lays a serene blanket over New York City, casting the urban landscape of steel and concrete in warm oranges, yellows, and reds that contrast with the ever-present greenery of Central Park. There’s a certain alchemy to New York in the fall; the leaves are turning, the air carries the crisp promise of winter, and the city feels as if it's exhaling slowly, transforming the summer's energetic pulse into a more measured, contemplative rhythm. Eager anticipation fills us as we prepare to explore the vibrant cityscape, not through the pages of a travel guide, but first-hand, atop an open-top bus and weaving through the boroughs aboard the Metro, all under the guidance of our seasoned, middle-aged New York guide, whose family roots in the city run as deep as the ancient bedrock the metropolis stands on.
+
+Our guide, with his thick Brooklyn drawl, is a living anthology of the city's tales, embodying the spirit of a thousand New York anecdotes passed down through generations, as comfortable with the city's rich history as he is with its contemporary heartbeat. He's preparing to share his love for the Big Apple—the enchanting architecture, iconic landmarks, and the tucked-away corners known only to true locals—with a gentle enthusiasm that seems to suggest he's not only showing us around but letting us in on a cherished secret that only a native New Yorker could. We're not just sightseers; we're about to become part of New York's ever-unfolding story, one which includes skyscrapers reaching toward the heavens, statues and fountains speaking of bygone era's aspirations, and the hallowed halls of world-renowned museums that beckon with the whispers of artistic and scientific marvels.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+Autumn lays a peaceful blanket over New York City, casting the urban landscape of steel and concrete in warm oranges, yellows, and reds that contrast with the ever-present greenery of Central Park. There’s a certain magic to New York in the fall; the leaves are turning, the air carries the crisp promise of winter, and the city feels as if it's exhaling slowly, transforming the summer's energetic pulse into a more measured, thoughtful rhythm. Eager anticipation fills us as we prepare to explore the active cityscape, not through the pages of a travel guide, but first-hand, atop an open-top bus and weaving through the boroughs aboard the Metro, all under the guidance of our seasoned, middle-aged New York guide, whose family roots in the city run as deep as the ancient bedrock the metropolis stands on.
+
+Our guide, with his thick Brooklyn drawl, is a living collection of the city's tales, embodying the spirit of a thousand New York anecdotes passed down through generations, as comfortable with the city's rich history as he is with its contemporary heartbeat. He's preparing to share his love for the Big Apple—the enchanting architecture, iconic landmarks, and the tucked-away corners known only to true locals—with a gentle enthusiasm that seems to suggest he's not only showing us around but letting us in on a cherished secret that only a native New Yorker could. We're not just sightseers; we're about to become part of New York's ever-unfolding story, one which includes skyscrapers reaching toward the sky, statues and fountains speaking of past era's aspirations, and the hallowed halls of world-renowned museums that beckon with the whispers of artistic and scientific wonders.
+
+==========
+
+REWRITING SUCCESS: False
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): roman numerals, ('mosaic', 1, 0)
+
+number of rewrites: 3
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+As our open-top bus rolls gently along the perimeter of Central Park, the rim of yellow and red treetops peek over the low stone walls, inviting us into its expansive embrace. Our guide, with a gentle nod towards its vastness, encourages us to disembark and step into this living canvas of natural splendor that was meticulously crafted by the visionary landscape architects Frederick Law Olmsted and Calvert Vaux. Opening in eighteen fifty-eight, the park now covers eight hundred and forty-three acres, a green heart in the midst of Manhattan's concrete and steel physique.
+
+We find ourselves wandering along one of the many winding pathways, following in the footsteps of the countless characters who've brushed against these leaves in literature, not least of which is Holden Caulfield, the somber protagonist of J.D. Salinger's 'The Catcher in the Rye'. The connection to art and culture can be felt even underfoot, as we approach the Imagine Mosaic at Strawberry Fields, reflecting on the legacy of John Lennon. Nearby, the sound of oars dipping gently into the lake accompanies the lighthearted laughter of visitors rowing leisurely, while others lay sprawled on the Great Lawn, their faces turned towards the clear sky, lost in daydreams or the pages of a good book. We take a respite ourselves in the Central Park Conservatory Garden, where the orderly rows of flowers and hushed atmosphere provide a soothing pause from the city's perpetual hum. Here, in this cultivated Eden, one can indulge in serene reflection, surrounded by the delicate touch of nature within the world's most famous metropolis.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+As our open-top bus rolls gently along the perimeter of Central Park, the rim of yellow and red treetops peek over the low stone walls, inviting us into its expansive clasp. Our guide, with a gentle nod towards its vastness, encourages us to disembark and step into this living canvas of natural wonder that was meticulously crafted by the visionary landscape architects Frederick Law Olmsted and Calvert Vaux. Opening in eighteen fifty-eight, the park now covers eight hundred and forty-three acres, a green heart in the midst of Manhattan's concrete and steel physique.
+
+We find ourselves wandering along one of the many winding pathways, following in the footsteps of the countless characters who've brushed against these leaves in literature, not least of which is Holden Caulfield, the somber protagonist of J.D. Salinger's 'The Catcher in the Rye'. The connection to art and culture can be felt even underfoot, as we approach the Imagine Mosaic at Strawberry Fields, pondering on the legacy of John Lennon. Nearby, the sound of oars dipping gently into the lake accompanies the light-hearted laughter of visitors rowing at ease, while others lay sprawled on the Great Lawn, their faces turned towards the clear sky, lost in daydreams or the pages of a good book. We take a respite ourselves in the Central Park Conservatory Garden, where the orderly arranged flowers and quiet atmosphere provide a soothing break from the city's perpetual noise. Here, in this cultivated paradise, one can engage in calm reflection, surrounded by the subtle presence of nature within the world's most famous metropolis.
+
+-----
+
+As our open-top bus rolls gently along the edge of Central Park, the rim of yellow and red tree crowns peek over the low stone walls, beckoning us into its expansive embrace. Our guide, with a subtle nod towards its immensity, encourages us to disembark and step into this living scene of natural beauty that was meticulously designed by the visionary landscape architects Frederick Law Olmsted and Calvert Vaux. Opening in eighteen fifty-eight, the park now spans eight hundred and forty-three acres, a green oasis in the heart of Manhattan's concrete and steel frame.
+
+We find ourselves meandering along one of the many winding paths, tracing the steps of the countless figures who've brushed against these leaves in works of fiction, including Holden Caulfield, the introspective lead of J.D. Salinger's 'The Catcher in the Rye'. The connection to art and culture can be felt even underfoot, as we draw near to the Imagine Mosaic at Strawberry Fields, reflecting on the impact of John Lennon. Nearby, the sound of oars dipping gently into the lake pairs with the carefree laughter of voyagers rowing leisurely, while others recline on the Great Lawn, their faces turned skywards, absorbed in reverie or the pages of a captivating novel. We pause ourselves in the Central Park Conservatory Garden, where the neatly arranged blooms and stillness offer a restful hiatus from the city's unending sound. Here, in this carefully tended paradise, one can indulge in peaceful contemplation, enveloped by the soft essence of nature within the world's most renowned city.
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+As our open-top bus rolls gently along the edge of Central Park, the rim of yellow and red tree crowns peek over the low stone walls, beckoning us into its expansive embrace. Our guide, with a subtle nod towards its vastness, encourages us to disembark and step into this living scene of natural splendor that was meticulously designed by the visionary landscape architects Frederick Law Olmsted and Calvert Vaux. Opening in eighteen fifty-eight, the park now spans eight hundred and forty-three acres, a green oasis in the heart of Manhattan's concrete and steel frame.
+
+We find ourselves wandering along one of the many winding paths, tracing the steps of the countless figures who've brushed against these leaves in works of fiction, including Holden Caulfield, the introspective protagonist of J.D. Salinger's 'The Catcher in the Rye'. The connection to art and culture can be felt even underfoot, as we draw near to the Imagine Mosaic at Strawberry Fields, reflecting on the impact of John Lennon. Nearby, the sound of oars dipping gently into the lake pairs with the carefree laughter of travelers rowing at leisure, while others lounge on the Great Lawn, their faces turned skywards, absorbed in deep thought or the pages of a captivating book. We pause ourselves in the Central Park Conservatory Garden, where the neatly arranged flowers and calm offer a peaceful break from the city's incessant noise. Here, in this carefully curated garden, one can indulge in serene reflection, enveloped by the gentle essence of nature within the world's most famous city.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): ('vibrant', 1, 0), ('bustling', 1, 0)
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+From the timeless Grand Central Terminal, our guide suggests a journey to a place where the gentle rhythm of the East River meets the echoes of old New York. We find ourselves at South Street Seaport, a historic district where the cobblestone streets and some of the oldest buildings in downtown Manhattan whisper stories of the city's vibrant maritime past. Once the bustling heart of New York's fish market before its relocation to the Bronx in two thousand and five, the Seaport has endured and thrived, even in the face of significant damage from Hurricane Sandy in twenty twelve.
+
+As we meander through the revitalized area, it's easy to imagine the energetic commerce that once took place here, as described in Herman Melville's epic 'Moby-Dick,' which breathes life into the New York wharves of the past. Today, visitors like us blend seamlessly with the surroundings, exploring diverse shops, savoring the fresh catch of the day at waterfront dining spots, and capturing memories against the delightful backdrop of the Brooklyn Bridge. There's a simple pleasure in strolling these historic streets, feeling the textured cobbles beneath our feet while the aroma of seafood mingles with the fresh breeze from the river—an open-air museum where every stone and beam has a story to tell.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+From the timeless Grand Central Terminal, our guide suggests a journey to a place where the gentle rhythm of the East River meets the echoes of old New York. We find ourselves at South Street Seaport, a historic district where the cobblestone streets and some of the oldest buildings in downtown Manhattan whisper stories of the city's dynamic maritime past. Once the teeming heart of New York's fish market before its relocation to the Bronx in two thousand and five, the Seaport has endured and thrived, even in the face of significant damage from Hurricane Sandy in twenty twelve.
+
+As we meander through the revitalized area, it's easy to imagine the lively trade that once took place here, as described in Herman Melville's epic 'Moby-Dick', which animates the New York wharves of the past. Today, visitors like us blend seamlessly with the surroundings, exploring diverse shops, relishing the fresh catch of the day at waterfront dining venues, and capturing memories against the delightful background of the Brooklyn Bridge. There's a simple pleasure in wandering these historic streets, feeling the textured stones beneath our feet while the scent of seafood blends with the fresh breeze from the river—an open-air museum where every stone and beam has a narrative to share.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): 
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+Descending from the serene green walkway of The High Line, our tranquil enclave amongst the urban expanse, we weave our way through the streets until the spires of St. Patrick's Cathedral pierce the skyline, calling us to a different kind of respite. Laying its cornerstone in eighteen fifty-eight and opening its doors in eighteen seventy-eight, this majestic Neo-Gothic structure offers a hushed sanctuary in contrast to the lively thrum of Midtown Manhattan that surrounds it.
+
+As the seat of the Archbishop of the Roman Catholic Archdiocese of New York, the cathedral can welcome up to three thousand people within its awe-inspiring nave. Having hosted Pope Francis and numerous other dignitaries, its presence is woven into the fabric of the city's narrative. Inside, the Great Organ looms, an orchestration of over seven thousand pipes waiting to fill the hollows of the vast interior with harmonious resonance. Visitors often stand in hushed silence, eyes cast upward towards the towering ceilings, with fingers of colored light streaming through the stained-glass windows bathing the cathedral in a soft, painterly glow. Some light candles, their small flames flickering in the lofty space, while others sit in contemplation, enveloped by the subtle sounds that reverberate off the ancient stone walls, connecting with the cathedral's storied past and the quiet reflection it still inspires today.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+Descending from the serene green walkway of The High Line, our quiet enclave amongst the urban expanse, we navigate through the streets until the spires of St. Patrick's Cathedral pierce the skyline, inviting us to a different kind of reprieve. Laying its cornerstone in eighteen fifty-eight and opening its doors in eighteen seventy-eight, this majestic Neo-Gothic structure offers a quiet sanctuary in contrast to the active hum of Midtown Manhattan that surrounds it.
+
+As the seat of the Archbishop of the Roman Catholic Archdiocese of New York, the cathedral can welcome up to three thousand people within its impressive nave. Having hosted Pope Francis and numerous other dignitaries, its presence is interwoven into the narrative of the city. Inside, the Great Organ looms, a combination of over seven thousand pipes waiting to fill the hollows of the vast interior with melodious sound. Visitors often stand in silent reverence, eyes raised towards the towering ceilings, with streams of colored light filtering through the stained-glass windows casting the cathedral in a soft, painterly illumination. Some light candles, their small flames flickering in the expansive space, while others sit in contemplation, surrounded by the faint sounds that echo off the ancient stone walls, connecting with the cathedral's storied past and the calm introspection it still inspires today.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): ('tranquil', 1, 0), ('bustling', 1, 0)
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+The delightful medley of tastes and aromas from Chelsea Market lingers as we step out into the bustling Midtown streets. Our guide leads us to another treasure of this city, the New York Public Library. The main branch, a Beaux-Arts masterpiece, was opened to an eager public in nineteen eleven. It stands today as much a center for knowledge as a work of architectural art, its entrance flanked by the stately marble lions known as Patience and Fortitude.
+
+We ascend the grand staircase, embraced by the meticulous carvings and soaring ceilings, each step a journey back to an era of stately decorum. The murals high above us watch over visitors like us, who wander through the halls, capturing photographs of the awe-inspiring interiors. The main reading room, stretching seventy-eight feet by two hundred ninety-seven feet with a fifty-two feet high ceiling, invites us to explore its literary expanse. It's there that we witness people from all walks of life and corners of the globe—they pause to admire the art exhibitions, connect to the free Wi-Fi, and, perhaps most magical of all, lose themselves in books under the warm, soothing illumination of the historic desk lamps. The atmosphere is one of shared reverence, a silent acknowledgment of the library's role as a democratic bastion of knowledge and culture, where tranquility and inspiration bloom beneath its majestic ceilings.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+The delightful medley of tastes and aromas from Chelsea Market lingers as we step out into the lively Midtown streets. Our guide leads us to another treasure of this city, the New York Public Library. The main branch, a Beaux-Arts masterpiece, was opened to an eager public in nineteen eleven. It stands today as much a center for knowledge as a work of architectural art, its entrance flanked by the stately marble lions known as Patience and Fortitude.
+
+We ascend the grand staircase, embraced by the meticulous carvings and soaring ceilings, each step a journey back to an era of stately decorum. The murals high above us watch over visitors like us, who wander through the halls, capturing photographs of the awe-inspiring interiors. The main reading room, stretching seventy-eight feet by two hundred ninety-seven feet with a fifty-two feet high ceiling, invites us to explore its literary expanse. It's there that we witness people from all walks of life and corners of the globe—they pause to admire the art exhibitions, connect to the free Wi-Fi, and, perhaps most magical of all, lose themselves in books under the warm, soothing illumination of the historic desk lamps. The atmosphere is one of shared reverence, a silent acknowledgment of the library's role as a democratic bastion of knowledge and culture, where serenity and inspiration bloom beneath its imposing ceilings.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): ('tranquil', 1, 0)
+
+number of rewrites: 2
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+From the hushed and gilded corridors of the New York Public Library, we emerge to embrace the natural allure of Hudson River Park, a picturesque stretch along Manhattan's west side. As the longest waterfront park in the United States, it unfurls from Battery Place to West fifty-ninth Street, an impressive result of the Hudson River Park Act of nineteen ninety-eight, which sought to breathe new life into this section of the city.
+
+Within this urban oasis, we find New Yorkers and tourists alike engaging in a symphony of outdoor activities. The smooth bike paths beckon, and our guide recommends renting bicycles from a nearby Citi Bike sharing station. We cycle along, the cool breeze coming off the Hudson River invigorating our senses. Around us, the park is alive with people jogging, children frolicking in playgrounds, and couples lounging on the grass. The green spaces offer retreats for picnics and sunbathing, while the water's edge presents a front-row seat to the mesmerizing sunset pageant. As the sunlight scatters across the rippling waves, casting an ever-changing canvas of colors, we savor the moment, allowing the picturesque tranquility of the park to wash over us in the softening light of dusk.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+From the hushed and gold-lined hallways of the New York Public Library, we emerge to embrace the natural allure of Hudson River Park, a picturesque stretch along Manhattan's west side. As the longest waterfront park in the United States, it unfurls from Battery Place to West fifty-ninth Street, an impressive result of the Hudson River Park Act of nineteen ninety-eight, which sought to rejuvenate this section of the city.
+
+Within this urban haven, we find New Yorkers and tourists alike engaging in a symphony of outdoor activities. The smooth bike paths beckon, and our guide recommends renting bicycles from a nearby Citi Bike sharing station. We cycle along, the cool breeze coming off the Hudson River invigorating our senses. Around us, the park is alive with people jogging, children playing in playgrounds, and couples lounging on the grass. The green spaces offer retreats for picnics and sunbathing, while the water's edge presents a front-row seat to the captivating sunset display. As the sunlight scatters across the rippling waves, casting an ever-changing canvas of colors, we savor the moment, allowing the beautiful serenity of the park to wash over us in the softening light of dusk.
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+From the hushed and gold-lined hallways of the New York Public Library, we emerge to embrace the natural allure of Hudson River Park, a picturesque stretch along Manhattan's west side. As the longest waterfront park in the United States, it unfurls from Battery Place to West fifty-ninth Street, an impressive result of the Hudson River Park Act of nineteen ninety-eight, which sought to rejuvenate this section of the city.
+
+Within this urban haven, we find New Yorkers and tourists alike engaging in a range of outdoor activities. The smooth bike paths beckon, and our guide recommends renting bicycles from a nearby Citi Bike sharing station. We cycle along, the cool breeze coming off the Hudson River invigorating our senses. Around us, the park is alive with people jogging, children playing in playgrounds, and couples lounging on the grass. The green spaces offer retreats for picnics and sunbathing, while the water's edge presents a front-row seat to the captivating sunset display. As the sunlight scatters across the rippling waves, creating an ever-changing palette of colors, we savor the moment, allowing the peaceful serenity of the park to wash over us in the softening light of dusk.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): ('vibrant', 1, 0)
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+The endless wonders of the American Museum of Natural History still vivid in our minds, we are reminded that the story of life is not only about the past but also the present and future. Our guide, recognizing this quiet curiosity within us, leads the way to the New York Botanical Garden in the Bronx. Here, since its founding in eighteen ninety-one, over two hundred fifty acres of land cradle more than one million living plants, asserting its status as one of the premier botanical gardens in the United States and a respected center for plant research and conservation.
+
+As we meander through the grounds, the Enid A. Haupt Conservatory reveals itself, a crystal palace of Victorian glasshouse artistry sheltering an incredible diversity of tropical, temperate, and desert flora. The Peggy Rockefeller Rose Garden invites us with its vibrant blooms, an enchanting display of roses that beckons bees and captivates the eyes of all who wander its petals-strewn paths. Within this sanctuary, visitors partake in guided tours, capturing the beauty of nature through lenses and attending educational programs, while others find solace in bird watching among the trees. A most soothing interlude can be found while strolling the paths of the Native Plant Garden, where the harmonious arrangement of local plant species and the dulcet tones of nature's soundtrack offer a peaceful, sunny respite from the city's energetic tempo.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+The endless wonders of the American Museum of Natural History still vivid in our minds, we are reminded that the story of life is not only about the past but also the present and future. Our guide, recognizing this silent curiosity within us, leads the way to the New York Botanical Garden in the Bronx. Here, since its founding in eighteen ninety-one, over two hundred fifty acres of land cradle more than one million living plants, asserting its status as one of the premier botanical gardens in the United States and a respected center for plant research and conservation.
+
+As we meander through the grounds, the Enid A. Haupt Conservatory reveals itself, a crystal palace of Victorian glasshouse craftsmanship sheltering an incredible variety of tropical, temperate, and desert flora. The Peggy Rockefeller Rose Garden invites us with its lively blooms, an enchanting display of roses that beckons bees and captivates the eyes of all who wander its petals-strewn paths. Within this refuge, visitors partake in guided tours, capturing the beauty of nature through lenses and attending educational programs, while others find solace in bird watching among the trees. A most calming interlude can be found while strolling the paths of the Native Plant Garden, where the harmonious arrangement of local plant species and the gentle tones of nature's soundtrack offer a peaceful, sunny respite from the city's dynamic pace.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): ('tranquil', 1, 0)
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+Leaving behind the natural tranquility of the New York Botanical Garden, we return to the heart of Midtown Manhattan, where the towering presence of Rockefeller Center captivates us with its Art Deco magnificence. Declared a National Historic Landmark in nineteen eighty-seven, this illustrious complex was brought into being by the famed Rockefeller family and is now an emblem of the city’s prestigious entertainment and commercial life.
+
+Throughout the year, and especially during the winter months, visitors gravitate to the famous ice-skating rink, eagerly lacing up their skates or contentedly observing the graceful glides and good-natured stumbles from the sidelines. Above, the gilded Prometheus statue keeps a watchful eye over the skaters and the seasonal festivities, such as the much-anticipated annual Christmas Tree lighting event that fills the area with festive splendor. Our visit wouldn't be complete without ascending to the Top of the Rock Observation Deck. After purchasing our tickets, a swift elevator ride whisks us high above the streets, where the sweeping vistas of New York’s skyline unfurl in an awe-inspiring panorama, leaving us with a potent sense of the city’s vast, pulsating spirit.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+Leaving behind the calm serenity of the New York Botanical Garden, we return to the heart of Midtown Manhattan, where the towering presence of Rockefeller Center captivates us with its Art Deco majesty. Declared a National Historic Landmark in nineteen eighty-seven, this illustrious complex was brought into being by the famed Rockefeller family and is now an emblem of the city’s high-profile entertainment and commercial life.
+
+Throughout the year, and especially during the winter months, visitors gravitate to the famous ice-skating rink, eagerly lacing up their skates or happily observing the graceful glides and good-natured stumbles from the periphery. Above, the gilded Prometheus statue keeps a watchful eye over the skaters and the seasonal celebrations, such as the much-anticipated annual Christmas Tree lighting event that fills the area with festive brilliance. Our visit wouldn't be complete without ascending to the Top of the Rock Observation Deck. After purchasing our tickets, a rapid elevator ride whisks us high above the streets, where the sweeping vistas of New York’s skyline spread out in an awe-inspiring view, leaving us with a strong sense of the city’s enormous, pulsating spirit.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): ('tranquil', 1, 0)
+
+number of rewrites: 2
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+Departing from the informal charm of Bryant Park, our guide leads us to a sanctuary of fine art and historical opulence, The Frick Collection. Established by the industrialist Henry Clay Frick, who upon his death in nineteen nineteen imparted his New York residence and venerable art collection to the public trust, this museum harbors treasures of the Gilded Age. The mansion itself, constructed between nineteen thirteen and nineteen fourteen, bears the architectural finesse of Thomas Hastings, providing an enviable container for the artistic mastery within.
+
+Inside, the walls of the former Frick Residence speak of a bygone luxury, yet the art it contains—works by European masters like Rembrandt, Bellini, Vermeer, and Gainsborough—provides the true essence of the experience. The tranquil indoor Garden Court, a lush, light-bathed addition from nineteen thirty-five by John Russell Pope, invites visitors to indulge in quiet contemplation. There is a gentle intimacy to the rooms, where one can savor the artwork in an environment reminiscent of an opulent home rather than the expanses of a grand museum. This setting offers a more personal thread to the tapestry of time and the art that has transcended it, allowing us a moment to step back into the era from which these works emerged.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+Departing from the informal charm of Bryant Park, our guide leads us to a sanctuary of fine art and historical richness, The Frick Collection. Established by the industrialist Henry Clay Frick, who upon his death in nineteen nineteen imparted his New York residence and esteemed art collection to the public trust, this museum shelters treasures of the Gilded Age. The mansion itself, constructed between nineteen thirteen and nineteen fourteen, bears the architectural finesse of Thomas Hastings, providing an admirable container for the artistic mastery within.
+
+Inside, the walls of the former Frick Residence speak of a past luxury, yet the art it contains—works by European masters like Rembrandt, Bellini, Vermeer, and Gainsborough—provides the true essence of the experience. The peaceful indoor Garden Court, a lush, light-bathed addition from nineteen thirty-five by John Russell Pope, invites visitors to indulge in quiet reflection. There is a gentle intimacy to the rooms, where one can savor the artwork in an environment reminiscent of an affluent home rather than the expanses of a large museum. This setting offers a more personal connection to the tapestry of time and the art that has transcended it, allowing us a moment to step back into the era from which these works emerged.
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+Departing from the informal charm of Bryant Park, our guide leads us to a sanctuary of fine art and historical richness, The Frick Collection. Established by the industrialist Henry Clay Frick, who upon his death in nineteen nineteen imparted his New York residence and esteemed art collection to the public trust, this museum shelters treasures of the Gilded Age. The mansion itself, constructed between nineteen thirteen and nineteen fourteen, bears the architectural finesse of Thomas Hastings, providing an impressive container for the artistic mastery within.
+
+Inside, the walls of the former Frick Residence speak of a past luxury, yet the art it contains—works by European masters like Rembrandt, Bellini, Vermeer, and Gainsborough—provides the true essence of the experience. The peaceful indoor Garden Court, a lush, light-bathed addition from nineteen thirty-five by John Russell Pope, invites visitors to indulge in quiet reflection. There is a gentle intimacy to the rooms, where one can savor the artwork in an environment reminiscent of an affluent home rather than the expanses of a large museum. This setting offers a more personal connection to the canvas of time and the art that has transcended it, allowing us a moment to step back into the era from which these works emerged.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): ('bustling', 1, 0)
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+From the bustling streets of Manhattan to an urban retreat, our guide takes us on a short ferry journey toward Governors Island, untethered from the city's frenetic pace yet visually connected by skyline views. This one hundred and seventy-two-acre island, open to the public from May through October, carries with it a storied military past. For nearly two centuries, it was the strategic domain of the U.S. Army and later the Coast Guard before its transformation into an expansive public space welcoming all who seek solace and discovery.
+
+Historic fortifications such as Fort Jay and Castle Williams remind us of the island's role in the American Revolution and its defense through the years, standing as stoic guardians of history. The rejuvenated topography of Governors Island boasts The Hills, man-made elevations that rise to afford awe-inspiring vantages of the Statue of Liberty, the undulating Manhattan skyline, and the harbor. Here, visitors engage in an array of leisurely pursuits; they picnic in the grass, meander on rented bicycles, and interact with art installations that dot the parklands. Enjoying Governors Island becomes a sensorial highlight, best initiated by the feel of the sea breeze on the ferry ride over, followed by leisurely strolls along the paths, where the rustic charm of green spaces stands in delightful contrast with the city's prominent urban contours.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+From the active streets of Manhattan to an urban haven, our guide takes us on a short ferry journey toward Governors Island, untethered from the city's hectic rhythm yet visually connected by skyline views. This one hundred and seventy-two-acre island, open to the public from May through October, carries with it a storied military past. For nearly two centuries, it was the strategic domain of the U.S. Army and later the Coast Guard before its transformation into an expansive public space welcoming all who seek peace and discovery.
+
+Historic fortifications such as Fort Jay and Castle Williams remind us of the island's role in the American Revolution and its defense through the years, standing as immovable sentinels of history. The rejuvenated landscape of Governors Island boasts The Hills, man-made elevations that rise to afford extraordinary vantages of the Statue of Liberty, the contouring Manhattan skyline, and the harbor. Here, visitors engage in an array of leisure activities; they picnic in the grass, wander on rented bicycles, and interact with art installations that pepper the parklands. Enjoying Governors Island becomes a sensory highlight, best begun by the feel of the sea breeze on the ferry ride over, followed by unhurried strolls along the paths, where the rustic allure of green spaces stands in delightful contrast with the city's prominent urban outlines.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): ('tapestry', 1, 0)
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+After the refreshing sea air and open spaces of Governors Island, we venture to a place where history whispers through stone corridors and blooms amongst carefully curated flora: The Cloisters Museum and Gardens. A branch of The Metropolitan Museum of Art, this unique institution transports visitors to medieval Europe through its construction, an assemblage from the elements of five cloistered European abbeys, meticulously brought and reassembled here in New York City.
+
+Within its walls are guarded over two thousand pieces of art from the twelfth through fifteenth centuries, including celebrated works such as the Unicorn Tapestries, which have woven themselves into the fabric of numerous books and myths over time. The museum's medieval gardens are a living connection to the past, showcasing a variety of plants that would have been grown during that era. Visitors can often be seen drifting through the gardens, quietly absorbing the beauty of the medieval plants, or capturing the essence of the cloisters through sketches and photographs. Here, one finds a retreat from the city's rhythm, a crisp, sunlit morning heightening the senses as a gentle breeze rustles leaves, and the distant hum of urban life is softened by the peaceful embrace of The Cloisters.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+After the refreshing sea air and open spaces of Governors Island, we venture to a place where history whispers through stone corridors and blooms among carefully curated flora: The Cloisters Museum and Gardens. A branch of The Metropolitan Museum of Art, this unique institution transports visitors to medieval Europe through its construction, an assemblage from the elements of five cloistered European abbeys, meticulously brought and reassembled here in New York City.
+
+Within its walls are guarded over two thousand pieces of art from the twelfth through fifteenth centuries, including celebrated works such as the Unicorn Fabrics, which have woven themselves into the fabric of numerous books and myths over time. The museum's medieval gardens are a living connection to the past, showcasing a variety of plants that would have been grown during that era. Visitors can often be seen drifting through the gardens, quietly absorbing the beauty of the medieval plants, or capturing the essence of the cloisters through sketches and photographs. Here, one finds a retreat from the city's rhythm, a crisp, sunlit morning heightening the senses as a gentle breeze rustles leaves, and the distant hum of urban life is softened by the peaceful embrace of The Cloisters.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): ('testament', 1, 0)
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+From The Cloisters' serene gardens, we embark on an introspective journey across time and seas to the Ellis Island Immigration Museum, which stands as a poignant testament to the dreams and aspirations of over twelve million immigrants. These hopeful souls passed through its doors from eighteen ninety-two to nineteen fifty-four, each with a vision of life in the United States. The museum, now occupying what was once the country's busiest immigration station complex, is laden with the tangible echoes of their stories.
+
+As part of the Statue of Liberty National Monument, Ellis Island holds the weight of the immigrant narrative, an enduring symbol of hope and freedom that greeted many upon their arrival. The museum weaves this narrative through a variety of artifacts, photographs, and interactive exhibits. Emma Lazarus's profound words from 'The New Colossus' resonate within the walls, illuminating the collective memory of those whose first steps toward American dreams were taken here. Amid the palpable history, visitors are often deeply engaged in genealogical research, connecting threads to their own familial past. Walking through the 'Great Hall,' where countless names once reverberated as they were called out, allows us to immerse ourselves in the emotional legacy of the space, contemplating the countless individual journeys that are interwoven in the broader fabric of the museum's—and America's—rich history.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+From The Cloisters' quiet gardens, we embark on an inward-looking voyage across time and seas to the Ellis Island Immigration Museum, which stands as a powerful symbol of the dreams and aspirations of over twelve million immigrants. These hopeful souls passed through its doors from eighteen ninety-two to nineteen fifty-four, each with a vision of life in the United States. The museum, now occupying what was once the country's busiest immigration station complex, is filled with the tangible echoes of their stories.
+
+As part of the Statue of Liberty National Monument, Ellis Island carries the weight of the immigrant narrative, an enduring symbol of hope and freedom that welcomed many upon their arrival. The museum presents this narrative through a variety of artifacts, photographs, and interactive exhibits. Emma Lazarus's profound words from 'The New Colossus' ring within the walls, shedding light on the collective memory of those whose first steps toward American dreams were taken here. In the presence of palpable history, visitors are often deeply involved in genealogical research, connecting threads to their own family past. Walking through the 'Great Hall,' where countless names once echoed as they were called out, allows us to dive into the emotional legacy of the space, pondering the countless individual journeys that are woven into the broader narrative of the museum's—and America's—rich history.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): ('vibrant', 1, 0)
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+Our sightseeing tour continues as we make our way towards the ocean's edge, where the New York Aquarium, perched on the lively shore of Coney Island, offers a wondrous portal into the marine world. As the oldest continually operating aquarium in the United States since its inception in eighteen ninety-six, it impresses not only with its longevity but also with its dedication to the aquatic life that it showcases and strives to protect. Originally housed at Castle Garden in Battery Park, Manhattan, it found a new home in Coney Island in nineteen fifty-seven, deepening its commitment to marine conservation and education.
+
+Boasting over three hundred and fifty species, the aquarium is a haven for sharks gliding silently in their watery domains, turtles coasting through their exhibits, playful sea lions, and an abundance of vibrantly hued fish. The sea lion shows, a highlight for many visitors, offer a delightful spectacle where the intelligence and charm of these marine mammals are on full display as they perform and engage with their trainers. Standing in the Aquatheater, one can feel the cool spritz of water in the air, adding to the immersive experience of witnessing the sea lions' acrobatics beneath the expansive sky, with the sounds of the ocean's waves serving as a natural accompaniment to the day's enchantment.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+Our sightseeing tour continues as we make our way towards the ocean's edge, where the New York Aquarium, perched on the active shore of Coney Island, offers a marvelous window into the marine world. As the oldest continually operating aquarium in the United States since its inception in eighteen ninety-six, it impresses not only with its durability but also with its dedication to the aquatic life that it displays and seeks to protect. Originally housed at Castle Garden in Battery Park, Manhattan, it found a new home in Coney Island in nineteen fifty-seven, deepening its commitment to marine conservation and education. 
+
+Boasting over three hundred and fifty species, the aquarium is a sanctuary for sharks gliding silently in their watery realms, turtles coasting through their exhibits, playful sea lions, and an array of brightly colored fish. The sea lion shows, a highlight for many visitors, offer an entertaining performance where the intelligence and charm of these marine mammals are on full display as they interact and perform with their trainers. Standing in the Aquatheater, one can feel the cool mist of water in the air, adding to the engaging experience of witnessing the sea lions' acrobatics beneath the broad sky, with the sounds of the ocean's waves serving as a natural backdrop to the day's fascination.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): ('tapestry', 2, 0), ('symphony', 1, 0), ('vibrant', 1, 0)
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+Our tour of New York's rich tapestry of landmarks and hidden gems comes to a gentle close, the day's experiences nestling within us like cherished souvenirs. Each location we visited, from the historical echoes of Ellis Island to the playful splendor of the New York Aquarium, has unfolded its narrative and etched itself into our collective memory. As the open-top bus carries us through the city's streets one final time, the wind is a tender caress, mingling with the city's symphony of sounds, leaving us with a comfortable, peaceful feeling and an intimate knowledge of this vibrant metropolis.
+
+We reflect on the tapestry of sights, the inspiration drawn from art and nature, the legacy of hopes and dreams in historic halls, and the joy found in the city's many sanctuaries. Our Metro rides, a rhythmic lullaby beneath the city's pulse, delivered us into the embrace of each new discovery. As the city's luminous skyline gradually recedes against the backdrop of a soft twilight, we carry with us the stories and beauty of a city that never sleeps yet always dreams. The calm satisfaction of our sightseeing journey fills us, leaving a promise that though our tour ends, the enchantment of New York City remains, always waiting to welcome us back.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+Our tour of New York's rich collage of landmarks and hidden jewels comes to a gentle conclusion, the day's encounters nestling within us like precious keepsakes. Each site we visited, from the historical echoes of Ellis Island to the playful majesty of the New York Aquarium, has unfolded its story and etched itself into our collective memory. As the open-top bus carries us through the city's streets one last time, the wind is a tender stroke, mingling with the city's harmony of sounds, leaving us with a comfortable, peaceful sensation and an intimate familiarity with this lively metropolis.
+
+We reflect on the collage of sights, the inspiration drawn from art and nature, the legacy of hopes and dreams in historic halls, and the delight found in the city's many refuges. Our Metro rides, a rhythmic lullaby beneath the city's pulse, delivered us into the clasp of each new discovery. As the city's luminous skyline gradually fades against the backdrop of a gentle twilight, we carry with us the stories and loveliness of a city that never sleeps yet constantly dreams. The calm satisfaction of our sightseeing excursion fills us, leaving a promise that though our exploration ends, the magic of New York City remains, forever ready to welcome us back.

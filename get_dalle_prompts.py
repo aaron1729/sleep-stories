@@ -4,44 +4,29 @@ client = OpenAI()
 import models
 import strings
 from inputs import *
+from art_styles import *
 
 timestamp = strings.time_now()
 
-# inputs:
-    # a cues filename;
-    # an art-styles filename that contains an art style for that destination.
-# if the latter is omitted, we automatically get the most recent one that contains an art style for that destination.
 
-def get_dalle_prompts(cues_filename, art_styles_filename_arg = None):
+# if art_style_description_filename is omitted, we just get the most recent art-style-description file associated to that art_style.
+def get_dalle_prompts(cues_filename, art_style, art_style_description_filename = None):
 
     destination = cues_filename.split("_")[1]
     destination_fullname = inputs[destination]
 
-    if not art_styles_filename_arg:
-        art_styles_filenames = strings.get_all_unhidden_files("art-styles")
-        art_styles_filenames.sort()
-    else:
-        art_styles_filenames = [art_styles_filename_arg]
-
-    art_styles_for_destination = []
-    for art_styles_filename in art_styles_filenames:
-        art_style_strings = open(f"art-styles/{art_styles_filename}", "r").read().split(strings.separator)
-        for art_style_string in art_style_strings:
-            if destination == art_style_string.split("\n")[0].split(" ")[-1]:
-                print(f"found an art style for destination {destination} in {art_styles_filename}")
-                # remove the first four lines, e.g.: "location: tokyo\nLOCATION: Tokyo, Japan\n\n"
-                art_style_explanation_and_description_string = "\n".join(art_style_string.split("\n")[4:])
-                art_styles_for_destination.append(art_style_explanation_and_description_string)
+    if not art_style_description_filename:
+        art_style_description_filename = strings.get_latest_filename(art_style, "art-style-descriptions")
     
-    if len(art_styles_for_destination) == 0:
-        if art_styles_filename_arg:
-            raise Exception(f"no art style for the destination {destination} was found in {art_styles_filename_arg}")
-        else:
-            raise Exception(f"no art styles were found (in _any_ of the art-styles files) for the destination {destination}")
+    print(f"getting dalle prompts for {cues_filename} in the art style {art_style}, as described in {art_style_description_filename}")
     
-    art_style = art_styles_for_destination[-1]
+    art_style_key = art_style_description_filename.split("_")[1]
+    art_style_fullname = art_styles[art_style_key]
 
-    system_prompt_for_dalle_prompts = strings.system_prompt_for_dalle_prompts(destination_fullname, art_style)
+    art_style_description = open(f"art-style-descriptions/{art_style_description_filename}", "r").read()
+
+
+    system_prompt_for_dalle_prompts = strings.system_prompt_for_dalle_prompts(destination_fullname, art_style_fullname, art_style_description)
     system_message_for_dalle_prompts = {"role": "system", "content": system_prompt_for_dalle_prompts}
     print(f"\nsystem_prompt_for_dalle_prompts is:\n\n{system_prompt_for_dalle_prompts}\n")
     message_list = [system_message_for_dalle_prompts]
@@ -54,7 +39,7 @@ def get_dalle_prompts(cues_filename, art_styles_filename_arg = None):
     for (index, chunk_as_list_of_cues) in enumerate(chunks_as_lists_of_cues[: 2]):
         chunk = chunks_as_cues_strings[index]
         for cue in chunk_as_list_of_cues:
-            print(f"\ngetting dalle prompt for the cue:\n\n{cue}")
+            print(f"\nat {strings.time_now()}, getting dalle prompt for the cue:\n\n{cue}")
             user_prompt_for_dalle_prompt = f"SNIPPET:\n\n{cue}\n\nCONTEXT:\n\n{chunk}"
             user_message_for_dalle_prompt = {"role": "system", "content": user_prompt_for_dalle_prompt}
             message_list.append(user_message_for_dalle_prompt)
@@ -69,7 +54,7 @@ def get_dalle_prompts(cues_filename, art_styles_filename_arg = None):
             print(f"\nand the dalle prompt is:\n\n{assistant_prompt_with_dalle_prompt}\n")
     
     dalle_prompts_string = strings.separator.join(dalle_prompts)
-    dalle_prompts_filename = f"dalle-prompts_for_{cues_filename[:-4]}_at_{timestamp}.txt"
+    dalle_prompts_filename = f"dalle-prompts_for_{cues_filename[:-4]}_in_{art_style}_at_{timestamp}.txt"
     dalle_prompts_file = open(f"dalle-prompts/{dalle_prompts_filename}", "w")
     dalle_prompts_file.write(dalle_prompts_string)
     dalle_prompts_file.close()
@@ -79,5 +64,23 @@ def get_dalle_prompts(cues_filename, art_styles_filename_arg = None):
 
 
 ### let's get some dalle prompts!
-# get_dalle_prompts("cues_tokyo_2023-11-28_22-32-51_long.txt")
-get_dalle_prompts("cues_kyoto_2023-11-28_22-32-51_long.txt")
+
+# get_dalle_prompts("cues_algarve_2023-11-28_22-12-12_short.txt", "fauvism")
+# get_dalle_prompts("cues_napa_2023-11-28_22-32-51_long.txt", "cubism")
+# get_dalle_prompts("cues_rio_2023-11-28_22-32-51_long.txt", "victorian")
+# get_dalle_prompts("cues_chiangmai_2023-11-28_22-32-51_long.txt", "sepia-pencil")
+# get_dalle_prompts("cues_bali_2023-11-28_22-32-51_short.txt", "manga")
+# get_dalle_prompts("cues_costarica_2023-11-28_22-32-51_short.txt", "pop")
+# get_dalle_prompts("cues_newyorkcity_2023-11-28_22-32-51_long.txt", "psychedelic")
+# get_dalle_prompts("cues_queenstown_2023-11-28_22-32-51_short.txt","thai-temple")
+# get_dalle_prompts("cues_paris_2023-11-28_22-32-51_short.txt", "islamic-geometric")
+# get_dalle_prompts("cues_istanbul_2023-11-28_22-32-51_long.txt", "turkish-marbling")
+# get_dalle_prompts("cues_greece_2023-11-28_22-32-51_short.txt", "pointillism")
+# get_dalle_prompts("cues_london_2023-11-28_22-32-51_short.txt", "abstract")
+# get_dalle_prompts("cues_shanghai_2023-11-28_22-32-51_short.txt", "surrealism")
+# get_dalle_prompts("cues_barcelona_2023-11-28_22-32-51_short.txt", "neoexpressionism")
+get_dalle_prompts("cues_algarve_2023-11-28_22-12-12_long.txt", "cave")
+
+
+# at 6:30pm:
+# get_dalle_prompts("cues_amalfi_2023-11-28_22-32-51_short.txt", "magical-realism")

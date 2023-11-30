@@ -1,7 +1,7 @@
 from openai import OpenAI
 client = OpenAI()
 
-import re # regular expressions
+import re
 
 from datetime import datetime
 
@@ -9,8 +9,8 @@ from os import listdir
 from os.path import isfile, join
 
 import models
-import strings # so, `my_string` defined over there is accessible here as `strings.my_string`.
-from inputs import * # so, the inputs defined over there are accessible here without change.
+import strings
+from inputs import *
 
 timestamp = strings.time_now()
 
@@ -155,7 +155,7 @@ def write_story(length, destination, num_stops_parameter = None, stops_filename 
     if len(splitting_failure_indices) > 0:
         print("\nthere are splitting failures; logging them now\n")
         splitting_failure_log_file = open("logs/splitting-failure-log.txt", "a")
-        splitting_failure_string = f"{story_filename}: {', '.join(splitting_failure_indices)}"
+        splitting_failure_string = f"{story_filename}: {', '.join([str(splitting_failure_index) for splitting_failure_index in splitting_failure_indices])}"
         splitting_failure_log_file.write(splitting_failure_string)
         splitting_failure_log_file.close()
     
@@ -165,5 +165,6 @@ def write_story(length, destination, num_stops_parameter = None, stops_filename 
 
 ### let's write some stories!
 for input in inputs:
-    write_story("long", input["destination"])
-    write_story("short", input["destination"])
+    print(f"input is: {input}")
+    write_story("long", input)
+    write_story("short", input)

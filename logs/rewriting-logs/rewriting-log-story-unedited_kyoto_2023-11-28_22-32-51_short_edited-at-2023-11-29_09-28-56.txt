@@ -1,0 +1,667 @@
+OVERUSED WORD ALLOWANCES (computed with B=3):
+tapestry: 1
+testament: 2
+grandeur: 1
+symphony: 0
+tribute: 1
+homage: 0
+tranquil: 0
+chariot: 0
+mosaic: 0
+vibrant: 1
+bustling: 2
+verdant: 0
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): ('tranquil', 1, 0)
+
+number of rewrites: 2
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+As dawn gently spreads its delicate light across the ancient cityscape of Kyoto, we ready ourselves for a springtime amble through centuries-old streets and along the pathways where history stands still. A rickshaw awaits, its comfortable seat promising a leisurely tour of the city's famous sights. The air is laced with the promise of sakura—cherry blossoms—soon to blanket the city in a dreamy, pale pink hue. 
+
+Our guide, a middle-aged man with eyes sparkling with stories untold, grins at us from the helm of the rickshaw. His weathered hands, a testament to years of steering travelers through this mesmerizing city, grasp the handles firmly yet with an air of effortless familiarity. In the quietude of the morning, as the soft hum of the awakening city fills the air, he invites us to settle into the rickshaw. We feel the spring breeze whispering tales of the emperors and poets who once walked these paths, and our hearts flutter with excitement for the intimate revelations our journey will uncover.
+
+As the rickshaw sets into motion, the rhythmic sound of wheels against the narrow cobblestone streets soothes us, and we lean back against the plush cushions, anticipating the array of sights that await us. We are about to start our sightseeing at the Kyoto Botanical Gardens, a sanctuary of botanical variety and contemplative beauty nestled in the heart of this historical city.
+
+Founded in nineteen twenty-four, the Kyoto Botanical Gardens stand as a beacon of nature's resilience amidst urban expansion, maintaining a breathtaking expanse of about two hundred and forty thousand square meters. Over twelve thousand species of plants call this place home, tended lovingly so that visitors may marvel at both the indigenous flora and exotic specimens imported from distant lands.
+
+In spring's embrace, the gardens are a canvas painted with the soft strokes of cherry blossoms, casting a serene spell over all who wander its walking paths. Standing beneath the flowering sakura trees, a feeling of harmonious connection with nature envelops us, as if each petal holds a whispered story of its own. There is a harmonious mix of color and fragrance that beckons a deep inhale, a savouring of the season's ephemeral beauty.
+
+Other visitors stroll languidly by, some spread blankets under the trees for a leisurely picnic, their laughter floating on the breeze like the cherry blossoms themselves. Camera lenses glimpse the floral grandness, snapping momentary captures of a spectacle that otherwise slips away with time.
+
+As we near the conservatory, a large greenhouse abundant with tropical and subtropical wonders, the glass structure stands like a crystalline palace sheltering a world of perpetual summer. Inside, the warm, moist air enfolds us as a contrast to the mild spring outside, and we are transported across continents through the sights and scents of the lush foliage.
+
+The gardens stimulate a serenity that encourages exploration at a gentle pace, our eyes wandering from one natural splendor to the next. A visitor steps out of the Garden's shop, a detailed botanical illustration in hand, their eyes relishing the precision and artistry captured on the smooth paper, a tangible memory of this peaceful sojourn. 
+
+Here in the Kyoto Botanical Gardens, the flow of life moves unhurriedly, as if granting us permission to bask in the tranquil present, to let the mind unwind amidst the floral array that is both an archive of the past and a living, breathing jewel of Kyoto.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+As dawn gently spreads its delicate light across the ancient cityscape of Kyoto, we ready ourselves for a springtime stroll through centuries-old streets and along the pathways where history stands still. A rickshaw awaits, its comfortable seat promising a leisurely tour of the city's famous sights. The air is laced with the promise of sakura—cherry blossoms—soon to blanket the city in a dreamy, pale pink hue.
+
+Our guide, a middle-aged man with eyes sparkling with stories untold, smiles at us from the helm of the rickshaw. His weathered hands, a testament to years of steering travelers through this mesmerizing city, grasp the handles firmly yet with an air of effortless familiarity. In the calm of the morning, as the soft hum of the awakening city fills the air, he invites us to settle into the rickshaw. We feel the spring breeze whispering tales of the emperors and poets who once walked these paths, and our hearts flutter with excitement for the intimate revelations our journey will uncover.
+
+As the rickshaw sets into motion, the rhythmic sound of wheels against the narrow cobblestone streets soothes us, and we lean back against the plush cushions, anticipating the array of sights that await us. We are about to start our sightseeing at the Kyoto Botanical Gardens, a sanctuary of botanical variety and reflective beauty nestled in the heart of this historical city.
+
+Founded in nineteen twenty-four, the Kyoto Botanical Gardens stand as a beacon of nature's resilience amidst urban expansion, maintaining a breathtaking expanse of about two hundred and forty thousand square meters. Over twelve thousand species of plants call this place home, tended lovingly so that visitors may marvel at both the indigenous flora and exotic specimens imported from distant lands.
+
+In spring's embrace, the gardens are a canvas painted with the soft strokes of cherry blossoms, casting a serene spell over all who wander its walking paths. Standing beneath the flowering sakura trees, a feeling of harmonious connection with nature envelops us, as if each petal holds a whispered story of its own. There is a harmonious mix of color and scent that beckons a deep inhale, a savouring of the season's ephemeral beauty.
+
+Other visitors stroll leisurely by, some spread blankets under the trees for a relaxed picnic, their laughter floating on the breeze like the cherry blossoms themselves. Camera lenses capture the floral splendor, snapping momentary captures of a spectacle that otherwise slips away with time.
+
+As we near the conservatory, a large greenhouse abundant with tropical and subtropical wonders, the glass structure stands like a crystalline palace sheltering a world of perpetual summer. Inside, the warm, moist air enfolds us as a contrast to the mild spring outside, and we are transported across continents through the sights and scents of the lush foliage.
+
+The gardens stimulate a calmness that encourages exploration at a gentle pace, our eyes wandering from one natural splendor to the next. A visitor steps out of the Garden's shop, a detailed botanical illustration in hand, their eyes relishing the precision and artistry captured on the smooth paper, a tangible memory of this restful sojourn.
+
+Here in the Kyoto Botanical Gardens, the flow of life moves unhurriedly, as if granting us permission to bask in the calm present, to let the mind unwind amidst the floral array that is both an archive of the past and a living, breathing jewel of Kyoto.
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+As dawn gently spreads its delicate light across the ancient cityscape of Kyoto, we ready ourselves for a springtime stroll through centuries-old streets and along the pathways where history stands still. A rickshaw awaits, its comfortable seat promising a leisurely tour of the city's famous sights. The air is filled with the promise of sakura—cherry blossoms—soon to envelop the city in a dreamy, pale pink hue.
+
+Our guide, a middle-aged man with eyes sparkling with stories untold, smiles at us from the helm of the rickshaw. His weathered hands, a witness to years of steering travelers through this mesmerizing city, hold the handles firmly yet with an air of effortless familiarity. In the calm of the morning, as the soft hum of the awakening city fills the air, he invites us to settle into the rickshaw. We feel the spring breeze whispering tales of the emperors and poets who once walked these paths, and our hearts flutter with excitement for the intimate discoveries our journey will uncover.
+
+As the rickshaw sets into motion, the rhythmic sound of wheels against the narrow cobblestone streets relaxes us, and we lean back against the plush cushions, anticipating the array of sights that await us. We are about to start our sightseeing at the Kyoto Botanical Gardens, a sanctuary of botanical variety and serene beauty nestled in the heart of this historical city.
+
+Founded in nineteen twenty-four, the Kyoto Botanical Gardens stand as a beacon of nature's resilience amidst urban expansion, maintaining an impressive expanse of about two hundred and forty thousand square meters. Over twelve thousand species of plants call this place home, tended lovingly so that visitors may marvel at both the indigenous flora and exotic specimens imported from far-off lands.
+
+In spring's embrace, the gardens are a canvas painted with the soft strokes of cherry blossoms, casting a peaceful spell over all who wander its walking paths. Standing beneath the flowering sakura trees, a feeling of harmonious connection with nature envelops us, as if each petal holds a whispered story of its own. There is a harmonious mix of color and scent that calls for a deep inhale, a savouring of the season's fleeting beauty.
+
+Other visitors stroll leisurely by, some spread blankets under the trees for a relaxed picnic, their laughter floating on the breeze like the cherry blossoms themselves. Camera lenses seize the floral splendor, snapping momentary captures of a display that otherwise fades with time.
+
+As we near the conservatory, a large greenhouse abundant with tropical and subtropical wonders, the glass structure stands like a clear palace sheltering a world of year-round warmth. Inside, the warm, moist air surrounds us as a contrast to the mild spring outside, and we find ourselves amidst continents through the sights and scents of the lush foliage.
+
+The gardens foster a quietude that encourages exploration at a measured pace, our eyes wandering from one natural wonder to the next. A visitor steps out of the Garden's shop, a detailed botanical illustration in hand, their eyes delighted by the precision and artistry captured on the smooth paper, a lasting memory of this restorative visit.
+
+Here in the Kyoto Botanical Gardens, the flow of life moves unhurriedly, as if granting us permission to bask in the unhurried present, to let the mind unwind amidst the floral array that is both a record of the past and a living, breathing gem of Kyoto.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): 
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+With our spirits still nestled in the serene enchantment of the Botanical Gardens, we amble out onto the streets of Kyoto, where our guide points us toward the next part of our journey: the Kamo-gawa Riverbank. The rickshaw journey is leisurely replaced by a different pace as we approach a small bicycle rental shop nestled near the river. Here, smiling staff assist us in selecting bicycles, and soon, we're gently pedaling along the pathways that follow the curves of the river.
+
+The Kamo-gawa River is a thread that weaves through the city's fabric, a natural landmark cherished by those who visit and the people who call Kyoto home. With the pedals turning smoothly beneath our feet, we feel the gentle breeze brushing our cheeks, a cool sigh amidst the warmth of spring. We coast along the riverbank, where cherry blossom trees are in full splendor, their branches creating a soft canopy of pale pink above us. The petals flutter in the air and settle on the surface of the water, a natural mirage of delicate beauty.
+
+Children laugh and play by the water's edge, while picnickers lay sprawled on the grass, baskets open, savoring the peaceful atmosphere by the riverside. Couples walk hand-in-hand, faces illuminated by the sakura's glow, pausing occasionally for a photograph to freeze the moment in time, against the backdrop of this idyllic setting.
+
+Literature has long reflected on the Kamo-gawa as a symbol of life's perpetual flow, and as we cycle, the vibrant colors of the city and the scent of the blossoms seem to underscore this poetic sentiment. Every sight and sound here plays its part in the unfolding narrative of life along the river, each petal on the water like a soft note in a gentle melody.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+With our spirits still nestled in the calm enchantment of the Botanical Gardens, we wander out onto the streets of Kyoto, where our guide directs us toward the next part of our journey: the Kamo-gawa Riverbank. The rickshaw journey is comfortably replaced by a different rhythm as we approach a small bicycle rental shop near the river. Here, friendly staff assist us in choosing bicycles, and soon, we're smoothly pedaling along the paths that trace the river's bends.
+
+The Kamo-gawa River is a strand that intertwines with the city's fabric, a natural landmark adored by those who visit and the locals of Kyoto. With the pedals turning effortlessly below our feet, we feel the soft breeze caressing our cheeks, a cool whisper amidst the warmth of spring. We glide along the riverbank, where cherry blossom trees are in full bloom, their boughs weaving a delicate canopy of pale pink above us. The petals drift in the air and come to rest on the water's surface, a natural illusion of fragile beauty.
+
+Children giggle and frolic by the water's edge, while people picnic on the grass, baskets open, relishing the calm atmosphere by the river. Partners stroll hand-in-hand, faces lit by the sakura's radiance, stopping now and then for a photo to capture the moment in time, set against the backdrop of this picture-perfect landscape.
+
+Literature has long contemplated the Kamo-gawa as a representation of life's continual current, and as we ride, the vivid colors of the city and the scent of the blossoms seem to reinforce this lyrical notion. Every view and murmur here contributes to the unfolding story of life by the river, each blossom on the water like a light tone in a soft melody.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): ('tranquil', 1, 0)
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+After returning the bicycles, we follow our guide on foot, immersing ourselves further in the tranquility that lies within the heart of Kyoto. Our next destination is the historical Shimogamo Shrine, nestled in the protective embrace of the Tadasu no Mori forest. Even before we reach the shrine itself, the atmosphere of the woods envelops us, the air alive with the whispers of age-old trees and the flickering dance of sunlight through the green canopy.
+
+Shimogamo Shrine, a spiritual sanctuary dating back to the sixth century, stands as one of Kyoto's World Heritage Sites. Its vermilion gates beckon us further inside, where the weight of the modern world feels lifted from our shoulders, replaced by a sense of enduring peace that has cradled the local community for centuries.
+
+The charming chozuya invites our participation in Shinto's age-old purity ritual; we carefully wash our hands and then rinse our mouths, preparing ourselves to enter the sacred grounds with reverence. The calm murmur of water echoes the serene spirit of the site, amplifying the feeling of cleansing and renewal.
+
+As we move deeper into the shrine's heart, surrounded by the embrace of the forest, we find ourselves melting into Kyoto's cultural essence. Aware of the historical pageantry that takes place here during the Aoi Matsuri, we imagine noble processions adorned in Heian period costumes, vivid recreations of the city's illustrious past.
+
+Slowly strolling through the cooling shade of the Tadasu no Mori, every breath we take fills us with the sanctity of this place. It's as if the very ground beneath our feet holds gentle power, a quiet reminder of the passage of time and the continuity of traditions. We pause, allowing ourselves to be fully present, appreciating the ancient woods' whispering beauty and the comfort of nature's unhurried rhythm.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+After returning the bicycles, we follow our guide on foot, immersing ourselves further in the serenity that lies within the heart of Kyoto. Our next destination is the historical Shimogamo Shrine, nestled in the protective embrace of the Tadasu no Mori forest. Even before we reach the shrine itself, the atmosphere of the woods envelops us, the air alive with the whispers of age-old trees and the flickering dance of sunlight through the green canopy.
+
+Shimogamo Shrine, a spiritual sanctuary dating back to the sixth century, stands as one of Kyoto's World Heritage Sites. Its vermilion gates beckon us further inside, where the weight of the modern world feels lifted from our shoulders, replaced by a sense of enduring peace that has cradled the local community for centuries.
+
+The charming chozuya invites our participation in Shinto's age-old purity ritual; we carefully wash our hands and then rinse our mouths, preparing ourselves to enter the sacred grounds with reverence. The soft murmur of water echoes the serene spirit of the site, amplifying the feeling of cleansing and renewal.
+
+As we move deeper into the shrine's heart, embraced by the forest, we find ourselves melting into Kyoto's cultural essence. Aware of the historical pageantry that takes place here during the Aoi Matsuri, we imagine noble processions adorned in Heian period costumes, vivid recreations of the city's illustrious past.
+
+Slowly strolling through the cooling shade of the Tadasu no Mori, every breath we take fills us with the sanctity of this place. It's as if the very ground beneath our feet holds gentle power, a quiet reminder of the passage of time and the continuity of traditions. We pause, allowing ourselves to be fully present, appreciating the ancient woods' soft beauty and the comfort of nature's unhurried pace.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): 
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+Stepping out from the soothing embrace of Shimogamo Shrine, our path leads us to the lively Demachi Masugata Shopping Arcade, where the hum of daily commerce fills the air. An enduring marketplace since the Edo period, the arcade brings us face to face with Kyoto's bustling local life. A gentle cacophony of greetings and transactions drifts from storefronts to our ears, with each small, family-run shop offering a glimpse into a world where traditional ways hold strong against the tide of time.
+
+We meander along the covered walkway, the air rich with the aroma of freshly prepared foods mingling with the earthier scents of produce and dry goods. Here, a Showa-era ambiance pervades, generating a sense of nostalgia. Shops passed through generations stand as silent guardians of history, their owners the keepers of stories that span decades.
+
+Laughter and conversation flow easily between the merchants and their regulars, illustrating the close-knit nature of this community. Wandering deeper into the arcade, the inviting fragrance of mochi leads us to a vendor whose family recipes have been perfected over generations. We indulge in the sweet, chewy delicacies, each bite a fusion of past and present, crafted by hands that know the rhythm of a skill passed down through time. A mutual bow of appreciation is exchanged—the vendor's smile, a reflection of genuine hospitality.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+Stepping out from the soothing embrace of Shimogamo Shrine, our path leads us to the animated Demachi Masugata Shopping Arcade, where the hum of daily commerce fills the air. An enduring marketplace since the Edo period, the arcade brings us face to face with Kyoto's active local life. A gentle cacophony of greetings and transactions drifts from storefronts to our ears, with each small, family-run shop offering a glimpse into a world where traditional ways hold strong against the tide of time.
+
+We stroll along the covered walkway, the air rich with the aroma of freshly prepared foods mingling with the earthier scents of produce and dry goods. Here, a Showa-era ambiance pervades, generating a sense of nostalgia. Shops handed down through generations stand as silent custodians of history, their owners the keepers of stories that span decades.
+
+Laughter and conversation flow easily between the merchants and their customers, illustrating the close-knit nature of this community. Wandering deeper into the arcade, the welcoming fragrance of mochi leads us to a vendor whose family recipes have been perfected over generations. We indulge in the sweet, chewy treats, each bite a blend of past and present, crafted by hands that know the rhythm of a skill passed down through time. A mutual bow of appreciation is exchanged—the vendor's smile, a reflection of genuine hospitality.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): ('tranquil', 1, 0)
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+Leaving behind the convivial warmth of the marketplace, we follow our guide to the Philosopher's Path, a tranquil haven named after the renowned thinker Nishida Kitaro. This stone path, stretching roughly two kilometers, offers a sanctuary for contemplation amid the natural beauty of Kyoto's northern Higashiyama district.
+
+As we begin our meditative stroll, the soft rustle of cherry petals as they fall to the ground accompanies us. Each step forward along the canal, now bordered by luminous blossoms, reveals a picturesque scene that harmonizes with our inner musings. The path is alive with the joy of hanami, as others are also drawn here to witness the brief but breathtaking spectacle of the cherry blossoms in early April.
+
+Historical temples and shrines greet us at leisurely intervals, standing as silent sentries, their spiritual gravity enriching the path's already profound atmosphere. People stop intermittently, offering handfuls of food to the graceful fish and ducks that glide leisurely through the waters of the canal.
+
+The urge to sit and reflect on this corridor of thoughts becomes irresistible. We find solace at a charming cafe nestled amongst the procession of trees and blossoms. Steaming cups of traditional Japanese green tea come to rest before us as we gaze outwards, the pale cascade of petals creating a reverie of pastel pinks. Here, time feels held in abeyance, and we bask in the still, serene moment, sipping our tea and allowing the philosopher's musings to become our own.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+Leaving behind the convivial warmth of the marketplace, we follow our guide to the Philosopher's Path, a peaceful haven named after the renowned thinker Nishida Kitaro. This stone path, stretching roughly two kilometers, offers a sanctuary for contemplation amid the natural beauty of Kyoto's northern Higashiyama district.
+
+As we begin our meditative stroll, the soft rustle of cherry petals as they fall to the ground accompanies us. Each step forward along the canal, now bordered by luminous blossoms, reveals a picturesque scene that harmonizes with our inner musings. The path is alive with the joy of hanami, as others are also drawn here to witness the brief but breathtaking spectacle of the cherry blossoms in early April.
+
+Historical temples and shrines greet us at leisurely intervals, standing as silent sentries, their spiritual weight enriching the path's already profound atmosphere. People stop intermittently, offering handfuls of food to the graceful fish and ducks that glide leisurely through the waters of the canal.
+
+The urge to sit and reflect on this corridor of thoughts becomes irresistible. We find solace at a charming cafe nestled amongst the procession of trees and blossoms. Steaming cups of traditional Japanese green tea come to rest before us as we gaze outwards, the pale cascade of petals creating a daydream of pastel pinks. Here, time feels held in suspension, and we bask in the still, quiet moment, sipping our tea and allowing the philosopher's musings to become our own.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): ('homage', 1, 0)
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+Refreshed from our introspective pause at the Philosopher's Path, we move on to Ginkaku-ji, the Temple of the Silver Pavilion. It is a site where each element has been crafted with such precision and care that the air itself feels suffused with a meditative calm. Built in fourteen eighty-two as a retreat for the shogun Ashikaga Yoshimasa, Ginkaku-ji stands not in ostentation like its golden counterpart, but in elegant simplicity.
+
+Though the pavilion was never adorned in silver, its name serves as an understated foil to the opulent Kinkaku-ji. It is the epitome of Higashiyama culture, a pinnacle of Japanese aesthetic refinement manifested in wood and sand. We follow a narrow path that winds through the temple grounds, our footsteps soft upon the earth, our senses taking in the gentle beauty that envelops the site.
+
+The renowned Sea of Silver Sand, with its meticulously shaped Moon Viewing Platform, is set within the sand garden, inviting visitors to ponder the miniature homage to Mount Fuji. The sands are raked into patterns that imply rippling water, an art form that kindles inner stillness just by observation.
+
+Quiet voices and soft footsteps are the only sounds that mingle with the whisper of the wind through the trees. Visitors amble with reverence through this space, peering at the moss gardens that thrive in lush green contrast to the pale sand. Here, a deep breath feels richer, filled with a peace that might linger in one’s memory as much as the sight of the temple itself.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+Refreshed from our introspective pause at the Philosopher's Path, we move on to Ginkaku-ji, the Temple of the Silver Pavilion. It is a site where each element has been crafted with such precision and care that the air itself feels suffused with a meditative calm. Built in fourteen eighty-two as a retreat for the shogun Ashikaga Yoshimasa, Ginkaku-ji stands not in showiness like its golden counterpart, but in elegant simplicity.
+
+Though the pavilion was never adorned in silver, its name serves as a subtle contrast to the opulent Kinkaku-ji. It is the epitome of Higashiyama culture, a peak of Japanese aesthetic refinement manifested in wood and sand. We follow a narrow path that winds through the temple grounds, our footsteps soft upon the earth, our senses taking in the gentle beauty that envelops the site.
+
+The renowned Sea of Silver Sand, with its meticulously shaped Moon Viewing Platform, is set within the sand garden, inviting visitors to ponder the miniature representation to Mount Fuji. The sands are raked into patterns that imply rippling water, an art form that kindles inner calmness just by observation.
+
+Quiet voices and soft footsteps are the only sounds that mingle with the whisper of the wind through the trees. Visitors walk with reverence through this space, peering at the moss gardens that thrive in lush green contrast to the pale sand. Here, a deep breath feels more profound, filled with a serenity that might linger in one’s memory as much as the sight of the temple itself.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): ('tranquil', 1, 0)
+
+number of rewrites: 2
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+Our journey through Kyoto's tapestry of history and culture continues as we make our way to the spacious gardens of the Kyoto Imperial Palace. The onetime residence of Japan's Imperial Family up until the move of the capital to Tokyo in eighteen sixty-nine, the park today stands as a bastion of tranquility for visitors and locals alike.
+
+Lush expanses of lawn are punctuated by meticulously placed trees, their forms artfully cultivated to enhance the landscape's subtle elegance. Strolling along the pathways that crisscross the park, we marvel at how the deliberate simplicity of Japanese garden design evokes such profound beauty. Serene ponds and traditional stone bridges add a contemplative aspect to the setting, while elegant pine trees stand with stoic grace, their needles a fragrant offering to the air.
+
+Each bend in the path reveals delightful pockets of seclusion and beauty, from cherry trees whose blossoms form clouds of pink in the spring, to koi ponds where colorful fish turn the water into a living canvas. The park not only serves as a setting for the historical Aoi Matsuri festival but also as a stage for witnessing the disciplined art of Kyudo, the way of the bow.
+
+Visitors are found quietly enjoying the calmness of the environment, some resting on benches, absorbed in the harmonious melody of rustling leaves and the soft murmur of conversation. The scent of pine fills the lungs, while the sight of nature's careful arrangement fills the soul with a soothing sense of order in the midst of the city's ever-present energy.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+Our journey through Kyoto's fabric of history and culture continues as we make our way to the expansive gardens of the Kyoto Imperial Palace. The former residence of Japan's Imperial Family up until the move of the capital to Tokyo in eighteen sixty-nine, the park today stands as a sanctuary of serenity for visitors and locals alike.
+
+Rich stretches of lawn are dotted by meticulously placed trees, their shapes deliberately trained to enhance the landscape's subdued elegance. Strolling along the pathways that weave through the park, we marvel at how the intentional understatement of Japanese garden design invokes such deep beauty. Peaceful ponds and traditional stone bridges introduce a meditative aspect to the setting, while elegant pine trees stand with dignified grace, their needles a fragrant contribution to the air.
+
+Each turn in the path reveals delightful corners of privacy and beauty, from cherry trees whose blossoms create clouds of pink in the spring, to koi ponds where colorful fish animate the water like a dynamic painting. The park not only serves as a background for the historical Aoi Matsuri festival but also as a platform for observing the disciplined art of Kyudo, the way of the bow.
+
+Visitors are found quietly relishing the stillness of the surroundings, some seated on benches, immersed in the harmonious symphony of rustling leaves and the soft whisper of conversation. The aroma of pine invigorates the lungs, while the view of nature's deliberate arrangement fills the soul with a comforting sense of structure amidst the city's constant activity.
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+Our journey through Kyoto's web of history and culture continues as we make our way to the extensive gardens of the Kyoto Imperial Palace. The former residence of Japan's Imperial Family until the move of the capital to Tokyo in eighteen sixty-nine, the park today remains a haven of quiet for visitors and locals alike.
+
+Expansive stretches of lawn are spotted by meticulously placed trees, their shapes purposefully trained to heighten the landscape's subdued loveliness. Strolling along the pathways that interlace through the park, we admire how the intentional restraint of Japanese garden design evokes such profound beauty. Calm ponds and traditional stone bridges add a contemplative quality to the setting, while elegant pine trees stand with noble poise, their needles a fragrant contribution to the atmosphere.
+
+Each turn in the path uncovers charming nooks of seclusion and beauty, from cherry trees whose blossoms create canopies of pink in the spring, to koi ponds where colorful fish enliven the water like a living painting. The park not only acts as a backdrop for the historical Aoi Matsuri festival but also as a space for observing the disciplined art of Kyudo, the way of the bow.
+
+Visitors are found quietly enjoying the calm of the surroundings, some seated on benches, absorbed in the harmonious interplay of rustling leaves and the soft murmur of conversation. The scent of pine refreshes the lungs, while the sight of nature's purposeful display fills the soul with a reassuring sense of order amidst the city's perpetual motion.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): ('vibrant', 1, 0)
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+After pulling ourselves away from the structured beauty of the Kyoto Imperial Palace Park, the irresistible allure of Nishiki Market beckons us into its narrow alleyways. Here, the lively chatter of commerce replaces the soft whispers of the park, and we step into 'Kyoto's Kitchen,' an epicenter of gastronomic delight that has been the heart of the city's culinary scene for centuries.
+
+Stretching over five blocks and featuring more than one hundred shops and restaurants, the market buzzes with an energy that is as appetizing as the delicacies on display. Even now, as we wander through the jubilant crowd, we can sense the threads of history that tie today's merchants to their ancestral past, their stores a vibrant chronicle of family dedication spanning generations.
+
+Above us, paper lanterns sway gently, casting a warm glow over the fresh produce and seafood that line the stalls. Generous vendors beckon us to try tsukemono, the celebrated Kyoto-style pickled vegetables that tantalize the palate with a burst of flavor and a satisfying crunch. Laughter and convivial haggling fill the air as patrons and storekeepers exchange notes on recipes and ingredients.
+
+The indulgence of the senses continues as we sample velvety bites of fresh tofu and savor the rich essence of matcha-infused sweets that Kyoto is famous for. Each flavor feels like a discovery, a new chapter of understanding in the culinary narrative of this ancient city.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+After pulling ourselves away from the structured beauty of the Kyoto Imperial Palace Park, the irresistible allure of Nishiki Market beckons us into its narrow alleyways. Here, the lively chatter of commerce replaces the soft whispers of the park, and we step into 'Kyoto's Kitchen,' an epicenter of gastronomic delight that has been the heart of the city's culinary scene for centuries.
+
+Stretching over five blocks and featuring more than a hundred shops and restaurants, the market buzzes with an energy that is as appetizing as the delicacies on display. Even now, as we wander through the jubilant crowd, we can sense the threads of history that tie today's merchants to their ancestral past, their stores a lively chronicle of family dedication spanning generations.
+
+Above us, paper lanterns sway gently, casting a warm glow over the fresh produce and seafood that line the stalls. Generous vendors beckon us to try tsukemono, the celebrated Kyoto-style pickled vegetables that tantalize the palate with a burst of flavor and a satisfying crunch. Laughter and friendly haggling fill the air as patrons and storekeepers exchange notes on recipes and ingredients.
+
+The indulgence of the senses continues as we sample velvety bites of fresh tofu and savor the rich essence of matcha-infused sweets that Kyoto is famous for. Each flavor feels like a discovery, a new chapter of understanding in the culinary story of this ancient city.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): ('tranquil', 2, 0), ('vibrant', 1, 0)
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+Leaving the sensory indulgence of Nishiki Market behind, we follow the whisper of tradition to the newer yet historical pathways of Heian Shrine. As we approach, a massive torii gate greets us, marking the threshold between the mundane and the sacred, its vermillion pillars rising solemnly against the sky.
+
+Built in eighteen ninety-five to honor the eleven hundredth anniversary of Kyoto's establishment, Heian Shrine stands as a monumental dedication to the spirits of Emperor Kammu and Emperor Komei. The tranquility here is markedly different from the market we just experienced, more reflective and poised. The shrine itself is a partial replica of the Imperial Palace from the Heian Period, offering a touchable connection to the city’s regal lineage.
+
+We meander toward the Shin-en Garden, a place celebrated for its meticulous landscaping and seasonal splendor. The paths lead us through an exhibition of gardening mastery, past tranquil ponds and under the graceful boughs of weeping cherry trees heavy with blossoms.
+
+Visitors quietly engage in the ritualistic cleansing at the purification fountain before entering the shrine, each motion a signal of respect for the solemnity of this place. Cameras click softly as vibrant petals falling to the mirrored surface of the water are immortalized in digital memory.
+
+Our stroll takes us along pathways lined by irises and finely pruned hedges. Here, we savor the gentle rustling of leaves and the soft murmur of the garden, conversations lowered as though not to disturb the scene’s quiet beauty. In this moment, the heart finds a soothing rhythm, in harmony with the calm and the cultivated symmetry that surrounds us.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+Leaving the sensory indulgence of Nishiki Market behind, we follow the whisper of tradition to the newer yet historical pathways of Heian Shrine. As we approach, a massive torii gate greets us, marking the threshold between the mundane and the sacred, its vermillion pillars rising solemnly against the sky.
+
+Built in eighteen ninety-five to honor the one thousand one hundredth anniversary of Kyoto's establishment, Heian Shrine stands as a monumental dedication to the spirits of Emperor Kammu and Emperor Komei. The calm here is markedly different from the market we just experienced, more reflective and poised. The shrine itself is a partial replica of the Imperial Palace from the Heian Period, offering a palpable connection to the city’s regal lineage.
+
+We meander toward the Shin-en Garden, a place celebrated for its meticulous landscaping and seasonal beauty. The paths lead us through an exhibition of gardening mastery, past serene ponds and under the graceful boughs of weeping cherry trees heavy with blossoms.
+
+Visitors quietly engage in the ritualistic cleansing at the purification fountain before entering the shrine, each motion a signal of respect for the solemnity of this place. Cameras click softly as bright petals falling to the mirrored surface of the water are immortalized in digital memory.
+
+Our stroll takes us along pathways lined by irises and finely pruned hedges. Here, we savor the gentle rustling of leaves and the soft murmur of the garden, conversations lowered as though not to disturb the scene’s gentle beauty. In this moment, the heart finds a soothing rhythm, in harmony with the calm and the cultivated balance that surrounds us.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): ('testament', 1, 0)
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+Leaving the serene enchantment of the Heian Shrine's gardens, we venture onward to the hallowed precincts of Nanzen-ji Temple, where layers of history and a palpable sense of Zen Buddhism's profound legacy await us. Established in the mid-thirteenth century, this temple complex invites us to connect with spiritual depth and architectural marvels in equal measure.
+
+Our first encounter is with the grandiose Sanmon gate, one of Kyoto's three great gates, towering above us, its presence commanding and steeped in a venerable aura. Designated as a national treasure, the Sanmon gate not only serves as an entryway but also as a symbol of enlightenment, inviting introspection into its vast wooden expanse.
+
+As we step through, we find ourselves amidst the temple's acclaimed Zen rock gardens. Here, the world seems to slow down, allowing us to focus on the meticulous arrangements of stones and raked gravel that seem to echo the silent music of the universe. The gardens are a testament to the Japanese aesthetic—minimal yet profound, inviting quiet reflection.
+
+An unexpected sight is the large brick aqueduct that stretches across the temple grounds, an artifact from the Meiji period representing a fusion of Western ingenuity and Eastern serenity. The presence of this structure amidst the traditional gardens creates a bridge between two worlds and times.
+
+Photographers pause to capture the harmonious blend of architecture and nature while others may sit quietly, engaging in the art of zazen, absorbing the peace pervading Nanzen-ji. The crunch of gravel underfoot accompanies our leisurely stroll, and the gentle murmuring of water from the aqueduct adds a layer to the already peaceful setting.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+Leaving the calm enchantment of the Heian Shrine's gardens, we venture onward to the hallowed precincts of Nanzen-ji Temple, where layers of history and a palpable sense of Zen Buddhism's profound legacy await us. Established in the mid-thirteenth century, this temple complex invites us to connect with spiritual depth and architectural marvels in equal measure.
+
+Our first encounter is with the imposing Sanmon gate, one of Kyoto's three great gates, towering above us, its presence commanding and steeped in a venerable aura. Designated as a national treasure, the Sanmon gate not only serves as an entryway but also as a symbol of enlightenment, inviting introspection into its vast wooden expanse.
+
+As we step through, we find ourselves amidst the temple's acclaimed Zen rock gardens. Here, the world seems to pause, allowing us to focus on the meticulous arrangements of stones and raked gravel that seem to echo the silent music of the universe. The gardens are a reflection of the Japanese aesthetic—minimal yet profound, inviting quiet reflection.
+
+An unexpected sight is the large brick aqueduct that stretches across the temple grounds, an artifact from the Meiji period representing a fusion of Western ingenuity and Eastern calm. The presence of this structure amidst the traditional gardens creates a bridge between two worlds and times.
+
+Photographers pause to capture the harmonious blend of architecture and nature while others may sit quietly, engaging in the art of zazen, absorbing the peace pervading Nanzen-ji. The crunch of gravel underfoot accompanies our leisurely stroll, and the gentle murmuring of water from the aqueduct adds a layer to the already peaceful setting.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): ('vibrant', 1, 0)
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+In sharp contrast to the reflective calm of Nanzen-ji, the Kyoto International Manga Museum pulsates with the vibrant energy of contemporary culture and storytelling. Established in November two thousand and six, it serves as both an archive and an active celebration of the art form that has captivated hearts across the globe.
+
+Nestled within the repurposed walls of a former elementary school, the museum preserves the lively echoes of youthful learning while now being home to a staggering collection of some three hundred thousand manga items. The history of manga unfolds within these halls, from the elaborate tales of the Meiji period to the imaginative exploits of modern-day superheroes.
+
+Upon entering, visitors are greeted with wall-mounted displays of manga throughout the corridors, encouraging a communal engagement with the visual stories. Each step through the museum offers a window into the worlds conjured by countless artists and writers.
+
+The warm murmur of excited discussions about plotlines and character development fills the air as visitors recline on the carpeted floors or sit at tables, thoroughly absorbed in manga titles spanning various genres. One may stumble upon others deeply involved in workshops, their hands moving with newfound creativity as they learn the craft of manga.
+
+Exploring the museum becomes a journey through the collective imagination of Japan, where laughter and quiet concentration mingle, and the colorful panels of countless manga volumes invite endless discovery.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+In sharp contrast to the reflective calm of Nanzen-ji, the Kyoto International Manga Museum pulsates with the dynamic energy of contemporary culture and storytelling. Established in November two thousand and six, it functions as both an archive and an active celebration of the art form that has captivated hearts across the globe.
+
+Nestled within the repurposed walls of a former elementary school, the museum preserves the vivid echoes of youthful learning while now being home to an impressive collection of some three hundred thousand manga items. The history of manga unfolds within these halls, from the elaborate tales of the Meiji period to the imaginative exploits of modern-day superheroes.
+
+Upon entering, visitors are greeted with wall-mounted displays of manga throughout the corridors, encouraging communal engagement with the visual stories. Each step through the museum offers a window into the worlds conjured by countless artists and writers.
+
+The warm hum of excited discussions about plotlines and character development fills the air as visitors recline on the carpeted floors or sit at tables, thoroughly absorbed in manga titles spanning various genres. One may stumble upon others deeply engaged in workshops, their hands moving with newfound creativity as they learn the craft of manga.
+
+Exploring the museum becomes a journey through the collective imagination of Japan, where laughter and quiet focus mingle, and the colorful panels of countless manga volumes invite endless discovery.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): roman numerals, ('tapestry', 1, 0), ('tranquil', 2, 0), ('verdant', 1, 0)
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+Our sightseeing tour carries us towards the quiet haven of Murin-an Villa, where a garden designed by the famous landscape architect Ogawa Jihei VII unfolds in graceful elegance. Created between eighteen ninety-four and eighteen ninety-eight for Yamagata Aritomo, a figure pivotal in shaping modern Japan, the garden is an idyllic escape, weaving together natural beauty and mindful design.
+
+Within these soothing confines, the murmuring sound of water trickles to us from every corner, an audible reminder of nature’s gentle persistence. The water, an integral element stemming from the Lake Biwa Canal, flows and pools in a ballet of movement and stillness. Artfully placed stepping stones invite us to wander and pause, guiding our steps across the verdant expanse. Surrounding us, the rich tapestry of foliage is a carefully orchestrated array of colors and textures that soothe the eyes.
+
+In this paradise of tranquility, we witness the skillful implementation of shakkei, as the garden harmoniously integrates the background landscape of the Higashiyama mountains. Tranquil moments abound as we watch koi fish glide beneath the lily pads, their orange hues a vivid contrast to the pond’s dark canvas. We find a bench bathed in the dappled light filtering through the leaves and indulge in a moment of reflection, immersed in the garden's serene atmosphere.
+
+As our rickshaw journey through Kyoto's timeless wonders comes to a close, we carry with us the imprint of each experience. The city has whispered to us eloquently through cherry blossoms, sacred gates, and stone paths; capturing our senses with its culinary delights and the poignant tales woven into its modern and historical fabric. It's a reminder that, much like the rickshaw's steady tread, life moves at a pace that allows for the appreciation of both loud festivity and soft serenity. With hearts full of gratitude for the gentle stories etched into Kyoto’s landscape, we look back over our shoulder one last time, knowing that the beauty and peace of this city will accompany us long after we leave its enchanting embrace.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+Our sightseeing tour carries us towards the quiet haven of Murin-an Villa, where a garden designed by the famous landscape architect Ogawa Jihei the Seventh unfolds in graceful elegance. Created between eighteen ninety-four and eighteen ninety-eight for Yamagata Aritomo, a figure pivotal in shaping modern Japan, the garden is an idyllic escape, weaving together natural beauty and mindful design.
+
+Within these soothing confines, the murmuring sound of water trickles to us from every corner, an audible reminder of nature’s gentle persistence. The water, an integral element stemming from the Lake Biwa Canal, flows and pools in a ballet of movement and stillness. Artfully placed stepping stones invite us to wander and pause, guiding our steps across the green expanse. Surrounding us, the rich array of foliage is a carefully orchestrated array of colors and textures that calm the eyes.
+
+In this paradise of calmness, we witness the skillful implementation of shakkei, as the garden harmoniously integrates the background landscape of the Higashiyama mountains. Calm moments abound as we watch koi fish glide beneath the lily pads, their orange hues a striking contrast to the pond’s dark surface. We find a bench bathed in the dappled light filtering through the leaves and indulge in a moment of reflection, immersed in the garden's serene atmosphere.
+
+As our rickshaw journey through Kyoto's timeless wonders comes to a close, we carry with us the imprint of each experience. The city has whispered to us eloquently through cherry blossoms, sacred gates, and stone paths; capturing our senses with its culinary delights and the poignant tales intertwined with its modern and historical narrative. It's a reminder that, much like the rickshaw's steady tread, life moves at a pace that allows for the appreciation of both loud festivity and soft calmness. With hearts full of gratitude for the gentle stories etched into Kyoto’s landscape, we look back over our shoulder one last time, knowing that the beauty and peace of this city will accompany us long after we leave its enchanting embrace.

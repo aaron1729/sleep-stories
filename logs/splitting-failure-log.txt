@@ -1,1 +1,2 @@
 when writing a short story, chatGPT is supposed to include n stops per middle completion, and is supposed to separate the text for each stop so that we can split them into separate chunks. below are listed any stories for which this failed, as well as the indices of middle completions where this failed (from 0 up to c-1).
+story-unedited_newyorkcity_2023-11-28_22-32-51_short.txt: [, 2, ]

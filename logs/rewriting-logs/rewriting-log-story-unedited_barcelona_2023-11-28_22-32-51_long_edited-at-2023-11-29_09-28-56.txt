@@ -1,0 +1,769 @@
+OVERUSED WORD ALLOWANCES (computed with B=3):
+tapestry: 2
+testament: 2
+grandeur: 0
+symphony: 1
+tribute: 0
+homage: 0
+tranquil: 2
+chariot: 2
+mosaic: 0
+vibrant: 2
+bustling: 1
+verdant: 1
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): 
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+Our leisurely bike ride takes a quiet pause as we reach the awe-inspiring spectacle of La Sagrada Familia. Even as the gentle noise of the city hums in the background, our gazes are drawn upward to the towering spires of Antoni Gaudí's architectural wonder. Like sentinels, they rise into the sky, each one a silent herald for the Twelve Apostles, the Virgin Mary, the four Evangelists, and the tallest of all, the spire dedicated to Jesus Christ, which will reach the height of one hundred and seventy meters upon completion. There's a hushed reverence in the group as we take in the complex tapestry of Gothic and Art Nouveau forms that define this UNESCO World Heritage Site.
+
+Around us, the ongoing narrative of the basilica's construction unfolds, as workers and cranes diligently contribute to a project that has been in the making since eighteen eighty-two. Our guide explains the symbolism etched into every facade and gently leads us through the grand entrance. Inside, the influence of light becomes apparent; stained glass windows transform sunbeams into a soft ballet of colors that dances across the interior. We are captivated, sharing the common experience of being utterly enchanted as we step from the workaday world into an otherworldly forest of stone and light, each of us finding a quiet corner to simply breathe in the beauty.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+Our leisurely bike ride takes a quiet pause as we reach the awe-inspiring spectacle of La Sagrada Familia. Even as the gentle noise of the city hums in the background, our gazes are drawn upward to the towering spires of Antoni Gaudí's architectural wonder. Like guardians, they rise into the sky, each one a silent representative for the Twelve Apostles, the Virgin Mary, the four Evangelists, and the tallest of all, the spire dedicated to Jesus Christ, which will reach the height of one hundred and seventy meters upon completion. There's a hushed reverence in the group as we take in the elaborate network of Gothic and Art Nouveau forms that define this UNESCO World Heritage Site.
+
+Around us, the ongoing narrative of the basilica's construction unfolds, as workers and cranes diligently contribute to a project that has been in the making since eighteen eighty-two. Our guide explains the symbolism etched into every facade and gently leads us through the magnificent entrance. Inside, the influence of light becomes apparent; stained glass windows transform sunbeams into a soft play of colors that dances across the interior. We are captivated, sharing the common experience of being utterly enchanted as we step from the everyday world into a fantastical forest of stone and light, each of us finding a quiet corner to simply breathe in the allure.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): 
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+After the hushed beauty of La Sagrada Familia, we gently pedal our way to an enchanting hilltop garden, Park Güell, where imagination takes physical form. The whimsy of Antoni Gaudí's vision greets us at every turn, with vibrant, colorful sculptures and the famous serpentine bench gliding along the park's main terrace. Our guide, with a knowing smile, tells us the story of Eusebi Güell, Gaudí's patron, and the failed residential project that gave birth to this public wonderland.
+
+As we dismount our bikes and stroll along the winding paths, we are struck by the dragon-like sculptures that seem to guard this serene oasis. Curved lines and shapes inspired by natural forms are everywhere, showcasing Gaudí's deep roots in Catalan Modernism. Our guide points out when UNESCO recognized Park Güell’s importance to the world's cultural heritage in nineteen eighty-four. We find ourselves comfortably perched on the undulating bench, designed to cradle the body, and all of us take turns capturing the sprawling views of Barcelona’s skyline. Quiet conversations begin as we sit, the city's panorama connecting us to this place of wonder, accentuated by the peaceful smile of an elderly couple contentedly sharing an ice cream.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+After the hushed beauty of La Sagrada Familia, we gently pedal our way to an enchanting hilltop garden, Park Güell, where imagination takes physical form. The whimsy of Antoni Gaudí's vision greets us at every turn, with colorful, playful sculptures and the famous serpentine bench gliding along the park's main terrace. Our guide, with a knowing smile, tells us the story of Eusebi Güell, Gaudí's patron, and the failed residential project that gave birth to this public wonderland.
+
+As we dismount our bikes and stroll along the winding paths, we are struck by the dragon-like sculptures that seem to guard this peaceful oasis. Curved lines and shapes inspired by natural forms are everywhere, showcasing Gaudí's deep roots in Catalan Modernism. Our guide points out when UNESCO recognized Park Güell’s importance to the world's cultural heritage in nineteen eighty-four. We find ourselves comfortably perched on the undulating bench, designed to cradle the body, and all of us take turns capturing the expansive views of Barcelona’s skyline. Quiet conversations begin as we sit, the city's panorama connecting us to this place of wonder, accentuated by the peaceful smile of an elderly couple contentedly sharing an ice cream.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): ('grandeur', 1, 0)
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+Leaving behind the imaginative escape of Park Güell, we find our wheels guiding us to the pulse of Barcelona's urban life, the renowned La Rambla. This one-point-two-kilometer boulevard, a once dry riverbed known as 'raml' in Arabic, now stands as a lively artery, connecting the grandeur of Plaça de Catalunya with the maritime monument dedicated to Christopher Columbus at Port Vell. The path is shaded by leafy trees that sway gently, whispering stories of the centuries, a green canopy over this promenade thick with the city’s heartbeat.
+
+Our bike ride transforms into a slow cruise as we become a part of the living canvas of locals and travelers. La Rambla brims with color and movement, with street performers captivating audiences and local artists skillfully rendering the spirit of Barcelona onto paper. Our guide suggests a stop at La Boqueria market, a feast for the senses, where we savor local delights and marvel at the diversity of fresh produce. We are indeed mere observers in a scene of relaxed pedestrians, those immersed in the simple pleasure of shopping at the boulevard’s kiosks, and those sitting for portraits that capture the essence of the day. On La Rambla, every footstep and every brushstroke tells a story, lingering long after we pedal away.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+Leaving behind the imaginative escape of Park Güell, we find our wheels guiding us to the pulse of Barcelona's urban life, the renowned La Rambla. This one-point-two-kilometer boulevard, a once dry riverbed known as 'raml' in Arabic, now stands as a lively artery, connecting the splendor of Plaça de Catalunya with the maritime monument dedicated to Christopher Columbus at Port Vell. The path is shaded by leafy trees that sway gently, whispering stories of the centuries, a green canopy over this promenade thick with the city’s heartbeat.
+
+Our bike ride transforms into a slow cruise as we become a part of the living canvas of locals and travelers. La Rambla brims with color and movement, with street performers captivating audiences and local artists skillfully rendering the spirit of Barcelona onto paper. Our guide suggests a stop at La Boqueria market, a feast for the senses, where we savor local delights and marvel at the variety of fresh produce. We are indeed mere observers in a scene of relaxed pedestrians, those immersed in the simple pleasure of shopping at the boulevard’s kiosks, and those sitting for portraits that capture the essence of the day. On La Rambla, every footstep and every brushstroke tells a story, lingering long after we pedal away.
+
+==========
+
+REWRITING SUCCESS: False
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): roman numerals, ('mosaic', 1, 0)
+
+number of rewrites: 3
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+As we meander through La Rambla, the scents and sounds crescendo, leading us to the entrance of Mercat de la Boqueria, a mosaic of gastronomy with roots stretching back to the early thirteenth century. Officially known as Mercat de Sant Josep, this marketplace has been a cornerstone of Barcelona's culinary scene since eighteen thirty-six, its vibrancy resonating in literature such as the detective stories by Manuel Vázquez Montalbán, where Pepe Carvalho often savors the market's delicacies.
+
+We lock our bikes and saunter beneath the historical iron and glass structure, completed in nineteen fourteen, which houses the bustling stalls. A colorful array of fruits, vegetables, meats, and seafood ignites our senses, each stand a story of flavor and tradition. Professional chefs navigate expertly through the corridors, while visitors relish the tradition of tasting bite-sized samples from generous vendors. Delighting in the intense aromas and engaging with the friendly stallholders, we feel a sense of connection, not only to the flavors but to the city's rhythm. We linger to taste candied fruits, their sweetness a perfect counterpoint to the sea's saltiness still lingering in the air from our previous visit to the port.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+As we wander through La Rambla, the scents and sounds build up, leading us to the entrance of Mercat de la Boqueria, a colorful array of gastronomy with roots stretching back to the early thirteenth century. Officially known as Mercat de Sant Josep, this marketplace has been a cornerstone of Barcelona's culinary scene since eighteen thirty-six, its liveliness resonating in literature such as the detective stories by Manuel Vázquez Montalbán, where Pepe Carvalho often savors the market's delicacies.
+
+We lock our bicycles and stroll beneath the historical iron and glass structure, completed in nineteen fourteen, which houses the bustling stalls. A vivid array of fruits, vegetables, meats, and seafood ignites our senses, each stand a narrative of flavor and tradition. Professional chefs navigate expertly through the alleys, while visitors enjoy the tradition of tasting bite-sized samples from generous vendors. Delighting in the strong aromas and engaging with the amiable stallholders, we feel a sense of connection, not only to the flavors but to the city's pace. We linger to taste candied fruits, their sweetness a perfect counterbalance to the sea's saltiness still lingering in the air from our previous visit to the port.
+
+-----
+
+As we wander through La Rambla, the scents and sounds build up, leading us to the entrance of Mercat de la Boqueria, a colorful array of gastronomy with roots stretching back to the early thirteenth century. Officially known as Mercat de Sant Josep, this marketplace has been a cornerstone of Barcelona's culinary scene since eighteen thirty-six, its liveliness resonating in literature such as the detective stories by Manuel Vázquez Montalbán, where Pepe Carvalho often savors the market's delicacies.
+
+We lock our bicycles and stroll beneath the historical iron and glass structure, completed in nineteen fourteen, which houses the active stalls. A bright array of fruits, vegetables, meats, and seafood ignites our senses, each stand a narrative of flavor and tradition. Professional chefs navigate expertly through the alleys, while visitors enjoy the tradition of tasting bite-sized samples from generous vendors. Delighting in the strong aromas and engaging with the friendly stallholders, we feel a sense of connection, not only to the flavors but to the city's rhythm. We linger to taste candied fruits, their sweetness a perfect counterbalance to the sea's saltiness still lingering in the air from our previous visit to the port.
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+As we wander through La Rambla, the scents and sounds accumulate, leading us to the entrance of Mercat de la Boqueria, a colorful concentration of gastronomy with roots stretching back to the early thirteenth century. Officially known as Mercat de Sant Josep, this marketplace has been a cornerstone of Barcelona's culinary scene since eighteen thirty-six, its activity resonating in literature such as the detective stories by Manuel Vázquez Montalbán, where Pepe Carvalho often savors the market's delicacies.
+
+We lock our bicycles and stroll beneath the historical iron and glass structure, completed in nineteen fourteen, which shelters the active stalls. A broad spectrum of fruits, vegetables, meats, and seafood ignites our senses, each stand a narrative of flavor and tradition. Professional chefs navigate expertly through the alleys, while visitors enjoy the tradition of tasting bite-sized samples from generous vendors. Delighting in the pungent aromas and engaging with the friendly stallholders, we feel a sense of connection, not only to the flavors but to the city's pace. We linger to taste candied fruits, their sweetness a perfect counterbalance to the sea's saltiness still lingering in the air from our previous visit to the port.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): 
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+With the taste of sweetness still on our tongues, we pedal onward to another architectural wonder crafted by the imaginative Antoni Gaudí, the enigmatic Casa Milà, commonly referred to as La Pedrera. Resembling an open quarry, the building's rough stone facade makes it stand out as a pillar of uniqueness amidst the more traditional structures that line the streets of Barcelona. Built between nineteen hundred and six and nineteen hundred and twelve, this UNESCO World Heritage Site is a testament to Gaudí's vision, a structure where every undulation and twist in the iron balconies speaks of a break from convention.
+
+As we lock our bikes and enter this storied building, our guide ushers us up to the roof terrace. The surreal landscape of chimneys and ventilation towers, shaped like watchful warrior helmets, captures our imagination against the backdrop of the city's skyline softly touched by the setting sun. We wander the attic space, once a communal laundry room, now housing the Gaudí Exhibition Room, where we are enveloped by the skeletal arches that stand like ribs of some ancient creature. Around us, visitors point and whisper in awe, their silhouettes framed by the roof's sculptural elements as the sky deepens into dusk. It's an experience of both discovery and introspection, as the play of light and shadow on the terrace ushers in a feeling of connection to Gaudí's artistic legacy.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+With the taste of sweetness still on our tongues, we pedal onward to another architectural marvel crafted by the imaginative Antoni Gaudí, the mysterious Casa Milà, commonly known as La Pedrera. Resembling an open quarry, the building's rough stone facade makes it stand out as a unique landmark amidst the more conventional structures that line the streets of Barcelona. Built between nineteen oh-six and nineteen twelve, this UNESCO World Heritage Site is an affirmation of Gaudí's vision, a structure where every curve and twist in the iron balconies speaks of a departure from convention.
+
+As we lock our bicycles and enter this historic building, our guide ushers us up to the roof terrace. The surreal landscape of chimneys and ventilation towers, shaped like watchful warrior helmets, captures our imagination against the backdrop of the city's skyline gently touched by the setting sun. We wander the attic space, once a communal laundry room, now housing the Gaudí Exhibition Room, where we are surrounded by the skeletal arches that stand like the bones of some prehistoric beast. Around us, visitors point and whisper in reverence, their silhouettes set against the roof's sculptural elements as the sky deepens into dusk. It's an experience of both discovery and introspection, as the interplay of light and shadow on the terrace brings forth a feeling of connection to Gaudí's artistic heritage.
+
+==========
+
+REWRITING SUCCESS: False
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): roman numerals, ('tapestry', 1, 0), ('vibrant', 1, 0)
+
+number of rewrites: 3
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+From the rooftop of La Pedrera, our journey leads us to the melodic embrace of the Palau de la Música Catalana, a harmonious sanctuary nestled in the city's landscape. Built between nineteen hundred and five and nineteen hundred and eight by Lluís Domènech i Montaner, this concert hall is a jewel of Catalan Modernisme. Its significance in architecture and the cultural tapestry of Catalonia earned it a place as a UNESCO World Heritage Site in nineteen ninety-seven.
+
+Upon entering the concert hall, an audible gasp escapes from our group, collectively struck by the magnificent central skylight. Antoni Rigalt's stained glass creation bathes the space in a luminous, soothing palette, enhancing the audible beauty that resonates within these walls. Our eyes follow the intricate details of the stage backdrop, adorned with a vibrant depiction of the Valkyries, a nod to the artistic tendencies of the era. As we quietly find our seats, the anticipation of experiencing the renowned acoustics in person heightens. We imagine the incoming flood of applause that must follow each performance, recognizing the privilege of stepping into a space where every note played is cradled by the exceptional design of this architectural symphony.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+From the rooftop of La Pedrera, our journey leads us to the melodic embrace of the Palau de la Música Catalana, a harmonious sanctuary nestled in the city's landscape. Built between nineteen hundred and five and nineteen hundred and eight by Lluís Domènech i Montaner, this concert hall is a gem of Catalan Modernisme. Its importance in architecture and the cultural fabric of Catalonia earned it a place as a UNESCO World Heritage Site in nineteen ninety-seven.
+
+Upon entering the concert hall, an audible gasp escapes from our group, collectively struck by the spectacular central skylight. Antoni Rigalt's stained glass creation bathes the space in a luminous, calming palette, enhancing the audible beauty that resonates within these walls. Our eyes follow the intricate details of the stage backdrop, adorned with a lively depiction of the Valkyries, a nod to the artistic tendencies of the era. As we quietly find our seats, the anticipation of experiencing the renowned acoustics in person heightens. We imagine the incoming flood of applause that must follow each performance, recognizing the privilege of stepping into a space where every note played is cradled by the exceptional design of this architectural symphony.
+
+-----
+
+From the rooftop of La Pedrera, our journey leads us to the melodic embrace of the Palau de la Música Catalana, a harmonious sanctuary nestled in the city's landscape. Built between nineteen hundred five and nineteen hundred eight by Lluís Domènech i Montaner, this concert hall is a gem of Catalan Modernisme. Its importance in architecture and the cultural fabric of Catalonia earned it a place as a UNESCO World Heritage Site in nineteen ninety-seven.
+
+Upon entering the concert hall, an audible gasp escapes from our group, collectively struck by the spectacular central skylight. Antoni Rigalt's stained glass creation bathes the space in a luminous, calming palette, enhancing the audible beauty that resonates within these walls. Our eyes follow the intricate details of the stage backdrop, adorned with a lively depiction of the Valkyries, a nod to the artistic tendencies of the era. As we quietly find our seats, the anticipation of experiencing the renowned acoustics in person heightens. We imagine the incoming flood of applause that must follow each performance, recognizing the privilege of stepping into a space where every note played is cradled by the exceptional design of this architectural masterpiece.
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+From the rooftop of La Pedrera, our journey leads us to the melodic embrace of the Palau de la Música Catalana, a harmonious sanctuary nestled in the city's scenery. Built between nineteen hundred and five and nineteen hundred and eight by Lluís Domènech i Montaner, this concert hall is a jewel of Catalan Modernisme. Its significance in architecture and the cultural framework of Catalonia earned it a place as a UNESCO World Heritage Site in nineteen ninety-seven.
+
+Upon entering the concert hall, an audible gasp escapes from our group, collectively struck by the spectacular central skylight. Antoni Rigalt's stained glass creation immerses the space in a soothing, light-filled palette, enhancing the audible beauty that resonates within these walls. Our eyes follow the intricate details of the stage backdrop, adorned with a dynamic depiction of the Valkyries, a nod to the artistic tendencies of the era. As we quietly find our seats, the anticipation of experiencing the acclaimed acoustics in person heightens. We imagine the incoming surge of applause that must follow each performance, recognizing the privilege of stepping into a space where every note played is embraced by the exceptional design of this architectural wonder.
+
+==========
+
+REWRITING SUCCESS: False
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): roman numerals, ('symphony', 1, 0)
+
+number of rewrites: 3
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+Leaving behind the architectural symphony of the Palau de la Música Catalana, our path naturally unfolds towards Ciutadella Park, Barcelona's historic green retreat. This park, established in the mid-nineteenth century, once served as the city's sole expanse of lush, open space, and today, it remains a cherished sanctuary for both locals and visitors alike. As we ride along the meandering paths, our wheels whisper over fallen leaves, and we are enveloped by the natural serenity that thrives here.
+
+We come across the monumental fountain known as 'The Cascada,' a grandiose structure where the young Antoni Gaudí once applied his blossoming creative vision as an assistant to Josep Fontserè. The park, resonating with echoes of the eighteen eighty-eight Barcelona Universal Exposition, is steeped in history — its name a reminder of the citadel that once stood imposingly in this very location. On the small lake, rowboats glide gracefully, each stroke of the oars a quiet mark on the smooth surface of the water. Here, the city's rhythm surrenders to the soothing cadence of nature, as joggers, families enjoying picnics, and solitary readers nestled under the shade of trees, weave a peaceful tableau of park life.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+Leaving behind the architectural harmony of the Palau de la Música Catalana, our path naturally unfolds towards Ciutadella Park, Barcelona's historic green retreat. This park, established in the mid-nineteenth century, once served as the city's sole expanse of lush, open space, and today, it remains a cherished sanctuary for both locals and visitors alike. As we ride along the meandering paths, our wheels whisper over fallen leaves, and we are enveloped by the natural calm that thrives here.
+
+We come across the monumental fountain known as 'The Cascada,' an imposing structure where the young Antoni Gaudí once applied his blossoming creative vision as an assistant to Josep Fontserè. The park, resonating with echoes of the eighteen eighty-eight Barcelona Universal Exposition, is steeped in history — its name a reminder of the citadel that once stood imposingly in this very location. On the small lake, rowboats glide gracefully, each stroke of the oars a quiet mark on the smooth surface of the water. Here, the city's rhythm surrenders to the soothing pace of nature, as joggers, families enjoying picnics, and solitary readers nestled under the shade of trees, weave a peaceful scene of park life.
+
+-----
+
+Leaving behind the architectural harmony of the Palau de la Música Catalana, our path naturally unfolds towards Ciutadella Park, Barcelona's historic green retreat. This park, established in the mid-nineteenth century, once served as the city's sole expanse of lush, open space, and today, it remains a cherished sanctuary for both locals and visitors alike. As we ride along the winding paths, our wheels whisper over fallen leaves, and we are enveloped by the natural calm that thrives here.
+
+We come across the monumental fountain known as 'The Cascada,' an imposing structure where the young Antoni Gaudí once applied his blossoming creative vision as an assistant to Josep Fontserè. The park, resonating with echoes of the eighteen eighty-eight Barcelona Universal Exposition, is steeped in history — its name a reminder of the citadel that once stood imposingly in this very location. On the small lake, rowboats glide gracefully, each stroke of the oars a quiet mark on the smooth surface of the water. Here, the city's rhythm surrenders to the soothing pace of nature, as joggers, families enjoying picnics, and solitary readers nestled under the shade of trees, weave a peaceful scene of park life.
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+Leaving behind the architectural harmony of the Palau de la Música Catalana, our path naturally unfolds towards Ciutadella Park, Barcelona's historic green retreat. This park, established in the mid-nineteenth century, once served as the city's sole expanse of lush, open space, and today, it remains a cherished haven for both locals and visitors alike. As we ride along the winding paths, our wheels whisper over fallen leaves, and we are wrapped in the natural calm that thrives here.
+
+We come across the monumental fountain known as 'The Cascada,' an impressive structure where the young Antoni Gaudí once applied his blossoming creative vision as an assistant to Josep Fontserè. The park, resonating with echoes of the eighteen eighty-eight Barcelona Universal Exposition, is drenched in history — its name a reminder of the citadel that once stood majestically in this very location. On the small lake, rowboats move elegantly, each stroke of the oars a gentle disturbance on the smooth surface of the water. Here, the city's rhythm yields to the soothing cadence of nature, as joggers, families enjoying picnics, and solitary readers nestled under the shade of trees, create a serene scene of park life.
+
+==========
+
+REWRITING SUCCESS: False
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): roman numerals, ('testament', 1, 0), ('vibrant', 1, 0)
+
+number of rewrites: 3
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+From the architectural marvel of Palau Güell, we steer our leisurely bike tour towards the refreshing shoreline of Barceloneta Beach. One of Barcelona's most famous urban beaches, Barceloneta was shaped into its current form for the nineteen ninety-two Olympic Games, though it dates back to the eighteenth century following the expansion of the neighboring La Barceloneta district. The neighborhood, once home to fishermen, still carries the essence of its origins, neatly laid out in a distinctive triangular grid that converges on the sea's embrace.
+
+Rolling along the promenade, we experience the beach in all its glory, with sunbathers soaking in the Mediterranean warmth and swimmers cutting through the gentle waves. The soft, rhythmic sound of the sea, lapping on the shore, creates a soothing backdrop to our ride. We pause to admire 'L'Estel Ferit,' a sculpture by artist Rebecca Horn that stands as a testament to the enduring spirit of the Barceloneta community. Nearby, animated games of beach volleyball unfold on the sand, as locals and visitors alike revel in the sport. And as we continue our journey, the salty breeze carries the tempting aromas of seafood, each waft rich with the flavor of the coast, adding yet another layer to our sensory exploration of this vibrant city.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+From the architectural wonder of Palau Güell, we steer our leisurely bike tour towards the refreshing shoreline of Barceloneta Beach. One of Barcelona's most famous urban beaches, Barceloneta was shaped into its current form for the nineteen ninety-two Olympic Games, though it dates back to the eighteenth century following the expansion of the neighboring La Barceloneta district. The neighborhood, once home to fishermen, still carries the essence of its origins, neatly laid out in a distinctive triangular grid that converges on the sea's embrace.
+
+Rolling along the promenade, we experience the beach in all its beauty, with sunbathers soaking in the Mediterranean warmth and swimmers cutting through the soft waves. The gentle, rhythmic sound of the sea, kissing the shore, creates a calming backdrop to our ride. We pause to admire 'L'Estel Ferit,' a sculpture by artist Rebecca Horn that stands as acknowledgment to the enduring spirit of the Barceloneta community. Nearby, lively games of beach volleyball unfold on the sand, as locals and tourists alike relish the sport. And as we continue our journey, the salty breeze carries the tempting scents of seafood, each inhalation rich with the essence of the coast, adding yet another dimension to our sensory exploration of this lively city.
+
+-----
+
+From the architectural marvel of Palau Güell, we direct our leisurely bike tour towards the refreshing coastline of Barceloneta Beach. One of Barcelona's most renowned urban beaches, Barceloneta was formed into its current shape for the nineteen ninety-two Olympic Games, though it can be traced back to the eighteenth century following the expansion of the adjacent La Barceloneta district. The neighborhood, once a haven for fishermen, still retains the essence of its past, neatly arranged in a unique triangular grid that meets the sea's edge.
+
+Gliding along the walkway, we take in the beach in all its allure, with sun worshipers basking in the Mediterranean heat and swimmers slicing through the gentle waves. The soft, rhythmic sounds of the sea, caressing the shore, provides a soothing background to our excursion. We stop to appreciate 'L'Estel Ferit,' a sculpture by artist Rebecca Horn that stands as a recognition of the lasting spirit of the Barceloneta community. Nearby, energetic rounds of beach volleyball take place on the sand, as inhabitants and visitors alike enjoy the activity. And as we proceed, the saline breeze brings the alluring aromas of seafood, each breath filled with the character of the seaboard, introducing yet another layer to our sensory journey of this dynamic city.
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+From the architectural wonder of Palau Güell, we direct our leisurely bike tour towards the refreshing coastline of Barceloneta Beach. One of Barcelona's most well-known urban beaches, Barceloneta was shaped into its current form for the nineteen ninety-two Olympic Games, though it has origins dating back to the eighteenth century following the growth of the adjacent La Barceloneta district. The neighborhood, once a refuge for fishermen, still preserves the essence of its history, neatly arranged in a unique triangular grid that meets the sea's edge.
+
+Gliding along the walkway, we take in the beach in all its appeal, with sun worshipers soaking in the Mediterranean warmth and swimmers cutting through the calm waves. The soft, rhythmic sounds of the sea, stroking the shore, provide a calming backdrop for our journey. We stop to admire 'L'Estel Ferit,' a sculpture by artist Rebecca Horn that stands as a recognition of the enduring spirit of the Barceloneta community. Nearby, lively games of beach volleyball are played on the sand, as locals and tourists alike partake in the fun. And as we continue, the salty breeze carries the tempting scents of seafood, each inhalation filled with the essence of the coast, introducing yet another dimension to our sensory exploration of this dynamic city.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): ('grandeur', 1, 0), ('symphony', 1, 0)
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+After the sandy stretches of Barceloneta Beach, we cycle towards the grandeur of Montjuïc, where the Magic Fountain captivates all who come to witness its enchanting performances. Created in nineteen twenty-nine for the International Exhibition, this masterpiece was the brainchild of engineer Carles Buigas. The cascading waters have seen numerous technological enhancements over the years to sustain the allure of its performances, boasting over three thousand six hundred water jets and a pump power of one thousand six hundred and seventy horsepower.
+
+As twilight approaches, onlookers find spots around the fountain, gearing up for the nightly light and music extravaganza. The spectacle commences, and we're wrapped in a symphony of colors, water, and sound – a synchronized ballet that dazzles the senses. Cameras flash, capturing moments of awe as shades of light paint the water in a myriad of hues against the darkening sky. We feel the gentle spray of the fountain's mist on our skin, a refreshing touch on a warm evening, while we become part of the shared joy and wonder dancing in the eyes of those around us.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+After the sandy stretches of Barceloneta Beach, we cycle towards the impressive presence of Montjuïc, where the Magic Fountain captivates all who come to witness its enchanting displays. Created in nineteen twenty-nine for the International Exhibition, this masterpiece was the brainchild of engineer Carles Buigas. The cascading waters have seen numerous technological enhancements over the years to sustain the allure of its displays, boasting over three thousand six hundred water jets and a pump power of one thousand six hundred and seventy horsepower.
+
+As twilight approaches, onlookers find spots around the fountain, gearing up for the nightly light and music show. The spectacle commences, and we're wrapped in a concert of colors, water, and sound – a synchronized ballet that dazzles the senses. Cameras flash, capturing moments of awe as shades of light paint the water in a myriad of hues against the darkening sky. We feel the gentle spray of the fountain's mist on our skin, a refreshing touch on a warm evening, while we become part of the shared joy and wonder dancing in the eyes of those around us.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): ('vibrant', 1, 0), ('bustling', 1, 0)
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+Following the mesmerizing water ballet at the Magic Fountain of Montjuïc, our path leads us through the heart of the city to the El Born Cultural Centre, where history is palpably etched into its walls. Once a bustling marketplace, the center now stands as a poignant preservation of the archaeological remains of seventeenth-century Barcelona, unveiled during the building's transformation. It's a monument to the city during the War of the Spanish Succession and the ensuing siege, harboring whispers of a turbulent past.
+
+Inside, the space intertwines cultural exhibitions with the stark reality of historic ruins beneath our feet, provoking a contemplative silence among visitors. Photography enthusiasts weave through the walkways, angling their lenses to capture the narrative of time encapsulated here. We tread lightly, the sun casting elongated shadows over the remains, a natural spotlight on the streets that once teemed with life. It's here, amid the juxtaposition of past and present, where we find ourselves quietly connecting with the moments that shaped the vibrant city known today.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+Following the mesmerizing water ballet at the Magic Fountain of Montjuïc, our path leads us through the heart of the city to the El Born Cultural Centre, where history is palpably etched into its walls. Once a lively marketplace, the center now stands as a poignant preservation of the archaeological remains of seventeenth-century Barcelona, unveiled during the building's transformation. It's a monument to the city during the War of the Spanish Succession and the ensuing siege, harboring whispers of a turbulent past.
+
+Inside, the space intertwines cultural exhibitions with the stark reality of historic ruins beneath our feet, provoking a contemplative silence among visitors. Photography enthusiasts weave through the walkways, angling their lenses to capture the narrative of time encapsulated here. We tread lightly, the sun casting elongated shadows over the remains, a natural spotlight on the streets that once teemed with life. It's here, amid the juxtaposition of past and present, where we find ourselves quietly connecting with the moments that shaped the dynamic city known today.
+
+==========
+
+REWRITING SUCCESS: False
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): roman numerals, ('symphony', 1, 0), ('vibrant', 1, 0)
+
+number of rewrites: 3
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+From the historical depths of El Born, we navigate towards the hill of Montjuïc, where the Joan Miró Foundation, officially the Fundació Joan Miró, quietly resides. Established by the artist himself in nineteen seventy-five and encased within the modern architecture of Josep Lluís Sert, the museum is a sanctuary dedicated to Miró's love for art. Within its walls, we are greeted with an expansive collection of over fourteen thousand pieces that span paintings, sculptures, and textiles, each a silent symphony of creativity.
+
+As we step into the natural light that bathes the interior, a quote by Miró resonates in our thoughts: 'I try to apply colors like words that shape poems, like notes that shape music.' Visitors around us mirror this sentiment; some stand still, absorbed in contemplative observation, while others sketch or write, hoping to capture the essence of Miró's vision. Photography enthusiasts meticulously frame both the artwork and the lush green gardens outside, documenting the seamless dance between the Foundation's modern structure and nature. Upon the sun-kissed terrace, we feel a sense of calm and harmony, as if the vibrant spirit of Joan Miró's art itself has bestowed a peace upon the grounds.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+From the historical depths of El Born, we navigate towards the hill of Montjuïc, where the Joan Miró Foundation, officially the Fundació Joan Miró, quietly resides. Established by the artist himself in nineteen seventy-five and encased within the modern architecture of Josep Lluís Sert, the museum is a sanctuary dedicated to Miró's love for art. Within its walls, we are greeted with an expansive collection of over fourteen thousand pieces that span paintings, sculptures, and textiles, each a silent concert of creativity.
+
+As we step into the natural light that fills the interior, a quote by Miró resonates in our thoughts: 'I try to apply colors like words that shape poems, like notes that shape music.' Visitors around us reflect this sentiment; some stand still, absorbed in contemplative observation, while others sketch or write, hoping to capture the essence of Miró's vision. Photography enthusiasts meticulously frame both the artwork and the lush green gardens outside, documenting the seamless interaction between the Foundation's modern structure and nature. Upon the sun-kissed terrace, we find a sense of calm and balance, as if the lively spirit of Joan Miró's art itself has bestowed a peace upon the grounds.
+
+-----
+
+From the historical depths of El Born, we navigate towards the hill of Montjuïc, where the Joan Miró Foundation, officially the Fundació Joan Miró, quietly resides. Established by the artist himself in nineteen seventy-five and encased within the modern architecture of Josep Lluís Sert, the museum is a refuge dedicated to Miró's love for art. Within its walls, we are greeted with an extensive collection of over fourteen thousand pieces that span paintings, sculptures, and textiles, each a silent display of creativity.
+
+As we step into the natural light that fills the interior, a quote by Miró resonates in our thoughts: 'I try to apply colors like words that shape poems, like notes that shape music.' Visitors around us reflect this sentiment; some stand still, absorbed in thoughtful observation, while others sketch or write, hoping to capture the essence of Miró's vision. Photography enthusiasts meticulously frame both the artwork and the lush green spaces outside, documenting the seamless interaction between the Foundation's modern structure and nature. Upon the sun-kissed patio, we find a sense of calm and balance, as if the lively spirit of Joan Miró's art itself has endowed a peace upon the grounds.
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+From the historical depths of El Born, we navigate towards the hill of Montjuïc, where the Joan Miró Foundation, officially the Fundació Joan Miró, quietly resides. Established by the artist himself in nineteen seventy-five and encased within the modern architecture of Josep Lluís Sert, the museum is a refuge dedicated to Miró's love for art. Within its walls, we are greeted with an extensive collection of over fourteen thousand pieces that span paintings, sculptures, and fabrics, each a silent display of creativity.
+
+As we step into the natural light that fills the interior, a quote by Miró resonates in our thoughts: 'I try to apply colors like words that shape poems, like notes that shape music.' Visitors around us reflect this sentiment; some stand still, absorbed in thoughtful observation, while others sketch or write, hoping to capture the essence of Miró's vision. Photography enthusiasts meticulously frame both the artwork and the lush gardens outside, documenting the seamless interaction between the Foundation's modern structure and nature. Upon the sun-kissed patio, we find a sense of peace and balance, as if the spirited art of Joan Miró itself has bestowed a calmness upon the area.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): ('mosaic', 1, 0)
+
+number of rewrites: 2
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+Leaving behind the artistic tranquility of the Joan Miró Foundation, we arrive at the architectural masterpiece that is Hospital de Sant Pau. This former medical complex, designed by the celebrated modernist architect Lluís Domènech i Montaner, first opened its doors to patients in nineteen thirty and continued to serve the community until two thousand and nine. In nineteen ninety-seven, its unique historical and architectural value was honored with a UNESCO World Heritage Site designation, reinforcing its position as one of Barcelona's gems.
+
+Wandering through the hospital's lavish grounds, we are captivated by the ornate pavilions and the harmonious gardens that weave between them, encouraging a reflective stroll. Each building is emblazoned with meticulously assembled mosaics, while sculptures and facades compete for attention, sparking a desire to capture each detail through the lens of a camera. Many visitors find solace by simply sitting on the benches sprinkled throughout the gardens, quietly absorbing the artistry around them, as they sit amidst a living canvas where the brushstrokes of nature meet the etchings of human creation.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+Leaving behind the artistic tranquility of the Joan Miró Foundation, we arrive at the architectural masterpiece that is Hospital de Sant Pau. This former medical complex, designed by the celebrated modernist architect Lluís Domènech i Montaner, first opened its doors to patients in nineteen thirty and continued to serve the community until two thousand and nine. In nineteen ninety-seven, its unique historical and architectural value was honored with a UNESCO World Heritage Site designation, reinforcing its position as one of Barcelona's gems.
+
+Wandering through the hospital's lavish grounds, we are captivated by the ornate pavilions and the harmonious gardens that weave between them, encouraging a reflective stroll. Each building is emblazoned with meticulously assembled tessellations, while sculptures and facades compete for attention, sparking a desire to capture each detail through the lens of a camera. Many visitors find solace by simply sitting on the benches sprinkled throughout the gardens, quietly absorbing the artistry around them, as they sit amidst a living canvas where the brushstrokes of nature meet the etchings of human creation.
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+Leaving behind the peaceful serenity of the Joan Miró Foundation, we arrive at the architectural wonder that is Hospital de Sant Pau. This former medical complex, designed by the celebrated modernist architect Lluís Domènech i Montaner, first opened its doors to patients in nineteen thirty and continued to serve the community until two thousand and nine. In nineteen ninety-seven, its unique historical and architectural value was recognized with a UNESCO World Heritage Site designation, reinforcing its position as one of Barcelona's jewels.
+
+Wandering through the hospital's impressive grounds, we are captivated by the ornate pavilions and the harmonious gardens that weave between them, encouraging a reflective stroll. Each building is emblazoned with meticulously crafted tessellations, while sculptures and facades compete for attention, sparking a desire to capture each detail through the lens of a camera. Many visitors find peace by simply sitting on the benches sprinkled throughout the gardens, quietly soaking in the craftsmanship around them, as they sit amidst a living picture where the strokes of nature meet the designs of human creation.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): digits
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+After the rich historical narrative of Hospital de Sant Pau, our tour ascends further up Montjuïc Hill to the imposing structure of Montjuïc Castle. This seventeenth-century fortress, with its military past as a defender, prison, and execution site, stands as a sentinel over Barcelona. Its present form, dating back to the late eighteenth century, belies the tumult it has witnessed, notably during the grim days of 1936 in the throes of the Spanish Civil War. Since two thousand and seven, this bastion of history has taken on a new role as a municipal facility, opening its gates for exhibitions and cultural events that breathe a gentler life into its stony heart.
+
+Elevated above the city, visitors meander along the ancient battlements, where the horizon stretches to encompass both the urban landscape and the deep blue of the Mediterranean Sea. It's not uncommon to find guests lingering until the evening, where the sight of the Magic Fountain's waterworks, coupled with the onset of dusk, turns the landscape into a canvas of shifting light and shadow. From this vantage point, the energetic pulse of the city transforms into a distant, serene shimmer, inviting a moment of quiet repose as day gives way to night.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+After the rich historical narrative of Hospital de Sant Pau, our tour ascends further up Montjuïc Hill to the imposing structure of Montjuïc Castle. This seventeenth-century fortress, with its military past as a defender, prison, and execution site, stands as a watchman over Barcelona. Its present form, dating back to the late eighteenth century, belies the unrest it has witnessed, notably during the grim days of nineteen thirty-six in the throes of the Spanish Civil War. Since two thousand and seven, this bastion of history has taken on a new role as a municipal facility, opening its gates for exhibitions and cultural events that infuse a softer life into its stony heart.
+
+Elevated above the city, visitors wander along the ancient ramparts, where the horizon stretches to encompass both the urban landscape and the deep blue of the Mediterranean Sea. It's not uncommon to find guests lingering until the evening, where the sight of the Magic Fountain's water displays, coupled with the onset of dusk, turns the landscape into a collage of shifting light and shadow. From this vantage point, the energetic pulse of the city transforms into a distant, calm shimmer, inviting a moment of peaceful reflection as day gives way to night.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): ('testament', 1, 0)
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+As we leave the enchanting pathways of the Labyrinth Park of Horta, our next stop is the majestic Santa Maria del Mar. This basilica is a crowning jewel of Catalan Gothic architecture and has stood as a testament to Barcelona's maritime prosperity since the fourteenth century. Known affectionately as the 'Cathedral of the Sea,' a moniker eternized by Ildefonso Falcones' famous novel, it embodies the city's historical trade strength and the resilience of its people, having withstood natural disasters like the Catalan earthquake of fourteen twenty-eight and human conflicts such as the Spanish Civil War.
+
+Stepping inside, we are immediately struck by the enormity of the interior, where the vaults soar up to thirty-three meters. This imposing height, coupled with the grace of the slender columns, creates a sense of expanse that could only be dreamed of in the fourteenth century. Visitors around us pause, captivated by the delicate dance of light as it filters through the stained glass windows, painting the stone interior with ephemeral hues. Some engage in the quiet ritual of lighting candles, adding flickering points of warmth to the already soft atmosphere. We find ourselves taking a seat on one of the wooden pews, nestled in the calmness, as the ambient sounds of hushed conversations and soft footsteps echo subtly through the vast space.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+As we leave the enchanting pathways of the Labyrinth Park of Horta, our next destination is the majestic Santa Maria del Mar. This basilica stands as a crowning achievement of Catalan Gothic architecture and has remained as a symbol of Barcelona's maritime prosperity since the fourteenth century. Affectionately known as the 'Cathedral of the Sea,' a name made famous by Ildefonso Falcones' renowned novel, it symbolizes the city's historical trade strength and the endurance of its people, having survived natural calamities like the Catalan earthquake of fourteen twenty-eight and human conflicts such as the Spanish Civil War.
+
+Stepping inside, we are immediately struck by the enormity of the interior, where the vaults reach up to thirty-three meters. This imposing height, along with the elegance of the slender columns, creates a sense of spaciousness that was nearly unimaginable in the fourteenth century. Visitors around us stop, mesmerized by the delicate interplay of light as it streams through the stained glass windows, casting the stone interior in fleeting shades. Some participate in the quiet practice of lighting candles, adding twinkling spots of light to the already subdued ambiance. We discover ourselves sitting on one of the wooden benches, tucked into the quietude, as the background sounds of muted conversations and gentle footsteps reverberate through the immense area.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): roman numerals
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+From the serene embrace of Santa Maria del Mar, we find ourselves drawn to the social heartbeat of Barcelona's Gothic Quarter, the stately Plaça Reial. As we step onto this nineteenth-century square, the ambiance shifts to one of leisurely enjoyment and cultural vibrancy. It's here that visitors converge to bask in the architectural elegance and lively spirit that define Barcelona. Each streetlamp, an early work of the renowned Antoni Gaudí, stands as a silent guardian over the open space, illuminating the area with a soft, enchanting light.
+
+As the square's name, Plaça Reial, implies a nod to the regality of King Fernando VII, today it is the palm trees that majestically wave over the joyous throng below. Street performers animate the corners with music and motion, echoing the rhythms of the city, while diners at outdoor cafes add to the square's warm, convivial atmosphere. The gentle rustling of palm fronds overhead provides a serene auditory canvas to the plaza's lively scene, creating an experience that is both invigorating and comfortably soothing.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+From the calm embrace of Santa Maria del Mar, we find ourselves drawn to the social heart of Barcelona's Gothic Quarter, the stately Plaça Reial. As we step onto this nineteenth-century square, the ambiance shifts to one of leisurely pleasure and cultural excitement. It's here that visitors converge to soak in the architectural beauty and spirited atmosphere that characterize Barcelona. Each streetlamp, an early work by the renowned Antoni Gaudí, stands as a silent protector over the space, casting the area in a soft, captivating light.
+
+As the square's name, Plaça Reial, suggests a reference to the majesty of King Fernando the Seventh, today it is the palm trees that regally wave over the joyful crowd below. Street performers bring life to the corners with music and movement, mirroring the rhythms of the city, while diners at outdoor cafes contribute to the square's warm, friendly ambience. The gentle rustling of palm fronds overhead provides a calm auditory backdrop to the plaza's active scene, creating an experience that is both energizing and comfortably relaxing.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): ('homage', 1, 0)
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+Our sightseeing tour continues as we make our way towards Casa Vicens, a museum that was once the private residence touted as Antoni Gaudí's first significant work in Barcelona. Built between eighteen eighty-three and eighteen eighty-five, this former summer home for a prosperous family marks the advent of Gaudí's architectural journey, showcasing his burgeoning talent in working with color, shape, and pattern. The facade is particularly striking, adorned with tiles that display the marigold—an homage to the natural splendor once found in the Vicens family's garden.
+
+Once outside the hustle of the city, the building now stands as a beacon of the Art Nouveau movement within the urban landscape. In two thousand and five, Casa Vicens was rightfully declared a UNESCO World Heritage Site, cementing its status as an architectural treasure. Visitors often linger outside, studying the exquisite detail and craftsmanship of the ironwork that graces the balconies and entrance gate. Stepping inside, the museum offers an intimate glimpse of original furnishings and decor, many designed by Gaudí, allowing guests to immerse themselves in the artistic vision of a man who would become one of Barcelona's most revered sons.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+Our sightseeing tour continues as we make our way towards Casa Vicens, a museum that was once the private residence touted as Antoni Gaudí's first significant work in Barcelona. Built between eighteen eighty-three and eighteen eighty-five, this former summer home for a prosperous family marks the beginning of Gaudí's architectural journey, showcasing his burgeoning talent in working with color, shape, and pattern. The facade is particularly striking, adorned with tiles that display the marigold—a nod to the natural beauty once found in the Vicens family's garden.
+
+Once outside the commotion of the city, the building now stands as a beacon of the Art Nouveau movement within the urban environment. In two thousand and five, Casa Vicens was rightfully declared a UNESCO World Heritage Site, cementing its status as an architectural gem. Visitors often linger outside, studying the exquisite detail and craftsmanship of the ironwork that graces the balconies and entrance gate. Stepping inside, the museum offers an intimate glimpse of original furnishings and decor, many designed by Gaudí, allowing guests to immerse themselves in the artistic vision of a man who would become one of Barcelona's most respected sons.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): ('tapestry', 1, 0), ('vibrant', 1, 0)
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+As the sun inches towards the horizon, casting a soft golden hue across the iconic skyline, our guided bike tour through Barcelona gradually winds down. We've traversed through time, from the labyrinthine Gothic Quarter to the modernist masterpieces of Gaudí, each pedal stroke a verse in the city's sprawling poem. The stories etched into the fabric of this metropolis—whispered by ancient stones, sung by street performers, and celebrated in the vibrant strokes of Miró—have imbued our adventure with an air of enchantment.
+
+With hearts full of memories and minds rich with new understandings, we gather one last time beneath the gentle embrace of a twilight sky. Our guide's insightful narratives have given depth to every vista and meaning to every monument, transforming a simple journey into an anthology of wonder. As we say our goodbyes, the essence of Barcelona’s spirit—a tapestry of artistry, history, and culture—remains with us. This city, a canvas of dreams realized in stone, glass, and iron, continues to resonate with the soothing rhythm of the sea and the quiet footsteps of its people, inviting all who visit to return, to explore, and to dream.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+As the sun inches towards the horizon, casting a soft golden hue across the iconic skyline, our guided bike tour through Barcelona gradually winds down. We've traversed through time, from the labyrinthine Gothic Quarter to the modernist masterpieces of Gaudí, each pedal stroke a verse in the city's extensive narrative. The stories etched into the fabric of this metropolis—whispered by ancient stones, sung by street performers, and celebrated in the lively strokes of Miró—have imbued our adventure with an air of magic.
+
+With hearts full of memories and minds rich with new insights, we gather one last time beneath the gentle embrace of a twilight sky. Our guide's insightful narratives have given depth to every vista and meaning to every monument, transforming a simple journey into a collection of wonder. As we say our goodbyes, the essence of Barcelona’s spirit—a collage of artistry, history, and culture—remains with us. This city, a canvas of dreams realized in stone, glass, and iron, continues to resonate with the soothing rhythm of the sea and the quiet footsteps of its people, inviting all who visit to return, to explore, and to dream.

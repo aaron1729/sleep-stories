@@ -9,23 +9,23 @@ def get_all_unhidden_files(directory):
     # make sure it's the name of a _file_, and make sure it's not a _hidden_file.
     return [filename for filename in listdir(directory + "/") if isfile(join(directory + "/", filename)) and filename[0] != "."]
 
-# destination is e.g. "amalfi".
-# directory is e.g. "story" or "stops".
+# key is e.g. "amalfi" or "impressionism".
+# directory is e.g. "story" or "stops" or "art-style-descriptions".
 # length is either "long" or "short", but this only applies to certain types of file.
     # example: executing get_latest_filename("algarve", "stories", "short") on 2023-11-24 returns:
     # story_algarve_2023-11-23_01-25-49_short.txt
 # this may not work on all file types! for instance, our rewriting-log files have a slightly different naming convention, because their filenames indicate both the original unedited story (and in particular its timestamp) as well as the editing timestamp. so, modify this if necessary before using it on any new file types.
 # if there's no such file, return `None`. raise an exception elsewhere _if desired_. (sometimes this will _not_ be desired, which is why we're not raising an exception here.)
-def get_latest_filename(destination, directory, length = None):
+def get_latest_filename(key, directory, length = None):
     all_filenames = get_all_unhidden_files(directory)
-    destination_filenames = [filename for filename in all_filenames if filename.split("_")[1] == destination]
+    key_filenames = [filename for filename in all_filenames if filename.split("_")[1] == key]
     if length:
-        destination_filenames = [filename for filename in destination_filenames if filename.split("_")[-1][:-4] == length]
-    if len(destination_filenames) == 0:
-        print(f"there are no files in `{directory}/` corresponding to the destination `{destination}`{' of length `' + length + '`' if length else ''}")
+        key_filenames = [filename for filename in key_filenames if filename.split("_")[-1][:-4] == length]
+    if len(key_filenames) == 0:
+        print(f"there are no files in `{directory}/` corresponding to the key `{destination}`{' of length `' + length + '`' if length else ''}")
         return None
-    destination_filenames.sort()
-    return destination_filenames[-1]
+    key_filenames.sort()
+    return key_filenames[-1]
 
 #####
 
@@ -33,6 +33,11 @@ from datetime import datetime
 def time_now():
     datetime_string = str(datetime.now())
     return datetime_string[:10] + "_" + datetime_string[11:13] + "-" + datetime_string[14:16] + "-" + datetime_string[17:19]
+
+# time_diff(start, end):
+#     start_date, start_time = start.split("_")
+#     end_date, end_time = end.split("_")
+
 
 #####
 
@@ -170,7 +175,7 @@ no_separator_in_conclusion_plz = "Please do NOT include any sort of separator be
 
 #####
 
-# SYSTEM PROMPTS
+# PROMPT(S) FOR REWRITING
 
 def system_prompt_for_rewriting(overused_words_to_remove):
     return f"""The user will give you a chunk of text. Please rewrite this WITH MINIMAL CHANGES, according to the following TWO instructions.
@@ -204,33 +209,14 @@ EXAMPLE: 'Calculus I' should be written out as 'Calculus One' (this is the name 
 EXAMPLE: 'I Gusti Nyoman Lempad' should actually NOT BE CHANGED, because this is a person's name. Please do not be confused by the fact that his first name is also a Roman numeral.
 """
 
-
-system_prompt_for_rewriting_OLD = f"""The user will give you text. Please rewrite the text so that all numbers are written out in words. This includes Roman numerals. So, the result should not have any digits or any Roman numerals. Please make sure that years are written out in the usual way that they're spoken. Please only respond with the rewritten text, and nothing else.
-
-EXAMPLE: '1842' should be written out as 'eighteen forty-two' (and not 'one thousand eight hundred and forty-two').
-
-EXAMPLE: '1906', when it is functioning as a year, should be written out as 'nineteen oh-six' (and not 'one thousand nine hundred and six' or 'nineteen hundred and six').
-
-EXAMPLE: In the context of a vacation in Italy, '5Terre' (which is the name of a gelateria) should be written out as 'Cinque Terre' (which is the name of the region where the gelateria is located).
-
-EXAMPLE: 'Louis XIV' should be written out as 'Louis the Fourteenth'.
-
-EXAMPLE: 'Henry I' should be written out as 'Henry the First'.
-
-EXAMPLE: 'Super Bowl XLII' should be written out as 'Super Bowl Forty Two'.
-
-EXAMPLE: 'Star Wars Episode IV' should be written out as 'Star Wars Episode Four'.
-
-EXAMPLE: 'Calculus I' should be written out as 'Calculus One' (this is the name of a math course).
-
-EXAMPLE: 'I Gusti Nyoman Lempad' should actually NOT BE CHANGED, because this is a person's name. Please do not be confused by the fact that his first name is also a Roman numeral."""
-
 #####
+
+# PROMPTS FOR STOPS
 
 def user_prompt_for_stops(destination_fullname, num_stops, transport_method, requested_sightseeing_stops):
     return f"""I love traveling. I'm going on a trip to {destination_fullname}. Please name {num_stops} popular sightseeing locations there that I could visit by {transport_method}. {f"Please try to include {requested_sightseeing_stops} among these sightseeing locations." if requested_sightseeing_stops else ""}
 
-Please list the sightseeing locations in an order so that no two adjacent sightseeing locations are too similar; for example, if one is a museum, the next would ideally be something like an outdoor market. Please only choose sightseeing locations that are calm and not even remotely controversial. For example, a beautiful park, a rose garden, a Buddhist temple, or a textiles museum would be a great choice of sightseeing location. A bullfight or a Holocaust museum would be a bad choice of sightseeing location.
+Please list the sightseeing locations in an order such that no two adjacent sightseeing locations are too similar; for example, if one is a museum, the next would ideally be something like an outdoor market (and certainly not another museum!). Please only choose sightseeing locations that are calm and not even remotely controversial. For example, a beautiful park, a rose garden, a Buddhist temple, or a textiles museum would be a great choice of sightseeing location. A bullfight or a Holocaust museum would be a bad choice of sightseeing location.
 
 Please separate the different sightseeing locations with five asterisks (i.e. the string '*****'). Please make sure to separate the sightseeing locations with five asterisks.
 
@@ -296,6 +282,8 @@ EXAMPLE RESPONSE:
 END OF EXAMPLE THREE"""
 
 #####
+
+# PROMPTS FOR STORIES
 
 def system_prompt_for_story(length, num_stops):
     if not (length == "long" or length == "short"):
@@ -373,10 +361,6 @@ END EXAMPLE REWRITE TWO.
 
 EXAMPLE STORY:\n\n""" + open("example_story.txt", "r").read()
 
-#####
-
-# USER PROMPTS FOR WRITING STORIES
-
 def initial_user_prompt_for_story(length, destination_fullname, transport_method, tour_guide, season, stops, a):
     filler_length = ""
     filler_stops = ""
@@ -444,14 +428,6 @@ REMAINING SIGHTSEEING LOCATION{'S' if z>1 else ''}:
 
 {nn.join(stops[a+c*n:a+c*n+z])}"""
 
-
-
-
-
-
-
-
-
 def user_prompt_for_ending_long_story(destination_fullname, transport_method):
     return f"Great, thank you! Please conclude the story about our sightseeing tour by {transport_method} in {destination_fullname}. Keep it upbeat, gentle, and inspiring."
 
@@ -468,5 +444,91 @@ REMAINING SIGHTSEEING LOCATION{'S' if z>1 else ''}:
 
 {''.join(remaining_stops)}"""
 
+#####
 
+# PROMPTS FOR ART STYLE DESCRIPTIONS
 
+def user_prompt_for_art_style_description(art_style):
+    
+    return f"""I am writing a travel story, and I want to include illustrations made by DALL-E that consistently conform to the following style of art:
+
+{art_style}
+
+Please give me an extended description of this art style that is SPECIFICALLY TAILORED TO help create DALL-E prompts that are in this art style.
+
+=====
+
+EXAMPLE INPUT:
+
+pop art
+
+EXAMPLE OUTPUT:
+
+Pop Art is a distinctive artistic style that emerged in the late 1950s and 1960s, primarily in the United States and the United Kingdom. It is characterized by several key features that set it apart from other art movements:
+
+Emphasis on Popular Culture: Pop Art draws its subject matter from popular and mass culture, such as advertising, comic books, celebrity culture, and consumer goods. This was a significant shift from the traditional focus on more elitist themes in art, bringing a more accessible and relatable element to the art world.
+
+Bold, Vibrant Colors: Pop Art is known for its use of bright, vivid colors. These colors are often used in flat, large areas to create a striking, graphic look. This use of color was influenced by the advertising and comic book styles of the time, which employed similar techniques to attract attention.
+
+Use of Ben-Day Dots: A technique borrowed from comic strips and commercial printing, Ben-Day dots were used to create shading and secondary colors in Pop Art. This process involved the use of small colored dots closely spaced, overlapped, or separated to create different hues and effects.
+
+Irony and Satire: Many Pop Art pieces have an ironic or satirical edge, often as a critique of consumerism, mass production, and the banality of everyday objects and icons. This approach was a stark contrast to the more serious and introspective tendencies of Abstract Expressionism, which preceded Pop Art.
+
+Incorporation of Commercial Techniques: Pop Art artists often adopted techniques from commercial art and mass production, like screen printing. This allowed them to produce art in a manner that echoed the mass-produced nature of the objects and imagery they were depicting.
+
+Simplicity and Boldness in Design: Pop Art is characterized by simple, bold lines and a clear, straightforward composition. This clarity was a deliberate choice to mimic the directness of advertising and to make the art more approachable.
+
+Mix of High and Low Culture: Pop Art blurred the boundaries between 'high' art (like fine art) and 'low' culture (like commercial art and advertising). This mix was revolutionary at the time and challenged the traditional hierarchy and elitism in the art world.
+
+Iconic Imagery: Pop Art often featured iconic images from popular culture, including famous celebrities, comic book characters, and everyday consumer goods. These images were often presented in new or challenging contexts to make the viewer see them in a different light.
+
+In summary, Pop Art is a visually bold and culturally resonant art movement that emerged as a reaction against the elitism of traditional art. It uses the techniques, styles, and themes of popular and mass culture to create works that are both accessible and critically engaging, often with a sense of irony or satire."""
+
+#####
+
+# PROMPTS FOR DALLE PROMPTS
+
+def system_prompt_for_dalle_prompts(destination_fullname, art_style_fullname, art_style_description):
+    return f"""The user has written a travel story set in {destination_fullname}, and would like to obtain illustrations from DALL-E 3. Your job will be to write illustration prompts. Artistic guidelines are copied below. Please make sure that ALL the prompts that you write adhere to the artistic guidelines.
+
+Each user message will contain a short snippet from the story, as well as the larger context from which the snippet is taken. For each short snippet, please generate a prompt for a DALL-E 3 illustration. Ideally this will illustrate the snippet itself, but if this is not easy then it can also illustrate some nearby text from the larger context. Also, ideally each illustration prompt will be substantively different from the previous one.
+
+Please do not respond with any text besides the illustration prompt. The illustration prompt should be as long as possible -- close to 1,000 characters (which is the length limit for DALL-E 3 prompts).
+
+=====
+
+ARTISTIC GUIDELINES:
+
+Please make sure that EVERY illustration prompt is designed to generate an image IN THE ARTISTIC STYLE LISTED BELOW. It is important that ALL of the illustration prompts generate illustrations that are in the given style.
+
+Please do NOT generate any illustration prompts that involve meat-based foods. For example, do NOT generate an illustration prompt for a picture of a lobster in a lobster roll.
+
+Additionally, please make sure that the prompts do NOT describe illustrations that have any people or body parts in the foreground -- especially hands. However, please DO include people in the middleground and background when possible.
+
+Please make sure that every picture has color. Please do not include any black-and-white pictures.
+
+These prompts will be for images of size 1024x1792. Please make sure that every picture fills the ENTIRE frame, rather than having blank space at the top or bottom. Here are some tips to help with this.
+
+* Explicit Orientation Description: Clearly state in your prompt that the scene or subject should be vertical or portrait-oriented. For example, "A portrait-oriented scene of a tall building against a cloudy sky" emphasizes the vertical alignment.
+
+* Specify Full-Body or Vertical Elements: Since 1024x1792 is a vertical format, ensure your prompt describes a scene or subject that naturally fits this shape. For instance, full-body portraits, tall structures, or vertical landscapes work well.
+
+* Detail the Foreground and Background: Provide details about what should be in the foreground and the background. This helps fill up the vertical space more effectively.
+
+* Use Vertical Composition: Encourage a vertical composition in your prompt. For example, if you're asking for a character, describe them in a standing pose, or if it's a landscape, focus on elements like tall trees or a waterfall.
+
+* Mention the Entire Scene: Describe the entire scene from the bottom to the top. This could include the ground, middle elements, and the sky or ceiling in indoor scenes.
+
+* Avoid Broad or Ambiguous Descriptions: Vague descriptions can lead to simpler or less filled-in images. Be as specific as possible about what you want to see throughout the entire image.
+
+* Request Detailed Elements: Adding details like intricate clothing on characters, detailed foliage in nature scenes, or ornate elements in architectural designs can help utilize the space better.
+
+=====
+
+LOCATION: {destination_fullname}
+
+ART STYLE: {art_style_fullname}
+
+DESCRIPTION:
+
+{art_style_description}"""

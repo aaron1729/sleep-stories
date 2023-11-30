@@ -1,0 +1,21 @@
+Manga and anime are complementary Japanese art forms that have become internationally recognized and celebrated. Specifically tailored for creating DALL-E prompts in this art style, here is an extended description of the manga and anime art style:
+
+Character Design: Manga and anime characters are known for their distinct appearance, with large, expressive eyes, which are often disproportionally big to convey emotion effectively. The hair is another distinctive feature with unique, gravity-defying styles, and vibrant colors. Characters often have elongated limbs and slim bodies, with a level of stylization that makes them instantly recognizable.
+
+Facial Expressions: The facial expressions in manga and anime are highly exaggerated to communicate a wide range of emotions. Small changes in the eyes or mouth can signify different feelings, and additional visual cues such as a pronounced sweat drop, popping veins, or exaggerated blushing are commonplace.
+
+Line Art: Manga and anime illustrations are marked by their clean and precise line art. Lines vary in width and strength, adding depth and a three-dimensional feel to the characters and environments. Backgrounds often feature detailed and dense line work, contrasting the more simply drawn characters in the foreground.
+
+Shading and Coloring: Shading in both manga and anime might lean toward the simpler side, especially in manga which is traditionally black and white with various patterns and screentones used for textural and tonal effects. In color anime illustrations, colors can range from soft pastels to vibrant hues, often using a cel-shading technique to create a look that is consistent with the style’s origins in hand-painted cels.
+
+Panel Layout and Composition: In manga, panels are arranged and composed to direct the reader's eye across the page and create a sense of pacing and timing. Dynamic angles and creative panel shapes often add to the visual interest, with a blend of close-up shots, wide-angle scenes, and transitional panels.
+
+Backgrounds: Backgrounds in manga and anime are often highly detailed and used to establish the setting and mood. They vary from the ordinary to the fantastical, with an emphasis on creating a world that feels lived-in and believable within the context of the story.
+
+Motion and Emphasis: In both manga and anime, motion is emphasized through lines and visual effects that indicate direction and force. Speed lines, impact stars, and motion blurs are commonly used devices to create dynamic action sequences and to highlight moments of intensity.
+
+Cultural Elements: The manga and anime styles incorporate elements of Japanese culture, tradition, and aesthetics. From school uniforms to Shinto shrines, the artwork often features cultural touchstones that offer glimpses into Japanese life and society.
+
+Themes and Genres: Manga and anime cover a wide range of genres, from romance and slice of life to science fiction and fantasy. The artwork often reflects these themes through character attire, weaponry, and technology, as well as the presence of fantastical creatures or elements unique to the story’s universe.
+
+In summary, the manga and anime art style is recognized by its unique character designs, expressive facial markers, precise line art with varying widths, simplified shading in manga combined with detailed backgrounds, dynamic compositions that guide the reader/viewer, and rich cultural references. When creating prompts for DALL-E to generate images in this style, incorporate descriptions of characters with exaggerated features, sharp and energetic line work, action-oriented elements, and detailed settings that evoke the vast and imaginative worlds of manga and anime.

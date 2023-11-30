@@ -1,0 +1,405 @@
+OVERUSED WORD ALLOWANCES (computed with B=3):
+tapestry: 1
+testament: 0
+grandeur: 0
+symphony: 2
+tribute: 2
+homage: 1
+tranquil: 1
+chariot: 0
+mosaic: 1
+vibrant: 0
+bustling: 0
+verdant: 2
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): ('bustling', 1, 0)
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+Imagine the gentle warmth of a spring sun as it plays along the edges of the Amalfi Coast, a place where nature's artwork unfolds in a harmony of sea, sky, and the radiant hues of Italian architecture. The air carries the subtle scent of blooming orange blossoms intermingling with the salty tang of the Tyrrhenian Sea, creating an atmosphere that feels like the soft touch of a sea breeze against your skin. It is the season of renewal, where verdure awakens in the Italian countryside, and the vivacious palette of flowers adds splashes of color against the terraced hillsides.
+
+We're about to embark on a leisurely exploration of this breathtaking landscape, seated comfortably on iconic Italian Vespas. These motor scooters are synonymous with the carefree spirit of the Mediterranean, promising an adventure as authentic as the cobblestone pathways and olive groves we will navigate through. The Amalfi Coast, with its winding roads and dramatic views, is a jewel in Italy's crown, one that we are about to discover intimately, with the freedom to stop where we wish, and the cozy convenience to ponder over each panoramic view that unveils before us.
+
+Our journey begins in Positano, a village that clings to cliffs and spills down towards the sea like a waterfall of pastel-colored buildings. Its charm is undeniable; the town is drenched in sunlight, its houses stacked atop one another as if vying for the best view of the sparkling water below. As we meander through the streets on foot, the local shops invite us in with their displays of handcrafted sandals, beckoning to us with the promise of wearable memories.
+
+Camera in hand, we join other excited sightseers. Together, we navigate the labyrinthine alleys and countless staircases, each turn bringing a fresh vista more picturesque than the last. This vertical town was once a bustling port, teeming with the trade and vibrancy that has morphed into the current allure for wanderers of the world. It was here in the nineteen fifties when tourists began to fill the steep streets, drawn by the same siren call of beauty that beckoned to John Steinbeck. His words linger in our minds as we experience the surreal quality of Positano for ourselves; it's a place that seems to straddle the line between dream and reality, so bewitching that the memories of it continue to whisper to the soul long after one has departed.
+
+Pausing to savor a scoop of gelato, we find a comfortable spot where the sun caresses our faces. We sit, tasting the creamy flavors while relishing a view that artists and poets have attempted to capture for ages. The sea stretches out before us in shades of blue and turquoise, a peaceful expanse that lulls our hearts into a state of gentle contentment. It feels as though the world has slowed down, allowing us to take in every minute of serenity that Positano offers, storing away these moments like precious keepsakes we'll treasure forever.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+Imagine the gentle warmth of a spring sun as it plays along the edges of the Amalfi Coast, a place where nature's canvas unfolds in a harmony of sea, sky, and the radiant colors of Italian architecture. The air carries the subtle scent of blooming orange blossoms intermingling with the salty tang of the Tyrrhenian Sea, creating an atmosphere that feels like the soft touch of a sea breeze against your skin. It is the season of renewal, where greenery awakens in the Italian countryside, and the lively palette of flowers adds splashes of color against the terraced hillsides.
+
+We're about to embark on a leisurely exploration of this breathtaking landscape, seated comfortably on iconic Italian Vespas. These motor scooters are synonymous with the carefree spirit of the Mediterranean, promising an adventure as authentic as the cobblestone pathways and olive groves we will navigate through. The Amalfi Coast, with its winding roads and dramatic views, is a jewel in Italy's crown, one that we are about to discover intimately, with the freedom to stop where we wish, and the cozy convenience to ponder over each panoramic view that unveils before us.
+
+Our journey begins in Positano, a village that clings to cliffs and spills down towards the sea like a waterfall of pastel-colored buildings. Its charm is undeniable; the town is drenched in sunlight, its houses stacked atop one another as if vying for the best view of the sparkling water below. As we meander through the streets on foot, the local shops invite us in with their displays of handcrafted sandals, beckoning to us with the promise of wearable memories.
+
+Camera in hand, we join other excited sightseers. Together, we navigate the labyrinthine alleys and countless staircases, each turn bringing a fresh vista more picturesque than the last. This vertical town was once a busy port, teeming with the trade and activity that has morphed into the current allure for wanderers of the world. It was here in the nineteen fifties when tourists began to fill the steep streets, drawn by the same call of beauty that beckoned to John Steinbeck. His words linger in our minds as we experience the surreal quality of Positano for ourselves; it's a place that seems to straddle the line between dream and reality, so enchanting that the memories of it continue to whisper to the soul long after one has departed.
+
+Pausing to savor a scoop of gelato, we find a comfortable spot where the sun caresses our faces. We sit, tasting the creamy flavors while savoring a view that artists and poets have attempted to capture for ages. The sea stretches out before us in shades of blue and turquoise, a peaceful expanse that lulls our hearts into a state of gentle relaxation. It feels as though the world has slowed down, allowing us to take in every minute of calm that Positano offers, storing away these moments like precious keepsakes we'll treasure forever.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): 
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+With quiet reflections and prayers still clinging to our thoughts, we ease away from the serenity of Chiesa di Santa Maria Assunta, ready to immerse ourselves in the natural beauty of the Amalfi Coast. The Vallone delle Ferriere is our next destination, a nature reserve that promises an escape into a world of green canopies, cascading waterfalls, and whispers of a medieval past. We exchange the cobblestone streets and the architectural splendor of Positano's heart for the embrace of the woods, where the chatter of urban life is replaced with the gentle symphony of nature's chorus.
+
+The air grows cooler as we embark on the trails, the dense foliage sheltering us from the sun's bright dance across the sky. Hikers with cameras at the ready delight in capturing the intimate details of the environment: the glisten of water droplets on leaf blades, the rusted gears of long-abandoned ironworks, the crumbled walls of the old paper mills that hearken back to a time when Amalfi played a pivotal role in the production of paper. This valley, flourishing under a unique microclimate, cradles the rare Woodwardia radicans fern, an emblem of the biodiversity treasured within this sylvan haven.
+
+Following the undulating path, the sound of rushing water grows more pronounced, guiding us to the heart of the reserve, where waterfalls cascade over moss-covered rocks. There, we pause, allowing the cool mist to settle upon our faces, a refreshing veil that seems to rejuvenate our spirits. In the distance, birdwatchers focus their lenses, hoping to spot some of the valley's avian residents amid the rustling leaves. The natural beauty, though not directly chronicled by famed writers, lives up to Steinbeck's expression of the Amalfi Coast's profound allure—it indeed 'bites deep,' etching itself into the canvas of our journey.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+With quiet reflections and prayers still lingering in our minds, we move away from the peaceful ambiance of Chiesa di Santa Maria Assunta, ready to delve into the natural scenes of the Amalfi Coast. The Vallone delle Ferriere is our next stop, a nature reserve that offers an escape to a world of green canopies, flowing waterfalls, and hints of a medieval history. We leave behind the cobblestone streets and the architectural magnificence of Positano's center for the embrace of the forest, where the noise of urban life is swapped with the gentle harmony of nature's soundscape.
+
+The air becomes cooler as we set out on the trails, the dense leaves sheltering us from the sun's luminous journey across the sky. Hikers with cameras poised eagerly capture the intricate details of the natural environment: the sparkle of water droplets on leaves, the rusted machinery of long-deserted ironworks, the crumbling walls of the ancient paper mills that remind us of a time when Amalfi was key in the production of paper. This valley, thriving under a distinctive microclimate, shelters the rare Woodwardia radicans fern, a symbol of the biodiversity cherished within this forested retreat.
+
+Following the meandering path, the noise of flowing water becomes louder, leading us to the core of the reserve, where waterfalls tumble over mossy stones. There, we stop, letting the cool spray settle on our faces, a refreshing layer that seems to revive our spirits. In the distance, birdwatchers adjust their lenses, hoping to glimpse some of the valley's feathered inhabitants among the fluttering leaves. The natural allure, although not extensively recorded by famous authors, matches Steinbeck's description of the Amalfi Coast's profound appeal—it indeed 'bites deep', engraving itself into the narrative of our travel.
+
+==========
+
+REWRITING SUCCESS: False
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): roman numerals, ('vibrant', 1, 0)
+
+number of rewrites: 3
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+Heightened by the touch of nature's hand at Vallone delle Ferriere, we venture onwards, our senses now attuned to the allure of the earth's bounty as we approach the Amalfi Lemon Experience. Leaving the delicate woodland ecosystem behind, we are soon enveloped by the sweet, pervasive aroma of citrus as we step into the sun-dappled groves of the Sfusato Amalfitano lemons. The air is filled with a perfume that promises refreshment and nostalgia all at once; it's the scent of lemon orchards bathed in a rich history dating back to at least the eleventh century.
+
+Strolling among the terraced groves feels like walking through the lines of a pastoral poem, with Rilke's words trailing beside us: 'Land of the lemon groves... The quietest thing I saw in the world was the Amalfi lemon blossom.' We witness the robust lemons hanging like golden orbs nestled among the deep green leaves, the afternoon light painting them in a hue that speaks of zest and life. Visitors wander the paths between the trees, enraptured by the fruit's vibrant presence, some engaging in enlightening conversations with the growers who tend these groves with dedication and pride.
+
+We join in on a limoncello tasting session, relishing the sweet and tangy notes of the bright yellow liqueur, a delightful libation that captures the essence of the Amalfi Coast's sunny disposition. Sipping the drink in this serene setting, surrounded by the history and craftsmanship that have shaped this region, we feel a connection to the stories and techniques passed down through generations, uniting us in a shared experience of culture, flavor, and the peaceful embrace of the orchard's sheltering boughs.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+Heightened by the touch of nature's hand at Vallone delle Ferriere, we venture onwards, our senses now attuned to the allure of the earth's wealth as we approach the Amalfi Lemon Experience. Leaving the delicate woodland ecosystem behind, we are soon enveloped by the sweet, pervasive scent of citrus as we step into the sun-kissed groves of the Sfusato Amalfitano lemons. The air is filled with a perfume that promises refreshment and nostalgia all at once; it's the scent of lemon orchards bathed in a rich history dating back to at least the eleventh century.
+
+Strolling among the terraced groves feels like walking through the lines of a pastoral poem, with Rilke's words trailing beside us: 'Land of the lemon groves... The quietest thing I saw in the world was the Amalfi lemon blossom.' We witness the robust lemons hanging like golden orbs nestled among the deep green leaves, the afternoon light painting them in a hue that speaks of zest and life. Visitors wander the paths between the trees, captivated by the fruit's striking presence, some engaging in enlightening conversations with the growers who tend these groves with dedication and pride.
+
+We join in on a limoncello tasting session, relishing the sweet and tangy notes of the bright yellow liqueur, a delightful libation that captures the essence of the Amalfi Coast's sunny character. Sipping the drink in this serene setting, surrounded by the history and craftsmanship that have shaped this region, we feel a connection to the stories and techniques passed down through generations, uniting us in a shared experience of culture, flavor, and the peaceful embrace of the orchard's sheltering branches.
+
+-----
+
+Elevated by the touch of nature's influence at Vallone delle Ferriere, we journey forward, our senses newly sensitive to the allure of the earth's bounty as we near the Amalfi Lemon Experience. Forsaking the gentle woodland ecosystem, we find ourselves covered by the sweet, pervasive aroma of citrus as we enter the sunlit groves of the Sfusato Amalfitano lemons. The atmosphere is laden with a fragrance that evokes both refreshment and reminiscence; it's the scent of lemon orchards steeped in a history dating back to at least the eleventh century.
+
+Meandering among the tiered groves feels like navigating through the verses of a rural poem, with Rilke's phrases lingering beside us: 'Land of the lemon groves... The quietest thing I saw in the world was the Amalfi lemon blossom.' We observe the sturdy lemons dangling like golden spheres nestled among the deep green foliage, the afternoon rays tinting them in a color that speaks of vibrancy and vitality. Guests roam the pathways between the trees, captivated by the fruit's remarkable presence, some engaging in informative exchanges with the cultivators who tend these groves with commitment and pride.
+
+We partake in a limoncello tasting event, savoring the sweet and tangy flavors of the bright yellow liqueur, a charming beverage that encapsulates the essence of the Amalfi Coast's sunny personality. Drinking the concoction in this calm setting, encircled by the history and artisanship that have molded this region, we sense a connection to the narratives and methods handed down through ages, linking us in a collective experience of culture, taste, and the gentle embrace of the orchard's protective boughs.
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+Elevated by the touch of nature's influence at Vallone delle Ferriere, we journey forward, our senses newly aware of the allure of the earth's offerings as we near the Amalfi Lemon Experience. Leaving behind the soft woodland ecosystem, we find ourselves enveloped by the sweet, pervasive scent of citrus as we step into the sun-drenched groves of the Sfusato Amalfitano lemons. The air is filled with a fragrance that evokes both refreshment and nostalgia; it's the aroma of lemon orchards rich with a legacy tracing back to at least the eleventh century.
+
+Wandering among the layered groves feels like navigating through the verses of a pastoral poem, with Rilke's phrases accompanying us: 'Land of the lemon groves... The quietest thing I saw in the world was the Amalfi lemon blossom.' We watch the robust lemons suspended like golden orbs nestled within the deep green foliage, the afternoon light painting them in a shade that signals energy and life. Visitors wander the pathways between the trees, enthralled by the fruit's notable presence, some involved in enlightening discussions with the growers who nurture these groves with dedication and honor.
+
+We engage in a limoncello tasting session, relishing the sweet and sharp flavors of the bright yellow liqueur, an endearing drink that captures the character of the Amalfi Coast's sunny disposition. Enjoying the concoction in this serene setting, ringed by the history and craftsmanship that have shaped this area, we feel a bond to the stories and practices passed down through generations, bringing us into a shared experience of culture, flavor, and the nurturing cover of the orchard's embracing branches.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): 
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+The lingering tang of limoncello still on our palates, we set off once more, our Vespas a gentle reminder of the journey's continuity as we weave through the labyrinthine streets towards the emblematic heart of Amalfi: the Cathedral. With its distinctive frontage, the Duomo di Amalfi presents a patchwork quilt of history, each architectural style a thread entwined with the next. We can feel the passage of many seasons as we gaze upon the facade, an impressive staircase leading up to bronze doors that were cast in Constantinople before the year one thousand and sixty-six.
+
+Entering the serene sanctuary of the Cathedral, we are transported through time. Within its hallowed walls, devout visitors light candles, their flames flickering as symbols of hope and reflection. Here, the remains of the Apostle Saint Andrew rest, enveloping the space in a solemn narrative of faith and pilgrimage. Each corner of the Cathedral tells a story penned across centuries; from Romanesque splendor to the whispering Gothic arches and the exuberant touch of Baroque design, the collective history breathes life into the stone.
+
+Our steps lead us into the Cloister of Paradise, a peaceful retreat that slows the heart's rhythm with its Moorish-influenced architecture. Interlacing arches frame the sky, and in the garden, we find ourselves surrounded by a variety of plants, their leaves whispering tales of the Cloister's ancient past. Visitors stroll through the tranquil space in quiet amazement, capturing images of the lush enclosures and worn but proud columns that have stood witness to centuries of seekers.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+The lingering tang of limoncello still on our palates, we set off once more, our Vespas a gentle reminder of the journey's continuity as we weave through the intricate streets towards the emblematic heart of Amalfi: the Cathedral. With its distinctive facade, the Duomo di Amalfi presents a collage of history, each architectural style woven with the next. We can feel the passage of many seasons as we gaze upon the facade, an impressive staircase leading up to bronze doors that were cast in Constantinople before the year one thousand sixty-six.
+
+Entering the calm sanctuary of the Cathedral, we are transported through time. Within its sacred walls, devout visitors light candles, their flames flickering as symbols of hope and reflection. Here, the remains of the Apostle Saint Andrew rest, enshrouding the space in a solemn narrative of faith and pilgrimage. Each corner of the Cathedral tells a story scribed across centuries; from Romanesque elegance to the whispering Gothic arches and the flamboyant touch of Baroque design, the collective history animates the stone.
+
+Our steps lead us into the Cloister of Paradise, a peaceful enclave that decelerates the heart's rhythm with its Moorish-influenced architecture. Interweaving arches frame the sky, and in the garden, we find ourselves encircled by a variety of plants, their leaves whispering tales of the Cloister's ancient past. Visitors meander through the quiet space in silent wonder, capturing images of the lush gardens and worn but staunch columns that have stood witness to centuries of seekers.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): 
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+Departing from the dimly lit corridors of memory and historical reverence found within the Paper Museum, we step out into the sunlight once again. Our journey leads us toward the coastline, where natural wonders carved by time and the sea await. The Grotta dello Smeraldo beckons, its allure as enigmatic as the waters that gave it name. Discovered in nineteen thirty-two by a local fisherman, the cave's luminescence has drawn curious souls ever since.
+
+At the entrance, we purchase tickets from a small booth, excitement bubbling like the sea's foam against the cliffs. A wooden boat rocks gently at the dock, calling for us to board. We settle in, the boat gliding out onto the calm water, taking us closer to the ethereal glow within the cavern. Inside, the light plays across the water's surface, bathing the space in an emerald hue that feels otherworldly. Stalactites and stalagmites stretch toward each other, frozen in a dance of geological grace. Admiring eyes follow the underwater nativity scene, a silent homage to local craftsmanship submerged in the depths.
+
+The cave is a spectral theater, the sun's rays the spotlights that turn the waters into a stage of enchanting aquamarine. Some visitors, donning their swimwear, immerse themselves in designated areas, letting the cold, clear water envelop their bodies. Meanwhile, the rest of us savor the grotto's beauty from the bobbing safety of our boats, each ripple of water reflecting a dance of light that lingers long in our sight.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+Departing from the dimly lit corridors of memory and historical respect found within the Paper Museum, we step out into the sunlight once again. Our journey leads us toward the coastline, where natural wonders carved by time and the sea await. The Grotta dello Smeraldo beckons, its allure as mysterious as the waters that gave it name. Discovered in nineteen thirty-two by a local fisherman, the cave's radiance has drawn curious souls ever since.
+
+At the entrance, we purchase tickets from a small booth, excitement bubbling like the sea's foam against the cliffs. A wooden boat rocks gently at the dock, calling for us to board. We settle in, the boat gliding out onto the calm water, taking us closer to the otherworldly glow within the cavern. Inside, the light plays across the water's surface, bathing the space in an emerald hue that feels supernatural. Stalactites and stalagmites stretch toward each other, frozen in a dance of geological elegance. Admiring eyes follow the underwater nativity scene, a silent acknowledgment to local craftsmanship submerged in the depths.
+
+The cave is a spectral theater, the sun's rays the spotlights that turn the waters into a stage of enchanting aquamarine. Some visitors, donning their swimwear, immerse themselves in designated areas, letting the cold, clear water envelop their bodies. Meanwhile, the rest of us relish the grotto's beauty from the bobbing safety of our boats, each ripple of water reflecting a dance of light that lingers long in our sight.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): ('grandeur', 1, 0), ('tranquil', 1, 0)
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+After being cradled by the gentle waves of the Emerald Grotto, we ascend once again, following the winding roads that lead up to the peaceful town perched atop the coastal cliffs: Ravello. High above the azure expanse of the sea, this hilltop sanctuary has been sanctified by UNESCO since nineteen ninety-six for its unique cultural landscape and its enduring narrative. Welcomed by the soft rustling of leaves and the occasional distant murmur echoing from the main square, we explore Ravello's elevated splendor.
+
+Historic affluence echoes in the stone pathways and well-preserved architecture, dating back to Ravello's prosperous days of maritime power in the ninth century. The grandeur of Villa Rufolo's gardens unfolds before us, a living painting of nature meticulously crafted through human care and natural flourish. A sense of awe washes over us as we trace the steps of Richard Wagner, for whom the estate's verdure became muse and fantasy for the magical setting in his opera 'Parsifal.'
+
+A walk through the gardens of Villa Cimbrone reveals a horizon that stretches infinitely beyond the Terrace of Infinity, its vistas a promise of limitless elegance and reflective quietude. Here, among the blossoming flora and panoramic perspective, visitors pause, their whispers lost to the gentle breeze, leaving only the fragrance of flowers and clarity of thought. Ravello, standing in silent observation, offers a momentary respite from the world below—a tranquil breath upon the precipice of the picturesque Amalfi Coast.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+After being cradled by the gentle waves of the Emerald Grotto, we ascend once again, following the winding roads that lead up to the peaceful town perched atop the coastal cliffs: Ravello. High above the azure expanse of the sea, this hilltop sanctuary has been sanctified by UNESCO since nineteen ninety-six for its unique cultural landscape and its enduring narrative. Welcomed by the soft rustling of leaves and the occasional distant murmur echoing from the main square, we explore Ravello's elevated splendor.
+
+Historic wealth echoes in the stone pathways and well-preserved architecture, dating back to Ravello's prosperous days of maritime power in the ninth century. The magnificence of Villa Rufolo's gardens unfolds before us, a living painting of nature meticulously crafted through human care and natural growth. A sense of awe washes over us as we trace the steps of Richard Wagner, for whom the estate's greenery became muse and fantasy for the magical setting in his opera 'Parsifal.'
+
+A walk through the gardens of Villa Cimbrone reveals a horizon that stretches infinitely beyond the Terrace of Infinity, its vistas a promise of limitless beauty and contemplative silence. Here, among the blossoming flora and sweeping views, visitors pause, their whispers lost to the gentle breeze, leaving only the fragrance of flowers and clarity of thought. Ravello, standing in silent observation, offers a momentary respite from the world below—a serene breath upon the precipice of the picturesque Amalfi Coast.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): ('testament', 1, 0)
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+In striking contrast to the ancient gardens and monastic calm of Ravello, the Auditorium Oscar Niemeyer asserts its presence with a crisp, modern silhouette against the old world backdrop. Designed by the Brazilian architect Oscar Niemeyer, who was over one hundred years old upon its completion in two thousand and ten, the auditorium is a testament to timeless design and purposeful artistry even in one's centennial years.
+
+Stark white curves set against the blue of the sky and sea define the structure, exuding a contemporary boldness that still complements its natural surroundings. The auditorium's main purpose is to harbor concerts and cultural events, enveloping its audience in a peaceful reverie promoted by the town's atmosphere. Visitors stand outside, admiring how the structure curves gently towards the sea, offering yet another perspective over the vast aquatic theater of the Mediterranean.
+
+Inside, individuals gather, basking in the auditory experience provided by the auditorium's exceptional acoustics. During each performance, the sound washes over them, reverberating within the curved walls to fill the space with melodies and harmonies. Here, in this monument to modernism and music, the legacy of Ravello as a haven for art and inspiration persists, every note resonating in unison with the quiet splendor of the surroundings.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+In striking contrast to the ancient gardens and monastic calm of Ravello, the Auditorium Oscar Niemeyer asserts its presence with a crisp, modern silhouette against the old world backdrop. Designed by the Brazilian architect Oscar Niemeyer, who was over one hundred years old upon its completion in two thousand and ten, the auditorium is an example of timeless design and purposeful artistry even in one's centennial years.
+
+Stark white curves set against the blue of the sky and sea define the structure, exuding a contemporary boldness that still complements its natural surroundings. The auditorium's main purpose is to harbor concerts and cultural events, enveloping its audience in a serene reverie promoted by the town's atmosphere. Visitors stand outside, admiring how the structure curves gently towards the sea, offering yet another perspective over the vast watery stage of the Mediterranean.
+
+Inside, individuals gather, basking in the auditory experience provided by the auditorium's exceptional acoustics. During each performance, the sound washes over them, reverberating within the curved walls to fill the space with melodies and harmonies. Here, in this monument to modernism and music, the legacy of Ravello as a haven for art and inspiration persists, every note resonating in harmony with the subtle splendor of the surroundings.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): ('tapestry', 2, 1), ('testament', 1, 0)
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+Our sightseeing tour continues as we navigate the winding coastal roads, the warm Mediterranean sun casting playful shadows through the canopy of trees above. Our Vespas carry us towards the enchanting Furore Fiordo, a natural wonder tucked away like a secret whispered between the hills and the sea. Known affectionately as 'the fjord that doesn't exist,' its very concealment adds to our anticipation, a hidden treasure awaiting discovery along the Amalfi coastline.
+
+As we arrive at the fjord, the small stretch of pebbled beach comes into view, embraced by steep cliffs that plunge dramatically into the sea. A tapestry of colorful houses is built against the rock face, and the Ponte di Furore arches over the inlet, its graceful form a frame for the lively palette of nature. The village's history as a vital fishing hub permeates the air, mixed with the faint scent of saltwater and fish. Local artisans exhibit their handcrafted creations, each piece a testament to the village's enduring spirit and its dance with both land and sea. Artists and photographers, their lenses and palettes at the ready, seek to capture Furore's irresistible charm, the way the architecture seems to grow organically from the crags, and the water mirrors the sky's changing moods. We join the visitors swimming in the sheltered waters, the gentle current caressing our skin, while others sprawl contentedly on the sun-kissed beach, the stones warm beneath them.
+
+And so we find ourselves at the day's end, hearts filled with the sights, scents, and harmonies of the Amalfi Coast. Our Vespa tour has been a passage not just through the landscape but through the story of a place where history and beauty intertwine under the Italian sun. We've seen the cerulean nuances of the sea, smelled the luxurious fragrance of lemon groves, felt the nobility of ancient stone, and listened to melodies that breathe life into timeless stones. Each encounter, from the heights of Ravello's terraces to the depths of the Emerald Grotto, has chiselled a little of Amalfi's soul into our own.
+
+Our journey may follow a quiet conclusion as the Vespas are stilled, but the memories crafted today are as vivid as the bougainvillaea draping over the sun-warmed walls of seaside villages. Stories to recount and sights to dream about await our slumber, for today, we have traversed more than mere miles; we have woven a bit of the Amalfi Coast into the fabric of our lives, a tapestry complete with the gentle peace of Italian spring and the understated elegance of a world bathed in kindness, history, and the soft hues of discovery.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+Our sightseeing tour continues as we navigate the winding coastal roads, the warm Mediterranean sun casting playful shadows through the canopy of trees above. Our Vespas carry us towards the enchanting Furore Fiordo, a natural wonder tucked away like a secret whispered between the hills and the sea. Known affectionately as 'the fjord that doesn't exist,' its very concealment adds to our anticipation, a hidden treasure awaiting discovery along the Amalfi coastline.
+
+As we arrive at the fjord, the small stretch of pebbled beach comes into view, embraced by steep cliffs that plunge dramatically into the sea. A patchwork of colorful houses is built against the rock face, and the Ponte di Furore arches over the inlet, its graceful form a frame for the lively palette of nature. The village's history as a vital fishing hub permeates the air, mixed with the faint scent of saltwater and fish. Local artisans exhibit their handcrafted creations, each piece an echo to the village's enduring spirit and its dance with both land and sea. Artists and photographers, their lenses and palettes at the ready, seek to capture Furore's irresistible charm, the way the architecture seems to grow organically from the crags, and the water mirrors the sky's changing moods. We join the visitors swimming in the sheltered waters, the gentle current caressing our skin, while others sprawl contentedly on the sun-kissed beach, the stones warm beneath them.
+
+And so we find ourselves at the day's end, hearts filled with the sights, scents, and sounds of the Amalfi Coast. Our Vespa tour has been a passage not just through the landscape but through the story of a place where history and beauty intertwine under the Italian sun. We've seen the cerulean nuances of the sea, smelled the luxurious fragrance of lemon groves, felt the nobility of ancient stone, and listened to melodies that breathe life into timeless stones. Each encounter, from the heights of Ravello's terraces to the depths of the Emerald Grotto, has chiselled a little of Amalfi's soul into our own.
+
+Our journey may follow a quiet conclusion as the Vespas are stilled, but the memories crafted today are as vivid as the bougainvillaea draping over the sun-warmed walls of seaside villages. Stories to recount and sights to dream about await our slumber, for today, we have traversed more than mere miles; we have woven a bit of the Amalfi Coast into the fabric of our lives, a pattern complete with the gentle peace of Italian spring and the understated elegance of a world bathed in kindness, history, and the soft hues of discovery.

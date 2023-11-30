@@ -3,7 +3,7 @@
 # if we don't even specify a destination, then we do this for all destinations that have cues files associated to both short and long stories.
 # this function will EVENTUALLY (as of 2023-11-28) accept a `use_phoneticizations` boolean, which defaults to `False`. if this is set to `True`, we do a find-and-replace on the cues string over the relevant phoneticizations (which will have been retrieved from chatGPT and stored in `phoneticizations/`) before writing to the kotlin file. (this will be put at `INSERT PHONETICIZATION LOGIC HERE`.)
 
-import strings # so, `my_string` defined over there is accessible here as `strings.my_string`.
+import strings
 
 # here, the `_arg` suffix is to distinguish from other variables that appear in the function definition. (they quickly get subsumed as instances of those.)
 # when writing a long story, we _always_ roll the last stop into the `end` of the story. so, min_stops_for_long_story is one more than the number of stops rolled into the `start` of the story.
@@ -16,8 +16,9 @@ def make_kt(destination_arg = None, long_story_cues_filename_arg = None, short_s
             destination_arg: None
         }
     else:
-        all_cues_filenames = strings.get_all_unhidden_files("cues")
-        list_of_destinations_of_cues_filenames = [cues_filename.split("_")[1] for cues_filename in all_cues_filenames]
+        cues_filenames = strings.get_all_unhidden_files("cues")
+        cues_filenames.sort()
+        list_of_destinations_of_cues_filenames = [cues_filename.split("_")[1] for cues_filename in cues_filenames]
         set_of_destinations = set(list_of_destinations_of_cues_filenames)
         story_pairs = {}
         for destination in set_of_destinations:
@@ -195,4 +196,9 @@ object {object_name} : SleepStoryPoseCues {{
 
     return None
 
-make_kt("chiangmai")
+
+
+### let's make some kotlin code!
+
+
+# make_kt("chiangmai")

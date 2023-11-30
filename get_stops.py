@@ -1,18 +1,13 @@
 from openai import OpenAI
 client = OpenAI()
 
-import re # regular expressions
+import re
 
 import models
-import strings # so, `my_string` defined over there is accessible here as `strings.my_string`.
-from inputs import * # so, the inputs defined over there are accessible here without change.
+import strings
+from inputs import *
 
-from datetime import datetime
-def datetime_str_to_timestamp(str):
-    return str[:10] + "_" + str[11:13] + "-" + str[14:16] + "-" + str[17:19]
-
-start_time = str(datetime.now())
-timestamp = datetime_str_to_timestamp(start_time)
+timestamp = strings.time_now()
 
 ################################################################################
 
@@ -20,7 +15,7 @@ def get_stops(destination, num_stops = 20):
 
     input = inputs[destination]
 
-    print(f"\ngetting stops with tidbits for {input['destination_fullname']} with timestamp {timestamp} at {datetime_str_to_timestamp(str(datetime.now()))}\n")
+    print(f"\ngetting stops with tidbits for {input['destination_fullname']} with timestamp {timestamp} at {strings.time_now()}\n")
 
     ##### GET LIST OF STOPS
 

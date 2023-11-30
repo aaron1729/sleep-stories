@@ -1,0 +1,23 @@
+Visionary art is a genre of art that emphasizes the spiritual, mystical, or inner experiences of the artist. This art style is often associated with the realms of the imagination, dreams, psychedelics, esoteric philosophies, and personal introspection. To help create DALL-E prompts that consistently conform to the style of visionary art, consider the following descriptors tailored for this art style:
+
+Ethereal and Transcendent Subjects: Visionary art often portrays subjects that evoke a sense of the otherworldly or transcendent. It captures realms that lie beyond the ordinary perception of reality, often inspired by spiritual visions, dreams, and altered states of consciousness.
+
+Complex Symbolism: Artworks of this genre are rich with symbols and motifs that hold profound personal or universal significances. These might include mandalas, sacred geometry, deities from various pantheons, mythical creatures, and archetypal figures.
+
+Intense, Saturated Color Palettes: Colors in visionary art are vibrant and saturated, creating a sense of depth and luminosity. The color schemes can range from deeply calming to highly stimulating, aiming to elicit emotional responses and resonate with the viewer's inner world.
+
+Fine Details and Micro-Patterns: The style frequently features intricate details, patterns, and textures that invite close examination. These can represent the interconnectedness of all things, or the complicated tapestry of the psyche.
+
+Surreal Compositions: Many visionary artworks contain surreal and dream-like scenes that challenge conventional perspectives. These might include impossible geometries, infinite landscapes, and floating elements, all coalescing into a coherent vision that defies everyday logic.
+
+Metaphysical and Cosmic Imagery: Visionary art often includes cosmic scenes, such as starscapes, nebulae, and celestial bodies, in conjunction with earthly elements, blending the cosmic with the personal to express the unity of the macrocosm and microcosm.
+
+Use of Light and Shadow: Interplays of light and dark are common, with light often used to symbolize knowledge, awakening, or divine presence. Shadows and darker areas might represent the unknown, the unconscious, or the fertile ground of potential.
+
+Blend of Realism and Abstraction: Artists in this genre skillfully meld realistic elements with abstract forms to present the viewer with an experience that is at once relatable and ineffable, tangible yet elusive.
+
+Harmonious Arrangement: Despite the complexity and potential for chaos in the diversity of elements present in visionary art, compositions are often marked by a sense of harmony and balance, reflecting a quest for spiritual unity or enlightenment.
+
+Integration of Natural and Supernatural: Natural elements such as plants, animals, water, and the human figure are frequently depicted with a supernatural twist, highlighting the intrinsic connection between the natural world and the spiritual or metaphysical planes.
+
+In summary, visionary art depicts transcendent, ethereal realities marked by intense colors, complex symbolism, and harmonious arrangements that blend the natural with the supernatural. To align DALL-E prompts with this art style, one should emphasize the otherworldly, mystical, and beautifully intricate aspects that define visionary art, creating images that invite contemplation and offer a glimpse into the profound depths of the human psyche and the cosmos.

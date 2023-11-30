@@ -1,0 +1,287 @@
+OVERUSED WORD ALLOWANCES (computed with B=3):
+tapestry: 2
+testament: 1
+grandeur: 1
+symphony: 1
+tribute: 2
+homage: 2
+tranquil: 0
+chariot: 0
+mosaic: 1
+vibrant: 2
+bustling: 0
+verdant: 1
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): ('tranquil', 1, 0)
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+Imagine this: nestled amid softly rolling hills and cradled by majestic mountain ranges lies Queenstown, the gem of New Zealand’s South Island. As summer unveils its palette of blues and greens upon the land, you find yourself breathing in the fresh, alpine air that hints at adventure mingled with repose. This tranquil haven offers an exceptional retreat where earth meets water and sky, inviting wanderers from all walks of life to bask in its natural splendor. The promise of exploration by water taxi stirs a gentle excitement within your soul, enchanting you with the anticipation of what's to come.
+
+As the mild warmth of the summer sun brushes against your skin, you prepare to embark on a journey across the serene expanse of Lake Wakatipu. The water taxi awaits, a quaint vessel ready to glide you through mirror-like waters, surrounded by nature's embrace. This lake, New Zealand's third-largest, holds secrets and stories rippling beneath its surface, calling to be discovered. The peculiar ebb and flow of its tides, a phenomenon known as 'seiche,' is a rhythmic mystery that captivates your imagination. Perhaps the legend is true, and the heartbeat of a slumbering giant pulses beneath these depths.
+
+Echoing Sir Walter Scott, the glassy surface of the lake indeed lies like a mirror before you, reflecting the surrounding world with a clarity that feels otherworldly. The nearby travelers, some setting off on their own water taxi voyages, others capturing the moment with their cameras, all share the same look of respectful awe for the landscape unfolding before them. And as your own journey begins, the boat's gentle sway and the cool whisper of the breeze caress you into a state of timeless wonder. The craggy outlines of The Remarkables stretch up into the sky, framing the horizon with their formidable presence, yet inviting you closer with every quiet lap of water against the hull.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+Imagine this: nestled amid softly rolling hills and cradled by majestic mountain ranges lies Queenstown, the jewel of New Zealand’s South Island. As summer unveils its array of blues and greens upon the land, you find yourself breathing in the fresh, alpine air that hints at adventure mingled with relaxation. This peaceful haven offers an exceptional retreat where earth meets water and sky, inviting wanderers from all walks of life to bask in its natural beauty. The promise of exploration by water taxi stirs a gentle excitement within your soul, enchanting you with the anticipation of what's to come.
+
+As the mild warmth of the summer sun brushes against your skin, you prepare to embark on a journey across the calm expanse of Lake Wakatipu. The water taxi awaits, a quaint vessel ready to glide you through mirror-like waters, surrounded by nature's embrace. This lake, New Zealand's third-largest, holds secrets and stories rippling beneath its surface, calling to be discovered. The peculiar ebb and flow of its tides, a phenomenon known as 'seiche,' is a rhythmic mystery that captivates your imagination. Perhaps the legend is true, and the heartbeat of a slumbering giant pulses beneath these depths.
+
+Echoing Sir Walter Scott, the glassy surface of the lake indeed lies like a mirror before you, reflecting the surrounding world with a clarity that feels otherworldly. The nearby travelers, some setting off on their own water taxi voyages, others capturing the moment with their cameras, all share the same look of respectful awe for the landscape unfolding before them. And as your own journey begins, the boat's gentle sway and the cool whisper of the breeze soothe you into a state of timeless wonder. The craggy outlines of The Remarkables stretch up into the sky, framing the horizon with their formidable presence, yet inviting you closer with every quiet lap of water against the hull.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): ('tranquil', 1, 0)
+
+number of rewrites: 2
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+Leaving behind the mythical landscapes of Glenorchy, your next destination is the secluded beauty of Bob's Cove. Just a stone's throw from Queenstown, the cove is a hidden gem on the shores of Lake Wakatipu, surrounded by lush greenery that whispers tales of its Maori heritage. Here, the stories from an age-old past speak of fishing and the search for precious greenstone. Today's reflections on the surface of the transparent water invite a different kind of discovery—one of stillness and connection with nature.
+
+The remnants of a limestone kiln stand as silent sentinels, an echo of the cove’s industrious nineteenth-century inhabitants. With the sun casting its warm glow, visitors enjoy the tranquility, swimming in the water that seems to have captured fragments of the sky. Kayaks cut through the lake, their paddles dipping rhythmically, while others find respite at the water's edge, absorbed in the simple joy of being. A short trek along the Nature Walk track leads through a natural corridor, teeming with diverse flora and fauna, where every birdcall and rustling leaf adds to an orchestra of peaceful sounds—the perfect accompaniment to the lapping of the water.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+Leaving behind the mythic landscapes of Glenorchy, your next destination is the secluded beauty of Bob's Cove. Just a short distance from Queenstown, the cove is a concealed treasure on the shores of Lake Wakatipu, surrounded by lush greenery that whispers tales of its Maori heritage. Here, the stories from an age-old past speak of fishing and the search for precious greenstone. Today's reflections on the surface of the transparent water invite a different kind of discovery—one of stillness and connection with nature.
+
+The remnants of a limestone kiln stand as silent watchers, an echo of the cove’s industrious eighteen hundred's inhabitants. With the sun casting its warm glow, visitors enjoy the tranquility, swimming in the water that seems to have captured fragments of the sky. Kayaks cut through the lake, their paddles dipping rhythmically, while others find respite at the water's edge, absorbed in the simple joy of being. A short trek along the Nature Walk track leads through a passage of nature, teeming with diverse flora and fauna, where every birdcall and rustling leaf adds to an ensemble of peaceful sounds—the perfect accompaniment to the lapping of the water.
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+Leaving behind the mythic landscapes of Glenorchy, your next destination is the secluded beauty of Bob's Cove. Just a short distance from Queenstown, the cove is a concealed treasure on the shores of Lake Wakatipu, surrounded by lush greenery that whispers tales of its Maori heritage. Here, the stories from an age-old past speak of fishing and the search for precious greenstone. Today's reflections on the surface of the clear water invite a different kind of discovery—one of stillness and connection with nature.
+
+The remnants of a limestone kiln stand as silent watchers, an echo of the cove’s industrious eighteen hundreds' inhabitants. With the sun casting its warm glow, visitors enjoy the peacefulness, swimming in the water that seems to have captured fragments of the sky. Kayaks cut through the lake, their paddles dipping rhythmically, while others find respite at the water's edge, absorbed in the simple joy of being. A short trek along the Nature Walk track leads through a passage of nature, teeming with diverse flora and fauna, where every birdcall and rustling leaf adds to an ensemble of peaceful sounds—the perfect accompaniment to the lapping of the water.
+
+==========
+
+REWRITING SUCCESS: False
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): roman numerals, ('tranquil', 1, 0)
+
+number of rewrites: 3
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+The adventure continues as you reach Moke Lake, a secluded jewel embraced by mountains, where stillness paints the perfect picture. The lake, carved by ancient glacial forces, whispers hints of its storied past. The Moke Lake Reserve, with its untouched landscapes, offers a serene haven for those seeking to commune with nature's quiet beauty. Here, the lake is a liquid canvas, capturing the breathtaking reflections of the craggy summits that surround it.
+
+Echoes from the nineteenth century linger in the air, remnants of the days when gold fever swept through these parts. The name 'Moke' itself is a nod to the Māori language, further deepening the cultural connection to this tranquil spot. Kayakers slice through the mirrored surface, and anglers cast their lines hoping for a catch, while others spread their meals along the shore in harmonious picnics. Photographers, patient and observant, wait for that perfect moment when the mountains drape themselves across the waters. And amid it all, there is the simple peace found lounging on the grass, the air filled with the rhythmic sound of water against the land, the sun and clouds playing hide and seek above.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+The adventure continues as you reach Moke Lake, a secluded jewel embraced by mountains, where stillness paints the perfect scene. The lake, carved by ancient glacial activity, whispers hints of its storied history. The Moke Lake Reserve, with its pristine landscapes, offers a peaceful haven for those seeking to commune with nature's quiet allure. Here, the lake is a liquid masterpiece, capturing the breathtaking reflections of the rugged peaks that encircle it.
+
+Echoes from the nineteenth century linger in the air, remnants of the days when gold fever swept through these parts. The name 'Moke' itself is a nod to the Māori language, further deepening the cultural linkage to this peaceful spot. Kayakers slice through the mirror-like surface, and anglers cast their lines hoping for a catch, while others set out their meals along the shore in harmonious outdoor gatherings. Photographers, patient and observant, wait for that perfect moment when the mountains drape themselves across the waters. And amid it all, there is the simple joy found lounging on the grass, the air filled with the rhythmic sounds of water against the land, the sun and clouds engaging in a playful dance above.
+
+-----
+
+The adventure continues as you reach Moke Lake, a secluded gem embraced by mountains, where stillness paints the perfect scene. The lake, carved by ancient glacial activity, whispers hints of its storied past. The Moke Lake Reserve, with its untouched landscapes, offers a peaceful haven for those seeking to commune with nature's silent appeal. Here, the lake is a liquid canvas, capturing the breathtaking reflections of the rugged peaks that ring it.
+
+Echoes from the nineteenth century linger in the air, remnants of the days when gold fever swept through these parts. The name 'Moke' itself is a nod to the Māori language, deepening the cultural connection to this serene spot. Kayakers glide through the mirror-like surface, and anglers cast their lines hoping for a catch, while others lay out their picnics along the shore in harmonious outdoor gatherings. Photographers, patient and observant, wait for that perfect moment when the mountains drape themselves across the waters. Amid it all, there is the simple pleasure found on the grass, the air filled with the rhythmic sounds of water against the land, the sun and clouds engaging in a playful dance above.
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+The adventure continues as you reach Moke Lake, a secluded gem embraced by mountains, where stillness paints the perfect scene. The lake, carved by ancient glacial activity, whispers hints of its storied past. The Moke Lake Reserve, with its untouched landscapes, offers a peaceful haven for those seeking to commune with nature's silent appeal. Here, the lake is a liquid canvas, capturing the breathtaking reflections of the rugged peaks that ring it.
+
+Echoes from the nineteenth century linger in the air, remnants of the days when gold fever swept through these parts. The name 'Moke' itself is a nod to the Māori language, deepening the cultural connection to this calm spot. Kayakers glide through the mirror-like surface, and anglers cast their lines hoping for a catch, while others lay out their picnics along the shore in harmonious outdoor gatherings. Photographers, patient and observant, wait for that perfect moment when the mountains drape themselves across the waters. Amid it all, there is the simple pleasure found on the grass, the air filled with the rhythmic sounds of water against the land, the sun and clouds engaging in a playful dance above.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): 
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+Journeying onward, your path leads to the heritage-rich terrain of Walter Peak High Country Farm, where New Zealand's pastoral roots come alive. Dating back to the eighteen sixties, during the height of the gold rush, the farm stands as a testament to the pioneering spirit of European settlers. The meticulously restored Colonial Homestead tells of life's bygone eras, its walls holding memories of its early occupants.
+
+A particularly unique feature of the Walter Peak experience is the historic TSS Earnslaw steamship, in service since nineteen twelve, ferrying visitors from Queenstown across the cool waters of Lake Wakatipu. Upon arriving at the farm, the airspace is dominated by the dexterity of sheepdogs as they artfully maneuver flocks at the command of their owners. Witnessing this dance between shepherd, dog, and sheep is to see a performance honed by generations.
+
+In the comfort of the farmyard, amidst the bleating and baaing, the aroma of a freshly prepared barbecue lunch wafts through the air. Guests sit at long tables, indulging in the exquisite flavors of locally sourced produce, the taste of the farm's bounty a fitting end to the rustic yet charming excursion. The camaraderie shared over food and the farm's bucolic setting creates a sense of unity with the land and its storied history.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+Journeying onward, your path leads to the heritage-rich land of Walter Peak High Country Farm, where New Zealand's pastoral roots come alive. Dating back to the eighteen sixties, during the height of the gold rush, the farm stands as a record to the pioneering spirit of European settlers. The meticulously restored Colonial Homestead tells of life's past eras, its walls holding memories of its early occupants.
+
+A particularly unique feature of the Walter Peak experience is the historic TSS Earnslaw steamship, in service since nineteen twelve, ferrying visitors from Queenstown across the cool waters of Lake Wakatipu. Upon arriving at the farm, the airspace is dominated by the skill of sheepdogs as they skillfully maneuver flocks at the command of their owners. Witnessing this coordination between shepherd, dog, and sheep is to see a performance sharpened by generations.
+
+In the comfort of the farmyard, amidst the bleating and baaing, the aroma of a freshly prepared barbecue lunch wafts through the air. Guests sit at long tables, relishing the exquisite flavors of locally sourced produce, the taste of the farm's bounty a fitting conclusion to the pastoral yet appealing excursion. The shared connection over food and the farm's pastoral setting creates a sense of unity with the land and its storied past.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): ('tranquil', 1, 0)
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+After the quaint allure of Arrowtown, the journey leads to the wild expanses of Fiordland National Park, a World Heritage site that captures the primordial essence of the earth's raw power. Encompassing over one point two million hectares, the park offers an awe-inspiring panorama of nature's artistry—a confluence of steep cliffs, impenetrable rainforests, and waterfalls that seem to emerge from the heavens. Here, the epic walks like the Milford, Kepler, and Routeburn Tracks beckon the bold and the tranquil alike, winding through scenes that defy the imagination.
+
+Dating back over one hundred thousand years, the glaciers that once cut through this landscape have left behind deep fiords, the park's majestic namesake. In Milford Sound, boat tours navigate through the reflective waters as seals lounge on sun-warmed rocks and penguins dart through the currents. Aboard these vessels, you find yourself captivated by the soaring heights of Mitre Peak, feeling the cool mist of the waterfalls as their thunderous roar resonates against granite walls, the melodies of cascades joining the symphony of wildlife in a celebration of untouched beauty.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+After the charming appeal of Arrowtown, the journey leads to the wild spaces of Fiordland National Park, a World Heritage site that captures the essential nature of the earth's raw power. Encompassing over one point two million hectares, the park offers an awe-inspiring view of nature's creativity—a convergence of steep cliffs, dense rainforests, and waterfalls that seem to pour directly from the heavens. Here, the epic walks like the Milford, Kepler, and Routeburn Tracks summon the daring and the peaceful alike, winding through scenes that defy imagination.
+
+Dating back over one hundred thousand years, the glaciers that once carved through this landscape have left behind deep fjords, the park's majestic namesake. In Milford Sound, boat tours navigate through the mirror-like waters as seals lounge on sun-heated rocks and penguins zip through the currents. Aboard these vessels, you find yourself enthralled by the soaring heights of Mitre Peak, feeling the cool mist of the waterfalls as their powerful sound reverberates against granite walls, the tunes of the cascades joining the concert of wildlife in a celebration of pristine beauty.
+
+==========
+
+REWRITING SUCCESS: True
+
+triggers for initial rewrite (overused words are listed as tuples (word, num_apperances, num_allowed)): ('tranquil', 1, 0), ('bustling', 1, 0)
+
+number of rewrites: 1
+
+
+
+=====
+
+
+
+ORIGINAL TEXT:
+
+Our sightseeing tour finds its way to the Kelvin Heights Peninsula, a slice of heaven for cyclists, walkers, and those inclined to pause and breathe in the beauty of the world. Renowned for its panoramic vistas, the trails weave through the landscape offering unobstructed views of the Remarkables and the shimmering expanse of Lake Wakatipu. Indeed, Queenstown is a paradise for the outdoor enthusiast, and the Peninsula is its crowning jewel. With every turn, the mesmerizing scenery unfolds, a canvas of nature’s grand design.
+
+The Peninsula not only boasts natural splendor; it also preserves the legacy of the region's pastoral and mining heritage from the nineteenth century when European settlers shaped the lifeblood of the area. Encounters with art emerge unexpectedly as the Kelvin Heights Sculpture Trail comes into view, interspersing New Zealand’s cultural offerings with its ecological wonders. Cylists and pedestrians alike drink in the crisp alpine air as they traverse the routes, often pausing for moments of reflection at benches strategically placed to honor the surroundings. There, in the gentle embrace of the sun, the world stands still, offering a quietude that invigorates the soul, whether in shared celebration or solitary contemplation.
+
+As our tour reaches a close, we carry with us the tapestry of experiences that is Queenstown and its environs. Each location, from the historic TSS Earnslaw to the dramatic peaks of The Remarkables, has woven a thread into the fabric of our memories. The joyous hum of exploration and the tranquil pauses in the lap of nature blend into a soothing melody that we tuck away, a treasure trove of recollections to warm us on less sunlit days. Yet the whispers of the lake call us to return, for Queenstown, with its endless skies and mirrored waters, is more than a mere destination. It's a beckoning of the heart, a serene hush within the bustle of life, inviting you back to its welcoming embrace time and time again.
+
+
+
+=====
+
+
+
+INTERMEDIATE REWRITES:
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION (appearing in edited version of story):
+
+Our sightseeing tour finds its way to the Kelvin Heights Peninsula, a slice of heaven for cyclists, walkers, and those inclined to pause and drink in the beauty of the world. Renowned for its comprehensive views, the trails weave through the landscape offering direct peeks of the Remarkables and the gleaming spread of Lake Wakatipu. Indeed, Queenstown is a paradise for the outdoor enthusiast, and the Peninsula is its crowning adornment. With every turn, the enchanting scenery unfolds, a canvas of nature’s impressive design.
+
+The Peninsula not only boasts natural beauty; it also preserves the heritage of the region's pastoral and mining history from the nineteenth century when European settlers shaped the lifeblood of the area. Encounters with art emerge unexpectedly as the Kelvin Heights Sculpture Trail comes into view, interspersing New Zealand’s cultural offerings with its natural wonders. Cyclists and pedestrians alike imbibe the crisp alpine air as they traverse the routes, often pausing for moments of reflection at benches strategically placed to appreciate the surroundings. There, in the gentle warmth of the sun, the world stands still, providing a quiet that rejuvenates the soul, whether in communal joy or individual introspection.
+
+As our tour reaches its end, we carry with us the patchwork of experiences that is Queenstown and its environs. Each location, from the historic TSS Earnslaw to the formidable peaks of The Remarkables, has woven an element into the cloth of our memories. The cheerful sound of exploration and the calm pauses in the embrace of nature blend into a harmonious melody that we keep safe, a cache of memories to comfort us on days without sunshine. Yet the whispers of the lake call us to return, for Queenstown, with its infinite skies and mirrored waters, is more than a simple destination. It's a call of the heart, a calm whisper within the flurry of life, inviting you back to its open arms time and time again.

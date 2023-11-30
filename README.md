@@ -24,11 +24,12 @@ these should be installed by `pip install`. a (probably incomplete) list of modu
 * `datetime` (for timestamps),
 * `os` (for interacting with the operating system),
 * `spacy` (for NLP sentence boundary detection),
-* `hashlib` (to hash filenames for replicable psuedorandom binary numbers, to dictate tolerance for "overused words").
+* `hashlib` (to hash filenames for replicable psuedorandom binary numbers, to dictate tolerance for "overused words"),
+* `requests` (to make GET requests for an image after dalle has created it and returned its url).
 
 ## pipeline
 
-here's a description of the pipeline, script by script, in a (topo)logical ordering. see the [pipeline flowchart](sleep_stories_pipeline.pdf) for a visual representation. from the root, `my_script.py` is executed by doing `python my_script.py` on the command line.
+here's a description of the pipeline, script by script, in a (topo)logical ordering. see the [pipeline flowchart](sleep_stories_pipeline.pdf) for a visual representation. from the root, `my_script.py` is executed by doing `python my_script.py` on the command line (with the virtual environment running).
 
 ### miscellaneous info
 
@@ -42,18 +43,30 @@ as explained presently.
 
 the word "cue" is reused from the yoga practice pipeline. a cue consists of either one or two sentences; more specifically, each paragraph is split into cues, and each cue is two sentences long except for possibly the last cue in a paragraph (if the paragraph has an odd number of sentences). this separation makes the ElevenLabs voice sound more relaxed. in the `kt` files, cues are surrounded by double-quotes (`"`), and the cues within a chunk are separated by slashes (`/`).
 
-the "chunk" decomposition of a story is so that we can serve varying lengths of stories: in each `kt` file, the initial chunk comprises the `start` component, the final chunk comprises the `end` component, and the chunks in between them comprise the list of `middle` components (and they are separated by commas (`,`)). a story is always served with `start` and `end` components, as well as the first `x` middle components for some `x>=0` depending on the desired length. of course, the stories are written so that the story is always coherent regardless of the value of `x`.[^1]
+the "chunk" decomposition of a story is so that we can serve varying lengths of stories: in each `kt` file, the initial chunk comprises the `start` component, the final chunk comprises the `end` component, and the chunks in between them comprise the list of `middle` components (and they are separated by commas (`,`)). a story is always served with `start` and `end` components, as well as the first `x` middle components for some `x>=0` depending on the desired length. of course, the stories are written so that the story is always coherent regardless of the value of `x`. (actually, there is the possibility that the conclusion of the story (in the `end` component) refers to sightseeing locations that may or may not have actually been served, but we've decided to ignore this for the time being.)
 
 a "stop" is a sightseeing location. (given a destination, these as well as tidbits about them are retrieved in `get_stops.py`.) typically, chatGPT begins a new paragraph whenever it moves on to a new stop.
 
 a "completion" is a single response from chatGPT. for long stories, each (middle) completion constitutes a chunk, and corresponds to a single stop. for short stories, each (middle) completion is broken down into `n` stops (where `n` is an argument in the `write_story` function, and is currently by default set to `2`), and then it is broken down into chunks -- one for each stop. (this is so that the chunks themselves are shorter, since chatGPT tends to have a relatively stable completion length (in the neighborhood of 600-800 words) regardless of how many stops are listed in the user prompt.)
 
+#### run times
+
+waiting for chatGPT (and dalle) response is the main bottleneck in this process. here are some approximate run times.
+* get 20 stops for a stops file: `[fill this in -- probably on the order of 3min per stops file]`
+* write a story: 6.5min for long (with 20 stops), 4.5min for short (with (a,c,n,z) = (1,5,2,1)).
+* edit a story: extremely variable, and independent of the story being long or short -- mostly 4-7min, but occasionally as high as 17min. `[finish this when finished editing]`
+* make cues: 0.5sec.
+* make kt: `almost instantaneous`.
+* get art style description: 30-40sec each.
+* get dalle prompts: 6-10sec per prompt.
+* get images: 20-25sec each (with `size="1024x1792"` and `quality="standard"`).
+
 #### constants
 
 here are some files that don't (mostly) contain functions.
-* `inputs.py` contains info about destinations (including optional info like transport method, requested sightseeing locations, info about the tour guide, and season). every story begins with an entry here.
-* `strings.py` contains some strings and string-writing functions (e.g. chatGPT prompts that depend on `destination` and `length`(-of-story) parameters).
-* `models.py` contains global choices for `gpt_model` and `image_model` (currently set to `gpt-4-1106-preview` and `dall-e-3`, respectively).
+* `inputs.py` contains info about destinations (including optional info like transport method, requested sightseeing locations, info about the tour guide, and season). every story begins with an entry here. this is generally imported as `from inputs import *`, so that `my_input` defined over there is accessible as `my_input`.
+* `strings.py` contains some strings and string-writing functions (e.g. chatGPT prompts that depend on `destination` and `length`(-of-story) parameters). this is generally imported as `import strings`, so that `my_string` defined over there is accessible as `strings.my_string`.
+* `models.py` contains global choices for `gpt_model` and `image_model` (currently set to `gpt-4-1106-preview` and `dall-e-3`, respectively). this is generally imported as `import models`, so that `my_model` defined over there is accessible as `models.my_model`.
 
 #### naming conventions
 
@@ -67,11 +80,13 @@ however, there are exceptions, e.g. `art-styles_{timestamp}.txt` (since these ar
 
 #### miscellaneous to-do (not including stuff below)
 
+- [ ] add error-handling for _all_ calls to chatGPT and dalle APIs. (one time it seemed like probably the chatGPT API had returned an error message, but my python process was just hanging. or maybe that'd make it so `completion.choices[0].message.content` does not exist?)
 - [ ] make sure to adhere to the above format for filenames.
 - [x] make sure to use `strings.separator` everywhere instead of `"\n\n=====\n\n"`.
 - [ ] keep `sleep_stories_pipeline.pdf` up-to-date. (unfortunately, there doesn't seem to be an easy way to keep it synced with the version in dropbox.)
 - [ ] delete `ZZZ_` files and directories as they become irrelevant.
 - [ ] make sure the above list of modules is complete (e.g. by doing a `grep` for `"import "`).
+- [ ] continue to fill in list of approximate run times
 
 ### get_stops.py
 
@@ -89,7 +104,7 @@ a typical result file is named `story-unedited_berkeley_2023-11-24_17-25-36_shor
 
 a `story-unedited` file is separated into chunks using `strings.separator`, the last simply containing the metadata of which `stops` file the story was written based on.
 
-if chatGPT ever fails to return the correct number of chunks in a middle completion, this is logged at the bottom of `logs/splitting-failure-log.txt`.
+if chatGPT ever fails to return the correct number of chunks in a middle completion when writing a short story, this is logged at the bottom of `logs/splitting-failure-log.txt`. this should be checked (and fixed by hand where needed) before continuing on to `edit_story`.
 
 STATUS: done.
 
@@ -107,6 +122,8 @@ actually, we do want to allow chatGPT to _occasionally_ use an "overused word" (
 this writes to a `story` file in `stories/`. alternatively, when given no arguments, this operates on _all_ `story-unedited` files in `stories-unedited/`.
 
 a typical result file is named `story_berkeley_2023-11-24_17-25-36_short.txt`. the timestamp corresponds to the original writing time, not the editing time. (in particular, whenever we edit an unedited story, we overwrite any previous edited versions.) the metadata now also contains an "edited at" timestamp as well as a list of the allowances for overused words (as described in the above-linked footnote).
+
+if any rewrites are undertaken (which is all but guaranteed), a log file is written to `logs/rewriting-logs`. if during an editing process any rewrite _fails_, a log file is written to `logs/rewriting-failure-logs`. these should both be checked (and fixed by hand where needed) before continuing on to `make_cues`. a quick overview is also available in `logs/rewriting-stats.txt`.
 
 STATUS: done.
 
@@ -147,31 +164,75 @@ a typical resulting `.kt` file is named `SleepStoryTravelBerkeleyCues.kt`.
 
 STATUS: done, except for phoneticizations (which aren't currently relevant (as of 2023-11-28) anyways).
 
+### get_art_style_description.py
+
+
+
+
+this takes an art style listed in `art_styles.py` and retrieves a lengthy description of it from chatGPT, tailored to help chatGPT write dalle prompts in that style. when called without arguments, it runs on _all_ art styles listed there.
+
+
+
+
+
+
+
+
+
+
+
+
 ### get_art_styles.py
 
-this takes a list of destinations in `inputs.py` and, for each entry, retrieves a style of art (as well as an in-depth description thereof) that stories set there can be nicely illustrated in.
+this takes a list of destinations in `inputs.py` and, for each entry, retrieves a style of art (as well as an in-depth description thereof) that stories set there can be nicely illustrated in. these are requested to be _different_ art styles; so that we can easily check chatGPT's performance on this, the results of a given instance are all saved in a _single_ file.
 
-a typical result file is named `give one here: prob just art-styles_2023-11-23.txt`.
+a typical result file is named `art-styles_2023-11-29_11-43-46.txt`.
 
-* this might begin with just a list (say comma-separated) of the locations that appear in this file.
-
-STATUS: does not yet exist. (we've been doing this part manually thus far.)
+STATUS: done.
 
 ### get_dalle_prompts.py
 
-this takes a `cues` file as well as an `art-styles` file that contains an art style for the corresponding destination (by default the most recent such) and gets one dalle prompt for each cue in the given style from chatGPT.
+this takes a `cues` file as well as an `art-styles` file that contains an art style for the corresponding destination (by default the most recent such) and gets one dalle prompt for each cue in the given style from chatGPT. these are separated by `strings.separator` (but not otherwisely (e.g. into chunks)).
 
-a typical result file is named `decide here. prob put timestamp, and then metadata of what story it came from.`
+a typical result file is named `dalle-prompts_for_cues_tokyo_2023-11-28_22-32-51_long_at_2023-11-29_12-46-14.txt`. the latter timestamp is when the file was generated.
 
-STATUS: the `for` loop exists, but as of now (11/26 at 4pm) the art style is hard-coded.
+STATUS: done (at least works for n=1).
 
 ### get_pix.py
 
-this takes a list of dalle prompts for a given story and generates illustrations.
+this takes a list of dalle prompts for a given story and generates illustrations. these are saved in a dedicated directory in `images/`, whose name lists the input `dalle-prompts` file as well as a timestamp of when the images were generated (so that different runs of `get_pix` don't overwrite each other).
 
-`this should land in a dedicated folder, indicating the timestamps of: the story, the dalle-prompts file, and generation time. in particular, this should take as a parameter both the story and a dalle-prompts file that's based on it.`
+a typical name of such a dedicated directory is `images_dalle-prompts_for_cues_tokyo_2023-11-28_22-32-51_long_at_2023-11-29_12-46-14_at_2023-11-29_13-27-04`. conveniently, this name essentially contains the name of the corresponding story file as a substring (here, `story_tokyo_2023-11-28_22-32-51_long.txt`).
 
-STATUS: the `for` loop (over the list of dalle prompts) exists, but it's not a function yet.
+the images are named `000.png`, `001.png`, etc.; these align one-to-one with the dalle prompts, and therefore with the cues as well.
+
+this also writes a file to `image-urls/`. however, note that these urls are only valid for 1 hour from when the images were generated. so this is really only useful for more-or-less-immediate debugging: error status codes are logged here.
+
+a typical such file is named `image-urls_dalle-prompts_for_cues_tokyo_2023-11-28_22-32-51_long_at_2023-11-29_12-46-14_at_2023-11-29_13-27-04.txt`. [`this could/should change...`]
+
+
+
+
+`HANDLE ERRORS here from prompts being too long! (just trim the prompt (maybe sentence-by-sentence?) and then retry.) although in like 150+ pix, it hasn't happened once yet...`
+
+
+
+
+
+some quick API info is [here](https://cookbook.openai.com/articles/what_is_new_with_dalle_3). a few relevant notes therefrom:
+* there doesn't seem to be anything like a "system prompt".
+* the maximum allowable length of a prompt is 1_000 characters.
+* the parameter n is the number of images to create. the default is n=1, and this is the _only_ option for dall-e-3.
+* style = "vivid" is default, but also "natural" is possible.
+* quality = "standard" is default, but also "hd" is possible.
+
+
+
+
+STATUS: done (at least works for n=1).
+
+
+
 
 ### word_usage_stats.py
 
@@ -187,12 +248,3 @@ of course, this could be improved or expanded if we ever want.
 of course, in any case hopefully we'd continue to handle variations (e.g. due to conjugation or pluralization) gracefully.
 
 STATUS: done (at least for now).
-
-
-
-
-
-
-
-
-[^1]: actually, there is the possibility that the conclusion of the story (in the `end` component) refers to sightseeing locations that may or may not have actually been served, but we've decided to ignore this for the time being.

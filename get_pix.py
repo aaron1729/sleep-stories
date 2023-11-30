@@ -32,6 +32,8 @@ def get_pix(dalle_prompts_filename):
                 model = models.image_model,
                 prompt = dalle_prompt,
                 size = "1024x1792",
+                # style = "natural", # TEST!
+                # quality = "hd", # TEST!
             )
             image_url = response.data[0].url
             print(f"image_url is: {image_url}")
@@ -61,5 +63,31 @@ def get_pix(dalle_prompts_filename):
 
 
 ### let's get some pix!
+
+# all have been sent to carlos. except for the first few, 
 # get_pix("dalle-prompts_for_cues_tokyo_2023-11-28_22-32-51_long_at_2023-11-29_12-46-14.txt")
-get_pix("dalle-prompts_for_cues_kyoto_2023-11-28_22-32-51_long_at_2023-11-29_13-56-54.txt")
+# get_pix("dalle-prompts_for_cues_kyoto_2023-11-28_22-32-51_long_at_2023-11-29_13-56-54.txt")
+# get_pix("dalle-prompts_for_cues_algarve_2023-11-28_22-12-12_short_at_2023-11-29_15-41-13.txt")
+# get_pix("dalle-prompts_for_cues_dubai_2023-11-28_22-32-51_short_at_2023-11-29_15-44-24.txt")
+# get_pix("dalle-prompts_for_cues_napa_2023-11-28_22-32-51_long_in_cubism_at_2023-11-29_17-36-26.txt")
+# get_pix("dalle-prompts_for_cues_rio_2023-11-28_22-32-51_long_in_victorian_at_2023-11-29_17-49-06.txt")
+# get_pix("dalle-prompts_for_cues_chiangmai_2023-11-28_22-32-51_long_in_sepia-pencil_at_2023-11-29_17-50-37.txt")
+
+
+# run at 6:15pm. commented-out means sent to carlos.
+# get_pix("dalle-prompts_for_cues_bali_2023-11-28_22-32-51_short_in_manga_at_2023-11-29_18-01-04.txt")
+# get_pix("dalle-prompts_for_cues_costarica_2023-11-28_22-32-51_short_in_pop_at_2023-11-29_18-01-04.txt")
+# get_pix("dalle-prompts_for_cues_newyorkcity_2023-11-28_22-32-51_long_in_psychedelic_at_2023-11-29_18-01-04.txt")
+# get_pix("dalle-prompts_for_cues_queenstown_2023-11-28_22-32-51_short_in_thai-temple_at_2023-11-29_18-01-04.txt")
+# get_pix("dalle-prompts_for_cues_paris_2023-11-28_22-32-51_short_in_islamic-geometric_at_2023-11-29_18-01-04.txt")
+# get_pix("dalle-prompts_for_cues_istanbul_2023-11-28_22-32-51_long_in_turkish-marbling_at_2023-11-29_18-01-04.txt")
+
+
+
+# run at 6:48pm. commented-out means sent to carlos.
+# get_pix("dalle-prompts_for_cues_greece_2023-11-28_22-32-51_short_in_pointillism_at_2023-11-29_18-01-04.txt")
+# get_pix("dalle-prompts_for_cues_london_2023-11-28_22-32-51_short_in_abstract_at_2023-11-29_18-01-04.txt")
+# get_pix("dalle-prompts_for_cues_shanghai_2023-11-28_22-32-51_short_in_surrealism_at_2023-11-29_18-01-04.txt")
+# get_pix("dalle-prompts_for_cues_barcelona_2023-11-28_22-32-51_short_in_neoexpressionism_at_2023-11-29_18-01-04.txt")
+# get_pix("dalle-prompts_for_cues_algarve_2023-11-28_22-12-12_long_in_cave_at_2023-11-29_18-41-22.txt")
+# get_pix("dalle-prompts_for_cues_amalfi_2023-11-28_22-32-51_short_in_magical-realism_at_2023-11-29_18-30-59.txt")

@@ -1,37 +1,32 @@
 from openai import OpenAI
 client = OpenAI()
 
-import re # regular expressions
-
-from datetime import datetime
-
-from os import listdir
-from os.path import isfile, join
+import re
 
 import hashlib
 
 import models
-import strings # so, `my_string` defined over there is accessible here as `strings.my_string`.
-# from inputs import * # so, the inputs defined over there are accessible here without change.
+import strings
 
 timestamp = strings.time_now()
 
 ################################################################################
 
-# a typical input for story_filename is "story_berkeley_2023-11-24_17-25-36_short.txt".
-    # if story_filename is left as `None`, then we edit _all_ the unedited stories in `stories-unedited/`.
+# a typical input for unedited_story_filename is "unedited_story_berkeley_2023-11-24_17-25-36_short.txt".
+    # if unedited_story_filename is left as `None`, then we edit _all_ the unedited stories in `stories-unedited/`.
 # max_number_of_attempts dictates how many times we run each chunk through our regex patterns to see if it catches. (at the end of the function, we run one more time and record whether we ultimately succeeded.)
 # B (for "base") is one more than the maximum number of instances of an overused word that we allow. (so if B = 2 then we only allow 0 or 1 instances of each.)
-def edit_story(story_filename = None, max_number_of_attempts = 3, B = 3):
+def edit_story(unedited_story_filename = None, max_number_of_attempts = 3, B = 3):
     
-    if not story_filename:
+    if not unedited_story_filename:
         unedited_story_filenames = strings.get_all_unhidden_files("stories-unedited")
+        unedited_story_filenames.sort()
     else:
-        unedited_story_filenames = [story_filename]
+        unedited_story_filenames = [unedited_story_filename]
     
     for unedited_story_filename in unedited_story_filenames:
 
-        print(f"editing the story {unedited_story_filename}")
+        print(f"\nstart editing the story {unedited_story_filename} at {strings.time_now()}\n")
         
         # make a local copy of the list `strings.overused_words`, and add counters based on a binary hash of unedited_story_filename. specifically, go from right to left in there (since these appear to always start with a 1 on the left), assigning the bits to the overused words in the order that they appear in this list. (this is better than assigning 0 or 1 randomly, since it's replicable.)
         overused_words = strings.overused_words
@@ -48,7 +43,7 @@ def edit_story(story_filename = None, max_number_of_attempts = 3, B = 3):
             else:
                 return convert_int_to_base_b(num // base, base) + str(num % base)
         base_B_hash_string = convert_int_to_base_b(int(hex_hash, 16), B)
-        print(f"base_B_hash_string is:\n{base_B_hash_string}")
+        print(f"\nbase_B_hash_string is:\n{base_B_hash_string}\n")
         # assign the counters, and record them (before they change!) into a string for metadata.
         overused_word_allowances_string_list = []
         for (index, entry) in enumerate(overused_words):
@@ -56,7 +51,7 @@ def edit_story(story_filename = None, max_number_of_attempts = 3, B = 3):
             entry['counter'] = int(base_B_hash_string[backwards_index])
             overused_word_allowances_string_list.append(f"{entry['word']}: {str(entry['counter'])}")
         overused_word_allowances_string = f"OVERUSED WORD ALLOWANCES (computed with B={B}):\n{strings.n.join(overused_word_allowances_string_list)}"
-        print(f"overused_word_allowances_string is:\n{overused_word_allowances_string}")
+        print(f"\noverused_word_allowances_string is:\n{overused_word_allowances_string}")
         
         
         # make some regex patterns.
@@ -124,8 +119,8 @@ def edit_story(story_filename = None, max_number_of_attempts = 3, B = 3):
                 # and then, in any case, go back to the top of the `for` loop.
                 if any_hits and index < max_number_of_attempts:
 
-                    print(f"asking chatGPT for a rewrite, with:\nany_digits = {any_digits}\nany_roman_numerals = {any_roman_numerals}\noverused_words_to_avoid = {overused_words_to_avoid}\noverused_word_appearances = {overused_word_appearances}")
-                    print(f"before the rewrite, the chunk is:\n{chunk}")
+                    print(f"\nasking chatGPT for a rewrite, with:\nany_digits = {any_digits}\nany_roman_numerals = {any_roman_numerals}\noverused_words_to_avoid = {overused_words_to_avoid}\noverused_word_appearances = {overused_word_appearances}")
+                    print(f"\nbefore the rewrite, the chunk is:\n\n{chunk}")
                     
                     system_message = {"role": "system", "content": strings.system_prompt_for_rewriting(overused_words_to_avoid)}
                     user_message = {"role": "user", "content": chunk}
@@ -135,7 +130,7 @@ def edit_story(story_filename = None, max_number_of_attempts = 3, B = 3):
                     )
                     chunk = completion.choices[0].message.content
                     chunk = strings.swap_quote_marks(chunk)
-                    print(f"after the rewrite, the chunk is:\n{chunk}")
+                    print(f"\nafter the rewrite, the chunk is:\n\n{chunk}\n")
                     versions_of_story_chunk.append(chunk)
             
             # after the inner `for` loop (running through the rewrite attempts) but still referring to a fixed chunk:
@@ -158,7 +153,7 @@ def edit_story(story_filename = None, max_number_of_attempts = 3, B = 3):
         edited_story_file = open(f"stories/{edited_story_filename}", "w")
         edited_story_file.write(edited_story_string)
         edited_story_file.close()
-        print(f"\nfinished editing {unedited_story_filename}\n")
+        print(f"\nfinish editing {unedited_story_filename} at {strings.time_now()}\n")
 
         # now, do some logging...
 
@@ -173,20 +168,20 @@ def edit_story(story_filename = None, max_number_of_attempts = 3, B = 3):
 
         # add an entry to `logs/rewriting-stats.txt`.
         replacement_stats_string = f"{unedited_story_filename}\nediting timestamp: {timestamp}\nrewriting attempts per chunk: {', '.join([str(num_rewrites_of_chunk) for num_rewrites_of_chunk in num_rewrites_of_chunks])}\nany failures: {str(any_failures)}\n\n"
-        print(f"num_rewrites_of_chunks is: {num_rewrites_of_chunks}")
+        print(f"\nnum_rewrites_of_chunks is: {num_rewrites_of_chunks}\n")
         rewriting_stats_file = open("logs/rewriting-stats.txt", "a")
         rewriting_stats_file.write(replacement_stats_string)
         rewriting_stats_file.close()
 
         # if there were any rewriting failures, make a special failure log file.
         if any_failures:
-            rewriting_failure_log_file = open(f"logs/rewriting-failure-logs/{unedited_story_filename}", "w")
-            rewriting_failure_log_file.write(f"a rewrite failed when attempting to edit {unedited_story_filename}\nediting timestamp: {timestamp}\ncheck the verbose rewriting-log file logs/rewriting-logs/rewriting-log-{unedited_story_filename}_edited-at-{timestamp}.txt")
+            rewriting_failure_log_file = open(f"logs/rewriting-failure-logs/rewriting-failure-log-{unedited_story_filename[:-4]}_edited-at_{timestamp}", "w")
+            rewriting_failure_log_file.write(f"a rewrite failed when attempting to edit {unedited_story_filename}\nediting timestamp: {timestamp}\ncheck the verbose rewriting-log file logs/rewriting-logs/rewriting-log-{unedited_story_filename}_edited-at_{timestamp}.txt")
 
         # if there were any rewrites, make a verbose log of them.
         # (in a previous version of this code (when we were only removing digits), we did some annoyingly tricksy regex stuff to try and find the old sentence and match it with its replacement. but now that we're replacing the overused words too, this is an unreasonably onerous operation. so we'll just be sure to check the verbose log files (as well as the failure logs), and leave it at that.)
         if any_rewrites:
-            rewriting_log_file = open(f"logs/rewriting-logs/rewriting-log-{unedited_story_filename[:-4]}_edited-at-{timestamp}.txt", "w")
+            rewriting_log_file = open(f"logs/rewriting-logs/rewriting-log-{unedited_story_filename[:-4]}_edited-at_{timestamp}.txt", "w")
             rewriting_log_strings = []
             for (index, versions_of_story_chunk) in enumerate(versions_of_story_chunks):
                 if len(versions_of_story_chunk) > 1:
@@ -225,7 +220,6 @@ FINAL VERSION (appearing in edited version of story):
     return None
 
 
-# edit_story("story-unedited_chiangmai_2023-11-28_21-23-16_long.txt")
-# edit_story("story-unedited_chiangmai_2023-11-26_20-26-02_short.txt")
 
-edit_story("story-unedited_tokyo_2023-11-26_23-45-14_long.txt")
+### let's edit some stories!
+edit_story("story-unedited_berkeley_2023-11-28_22-32-51_long.txt")

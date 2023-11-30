@@ -1,13 +1,12 @@
 ##### this takes in a(n edited) story, splits it into cues, and writes these to a `cues` file, separated into chunks by strings.separator.
 # or, without an argument, it runs on _all_ stories in `stories/`.
 
-import re # regular expressions
+import re
 
-# this NLP tool detects sentence boundaries.
 import spacy
 nlp = spacy.load("en_core_web_sm")
 
-import strings # so, `my_string` defined over there is accessible here as `strings.my_string`.
+import strings
 
 def make_cues(story_filename = None):
 
@@ -61,6 +60,7 @@ def make_cues(story_filename = None):
 
     if not story_filename:
         story_filenames = strings.get_all_unhidden_files("stories")
+        story_filenames.sort()
     else:
         story_filenames = [story_filename]
 
@@ -80,5 +80,8 @@ def make_cues(story_filename = None):
 
 
 
+### let's make some cues!
+
+make_cues()
 # make_cues("story_chiangmai_2023-11-28_21-23-16_long.txt")
-make_cues("story_chiangmai_2023-11-26_20-26-02_short.txt")
+# make_cues("story_chiangmai_2023-11-26_20-26-02_short.txt")
