@@ -28,17 +28,13 @@ def make_kt(destination_arg = None, long_story_cues_filename_arg = None, short_s
     keys_for_deletion = []
     for destination in story_pairs:
         long_story_cues_filename = strings.get_latest_filename(destination, "cues", "long")
-        print(f"long_story_cues_filename is: {long_story_cues_filename}")
         short_story_cues_filename = strings.get_latest_filename(destination, "cues", "short")
-        print(f"short_story_cues_filename is: {short_story_cues_filename}")
         # overwrite the above if either/both was specified as an argument of the function.
         if destination == destination_arg:
             if long_story_cues_filename_arg:
                 long_story_cues_filename = long_story_cues_filename_arg
-                print(f"overwriting long_story_cues_filename (in case a not-most-recent filename was passed in), and now it is: {long_story_cues_filename}")
             if short_story_cues_filename_arg:
                 short_story_cues_filename = short_story_cues_filename_arg
-                print(f"overwriting short_story_cues_filename (in case a not-most-recent filename was passed in), and now it is: {short_story_cues_filename}")
         # if both short and long stories exist for the destination, save them to the dictionary in a dictionary. otherwise, delete the key from the dictionary.
         if long_story_cues_filename and short_story_cues_filename:
             story_pairs[destination] = {
@@ -49,8 +45,6 @@ def make_kt(destination_arg = None, long_story_cues_filename_arg = None, short_s
             keys_for_deletion.append(destination)
     for key in keys_for_deletion:
         del story_pairs[key]
-    
-    print(f"story_pairs is:\n{story_pairs}")
     
     # now, write one kt file for each pair.
     for destination in story_pairs:
@@ -192,13 +186,13 @@ object {object_name} : SleepStoryPoseCues {{
         kotlin_file.write(kotlin_string)
         kotlin_file.close()
 
-        print(f"finished processing the cues files {stories['short']['filename']} and {stories['long']['filename']} into a single kotlin file.")
+        print(f"finished processing the following cues files into a single kotlin file:\n{stories['short']['filename']}\n{stories['long']['filename']}")
 
     return None
 
 
 
 ### let's make some kotlin code!
-
+make_kt()
 
 # make_kt("chiangmai")

@@ -72,7 +72,7 @@ def get_stops(destination, num_stops = 20):
     stops_with_tidbits_file.write(strings.separator.join(stops_with_tidbits))
     stops_with_tidbits_file.close()
 
-    print("\ndone getting tidbits\n")
+    print(f"\nfinish writing {stops_with_tidbits_file} at {strings.time_now()}\n")
 
     return None
 
@@ -80,7 +80,4 @@ def get_stops(destination, num_stops = 20):
 
 ### let's get some stops!
 
-for input in inputs:
-    get_stops(input)
-
-# get_stops("berkeley")
+get_stops("berkeley")

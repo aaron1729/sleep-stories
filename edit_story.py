@@ -213,7 +213,7 @@ FINAL VERSION (appearing in edited version of story):
 
 {final_version_of_chunk}"""
                     rewriting_log_strings.append(rewriting_log_string_for_chunk)
-            rewriting_log_string = "\n\n==========\n\n".join([overused_word_allowances_string] + rewriting_log_strings)
+            rewriting_log_string = strings.separator_long.join([overused_word_allowances_string] + rewriting_log_strings)
             rewriting_log_file.write(rewriting_log_string)
             rewriting_log_file.close()
 

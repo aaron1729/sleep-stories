@@ -73,6 +73,7 @@ nn = "\n\n"
 
 # we use this separator throughout the code. storing it as a variable helps ensure that this isn't screwed up by a typo. (namely, a typo will give a compilation error, instead of silently causing some screwy behavior that we hopefully notice and then have to chase down.)
 separator = "\n\n=====\n\n"
+separator_long = "\n\n==========\n\n"
 
 ### below are a bunch of requests to chatGPT (indicated by `_plz` in the variable name), as well as related material.
 

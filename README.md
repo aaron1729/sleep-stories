@@ -51,12 +51,12 @@ a "completion" is a single response from chatGPT. for long stories, each (middle
 
 #### run times
 
-waiting for chatGPT (and dalle) response is the main bottleneck in this process. here are some approximate run times.
+waiting for chatGPT (and dalle) response is the main bottleneck in this process. here are some approximate run times, although it seems that chatGPT occasionally hangs and makes these much longer.
 * get 20 stops for a stops file: `[fill this in -- probably on the order of 3min per stops file]`
 * write a story: 6.5min for long (with 20 stops), 4.5min for short (with (a,c,n,z) = (1,5,2,1)).
-* edit a story: extremely variable, and independent of the story being long or short -- mostly 4-7min, but occasionally as high as 17min. `[finish this when finished editing]`
-* make cues: 0.5sec.
-* make kt: `almost instantaneous`.
+* edit a story: 4-7min (and rather variable -- not even really correlated with the `length` of the story).
+* make cues: <1sec per cues file.
+* make kt: <0.1sec per kt file.
 * get art style description: 30-40sec each.
 * get dalle prompts: 6-10sec per prompt.
 * get images: 20-25sec each (with `size="1024x1792"` and `quality="standard"`).
@@ -70,7 +70,7 @@ here are some files that don't (mostly) contain functions.
 
 #### naming conventions
 
-most filenames are of the form `{filetype}_{destination}_{timestamp}[_{length}].ending`.
+most filenames are of the form `{filetype}_{destination}_{timestamp}[_{length}].ending`, although some later ones in the illustration pipeline are more complex (e.g. containing multiple timestamps).
 * since we split overall filenames by underscores (to easily retrieve info (e.g. timestamps) from them), each `{filetype}` is always split with dashes (instead of underscores) when necessary. moreover, directories are named analogously. for instance, `stories-unedited/` contains `story-unedited` files.
 * the bare term "story" always refers to an edited story. (an "unedited story" is always referred to as such.)
 * `destination` is e.g. `costarica` or `chiangmai`.
@@ -80,13 +80,13 @@ however, there are exceptions, e.g. `art-styles_{timestamp}.txt` (since these ar
 
 #### miscellaneous to-do (not including stuff below)
 
-- [ ] add error-handling for _all_ calls to chatGPT and dalle APIs. (one time it seemed like probably the chatGPT API had returned an error message, but my python process was just hanging. or maybe that'd make it so `completion.choices[0].message.content` does not exist?)
-- [ ] make sure to adhere to the above format for filenames.
-- [x] make sure to use `strings.separator` everywhere instead of `"\n\n=====\n\n"`.
+- [ ] add error-handling for all calls to chatGPT and dalle APIs (including if/when the dalle prompt is too long).
+- [ ] improve filename conventions and organization (particularly e.g. for images).
+- [x] make sure to use `strings.separator` everywhere instead of `"\n\n=====\n\n"` (and also `strings.separator_long`).
 - [ ] keep `sleep_stories_pipeline.pdf` up-to-date. (unfortunately, there doesn't seem to be an easy way to keep it synced with the version in dropbox.)
 - [ ] delete `ZZZ_` files and directories as they become irrelevant.
 - [ ] make sure the above list of modules is complete (e.g. by doing a `grep` for `"import "`).
-- [ ] continue to fill in list of approximate run times
+- [ ] continue to fill in list of approximate run times.
 
 ### get_stops.py
 
@@ -166,41 +166,27 @@ STATUS: done, except for phoneticizations (which aren't currently relevant (as o
 
 ### get_art_style_description.py
 
-
-
-
 this takes an art style listed in `art_styles.py` and retrieves a lengthy description of it from chatGPT, tailored to help chatGPT write dalle prompts in that style. when called without arguments, it runs on _all_ art styles listed there.
 
-
-
-
-
-
-
-
-
-
-
-
-### get_art_styles.py
-
-this takes a list of destinations in `inputs.py` and, for each entry, retrieves a style of art (as well as an in-depth description thereof) that stories set there can be nicely illustrated in. these are requested to be _different_ art styles; so that we can easily check chatGPT's performance on this, the results of a given instance are all saved in a _single_ file.
-
-a typical result file is named `art-styles_2023-11-29_11-43-46.txt`.
+a typical result file is called `art-style-description_magical-realism_2023-11-29_18-29-46.txt`.
 
 STATUS: done.
 
 ### get_dalle_prompts.py
 
-this takes a `cues` file as well as an `art-styles` file that contains an art style for the corresponding destination (by default the most recent such) and gets one dalle prompt for each cue in the given style from chatGPT. these are separated by `strings.separator` (but not otherwisely (e.g. into chunks)).
+`PROBABLY NOT YET FINAL`
 
-a typical result file is named `dalle-prompts_for_cues_tokyo_2023-11-28_22-32-51_long_at_2023-11-29_12-46-14.txt`. the latter timestamp is when the file was generated.
+this takes `cues` file as well as an `art-style_description` gets one dalle prompt for each cue in the given style from chatGPT. these are separated by `strings.separator` (but not otherwisely (e.g. into chunks)).
 
-STATUS: done (at least works for n=1).
+a typical result file is named `dalle-prompts_for_cues_queenstown_2023-11-28_22-32-51_short_in_thai-temple_at_2023-11-29_18-01-04.txt`. the latter timestamp is when the file was generated.
+
+STATUS: done.
 
 ### get_pix.py
 
-this takes a list of dalle prompts for a given story and generates illustrations. these are saved in a dedicated directory in `images/`, whose name lists the input `dalle-prompts` file as well as a timestamp of when the images were generated (so that different runs of `get_pix` don't overwrite each other).
+`PROBABLY REORGANIZE where/hoe the pix are stored.`
+
+this takes a `dalle-prompts` file and gets corresponding images from dalle. these are saved in a dedicated directory in `images/`, whose name lists the input `dalle-prompts` file as well as a timestamp of when the images were generated (so that different runs of `get_pix` don't overwrite each other).
 
 a typical name of such a dedicated directory is `images_dalle-prompts_for_cues_tokyo_2023-11-28_22-32-51_long_at_2023-11-29_12-46-14_at_2023-11-29_13-27-04`. conveniently, this name essentially contains the name of the corresponding story file as a substring (here, `story_tokyo_2023-11-28_22-32-51_long.txt`).
 
@@ -208,31 +194,16 @@ the images are named `000.png`, `001.png`, etc.; these align one-to-one with the
 
 this also writes a file to `image-urls/`. however, note that these urls are only valid for 1 hour from when the images were generated. so this is really only useful for more-or-less-immediate debugging: error status codes are logged here.
 
-a typical such file is named `image-urls_dalle-prompts_for_cues_tokyo_2023-11-28_22-32-51_long_at_2023-11-29_12-46-14_at_2023-11-29_13-27-04.txt`. [`this could/should change...`]
+a typical such file is named `image-urls_dalle-prompts_for_cues_queenstown_2023-11-28_22-32-51_short_in_thai-temple_at_2023-11-29_18-01-04.txt_at_2023-11-29_18-15-46.txt`.
 
-
-
-
-`HANDLE ERRORS here from prompts being too long! (just trim the prompt (maybe sentence-by-sentence?) and then retry.) although in like 150+ pix, it hasn't happened once yet...`
-
-
-
-
-
-some quick API info is [here](https://cookbook.openai.com/articles/what_is_new_with_dalle_3). a few relevant notes therefrom:
+[here](https://cookbook.openai.com/articles/what_is_new_with_dalle_3) is a quick info page on the dalle API. here are a few relevant notes therefrom.
 * there doesn't seem to be anything like a "system prompt".
-* the maximum allowable length of a prompt is 1_000 characters.
-* the parameter n is the number of images to create. the default is n=1, and this is the _only_ option for dall-e-3.
-* style = "vivid" is default, but also "natural" is possible.
-* quality = "standard" is default, but also "hd" is possible.
+* the maximum allowable length of a prompt is `1_000` characters.
+* the parameter `n` is the number of images to create. the default is `n=1`, and this is the _only_ option for dall-e-3.
+* `style = "vivid"` is default, but also "natural" is possible.
+* `quality = "standard"` is default, but also "hd" is possible.
 
-
-
-
-STATUS: done (at least works for n=1).
-
-
-
+STATUS: done.
 
 ### word_usage_stats.py
 
