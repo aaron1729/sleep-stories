@@ -157,62 +157,62 @@ separator_long = "\n\n==========\n\n"
 
 no_numbers_plz = "Please spell out any numbers in words. For instance, write 'nineteen eighty-seven' instead of '1987', and 'four thousand seven hundred and thirty three' instead of '4,733', and 'eighteen-sixties' instead of '1860s' (referring to the decade), and 'nineties' instead of '90s' (also referring to the decade)."
 
-# for replicability of the `edit_story` function, we should only add new overused words to the _end_ of this list. (specifically, in `edit_story.py` we use the index in the list.)
+# for replicability of the `edit_story` function, we should only add new overused words to the _end_ here. (we are working in python 3.11, and as of python 3.7 dictionaries maintain their insertion order.) specifically, in `edit_story.py` we use the index here to pseudorandomly determine the number of instances that we allow.
 # the "pattern" is for regex searches in `edit_story.py`.
     # including "(?i)" in the pattern makes it case-insensitive.
     # the "\b" denotes a word boundary, so that e.g. "contribute" doesn't trigger "tribute".
 # we may eventually add a "synonyms" property, containing a list of suggested replacements.
-overused_words = [
-    {
+overused_words = {
+    "tapestry": {
         "word": "tapestry",
         "pattern": r"(?i)\btapestr",
     },
-    {
+    "testament": {
         "word": "testament",
         "pattern": r"(?i)\btestament",
     },
-    {
+    "grandeur": {
         "word": "grandeur",
         "pattern": r"(?i)\bgrandeur",
     },
-    {
+    "symphony": {
         "word": "symphony",
         "pattern": r"(?i)\bsymphon",
     },
-    {
+    "tribute": {
         "word": "tribute",
         "pattern": r"(?i)\btribute",
     },
-    {
+    "homage": {
         "word": "homage",
         "pattern": r"(?i)\bhomage",
     },
-    {
+    "tranquil": {
         "word": "tranquil",
         "pattern": r"(?i)\btranquil",
     },
-    {
+    "chariot": {
         "word": "chariot",
         "pattern": r"(?i)\bchariot",
     },
-    {
+    "mosaic": {
         "word": "mosaic",
         "pattern": r"(?i)\bmosaic",
     },
-    {
+    "vibrant": {
         "word": "vibrant",
         "pattern": r"(?i)\bvibrant",
     },
-    {
+    "bustling": {
         "word": "bustling",
         "pattern": r"(?i)\bbustl",
     },
-    {
+    "verdant": {
         "word": "verdant",
         "pattern": r"(?i)\bverdant",
     }
-]
-no_overused_words_plz = f"Please don't use any of the following words: {', '.join([entry['word'] for entry in overused_words])}."
+}
+no_overused_words_plz = f"Please don't use any of the following words: {', '.join(overused_words)}."
 
 # without this, chatGPT occasionally began each stop with a sort of "section title".
 complete_sentences_plz = "Everything you write should be in complete sentences."
