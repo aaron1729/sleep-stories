@@ -162,9 +162,13 @@ def write_story(length, destination, num_stops_parameter = None, stops_filename 
     return None
 
 
+# write_story("long", "berkeley")
+write_story("long", "amalfi")
+write_story("long", "greece")
+
 
 ### let's write some stories!
-for input in inputs:
-    print(f"input is: {input}")
-    write_story("long", input)
-    write_story("short", input)
+# for input in inputs:
+#     print(f"input is: {input}")
+#     write_story("long", input)
+#     write_story("short", input)

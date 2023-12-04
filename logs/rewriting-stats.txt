@@ -323,3 +323,8 @@ editing timestamp: 2023-11-29_20-37-17
 rewriting attempts per chunk: 3, 0, 0, 3, 0, 0, 0, 0, 0, 1, 1, 1
 any failures: True
 
+story-unedited_paris_2023-11-28_22-32-51_long.txt
+editing timestamp: 2023-12-01_22-45-08
+rewriting attempts per chunk: 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 0, 1, 1
+any failures: True
+

@@ -28,7 +28,7 @@ def edit_story(unedited_story_filename = None, max_number_of_attempts = 3, B = 3
 
         print(f"\nstart editing the story {unedited_story_filename} at {strings.time_now()}\n")
         
-        # make a local copy of the list `strings.overused_words`, and add counters based on a binary hash of unedited_story_filename. specifically, go from right to left in there (since these appear to always start with a 1 on the left), assigning the bits to the overused words in the order that they appear in this list. (this is better than assigning 0 or 1 randomly, since it's replicable.)
+        # make a local copy of the list `strings.overused_words`, and add counters based on a base-B hash of unedited_story_filename. specifically, go from right to left in there (since these always start as nonzero on the left), assigning the bits to the overused words in the order that they appear in this list. (this is better than assigning these values randomly, since it's replicable.)
         overused_words = strings.overused_words
         # convert the string to bytes.
         filename_encoded = unedited_story_filename.encode()
@@ -48,28 +48,86 @@ def edit_story(unedited_story_filename = None, max_number_of_attempts = 3, B = 3
         overused_word_allowances_string_list = []
         for (index, entry) in enumerate(overused_words):
             backwards_index = -(index + 1)
-            entry['counter'] = int(base_B_hash_string[backwards_index])
+            entry["counter"] = int(base_B_hash_string[backwards_index])
             overused_word_allowances_string_list.append(f"{entry['word']}: {str(entry['counter'])}")
         overused_word_allowances_string = f"OVERUSED WORD ALLOWANCES (computed with B={B}):\n{strings.n.join(overused_word_allowances_string_list)}"
         print(f"\noverused_word_allowances_string is:\n{overused_word_allowances_string}")
         
         
         # make some regex patterns.
-            # the one for roman numerals will trigger a lot of false positives (e.g. for a capital letter in a proper noun or at the beginning of a sentence), but we're okay with that.
-        
-        #pattern_for_roman_numerals = r"[IVXLCDM][^a-zA-Z]"
-        
-        
-        
-        
-        pattern_for_digits = r"\d"
+        # it seems like roman numerals are essentially always just referring to people (e.g. Henry IV), so let's just catch 1-30. (actually things are regularish up until 39, but then 40 is XL.) we begin with a space, and end with anything that's _not_ a letter.
+        pattern_for_low_roman_numerals = r" X{0,2}(I?X|IV|V?I{0,3})[^a-zA-Z]"
+        # this catches numbers, including those with comma separations.
+        pattern_for_numbers = r"\d+(,?\d+)*"
 
         # now, edit the unedited story, chunk by chunk.
 
         unedited_story_chunks = open(f"stories-unedited/{unedited_story_filename}", "r").read().split(strings.separator)
-        unedited_story_chunks = [strings.swap_quote_marks(unedited_story_chunk) for unedited_story_chunk in unedited_story_chunks]
         story_metadata = unedited_story_chunks.pop()
         story_metadata += f"\n\nthis story was edited at: {timestamp}\n\n{overused_word_allowances_string}"
+        
+        chunks_editing_data = []
+        # each entry of the chunks_editing_data will be an instance of chunk_editing_data, which is itself a list (corresponding to a chunk) . specifically, each entry is a list of "version objects". a "version object" has:
+            # text: a string
+            # triggers: an object:
+                # any_numbers: bool
+                # any_roman_numerals: bool
+                # overused_words: an object of objects, e.g.
+                    # tapestry:
+                        # num_allowed: int (coming from the counter)
+                        # num_appearing: int (coming from the regex count)
+                        # try_to_remove: bool, namely: num_allowed-num_appearing < 0
+                    #... and we update the counter at "tapestry" if num_allowed - num_appearing >= 0
+                # any_overused_words_to_remove: bool, the `any` of all the above
+                # any_triggers: a boolean, reducing the above three
+        # given a "version object", assuming we haven't run through max_number_of_attempts already, if any_triggers is True then we ask for a rewrite.
+            # in that rewrite, we _always_ say "no numbers -- and say years correctly!" and "no roman numerals -- and use 'the' if it's a person!".
+            # as for overused words, we _only_ list the ones where try_to_remove is True. however, we _always_ say: "don't replace it with any words in the list: [all overused words]."
+        
+        for unedited_story_chunk in unedited_story_chunks:
+
+            # initialize chunk_to_check to the original version of the chunk.
+            chunk_to_check = unedited_story_chunk
+            chunk_editing_data = []
+
+            for index in range(max_number_of_attempts + 1):
+
+                # create a new version-object.
+                version_object = {
+                    "text": chunk_to_check,
+                    "any_numbers": bool(re.search(pattern_for_numbers, chunk_to_check)),
+                    "any_roman_numerals": bool(re.search(pattern_for_low_roman_numerals, chunk_to_check)),
+                    "overused_words_data": {},
+                }
+                for entry in overused_words:
+                    num_allowed = overused_words[entry]["counter"]
+                    num_appearances = len(re.findall(entry['pattern'], chunk_to_check))
+                    try_to_remove = (num_allowed - num_appearances < 0)
+                    overused_word_object = {
+                        "num_allowed": num_allowed,
+                        "num_appearances": num_appearances,
+                        "try_to_remove": try_to_remove
+                    }
+                    version_object["overused_words_data"][entry["word"]] = overused_word_object
+                    # only decrement the counter on the initial pass.
+                    if (num_allowed - num_appearances >= 0) and (index == 0):
+                        overused_words[entry]["counter"] -= num_appearances
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        
+        
+        
         versions_of_story_chunks = []
         triggers_for_rewriting_chunks = []
         failure_rewriting_chunks = []
@@ -81,14 +139,15 @@ def edit_story(unedited_story_filename = None, max_number_of_attempts = 3, B = 3
             for index in range(max_number_of_attempts + 1):
 
                 # check if there are any hits.
-                    # always try to remove digits.
+                    # always try to remove numbers.
                     # always try to remove roman numerals.
                     # for each overused word, try to remove it _unless_ we're going to let this one instance [or "these instances", if we ever change this tolerance to be >1] slide (and decrement the counter).
-                any_digits = bool(re.search(pattern_for_digits, chunk))
-                # any_roman_numerals = bool(re.search(pattern_for_roman_numerals, chunk))
-                # TESTING!!! wed 11/29 at 8pm.
-                # any_roman_numerals = False
-                overused_words_to_avoid = [] # entries are just overused_words.
+                match_for_numbers = re.search(pattern_for_numbers, chunk)
+                any_numbers = bool(match_for_numbers)
+                match_for_roman_numerals = re.search(pattern_for_low_roman_numerals, chunk)
+                any_roman_numerals = bool(match_for_roman_numerals)
+                overused_words_to_avoid = [] # entries are overused_words; these are when the counter is down to 0.
+                overused_words_to_allow = [] # entries are overused_words; these are when the counter hasn't run down yet.
                 overused_word_appearances = [] # entries are tuples of (0) an overused_word, (1) a count, and (2) a counter, but only if this appearance triggers a rewrite (i.e. the count is positive and greater than the counter).
                 any_overused_words_used_overmuch = False
                 for entry in overused_words:
@@ -96,24 +155,33 @@ def edit_story(unedited_story_filename = None, max_number_of_attempts = 3, B = 3
                     if num_appearances == 0:
                         overused_words_to_avoid.append(entry['word'])
                     else:
-                        # as of 2023-11-27, entry['counter'] is always either 0 or 1, so this is really just when num_appearances is 1.
+                        # entry['counter'] can be any of: 0, 1, ..., B-1.
                         if num_appearances <= entry['counter']:
                             entry['counter'] -= num_appearances
                         else:
                             overused_words_to_avoid.append(entry['word'])
                             overused_word_appearances.append((entry['word'], num_appearances, entry['counter']))
                             any_overused_words_used_overmuch = True
-                # removed at 8pm on 11/29: or any_roman_numerals
-                any_hits = any_digits or any_overused_words_used_overmuch
+                any_hits = any_numbers or any_roman_numerals or any_overused_words_used_overmuch
 
                 # if we're on the last pass, record whether we're still getting any hits (i.e. whether we've failed to rewrite the chunk).
+                
+
+
+                ### NO, this should _always_ append something! including if we succeed earlier too.
+                
+
+
+
+
+
                 if index == max_number_of_attempts:
                     failure_rewriting_chunks.append(any_hits)
 
                 # if we're on the initial pass, record the trigger(s) for the rewrite, if any.
                 if index == 0 and any_hits:
-                    if any_digits:
-                        triggers_for_rewriting_chunk.append("digits")
+                    if any_numbers:
+                        triggers_for_rewriting_chunk.append("numbers")
                     # if any_roman_numerals:
                         # triggers_for_rewriting_chunk.append("roman numerals")
                     if any_overused_words_used_overmuch > 0:
@@ -128,7 +196,7 @@ def edit_story(unedited_story_filename = None, max_number_of_attempts = 3, B = 3
                 if any_hits and index < max_number_of_attempts:
                     
                     # on 11/29 at 8pm, removed: \nany_roman_numerals = {any_roman_numerals}
-                    print(f"\nasking chatGPT for a rewrite, with:\nany_digits = {any_digits}\noverused_words_to_avoid = {overused_words_to_avoid}\noverused_word_appearances = {overused_word_appearances}")
+                    print(f"\nasking chatGPT for a rewrite, with:\nany_numbers = {any_numbers}\noverused_words_to_avoid = {overused_words_to_avoid}\noverused_word_appearances = {overused_word_appearances}")
                     print(f"\nbefore the rewrite, the chunk is:\n\n{chunk}")
                     
                     system_message = {"role": "system", "content": strings.system_prompt_for_rewriting(overused_words_to_avoid)}
@@ -237,3 +305,4 @@ FINAL VERSION (appearing in edited version of story):
 # edit_story("story-unedited_berkeley_2023-11-28_22-32-51_short.txt")
 # edit_story("story-unedited_paris_2023-11-28_22-32-51_long.txt")
 # edit_story("story-unedited_paris_2023-11-28_22-32-51_short.txt")
+# edit_story("story-unedited_paris_2023-11-28_22-32-51_long.txt")

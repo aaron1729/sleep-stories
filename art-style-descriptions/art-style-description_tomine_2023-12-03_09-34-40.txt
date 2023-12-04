@@ -1,0 +1,17 @@
+Adrian Tomine's art style is distinctive and can be characterized by the following features, which could be used to inform DALL-E prompts:
+
+Subdued Color Palette: Unlike the bright, vivid colors typical of Pop Art, Tomine's illustrations often feature a more subdued and limited color palette. The colors tend to be muted, with a preference for pastels and earth tones, which contribute to the understated atmosphere of his work.
+
+Clean Line Work: Tomine's illustrations are known for their clean, precise line work. Lines are carefully drawn, with attention to detail and subtle variation in weight. This feature gives his images a crisp, refined appearance that is central to his visual storytelling.
+
+Realistic Portrayal: Although stylized, his characters and environments display realistic proportions and details. Tomine's art captures the nuances of human expressions and body language, lending authenticity and depth to his characters.
+
+Emphasis on Everyday Life: Similar to Pop Art's use of everyday cultural elements, Tomine's illustrations frequently depict scenes from mundane life, but without the Pop Art irony or satire. Instead, his work often has an introspective and thoughtful quality, examining the quiet moments and subtleties of human interaction.
+
+Narrative Focus: His illustrations often suggest a larger narrative, capturing a moment that feels like part of a bigger story. This can be achieved by including specific details that hint at a before and after, inviting viewers to engage with the image and speculate about the context.
+
+Urban Landscapes and Settings: Tomine is known for his depictions of urban environments. Detailed cityscapes, public transportation, and everyday city life are recurring themes. His illustrations often contain architectural details that evoke a sense of place, whether it's a busy street, a quiet café, or a cramped apartment.
+
+Minimal Background: Sometimes, Tomine's illustrations have minimal or understated backgrounds, which serve to focus the viewer's attention on the characters and their immediate interaction. This technique can create a sense of intimacy or isolation, depending on the narrative context.
+
+In summary, to create DALL-E prompts in the style of Adrian Tomine, you should focus on depicting everyday situations and characters with realistic proportions, using a limited and muted color palette, clean and precise line work, an emphasis on urban settings, and background details that complement the narrative aspect of the illustration without overwhelming it. Include subtle expressions and body language that convey the emotional undertones of the scene, and aim for an intimate or introspective atmosphere that invites viewers to contemplate the unfolding story.

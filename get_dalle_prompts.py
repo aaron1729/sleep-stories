@@ -13,7 +13,7 @@ timestamp = strings.time_now()
 def get_dalle_prompts(cues_filename, art_style, art_style_description_filename = None):
 
     destination = cues_filename.split("_")[1]
-    destination_fullname = inputs[destination]
+    destination_fullname = inputs[destination]["destination_fullname"]
 
     if not art_style_description_filename:
         art_style_description_filename = strings.get_latest_filename(art_style, "art-style-descriptions")
@@ -79,8 +79,35 @@ def get_dalle_prompts(cues_filename, art_style, art_style_description_filename =
 # get_dalle_prompts("cues_london_2023-11-28_22-32-51_short.txt", "abstract")
 # get_dalle_prompts("cues_shanghai_2023-11-28_22-32-51_short.txt", "surrealism")
 # get_dalle_prompts("cues_barcelona_2023-11-28_22-32-51_short.txt", "neoexpressionism")
-get_dalle_prompts("cues_algarve_2023-11-28_22-12-12_long.txt", "cave")
+# get_dalle_prompts("cues_algarve_2023-11-28_22-12-12_long.txt", "cave")
 
 
 # at 6:30pm:
 # get_dalle_prompts("cues_amalfi_2023-11-28_22-32-51_short.txt", "magical-realism")
+
+
+
+# 11/30/2023 at 5pm:
+# get_dalle_prompts("cues_costarica_2023-11-28_22-32-51_long.txt", "chinese-cubism")
+# at 10pm:
+# get_dalle_prompts("cues_chiangmai_2023-11-28_22-32-51_short.txt", "mishe")
+
+# get_dalle_prompts("cues_chiangmai_2023-11-28_22-32-51_short.txt", "pollock")
+# get_dalle_prompts("cues_berkeley_2023-11-28_22-32-51_short.txt", "basquiat")
+
+# for art_style in [
+#     "midcentury-modern",
+#     "art-nouveau",
+#     "japanese-woodblock",
+#     "japanese-ink-wash",
+#     "batik",
+#     "lanna",
+#     "neobaroque"]:
+    # get_dalle_prompts("cues_berkeley_2023-11-28_22-32-51_short.txt", art_style)
+
+# get_dalle_prompts("cues_kyoto_2023-11-28_22-32-51_long.txt", "hopper")
+# get_dalle_prompts("cues_kyoto_2023-11-28_22-32-51_long.txt", "italian-futurism")
+# get_dalle_prompts("cues_newyorkcity_2023-11-28_22-32-51_short.txt", "new-yorker")
+# get_dalle_prompts("cues_kyoto_2023-11-28_22-32-51_long.txt", "miro")
+# get_dalle_prompts("cues_kyoto_2023-11-28_22-32-51_long.txt", "tomine")
+get_dalle_prompts("cues_kyoto_2023-11-28_22-32-51_long.txt", "hopper")

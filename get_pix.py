@@ -91,3 +91,32 @@ def get_pix(dalle_prompts_filename):
 # get_pix("dalle-prompts_for_cues_barcelona_2023-11-28_22-32-51_short_in_neoexpressionism_at_2023-11-29_18-01-04.txt")
 # get_pix("dalle-prompts_for_cues_algarve_2023-11-28_22-12-12_long_in_cave_at_2023-11-29_18-41-22.txt")
 # get_pix("dalle-prompts_for_cues_amalfi_2023-11-28_22-32-51_short_in_magical-realism_at_2023-11-29_18-30-59.txt")
+
+# get_pix("dalle-prompts_for_cues_costarica_2023-11-28_22-32-51_long_in_chinese-cubism_at_2023-11-30_17-08-44.txt")
+
+# get_pix("dalle-prompts_for_cues_chiangmai_2023-11-28_22-32-51_short_in_mishe_at_2023-11-30_22-20-13.txt")
+# get_pix("dalle-prompts_for_cues_chiangmai_2023-11-28_22-32-51_short_in_pollock_at_2023-12-01_22-00-41.txt")
+# get_pix("dalle-prompts_for_cues_berkeley_2023-11-28_22-32-51_short_in_basquiat_at_2023-12-01_22-22-49.txt")
+
+
+# for prompts_filename in [
+#     # "dalle-prompts_for_cues_berkeley_2023-11-28_22-32-51_short_in_art-nouveau_at_2023-12-02_12-11-00.txt",
+#     # "dalle-prompts_for_cues_berkeley_2023-11-28_22-32-51_short_in_basquiat_at_2023-12-01_22-22-49.txt",
+#     # "dalle-prompts_for_cues_berkeley_2023-11-28_22-32-51_short_in_batik_at_2023-12-02_12-11-00.txt",
+#     # "dalle-prompts_for_cues_berkeley_2023-11-28_22-32-51_short_in_japanese-ink-wash_at_2023-12-02_12-11-00.txt",
+#     "dalle-prompts_for_cues_berkeley_2023-11-28_22-32-51_short_in_japanese-woodblock_at_2023-12-02_12-11-00.txt",
+#     "dalle-prompts_for_cues_berkeley_2023-11-28_22-32-51_short_in_lanna_at_2023-12-02_12-11-00.txt",
+#     "dalle-prompts_for_cues_berkeley_2023-11-28_22-32-51_short_in_midcentury-modern_at_2023-12-02_12-11-00.txt",
+#     "dalle-prompts_for_cues_berkeley_2023-11-28_22-32-51_short_in_neobaroque_at_2023-12-02_12-11-00.txt"
+#     ]:
+#     get_pix(prompts_filename)
+
+
+# get_pix("dalle-prompts_for_cues_kyoto_2023-11-28_22-32-51_long_in_hopper_at_2023-12-02_18-06-25.txt")
+# get_pix("dalle-prompts_for_cues_kyoto_2023-11-28_22-32-51_long_in_italian-futurism_at_2023-12-02_18-06-25.txt")
+# get_pix("dalle-prompts_for_cues_newyorkcity_2023-11-28_22-32-51_short_in_new-yorker_at_2023-12-02_21-54-55.txt")
+# get_pix("dalle-prompts_for_cues_kyoto_2023-11-28_22-32-51_long_in_hopper_at_2023-12-03_09-17-50.txt")
+
+# get_pix("dalle-prompts_for_cues_kyoto_2023-11-28_22-32-51_long_in_miro_at_2023-12-03_09-33-00.txt")
+# get_pix("dalle-prompts_for_cues_kyoto_2023-11-28_22-32-51_long_in_tomine_at_2023-12-03_09-36-36.txt")
+get_pix("dalle-prompts_for_cues_kyoto_2023-11-28_22-32-51_long_in_hopper_at_2023-12-03_09-54-43.txt")

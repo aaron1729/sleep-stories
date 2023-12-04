@@ -21,9 +21,9 @@ inputs = {
     "bali": {
         "destination": "bali",
         "destination_fullname": "Bali, Indonesia",
-        "transport_method": "car with a young woman driver who is also a tour guide and also rental scooters",
+        "transport_method": "car with driver and rental scooters",
         "requested_sightseeing_stops": None,
-        "tour_guide": None,
+        "tour_guide": "the young woman who is driving our car",
         "season": "spring",
         "art_style": None,
     },

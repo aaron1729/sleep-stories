@@ -22,7 +22,7 @@ def get_latest_filename(key, directory, length = None):
     if length:
         key_filenames = [filename for filename in key_filenames if filename.split("_")[-1][:-4] == length]
     if len(key_filenames) == 0:
-        print(f"there are no files in `{directory}/` corresponding to the key `{destination}`{' of length `' + length + '`' if length else ''}")
+        print(f"there are no files in `{directory}/` corresponding to the key `{key}`{' of length `' + length + '`' if length else ''}")
         return None
     key_filenames.sort()
     return key_filenames[-1]
@@ -39,6 +39,87 @@ def time_now():
 # we use double-quotes in our kotlin code to delineate cues, so this function replaces those with single-quotes.
 def swap_quote_marks(string):
     return re.sub("\"", "'", string)
+
+#####
+
+# years are tricky to say correctly in standard informal american parlance. so, here's a function that returns the correct spelling/pronunciation.
+def year_to_string(num):
+    if num == 0:
+        return "zero"
+    if num == 1:
+        return "one"
+    if num == 2:
+        return "two"
+    if num == 3:
+        return "three"
+    if num == 4:
+        return "four"
+    if num == 5:
+        return "five"
+    if num == 6:
+        return "six"
+    if num == 7:
+        return "seven"
+    if num == 8:
+        return "eight"
+    if num == 9:
+        return "nine"
+    if num == 10:
+        return "ten"
+    if num == 11:
+        return "eleven"
+    if num == 12:
+        return "twelve"
+    if num == 13:
+        return "thirteen"
+    if num == 14:
+        return "fourteen"
+    if num == 15:
+        return "fifteen"
+    if num == 16:
+        return "sixteen"
+    if num == 17:
+        return "seventeen"
+    if num == 18:
+        return "eighteen"
+    if num == 19:
+        return "nineteen"
+    if num == 20:
+        return "twenty"
+    if num == 30:
+        return "thirty"
+    if num == 40:
+        return "forty"
+    if num == 50:
+        return "fifty"
+    if num == 60:
+        return "sixty"
+    if num == 70:
+        return "seventy"
+    if num == 80:
+        return "eighty"
+    if num == 90:
+        return "ninety"
+    
+
+
+
+#     * Year 0 should be pronounced 'year zero'.
+# * Years from 1 to 99 should be pronounced as ordinary numbers. For example, 43 is pronounced 'forty-three'.
+# * For years after 100, the hundreds and thousands places should be pronounced together as a single number. For example, 112 is 'one-twelve', 1856 is 'eighteen fifty-six', and 2019 is 'twenty nineteen'.
+# * Any year ending in 01 through 09 is special: the zero is pronounced 'oh'. Here are some examples:
+# '106' is pronounced 'one oh-six',
+# '904' is pronounced' 'nine oh-four',
+
+
+
+
+
+
+
+
+
+
 
 #####
 
@@ -66,7 +147,7 @@ def format_list_of_cues_as_kotlin(list_of_cues):
 n = "\n"
 nn = "\n\n"
 
-# we use this separator throughout the code. storing it as a variable helps ensure that this isn't screwed up by a typo. (namely, a typo will give a compilation error, instead of silently causing some screwy behavior that we hopefully notice and then have to chase down.)
+# we use these separators throughout the code. storing them as variables helps ensure that our usage isn't screwed up by a typo. (namely, a typo will give a compilation error, instead of silently causing some screwy behavior that we hopefully notice and then have to chase down.)
 separator = "\n\n=====\n\n"
 separator_long = "\n\n==========\n\n"
 
@@ -174,13 +255,26 @@ no_separator_in_conclusion_plz = "Please do NOT include any sort of separator be
 # PROMPT(S) FOR REWRITING
 
 def system_prompt_for_rewriting(overused_words_to_remove):
-    return f"""The user will give you a chunk of text. Please rewrite this WITH MINIMAL CHANGES, according to the following TWO instructions.
+    return f"""The user will give you a chunk of text. Please rewrite this WITH MINIMAL CHANGES, according to the following instructions.
 
-1. All numbers should be written out in words. This includes Roman numerals. So, the result should not have any digits or any Roman numerals. Please make sure that years are written out in the usual way that they're spoken.
+1. All numbers should be written out in words.
+a. This includes ANY instance of a digit. It is important that overall text be PRONOUNCED correctly, so you can use homophones if it is helpful. For instance, the band "U2" could be written out as "You Two". Do not allow the digit "2" to remain.
+b. This also includes Roman numerals. Please write out Roman numerals in words. However, if the Roman numerals are part of somebody's title, please make sure to add the word "the" and make the number into an ordinal: for example, "Henry IV" should be spelled out as "Henry the Fourth", and NOT as "Henry Four" or as "Henry the Four".
+c. Please make sure that years are written out in the usual way that they're spoken in informal American English. Here are a few illustrative examples:
+* 1804 is "eighteen oh-four",
+* 2020 is "twenty twenty-three",
+* 659 is "six fifty-nine",
+* 2000 is "two thousand",
+* 2001 is "two thousand one",
+* 42 is "forty-two".
+So, here are a few general principles to keep in mind.
+* In general, pronounce the thousands and hundreds places together as if they were a single number (e.g. "six" as in 659 or "twenty" as in 2023).
+* As an exception, if 
+* If a year is in the first ten years of a century, pronounce the zero as "oh" (e.g. the "oh" in 1804 above).
 
 2. Please do NOT use any of the following "overused words" in the rewritten text: {', '.join(overused_words_to_remove)}. If you come across one of these "overused words", please simply substitute a common synonym, or else rewrite the text slightly with a different phrasing that avoids the "overused word".
 
-Please respond ONLY with the rewritten text, and nothing else. Do not include any other text in your response.
+3. Please respond ONLY with the rewritten text, and nothing else. Do not include any other text in your response.
 
 =====
 
@@ -188,7 +282,17 @@ Here are some examples of rewrites relating to numbers.
 
 EXAMPLE: '1842' should be written out as 'eighteen forty-two' (and not 'one thousand eight hundred and forty-two').
 
-EXAMPLE: '1906', when it is functioning as a year, should be written out as 'nineteen oh-six' (and not 'one thousand nine hundred and six' or 'nineteen hundred and six').
+
+
+
+
+EXAMPLE: Please spell out years according to standard informal American conventions. This can be quite tricky, so be careful! Note that for example the year '904' is pronounced as 'nine oh-four', and '1154' is 'eleven fifty-four'. And if it's ever not totally obvious from context that a number refers to a year (as is the case with years before 1100), please feel free to add 'the year' beforehand. So for instance, '904' could also be 'the year nine oh-four'. As for the year 2000 and beyond, make sure to spell this out as 'two-thousand'.
+
+
+
+
+
+
 
 EXAMPLE: In the context of a vacation in Italy, '5Terre' (which is the name of a gelateria) should be written out as 'Cinque Terre' (which is the name of the region where the gelateria is located).
 
@@ -363,7 +467,7 @@ def initial_user_prompt_for_story(length, destination_fullname, transport_method
     if length == "long":
         filler_length = "Keep this to just TWO PARAGRAPHS. Please don't end your response with a summary, because we will be continuing the story!"
     elif length == "short":
-        filler_length = "Keep this part short -- just a paragraph or two."
+        filler_length = "Keep this introductory part short -- just a paragraph or two."
         filler_stops = f"Then, here {'are' if a>1 else 'is'} the first{' ' + str(a) if a>1 else ''} sightseeing location{'s' if a>1 else ''} for us to visit.{nn}{nn.join(stops[: a])}"
     filler_tour_guide = ""
     if tour_guide:
@@ -384,7 +488,7 @@ def middle_user_prompts_for_story(length, stops, a, c, n):
     middle_user_prompts = []
     if length == "long":
         for (index, stop) in enumerate(stops):
-            middle_user_prompt = f"""Great, thank you! Here is the next sightseeing location:
+            middle_user_prompt = f"""Great, thank you! Here is the next sightseeing location. Please write ABOUT SIX PARAGRAPHS about this location, using as many details listed below as possible.
 
 {stop}
 
@@ -490,6 +594,8 @@ def system_prompt_for_dalle_prompts(destination_fullname, art_style_fullname, ar
 Each user message will contain a short snippet from the story, as well as the larger context from which the snippet is taken. For each short snippet, please generate a prompt for a DALL-E 3 illustration. Ideally this will illustrate the snippet itself, but if this is not easy then it can also illustrate some nearby text from the larger context. Also, ideally each illustration prompt will be substantively different from the previous one.
 
 Please do not respond with any text besides the illustration prompt. The illustration prompt should be as long as possible -- close to 1,000 characters (which is the length limit for DALL-E 3 prompts).
+
+Please make sure that the DALL-E prompts adhere to the relevant content policies! It is important that the prompts SUCCEED at generating images from DALL-E.
 
 =====
 

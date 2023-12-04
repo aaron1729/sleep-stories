@@ -54,7 +54,7 @@ a "completion" is a single response from chatGPT. for long stories, each (middle
 waiting for chatGPT (and dalle) response is the main bottleneck in this process. here are some approximate run times, although it seems that chatGPT occasionally hangs and makes these much longer.
 * get 20 stops for a stops file: `[fill this in -- probably on the order of 3min per stops file]`
 * write a story: 6.5min for long (with 20 stops), 4.5min for short (with (a,c,n,z) = (1,5,2,1)).
-* edit a story: 4-7min (and rather variable -- not even really correlated with the `length` of the story). `[or maybe far, far less after removing the roman numerals regex?!]`
+* edit a story: 4-7min (and rather variable -- not even really correlated with the `length` of the story). `[or maybe far, far less after removing the roman numerals regex?!]` AND NOW (~dec 2): `without any roman numerals stuff, 2-3.5min!` but probably we'll add that back in...
 * make cues: <1sec per cues file.
 * make kt: <0.1sec per kt file.
 * get art style description: 30-40sec each.

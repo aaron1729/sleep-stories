@@ -19,11 +19,24 @@ art_styles = {
     "fauvism": "fauvism",
     "cave": "cave painting",
     "magical-realism": "magical realism",
-    "midcentury-modern": "mid-century modern", # not yet processed
-    "art-nouveau": "art nouveau", # not yet processed
-    "japanese-woodblock": "ukiyo-e (Japanese woodblock)", # not yet processed
-    "japanese-ink-wash": "sumi-e (Japanese ink wash)", # not yet processed
-    "batik": "batik", # not yet processed,
-    "lanna": "Lanna (from the Lanna Kingdom)", # not yet processed
-
+    "chinese-cubism": "chinese cubism",
+    "mishe": "mishe technique",
+    "pollock": "Jackson Pollock",
+    "basquiat": "Jean-Michel Basquiat",
+    "midcentury-modern": "mid-century modern",
+    "art-nouveau": "art nouveau",
+    "japanese-woodblock": "ukiyo-e (Japanese woodblock)",
+    "japanese-ink-wash": "sumi-e (Japanese ink wash)",
+    "batik": "batik",
+    "lanna": "Lanna (from the Lanna Kingdom)",
+    "neobaroque": "neo-baroque",
+    "hopper": "Edward Hopper",
+    "italian-futurism": "Italian futurism",
+    "new-yorker": "New Yorker cartoons",
+    "miro": "Joan Miro",
+    "tomine": "Adrian Tomine",
+    "picasso": "Pablo Picasso", # not yet tested
+    "mondrian": "Piet Mondrian", # not yet tested
+    "van-gogh": "Vincent van Gogh", # not yet tested
+    "arrival": "The Arrival, by Shaun Tam" # not yet tested
 }
