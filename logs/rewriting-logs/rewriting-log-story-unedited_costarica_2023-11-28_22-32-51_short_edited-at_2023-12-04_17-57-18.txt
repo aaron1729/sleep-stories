@@ -1,0 +1,774 @@
+this rewriting log contains a record of all rewrites from:
+unedited story: story-unedited_costarica_2023-11-28_22-32-51_short.txt
+editing timestamp: 2023-12-04_17-57-18
+
+the chunks were respectively rewritten the following numbers of times: 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1
+(note: chunks that were untouched are not written out below.)
+
+INDICES OF REWRITING FAILURES: [none]
+
+OVERUSED WORD ALLOWANCES (computed with B=3):
+tapestry: 0
+testament: 2
+grandeur: 2
+symphony: 1
+tribute: 0
+homage: 1
+tranquil: 2
+chariot: 2
+mosaic: 2
+vibrant: 0
+bustling: 0
+verdant: 0
+
+==========
+
+INDEX OF CHUNK: 0
+
+REWRITING SUCCESS: True
+
+ORIGINAL VERSION:
+
+any triggers for rewrite: True
+numbers_appearing: 1971
+roman_numerals_appearing: 
+overused_words_data:
+    tapestry
+        num_allowed: 0
+        num_appearances: 0
+        try_to_remove: False
+    testament
+        num_allowed: 2
+        num_appearances: 1
+        try_to_remove: False
+    grandeur
+        num_allowed: 2
+        num_appearances: 0
+        try_to_remove: False
+    symphony
+        num_allowed: 1
+        num_appearances: 0
+        try_to_remove: False
+    tribute
+        num_allowed: 0
+        num_appearances: 0
+        try_to_remove: False
+    homage
+        num_allowed: 1
+        num_appearances: 0
+        try_to_remove: False
+    tranquil
+        num_allowed: 2
+        num_appearances: 1
+        try_to_remove: False
+    chariot
+        num_allowed: 2
+        num_appearances: 0
+        try_to_remove: False
+    mosaic
+        num_allowed: 2
+        num_appearances: 0
+        try_to_remove: False
+    vibrant
+        num_allowed: 0
+        num_appearances: 0
+        try_to_remove: False
+    bustling
+        num_allowed: 0
+        num_appearances: 0
+        try_to_remove: False
+    verdant
+        num_allowed: 0
+        num_appearances: 2
+        try_to_remove: True
+
+As we settle into the snug contour of our camper van seats, a gentle excitement washes over us at the thought of where these wheels will take us. Costa Rica, a land where whispers of adventure float through the canopy and each bend in the road invites curiosity, is unfurling before us like a natural scroll. The dry season brings with it a sense of serenity and an endless summer feeling, where the sun kisses the treetops and the cool, quiet evenings promise restful slumber under cotton candy skies. Roads ribbon through rainforests and cloud forests, up the volcanic spines and down to the sun-licked coastlines, urging us to explore every inch of this bio-rich emerald of Central America. And in our cozy camper van, freedom is both our compass and our companion on this leisurely sojourn.
+
+Our tires crunch on the gravel as we approach Poas Volcano National Park, its verdant slopes holding stories as deep as the earth itself. With each rotation of the wheels, we are drawn closer to a landscape etched with the power of nature and the tranquility of untouched wilderness. Established in 1971, this expanse of verdant highlands is a sanctuary to the magnificent Poás Volcano, one of Costa Rica's natural wonders and a testament to the Earth's restless sleep.
+
+We step out of our van, stretching our legs and filling our lungs with the fresh, crisp air of altitude. Our guide leads us towards the trails, where the gentle incline ushers us to the observation platform, poised like a balcony over the natural splendors of the park. As we walk, the winding path is fringed with subtle reminders of terrestrial power—fumaroles emit wisps of steam, painting the air with a faint sulphuric scent and hinting at the churning geothermal activity below.
+
+Arriving at the lookout, we encounter the eerie beauty of Poás Volcano’s active crater, a jagged orifice that pierces the landscape and reveals a glimpse into the Earth’s fiery heart. The crater lake, an acidic marvel, shimmers with turquoise brilliance amidst the rough texture of its surroundings. Standing at an altitude of two thousand seven hundred and four meters, the volcano's summit offers us a rare treat on this clear day: views that stretch to both the Pacific and Caribbean coasts, like cross-continental arms embracing Costa Rica.
+
+Our camera shutters click, capturing the ethereal view, the lake, and the silhouette of fellow travelers immersed in awe. Some are avid birdwatchers, their lenses trained on the branches above where the resplendent quetzal might flash its iridescent plumage amidst the cloud-kissed foliage.
+
+Amid this highland retreat, we cherish the soothing stroll back through the cloud forest, with the mist clinging softly to our clothes—a delicate embrace from the very atmosphere of this enchanting land. Each step on the trail feels like a gentle descent into a deeper understanding of nature's majesty, with the Poás Volcano standing as both a guardian and a storyteller of the ages.
+
+
+
+=====
+
+
+
+INTERMEDIATE VERSION(S):
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION:
+
+any triggers for rewrite: False
+
+As we settle into the snug contour of our camper van seats, a gentle excitement washes over us at the thought of where these wheels will take us. Costa Rica, a land where whispers of adventure float through the canopy and each bend in the road invites curiosity, is unfurling before us like a natural scroll. The dry season brings with it a sense of serenity and an endless summer feeling, where the sun kisses the treetops and the cool, quiet evenings promise restful slumber under cotton candy skies. Roads ribbon through rainforests and cloud forests, up the volcanic spines and down to the sun-licked coastlines, urging us to explore every inch of this bio-rich green of Central America. And in our cozy camper van, freedom is both our compass and our companion on this leisurely sojourn.
+
+Our tires crunch on the gravel as we approach Poas Volcano National Park, its leafy slopes holding stories as deep as the earth itself. With each rotation of the wheels, we are drawn closer to a landscape etched with the power of nature and the stillness of untouched wilderness. Established in nineteen seventy-one, this expanse of highlands is a sanctuary to the magnificent Poás Volcano, one of Costa Rica's natural wonders and a showcase of the Earth's restless sleep.
+
+We step out of our van, stretching our legs and filling our lungs with the fresh, crisp air of altitude. Our guide leads us towards the trails, where the gentle incline ushers us to the observation platform, poised like a balcony over the natural splendors of the park. As we walk, the winding path is fringed with subtle reminders of terrestrial power—fumaroles emit wisps of steam, painting the air with a faint sulfuric scent and hinting at the churning geothermal activity below.
+
+Arriving at the lookout, we encounter the eerie beauty of Poás Volcano’s active crater, a jagged orifice that pierces the landscape and reveals a glimpse into the Earth’s fiery heart. The crater lake, an acidic marvel, shimmers with turquoise brilliance amidst the rough texture of its surroundings. Standing at an altitude of two thousand seven hundred and four meters, the volcano's summit offers us a rare treat on this clear day: views that stretch to both the Pacific and Caribbean coasts, like cross-continental arms embracing Costa Rica.
+
+Our camera shutters click, capturing the ethereal view, the lake, and the silhouette of fellow travelers immersed in awe. Some are avid birdwatchers, their lenses trained on the branches above where the resplendent quetzal might flash its iridescent plumage amidst the cloud-kissed foliage.
+
+Amid this highland retreat, we cherish the soothing stroll back through the cloud forest, with the mist clinging softly to our clothes—a delicate embrace from the very atmosphere of this enchanting land. Each step on the trail feels like a gentle descent into a deeper understanding of nature's majesty, with the Poás Volcano standing as both a guardian and a storyteller of the ages.
+
+==========
+
+INDEX OF CHUNK: 1
+
+REWRITING SUCCESS: True
+
+ORIGINAL VERSION:
+
+any triggers for rewrite: True
+numbers_appearing: 
+roman_numerals_appearing: 
+overused_words_data:
+    tapestry
+        num_allowed: 0
+        num_appearances: 0
+        try_to_remove: False
+    testament
+        num_allowed: 1
+        num_appearances: 0
+        try_to_remove: False
+    grandeur
+        num_allowed: 2
+        num_appearances: 0
+        try_to_remove: False
+    symphony
+        num_allowed: 1
+        num_appearances: 0
+        try_to_remove: False
+    tribute
+        num_allowed: 0
+        num_appearances: 0
+        try_to_remove: False
+    homage
+        num_allowed: 1
+        num_appearances: 0
+        try_to_remove: False
+    tranquil
+        num_allowed: 1
+        num_appearances: 0
+        try_to_remove: False
+    chariot
+        num_allowed: 2
+        num_appearances: 0
+        try_to_remove: False
+    mosaic
+        num_allowed: 2
+        num_appearances: 0
+        try_to_remove: False
+    vibrant
+        num_allowed: 0
+        num_appearances: 1
+        try_to_remove: True
+    bustling
+        num_allowed: 0
+        num_appearances: 0
+        try_to_remove: False
+    verdant
+        num_allowed: 0
+        num_appearances: 0
+        try_to_remove: False
+
+Weaving our way through the undulating roads that slice gently through cloud forests and rainforests alike, our camper van arrives at the La Paz Waterfall Gardens. The air here is saturated with the music of cascading waters, the songs undulating from the five majestic waterfalls that give this sanctuary its heartbeat. Eagerly, we disembark and follow the path that leads us through this serene corner of Costa Rica, where flora and fauna coexist in a lush display crafted by nature’s own hand.
+
+The largest animal sanctuary in the nation keeps over one hundred species of animals protected, and we pause to admire the breadth of biodiversity. Amongst the rustling leaves and fluttering wings, we find ourselves wandering into the enormous butterfly observatory. Thousands of these delicate creatures flit and float in the humid air under the wide mesh dome, their wings a blur of serene colors painting the air. Photographers, families, and solitary wanderers alike move slowly with their cameras, mindful not to disturb the peace of this living rainbow.
+
+Around us, the air is alive with the hum of diverse life, buzzing with the flitter of vibrant hummingbirds as they dip and dive with a grace envied by dancers. They swoop in so close their tiny feathers are almost within reach, the shimmer of their movement a gentle spectacle that requires neither lens nor distance to appreciate.
+
+As we continue, the suspended bridges beckon us to cross them, each step grounds us in the present moment, the mist of the nearby falls touching our faces like a soft sigh. Below us, the sounds of the water's journey is a soothing accompaniment to the visual feast. It is on these bridges that we are most attuned to the harmony of water, sky, and lush vegetation, a sensorial merge that feels as though we're stepping through a living painting, its colors and textures as nourishing to the soul as they are to the eye.
+
+
+
+=====
+
+
+
+INTERMEDIATE VERSION(S):
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION:
+
+any triggers for rewrite: False
+
+Weaving our way through the winding roads that slice gently through cloud forests and rainforests alike, our camper van arrives at the La Paz Waterfall Gardens. The air here is saturated with the music of cascading waters, the songs undulating from the five majestic waterfalls that give this sanctuary its rhythm. Eagerly, we disembark and follow the path that leads us through this calm corner of Costa Rica, where flora and fauna coexist in a lush display crafted by nature’s own hand.
+
+The largest animal sanctuary in the nation keeps over one hundred species of animals protected, and we pause to admire the breadth of biodiversity. Amongst the rustling leaves and fluttering wings, we find ourselves wandering into the enormous butterfly observatory. Thousands of these delicate creatures flit and float in the humid air under the wide mesh dome, their wings a blur of calm colors painting the air. Photographers, families, and solitary wanderers alike move slowly with their cameras, mindful not to disturb the peace of this living kaleidoscope.
+
+Around us, the air is alive with the hum of diverse life, buzzing with the flitter of lively hummingbirds as they dip and dive with a grace envied by dancers. They swoop in so close their tiny feathers are almost within reach, the shimmer of their movement a gentle spectacle that requires neither lens nor distance to appreciate.
+
+As we continue, the suspended bridges beckon us to cross them, each step grounds us in the present moment, the mist of the nearby falls touching our faces like a soft sigh. Below us, the sounds of the water's journey is a soothing accompaniment to the visual feast. It is on these bridges that we are most attuned to the harmony of water, sky, and lush vegetation, a sensorial merge that feels as though we're stepping through a living painting, its colors and textures as nourishing to the soul as they are to the eye.
+
+==========
+
+INDEX OF CHUNK: 3
+
+REWRITING SUCCESS: True
+
+ORIGINAL VERSION:
+
+any triggers for rewrite: True
+numbers_appearing: 1972
+roman_numerals_appearing: 
+overused_words_data:
+    tapestry
+        num_allowed: 0
+        num_appearances: 0
+        try_to_remove: False
+    testament
+        num_allowed: 1
+        num_appearances: 0
+        try_to_remove: False
+    grandeur
+        num_allowed: 2
+        num_appearances: 0
+        try_to_remove: False
+    symphony
+        num_allowed: 1
+        num_appearances: 1
+        try_to_remove: False
+    tribute
+        num_allowed: 0
+        num_appearances: 0
+        try_to_remove: False
+    homage
+        num_allowed: 1
+        num_appearances: 0
+        try_to_remove: False
+    tranquil
+        num_allowed: 1
+        num_appearances: 0
+        try_to_remove: False
+    chariot
+        num_allowed: 2
+        num_appearances: 0
+        try_to_remove: False
+    mosaic
+        num_allowed: 1
+        num_appearances: 0
+        try_to_remove: False
+    vibrant
+        num_allowed: 0
+        num_appearances: 0
+        try_to_remove: False
+    bustling
+        num_allowed: 0
+        num_appearances: 0
+        try_to_remove: False
+    verdant
+        num_allowed: 0
+        num_appearances: 0
+        try_to_remove: False
+
+Climbing higher into the heart of Costa Rica's mountainous terrain, our camper van navigates the ascent to the breathtaking Monteverde Cloud Forest Reserve. Enveloped in a perennial mist that drapes over the forest canopy, this sanctuary harbors an astounding diversity of life. It whispers of conservation and discovery, hosting over two thousand five hundred plant species, including the dangling orchids and prehistoric ferns, and housing an impressive array of mammals, birds, and reptiles that thrive amidst the clouds. The Reserve, founded in 1972, now protects more than ten thousand five hundred hectares of cloud forest, each hectare a chapter of an ecological narrative.
+
+As we disembark, the cool cloud mist envelops us, a fine veil that paints our surroundings in a dreamlike hue. We venture into the heart of this natural wonderland, traversing the network of trails and hanging bridges, all the while guided by the knowledgeable murmurs of our guide and the distant calls of forest dwellers. With every careful step on the suspension bridges, we peer into the layered greenery, eyes scanning for the elusive Resplendent Quetzal, whose plumes flash like living gems among the foliage.
+
+The serenity of Monteverde encourages patience and attentiveness; we stand still, almost holding our breath, as we listen to the symphony of sounds—each tweet, chirp, and rustle is a natural pattern in the forest's living composition. In these moments, suspended above the forest floor and wrapped in clouds, an inner calm settles upon us, a silent acknowledgment of the forest's permanence and our fleeting presence within it.
+
+
+
+=====
+
+
+
+INTERMEDIATE VERSION(S):
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION:
+
+any triggers for rewrite: False
+
+Climbing higher into the heart of Costa Rica's mountainous terrain, our camper van navigates the ascent to the breathtaking Monteverde Cloud Forest Reserve. Enveloped in a perennial mist that drapes over the forest canopy, this sanctuary harbors an astounding diversity of life. It whispers of conservation and discovery, hosting over two thousand five hundred plant species, including the dangling orchids and prehistoric ferns, and housing an impressive array of mammals, birds, and reptiles that thrive amidst the clouds. The Reserve, founded in nineteen seventy-two, now protects more than ten thousand five hundred hectares of cloud forest, each hectare a chapter of an ecological narrative.
+
+As we disembark, the cool cloud mist envelops us, a fine veil that paints our surroundings in a dreamlike hue. We venture into the heart of this natural wonderland, traversing the network of trails and hanging bridges, all the while guided by the knowledgeable murmurs of our guide and the distant calls of forest dwellers. With every careful step on the suspension bridges, we peer into the layered greenery, eyes scanning for the elusive Resplendent Quetzal, whose plumes flash like living gems among the foliage.
+
+The serenity of Monteverde encourages patience and attentiveness; we stand still, almost holding our breath, as we listen to the symphony of sounds—each tweet, chirp, and rustle is a natural pattern in the forest's living composition. In these moments, suspended above the forest floor and wrapped in clouds, an inner calm settles upon us, a silent acknowledgment of the forest's permanence and our fleeting presence within it.
+
+==========
+
+INDEX OF CHUNK: 5
+
+REWRITING SUCCESS: True
+
+ORIGINAL VERSION:
+
+any triggers for rewrite: True
+numbers_appearing: 1968, 2010
+roman_numerals_appearing: 
+overused_words_data:
+    tapestry
+        num_allowed: 0
+        num_appearances: 0
+        try_to_remove: False
+    testament
+        num_allowed: 1
+        num_appearances: 0
+        try_to_remove: False
+    grandeur
+        num_allowed: 2
+        num_appearances: 0
+        try_to_remove: False
+    symphony
+        num_allowed: 0
+        num_appearances: 0
+        try_to_remove: False
+    tribute
+        num_allowed: 0
+        num_appearances: 0
+        try_to_remove: False
+    homage
+        num_allowed: 1
+        num_appearances: 0
+        try_to_remove: False
+    tranquil
+        num_allowed: 1
+        num_appearances: 0
+        try_to_remove: False
+    chariot
+        num_allowed: 2
+        num_appearances: 0
+        try_to_remove: False
+    mosaic
+        num_allowed: 1
+        num_appearances: 0
+        try_to_remove: False
+    vibrant
+        num_allowed: 0
+        num_appearances: 0
+        try_to_remove: False
+    bustling
+        num_allowed: 0
+        num_appearances: 0
+        try_to_remove: False
+    verdant
+        num_allowed: 0
+        num_appearances: 0
+        try_to_remove: False
+
+Our camper van rolls gently to a stop at the base of the formidable Arenal Volcano, its perfect conical shape rising like an ancient monument to the sky. With a history marked by a dramatic shift from a volatile force of nature to a magnet for serene exploration, the volcano breathes silently, its slopes blanketed in rich greenery. The eruption on July twenty-ninth, 1968, a memory etched in the land, gave the volcano its distinctive contours, the scars now healing over with the relentless passage of time. Following the cessation of regular activity in 2010, a lush paradise has blossomed around its base.
+
+As we step onto the fertile ground, we're beckoned by the network of trails that snake through the park, curious eyes scanning the vegetation for glimpses of the exotic birds and animals that call this place home. The mist enshrouded peak looms overhead, an impressive and ever-present backdrop as we navigate paths carved by old lava flows now colonized by persistent undergrowth. The air is alive with the scent of rainforest and the steam from the hot springs, a natural remnant of Arenal's fiery heart.
+
+While people around us delight in activities like horseback riding or zipping through the air on canopy tours, we find a profound sense of calm in hiking. The sensation is a shared one; each visitor is united by the awe felt beneath Arenal's shadow. Steam rises from the geothermally heated waters, offering an invitation to immerse in nature's soothing spa.
+
+
+
+=====
+
+
+
+INTERMEDIATE VERSION(S):
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION:
+
+any triggers for rewrite: False
+
+Our camper van rolls gently to a stop at the base of the formidable Arenal Volcano, its perfect conical shape rising like an ancient monument to the sky. With a history marked by a dramatic shift from a volatile force of nature to a magnet for serene exploration, the volcano breathes silently, its slopes blanketed in rich greenery. The eruption on July twenty-ninth, nineteen sixty-eight, a memory etched in the land, gave the volcano its distinctive contours, the scars now healing over with the relentless passage of time. Following the cessation of regular activity in twenty ten, a lush paradise has blossomed around its base.
+
+As we step onto the fertile ground, we're beckoned by the network of trails that snake through the park, curious eyes scanning the vegetation for glimpses of the exotic birds and animals that call this place home. The mist enshrouded peak looms overhead, an impressive and ever-present backdrop as we navigate paths carved by old lava flows now colonized by persistent undergrowth. The air is alive with the scent of rainforest and the steam from the hot springs, a natural remnant of Arenal's fiery heart.
+
+While people around us delight in activities like horseback riding or zipping through the air on canopy tours, we find a profound sense of calm in hiking. The sensation is a shared one; each visitor is united by the awe felt beneath Arenal's shadow. Steam rises from the geothermally heated waters, offering an invitation to immerse in nature's soothing spa.
+
+==========
+
+INDEX OF CHUNK: 7
+
+REWRITING SUCCESS: True
+
+ORIGINAL VERSION:
+
+any triggers for rewrite: True
+numbers_appearing: 
+roman_numerals_appearing: 
+overused_words_data:
+    tapestry
+        num_allowed: 0
+        num_appearances: 0
+        try_to_remove: False
+    testament
+        num_allowed: 1
+        num_appearances: 0
+        try_to_remove: False
+    grandeur
+        num_allowed: 2
+        num_appearances: 0
+        try_to_remove: False
+    symphony
+        num_allowed: 0
+        num_appearances: 0
+        try_to_remove: False
+    tribute
+        num_allowed: 0
+        num_appearances: 0
+        try_to_remove: False
+    homage
+        num_allowed: 1
+        num_appearances: 0
+        try_to_remove: False
+    tranquil
+        num_allowed: 1
+        num_appearances: 0
+        try_to_remove: False
+    chariot
+        num_allowed: 2
+        num_appearances: 0
+        try_to_remove: False
+    mosaic
+        num_allowed: 1
+        num_appearances: 0
+        try_to_remove: False
+    vibrant
+        num_allowed: 0
+        num_appearances: 0
+        try_to_remove: False
+    bustling
+        num_allowed: 0
+        num_appearances: 1
+        try_to_remove: True
+    verdant
+        num_allowed: 0
+        num_appearances: 0
+        try_to_remove: False
+
+Our next stop is the old capital of Costa Rica, Cartago, where we find ourselves amidst the Santiago Apóstol Parish Ruins. The day is brightening as we stroll through the remains of the sixteenth-century church, its history rooted deeply in the soil it stands on. Initially intended to honor Santiago Apóstol, the ruins now serve as haunting reminders of the earthquakes that have left their mark on this land—a palpable echo of nature's might across time.
+
+We wander the beautifully maintained gardens that cradle the stone structure; it's a peace that juxtaposes the bustling life that once reverberated through this place. Walking along the ancient church walls, our hands brush against sun-warmed stones that have stood witness to centuries of storied past. We can almost hear the echoes of historical processions, the footsteps of past congregations that gathered within an edifice now open to the sky, where sunlight and shadows play across the ruins, tracing patterns over the grass and fallen columns.
+
+
+
+=====
+
+
+
+INTERMEDIATE VERSION(S):
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION:
+
+any triggers for rewrite: False
+
+Our next stop is the old capital of Costa Rica, Cartago, where we find ourselves amid the Santiago Apóstol Parish Ruins. The day is brightening as we stroll through the remains of the sixteenth-century church, its history deeply rooted in the soil it stands upon. Initially intended to honor Santiago Apóstol, the ruins now serve as haunting reminders of the earthquakes that have left their impression on this land—a tangible echo of nature's strength through the ages.
+
+We wander the beautifully maintained gardens that embrace the stone structure; it's a calm that contrasts with the active life that once pulsed through this place. Walking along the ancient church walls, our hands brush against sun-warmed stones that have been witnesses to centuries of a storied past. We can almost hear the echoes of historical processions, the footsteps of past congregations that assembled within an edifice now open to the sky, where sunlight and shadows play across the ruins, casting patterns over the grass and fallen columns.
+
+==========
+
+INDEX OF CHUNK: 9
+
+REWRITING SUCCESS: True
+
+ORIGINAL VERSION:
+
+any triggers for rewrite: True
+numbers_appearing: 1973
+roman_numerals_appearing: 
+overused_words_data:
+    tapestry
+        num_allowed: 0
+        num_appearances: 0
+        try_to_remove: False
+    testament
+        num_allowed: 1
+        num_appearances: 0
+        try_to_remove: False
+    grandeur
+        num_allowed: 2
+        num_appearances: 0
+        try_to_remove: False
+    symphony
+        num_allowed: 0
+        num_appearances: 0
+        try_to_remove: False
+    tribute
+        num_allowed: 0
+        num_appearances: 0
+        try_to_remove: False
+    homage
+        num_allowed: 1
+        num_appearances: 0
+        try_to_remove: False
+    tranquil
+        num_allowed: 1
+        num_appearances: 0
+        try_to_remove: False
+    chariot
+        num_allowed: 2
+        num_appearances: 0
+        try_to_remove: False
+    mosaic
+        num_allowed: 1
+        num_appearances: 0
+        try_to_remove: False
+    vibrant
+        num_allowed: 0
+        num_appearances: 0
+        try_to_remove: False
+    bustling
+        num_allowed: 0
+        num_appearances: 0
+        try_to_remove: False
+    verdant
+        num_allowed: 0
+        num_appearances: 0
+        try_to_remove: False
+
+As the sun casts a soft golden hue over the flourishing expanse of the Lankester Botanical Garden, our senses are bathed in the fragrances of nature's finest essences. Originally the vision of the British orchid enthusiast Charles H. Lankester in the early twentieth century, this horticultural jewel has grown under the care of the University of Costa Rica since 1973. Lankester serves as both a beacon for botanical research and a lush refuge for the soul, boasting an extensive collection of over three thousand species of plants, each detailing evolution's artistry.
+
+Paths meander through a patchwork of thematic sections, enticing us to explore the gardens brimming with orchids, bromeliads, and a magnificent variety of epiphytes. Photographers, some amateur and others with lenses as long as their arms, pause at every curve, capturing the delicate beauty of each petal and leaf. We join in, bending close to marvel at the artful intricacies of the various flowers or simply sitting on a quiet bench, basking in the abundance of peaceful flora. The air is ripe with a shared curiosity, as whispered conversations with Lankester's knowledgeable staff reveal secrets of Costa Rica's unique plant life, rooting us deeper into the soil of learning and wonder.
+
+
+
+=====
+
+
+
+INTERMEDIATE VERSION(S):
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION:
+
+any triggers for rewrite: False
+
+As the sun casts a soft golden hue over the flourishing expanse of the Lankester Botanical Garden, our senses are bathed in the fragrances of nature's finest essences. Originally the vision of the British orchid enthusiast Charles H. Lankester in the early twentieth century, this horticultural jewel has grown under the care of the University of Costa Rica since nineteen seventy-three. Lankester serves as both a beacon for botanical research and a lush refuge for the soul, boasting an extensive collection of over three thousand species of plants, each detailing evolution's artistry.
+
+Paths meander through a patchwork of thematic sections, enticing us to explore the gardens brimming with orchids, bromeliads, and a magnificent variety of epiphytes. Photographers, some amateur and others with lenses as long as their arms, pause at every curve, capturing the delicate beauty of each petal and leaf. We join in, bending close to marvel at the artful intricacies of the various flowers or simply sitting on a quiet bench, basking in the abundance of peaceful flora. The air is ripe with a shared curiosity, as whispered conversations with Lankester's knowledgeable staff reveal secrets of Costa Rica's unique plant life, rooting us deeper into the soil of learning and wonder.
+
+==========
+
+INDEX OF CHUNK: 10
+
+REWRITING SUCCESS: True
+
+ORIGINAL VERSION:
+
+any triggers for rewrite: True
+numbers_appearing: 
+roman_numerals_appearing: 
+overused_words_data:
+    tapestry
+        num_allowed: 0
+        num_appearances: 0
+        try_to_remove: False
+    testament
+        num_allowed: 1
+        num_appearances: 1
+        try_to_remove: False
+    grandeur
+        num_allowed: 2
+        num_appearances: 0
+        try_to_remove: False
+    symphony
+        num_allowed: 0
+        num_appearances: 0
+        try_to_remove: False
+    tribute
+        num_allowed: 0
+        num_appearances: 0
+        try_to_remove: False
+    homage
+        num_allowed: 1
+        num_appearances: 0
+        try_to_remove: False
+    tranquil
+        num_allowed: 1
+        num_appearances: 1
+        try_to_remove: False
+    chariot
+        num_allowed: 2
+        num_appearances: 0
+        try_to_remove: False
+    mosaic
+        num_allowed: 1
+        num_appearances: 0
+        try_to_remove: False
+    vibrant
+        num_allowed: 0
+        num_appearances: 1
+        try_to_remove: True
+    bustling
+        num_allowed: 0
+        num_appearances: 0
+        try_to_remove: False
+    verdant
+        num_allowed: 0
+        num_appearances: 0
+        try_to_remove: False
+
+Moving from the vibrant collection of Lankester's botanical treasures to the coastal serenity of Nosara Yoga Village, we embrace the holistic tranquility of the Pacific shoreline. Nosara has carved out a reputation as a sanctuary for respite and reflection, drawing individuals who seek to align body, mind, and spirit amidst its soothing environment. The village is a testament to eco-tourism and a community committed to sustainable living and wellness, surrounded by natural beauty that includes the nearby Ostional Wildlife Refuge, known for its Olive Ridley sea turtle arribadas.
+
+As we join a yoga session, the sound of the nearby lapping waves accompanies each deep breath, their rhythm syncing with the ebb and flow of our mindful practices. On the mats around us, people from differing walks of life share in this movement towards greater inner balance, their presence a quiet affirmation of Nosara's draw. Before and after the gentle stretches and poses, visitors amble toward the beach, some finding solace in meditation, others exchanging smiles and experiences with new friends. In this laid-back atmosphere, everyone is united by their love for yoga and their connection to the untouched corners above and beyond Nosara's sandy stretches, reaching into the hearts of those who converge in this peaceful village.
+
+
+
+=====
+
+
+
+INTERMEDIATE VERSION(S):
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION:
+
+any triggers for rewrite: False
+
+Moving from the lively collection of Lankester’s botanical treasures to the coastal calmness of Nosara Yoga Village, we embrace the holistic serenity of the Pacific shoreline. Nosara has carved out a reputation as a sanctuary for rest and reflection, drawing individuals who seek to align body, mind, and spirit amidst its calming environment. The village is an example of eco-tourism and a community committed to sustainable living and wellness, surrounded by natural beauty that includes the nearby Ostional Wildlife Refuge, known for its Olive Ridley sea turtle arribadas.
+
+As we join a yoga session, the sound of the nearby lapping waves accompanies each deep breath, their rhythm syncing with the ebb and flow of our mindful practices. On the mats around us, people from different walks of life share in this movement towards greater inner balance, their presence a quiet affirmation of Nosara’s draw. Before and after the gentle stretches and poses, visitors amble toward the beach, some finding solace in meditation, others exchanging smiles and experiences with new friends. In this laid-back atmosphere, everyone is united by their love for yoga and their connection to the untouched corners above and beyond Nosara’s sandy stretches, reaching into the hearts of those who converge in this peaceful village.
+
+==========
+
+INDEX OF CHUNK: 11
+
+REWRITING SUCCESS: True
+
+ORIGINAL VERSION:
+
+any triggers for rewrite: True
+numbers_appearing: 
+roman_numerals_appearing: 
+overused_words_data:
+    tapestry
+        num_allowed: 0
+        num_appearances: 1
+        try_to_remove: True
+    testament
+        num_allowed: 0
+        num_appearances: 0
+        try_to_remove: False
+    grandeur
+        num_allowed: 2
+        num_appearances: 0
+        try_to_remove: False
+    symphony
+        num_allowed: 0
+        num_appearances: 0
+        try_to_remove: False
+    tribute
+        num_allowed: 0
+        num_appearances: 0
+        try_to_remove: False
+    homage
+        num_allowed: 1
+        num_appearances: 0
+        try_to_remove: False
+    tranquil
+        num_allowed: 0
+        num_appearances: 1
+        try_to_remove: True
+    chariot
+        num_allowed: 2
+        num_appearances: 0
+        try_to_remove: False
+    mosaic
+        num_allowed: 1
+        num_appearances: 0
+        try_to_remove: False
+    vibrant
+        num_allowed: 0
+        num_appearances: 1
+        try_to_remove: True
+    bustling
+        num_allowed: 0
+        num_appearances: 0
+        try_to_remove: False
+    verdant
+        num_allowed: 0
+        num_appearances: 0
+        try_to_remove: False
+
+Our sightseeing tour continues as we make our way toward the sun-drenched shores of Playa Sámara, a coastal gem nestled in the province of Guanacaste. Here, the horizon stretches wide, and the gentle surf caresses the white sands, cocooning the beach in an embrace as warm as the Costa Rican sun. The inviting waters, clear and teeming with life, beckon snorkelers and scuba divers to explore the vibrant coral reefs that lie beneath the Pacific's surface.
+
+The town itself exudes a relaxed vibe, a melange of Chorotega indigenous roots and remnants of Spanish colonial times, creating a tapestry of culture that is as compelling as the natural beauty that cradles it. As we wander along the beach, our feet sinking into the soft sands, every step unearth shells that are as unique as the memories we've collected on this journey. The atmosphere is one of serene contentment, punctuated by the rhythmic motion of local fishermen casting their lines into the bountiful water, a daily ritual steeped in simplicity and harmony with the sea.
+
+As our journey in Costa Rica draws to a close, each experience we've delved into folds into a kaleidoscope of cherished moments—the rush of waterfalls, the hush of misty forests, the splendor of volcanic peaks, and the gentle hush of waves retreating on soft sands. In the rearview mirror of our camper van, every location we visited seems to wave goodbye, encouraging us to carry the peacefulness of Costa Rica's spirit along with us.
+
+The sun begins to dip toward the horizon, gracing Playa Sámara with hues of amber and gold. As perhaps the most soothing spectacle of all, the sunset draws a soft curtain over our exquisite day. The sky, aflame with colors that echo the vibrancy of our travels, is a masterpiece no camera can truly capture, but which is imprinted forever in our hearts. It is under this fading light that we bid farewell to a land where nature's rhythm guides the pulse of life—a final, luminous reminder that beauty and tranquility are not just found but felt deeply within.
+
+
+
+=====
+
+
+
+INTERMEDIATE VERSION(S):
+
+
+
+
+
+=====
+
+
+
+FINAL VERSION:
+
+any triggers for rewrite: False
+
+Our sightseeing tour continues as we make our way toward the sun-drenched shores of Playa Sámara, a coastal jewel nestled in the province of Guanacaste. Here, the horizon stretches wide, and the gentle surf caresses the white sands, enveloping the beach in an embrace as warm as the Costa Rican sun. The inviting waters, clear and teeming with life, beckon snorkelers and scuba divers to explore the lively coral reefs that lie beneath the Pacific's surface.
+
+The town itself exudes a relaxed atmosphere, a blend of Chorotega indigenous roots and remnants of Spanish colonial times, creating a fabric of culture that is as enticing as the natural beauty that surrounds it. As we wander along the beach, our feet sinking into the soft sands, every step uncovers shells that are as unique as the memories we've collected on this journey. The atmosphere is one of serene satisfaction, punctuated by the rhythmic motion of local fishermen casting their lines into the bountiful water, a daily ritual steeped in simplicity and harmony with the sea.
+
+As our journey in Costa Rica comes to an end, each experience we've delved into folds into a collection of cherished moments—the rush of waterfalls, the hush of misty forests, the majesty of volcanic peaks, and the gentle hush of waves retreating on soft sands. In the rearview mirror of our camper van, every location we visited seems to wave goodbye, encouraging us to carry the peacefulness of Costa Rica's spirit along with us.
+
+The sun begins to dip toward the horizon, gracing Playa Sámara with hues of amber and gold. As perhaps the most soothing spectacle of all, the sunset brings a soft close over our exquisite day. The sky, aflame with colors that echo the excitement of our travels, is a masterpiece no camera can truly capture, but which is imprinted forever in our hearts. It is under this fading light that we bid farewell to a land where nature's rhythm guides the pulse of life—a final, luminous reminder that beauty and peace are not just found but felt deeply within.

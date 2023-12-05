@@ -42,87 +42,6 @@ def swap_quote_marks(string):
 
 #####
 
-# years are tricky to say correctly in standard informal american parlance. so, here's a function that returns the correct spelling/pronunciation.
-def year_to_string(num):
-    if num == 0:
-        return "zero"
-    if num == 1:
-        return "one"
-    if num == 2:
-        return "two"
-    if num == 3:
-        return "three"
-    if num == 4:
-        return "four"
-    if num == 5:
-        return "five"
-    if num == 6:
-        return "six"
-    if num == 7:
-        return "seven"
-    if num == 8:
-        return "eight"
-    if num == 9:
-        return "nine"
-    if num == 10:
-        return "ten"
-    if num == 11:
-        return "eleven"
-    if num == 12:
-        return "twelve"
-    if num == 13:
-        return "thirteen"
-    if num == 14:
-        return "fourteen"
-    if num == 15:
-        return "fifteen"
-    if num == 16:
-        return "sixteen"
-    if num == 17:
-        return "seventeen"
-    if num == 18:
-        return "eighteen"
-    if num == 19:
-        return "nineteen"
-    if num == 20:
-        return "twenty"
-    if num == 30:
-        return "thirty"
-    if num == 40:
-        return "forty"
-    if num == 50:
-        return "fifty"
-    if num == 60:
-        return "sixty"
-    if num == 70:
-        return "seventy"
-    if num == 80:
-        return "eighty"
-    if num == 90:
-        return "ninety"
-    
-
-
-
-#     * Year 0 should be pronounced 'year zero'.
-# * Years from 1 to 99 should be pronounced as ordinary numbers. For example, 43 is pronounced 'forty-three'.
-# * For years after 100, the hundreds and thousands places should be pronounced together as a single number. For example, 112 is 'one-twelve', 1856 is 'eighteen fifty-six', and 2019 is 'twenty nineteen'.
-# * Any year ending in 01 through 09 is special: the zero is pronounced 'oh'. Here are some examples:
-# '106' is pronounced 'one oh-six',
-# '904' is pronounced' 'nine oh-four',
-
-
-
-
-
-
-
-
-
-
-
-#####
-
 # this function takes a (generally multi-line) string and prepend each line with `// ` (so that it becomes a comment in kotlin).
 def kotlin_comment(string):
     lines = string.split("\n")
@@ -149,13 +68,45 @@ nn = "\n\n"
 
 # we use these separators throughout the code. storing them as variables helps ensure that our usage isn't screwed up by a typo. (namely, a typo will give a compilation error, instead of silently causing some screwy behavior that we hopefully notice and then have to chase down.)
 separator = "\n\n=====\n\n"
+separator_alt = "\n\n-----\n\n"
 separator_long = "\n\n==========\n\n"
 
 ### below are a bunch of requests to chatGPT (indicated by `_plz` in the variable name), as well as related material.
 
 ## here are requests that get used for _every_ completion of _every_ story, as well as related material. at the end, they're wrapped into a single multi-line prompt string.
 
-no_numbers_plz = "Please spell out any numbers in words. For instance, write 'nineteen eighty-seven' instead of '1987', and 'four thousand seven hundred and thirty three' instead of '4,733', and 'eighteen-sixties' instead of '1860s' (referring to the decade), and 'nineties' instead of '90s' (also referring to the decade)."
+no_numbers_plz = f"""All numbers should be written out in words. There should not be ANY remaining digits in the response.
+It is important that overall text be PRONOUNCED correctly, so you can use homophones if it is helpful.
+EXAMPLE: The band 'U2' could be written out as 'You Two'. In this case, do not allow the digit '2' to remain.
+EXAMPLE: In the context of a vacation in Italy, '5Terre' (which is the name of a gelateria) should be written out as 'Cinque Terre' (which is the name of the region where the gelateria is located). Please note the unique situation: in this context, the number 5 should be spelled out in Italian.
+Pronouncing years can be very tricky! Please make sure that years are written out in the usual way that they're spoken in informal American English. Here are a few illustrative examples.
+EXAMPLE: Pronounce 1804 as 'eighteen oh-four'.
+EXAMPLE: Pronounce 2020 as 'twenty twenty-three'.
+EXAMPLE: Pronounce as 'six fifty-nine'.
+EXAMPLE: Pronounce as 'two thousand'.
+EXAMPLE: Pronounce as 'two thousand one'.
+EXAMPLE: Pronounce as 'forty-two'.
+So, here are a few general principles to keep in mind for pronouncing years.
+* Pronounce year 1000 as '(the) year one thousand' and the year 2000 as '(the) year two thousand'. (Without the word 'year', it may not be clear that the number refers to a year. The word 'the' can be included or omitted, depending on what feels most natural in context.)
+* Pronounce ALL of the first ten years in either the 1000s century or the 2000s century using the word 'thousand'. In this case, do NOT use the word 'and' (which would be customary in the ordinary pronounciation of numbers) after the word 'thousand'.
+EXAMPLE: Pronounce 2008 as 'two thousand eight'.
+EXAMPLE: Pronounce 1001 as 'one thousand one'.
+* In all other cases, Otherwise, pronounce the thousands and hundreds places together as if they were a single number.
+EXAMPLE: Pronounce 2023 as 'twenty twenty-three'.
+EXAMPLE: Pronounce 659 as 'six fifty-nine'. (Here there is no thousands place.)
+EXAMPLE: Pronounce 42 as 'forty-two'. (Here there is not even a hundreds place.)
+* If a year is in the first ten years of a century (and is not 1000 or 2000), pronounce the zero as 'oh'.
+EXAMPLE: Pronounce 1804 as 'eighteen oh-four'.
+EXAMPLE: Pronounce 109 as 'one oh-nine'.
+And if it's ever not totally obvious from context that a number refers to a year (as is the case with years before 1100), please feel free to add the words 'the year' beforehand. So for instance, '904' could also be 'the year nine oh-four'."""
+
+no_roman_numerals_plz = """All Roman numerals should be written out in words. For example, 'III' should be 'three'. However, if the Roman numerals are part of somebody's title, please make sure to add the word 'the' and make the number into an ordinal: for example, 'Henry IV' should be spelled out as 'Henry the Fourth', and NOT as 'Henry Four' or as 'Henry the Four'. However, note that if the Roman numeral appears within the context of a foreign phrase, then it should be translated into that language, either as an ordinal or not depending on the context. For example, 'Pont Alexandre III' should be spelled out as 'Pont Alexandre Trois' (and NOT as 'Pont Alexandre the Third' or anything else). Here are a few more examples.
+EXAMPLE: 'Louis XIV' should be written out as 'Louis the Fourteenth'.
+EXAMPLE: 'Henry I' should be written out as 'Henry the First'.
+EXAMPLE: 'Super Bowl XLII' should be written out as 'Super Bowl Forty Two'.
+EXAMPLE: 'Star Wars Episode IV' should be written out as 'Star Wars Episode Four'.
+EXAMPLE: 'Calculus I' should be written out as 'Calculus One' (this is the name of a math course).
+EXAMPLE: 'I Gusti Nyoman Lempad' should actually REMAIN AS-IS, because this is a person's name. Please do not be confused by the fact that his first name is also a Roman numeral."""
 
 # for replicability of the `edit_story` function, we should only add new overused words to the _end_ here. (we are working in python 3.11, and as of python 3.7 dictionaries maintain their insertion order.) specifically, in `edit_story.py` we use the index here to pseudorandomly determine the number of instances that we allow.
 # the "pattern" is for regex searches in `edit_story.py`.
@@ -219,6 +170,7 @@ complete_sentences_plz = "Everything you write should be in complete sentences."
 
 requests_for_every_story_completion_plz = "\n\n".join([
     no_numbers_plz,
+    no_roman_numerals_plz,
     no_overused_words_plz,
     complete_sentences_plz,
 ])
@@ -257,57 +209,15 @@ no_separator_in_conclusion_plz = "Please do NOT include any sort of separator be
 def system_prompt_for_rewriting(overused_words_to_remove):
     return f"""The user will give you a chunk of text. Please rewrite this WITH MINIMAL CHANGES, according to the following instructions.
 
-1. All numbers should be written out in words.
-a. This includes ANY instance of a digit. It is important that overall text be PRONOUNCED correctly, so you can use homophones if it is helpful. For instance, the band "U2" could be written out as "You Two". Do not allow the digit "2" to remain.
-b. This also includes Roman numerals. Please write out Roman numerals in words. However, if the Roman numerals are part of somebody's title, please make sure to add the word "the" and make the number into an ordinal: for example, "Henry IV" should be spelled out as "Henry the Fourth", and NOT as "Henry Four" or as "Henry the Four".
-c. Please make sure that years are written out in the usual way that they're spoken in informal American English. Here are a few illustrative examples:
-* 1804 is "eighteen oh-four",
-* 2020 is "twenty twenty-three",
-* 659 is "six fifty-nine",
-* 2000 is "two thousand",
-* 2001 is "two thousand one",
-* 42 is "forty-two".
-So, here are a few general principles to keep in mind.
-* In general, pronounce the thousands and hundreds places together as if they were a single number (e.g. "six" as in 659 or "twenty" as in 2023).
-* As an exception, if 
-* If a year is in the first ten years of a century, pronounce the zero as "oh" (e.g. the "oh" in 1804 above).
+1. Please respond ONLY with the rewritten text, and nothing else. Do not include any other text in your response.
 
-2. Please do NOT use any of the following "overused words" in the rewritten text: {', '.join(overused_words_to_remove)}. If you come across one of these "overused words", please simply substitute a common synonym, or else rewrite the text slightly with a different phrasing that avoids the "overused word".
+{f"2. Please do NOT use any of the following 'overused words' in the rewritten text: {', '.join(overused_words_to_remove)}. If you come across one of these 'overused words', please simply substitute a common synonym, or else rewrite the text slightly with a different phrasing that avoids the 'overused word'. However, do NOT replace it with any words in the following list: {', '.join(overused_words)}." if len(overused_words_to_remove) > 0 else ""}
 
-3. Please respond ONLY with the rewritten text, and nothing else. Do not include any other text in your response.
+{"3." if len(overused_words_to_remove) > 0 else "2."} Please make sure it does NOT contain any digits or Roman numerals. Here are some further instructions on each of these two points.
 
-=====
+{no_numbers_plz}
 
-Here are some examples of rewrites relating to numbers.
-
-EXAMPLE: '1842' should be written out as 'eighteen forty-two' (and not 'one thousand eight hundred and forty-two').
-
-
-
-
-
-EXAMPLE: Please spell out years according to standard informal American conventions. This can be quite tricky, so be careful! Note that for example the year '904' is pronounced as 'nine oh-four', and '1154' is 'eleven fifty-four'. And if it's ever not totally obvious from context that a number refers to a year (as is the case with years before 1100), please feel free to add 'the year' beforehand. So for instance, '904' could also be 'the year nine oh-four'. As for the year 2000 and beyond, make sure to spell this out as 'two-thousand'.
-
-
-
-
-
-
-
-EXAMPLE: In the context of a vacation in Italy, '5Terre' (which is the name of a gelateria) should be written out as 'Cinque Terre' (which is the name of the region where the gelateria is located).
-
-EXAMPLE: 'Louis XIV' should be written out as 'Louis the Fourteenth'.
-
-EXAMPLE: 'Henry I' should be written out as 'Henry the First'.
-
-EXAMPLE: 'Super Bowl XLII' should be written out as 'Super Bowl Forty Two'.
-
-EXAMPLE: 'Star Wars Episode IV' should be written out as 'Star Wars Episode Four'.
-
-EXAMPLE: 'Calculus I' should be written out as 'Calculus One' (this is the name of a math course).
-
-EXAMPLE: 'I Gusti Nyoman Lempad' should actually NOT BE CHANGED, because this is a person's name. Please do not be confused by the fact that his first name is also a Roman numeral.
-"""
+{no_roman_numerals_plz}"""
 
 #####
 

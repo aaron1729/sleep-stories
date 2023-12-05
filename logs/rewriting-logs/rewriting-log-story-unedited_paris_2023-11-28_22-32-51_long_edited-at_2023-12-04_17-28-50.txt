@@ -1,0 +1,22 @@
+this rewriting log contains a record of all rewrites from:
+unedited story: story-unedited_paris_2023-11-28_22-32-51_long.txt
+editing timestamp: 2023-12-04_17-28-50
+
+the chunks were respectively rewritten the following numbers of times: 0, 0
+(note: chunks that were untouched are not listed here.)
+
+INDICES OF REWRITING FAILURES: [none]
+
+OVERUSED WORD ALLOWANCES (computed with B=3):
+tapestry: 2
+testament: 1
+grandeur: 2
+symphony: 2
+tribute: 2
+homage: 0
+tranquil: 2
+chariot: 2
+mosaic: 0
+vibrant: 0
+bustling: 2
+verdant: 2
