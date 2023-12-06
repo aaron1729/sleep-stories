@@ -145,7 +145,7 @@ def write_story(length, destination, num_stops_parameter = None, stops_filename 
     
     # write the story file.
     story_filename = f"story-unedited_{input['destination']}_{timestamp}_{length}.txt"
-    story_file = open(f"stories-unedited/{story_filename}", "w")
+    story_file = strings.open_safe("stories-unedited", story_filename, "w")
     story_file.write(story)
     story_file.close()
 
@@ -154,7 +154,8 @@ def write_story(length, destination, num_stops_parameter = None, stops_filename 
     # log any splitting failures.
     if len(splitting_failure_indices) > 0:
         print("\nthere are splitting failures; logging them now\n")
-        splitting_failure_log_file = open("logs/splitting-failure-log.txt", "a")
+        splitting_failure_log_file = strings.open_safe("logs", "splitting-failure-log.txt", "a")
+
         splitting_failure_string = f"{story_filename}: {', '.join([str(splitting_failure_index) for splitting_failure_index in splitting_failure_indices])}"
         splitting_failure_log_file.write(splitting_failure_string)
         splitting_failure_log_file.close()
@@ -162,13 +163,6 @@ def write_story(length, destination, num_stops_parameter = None, stops_filename 
     return None
 
 
-# write_story("long", "berkeley")
-write_story("long", "amalfi")
-write_story("long", "greece")
-
 
 ### let's write some stories!
-# for input in inputs:
-#     print(f"input is: {input}")
-#     write_story("long", input)
-#     write_story("short", input)
+# write_story(...)

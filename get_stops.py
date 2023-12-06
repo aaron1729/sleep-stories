@@ -68,7 +68,7 @@ def get_stops(destination, num_stops = 20):
         stop_with_tidbit = stop + "\n\n" + completion.choices[0].message.content
         stops_with_tidbits.append(stop_with_tidbit)
     
-    stops_with_tidbits_file = open(f"stops/stops_{input['destination']}_{timestamp}.txt", "w")
+    stops_with_tidbits_file = strings.open_safe("stops", f"stops_{input['destination']}_{timestamp}.txt", "w")
     stops_with_tidbits_file.write(strings.separator.join(stops_with_tidbits))
     stops_with_tidbits_file.close()
 
@@ -79,5 +79,4 @@ def get_stops(destination, num_stops = 20):
 ################################################################################
 
 ### let's get some stops!
-
-get_stops("berkeley")
+# get_stops(...)

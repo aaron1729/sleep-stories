@@ -1,3 +1,0 @@
-a rewrite failed when attempting to edit story-unedited_algarve_2023-11-26_20-26-02_long.txt
-editing timestamp: 2023-11-27_23-47-37
-check the verbose rewriting-log file logs/rewriting-logs/rewriting-log-story-unedited_algarve_2023-11-26_20-26-02_long.txt_edited-at-2023-11-27_23-47-37.txt

@@ -19,13 +19,13 @@ make sure to incorporate an API key (say at the bottom of the file `openai-env/b
 ### other modules
 
 these should be installed by `pip install`. a (probably incomplete) list of modules used in this repo is:
-* `openai` (for chatGPT and dalle),
-* `re` (for regex),
 * `datetime` (for timestamps),
-* `os` (for interacting with the operating system),
-* `spacy` (for NLP sentence boundary detection),
 * `hashlib` (to hash filenames for replicable psuedorandom binary numbers, to dictate tolerance for "overused words"),
+* `openai` (for chatGPT and dalle),
+* `os` (for interacting with the operating system, e.g. making directories and reading their contents),
+* `re` (for regex),
 * `requests` (to make GET requests for an image after dalle has created it and returned its url).
+* `spacy` (for NLP sentence boundary detection),
 
 ## pipeline
 
@@ -70,22 +70,28 @@ here are some files that don't (mostly) contain functions.
 
 #### naming conventions
 
-most filenames are of the form `{filetype}_{destination}_{timestamp}[_{length}].ending`, although some later ones in the illustration pipeline are more complex (e.g. containing multiple timestamps).
-* since we split overall filenames by underscores (to easily retrieve info (e.g. timestamps) from them), each `{filetype}` is always split with dashes (instead of underscores) when necessary. moreover, directories are named analogously. for instance, `stories-unedited/` contains `story-unedited` files.
+most filenames are of the form `{filetype}_{destination}_{timestamp}[_{length}].ending`. note that the `timestamp` is itself `_`-separated. here, the convention is that fields can be used both to describe type (e.g. to say what type of file this is, and relatedly what directory it lives in) and to record the instance (i.e. the `timestamp`). some later files in the pipeline are named more complexly; for instance, a typical log file that records edits made is called `rewriting-log-story-unedited_paris_2023-11-28_22-32-51_long_edited-at_2023-12-04_17-28-50.txt`. however, there is (at least) one exception, namely the file `splitting-failure-log.txt` (of which there's just one).
+
+here are a few more notes.
+* since we split overall filenames by underscores (to easily retrieve info (e.g. timestamps) from them), each `{filetype}` is always split with dashes (instead of underscores) when necessary, as is e.g. `edited-at`. moreover, directories are named analogously. for instance, `stories-unedited/` contains `story-unedited` files.
 * the bare term "story" always refers to an edited story. (an "unedited story" is always referred to as such.)
 * `destination` is e.g. `costarica` or `chiangmai`.
 * `length` is always either `short` or `long`.
 
-however, there are exceptions, e.g. `art-styles_{timestamp}.txt` (since these are each generally associated to many different destinations) and `splitting-failure-log.txt` (of which there is just one).
+#### miscellanea
+
+* functions are invoked at the bottom of their defining `.py` files. to keep track of a function having been invoked, typically leave it commented-out -- perhaps with a note of (approximately) when it was invoked.
+* all directories containing generated content are in `.gitignore`. the code is written to "safely" generate new files (using `strings.open_safe(...)` instead of `open(...)`), so that these don't need to be created manually before running code.
 
 #### miscellaneous to-do (not including stuff below)
 
+- [ ] before a "final version of v1" pass, clear out all old files!
 - [ ] add error-handling for all calls to chatGPT and dalle APIs (including if/when the dalle prompt is too long).
 - [ ] improve filename conventions and organization (particularly e.g. for images).
 - [x] make sure to use `strings.separator` everywhere instead of `"\n\n=====\n\n"` (and also `strings.separator_long`).
-- [ ] keep `sleep_stories_pipeline.pdf` up-to-date. (unfortunately, there doesn't seem to be an easy way to keep it synced with the version in dropbox.)
+- [ ] keep `sleep_stories_pipeline.pdf` up-to-date. (unfortunately, there doesn't seem to be an easy way to keep it synced with the version in dropbox, so this'll just be done "manually".)
 - [ ] delete `ZZZ_` files and directories as they become irrelevant.
-- [ ] make sure the above list of modules is complete (e.g. by doing a `grep` for `"import "`).
+- [ ] make sure the above list of modules is complete. to get a deduplicated list of lines in python scripts that contain the string `"import "`, on the command line do `grep "import " *.py | cut -d':' -f2- | sort | uniq`.
 - [ ] continue to fill in list of approximate run times.
 
 ### get_stops.py

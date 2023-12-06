@@ -55,7 +55,7 @@ def get_dalle_prompts(cues_filename, art_style, art_style_description_filename =
     
     dalle_prompts_string = strings.separator.join(dalle_prompts)
     dalle_prompts_filename = f"dalle-prompts_for_{cues_filename[:-4]}_in_{art_style}_at_{timestamp}.txt"
-    dalle_prompts_file = open(f"dalle-prompts/{dalle_prompts_filename}", "w")
+    dalle_prompts_file = strings.open_safe("dalle-prompts", dalle_prompts_filename, "w")
     dalle_prompts_file.write(dalle_prompts_string)
     dalle_prompts_file.close()
 
@@ -64,50 +64,4 @@ def get_dalle_prompts(cues_filename, art_style, art_style_description_filename =
 
 
 ### let's get some dalle prompts!
-
-# get_dalle_prompts("cues_algarve_2023-11-28_22-12-12_short.txt", "fauvism")
-# get_dalle_prompts("cues_napa_2023-11-28_22-32-51_long.txt", "cubism")
-# get_dalle_prompts("cues_rio_2023-11-28_22-32-51_long.txt", "victorian")
-# get_dalle_prompts("cues_chiangmai_2023-11-28_22-32-51_long.txt", "sepia-pencil")
-# get_dalle_prompts("cues_bali_2023-11-28_22-32-51_short.txt", "manga")
-# get_dalle_prompts("cues_costarica_2023-11-28_22-32-51_short.txt", "pop")
-# get_dalle_prompts("cues_newyorkcity_2023-11-28_22-32-51_long.txt", "psychedelic")
-# get_dalle_prompts("cues_queenstown_2023-11-28_22-32-51_short.txt","thai-temple")
-# get_dalle_prompts("cues_paris_2023-11-28_22-32-51_short.txt", "islamic-geometric")
-# get_dalle_prompts("cues_istanbul_2023-11-28_22-32-51_long.txt", "turkish-marbling")
-# get_dalle_prompts("cues_greece_2023-11-28_22-32-51_short.txt", "pointillism")
-# get_dalle_prompts("cues_london_2023-11-28_22-32-51_short.txt", "abstract")
-# get_dalle_prompts("cues_shanghai_2023-11-28_22-32-51_short.txt", "surrealism")
-# get_dalle_prompts("cues_barcelona_2023-11-28_22-32-51_short.txt", "neoexpressionism")
-# get_dalle_prompts("cues_algarve_2023-11-28_22-12-12_long.txt", "cave")
-
-
-# at 6:30pm:
-# get_dalle_prompts("cues_amalfi_2023-11-28_22-32-51_short.txt", "magical-realism")
-
-
-
-# 11/30/2023 at 5pm:
-# get_dalle_prompts("cues_costarica_2023-11-28_22-32-51_long.txt", "chinese-cubism")
-# at 10pm:
-# get_dalle_prompts("cues_chiangmai_2023-11-28_22-32-51_short.txt", "mishe")
-
-# get_dalle_prompts("cues_chiangmai_2023-11-28_22-32-51_short.txt", "pollock")
-# get_dalle_prompts("cues_berkeley_2023-11-28_22-32-51_short.txt", "basquiat")
-
-# for art_style in [
-#     "midcentury-modern",
-#     "art-nouveau",
-#     "japanese-woodblock",
-#     "japanese-ink-wash",
-#     "batik",
-#     "lanna",
-#     "neobaroque"]:
-    # get_dalle_prompts("cues_berkeley_2023-11-28_22-32-51_short.txt", art_style)
-
-# get_dalle_prompts("cues_kyoto_2023-11-28_22-32-51_long.txt", "hopper")
-# get_dalle_prompts("cues_kyoto_2023-11-28_22-32-51_long.txt", "italian-futurism")
-# get_dalle_prompts("cues_newyorkcity_2023-11-28_22-32-51_short.txt", "new-yorker")
-# get_dalle_prompts("cues_kyoto_2023-11-28_22-32-51_long.txt", "miro")
-# get_dalle_prompts("cues_kyoto_2023-11-28_22-32-51_long.txt", "tomine")
-get_dalle_prompts("cues_kyoto_2023-11-28_22-32-51_long.txt", "hopper")
+# get_dalle_prompts(...)

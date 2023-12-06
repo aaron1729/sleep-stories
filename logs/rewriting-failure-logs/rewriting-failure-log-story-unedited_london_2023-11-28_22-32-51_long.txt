@@ -1,3 +1,0 @@
-a rewrite failed when attempting to edit story-unedited_london_2023-11-28_22-32-51_long.txt
-editing timestamp: 2023-11-29_09-28-56
-check the verbose rewriting-log file logs/rewriting-logs/rewriting-log-story-unedited_london_2023-11-28_22-32-51_long.txt_edited-at-2023-11-29_09-28-56.txt

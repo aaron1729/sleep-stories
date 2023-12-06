@@ -1,4 +1,24 @@
+# virtual environment and environment variables (in particular, API key!)
 .env
 openai-env/
+
+# cached python bytecode
 __pycache__/
+
+# generated content
+art-style-descriptions/
+code/
+cues/
+dalle-prompts/
+image-urls/
 images/
+logs/
+phoneticizations/
+stops/
+stories/
+stories-unedited/
+
+# old stuff
+ZZZ_deprecated_2023-12-05/
+# be extra-sure to gitignore this one, since it's huge
+ZZZ_deprecated_2023-12-05/images_OLD/

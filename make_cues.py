@@ -72,7 +72,7 @@ def make_cues(story_filename = None):
         chunks_as_cue_strings = ["\n".join(list_of_cues) for list_of_cues in list_of_lists_of_cues]
         cues_string = strings.separator.join(chunks_as_cue_strings + [metadata])
         cues_filename = "cues_" + "_".join(story_filename.split("_")[1:])
-        cues_file = open(f"cues/{cues_filename}", "w")
+        cues_file = strings.open_safe("cues", cues_filename, "w")
         cues_file.write(cues_string)
         cues_file.close()
 
@@ -81,9 +81,4 @@ def make_cues(story_filename = None):
 
 
 ### let's make some cues!
-
-make_cues("story_paris_2023-11-28_22-32-51_long.txt")
-make_cues("story_paris_2023-11-28_22-32-51_short.txt")
-
-make_cues("story_berkeley_2023-11-28_22-32-51_long.txt")
-make_cues("story_berkeley_2023-11-28_22-32-51_short.txt")
+# make_cues(...)

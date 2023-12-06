@@ -182,7 +182,7 @@ object {object_name} : SleepStoryPoseCues {{
 
 {aggregated_stops_string}"""
 
-        kotlin_file = open(f"code/{kotlin_filename}", "w")
+        kotlin_file = strings.open_safe("code", kotlin_filename, "w")
         kotlin_file.write(kotlin_string)
         kotlin_file.close()
 
@@ -193,4 +193,4 @@ object {object_name} : SleepStoryPoseCues {{
 
 
 ### let's make some kotlin code!
-make_kt()
+# make_kt(...)

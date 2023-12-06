@@ -35,8 +35,8 @@ art_styles = {
     "new-yorker": "New Yorker cartoons",
     "miro": "Joan Miro",
     "tomine": "Adrian Tomine",
-    "picasso": "Pablo Picasso", # not yet tested
-    "mondrian": "Piet Mondrian", # not yet tested
-    "van-gogh": "Vincent van Gogh", # not yet tested
-    "arrival": "The Arrival, by Shaun Tam" # not yet tested
+    "picasso": "Pablo Picasso",
+    "mondrian": "Piet Mondrian",
+    "van-gogh": "Vincent van Gogh",
+    "arrival": "The Arrival, by Shaun Tam"
 }

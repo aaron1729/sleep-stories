@@ -189,7 +189,7 @@ overused_words_to_try_to_remove: {version_object['overused_words_to_try_to_remov
         edited_story_chunks.append(story_metadata)
         edited_story_string = strings.separator.join(edited_story_chunks)
         edited_story_filename = "story_" + "_".join(unedited_story_filename.split("_")[1:])
-        edited_story_file = open(f"stories/{edited_story_filename}", "w")
+        edited_story_file = strings.open_safe("stories", edited_story_filename, "w")
         edited_story_file.write(edited_story_string)
         edited_story_file.close()
         print(f"\nfinished editing {unedited_story_filename}, and wrote {edited_story_filename} at {strings.time_now()}")
@@ -286,7 +286,7 @@ INDICES OF REWRITING FAILURES: {', '.join(indices_of_rewriting_failures_as_strin
         rewriting_log_file_string = strings.separator_long.join(strings_to_join_for_rewriting_log_file_string)
         
         rewriting_log_filename = f"rewriting-log-{unedited_story_filename[:-4]}_edited-at_{timestamp}.txt"
-        rewriting_log_file = open(f"logs/rewriting-logs/{rewriting_log_filename}", "w")
+        rewriting_log_file = strings.open_safe("logs/rewriting-logs", rewriting_log_filename, "w")
         rewriting_log_file.write(rewriting_log_file_string)
         rewriting_log_file.close()
 
@@ -302,7 +302,7 @@ rewriting success: {str(all_rewriting_successes)}"""
             rewriting_stats_string += f"""
 indices of failed chunks: {', '.join(indices_of_rewriting_failures_as_strings)}
 for more information, check the verbose log file: {rewriting_log_filename}"""
-        rewriting_stats_file = open("logs/rewriting-stats.txt", "a")
+        rewriting_stats_file = strings.open_safe("logs", "rewriting-stats.txt", "a")
         rewriting_stats_file.write(rewriting_stats_string)
         rewriting_stats_file.close()
 
@@ -315,16 +315,15 @@ editing timestamp: {timestamp}
 
 for more information, check the verbose rewriting-log file: logs/rewriting-logs/{rewriting_log_filename}"""
             rewriting_failure_log_filename = f"rewriting-failure-log-{unedited_story_filename[:-4]}_edited-at_{timestamp}.txt"
-            rewriting_failure_file = open(f"logs/rewriting-failure-logs/{rewriting_failure_log_filename}", "w")
+            
+            rewriting_failure_file = strings.open_safe("logs/rewriting-failure-logs", rewriting_failure_log_filename, "w")
             rewriting_failure_file.write(rewriting_failure_log_string)
             rewriting_failure_file.close()
 
     return None
-               
+
 
 
 ### let's edit some stories!
 
-# doing this one on mon 12/4 in the afternoon.
-# edit_story("story-unedited_paris_2023-11-28_22-32-51_long.txt") # did this one repeatedly, fixing code until it worked.
-edit_story("story-unedited_costarica_2023-11-28_22-32-51_short.txt") # another one now, to test.
+# edit_story(...)

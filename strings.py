@@ -1,9 +1,16 @@
-##### here are collected miscellaneous strings (and simple functions that return strings) that are used elsewhere.
+##### here are collected miscellaneous strings (and simple functions that return strings) that are used elsewhere. there's also a bit of file/o.s. management. maybe rename from "strings".
 
-from os import listdir
+from os import listdir, makedirs
 from os.path import isfile, join
 
 import re
+
+# this opens a file *after* ensuring that its directory exists.
+# e.g. open_safe("stories", "story_bali_2023-11-28_22-32-51_short.txt", "w")
+# use this whenever writing a file, but not reading one.
+def open_safe(directory, filename, mode):
+    makedirs(directory, exist_ok=True)
+    return open(join(directory + "/", filename), mode)
 
 def get_all_unhidden_files(directory):
     # make sure it's the name of a _file_, and make sure it's not a _hidden_file.
