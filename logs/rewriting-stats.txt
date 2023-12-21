@@ -1,0 +1,503 @@
+REWRITING STATS FOR ALL STORIES
+
+story-unedited_algarve_2023-12-05_17-42-24_long.txt
+editing timestamp: 2023-12-06_00-51-07
+number of rewrites per chunk: 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+rewriting success: False
+indices of failed chunks: 7, 16
+for more information, check the verbose log file: rewriting-log-story-unedited_algarve_2023-12-05_17-42-24_long_edited-at_2023-12-06_00-51-07.txt
+
+story-unedited_algarve_2023-12-05_17-42-24_short.txt
+editing timestamp: 2023-12-06_00-51-07
+number of rewrites per chunk: 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 1, 1
+rewriting success: True
+
+story-unedited_amalfi_2023-12-05_17-42-24_long.txt
+editing timestamp: 2023-12-06_00-51-07
+number of rewrites per chunk: 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+rewriting success: False
+indices of failed chunks: 5, 8, 15, 16
+for more information, check the verbose log file: rewriting-log-story-unedited_amalfi_2023-12-05_17-42-24_long_edited-at_2023-12-06_00-51-07.txt
+
+story-unedited_amalfi_2023-12-05_17-42-24_short.txt
+editing timestamp: 2023-12-06_00-51-07
+number of rewrites per chunk: 1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 0, 1
+rewriting success: False
+indices of failed chunks: 4
+for more information, check the verbose log file: rewriting-log-story-unedited_amalfi_2023-12-05_17-42-24_short_edited-at_2023-12-06_00-51-07.txt
+
+story-unedited_bali_2023-12-05_17-42-24_long.txt
+editing timestamp: 2023-12-06_00-51-07
+number of rewrites per chunk: 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+rewriting success: False
+indices of failed chunks: 5, 14, 16
+for more information, check the verbose log file: rewriting-log-story-unedited_bali_2023-12-05_17-42-24_long_edited-at_2023-12-06_00-51-07.txt
+
+story-unedited_bali_2023-12-05_17-42-24_short.txt
+editing timestamp: 2023-12-06_00-51-07
+number of rewrites per chunk: 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1
+rewriting success: True
+
+story-unedited_bangkok_2023-12-05_17-42-24_long.txt
+editing timestamp: 2023-12-06_00-51-07
+number of rewrites per chunk: 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+rewriting success: False
+indices of failed chunks: 9, 18
+for more information, check the verbose log file: rewriting-log-story-unedited_bangkok_2023-12-05_17-42-24_long_edited-at_2023-12-06_00-51-07.txt
+
+story-unedited_bangkok_2023-12-05_17-42-24_short.txt
+editing timestamp: 2023-12-06_00-51-07
+number of rewrites per chunk: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+rewriting success: False
+indices of failed chunks: 3, 8
+for more information, check the verbose log file: rewriting-log-story-unedited_bangkok_2023-12-05_17-42-24_short_edited-at_2023-12-06_00-51-07.txt
+
+story-unedited_barcelona_2023-12-05_17-42-24_long.txt
+editing timestamp: 2023-12-06_00-51-07
+number of rewrites per chunk: 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+rewriting success: False
+indices of failed chunks: 4
+for more information, check the verbose log file: rewriting-log-story-unedited_barcelona_2023-12-05_17-42-24_long_edited-at_2023-12-06_00-51-07.txt
+
+story-unedited_barcelona_2023-12-05_17-42-24_short.txt
+editing timestamp: 2023-12-06_00-51-07
+number of rewrites per chunk: 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1
+rewriting success: False
+indices of failed chunks: 3
+for more information, check the verbose log file: rewriting-log-story-unedited_barcelona_2023-12-05_17-42-24_short_edited-at_2023-12-06_00-51-07.txt
+
+story-unedited_berkeley_2023-12-05_17-42-24_long.txt
+editing timestamp: 2023-12-06_00-51-07
+number of rewrites per chunk: 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1
+rewriting success: False
+indices of failed chunks: 17, 19
+for more information, check the verbose log file: rewriting-log-story-unedited_berkeley_2023-12-05_17-42-24_long_edited-at_2023-12-06_00-51-07.txt
+
+story-unedited_berkeley_2023-12-05_17-42-24_short.txt
+editing timestamp: 2023-12-06_00-51-07
+number of rewrites per chunk: 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1
+rewriting success: True
+
+story-unedited_chiangmai_2023-12-05_17-42-24_long.txt
+editing timestamp: 2023-12-06_00-51-07
+number of rewrites per chunk: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+rewriting success: False
+indices of failed chunks: 6, 8, 10
+for more information, check the verbose log file: rewriting-log-story-unedited_chiangmai_2023-12-05_17-42-24_long_edited-at_2023-12-06_00-51-07.txt
+
+story-unedited_chiangmai_2023-12-05_17-42-24_short.txt
+editing timestamp: 2023-12-06_00-51-07
+number of rewrites per chunk: 1, 0, 1, 0, 0, 1, 0, 1, 1, 1, 1, 1
+rewriting success: True
+
+story-unedited_cinqueterre_2023-12-05_17-42-24_long.txt
+editing timestamp: 2023-12-06_00-51-07
+number of rewrites per chunk: 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+rewriting success: False
+indices of failed chunks: 11, 17
+for more information, check the verbose log file: rewriting-log-story-unedited_cinqueterre_2023-12-05_17-42-24_long_edited-at_2023-12-06_00-51-07.txt
+
+story-unedited_cinqueterre_2023-12-05_17-42-24_short.txt
+editing timestamp: 2023-12-06_00-51-07
+number of rewrites per chunk: 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1
+rewriting success: True
+
+story-unedited_costarica_2023-12-05_17-42-24_long.txt
+editing timestamp: 2023-12-06_00-51-07
+number of rewrites per chunk: 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+rewriting success: False
+indices of failed chunks: 3, 6
+for more information, check the verbose log file: rewriting-log-story-unedited_costarica_2023-12-05_17-42-24_long_edited-at_2023-12-06_00-51-07.txt
+
+story-unedited_costarica_2023-12-05_17-42-24_short.txt
+editing timestamp: 2023-12-06_00-51-07
+number of rewrites per chunk: 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1
+rewriting success: True
+
+story-unedited_dubai_2023-12-05_17-42-24_long.txt
+editing timestamp: 2023-12-06_00-51-07
+number of rewrites per chunk: 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+rewriting success: False
+indices of failed chunks: 2, 8, 12
+for more information, check the verbose log file: rewriting-log-story-unedited_dubai_2023-12-05_17-42-24_long_edited-at_2023-12-06_00-51-07.txt
+
+story-unedited_dubai_2023-12-05_17-42-24_short.txt
+editing timestamp: 2023-12-06_00-51-07
+number of rewrites per chunk: 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1
+rewriting success: False
+indices of failed chunks: 1, 11
+for more information, check the verbose log file: rewriting-log-story-unedited_dubai_2023-12-05_17-42-24_short_edited-at_2023-12-06_00-51-07.txt
+
+story-unedited_greece_2023-12-05_17-42-24_long.txt
+editing timestamp: 2023-12-06_00-51-07
+number of rewrites per chunk: 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+rewriting success: False
+indices of failed chunks: 5, 16, 21
+for more information, check the verbose log file: rewriting-log-story-unedited_greece_2023-12-05_17-42-24_long_edited-at_2023-12-06_00-51-07.txt
+
+story-unedited_greece_2023-12-05_17-42-24_short.txt
+editing timestamp: 2023-12-06_00-51-07
+number of rewrites per chunk: 1, 0, 0, 1, 0, 1, 0, 1, 1, 0, 0, 1
+rewriting success: True
+
+story-unedited_istanbul_2023-12-05_17-42-24_long.txt
+editing timestamp: 2023-12-06_00-51-07
+number of rewrites per chunk: 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+rewriting success: False
+indices of failed chunks: 20
+for more information, check the verbose log file: rewriting-log-story-unedited_istanbul_2023-12-05_17-42-24_long_edited-at_2023-12-06_00-51-07.txt
+
+story-unedited_istanbul_2023-12-05_17-42-24_short.txt
+editing timestamp: 2023-12-06_00-51-07
+number of rewrites per chunk: 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1
+rewriting success: True
+
+story-unedited_kyoto_2023-12-05_17-42-24_long.txt
+editing timestamp: 2023-12-06_00-51-07
+number of rewrites per chunk: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+rewriting success: False
+indices of failed chunks: 5, 10
+for more information, check the verbose log file: rewriting-log-story-unedited_kyoto_2023-12-05_17-42-24_long_edited-at_2023-12-06_00-51-07.txt
+
+story-unedited_kyoto_2023-12-05_17-42-24_short.txt
+editing timestamp: 2023-12-06_00-51-07
+number of rewrites per chunk: 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 1
+rewriting success: False
+indices of failed chunks: 0
+for more information, check the verbose log file: rewriting-log-story-unedited_kyoto_2023-12-05_17-42-24_short_edited-at_2023-12-06_00-51-07.txt
+
+story-unedited_london_2023-12-05_17-42-24_long.txt
+editing timestamp: 2023-12-06_00-51-07
+number of rewrites per chunk: 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+rewriting success: False
+indices of failed chunks: 10, 14
+for more information, check the verbose log file: rewriting-log-story-unedited_london_2023-12-05_17-42-24_long_edited-at_2023-12-06_00-51-07.txt
+
+story-unedited_london_2023-12-05_17-42-24_short.txt
+editing timestamp: 2023-12-06_00-51-07
+number of rewrites per chunk: 1, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1
+rewriting success: True
+
+story-unedited_napa_2023-12-05_17-42-24_long.txt
+editing timestamp: 2023-12-06_00-51-07
+number of rewrites per chunk: 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+rewriting success: False
+indices of failed chunks: 12
+for more information, check the verbose log file: rewriting-log-story-unedited_napa_2023-12-05_17-42-24_long_edited-at_2023-12-06_00-51-07.txt
+
+story-unedited_napa_2023-12-05_17-42-24_short.txt
+editing timestamp: 2023-12-06_00-51-07
+number of rewrites per chunk: 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1
+rewriting success: False
+indices of failed chunks: 11
+for more information, check the verbose log file: rewriting-log-story-unedited_napa_2023-12-05_17-42-24_short_edited-at_2023-12-06_00-51-07.txt
+
+story-unedited_newyorkcity_2023-12-05_17-42-24_long.txt
+editing timestamp: 2023-12-06_00-51-07
+number of rewrites per chunk: 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+rewriting success: False
+indices of failed chunks: 5
+for more information, check the verbose log file: rewriting-log-story-unedited_newyorkcity_2023-12-05_17-42-24_long_edited-at_2023-12-06_00-51-07.txt
+
+story-unedited_newyorkcity_2023-12-05_17-42-24_short.txt
+editing timestamp: 2023-12-06_00-51-07
+number of rewrites per chunk: 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1
+rewriting success: True
+
+story-unedited_paris_2023-12-05_17-42-24_long.txt
+editing timestamp: 2023-12-06_00-51-07
+number of rewrites per chunk: 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+rewriting success: False
+indices of failed chunks: 4, 17
+for more information, check the verbose log file: rewriting-log-story-unedited_paris_2023-12-05_17-42-24_long_edited-at_2023-12-06_00-51-07.txt
+
+story-unedited_paris_2023-12-05_17-42-24_short.txt
+editing timestamp: 2023-12-06_00-51-07
+number of rewrites per chunk: 1, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1
+rewriting success: True
+
+story-unedited_queenstown_2023-12-05_17-42-24_long.txt
+editing timestamp: 2023-12-06_00-51-07
+number of rewrites per chunk: 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+rewriting success: False
+indices of failed chunks: 14
+for more information, check the verbose log file: rewriting-log-story-unedited_queenstown_2023-12-05_17-42-24_long_edited-at_2023-12-06_00-51-07.txt
+
+story-unedited_queenstown_2023-12-05_17-42-24_short.txt
+editing timestamp: 2023-12-06_00-51-07
+number of rewrites per chunk: 1, 1, 0, 1, 1, 0, 0, 1, 0, 1, 1, 1
+rewriting success: True
+
+story-unedited_rio_2023-12-05_17-42-24_long.txt
+editing timestamp: 2023-12-06_00-51-07
+number of rewrites per chunk: 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+rewriting success: True
+
+story-unedited_rio_2023-12-05_17-42-24_short.txt
+editing timestamp: 2023-12-06_00-51-07
+number of rewrites per chunk: 1, 0, 1, 0, 1, 1, 0, 0, 1, 1, 0, 1
+rewriting success: True
+
+story-unedited_shanghai_2023-12-05_17-42-24_long.txt
+editing timestamp: 2023-12-06_00-51-07
+number of rewrites per chunk: 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+rewriting success: False
+indices of failed chunks: 4, 5, 8
+for more information, check the verbose log file: rewriting-log-story-unedited_shanghai_2023-12-05_17-42-24_long_edited-at_2023-12-06_00-51-07.txt
+
+story-unedited_shanghai_2023-12-05_17-42-24_short.txt
+editing timestamp: 2023-12-06_00-51-07
+number of rewrites per chunk: 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1
+rewriting success: True
+
+story-unedited_tokyo_2023-12-05_17-42-24_long.txt
+editing timestamp: 2023-12-06_00-51-07
+number of rewrites per chunk: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+rewriting success: False
+indices of failed chunks: 2, 10, 12
+for more information, check the verbose log file: rewriting-log-story-unedited_tokyo_2023-12-05_17-42-24_long_edited-at_2023-12-06_00-51-07.txt
+
+story-unedited_tokyo_2023-12-05_17-42-24_short.txt
+editing timestamp: 2023-12-06_00-51-07
+number of rewrites per chunk: 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1
+rewriting success: True
+
+story-unedited_amalfi_2023-12-05_17-42-24_long.txt
+editing timestamp: 2023-12-06_11-49-11
+number of rewrites per chunk: 0, 1, 1, 1, 1, 3, 1, 1, 2, 1, 1, 1, 1, 1, 1, 3, 2, 2, 1, 1, 1, 1
+rewriting success: False
+indices of failed chunks: 5, 15
+for more information, check the verbose log file: rewriting-log-story-unedited_amalfi_2023-12-05_17-42-24_long_edited-at_2023-12-06_11-49-11.txt
+
+story-unedited_bangkok_2023-12-05_17-42-24_long.txt
+editing timestamp: 2023-12-06_11-56-39
+number of rewrites per chunk: 0, 1, 1, 1, 1, 2, 1, 1, 0, 3, 0, 1, 1, 1, 1, 1, 2, 1, 2, 1, 2, 2
+rewriting success: False
+indices of failed chunks: 9
+for more information, check the verbose log file: rewriting-log-story-unedited_bangkok_2023-12-05_17-42-24_long_edited-at_2023-12-06_11-56-39.txt
+
+story-unedited_algarve_2023-12-05_17-42-24_long.txt
+editing timestamp: 2023-12-06_12-28-03
+number of rewrites per chunk: 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+rewriting success: True
+
+story-unedited_algarve_2023-12-05_17-42-24_short.txt
+editing timestamp: 2023-12-06_12-28-03
+number of rewrites per chunk: 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 1, 1
+rewriting success: True
+
+story-unedited_amalfi_2023-12-05_17-42-24_long.txt
+editing timestamp: 2023-12-06_12-28-03
+number of rewrites per chunk: 0, 1, 1, 1, 1, 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3, 1, 1, 1, 1, 1, 1
+rewriting success: False
+indices of failed chunks: 5, 15
+for more information, check the verbose log file: rewriting-log-story-unedited_amalfi_2023-12-05_17-42-24_long_edited-at_2023-12-06_12-28-03.txt
+
+story-unedited_amalfi_2023-12-05_17-42-24_short.txt
+editing timestamp: 2023-12-06_12-28-03
+number of rewrites per chunk: 1, 0, 0, 0, 3, 1, 1, 0, 0, 1, 0, 1
+rewriting success: False
+indices of failed chunks: 4
+for more information, check the verbose log file: rewriting-log-story-unedited_amalfi_2023-12-05_17-42-24_short_edited-at_2023-12-06_12-28-03.txt
+
+story-unedited_bali_2023-12-05_17-42-24_long.txt
+editing timestamp: 2023-12-06_12-28-03
+number of rewrites per chunk: 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+rewriting success: True
+
+story-unedited_bali_2023-12-05_17-42-24_short.txt
+editing timestamp: 2023-12-06_12-28-03
+number of rewrites per chunk: 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1
+rewriting success: True
+
+story-unedited_bangkok_2023-12-05_17-42-24_long.txt
+editing timestamp: 2023-12-06_12-28-03
+number of rewrites per chunk: 0, 1, 1, 1, 1, 1, 1, 1, 0, 3, 0, 1, 1, 1, 1, 2, 2, 2, 2, 1, 1, 1
+rewriting success: False
+indices of failed chunks: 9
+for more information, check the verbose log file: rewriting-log-story-unedited_bangkok_2023-12-05_17-42-24_long_edited-at_2023-12-06_12-28-03.txt
+
+story-unedited_bangkok_2023-12-05_17-42-24_short.txt
+editing timestamp: 2023-12-06_12-28-03
+number of rewrites per chunk: 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 1, 1
+rewriting success: True
+
+story-unedited_barcelona_2023-12-05_17-42-24_long.txt
+editing timestamp: 2023-12-06_12-28-03
+number of rewrites per chunk: 0, 1, 1, 1, 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+rewriting success: False
+indices of failed chunks: 4
+for more information, check the verbose log file: rewriting-log-story-unedited_barcelona_2023-12-05_17-42-24_long_edited-at_2023-12-06_12-28-03.txt
+
+story-unedited_barcelona_2023-12-05_17-42-24_short.txt
+editing timestamp: 2023-12-06_12-28-03
+number of rewrites per chunk: 1, 1, 1, 3, 1, 1, 0, 1, 1, 1, 1, 1
+rewriting success: False
+indices of failed chunks: 3
+for more information, check the verbose log file: rewriting-log-story-unedited_barcelona_2023-12-05_17-42-24_short_edited-at_2023-12-06_12-28-03.txt
+
+story-unedited_berkeley_2023-12-05_17-42-24_long.txt
+editing timestamp: 2023-12-06_12-28-03
+number of rewrites per chunk: 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 2, 1, 1, 1, 1, 0, 3, 1, 2, 1, 1
+rewriting success: True
+
+story-unedited_berkeley_2023-12-05_17-42-24_short.txt
+editing timestamp: 2023-12-06_12-28-03
+number of rewrites per chunk: 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1
+rewriting success: True
+
+story-unedited_chiangmai_2023-12-05_17-42-24_long.txt
+editing timestamp: 2023-12-06_12-28-03
+number of rewrites per chunk: 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+rewriting success: True
+
+story-unedited_chiangmai_2023-12-05_17-42-24_short.txt
+editing timestamp: 2023-12-06_12-28-03
+number of rewrites per chunk: 1, 0, 1, 0, 0, 1, 0, 1, 1, 1, 1, 1
+rewriting success: True
+
+story-unedited_cinqueterre_2023-12-05_17-42-24_long.txt
+editing timestamp: 2023-12-06_12-28-03
+number of rewrites per chunk: 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 2, 1
+rewriting success: True
+
+story-unedited_cinqueterre_2023-12-05_17-42-24_short.txt
+editing timestamp: 2023-12-06_12-28-03
+number of rewrites per chunk: 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1
+rewriting success: True
+
+story-unedited_costarica_2023-12-05_17-42-24_long.txt
+editing timestamp: 2023-12-06_12-28-03
+number of rewrites per chunk: 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1
+rewriting success: True
+
+story-unedited_costarica_2023-12-05_17-42-24_short.txt
+editing timestamp: 2023-12-06_12-28-03
+number of rewrites per chunk: 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1
+rewriting success: True
+
+story-unedited_dubai_2023-12-05_17-42-24_long.txt
+editing timestamp: 2023-12-06_12-28-03
+number of rewrites per chunk: 0, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1
+rewriting success: True
+
+story-unedited_dubai_2023-12-05_17-42-24_short.txt
+editing timestamp: 2023-12-06_12-28-03
+number of rewrites per chunk: 1, 2, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1
+rewriting success: True
+
+story-unedited_greece_2023-12-05_17-42-24_long.txt
+editing timestamp: 2023-12-06_12-28-03
+number of rewrites per chunk: 1, 1, 1, 0, 1, 3, 1, 0, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 2
+rewriting success: True
+
+story-unedited_greece_2023-12-05_17-42-24_short.txt
+editing timestamp: 2023-12-06_20-31-46
+number of rewrites per chunk: 1, 0, 0, 1, 0, 1, 0, 1, 1, 0, 0, 1
+rewriting success: True
+
+story-unedited_istanbul_2023-12-05_17-42-24_long.txt
+editing timestamp: 2023-12-06_20-31-46
+number of rewrites per chunk: 0, 0, 1, 1, 1, 0, 2, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1
+rewriting success: True
+
+story-unedited_istanbul_2023-12-05_17-42-24_short.txt
+editing timestamp: 2023-12-06_20-31-46
+number of rewrites per chunk: 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1
+rewriting success: True
+
+story-unedited_kyoto_2023-12-05_17-42-24_long.txt
+editing timestamp: 2023-12-06_20-31-46
+number of rewrites per chunk: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+rewriting success: True
+
+story-unedited_kyoto_2023-12-05_17-42-24_short.txt
+editing timestamp: 2023-12-06_20-31-46
+number of rewrites per chunk: 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 1
+rewriting success: True
+
+story-unedited_london_2023-12-05_17-42-24_long.txt
+editing timestamp: 2023-12-06_20-31-46
+number of rewrites per chunk: 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+rewriting success: False
+indices of failed chunks: 10
+for more information, check the verbose log file: rewriting-log-story-unedited_london_2023-12-05_17-42-24_long_edited-at_2023-12-06_20-31-46.txt
+
+story-unedited_london_2023-12-05_17-42-24_short.txt
+editing timestamp: 2023-12-06_20-31-46
+number of rewrites per chunk: 1, 0, 0, 0, 1, 1, 1, 0, 1, 3, 1, 1
+rewriting success: True
+
+story-unedited_napa_2023-12-05_17-42-24_long.txt
+editing timestamp: 2023-12-06_20-31-46
+number of rewrites per chunk: 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 3, 1, 1, 1, 2, 1, 1, 1, 1, 1
+rewriting success: False
+indices of failed chunks: 12
+for more information, check the verbose log file: rewriting-log-story-unedited_napa_2023-12-05_17-42-24_long_edited-at_2023-12-06_20-31-46.txt
+
+story-unedited_napa_2023-12-05_17-42-24_short.txt
+editing timestamp: 2023-12-06_20-31-46
+number of rewrites per chunk: 2, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 3
+rewriting success: False
+indices of failed chunks: 11
+for more information, check the verbose log file: rewriting-log-story-unedited_napa_2023-12-05_17-42-24_short_edited-at_2023-12-06_20-31-46.txt
+
+story-unedited_newyorkcity_2023-12-05_17-42-24_long.txt
+editing timestamp: 2023-12-06_20-31-46
+number of rewrites per chunk: 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3
+rewriting success: True
+
+story-unedited_newyorkcity_2023-12-05_17-42-24_short.txt
+editing timestamp: 2023-12-06_20-31-46
+number of rewrites per chunk: 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1
+rewriting success: True
+
+story-unedited_paris_2023-12-05_17-42-24_long.txt
+editing timestamp: 2023-12-06_20-31-46
+number of rewrites per chunk: 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1
+rewriting success: True
+
+story-unedited_paris_2023-12-05_17-42-24_short.txt
+editing timestamp: 2023-12-06_20-31-46
+number of rewrites per chunk: 1, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1
+rewriting success: True
+
+story-unedited_queenstown_2023-12-05_17-42-24_long.txt
+editing timestamp: 2023-12-06_20-31-46
+number of rewrites per chunk: 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1
+rewriting success: True
+
+story-unedited_queenstown_2023-12-05_17-42-24_short.txt
+editing timestamp: 2023-12-06_20-31-46
+number of rewrites per chunk: 1, 1, 0, 1, 1, 0, 0, 1, 0, 1, 1, 1
+rewriting success: True
+
+story-unedited_rio_2023-12-05_17-42-24_long.txt
+editing timestamp: 2023-12-06_20-31-46
+number of rewrites per chunk: 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+rewriting success: True
+
+story-unedited_rio_2023-12-05_17-42-24_short.txt
+editing timestamp: 2023-12-06_20-31-46
+number of rewrites per chunk: 1, 0, 1, 0, 1, 1, 0, 0, 1, 1, 0, 1
+rewriting success: True
+
+story-unedited_shanghai_2023-12-05_17-42-24_long.txt
+editing timestamp: 2023-12-06_20-31-46
+number of rewrites per chunk: 0, 1, 1, 1, 1, 2, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+rewriting success: True
+
+story-unedited_shanghai_2023-12-05_17-42-24_short.txt
+editing timestamp: 2023-12-06_20-31-46
+number of rewrites per chunk: 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1
+rewriting success: True
+
+story-unedited_tokyo_2023-12-05_17-42-24_long.txt
+editing timestamp: 2023-12-06_20-31-46
+number of rewrites per chunk: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 3, 1, 1, 1, 1, 1, 1
+rewriting success: True
+
+story-unedited_tokyo_2023-12-05_17-42-24_short.txt
+editing timestamp: 2023-12-06_20-31-46
+number of rewrites per chunk: 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1
+rewriting success: True

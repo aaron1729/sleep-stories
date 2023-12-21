@@ -15,8 +15,6 @@ import models
 
 
 
-# strings.ensure_dirpath_exists("hi/there")
-
 # print("goodbye")
 
 
@@ -30,7 +28,7 @@ import models
 # for match in matches:
 #     print(berkeley_long[match.start() - 15: match.end() + 15])
 
-
+# print("hello ∅ bye")
 
 ### the function below is half-baked. hopefully it won't be necessary.
 

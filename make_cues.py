@@ -3,9 +3,6 @@
 
 import re
 
-import spacy
-nlp = spacy.load("en_core_web_sm")
-
 import strings
 
 def make_cues(story_filename = None):
@@ -32,14 +29,9 @@ def make_cues(story_filename = None):
         string = re.sub(r"\n *\n", "\n\n", string)
         return string.split("\n\n")
     
-    # this function takes in a paragraph string and returns a list of its sentences (using the `spacy` NLP module).
-    def paragraph_to_sentences(paragraph_string):
-        doc = nlp(paragraph_string)
-        return [sentence.text for sentence in doc.sents]
-    
     # this function takes in a paragraph string and returns a list of cues. (a cue always consists of two sentences if possible, but may also consist of a single dangling sentence at the end of a paragraph (if the paragraph has an odd number of sentences).)
     def paragraph_to_cues(paragraph_string):
-        sentences = paragraph_to_sentences(paragraph_string)
+        sentences = strings.string_to_sentences(paragraph_string)
         num_full_cues = len(sentences) // 2
         cues = []
         for i in range(num_full_cues):
@@ -55,6 +47,22 @@ def make_cues(story_filename = None):
         for paragraph_string in list_of_paragraphs:
             list_of_cues += paragraph_to_cues(paragraph_string)
         return list_of_cues
+    
+    # on 2023-12-05, we decided to slow down the last handful of sentences, to give more of a feeling of completion as the story wraps up. for this, we'll make the last 4 or 5 sentences be their own individual cues (whichever allows any prior cues in the paragraph where these start to all have two sentences each).
+    # rather than worry about how this splits up against the paragraphs (e.g. how many sentences the last paragraph has), let's just implement this as a "post-production" operation on a chunk that has already been convert to a list of cues. (we'll _certainly_ operate under the assumption that there are at least 5 sentences in the chunk, though!)
+    # specifically, we'll just make sure that there are _at least_ `min_num_of_one_sentence_cues = 4` one-sentences cues at the end, and this _might_ accidentally cause there to be 5 (which we're fine with).
+    def chop_cues_at_end_of_chunk(list_of_cues, min_num_of_one_sentence_cues = 4):
+        list_of_cues.reverse()
+        output = []
+        for cue in list_of_cues:
+            if len(output) < min_num_of_one_sentence_cues:
+                cue_as_list_of_sentences = strings.string_to_sentences(cue)
+                cue_as_list_of_sentences.reverse()
+                output += cue_as_list_of_sentences
+            else:
+                output.append(cue)
+        output.reverse()
+        return output
 
     ##### CONVERT STORIES TO CUES FIlES
 
@@ -67,8 +75,14 @@ def make_cues(story_filename = None):
     for story_filename in story_filenames:
         print(f"converting {story_filename} to a cues file")
         story_string = open(f"stories/{story_filename}", "r").read()
+        # adding this here after shipping a putative v1... but why isn't it working in `edit_story.py`???
+        story_string = strings.swap_quote_marks(story_string)
         (chunks, metadata) = story_to_chunks_and_metadata(story_string)
         list_of_lists_of_cues = [chunk_to_cues(chunk) for chunk in chunks]
+        # split off the last chunk and apply the function chop_cues_at_end_of_chunk, then replace it in list_of_lists_of_cues.
+        ending_chunk_as_list_of_cues = list_of_lists_of_cues[-1]
+        chopped_ending_chunk_as_list_of_cues = chop_cues_at_end_of_chunk(ending_chunk_as_list_of_cues)
+        list_of_lists_of_cues[-1] = chopped_ending_chunk_as_list_of_cues
         chunks_as_cue_strings = ["\n".join(list_of_cues) for list_of_cues in list_of_lists_of_cues]
         cues_string = strings.separator.join(chunks_as_cue_strings + [metadata])
         cues_filename = "cues_" + "_".join(story_filename.split("_")[1:])
@@ -82,3 +96,4 @@ def make_cues(story_filename = None):
 
 ### let's make some cues!
 # make_cues(...)
+make_cues()

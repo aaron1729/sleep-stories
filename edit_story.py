@@ -16,7 +16,7 @@ timestamp = strings.time_now()
     # if unedited_story_filename is left as `None`, then we edit _all_ the unedited stories in `stories-unedited/`.
 # max_number_of_attempts dictates how many times we run each chunk through our regex patterns to see if it catches. (at the end of the function, we run one more time and record whether we ultimately succeeded.)
 # B (for "base") is one more than the maximum number of instances of an overused word that we allow. (so if B = 2 then we only allow 0 or 1 instances of each.)
-def edit_story(unedited_story_filename = None, max_number_of_attempts = 3, B = 3):
+def edit_story(unedited_story_filename = None, max_number_of_attempts = 3, B = 4):
     
     if not unedited_story_filename:
         unedited_story_filenames = strings.get_all_unhidden_files("stories-unedited")
@@ -48,7 +48,13 @@ def edit_story(unedited_story_filename = None, max_number_of_attempts = 3, B = 3
         overused_word_allowances_string_list = []
         for (index, entry) in enumerate(overused_words):
             backwards_index = -(index + 1)
-            overused_words[entry]["counter"] = int(base_B_hash_string[backwards_index])
+            base_B_digit = int(base_B_hash_string[backwards_index])
+            # as of 2023-12-05: previously we had B=3, so the possible values were 0, 1, and 2. we decided we wanted to keep these values, but have about half 0s instead of just a third. so, we instead set B=4 and then included the following modification.
+            base_B_digit_modified = max(base_B_digit - 1, 0)
+            # we also added a 'boost' for a few overused words.
+            if entry == "heart" or entry == "gentle":
+                base_B_digit_modified += 2
+            overused_words[entry]["counter"] = base_B_digit_modified
             overused_word_allowances_string_list.append(f"{overused_words[entry]['word']}: {str(overused_words[entry]['counter'])}")
         # this appears both in the metadata of the story as well as in the rewriting-log.
         overused_word_allowances_string = f"OVERUSED WORD ALLOWANCES (computed with B={B}):\n{strings.n.join(overused_word_allowances_string_list)}"
@@ -225,44 +231,37 @@ overused_words_to_try_to_remove: {version_object['overused_words_to_try_to_remov
 
         def chunk_editing_data_to_rewriting_log_file_string(chunk_editing_data):
             
+            # in the one place where this function is called, it's only under the condition that len(chunk_editing_data) > 1. nevertheless, it seems like a good idea to handle the case that len(chunk_editing_data) == 1, in case that ever changes.
             if len(chunk_editing_data) == 1:
                 return ""
             
             rewriting_success = not chunk_editing_data[-1]["any_triggers"]
 
-            def version_object_to_log_file_string(version_object):
-                version_output = f"any triggers for rewrite: {version_object['any_triggers']}"
+            # version_classification is one of the strings: "original", "intermediate", or "final"
+            def version_object_to_log_file_string(version_object, version_classification):
+                VERSION_CLASSIFICATION = version_classification.upper()
+                version_output = f"""{VERSION_CLASSIFICATION} VERSION METADATA:
+
+any triggers for rewrite: {version_object['any_triggers']}"""
                 if version_object['any_triggers']:
                     version_output += f"""
-numbers_appearing: {', '.join(version_object['numbers_appearing'])}
-roman_numerals_appearing: {', '.join(version_object['roman_numerals_appearing'])}
-overused_words_data:"""
-                    for (overused_word, overused_word_object) in version_object["overused_words_data"].items():
-                        version_output += f"""
+numbers_appearing: {', '.join(version_object['numbers_appearing']) if len(version_object['numbers_appearing']) > 0 else 'none'}
+roman_numerals_appearing: {', '.join(version_object['roman_numerals_appearing']) if len(version_object['roman_numerals_appearing']) > 0 else 'none'}
+overused_words_data (with num_appearances > 0):"""
+                    overused_words_that_appear_and_their_objects = [(overused_word, overused_word_object) for (overused_word, overused_word_object) in version_object["overused_words_data"].items() if overused_word_object["num_appearances"] > 0]
+                    if len(overused_words_that_appear_and_their_objects) == 0:
+                        version_output += " none"
+                    else:
+                        for (overused_word, overused_word_object) in overused_words_that_appear_and_their_objects:
+                            version_output += f"""
     {overused_word}
-        num_allowed: {overused_word_object["num_allowed"]}
         num_appearances: {overused_word_object["num_appearances"]}
+        num_allowed: {overused_word_object["num_allowed"]}
         try_to_remove: {overused_word_object["try_to_remove"]}"""
-                version_output += f"\n\n{version_object['text']}"
+                version_output += f"\n\n{VERSION_CLASSIFICATION} VERSION TEXT:\n\n{version_object['text']}"
                 return version_output
             
-            chunk_output = f"""REWRITING SUCCESS: {rewriting_success}
-
-ORIGINAL VERSION:
-
-{version_object_to_log_file_string(chunk_editing_data[0])}
-
-{strings.separator}
-
-INTERMEDIATE VERSION(S):
-
-{strings.separator_alt.join([version_object_to_log_file_string(intermediate_version_object) for intermediate_version_object in chunk_editing_data[1: -1]])}
-
-{strings.separator}
-
-FINAL VERSION:
-
-{version_object_to_log_file_string(chunk_editing_data[-1])}"""
+            chunk_output = f"REWRITING SUCCESS: {rewriting_success}{strings.separator}{version_object_to_log_file_string(chunk_editing_data[0], 'original')}{strings.separator}{(strings.separator_alt.join([version_object_to_log_file_string(intermediate_version_object, 'intermediate') for intermediate_version_object in chunk_editing_data[1: -1]]) + strings.separator) if len(chunk_editing_data) > 2 else ''}{version_object_to_log_file_string(chunk_editing_data[-1], 'final')}"
             
             return chunk_output
         
@@ -273,7 +272,7 @@ editing timestamp: {timestamp}
 the chunks were respectively rewritten the following numbers of times: {', '.join(num_rewrites_of_chunks_as_strings)}
 (note: chunks that were untouched are not written out below.)
 
-INDICES OF REWRITING FAILURES: {', '.join(indices_of_rewriting_failures_as_strings) if len(indices_of_rewriting_failures_as_strings) > 0 else '[none]'}
+INDICES OF REWRITING FAILURES: {', '.join(indices_of_rewriting_failures_as_strings) if len(indices_of_rewriting_failures_as_strings) > 0 else 'none'}
 
 {overused_word_allowances_string}"""
 
@@ -324,6 +323,22 @@ for more information, check the verbose rewriting-log file: logs/rewriting-logs/
 
 
 
-### let's edit some stories!
 
+
+### let's edit some stories!
 # edit_story(...)
+# edit_story()
+# did at 11:40ish on wed 12/6:
+# edit_story("story-unedited_amalfi_2023-12-05_17-42-24_long.txt")
+# did at 11:57 on wed 12/6:
+# edit_story("story-unedited_bangkok_2023-12-05_17-42-24_long.txt")
+
+# on wed 12/6 at 12:26pm:
+# edit_story()
+
+# on wed 12/6 at ~8:30pm:
+filenames = strings.get_all_unhidden_files("stories-unedited")
+filenames.sort()
+for filename in filenames:
+    if filename > "story-unedited_greece_2023-12-05_17-42-24_long.txt":
+        edit_story(filename)

@@ -166,3 +166,6 @@ def write_story(length, destination, num_stops_parameter = None, stops_filename 
 
 ### let's write some stories!
 # write_story(...)
+for input in inputs:
+    write_story("short", input)
+    write_story("long", input)

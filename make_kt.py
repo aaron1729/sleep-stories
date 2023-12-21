@@ -194,3 +194,4 @@ object {object_name} : SleepStoryPoseCues {{
 
 ### let's make some kotlin code!
 # make_kt(...)
+make_kt()

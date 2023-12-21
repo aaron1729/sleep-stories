@@ -5,6 +5,16 @@ from os.path import isfile, join
 
 import re
 
+import spacy
+nlp = spacy.load("en_core_web_sm")
+
+# this function takes in a (natural language) string and returns a list of its sentences (using the `spacy` NLP module).
+def string_to_sentences(input):
+    doc = nlp(input)
+    return [sentence.text for sentence in doc.sents]
+
+
+
 # this opens a file *after* ensuring that its directory exists.
 # e.g. open_safe("stories", "story_bali_2023-11-28_22-32-51_short.txt", "w")
 # use this whenever writing a file, but not reading one.
@@ -107,13 +117,17 @@ EXAMPLE: Pronounce 1804 as 'eighteen oh-four'.
 EXAMPLE: Pronounce 109 as 'one oh-nine'.
 And if it's ever not totally obvious from context that a number refers to a year (as is the case with years before 1100), please feel free to add the words 'the year' beforehand. So for instance, '904' could also be 'the year nine oh-four'."""
 
-no_roman_numerals_plz = """All Roman numerals should be written out in words. For example, 'III' should be 'three'. However, if the Roman numerals are part of somebody's title, please make sure to add the word 'the' and make the number into an ordinal: for example, 'Henry IV' should be spelled out as 'Henry the Fourth', and NOT as 'Henry Four' or as 'Henry the Four'. However, note that if the Roman numeral appears within the context of a foreign phrase, then it should be translated into that language, either as an ordinal or not depending on the context. For example, 'Pont Alexandre III' should be spelled out as 'Pont Alexandre Trois' (and NOT as 'Pont Alexandre the Third' or anything else). Here are a few more examples.
+no_roman_numerals_plz = """All Roman numerals should be written out in words. For example, 'III' should be 'three'. However, if the Roman numerals are part of somebody's title, please make sure to add the word 'the' and make the number into an ORDINAL.
+EXAMPLE: 'Henry IV' should be written out as 'Henry the Fourth', and NOT as 'Henry Four' or as 'Henry the Four'.
 EXAMPLE: 'Louis XIV' should be written out as 'Louis the Fourteenth'.
 EXAMPLE: 'Henry I' should be written out as 'Henry the First'.
 EXAMPLE: 'Super Bowl XLII' should be written out as 'Super Bowl Forty Two'.
 EXAMPLE: 'Star Wars Episode IV' should be written out as 'Star Wars Episode Four'.
 EXAMPLE: 'Calculus I' should be written out as 'Calculus One' (this is the name of a math course).
-EXAMPLE: 'I Gusti Nyoman Lempad' should actually REMAIN AS-IS, because this is a person's name. Please do not be confused by the fact that his first name is also a Roman numeral."""
+NON-EXAMPLE: 'I Gusti Nyoman Lempad' should actually REMAIN AS-IS, because this is a person's name. Please do not be confused by the fact that his first name is also a Roman numeral.
+However, there is a further special case: if the Roman numeral appears within the context of a foreign phrase, then it should be translated into that language, either as an ordinal or not DEPENDING ON THE CONTEXT.
+EXAMPLE: 'Pont Alexandre III' should be spelled out as 'Pont Alexandre Trois' (and NOT as 'Pont Alexandre the Third' or anything else).
+EXAMPLE: 'Marché aux Fleurs Reine Elizabeth II' should be spelled out as 'Marché aux Fleurs Reine Elizabeth Deux'."""
 
 # for replicability of the `edit_story` function, we should only add new overused words to the _end_ here. (we are working in python 3.11, and as of python 3.7 dictionaries maintain their insertion order.) specifically, in `edit_story.py` we use the index here to pseudorandomly determine the number of instances that we allow.
 # the "pattern" is for regex searches in `edit_story.py`.
@@ -168,7 +182,27 @@ overused_words = {
     "verdant": {
         "word": "verdant",
         "pattern": r"(?i)\bverdant",
-    }
+    },
+    "canvas": {
+        "word": "canvas",
+        "pattern": r"(?i)\bcanvas",
+    },
+    "undulate": {
+        "word": "undulate",
+        "pattern": r"(?i)\bundulat",
+    },
+    "palpable": {
+        "word": "palpable",
+        "pattern": r"(?i)\bpalpabl",
+    },
+    "gentle": {
+        "word": "gentle",
+        "pattern": r"(?i)\bgentl",
+    },
+    "heart": {
+        "word": "heart",
+        "pattern": r"(?i)\bheart",
+    },
 }
 no_overused_words_plz = f"Please don't use any of the following words: {', '.join(overused_words)}."
 

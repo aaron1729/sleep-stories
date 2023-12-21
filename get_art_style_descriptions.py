@@ -40,3 +40,11 @@ def get_art_style_description(key = None):
 
 ### let's get some art style descriptions!
 # get_art_style_description(...)
+# get_art_style_description("rothko")
+# get_art_style_description("rococo")
+# get_art_style_description("gothic")
+# get_art_style_description("retrofuturism")
+# get_art_style_description("steampunk")
+# get_art_style_description("acrylic-pour")
+# get_art_style_description("autumn-skye")
+# get_art_style_description("impressionism")
