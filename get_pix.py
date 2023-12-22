@@ -19,6 +19,9 @@ def get_pix(dalle_prompts_filename):
     images_directory_path = f"images/{images_directory_name}"
     dalle_prompts = open(f"dalle-prompts/{dalle_prompts_filename}", "r").read().split(strings.separator)
 
+    # for image filenames
+    destination = dalle_prompts_filename.split("_")[4]
+
     print(f"now attempting to get {len(dalle_prompts)} images from dalle")
 
     image_urls = []
@@ -39,7 +42,7 @@ def get_pix(dalle_prompts_filename):
             if image.status_code == 200:
                 print(f"got image {index_string} at {strings.time_now()}")
                 image_urls.append(image_url)
-                png_file = strings.open_safe(images_directory_path, f"{index_string}.png", "wb")
+                png_file = strings.open_safe(images_directory_path, f"img_{destination}_{timestamp}_{index_string}.png", "wb")
                 png_file.write(image.content)
                 png_file.close()
             else:
@@ -104,3 +107,24 @@ def get_pix(dalle_prompts_filename):
 # get_pix("dalle-prompts_for_cues_rio_2023-12-05_17-42-24_short_in_mondrian_at_2023-12-20_18-59-24.txt")
 # get_pix("dalle-prompts_for_cues_shanghai_2023-12-05_17-42-24_short_in_tomine_at_2023-12-20_18-59-24.txt")
 # get_pix("dalle-prompts_for_cues_tokyo_2023-12-05_17-42-24_short_in_manga_at_2023-12-20_18-59-24.txt")
+
+# 12/21/2023 at 2:08am...
+# all_prompts_filenames = strings.get_all_unhidden_files("dalle-prompts")
+# for prompts_filename in all_prompts_filenames[14: ]:
+#     get_pix(prompts_filename)
+
+
+
+# morning of thurs 12/21
+# greece
+# get_pix("dalle-prompts_for_cues_greece_2023-12-05_17-42-24_short_in_pointillism_at_2023-12-21_00-08-56.txt")
+# london
+# get_pix("dalle-prompts_for_cues_london_2023-12-05_17-42-24_short_in_victorian_at_2023-12-21_00-08-56.txt")
+# rio
+# get_pix("dalle-prompts_for_cues_rio_2023-12-05_17-42-24_short_in_mondrian_at_2023-12-21_00-09-10.txt")
+# amalfi
+# get_pix("dalle-prompts_for_cues_amalfi_2023-12-05_17-42-24_short_in_van-gogh_at_2023-12-21_00-08-56.txt")
+# paris
+# get_pix("dalle-prompts_for_cues_paris_2023-12-05_17-42-24_short_in_neobaroque_at_2023-12-21_00-09-10.txt")
+# chiangmai
+# get_pix("dalle-prompts_for_cues_chiangmai_2023-12-05_17-42-24_short_in_lanna_at_2023-12-21_00-08-56.txt")
