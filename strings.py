@@ -24,7 +24,9 @@ def open_safe(directory, filename, mode):
 
 def get_all_unhidden_files(directory):
     # make sure it's the name of a _file_, and make sure it's not a _hidden_file.
-    return [filename for filename in listdir(directory + "/") if isfile(join(directory + "/", filename)) and filename[0] != "."]
+    output = [filename for filename in listdir(directory + "/") if isfile(join(directory + "/", filename)) and filename[0] != "."]
+    output.sort()
+    return output
 
 # key is e.g. "amalfi" or "impressionism".
 # directory is e.g. "story" or "stops" or "art-style-descriptions".
