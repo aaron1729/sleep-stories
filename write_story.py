@@ -166,6 +166,17 @@ def write_story(length, destination, num_stops_parameter = None, stops_filename 
 
 ### let's write some stories!
 # write_story(...)
-for input in inputs:
-    write_story("short", input)
-    write_story("long", input)
+# for input in inputs:
+#     write_story("short", input)
+#     write_story("long", input)
+
+# on monday 1/15/2024
+# write_story("short", "seattle")
+# write_story("long", "seattle")
+
+# for input in inputs:
+#     if input > "s":
+#         write_story("short", input)
+#         write_story("long", input)
+
+write_story("short", "yucatan")

@@ -1,7 +1,8 @@
 from openai import OpenAI
 client = OpenAI()
 
-import re
+# this is needed for "\P{L}" in pattern_for_low_roman_numerals
+import regex as re
 
 import hashlib
 
@@ -63,7 +64,8 @@ def edit_story(unedited_story_filename = None, max_number_of_attempts = 3, B = 4
         # make some regex patterns.
         # recall that in regex, parentheses are used to create a capture group (which is e.g. what's returned by `re.findall`). but it's _also_ used to simply group alternatives, as in `(a|b)`. if used in this way, it automatically also functions as a capture grouping. to disentangle those, use `(?: ... )` to group alternatives _without_ forming them into a capture group.
         # it seems like roman numerals are essentially always just referring to people (e.g. Henry IV), so let's just catch 1-30. (actually things are regularish up until 39, but then 40 is XL.) we begin with a space, and end with anything that's _not_ a letter.
-        pattern_for_low_roman_numerals = r" (X{0,2}(?:I?X|IV|VI{0,3}|I{1,3}))[^A-Za-z]"
+        # this used to end with "[^A-Za-z]" instead of "\P{L}", which catches the complement of a usual letter character. but the former was still catching e.g. "Vøringsfossen" (in `norway_long`) as well as "Václav" (in `prague_long`). the latter requires the `regex` module, which is a (supposedly) backwards-compatible extension of the `re` module.
+        pattern_for_low_roman_numerals = r" (X{0,2}(?:I?X|IV|VI{0,3}|I{1,3}))\P{L}"
         # this catches numbers, including those with comma separations.
         pattern_for_numbers = r"(\d+(?:,?\d+)*)"
 
@@ -336,9 +338,18 @@ for more information, check the verbose rewriting-log file: logs/rewriting-logs/
 # on wed 12/6 at 12:26pm:
 # edit_story()
 
-# on wed 12/6 at ~8:30pm:
-filenames = strings.get_all_unhidden_files("stories-unedited")
-filenames.sort()
-for filename in filenames:
-    if filename > "story-unedited_greece_2023-12-05_17-42-24_long.txt":
-        edit_story(filename)
+# on wed 12/6/2023 at ~8:30pm:
+# filenames = strings.get_all_unhidden_files("stories-unedited")
+# filenames.sort()
+# for filename in filenames:
+#     if filename > "story-unedited_greece_2023-12-05_17-42-24_long.txt":
+#         edit_story(filename)
+
+
+# on mon 1/15/2024 at ~3:30pm:
+# filenames = strings.get_all_unhidden_files("stories-unedited")
+# filenames_today_only = [filename for filename in filenames if filename.split("_")[2] == "2024-01-15"]
+# filenames_today_only.sort()
+
+# for filename in filenames_today_only[50: ]:
+#     edit_story(filename)

@@ -23,7 +23,7 @@ these should be installed by `pip install`. a (probably incomplete) list of modu
 * `hashlib` (to hash filenames for replicable psuedorandom binary numbers, to dictate tolerance for "overused words"),
 * `openai` (for chatGPT and dalle),
 * `os` (for interacting with the operating system, e.g. making directories and reading their contents),
-* `re` (for regex),
+* `re` and `regex` (for regex -- the latter is slightly fancier, and is used just once in `edit_story.py`),
 * `requests` (to make GET requests for an image after dalle has created it and returned its url).
 * `spacy` (for NLP sentence boundary detection),
 

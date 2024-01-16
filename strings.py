@@ -126,6 +126,8 @@ EXAMPLE: 'Henry I' should be written out as 'Henry the First'.
 EXAMPLE: 'Super Bowl XLII' should be written out as 'Super Bowl Forty Two'.
 EXAMPLE: 'Star Wars Episode IV' should be written out as 'Star Wars Episode Four'.
 EXAMPLE: 'Calculus I' should be written out as 'Calculus One' (this is the name of a math course).
+EXAMPLE: 'World War I' should be written out as 'World War One'.
+EXAMPLE: 'World War II' should be written out as 'World War Two'.
 NON-EXAMPLE: 'I Gusti Nyoman Lempad' should actually REMAIN AS-IS, because this is a person's name. Please do not be confused by the fact that his first name is also a Roman numeral.
 However, there is a further special case: if the Roman numeral appears within the context of a foreign phrase, then it should be translated into that language, either as an ordinal or not DEPENDING ON THE CONTEXT.
 EXAMPLE: 'Pont Alexandre III' should be spelled out as 'Pont Alexandre Trois' (and NOT as 'Pont Alexandre the Third' or anything else).

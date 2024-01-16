@@ -501,3 +501,307 @@ story-unedited_tokyo_2023-12-05_17-42-24_short.txt
 editing timestamp: 2023-12-06_20-31-46
 number of rewrites per chunk: 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1
 rewriting success: True
+
+story-unedited_accra_2024-01-15_14-36-17_long.txt
+editing timestamp: 2024-01-15_17-13-30
+number of rewrites per chunk: 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+rewriting success: True
+
+story-unedited_puertorico_2024-01-15_14-37-11_long.txt
+editing timestamp: 2024-01-15_17-14-18
+number of rewrites per chunk: 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1
+rewriting success: True
+
+story-unedited_losangeles_2024-01-15_14-36-47_long.txt
+editing timestamp: 2024-01-15_17-13-56
+number of rewrites per chunk: 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1
+rewriting success: True
+
+story-unedited_nepal_2024-01-15_14-37-11_long.txt
+editing timestamp: 2024-01-15_17-14-06
+number of rewrites per chunk: 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1
+rewriting success: True
+
+story-unedited_accra_2024-01-15_14-36-17_short.txt
+editing timestamp: 2024-01-15_17-13-30
+number of rewrites per chunk: 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1
+rewriting success: True
+
+story-unedited_vancouver_2024-01-15_14-37-20_long.txt
+editing timestamp: 2024-01-15_17-14-27
+number of rewrites per chunk: 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1
+rewriting success: True
+
+story-unedited_puertorico_2024-01-15_14-37-11_short.txt
+editing timestamp: 2024-01-15_17-14-18
+number of rewrites per chunk: 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1
+rewriting success: True
+
+story-unedited_losangeles_2024-01-15_14-36-47_short.txt
+editing timestamp: 2024-01-15_17-13-56
+number of rewrites per chunk: 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1
+rewriting success: True
+
+story-unedited_nepal_2024-01-15_14-37-11_short.txt
+editing timestamp: 2024-01-15_17-14-06
+number of rewrites per chunk: 1, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1
+rewriting success: True
+
+story-unedited_vancouver_2024-01-15_14-37-20_short.txt
+editing timestamp: 2024-01-15_17-14-27
+number of rewrites per chunk: 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1
+rewriting success: True
+
+story-unedited_budapest_2024-01-15_14-36-17_long.txt
+editing timestamp: 2024-01-15_17-13-41
+number of rewrites per chunk: 1, 1, 1, 1, 1, 1, 1, 1, 2, 3, 1, 1, 1, 1, 1, 1, 2, 3, 1, 1, 2, 1
+rewriting success: True
+
+story-unedited_budapest_2024-01-15_14-36-17_short.txt
+editing timestamp: 2024-01-15_17-13-41
+number of rewrites per chunk: 1, 1, 1, 0, 0, 0, 0, 2, 1, 1, 1, 1
+rewriting success: True
+
+story-unedited_addisababa_2024-01-15_14-36-17_long.txt
+editing timestamp: 2024-01-15_17-13-30
+number of rewrites per chunk: 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 2, 1, 2, 1
+rewriting success: True
+
+story-unedited_normandy_2024-01-15_14-37-11_long.txt
+editing timestamp: 2024-01-15_17-14-06
+number of rewrites per chunk: 0, 0, 0, 1, 2, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+rewriting success: True
+
+story-unedited_addisababa_2024-01-15_14-36-17_short.txt
+editing timestamp: 2024-01-15_17-13-30
+number of rewrites per chunk: 1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1
+rewriting success: True
+
+story-unedited_rome_2024-01-15_14-37-11_long.txt
+editing timestamp: 2024-01-15_17-14-18
+number of rewrites per chunk: 0, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1
+rewriting success: True
+
+story-unedited_madagascar_2024-01-15_14-36-47_long.txt
+editing timestamp: 2024-01-15_17-13-56
+number of rewrites per chunk: 0, 3, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3, 1, 1, 1, 1, 1
+rewriting success: False
+indices of failed chunks: 1
+for more information, check the verbose log file: rewriting-log-story-unedited_madagascar_2024-01-15_14-36-47_long_edited-at_2024-01-15_17-13-56.txt
+
+story-unedited_normandy_2024-01-15_14-37-11_short.txt
+editing timestamp: 2024-01-15_17-14-06
+number of rewrites per chunk: 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 2, 0
+rewriting success: True
+
+story-unedited_rome_2024-01-15_14-37-11_short.txt
+editing timestamp: 2024-01-15_17-14-18
+number of rewrites per chunk: 1, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 1
+rewriting success: True
+
+story-unedited_madagascar_2024-01-15_14-36-47_short.txt
+editing timestamp: 2024-01-15_17-13-56
+number of rewrites per chunk: 0, 0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1
+rewriting success: True
+
+story-unedited_dubrovnik_2024-01-15_14-36-17_long.txt
+editing timestamp: 2024-01-15_17-13-41
+number of rewrites per chunk: 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1
+rewriting success: True
+
+story-unedited_vienna_2024-01-15_14-37-20_long.txt
+editing timestamp: 2024-01-15_17-14-27
+number of rewrites per chunk: 1, 1, 1, 1, 1, 0, 1, 3, 1, 1, 1, 1, 1, 1, 2, 1, 1, 3, 1, 2, 2, 1
+rewriting success: False
+indices of failed chunks: 7, 17
+for more information, check the verbose log file: rewriting-log-story-unedited_vienna_2024-01-15_14-37-20_long_edited-at_2024-01-15_17-14-27.txt
+
+story-unedited_dubrovnik_2024-01-15_14-36-17_short.txt
+editing timestamp: 2024-01-15_17-13-41
+number of rewrites per chunk: 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 1
+rewriting success: True
+
+story-unedited_vienna_2024-01-15_14-37-20_short.txt
+editing timestamp: 2024-01-15_17-14-27
+number of rewrites per chunk: 1, 1, 1, 1, 0, 1, 2, 1, 0, 1, 1, 1
+rewriting success: True
+
+story-unedited_amsterdam_2024-01-15_14-36-17_long.txt
+editing timestamp: 2024-01-15_17-13-30
+number of rewrites per chunk: 0, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1
+rewriting success: True
+
+story-unedited_seattle_2024-01-15_12-02-46_long.txt
+editing timestamp: 2024-01-15_17-14-18
+number of rewrites per chunk: 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1
+rewriting success: True
+
+story-unedited_norway_2024-01-15_14-37-11_long.txt
+editing timestamp: 2024-01-15_17-14-06
+number of rewrites per chunk: 1, 0, 0, 1, 1, 2, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3, 1, 1
+rewriting success: False
+indices of failed chunks: 19
+for more information, check the verbose log file: rewriting-log-story-unedited_norway_2024-01-15_14-37-11_long_edited-at_2024-01-15_17-14-06.txt
+
+story-unedited_amsterdam_2024-01-15_14-36-17_short.txt
+editing timestamp: 2024-01-15_17-13-30
+number of rewrites per chunk: 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 1, 1
+rewriting success: True
+
+story-unedited_seattle_2024-01-15_12-02-46_short.txt
+editing timestamp: 2024-01-15_17-14-18
+number of rewrites per chunk: 1, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1
+rewriting success: True
+
+story-unedited_norway_2024-01-15_14-37-11_short.txt
+editing timestamp: 2024-01-15_17-14-06
+number of rewrites per chunk: 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 0, 1
+rewriting success: True
+
+story-unedited_marrakech_2024-01-15_14-36-47_long.txt
+editing timestamp: 2024-01-15_17-13-56
+number of rewrites per chunk: 0, 1, 1, 0, 2, 1, 2, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1
+rewriting success: True
+
+story-unedited_yellowstone_2024-01-15_14-37-20_long.txt
+editing timestamp: 2024-01-15_17-14-27
+number of rewrites per chunk: 0, 1, 1, 0, 1, 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+rewriting success: False
+indices of failed chunks: 5
+for more information, check the verbose log file: rewriting-log-story-unedited_yellowstone_2024-01-15_14-37-20_long_edited-at_2024-01-15_17-14-27.txt
+
+story-unedited_goa_2024-01-15_14-36-47_long.txt
+editing timestamp: 2024-01-15_17-13-41
+number of rewrites per chunk: 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+rewriting success: True
+
+story-unedited_marrakech_2024-01-15_14-36-47_short.txt
+editing timestamp: 2024-01-15_17-13-56
+number of rewrites per chunk: 1, 1, 1, 0, 1, 1, 0, 0, 1, 0, 1, 1
+rewriting success: True
+
+story-unedited_yellowstone_2024-01-15_14-37-20_short.txt
+editing timestamp: 2024-01-15_17-14-27
+number of rewrites per chunk: 1, 1, 0, 0, 3, 0, 1, 0, 1, 1, 1, 1
+rewriting success: False
+indices of failed chunks: 4
+for more information, check the verbose log file: rewriting-log-story-unedited_yellowstone_2024-01-15_14-37-20_short_edited-at_2024-01-15_17-14-27.txt
+
+story-unedited_goa_2024-01-15_14-36-47_short.txt
+editing timestamp: 2024-01-15_17-13-41
+number of rewrites per chunk: 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1
+rewriting success: True
+
+story-unedited_arizona_2024-01-15_14-36-17_long.txt
+editing timestamp: 2024-01-15_17-13-30
+number of rewrites per chunk: 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+rewriting success: True
+
+story-unedited_arizona_2024-01-15_14-36-17_short.txt
+editing timestamp: 2024-01-15_17-13-30
+number of rewrites per chunk: 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 2
+rewriting success: True
+
+story-unedited_seoul_2024-01-15_14-37-20_long.txt
+editing timestamp: 2024-01-15_17-14-18
+number of rewrites per chunk: 1, 1, 1, 0, 1, 1, 1, 1, 3, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1
+rewriting success: False
+indices of failed chunks: 8
+for more information, check the verbose log file: rewriting-log-story-unedited_seoul_2024-01-15_14-37-20_long_edited-at_2024-01-15_17-14-18.txt
+
+story-unedited_patagonia_2024-01-15_14-37-11_long.txt
+editing timestamp: 2024-01-15_17-14-06
+number of rewrites per chunk: 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1, 1
+rewriting success: True
+
+story-unedited_seoul_2024-01-15_14-37-20_short.txt
+editing timestamp: 2024-01-15_17-14-18
+number of rewrites per chunk: 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1
+rewriting success: True
+
+story-unedited_patagonia_2024-01-15_14-37-11_short.txt
+editing timestamp: 2024-01-15_17-14-06
+number of rewrites per chunk: 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0
+rewriting success: True
+
+story-unedited_montreal_2024-01-15_14-36-47_long.txt
+editing timestamp: 2024-01-15_17-13-56
+number of rewrites per chunk: 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2
+rewriting success: True
+
+story-unedited_yucatan_2024-01-15_14-37-20_long.txt
+editing timestamp: 2024-01-15_17-14-27
+number of rewrites per chunk: 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 2
+rewriting success: True
+
+story-unedited_hawaii_2024-01-15_14-36-47_long.txt
+editing timestamp: 2024-01-15_17-13-41
+number of rewrites per chunk: 0, 1, 0, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1
+rewriting success: True
+
+story-unedited_montreal_2024-01-15_14-36-47_short.txt
+editing timestamp: 2024-01-15_17-13-56
+number of rewrites per chunk: 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1
+rewriting success: True
+
+story-unedited_hawaii_2024-01-15_14-36-47_short.txt
+editing timestamp: 2024-01-15_17-13-41
+number of rewrites per chunk: 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1
+rewriting success: True
+
+story-unedited_yucatan_2024-01-15_17-03-38_short.txt
+editing timestamp: 2024-01-15_17-14-27
+number of rewrites per chunk: 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 2
+rewriting success: True
+
+story-unedited_beijing_2024-01-15_14-36-17_long.txt
+editing timestamp: 2024-01-15_17-13-30
+number of rewrites per chunk: 0, 1, 1, 1, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1
+rewriting success: True
+
+story-unedited_prague_2024-01-15_14-37-11_long.txt
+editing timestamp: 2024-01-15_17-14-06
+number of rewrites per chunk: 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 2, 1, 1, 3, 1, 1, 1, 1, 1
+rewriting success: False
+indices of failed chunks: 16
+for more information, check the verbose log file: rewriting-log-story-unedited_prague_2024-01-15_14-37-11_long_edited-at_2024-01-15_17-14-06.txt
+
+story-unedited_beijing_2024-01-15_14-36-17_short.txt
+editing timestamp: 2024-01-15_17-13-30
+number of rewrites per chunk: 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1
+rewriting success: True
+
+story-unedited_prague_2024-01-15_14-37-11_short.txt
+editing timestamp: 2024-01-15_17-14-06
+number of rewrites per chunk: 1, 0, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1
+rewriting success: True
+
+story-unedited_taipei_2024-01-15_14-37-20_long.txt
+editing timestamp: 2024-01-15_17-14-18
+number of rewrites per chunk: 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 2, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1
+rewriting success: True
+
+story-unedited_iceland_2024-01-15_14-36-47_long.txt
+editing timestamp: 2024-01-15_17-13-41
+number of rewrites per chunk: 1, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 2
+rewriting success: True
+
+story-unedited_mumbai_2024-01-15_14-36-47_long.txt
+editing timestamp: 2024-01-15_17-13-56
+number of rewrites per chunk: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 2, 1, 1, 2, 1
+rewriting success: True
+
+story-unedited_taipei_2024-01-15_14-37-20_short.txt
+editing timestamp: 2024-01-15_17-14-18
+number of rewrites per chunk: 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1
+rewriting success: True
+
+story-unedited_mumbai_2024-01-15_14-36-47_short.txt
+editing timestamp: 2024-01-15_17-13-56
+number of rewrites per chunk: 1, 1, 1, 0, 1, 0, 1, 1, 2, 1, 0, 1
+rewriting success: True
+
+story-unedited_iceland_2024-01-15_14-36-47_short.txt
+editing timestamp: 2024-01-15_17-13-41
+number of rewrites per chunk: 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1
+rewriting success: True

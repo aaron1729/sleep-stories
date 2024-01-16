@@ -96,4 +96,11 @@ def make_cues(story_filename = None):
 
 ### let's make some cues!
 # make_cues(...)
-make_cues()
+
+
+# on monday 1/15/2024:
+filenames = strings.get_all_unhidden_files("stories")
+filenames_today_only = [filename for filename in filenames if filename.split("_")[2] == "2024-01-15"]
+filenames_today_only.sort()
+for filename in filenames_today_only:
+    make_cues(filename)

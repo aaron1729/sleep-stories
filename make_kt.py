@@ -4,6 +4,7 @@
 # this function will EVENTUALLY (as of 2023-11-28) accept a `use_phoneticizations` boolean, which defaults to `False`. if this is set to `True`, we do a find-and-replace on the cues string over the relevant phoneticizations (which will have been retrieved from chatGPT and stored in `phoneticizations/`) before writing to the kotlin file. (this will be put at `INSERT PHONETICIZATION LOGIC HERE`.)
 
 import strings
+from inputs import *
 
 # here, the `_arg` suffix is to distinguish from other variables that appear in the function definition. (they quickly get subsumed as instances of those.)
 # when writing a long story, we _always_ roll the last stop into the `end` of the story. so, min_stops_for_long_story is one more than the number of stops rolled into the `start` of the story.
@@ -194,4 +195,7 @@ object {object_name} : SleepStoryPoseCues {{
 
 ### let's make some kotlin code!
 # make_kt(...)
-make_kt()
+# make_kt()
+
+for input in inputs:
+    make_kt(input)

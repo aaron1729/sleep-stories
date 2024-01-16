@@ -3,7 +3,7 @@ from openai import OpenAI
 client = OpenAI()
 
 
-import re
+import regex as re
 
 import spacy
 nlp = spacy.load("en_core_web_sm")
@@ -19,8 +19,12 @@ import subprocess
 
 print("hello")
 
+# pattern_for_low_roman_numerals = r" (X{0,2}(?:I?X|IV|VI{0,3}|I{1,3}))[^A-Za-z]"
+pattern_for_low_roman_numerals = r" (X{0,2}(?:I?X|IV|VI{0,3}|I{1,3}))\P{L}"
 
+roman_numerals_appearing = re.findall(pattern_for_low_roman_numerals, "hell Vé.alo I! VI.øringsfossen")
 
+print(roman_numerals_appearing)
 
 
 # # print("goodbye")
@@ -98,4 +102,5 @@ print("hello")
 #         return "eighty"
 #     if num == 90:
 #         return "ninety"
-    
+
+

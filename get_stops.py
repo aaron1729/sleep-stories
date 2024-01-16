@@ -68,11 +68,12 @@ def get_stops(destination, num_stops = 20):
         stop_with_tidbit = stop + "\n\n" + completion.choices[0].message.content
         stops_with_tidbits.append(stop_with_tidbit)
     
-    stops_with_tidbits_file = strings.open_safe("stops", f"stops_{input['destination']}_{timestamp}.txt", "w")
+    stops_with_tidbits_filename = f"stops_{input['destination']}_{timestamp}.txt"
+    stops_with_tidbits_file = strings.open_safe("stops", stops_with_tidbits_filename, "w")
     stops_with_tidbits_file.write(strings.separator.join(stops_with_tidbits))
     stops_with_tidbits_file.close()
 
-    print(f"\nfinish writing {stops_with_tidbits_file} at {strings.time_now()}\n")
+    print(f"\nfinished writing {stops_with_tidbits_filename} at {strings.time_now()}\n")
 
     return None
 
@@ -80,3 +81,45 @@ def get_stops(destination, num_stops = 20):
 
 ### let's get some stops!
 # get_stops(...)
+
+
+### monday 1/15/2024
+
+# ~11:30am
+# get_stops("seattle")
+
+# ~1pm
+# get_stops("arizona")
+# get_stops("yucatan")
+# get_stops("vienna")
+# get_stops("budapest")
+# get_stops("nepal")
+# get_stops("hawaii")
+# get_stops("iceland")
+# get_stops("montreal")
+
+# 1:49pm
+# get_stops("taipei")
+# get_stops("losangeles")
+# get_stops("normandy")
+# get_stops("amsterdam")
+# get_stops("puertorico")
+# get_stops("patagonia")
+# get_stops("prague")
+
+# 1:50pm
+# get_stops("mumbai")
+# get_stops("goa")
+# get_stops("yellowstone")
+# get_stops("rome")
+# get_stops("marrakech")
+# get_stops("accra")
+# get_stops("addisababa")
+
+# 1:51pm
+# get_stops("madagascar")
+# get_stops("seoul")
+# get_stops("beijing")
+# get_stops("vancouver")
+# get_stops("norway")
+# get_stops("dubrovnik")
