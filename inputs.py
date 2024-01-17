@@ -196,7 +196,7 @@ inputs = {
         "requested_sightseeing_stops": None,
         "tour_guide": "a confident young woman who is a journalist for the Seattle Times newspaper and also gives tours to share her love for her city",
         "season": "springtime, on a day that is mostly sunny but with scattered showers (which we are prepared for with our rain jackets and umbrellas and which make everything gleam beautifully)",
-        "art_style": None,
+        "art_style": "chihuly",
     },
     "arizona": {
         "destination": "arizona",
@@ -205,7 +205,7 @@ inputs = {
         "requested_sightseeing_stops": None,
         "tour_guide": None,
         "season": "early springtime",
-        "art_style": None,
+        "art_style": "navajo",
     },
     "yucatan": {
         "destination": "yucatan",
@@ -214,7 +214,7 @@ inputs = {
         "requested_sightseeing_stops": None,
         "tour_guide": None,
         "season": "summer",
-        "art_style": None,
+        "art_style": "mayan",
     },
     "vienna": {
         "destination": "vienna",
@@ -223,7 +223,7 @@ inputs = {
         "requested_sightseeing_stops": None,
         "tour_guide": "a renowned historian and opera critic",
         "season": "season",
-        "art_style": None,
+        "art_style": "neobaroque",
     },
     "budapest": {
         "destination": "budapest",
@@ -232,7 +232,7 @@ inputs = {
         "requested_sightseeing_stops": "thermal baths",
         "tour_guide": None,
         "season": "springtime",
-        "art_style": None,
+        "art_style": "sepia-pencil",
     },
     "taipei": {
         "destination": "taipei",
@@ -241,7 +241,7 @@ inputs = {
         "requested_sightseeing_stops": None,
         "tour_guide": None,
         "season": "early springtime, with flowers just beginning to bloom",
-        "art_style": None,
+        "art_style": "chinese-ink-wash",
     },
     "nepal": {
         "destination": "nepal",
@@ -250,7 +250,7 @@ inputs = {
         "requested_sightseeing_stops": None,
         "tour_guide": None,
         "season": "autumn (which is festival season)",
-        "art_style": None,
+        "art_style": "mithila",
     },
     "hawaii": {
         "destination": "hawaii",
@@ -259,7 +259,7 @@ inputs = {
         "requested_sightseeing_stops": "glass-bottom boat tour of marine life and coral reefs and whales",
         "tour_guide": None,
         "season": "late spring",
-        "art_style": None,
+        "art_style": "tapa",
     },
     "iceland": {
         "destination": "iceland",
@@ -268,7 +268,7 @@ inputs = {
         "requested_sightseeing_stops": "ferry boat ride",
         "tour_guide": None,
         "season": "summer (with long daylight hours)",
-        "art_style": None,
+        "art_style": "icelandic-illuminated",
     },
     "montreal": {
         "destination": "montreal",
@@ -277,7 +277,7 @@ inputs = {
         "requested_sightseeing_stops": "Osheaga Music and Arts Festival in Parc Jean-Drapeau",
         "tour_guide": "bilingual (French and English) college student majoring in history and specializing in the history of Quebec",
         "season": "summer",
-        "art_style": None,
+        "art_style": "quebecois",
     },
     "losangeles": {
         "destination": "losangeles",
@@ -286,7 +286,7 @@ inputs = {
         "requested_sightseeing_stops": "Griffith Park (including the Hollywood sign), Santa Monica beach boardwalk, Mount Wilson Observatory",
         "tour_guide": None,
         "season": "summer",
-        "art_style": None,
+        "art_style": "graffiti",
     },
     "normandy": {
         "destination": "normandy",
@@ -295,7 +295,7 @@ inputs = {
         "requested_sightseeing_stops": "Normandy Impressionist Festival",
         "tour_guide": None,
         "season": "summer",
-        "art_style": None,
+        "art_style": "fauvism",
     },
     "amsterdam": {
         "destination": "amsterdam",
@@ -304,7 +304,7 @@ inputs = {
         "requested_sightseeing_stops": None,
         "tour_guide": None,
         "season": "late spring",
-        "art_style": None,
+        "art_style": "van-gogh",
     },
     "puertorico": {
         "destination": "puertorico",
@@ -313,7 +313,7 @@ inputs = {
         "requested_sightseeing_stops": None,
         "tour_guide": None,
         "season": "summer",
-        "art_style": None,
+        "art_style": "carribean-folk",
     },
     "patagonia": {
         "destination": "patagonia",
@@ -322,7 +322,7 @@ inputs = {
         "requested_sightseeing_stops": None,
         "tour_guide": None,
         "season": "winter",
-        "art_style": None,
+        "art_style": "peruvian",
     },
     "prague": {
         "destination": "prague",
@@ -331,7 +331,7 @@ inputs = {
         "requested_sightseeing_stops": None,
         "tour_guide": None,
         "season": "autumn",
-        "art_style": None,
+        "art_style": "oil",
     },
     "mumbai": {
         "destination": "mumbai",
@@ -340,7 +340,7 @@ inputs = {
         "requested_sightseeing_stops": None,
         "tour_guide": None,
         "season": "springtime",
-        "art_style": None,
+        "art_style": "mughal",
     },
     "goa": {
         "destination": "goa",
@@ -349,7 +349,7 @@ inputs = {
         "requested_sightseeing_stops": None,
         "tour_guide": None,
         "season": "summer",
-        "art_style": None,
+        "art_style": "tanjore",
     },
     "yellowstone": {
         "destination": "yellowstone",
@@ -358,7 +358,7 @@ inputs = {
         "requested_sightseeing_stops": None,
         "tour_guide": None,
         "season": "summer",
-        "art_style": None,
+        "art_style": "american-romanticism",
     },
     "rome": {
         "destination": "rome",
@@ -367,7 +367,7 @@ inputs = {
         "requested_sightseeing_stops": "the Roman Forum, the Colosseum",
         "tour_guide": None,
         "season": "summer",
-        "art_style": None,
+        "art_style": "baroque",
     },
     "marrakech": {
         "destination": "marrakech",
@@ -376,7 +376,7 @@ inputs = {
         "requested_sightseeing_stops": None,
         "tour_guide": "driver who speaks five languages fluently",
         "season": "summer",
-        "art_style": None,
+        "art_style": "moroccan",
     },
     "accra": {
         "destination": "accra",
@@ -385,7 +385,7 @@ inputs = {
         "requested_sightseeing_stops": None,
         "tour_guide": None,
         "season": "late spring",
-        "art_style": None,
+        "art_style": "ghanaian",
     },
     "addisababa": {
         "destination": "addisababa",
@@ -394,7 +394,7 @@ inputs = {
         "requested_sightseeing_stops": None,
         "tour_guide": None,
         "season": "early spring",
-        "art_style": None,
+        "art_style": "ethiopian",
     },
     "madagascar": {
         "destination": "madagascar",
@@ -403,7 +403,7 @@ inputs = {
         "requested_sightseeing_stops": "baobab trees (as made famous by 'The Little Prince')",
         "tour_guide": None,
         "season": "autumn",
-        "art_style": None,
+        "art_style": "watercolor",
     },
     "seoul": {
         "destination": "seoul",
@@ -412,7 +412,7 @@ inputs = {
         "requested_sightseeing_stops": None,
         "tour_guide": "an enthusiastic older gentleman",
         "season": "summer",
-        "art_style": None,
+        "art_style": "minhwa",
     },
     "beijing": {
         "destination": "beijing",
@@ -421,7 +421,7 @@ inputs = {
         "requested_sightseeing_stops": "Chinese New Year's celebration and parades throughout the streets",
         "tour_guide": "our driver, a woman who is overflowing with interesting historical tidbits",
         "season": "winter",
-        "art_style": None,
+        "art_style": "chinese-silk",
     },
     "vancouver": {
         "destination": "vancouver",
@@ -430,7 +430,7 @@ inputs = {
         "requested_sightseeing_stops": None,
         "tour_guide": None,
         "season": "summer",
-        "art_style": None,
+        "art_style": "retrofuturism",
     },
     "norway": {
         "destination": "norway",
@@ -439,7 +439,7 @@ inputs = {
         "requested_sightseeing_stops": "Nordfjordeid, and also a hike in the mountains about the fjords",
         "tour_guide": None,
         "season": "a temperate summer with long days of gentle sunlight",
-        "art_style": None,
+        "art_style": "viking-engraving",
     },
     "dubrovnik": {
         "destination": "dubrovnik",
@@ -448,6 +448,6 @@ inputs = {
         "requested_sightseeing_stops": None,
         "tour_guide": None,
         "season": "late summer",
-        "art_style": None,
+        "art_style": "pointillism",
     },
 }

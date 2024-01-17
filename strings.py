@@ -511,6 +511,8 @@ def user_prompt_for_art_style_description(art_style):
 
 Please give me an extended description of this art style that is SPECIFICALLY TAILORED TO help create DALL-E prompts that are in this art style.
 
+However, please make sure that you do NOT mention any sort of framing or borders. I do NOT want my DALL-E prompts to involve any sort of additional framing. I want the resulting depictions to fill up the entire image.
+
 =====
 
 EXAMPLE INPUT:

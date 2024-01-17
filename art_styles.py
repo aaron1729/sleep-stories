@@ -46,5 +46,32 @@ art_styles = {
     "van-gogh": "Vincent van Gogh", # beautiful, nice paint texture
     "victorian": "Victorian-era illustration", # great, use probably for london
     "visionary": "visionary art", # very cool, works well for dubai
-    "watercolor": "watercolor painting", # nice, try using it -- maybe for nature (like new zealand)
+    "watercolor": "watercolor painting", # nice, try using it -- maybe for nature (like new zealand),
+
+
+    ########## below: new on 1/15/2024 (or shortly thereafter)
+
+
+    "navajo": "Navajo (Native American)", # for arizona
+    "chihuly": "Dale Chihuly", # for seattle
+    "mayan": "traditional Mayan", # for yucatan
+    "moroccan": "traditional Moroccan", # for marrakech
+    "ghanaian": "traditional Ghanaian", # for accra
+    "ethiopian": "traditional Ethiopian", # for addisababa
+    "baroque": "baroque", # for rome?
+    "chinese-silk": "Chinese silk painting", # for beijing?
+    "chinese-ink-wash": "Chinese ink and wash painting (Shuǐmòhuà)", # for beijing?
+    "tanjore": "Tanjore painting", # for goa?
+    "graffiti": "street art, murals, and graffiti", # for losangeles? kinda cool, but unfortunately it keeps putting the image actually _on a wall_.
+    "mithila": "Mithila (or Madhubani) art", # for nepal?
+    "tapa": "tapa (Polynesian barkcloth) art", # for hawaii?
+    "icelandic-illuminated": "medieval Icelandic illuminated manuscript art", # for iceland
+    "viking-engraving": "traditional Viking and Norse engravings", # for norway
+    "minhwa": "Korean minhwa (folk painting)", # for seoul
+    "mughal": "Mughal and Rajasthani miniature paintings", # for mumbai
+    "carribean-folk": "Carribean folk art", # for puertorico
+    "quebecois": "traditional Quebecois painting", # for montreal
+    "oil": "oil painting", # for prague?
+    "american-romanticism": "American Romanticism", # for yellowstone
+    "peruvian": "traditional Peruvian art", # for patagonia
 }

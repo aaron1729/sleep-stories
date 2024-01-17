@@ -182,7 +182,7 @@ STATUS: done.
 
 `PROBABLY NOT YET FINAL`
 
-this takes `cues` file as well as an `art-style_description` gets one dalle prompt for each cue in the given style from chatGPT. these are separated by `strings.separator` (but not otherwisely (e.g. into chunks)).
+this takes `cues` file as well as an `art-style_description` and gets one dalle prompt for each cue in the given style from chatGPT. these are separated by `strings.separator` (but not otherwisely (e.g. into chunks)).
 
 a typical result file is named `dalle-prompts_for_cues_queenstown_2023-11-28_22-32-51_short_in_thai-temple_at_2023-11-29_18-01-04.txt`. the latter timestamp is when the file was generated.
 

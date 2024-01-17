@@ -15,16 +15,28 @@ import models
 
 import subprocess
 
+from inputs import *
 
 
-print("hello")
 
-# pattern_for_low_roman_numerals = r" (X{0,2}(?:I?X|IV|VI{0,3}|I{1,3}))[^A-Za-z]"
-pattern_for_low_roman_numerals = r" (X{0,2}(?:I?X|IV|VI{0,3}|I{1,3}))\P{L}"
+# print("hello")
 
-roman_numerals_appearing = re.findall(pattern_for_low_roman_numerals, "hell Vé.alo I! VI.øringsfossen")
 
-print(roman_numerals_appearing)
+
+# for input in inputs:
+#     print(input)
+
+i = 8720
+filenames = strings.get_all_unhidden_files("code")
+for filename in filenames:
+    name_caps = filename[16:-7].upper()
+    output = "SLEEP_STORY_TRAVEL_" + name_caps + f"({str(i)}),"
+    i += 1
+    print(output)
+
+
+
+
 
 
 # # print("goodbye")

@@ -2,6 +2,7 @@
 # as of 12/20/2023, this function is hard-coded to run through just certain items in the list
     # chunks_as_lists_of_cues
 # to save time. be sure to change this manually, if desired.
+# at the very least, don't include the metadata at the end!
 ###############
 
 from openai import OpenAI
@@ -41,7 +42,7 @@ def get_dalle_prompts(cues_filename, art_style, art_style_description_filename =
     chunks_as_lists_of_cues = [chunk_as_cues_string.split("\n") for chunk_as_cues_string in chunks_as_cues_strings]
 
     dalle_prompts = []
-    for (index, chunk_as_list_of_cues) in enumerate(chunks_as_lists_of_cues[4: 8]):
+    for (index, chunk_as_list_of_cues) in enumerate(chunks_as_lists_of_cues[: -1]): # this was [4:8], or [2:8]...
         chunk = chunks_as_cues_strings[index]
         for cue in chunk_as_list_of_cues:
             print(f"\nat {strings.time_now()}, getting dalle prompt for the cue:\n\n{cue}")
@@ -70,6 +71,7 @@ def get_dalle_prompts(cues_filename, art_style, art_style_description_filename =
 
 ### let's get some dalle prompts!
 # get_dalle_prompts(...)
+
 # get_dalle_prompts("cues_dubai_2023-11-28_22-32-51_short.txt", "rothko")
 # get_dalle_prompts("cues_cinqueterre_2023-12-05_17-42-24_long.txt", "rococo")
 # get_dalle_prompts("cues_cinqueterre_2023-12-05_17-42-24_long.txt", "gothic")
@@ -79,10 +81,42 @@ def get_dalle_prompts(cues_filename, art_style, art_style_description_filename =
 # get_dalle_prompts("cues_cinqueterre_2023-12-05_17-42-24_long.txt", "autumn-skye")
 # get_dalle_prompts("cues_cinqueterre_2023-12-05_17-42-24_long.txt", "impressionism")
 
+
+
+### new as of 8:58pm on monday 1/15/2024:
+# seattle
+# vienna
+# losangeles
+# normandy
+# amsterdam
+# addisababa
+
+### new as of ~12pm on tuesday 1/16/2024:
+# budapest
+# nepal
+# hawaii
+# iceland
+# seoul
+# mumbai
+# norway
+
+### new as of ~1:20pm on tuesday 1/16/2024:
+# montreal
+# patagonia
+# prague
+# puertorico
+# vancouver
+# yellowstone
+
+### new as of ~2:50pm: normandy (just get a few more, chunks [1:4])
+
+
 for input in inputs:
-    if input > "m":
+    if inputs[input]["art_style"]:
         # for just a first pass at images (12/20/2023), do the short stories since this should give more variability in images to choose from.
-        cues_filename = strings.get_latest_filename(input, "cues", "short")
-        art_style = inputs[input]["art_style"]
-        print(f"getting dalle prompts...\ncues file: {cues_filename}\nart_style: {art_style}")
-        get_dalle_prompts(cues_filename, art_style)
+        if input == "normandy":
+            cues_filename = strings.get_latest_filename(input, "cues", "short")
+            art_style = inputs[input]["art_style"]
+            print(f"getting dalle prompts...\ncues file: {cues_filename}\nart_style: {art_style}")
+            get_dalle_prompts(cues_filename, art_style)
+
