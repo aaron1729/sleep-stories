@@ -1,15 +1,19 @@
+### this is tailored to rotate "apparently-rotated" vids (with respect to apple's ecosystem) to be _truly_ rotated.
+
+
 import strings
 import subprocess
 
 
-pathname = "vids/2023-12-22/"
+pathname = "vids/2024-01-16/"
+
 
 vid_filenames = strings.get_all_unhidden_files(pathname + "vids-rotated")
 
 for vid_filename in vid_filenames:
 
     print("\n" + vid_filename)
-        
+
     print("\nold dimensions are:")
     subprocess.run(f"ffprobe -v error -select_streams v:0 -show_entries stream=width,height -of default=noprint_wrappers=1 {pathname + 'vids-rotated/' + vid_filename}", shell=True)
 

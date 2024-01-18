@@ -5,6 +5,9 @@ openai-env/
 # cached python bytecode
 __pycache__/
 
+# node modules
+node_modules/
+
 # generated content
 art-style-descriptions/
 code/
